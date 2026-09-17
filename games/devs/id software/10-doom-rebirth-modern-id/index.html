@@ -1,0 +1,3226 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://lirikonov.github.io/knowledge/games/devs/id%20software/10-doom-rebirth-modern-id/" rel="canonical"/>
+<link href="../09-rage-zenimax-carmack/" rel="prev"/>
+<link href="../11-legacy-summary/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>id Software — X. Перерождение Doom и современная id - База данных</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#id-software-x-doom-id">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              id Software — X. Перерождение Doom и современная id
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Arkane/">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-origins-softdisk-keen/">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-wolfenstein/">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-doom-birth/">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-doom-ecosystem/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-quake-crisis/">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-id-after-romero/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-quake2-quake3-middleware/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-doom3-aaa/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../09-rage-zenimax-carmack/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p058">
+<span class="md-ellipsis">
+      
+        58. Отмена старого Doom 4 и рождение Doom 2016
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p059">
+<span class="md-ellipsis">
+      
+        59. Doom 2016 — игра наконец становится важнее движка
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p060">
+<span class="md-ellipsis">
+      
+        60. id Tech 6 — новая инженерная id без Carmack
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p061">
+<span class="md-ellipsis">
+      
+        61. Doom Eternal — id не повторяет Doom 2016, а делает систему жёстче
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p062">
+<span class="md-ellipsis">
+      
+        62. Tim Willits покидает id Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p063">
+<span class="md-ellipsis">
+      
+        63. Microsoft покупает ZeniMax
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p064">
+<span class="md-ellipsis">
+      
+        64. MachineGames, Nightdive и внешняя жизнь IP id
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p065">
+<span class="md-ellipsis">
+      
+        65. Quake после Quake III — серия, которая четверть века не может решить, что такое Quake
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p066">
+<span class="md-ellipsis">
+      
+        66. Doom: The Dark Ages и современная id Software
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../11-legacy-summary/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../12-side-branches/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MANIFEST/">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/01-origins-steam/">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/02-games-and-engines/">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/03-inside-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/04-hardware-linux-vr/">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/05-modern-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/06-valve-as-institution/">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/07-ecosystem-and-catalog/">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/08-appendices/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../valve/09-sources-and-status/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom/">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom30/">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom3_45-103/">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Quake/">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Spider-Man/">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom4-eternal/">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom_eternal_51-80/">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_8" id="__nav_1_2_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/01-origins-and-development/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/02-half-life-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/03-half-life-release-and-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/04-gearbox-and-consoles/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/05-half-life-2-development-and-tech/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/06-half-life-2-world-and-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/07-half-life-2-beta-release/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/08-episodes/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/09-half-life-3-and-cancelled-projects/">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/10-vr-and-alyx-development/">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/11-half-life-alyx-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/12-modding-and-community/">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/13-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/14-audio/">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/15-how-valve-makes-half-life/">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/16-movement-and-speedrunning/">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/17-half-life-and-film/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/CHANGES/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../people/Gabe%20Newell/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../people/John%20Carmack/">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../people/John%20Romero/">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Slides
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../slides/">
+<span class="md-ellipsis">
+    
+  
+    Презентации
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    University
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    University
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Go
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Go
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Lectures
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Lectures
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1_1" id="__nav_3_1_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    1. Prod
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_1_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_1_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Prod
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../university/go/lectures/1.%20Prod/Production%20backend/">
+<span class="md-ellipsis">
+    
+  
+    Лекция 1. Production backend и эволюция Go
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p058">
+<span class="md-ellipsis">
+      
+        58. Отмена старого Doom 4 и рождение Doom 2016
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p059">
+<span class="md-ellipsis">
+      
+        59. Doom 2016 — игра наконец становится важнее движка
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p060">
+<span class="md-ellipsis">
+      
+        60. id Tech 6 — новая инженерная id без Carmack
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p061">
+<span class="md-ellipsis">
+      
+        61. Doom Eternal — id не повторяет Doom 2016, а делает систему жёстче
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p062">
+<span class="md-ellipsis">
+      
+        62. Tim Willits покидает id Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p063">
+<span class="md-ellipsis">
+      
+        63. Microsoft покупает ZeniMax
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p064">
+<span class="md-ellipsis">
+      
+        64. MachineGames, Nightdive и внешняя жизнь IP id
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p065">
+<span class="md-ellipsis">
+      
+        65. Quake после Quake III — серия, которая четверть века не может решить, что такое Quake
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p066">
+<span class="md-ellipsis">
+      
+        66. Doom: The Dark Ages и современная id Software
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="id-software-x-doom-id">id Software — X. Перерождение Doom и современная id<a class="headerlink" href="#id-software-x-doom-id" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>Часть большой базы по истории id Software. Пункты <strong>58–66</strong>. Содержательный текст исходного документа сохранён без сокращений.</p>
+</blockquote>
+<p><a href="../09-rage-zenimax-carmack/">← IX. RAGE / ZeniMax / Carmack</a> · <a href="../">Общее оглавление</a> · <a href="../11-legacy-summary/">XI. Наследие и выводы →</a></p>
+<h3 id="contents">Содержание<a class="headerlink" href="#contents" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="#p058">58. Отмена старого Doom 4 и рождение Doom 2016</a></li>
+<li><a href="#p059">59. Doom 2016 — игра наконец становится важнее движка</a></li>
+<li><a href="#p060">60. id Tech 6 — новая инженерная id без Carmack</a></li>
+<li><a href="#p061">61. Doom Eternal — id не повторяет Doom 2016, а делает систему жёстче</a></li>
+<li><a href="#p062">62. Tim Willits покидает id Software</a></li>
+<li><a href="#p063">63. Microsoft покупает ZeniMax</a></li>
+<li><a href="#p064">64. MachineGames, Nightdive и внешняя жизнь IP id</a></li>
+<li><a href="#p065">65. Quake после Quake III — серия, которая четверть века не может решить, что такое Quake</a></li>
+<li><a href="#p066">66. Doom: The Dark Ages и современная id Software</a></li>
+</ul>
+<hr/>
+<h2 id="p058">58. Отмена старого Doom 4 и рождение Doom 2016<a class="headerlink" href="#p058" title="Permanent link">¶</a></h2>
+<p>Важно не представлять reboot как одномоментное решение. На деле это rolling reset, но где-то в 2012–начале 2013 происходит decisive shift.</p>
+<h3 id="_1">Новая команда формулирует вопрос<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>ЧТО ТАКОЕ
+DOOM?
+</code></pre></div>
+<p>И начинает разбирать Doom, Doom II и Doom 3, чтобы найти design DNA, а не сделать literal remake.</p>
+<p>Постепенно всё сжимается примерно до:</p>
+<div class="highlight"><pre><span></span><code>GUNS
+DEMONS
+MOVEMENT
+</code></pre></div>
+<p>И соединяющего принципа:</p>
+<h3 id="push-forward-combat">PUSH-FORWARD COMBAT<a class="headerlink" href="#push-forward-combat" title="Permanent link">¶</a></h3>
+<p>Игрок должен решать проблему через движение <strong>к угрозе</strong>, а не от неё.</p>
+<h3 id="glory-kill">История Glory Kill<a class="headerlink" href="#glory-kill" title="Permanent link">¶</a></h3>
+<p>Одним из переломов становится эксперимент animation team. Берутся старые assets Doom 4 и пробуются быстрые brutal executions прямо в gameplay.</p>
+<p>И внезапно возникает идея:</p>
+<div class="highlight"><pre><span></span><code>ENEMY
+не просто
+умирает
+↓
+может стать
+RESOURCE
+</code></pre></div>
+<p>Glory Kill превращается из cosmetic finisher в системную механику:</p>
+<div class="highlight"><pre><span></span><code>DAMAGE
+↓
+STAGGER
+↓
+CLOSE DISTANCE
+↓
+GLORY KILL
+↓
+HEALTH
+↓
+CONTINUE
+</code></pre></div>
+<p>Animation одновременно становится spectacle, healing mechanic, positioning incentive и aggression teaching tool.</p>
+<h3 id="regenerating-health">Поэтому нет regenerating health<a class="headerlink" href="#regenerating-health" title="Permanent link">¶</a></h3>
+<p>Если healing происходит через «подожди за стеной», player учится пассивности.</p>
+<p>Новая Doom хочет:</p>
+<div class="highlight"><pre><span></span><code>НУЖЕН HEALTH?
+↓
+ИДИ
+В ДРАКУ
+</code></pre></div>
+<p>Chainsaw позднее становится ammo generator. Enemy теперь одновременно threat и resource.</p>
+<h3 id="movement-defense">Movement становится defense<a class="headerlink" href="#movement-defense" title="Permanent link">¶</a></h3>
+<p>Вместо cover — постоянное движение.</p>
+<div class="highlight"><pre><span></span><code>НЕ СТОЙ
+</code></pre></div>
+<p>Player живёт потому, что перемещается.</p>
+<h3 id="hugo-martin">Hugo Martin<a class="headerlink" href="#hugo-martin" title="Permanent link">¶</a></h3>
+<p>Он становится full-time creative leadership примерно в период reboot. Его Hollywood/concept background используется для visual clarity, silhouettes, staging, readable spectacle и strong player fantasy, а не для пассивного кино.</p>
+<h3 id="combat-chess">Combat chess<a class="headerlink" href="#combat-chess" title="Permanent link">¶</a></h3>
+<p>Враги проектируются как tactical roles, weapons — как tools. Каждый demon должен заставлять думать и двигаться.</p>
+<h3 id="arena-design">Arena design<a class="headerlink" href="#arena-design" title="Permanent link">¶</a></h3>
+<p>Не cover spaces, а movement networks: height, routes, jump opportunities, flank paths, resources, enemy pressure.</p>
+<h3 id="_2">Ностальгия используется не буквально<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>Не:</p>
+<div class="highlight"><pre><span></span><code>СКОПИРУЕМ
+1993 geometry
+</code></pre></div>
+<p>А:</p>
+<div class="highlight"><pre><span></span><code>КАКОЕ
+ЭМОЦИОНАЛЬНОЕ
+ОЩУЩЕНИЕ
+ДАВАЛ
+СТАРЫЙ DOOM?
+↓
+СОЗДАДИМ
+ЕГО
+НОВЫМИ
+СРЕДСТВАМИ
+</code></pre></div>
+<h3 id="story">Story перестаёт мешать<a class="headerlink" href="#story" title="Permanent link">¶</a></h3>
+<p>Lore есть. Samuel Hayden есть. UAC есть. Но player не обязан каждые пять минут ждать exposition.</p>
+<p>Характер Slayer выражается через action. Player impatience и характер героя совпадают.</p>
+<h3 id="_3">Название<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>Проект постепенно перестаёт быть Doom 4 и становится просто DOOM.</p>
+<p>Это statement: не очередная часть, а переопределение series.</p>
+<p>QuakeCon 2014 — закрытый public reveal. E3 2015 — полноценный массовый show.</p>
+<h3 id="production-philosophy">Главная смена production philosophy<a class="headerlink" href="#production-philosophy" title="Permanent link">¶</a></h3>
+<p>Старая:</p>
+<div class="highlight"><pre><span></span><code>TECH
+→ GAME
+</code></pre></div>
+<p>Новая:</p>
+<div class="highlight"><pre><span></span><code>PLAYER FEEL
+→ PROTOTYPE
+→ SYSTEMS
+→ TECHNOLOGY
+→ CONTENT
+</code></pre></div>
+<p>Именно отсюда рождается современная id.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p059">59. Doom 2016 — игра наконец становится важнее движка<a class="headerlink" href="#p059" title="Permanent link">¶</a></h2>
+<p>13 мая 2016 выходит DOOM.</p>
+<p>Самое исторически важное: люди обсуждают не renderer. Они обсуждают Glory Kills, movement, Super Shotgun, demons и combat.</p>
+<h3 id="push-forward-combat-mechanic">Push-forward combat — система, а не одна mechanic<a class="headerlink" href="#push-forward-combat-mechanic" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>MOVE
+↓
+SHOOT
+↓
+STAGGER
+↓
+GLORY KILL
+↓
+HEALTH
+↓
+KEEP MOVING
+</code></pre></div>
+<p>Параллельно:</p>
+<div class="highlight"><pre><span></span><code>CHAINSAW
+↓
+AMMO
+</code></pre></div>
+<p>Sustain встроен в aggression.</p>
+<h3 id="tactical-roles">Враги — tactical roles<a class="headerlink" href="#tactical-roles" title="Permanent link">¶</a></h3>
+<p>Enemy должен считываться силуэтом, звуком, атакой и движением и быстро отвечать на вопрос:</p>
+<div class="highlight"><pre><span></span><code>ПОЧЕМУ
+ЭТОТ DEMON
+МЕНЯЕТ
+МОЁ ПОВЕДЕНИЕ?
+</code></pre></div>
+<h3 id="weapons-toolkit">Weapons — toolkit<a class="headerlink" href="#weapons-toolkit" title="Permanent link">¶</a></h3>
+<p>Не линейная лестница upgrades, а набор инструментов. Weapon mods добавляют новые verbs, player постоянно переключается.</p>
+<h3 id="arena">Arena — сеть движения<a class="headerlink" href="#arena" title="Permanent link">¶</a></h3>
+<p>Space существует для reposition, verticality, route selection, enemy management и resource management. Не для сидения за ящиком.</p>
+<h3 id="_4">Но структура тоже имеет минус<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>Постепенно campaign может считываться как:</p>
+<div class="highlight"><pre><span></span><code>коридор
+↓
+arena
+↓
+коридор
+↓
+arena
+</code></pre></div>
+<p>Высокий quality combat покупается ценой заметной encounter structure.</p>
+<h3 id="progression">Progression<a class="headerlink" href="#progression" title="Permanent link">¶</a></h3>
+<p>Upgrades обычно расширяют possibilities — mods, runes, suit abilities — а не только дают +2% damage. Progression должна поддерживать mastery.</p>
+<h3 id="exploration-old-doom-rhythm">Exploration сохраняет old Doom rhythm<a class="headerlink" href="#exploration-old-doom-rhythm" title="Permanent link">¶</a></h3>
+<p>Secrets, collectibles, optional spaces. Это пауза между arenas, но активная.</p>
+<h3 id="story-optional-layer">Story — optional layer<a class="headerlink" href="#story-optional-layer" title="Permanent link">¶</a></h3>
+<p>Если тебе интересна UAC/lore — читай. Если нет — беги стрелять.</p>
+<h3 id="slayer-protagonist">Slayer — новый тип protagonist<a class="headerlink" href="#slayer-protagonist" title="Permanent link">¶</a></h3>
+<p>Он одновременно avatar и character. Почти не разговаривает, но actions дают характер.</p>
+<p>Lore поддерживает mechanics:</p>
+<div class="highlight"><pre><span></span><code>demons
+боятся тебя
+↓
+gameplay
+делает тебя
+очень опасным
+</code></pre></div>
+<h3 id="tone">Tone<a class="headerlink" href="#tone" title="Permanent link">¶</a></h3>
+<p>Doom 3 была очень серьёзным horror. 2016 возвращает heavy-metal absurdity, UAC satire и comic-book aggression.</p>
+<h3 id="mick-gordon">Mick Gordon<a class="headerlink" href="#mick-gordon" title="Permanent link">¶</a></h3>
+<p>Soundtrack не просто фон. Он реагирует на combat и усиливает rhythm. Audio становится частью feedback loop.</p>
+<h3 id="id-tech-6-player">id Tech 6 работает идеально именно потому, что player почти не думает о нём<a class="headerlink" href="#id-tech-6-player" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>PLAYER
+ПОМНИТ
+SUPER SHOTGUN
+
+А НЕ
+TEMPORAL
+ANTI-ALIASING
+</code></pre></div>
+<p>Вот правильная hierarchy.</p>
+<h3 id="multiplayer-snapmap">Multiplayer и SnapMap<a class="headerlink" href="#multiplayer-snapmap" title="Permanent link">¶</a></h3>
+<p>Multiplayer частично делает Certain Affinity. Есть SnapMap как попытка сохранить creator-DNA.</p>
+<p>Но public reception почти полностью концентрируется на campaign.</p>
+<p>Забавно: компания изобретателей deathmatch возвращается как single-player powerhouse.</p>
+<h3 id="doom-2016-rage">Doom 2016 — анти-RAGE<a class="headerlink" href="#doom-2016-rage" title="Permanent link">¶</a></h3>
+<p>RAGE расширяла игру наружу: cars, crafting, hubs, racing.</p>
+<p>Doom 2016 берёт shooting и углубляет внутрь.</p>
+<p>Вот почему она цельнее.</p>
+<h3 id="id">Это второе рождение id<a class="headerlink" href="#id" title="Permanent link">¶</a></h3>
+<p>Founders почти нет. Независимости нет. External engine business нет.</p>
+<p>Но FEEL, TECH, PERFORMANCE, STRONG CORE и PLAYER CONTROL живы.</p>
+<p>DOOM 2016 доказывает: id может пережить своих создателей.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p060">60. id Tech 6 — новая инженерная id без Carmack<a class="headerlink" href="#p060" title="Permanent link">¶</a></h2>
+<p>После ухода Carmack главный технический вопрос:</p>
+<div class="highlight"><pre><span></span><code>А id
+ВООбще
+МОЖЕТ
+ДЕЛАТЬ
+id-level
+ENGINE
+БЕЗ НЕГО?
+</code></pre></div>
+<p>Doom 2016 отвечает: да.</p>
+<h3 id="carmack">Нет «нового Carmack»<a class="headerlink" href="#carmack" title="Permanent link">¶</a></h3>
+<p>Engineering leadership распределена между Robert Duffy, Tiago Sousa, Billy Khan, Jean Geffroy, Axel Gneiting и другими инженерами.</p>
+<div class="highlight"><pre><span></span><code>PERSON-CENTERED
+ENGINEERING
+↓
+TEAM-CENTERED
+ENGINEERING
+</code></pre></div>
+<h3 id="robert-duffy">Robert Duffy<a class="headerlink" href="#robert-duffy" title="Permanent link">¶</a></h3>
+<p>Это continuity. Он давно внутри id и проходит несколько engine generations. После Carmack именно такие ветераны позволяют technical culture не обнулиться.</p>
+<h3 id="tiago-sousa">Tiago Sousa<a class="headerlink" href="#tiago-sousa" title="Permanent link">¶</a></h3>
+<p>Приходит из Crytek в 2014. Очень сильный graphics engineer.</p>
+<p>Это ещё одна важная проверка institution: можно взять человека из другой сильной engineering school и встроить в id.</p>
+<h3 id="id-tech-6-clean-sheet-rewrite">id Tech 6 — не clean-sheet rewrite<a class="headerlink" href="#id-tech-6-clean-sheet-rewrite" title="Permanent link">¶</a></h3>
+<p>Она глубоко развивается из id Tech 5, но architecture и priorities серьёзно перестраиваются.</p>
+<h3 id="duffy">Самая важная фраза Duffy<a class="headerlink" href="#duffy" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>With DOOM we let the game drive the technology decisions from early on.</p>
+</blockquote>
+<p>Вот разрыв с RAGE-era.</p>
+<h3 id="60-fps-architecture-target">60 FPS — architecture target<a class="headerlink" href="#60-fps-architecture-target" title="Permanent link">¶</a></h3>
+<p>Не marketing bullet.</p>
+<p>Combat требует low latency, fast animation, precise aiming, responsive movement.</p>
+<div class="highlight"><pre><span></span><code>60 Hz
+=
+GAMEPLAY REQUIREMENT
+</code></pre></div>
+<h3 id="dynamic-resolution">Dynamic resolution<a class="headerlink" href="#dynamic-resolution" title="Permanent link">¶</a></h3>
+<p>Если scene тяжёлая, лучше немного снизить resolution, чем сломать frame pacing.</p>
+<p>Image quality обслуживает feel, а не наоборот.</p>
+<h3 id="frames-in-flight-latency">Frames in flight и latency<a class="headerlink" href="#frames-in-flight-latency" title="Permanent link">¶</a></h3>
+<p>Engine engineers думают не только о GPU utilization, но о том, как быстро input дойдёт до pixel.</p>
+<p>Это старое Carmack-DNA, уже без Carmack.</p>
+<h3 id="early-optimization">Early optimization<a class="headerlink" href="#early-optimization" title="Permanent link">¶</a></h3>
+<p>Performance — responsibility всех systems с начала production, а не «потом оптимизируем».</p>
+<h3 id="rendering">Rendering<a class="headerlink" href="#rendering" title="Permanent link">¶</a></h3>
+<p>id Tech 6 использует dynamic lighting, PBR, HDR, hybrid forward/deferred ideas, temporal techniques, reflections, decals и modern shadowing.</p>
+<p>Но нет одной marketing religion уровня Doom 3 = dynamic shadows или RAGE = MegaTexture.</p>
+<p>Technology становится набором практических systems.</p>
+<h3 id="pbr-production-improvement">PBR — ещё и production improvement<a class="headerlink" href="#pbr-production-improvement" title="Permanent link">¶</a></h3>
+<p>Он создаёт более предсказуемый art workflow. Artist быстрее понимает, как material будет выглядеть в разных условиях.</p>
+<p>Engine теперь оптимизирует не только runtime, но и content creation.</p>
+<h3 id="virtual-texturing">Virtual texturing не просто выкинули<a class="headerlink" href="#virtual-texturing" title="Permanent link">¶</a></h3>
+<p>Части lineage id Tech 5 сохраняются и эволюционируют. Но уменьшается dogmatism.</p>
+<p>Если classic MegaTexture неудобна для storage/iteration/dynamic effects — system меняется.</p>
+<h3 id="engine-doom">Engine специально делается под Doom<a class="headerlink" href="#engine-doom" title="Permanent link">¶</a></h3>
+<p>После отказа от external licensing больше не надо отвечать:</p>
+<div class="highlight"><pre><span></span><code>А МОЖНО
+НА ЭТОМ
+СДЕЛАТЬ
+SKYRIM?
+</code></pre></div>
+<p>Неважно.</p>
+<p>Вопрос:</p>
+<div class="highlight"><pre><span></span><code>МОЖНО ЛИ
+СДЕЛАТЬ
+DOOM
+ЕЩЁ ЛУЧШЕ?
+</code></pre></div>
+<h3 id="vulkan">Vulkan<a class="headerlink" href="#vulkan" title="Permanent link">¶</a></h3>
+<p>DOOM изначально на PC выходит с OpenGL. Vulkan support добавляют 11 июля 2016 после релиза.</p>
+<p>Это не rescue плохого PC port. PC version и так хорошая.</p>
+<p>Vulkan даёт ниже CPU overhead, лучше multithreading, больше low-level control, async compute и потенциально выше framerate.</p>
+<h3 id="vulkan-id">Философия Vulkan у id<a class="headerlink" href="#vulkan-id" title="Permanent link">¶</a></h3>
+<p>Правильный вопрос:</p>
+<div class="highlight"><pre><span></span><code>А PLAYER
+ЧТО ПОЛУЧИТ?
+</code></pre></div>
+<p>Ответ:</p>
+<div class="highlight"><pre><span></span><code>HIGHER FPS
+BETTER FEEL
+</code></pre></div>
+<p>API важен не как badge, а через gameplay benefit.</p>
+<h3 id="id-tech-6">Главный итог id Tech 6<a class="headerlink" href="#id-tech-6" title="Permanent link">¶</a></h3>
+<p>Пережили performance, low latency, own engine, hardware expertise, technical ambition.</p>
+<p>Изменилось главное:</p>
+<div class="highlight"><pre><span></span><code>renderer
+больше
+не диктует
+game
+</code></pre></div>
+<p>Это и есть новая инженерная id.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p061">61. Doom Eternal — id не повторяет Doom 2016, а делает систему жёстче<a class="headerlink" href="#p061" title="Permanent link">¶</a></h2>
+<p>После Doom 2016 компания могла сделать самый безопасный sequel:</p>
+<div class="highlight"><pre><span></span><code>MORE DEMONS
+MORE GUNS
+MORE GLORY KILLS
+SAME LOOP
+</code></pre></div>
+<p>Но modern id снова действует по старому хорошему принципу:</p>
+<div class="highlight"><pre><span></span><code>УСПЕШНАЯ FORMULA
+≠
+СВЯЩЕННАЯ FORMULA
+</code></pre></div>
+<h3 id="doom-2016">Что не устраивало команду в Doom 2016<a class="headerlink" href="#doom-2016" title="Permanent link">¶</a></h3>
+<p>Игрок к середине/второй половине campaign мог найти comfortable dominant strategy — условно Super Shotgun + Gauss + любимая рутина — и дальше долго не менять стиль.</p>
+<p>Ceiling есть, но game недостаточно aggressively заставляет пользоваться всей системой.</p>
+<h3 id="eternal">Eternal хочет постоянных решений<a class="headerlink" href="#eternal" title="Permanent link">¶</a></h3>
+<p>Отсюда Combat Chess, Speed Chess, Fantasy Combat Puzzle.</p>
+<p>Идея:</p>
+<div class="highlight"><pre><span></span><code>POWER FANTASY
+НЕ ДАЁТСЯ
+БЕСПЛАТНО
+↓
+ТЫ
+ЧУВСТВУЕШЬ
+СЕБЯ SLAYER
+ПОТОМУ ЧТО
+НАУЧИЛСЯ
+ИМ БЫТЬ
+</code></pre></div>
+<h3 id="resource-economy">Resource economy усиливается<a class="headerlink" href="#resource-economy" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>Glory Kill
+→ health
+
+Chainsaw
+→ ammo
+
+Flame Belch
+→ armor
+
+Glory Kills
+→ Blood Punch charge
+</code></pre></div>
+<p>Enemy — resource network.</p>
+<p>Fodder demon — не мусор, а передвижной inventory.</p>
+<h3 id="ammo-deliberately-tighter">Ammo deliberately tighter<a class="headerlink" href="#ammo-deliberately-tighter" title="Permanent link">¶</a></h3>
+<p>Если player может бесконечно стрелять одной пушкой, он не учится toolkit.</p>
+<p>Поэтому Eternal постоянно подталкивает к switch.</p>
+<p>Для одних это гениально. Для других — «дайте просто пострелять».</p>
+<h3 id="_5">Враги становятся задачами<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>Weak points — Arachnotron turret, Mancubus cannons и другие tactical appendages.</p>
+<p>Разрушение части тела меняет enemy role. Visual damage влияет на систему.</p>
+<h3 id="prescriptiveness">Возникает prescriptiveness<a class="headerlink" href="#prescriptiveness" title="Permanent link">¶</a></h3>
+<p>Чем сильнее id задаёт «этого лучше этим», тем меньше чистой sandbox-интерпретации.</p>
+<p>Это главный trade-off Eternal: глубже, но более авторски контролируемо.</p>
+<h3 id="marauder">Marauder — концентрат философии<a class="headerlink" href="#marauder" title="Permanent link">¶</a></h3>
+<p>Он заставляет читать дистанцию, ждать cue, таймить counter, менять priority.</p>
+<p>Часть игроков его ненавидит, потому что Doom вдруг говорит «не беги вперёд прямо сейчас».</p>
+<p>Команда защищает его как teaching enemy.</p>
+<h3 id="movement">Movement становится огромной системой<a class="headerlink" href="#movement" title="Permanent link">¶</a></h3>
+<p>Double jump, dash, air control, monkey bars, wall climb, Meat Hook.</p>
+<p>Если Slayer — более быстрая машина, арены должны стать больше, вертикальнее и сложнее.</p>
+<h3 id="meat-hook-systemic-mechanic">Meat Hook — великолепная systemic mechanic<a class="headerlink" href="#meat-hook-systemic-mechanic" title="Permanent link">¶</a></h3>
+<p>Enemy одновременно:</p>
+<div class="highlight"><pre><span></span><code>TARGET
++
+MOVEMENT ANCHOR
+</code></pre></div>
+<p>Combat и traversal сливаются.</p>
+<h3 id="platforming">Platforming<a class="headerlink" href="#platforming" title="Permanent link">¶</a></h3>
+<p>Решает несколько задач: разбивает arena-corridor-arena, позволяет practice mobility без combat pressure, поддерживает kinetic rhythm.</p>
+<p>Но может ощущаться как «Mario в Doom».</p>
+<h3 id="eternal-gamey">Eternal сознательно становится gamey<a class="headerlink" href="#eternal-gamey" title="Permanent link">¶</a></h3>
+<p>Яркие pickups, 1-Ups, monkey bars. Mechanics должны мгновенно читаться. Это прямой отказ от cinematic naturalism.</p>
+<h3 id="lore">Lore становится значительно больше<a class="headerlink" href="#lore" title="Permanent link">¶</a></h3>
+<p>Sentinels, Maykrs, Hell cosmology, Slayer mythology.</p>
+<p>Для одних — расширение мира. Для других — 2016 была смешнее и загадочнее, Eternal слишком много объясняет.</p>
+<h3 id="eternal_1">Eternal проектируется как долго живущий продукт<a class="headerlink" href="#eternal_1" title="Permanent link">¶</a></h3>
+<p>Year One Pass, The Ancient Gods, Master Levels, events, Battlemode, позднее Horde Mode.</p>
+<p>Modern id строит почти live-service-scale infrastructure вокруг primarily single-player mastery game.</p>
+<h3 id="the-ancient-gods">The Ancient Gods<a class="headerlink" href="#the-ancient-gods" title="Permanent link">¶</a></h3>
+<p>Part One — 20 октября 2020. Контент предполагает, что player уже знает system, и начинает давить high-level encounters.</p>
+<p>Part Two — 18 марта 2021. Закрывает Slayer saga, добавляет variants и Sentinel Hammer.</p>
+<p>DLC ещё сильнее увеличивают prescriptive side: combat местами почти превращается в real-time puzzle.</p>
+<h3 id="battlemode">Battlemode<a class="headerlink" href="#battlemode" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>1 Slayer
+VS
+2 player demons
+</code></pre></div>
+<p>Попытка перенести combat chess в multiplayer. Интересный concept, но культурным центром Eternal не становится.</p>
+<h3 id="invasion-mode">Invasion Mode<a class="headerlink" href="#invasion-mode" title="Permanent link">¶</a></h3>
+<p>Планировался invasion других players в campaign. В 2021 отменён из-за production realities и смены priorities. Resources уходят в Horde Mode.</p>
+<h3 id="update-666">Update 6.66<a class="headerlink" href="#update-666" title="Permanent link">¶</a></h3>
+<p>Horde Mode, Battlemode 2.0, Master Levels.</p>
+<p>Именно system depth позволяет тем же demons в новых комбинациях создавать новый challenge.</p>
+<h3 id="2016-vs-eternal">2016 vs Eternal<a class="headerlink" href="#2016-vs-eternal" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>2016:
+чище
+проще
+мгновеннее
+лучше flow
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Eternal:
+глубже
+плотнее
+выше skill ceiling
+больше cognitive load
+больше rules
+</code></pre></div>
+<h3 id="_6">Главный исторический итог<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>Doom 2016 доказала, что post-Carmack id может сделать великую id game.</p>
+<p>Eternal доказала, что она может <strong>сама развивать новую философию</strong>.</p>
+<div class="highlight"><pre><span></span><code>DOOM 2016
+заставляет тебя
+ПОЧУВСТВОВАТЬ
+СЕБЯ SLAYER
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>DOOM ETERNAL
+заставляет тебя
+НАУЧИТЬСЯ
+БЫТЬ SLAYER
+</code></pre></div>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p062">62. Tim Willits покидает id Software<a class="headerlink" href="#p062" title="Permanent link">¶</a></h2>
+<p>18 июля 2019 Tim Willits объявляет, что после QuakeCon покинет id. После 24 лет.</p>
+<h3 id="_7">Важная поправка<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>Иногда это описывают как «последний старый человек id ушёл».</p>
+<p>Слишком грубо. Kevin Cloud, например, имеет ещё более раннюю lineage — приходит в 1992.</p>
+<p>Точнее: Willits был последним очень публичным studio-level лидером с непрерывной карьерой ещё от Quake-era.</p>
+<h3 id="romerocarmack">Почему уход сильно отличается от Romero/Carmack<a class="headerlink" href="#romerocarmack" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>Romero:
+CONFLICT
+↓
+COMPANY МЕНЯЕТСЯ
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Carmack:
+TECHNICAL CENTER УХОДИТ
+↓
+EXISTENTIAL QUESTION
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Willits:
+Я УХОЖУ
+↓
+CURRENT PROJECTS
+В ХОРОШИХ РУКАХ
+</code></pre></div>
+<p>И studio просто продолжает.</p>
+<p>Это огромный показатель maturity.</p>
+<h3 id="rage-2">RAGE 2 — символичный последний большой проект<a class="headerlink" href="#rage-2" title="Permanent link">¶</a></h3>
+<p>Игра выходит в мае 2019. Основная production — Avalanche. id консультирует и co-develops shooter side.</p>
+<p>Получается великолепная карьерная арка:</p>
+<div class="highlight"><pre><span></span><code>Quake
+в одной комнате
+в Texas
+↓
+RAGE 2
+между Texas
+и Stockholm
+</code></pre></div>
+<p>Willits прожил весь переход индустрии от tiny team до distributed AAA co-development.</p>
+<h3 id="doom-eternal">Doom Eternal уже не зависит от него<a class="headerlink" href="#doom-eternal" title="Permanent link">¶</a></h3>
+<p>Когда Willits уходит, Eternal далеко в production. Но публичными Doom leaders уже давно являются Marty Stratton и Hugo Martin.</p>
+<p>Leadership transition произошёл ещё до formal departure.</p>
+<h3 id="quake-champions">Quake Champions тоже продолжает жить<a class="headerlink" href="#quake-champions" title="Permanent link">¶</a></h3>
+<p>И в 2022 формально выходит из Early Access в full release.</p>
+<p>Ни один current project не рушится.</p>
+<h3 id="willits">Куда уходит Willits<a class="headerlink" href="#willits" title="Permanent link">¶</a></h3>
+<p>В августе 2019 становится Chief Creative Officer Saber Interactive.</p>
+<p>Его снова привлекает модель маленьких команд, быстрого iteration и разнообразия проектов внутри более крупной структуры.</p>
+<h3 id="_8">Историческая ирония<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p>Willits всю карьеру помогает id пройти путь:</p>
+<div class="highlight"><pre><span></span><code>маленькая agile team
+↓
+большая AAA organization
+</code></pre></div>
+<p>А потом его снова привлекает small-team agility.</p>
+<h3 id="_9">Главное значение ухода<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<p>id теперь окончательно не <code>BUS FACTOR = 1</code>.</p>
+<p>Hall ушёл — команда перестроилась.</p>
+<p>Romero ушёл — культура изменилась.</p>
+<p>Carmack ушёл — engineering пришлось доказывать себя.</p>
+<p>Willits ушёл — практически ничего катастрофического не происходит.</p>
+<p>Вот и есть institutional maturity.</p>
+<h3 id="quake-identity">Quake identity после него<a class="headerlink" href="#quake-identity" title="Permanent link">¶</a></h3>
+<p>Willits лично прожил Quake, Quake II, Quake III, Quake 4-era, Quake Live и Quake Champions.</p>
+<p>Когда такие люди уходят, Quake identity теперь хранится не в живой персональной памяти одного лидера, а в документах, community, старых games и множестве людей.</p>
+<p>Именно поэтому новая Quake становится всё более сложным identity problem.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p063">63. Microsoft покупает ZeniMax<a class="headerlink" href="#p063" title="Permanent link">¶</a></h2>
+<p>21 сентября 2020 Microsoft объявляет покупку ZeniMax Media за <strong>$7.5 млрд cash</strong>.</p>
+<p>9 марта 2021 сделка закрывается.</p>
+<p>Сразу нельзя совершать глупую ошибку:</p>
+<div class="highlight"><pre><span></span><code>MICROSOFT
+ЗАПЛАТИЛА
+$7.5B
+ЗА id
+</code></pre></div>
+<p>Нет.</p>
+<p>Она покупает весь ZeniMax portfolio: Bethesda Softworks, Bethesda Game Studios, id Software, Arkane, MachineGames, ZeniMax Online, Tango Gameworks, Alpha Dog, Roundhouse и огромный каталог IP.</p>
+<p>Doom — только один кусок.</p>
+<h3 id="microsoft">Стратегия Microsoft<a class="headerlink" href="#microsoft" title="Permanent link">¶</a></h3>
+<p>Xbox получает:</p>
+<div class="highlight"><pre><span></span><code>CONTENT
++
+STUDIOS
++
+IP
++
+GAME PASS VALUE
++
+PC / CONSOLE ECOSYSTEM
+</code></pre></div>
+<h3 id="studios">Первоначальное сообщение — сохраняем studios<a class="headerlink" href="#studios" title="Permanent link">¶</a></h3>
+<p>Не «теперь все становятся Microsoft Game Studio #17», а Bethesda structure сохраняется.</p>
+<p>Microsoft покупает функционирующую organization, а не просто IP archive.</p>
+<h3 id="id-immediate-disruption">Для id immediate disruption минимален<a class="headerlink" href="#id-immediate-disruption" title="Permanent link">¶</a></h3>
+<p>Studio остаётся в Texas. Bethesda остаётся publishing layer. DOOM Eternal продолжает support.</p>
+<p>Никто не переезжает в Redmond на следующий день.</p>
+<h3 id="game-pass">Game Pass становится важнейшим новым экономическим слоем<a class="headerlink" href="#game-pass" title="Permanent link">¶</a></h3>
+<p>Будущая game теперь ценна не только:</p>
+<div class="highlight"><pre><span></span><code>СКОЛЬКО
+КОПИЙ
+ПРОДАЛИ?
+</code></pre></div>
+<p>Но:</p>
+<div class="highlight"><pre><span></span><code>ПРИВЛЕКАЕТ ЛИ
+ОНА
+В GAME PASS?
+
+УДЕРЖИВАЕТ ЛИ
+SUBSCRIBER?
+
+УСИЛИВАЕТ ЛИ
+XBOX ECOSYSTEM?
+</code></pre></div>
+<p>Это другая экономика.</p>
+<h3 id="id-first-party-xbox-studio">id теперь юридически first-party Xbox studio<a class="headerlink" href="#id-first-party-xbox-studio" title="Permanent link">¶</a></h3>
+<p>Но возникает вопрос:</p>
+<div class="highlight"><pre><span></span><code>DOOM
+ТЕПЕРЬ
+XBOX EXCLUSIVE?
+</code></pre></div>
+<p>В 2021 Phil Spencer довольно прямо говорит, что цель acquisition в том числе — давать платформам с Game Pass отличные exclusive games, при сохранении existing contracts и legacy/community cases.</p>
+<p>Starfield/Redfall покажут, что exclusivity была реальной strategy.</p>
+<p>Поэтому нельзя задним числом переписывать 2021 как «Microsoft с самого начала собиралась всё выпускать везде».</p>
+<h3 id="existing-playstation-agreements">Existing PlayStation agreements соблюдаются<a class="headerlink" href="#existing-playstation-agreements" title="Permanent link">¶</a></h3>
+<p>Deathloop. Ghostwire: Tokyo.</p>
+<p>Contracts важнее acquisition rhetoric.</p>
+<h3 id="doom-xboxpc-only">Doom действительно могла стать Xbox/PC-only<a class="headerlink" href="#doom-xboxpc-only" title="Permanent link">¶</a></h3>
+<p>В контексте стратегии 2021 это был реальный вариант.</p>
+<p>Именно поэтому The Dark Ages потом особенно важна.</p>
+<h3 id="2020-xbox-multiplatform-philosophy">К середине 2020-х Xbox меняет multiplatform philosophy<a class="headerlink" href="#2020-xbox-multiplatform-philosophy" title="Permanent link">¶</a></h3>
+<p>Microsoft начинает активнее выпускать first-party games на других платформах.</p>
+<p>Doom оказывается особым случаем.</p>
+<h3 id="the-dark-ages-ps5-day-one">The Dark Ages выходит на PS5 day one<a class="headerlink" href="#the-dark-ages-ps5-day-one" title="Permanent link">¶</a></h3>
+<p>Phil Spencer объясняет примерно: Doom исторически жила на огромном количестве devices, и он спросил Marty Stratton, чего хочет сама Doom team.</p>
+<p>Stratton хотел all platforms. Spencer согласился.</p>
+<p>То есть:</p>
+<div class="highlight"><pre><span></span><code>LEGAL OWNERSHIP
+=
+Xbox
+</code></pre></div>
+<p>но:</p>
+<div class="highlight"><pre><span></span><code>CULTURAL IDENTITY
+=
+MULTIPLATFORM DOOM
+</code></pre></div>
+<h3 id="15-2025">15 мая 2025<a class="headerlink" href="#15-2025" title="Permanent link">¶</a></h3>
+<p>The Dark Ages выходит на Xbox Series X|S, PC, PS5 и Game Pass day one.</p>
+<p>Вот реальный post-acquisition answer.</p>
+<h3 id="microsoft-id">Microsoft получает уже зрелую id<a class="headerlink" href="#microsoft-id" title="Permanent link">¶</a></h3>
+<p>ZeniMax в 2009 покупала компанию в сложной переходной точке: RAGE, id Tech 5, Doom 4 uncertainty, Carmack-era на исходе.</p>
+<p>Microsoft получает:</p>
+<div class="highlight"><pre><span></span><code>DOOM 2016
++
+ETERNAL SUCCESS
+</code></pre></div>
+<p>Studio уже знает, что делает.</p>
+<p>Поэтому лучший owner move:</p>
+<div class="highlight"><pre><span></span><code>ДАЙТЕ
+РЕСУРСЫ
+
+И
+НЕ УЧИТЕ
+id
+КАК
+ДЕЛАТЬ
+FPS
+</code></pre></div>
+<h3 id="game-pass-shareware">Game Pass немного рифмуется с shareware<a class="headerlink" href="#game-pass-shareware" title="Permanent link">¶</a></h3>
+<p>Не экономически один в один. Но по user friction:</p>
+<div class="highlight"><pre><span></span><code>НЕ НУЖНО
+РЕШАТЬ
+ПОКУПАТЬ ЛИ
+ИГРУ ЗА $70
+↓
+НАЖАЛ INSTALL
+</code></pre></div>
+<p>Есть далёкая рифма с free episode старой id. Business model совершенно другой.</p>
+<h3 id="idtech-microsoft">idTech теперь актив Microsoft<a class="headerlink" href="#idtech-microsoft" title="Permanent link">¶</a></h3>
+<p>Не только game engine id, а internal technical knowledge огромной first-party группы.</p>
+<p>При этом Microsoft пока не превращает idTech в обязательный engine для всех Xbox Studios.</p>
+<h3 id="portfolio">Portfolio конкуренция<a class="headerlink" href="#portfolio" title="Permanent link">¶</a></h3>
+<p>После Activision acquisition внутри Microsoft появляются одновременно Halo, Doom, Wolfenstein, Call of Duty, Quake и другие shooters.</p>
+<p>На первый взгляд:</p>
+<div class="highlight"><pre><span></span><code>ЗАЧЕМ
+СТОЛЬКО?
+</code></pre></div>
+<p>Но Doom ценна именно потому, что <strong>не</strong> Call of Duty.</p>
+<p>Сильная identity теперь стратегический плюс.</p>
+<h3 id="_10">Главный итог<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p>id — Xbox first-party <strong>юридически</strong>.</p>
+<p>Doom — multiplatform <strong>культурно и фактически в текущей политике</strong>.</p>
+<p>И это очередной пример всей истории компании:</p>
+<div class="highlight"><pre><span></span><code>ownership
+и
+identity
+
+не одно
+и то же
+</code></pre></div>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p064">64. MachineGames, Nightdive и внешняя жизнь IP id<a class="headerlink" href="#p064" title="Permanent link">¶</a></h2>
+<p>Здесь происходит ещё одна тихая, но очень глубокая трансформация id Software.</p>
+<p>В девяностые логика была почти автоматической:</p>
+<div class="highlight"><pre><span></span><code>IP id Software
+        │
+        ▼
+GAME id Software
+</code></pre></div>
+<p>Если написано Doom, Quake или Wolfenstein, естественный вопрос: какую игру сама id сейчас делает с этим названием?</p>
+<p>К 2010–2020-м связь разрывается.</p>
+<div class="highlight"><pre><span></span><code>                    id / Bethesda
+                         │
+                         ▼
+                    FRANCHISE / IP
+                         │
+          ┌──────────────┼──────────────┐
+          ▼              ▼              ▼
+     id Software    MachineGames     Nightdive
+     new AAA Doom    Wolfenstein      restoration
+                     new Quake        old catalog
+                     episodes
+</code></pre></div>
+<p>Современная id больше не обязана лично производить всё, что относится к истории id.</p>
+<p>Она может одновременно быть:</p>
+<div class="highlight"><pre><span></span><code>AAA DEVELOPER
++
+ENGINEERING STUDIO
++
+FRANCHISE STEWARD
++
+ХРАНИТЕЛЬ
+СОБСТВЕННОГО
+НАСЛЕДИЯ
+</code></pre></div>
+<p>И иногда лучший способ сохранить Wolfenstein или Quake — отдать непосредственное производство людям, которые понимают эту конкретную игру лучше, чем текущая основная команда id.</p>
+<h3 id="machinegames-outsource">MachineGames — не обычный outsource<a class="headerlink" href="#machinegames-outsource" title="Permanent link">¶</a></h3>
+<p>MachineGames основана в 2009 бывшими сотрудниками Starbreeze. Сначала это независимая шведская studio с небольшими ресурсами и неопределённым будущим.</p>
+<p>Команда приезжает в Texas, проводит несколько недель рядом с id, изучает id Tech и pitch'ит проект, который станет Wolfenstein: The New Order.</p>
+<p>В октябре 2010 ZeniMax покупает MachineGames.</p>
+<p>С этого момента схема уже не:</p>
+<div class="highlight"><pre><span></span><code>id
+отдала
+Wolfenstein
+подрядчику
+</code></pre></div>
+<p>А:</p>
+<div class="highlight"><pre><span></span><code>ZeniMax
+имеет две
+сестринские studio
+
+id Software
++
+MachineGames
+</code></pre></div>
+<p>Одна даёт technology/IP heritage, другая становится новым creative home franchise.</p>
+<h3 id="the-new-order-studio-ip">The New Order показывает, что чужая studio может понять IP лучше владельца<a class="headerlink" href="#the-new-order-studio-ip" title="Permanent link">¶</a></h3>
+<p>MachineGames не пытается сделать «Doom с нацистами».</p>
+<p>Она приносит собственную Starbreeze-школу:</p>
+<ul>
+<li>
+<p>characters;</p>
+</li>
+<li>
+<p>first-person storytelling;</p>
+</li>
+<li>
+<p>драму;</p>
+</li>
+<li>
+<p>cinematic direction;</p>
+</li>
+<li>
+<p>strong atmosphere;</p>
+</li>
+<li>
+<p>brutal action.</p>
+</li>
+</ul>
+<p>В результате B.J. Blazkowicz перестаёт быть просто именем на HUD и получает внутренний голос, отношения, trauma, юмор и человеческую уязвимость.</p>
+<p>Но gameplay всё ещё может быть абсурдным:</p>
+<div class="highlight"><pre><span></span><code>ДВЕ
+ШТУРМОВЫЕ
+ВИНТОВКИ
++
+НАЦИСТСКИЕ
+РОБОТЫ
++
+КРОВЬ
+</code></pre></div>
+<p>Современный Wolfenstein находит редкую смесь:</p>
+<div class="highlight"><pre><span></span><code>ЧЕЛОВЕЧЕСКАЯ
+ДРАМА
++
+PULP
+</code></pre></div>
+<p>Именно здесь становится очевидно: creator studio не обязательно лучший perpetual owner creative direction.</p>
+<h3 id="doom-4">И это почти обратная история старого Doom 4<a class="headerlink" href="#doom-4" title="Permanent link">¶</a></h3>
+<p>С Doom id поняла:</p>
+<div class="highlight"><pre><span></span><code>МЕНЬШЕ
+cinematic war drama
+↓
+БОЛЬШЕ
+player action
+</code></pre></div>
+<p>MachineGames делает Wolfenstein и говорит:</p>
+<div class="highlight"><pre><span></span><code>А ЗДЕСЬ
+cinematic storytelling
+МОЖЕТ
+РАБОТАТЬ
+</code></pre></div>
+<p>То есть проблема старого Doom 4 была не в том, что cinematics сами по себе плохи.</p>
+<p>Проблема:</p>
+<div class="highlight"><pre><span></span><code>НЕПРАВИЛЬНЫЙ
+ЯЗЫК
+ДЛЯ
+НЕПРАВИЛЬНОЙ
+FRANCHISE
+</code></pre></div>
+<h3 id="id-tech">id Tech становится внутренней платформой<a class="headerlink" href="#id-tech" title="Permanent link">¶</a></h3>
+<p>The New Order работает на id Tech 5.</p>
+<p>Это новая модель распространения technology:</p>
+<div class="highlight"><pre><span></span><code>РАНЬШЕ:
+
+id Tech
+↓
+external licensee
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ПОСЛЕ ZENIMAX:
+
+id Tech
+↓
+sibling studio
+</code></pre></div>
+<p>Не middleware business, а internal technical ecosystem.</p>
+<h3 id="wolfenstein-machinegames">Wolfenstein фактически переезжает в MachineGames<a class="headerlink" href="#wolfenstein-machinegames" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>2014
+The New Order
+↓
+2015
+The Old Blood
+↓
+2017
+The New Colossus
+↓
+2019
+Youngblood
+</code></pre></div>
+<p>Один из исторических столпов id получает постоянный новый creative home.</p>
+<p>id не обязана держать отдельную Wolfenstein team просто потому, что когда-то сделала Wolfenstein 3D.</p>
+<h3 id="youngblood">Youngblood расширяет модель ещё дальше<a class="headerlink" href="#youngblood" title="Permanent link">¶</a></h3>
+<p>MachineGames co-develops Youngblood/Cyberpilot с Arkane Lyon.</p>
+<p>Получается уже:</p>
+<div class="highlight"><pre><span></span><code>id heritage
+↓
+MachineGames
+↓
+MachineGames + Arkane
+</code></pre></div>
+<p>IP постепенно перестаёт быть продуктом одной производственной культуры.</p>
+<h3 id="nightdive">Nightdive — совершенно другая функция<a class="headerlink" href="#nightdive" title="Permanent link">¶</a></h3>
+<p>MachineGames — sister studio.</p>
+<p>Nightdive — preservation specialist.</p>
+<p>Её ключевая competence:</p>
+<div class="highlight"><pre><span></span><code>КАК
+СДЕЛАТЬ
+GAME 1996 ГОДА
+НОРМАЛЬНЫМ
+ПРОДУКТОМ
+СЕГОДНЯ
+
+НЕ
+ПРЕВРАТИВ
+ЕЁ
+В ДРУГУЮ
+GAME?
+</code></pre></div>
+<p>KEX Engine решает legacy-platform problem: современные graphics APIs, controllers, cross-platform support, high resolutions, network layers, console services — при сохранении исходной логики/feel.</p>
+<h3 id="doom-64">Doom 64 — идеальный пример<a class="headerlink" href="#doom-64" title="Permanent link">¶</a></h3>
+<p>Десятилетиями Doom 64 выглядит для огромного количества людей как:</p>
+<div class="highlight"><pre><span></span><code>какой-то
+N64 Doom
+</code></pre></div>
+<p>Хотя это отдельная игра:</p>
+<ul>
+<li>
+<p>новые levels;</p>
+</li>
+<li>
+<p>новый art;</p>
+</li>
+<li>
+<p>новое lighting;</p>
+</li>
+<li>
+<p>Mother Demon;</p>
+</li>
+<li>
+<p>отдельная атмосфера;</p>
+</li>
+<li>
+<p>продолжение после Doom II.</p>
+</li>
+</ul>
+<p>В 2020 Nightdive/id/Bethesda наконец выводят её из Nintendo 64 prison на современные PC/consoles.</p>
+<p>Появляются Lost Levels — новый официальный content.</p>
+<p>То есть preservation здесь:</p>
+<div class="highlight"><pre><span></span><code>RESTORATION
++
+PORT
++
+QUALITY OF LIFE
++
+NEW OFFICIAL CONTENT
+</code></pre></div>
+<p>И remaster меняет не только доступность, но и историческое восприятие. Doom 64 становится очевидной полноценной частью линии Doom.</p>
+<h3 id="quake-2021">Quake 2021<a class="headerlink" href="#quake-2021" title="Permanent link">¶</a></h3>
+<p>Enhanced Quake собирает в одном modern product:</p>
+<ul>
+<li>
+<p>оригинальную campaign;</p>
+</li>
+<li>
+<p>Scourge of Armagon;</p>
+</li>
+<li>
+<p>Dissolution of Eternity;</p>
+</li>
+<li>
+<p>Dimension of the Past;</p>
+</li>
+<li>
+<p>новый Dimension of the Machine;</p>
+</li>
+<li>
+<p>modern multiplayer;</p>
+</li>
+<li>
+<p>crossplay;</p>
+</li>
+<li>
+<p>bots;</p>
+</li>
+<li>
+<p>split-screen;</p>
+</li>
+<li>
+<p>high-resolution/high-refresh support.</p>
+</li>
+</ul>
+<p>Nightdive восстанавливает technical body старой игры.</p>
+<p>MachineGames делает новый official content на её старом языке.</p>
+<h3 id="quake-ii-2023">Quake II 2023<a class="headerlink" href="#quake-ii-2023" title="Permanent link">¶</a></h3>
+<p>Та же модель доводится ещё дальше:</p>
+<div class="highlight"><pre><span></span><code>Quake II
++
+The Reckoning
++
+Ground Zero
++
+Quake II 64
++
+Call of the Machine
+</code></pre></div>
+<p>Плюс restored behaviours, improved AI, visuals, multiplayer, crossplay, 4K/120Hz.</p>
+<p>Особенно правильно, что original PC Quake II остаётся доступной рядом с enhanced version.</p>
+<div class="highlight"><pre><span></span><code>ХОЧЕШЬ
+HISTORICAL ORIGINAL?
+→ вот
+
+ХОЧЕШЬ
+MODERN RESTORATION?
+→ вот
+</code></pre></div>
+<p>Это почти идеальная preservation policy.</p>
+<h3 id="machinegames-classic-quake">MachineGames превращается ещё и в современного автора classic Quake<a class="headerlink" href="#machinegames-classic-quake" title="Permanent link">¶</a></h3>
+<p>Сначала Dimension of the Machine.</p>
+<p>Потом Call of the Machine.</p>
+<p>А в 2026 — Dawn of the Machine.</p>
+<p>Внутри MachineGames появляется собственный Quake Club — группа людей, которые используют старый Quake почти как освобождение от AAA specialization.</p>
+<p>Современный AAA employee обычно:</p>
+<div class="highlight"><pre><span></span><code>LEVEL DESIGNER
+или
+ENVIRONMENT ARTIST
+или
+COMBAT DESIGNER
+</code></pre></div>
+<p>В Quake Club один человек снова может:</p>
+<div class="highlight"><pre><span></span><code>сделать map
+поставить enemies
+настроить art
+design gameplay
+</code></pre></div>
+<p>Почти возврат к Petersen/McGee/Willits-era ownership уровня.</p>
+<h3 id="doom-doom-ii-2024">DOOM + DOOM II 2024<a class="headerlink" href="#doom-doom-ii-2024" title="Permanent link">¶</a></h3>
+<p>Modern classic pipeline сходится совсем красиво.</p>
+<p>В одном release:</p>
+<ul>
+<li>
+<p>Doom;</p>
+</li>
+<li>
+<p>Doom II;</p>
+</li>
+<li>
+<p>Master Levels;</p>
+</li>
+<li>
+<p>TNT;</p>
+</li>
+<li>
+<p>Plutonia;</p>
+</li>
+<li>
+<p>No Rest for the Living;</p>
+</li>
+<li>
+<p>SIGIL;</p>
+</li>
+<li>
+<p>новый Legacy of Rust.</p>
+</li>
+</ul>
+<p>Legacy of Rust создаётся людьми id + Nightdive + MachineGames и приносит новый официальный classic-Doom content.</p>
+<p>То есть authorship уже нельзя привязать к одному building.</p>
+<h3 id="id-curator">Современная id как curator<a class="headerlink" href="#id-curator" title="Permanent link">¶</a></h3>
+<p>У неё теперь три функции:</p>
+<div class="highlight"><pre><span></span><code>1. делать
+новые flagship games
+
+2. помогать
+другим studios
+нести IP дальше
+
+3. курировать
+исторический catalog
+</code></pre></div>
+<p>Это почти «живой архив», а не музей.</p>
+<p>Старый product одновременно:</p>
+<div class="highlight"><pre><span></span><code>HISTORICAL OBJECT
+и
+GAME,
+В КОТОРУЮ
+НОРМАЛЬНО
+ИГРАТЬ
+СЕГОДНЯ
+</code></pre></div>
+<h3 id="organizational-benefit">Главный organizational benefit<a class="headerlink" href="#organizational-benefit" title="Permanent link">¶</a></h3>
+<p>Main Doom team не надо на год отрывать 20 engineers, чтобы:</p>
+<div class="highlight"><pre><span></span><code>делать
+Quake II crossplay
+на Switch
+</code></pre></div>
+<p>Nightdive уже умеет именно это.</p>
+<p>MachineGames уже умеет classic Quake content и Wolfenstein.</p>
+<p>Правильный outsourcing здесь — не дешёвые руки, а <strong>специализированное знание</strong>.</p>
+<h3 id="_11">Но есть и риск<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<p>Если creative home franchise живёт в другой studio десятилетиями, знания тоже переезжают туда.</p>
+<p>Сегодня вопрос:</p>
+<div class="highlight"><pre><span></span><code>КТО
+ЗНАЕТ
+СОВРЕМЕННЫЙ
+WOLFENSTEIN?
+</code></pre></div>
+<p>естественно отвечает:</p>
+<div class="highlight"><pre><span></span><code>MachineGames
+</code></pre></div>
+<p>а не id.</p>
+<p>Это нормально, пока creative home силён.</p>
+<h3 id="quake">Quake остаётся сложнее<a class="headerlink" href="#quake" title="Permanent link">¶</a></h3>
+<p>Doom:</p>
+<div class="highlight"><pre><span></span><code>id
+</code></pre></div>
+<p>Wolfenstein:</p>
+<div class="highlight"><pre><span></span><code>MachineGames
+</code></pre></div>
+<p>Quake:</p>
+<div class="highlight"><pre><span></span><code>Nightdive
+→ preservation
+
+MachineGames
+→ episodes
+
+id
+→ stewardship
+
+но кто делает
+НОВУЮ
+БОЛЬШУЮ
+QUAKE?
+</code></pre></div>
+<p>Именно отсюда вытекает следующий вопрос.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p065">65. Quake после Quake III — серия, которая четверть века не может решить, что такое Quake<a class="headerlink" href="#p065" title="Permanent link">¶</a></h2>
+<p>Проблема Quake уникальна.</p>
+<p>У Doom можно выделить довольно ясное ядро:</p>
+<div class="highlight"><pre><span></span><code>DEMONS
+GUNS
+MOVEMENT
+AGGRESSION
+</code></pre></div>
+<p>У Quake к 1999 уже существует минимум три разных центра идентичности.</p>
+<div class="highlight"><pre><span></span><code>QUAKE 1996
+=
+gothic
+Lovecraft
+industrial
+single-player
++
+deathmatch
++
+air control
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>QUAKE II
+=
+military sci-fi
+Strogg
+campaign
+industrial machinery
++
+deathmatch
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>QUAKE III
+=
+ARENA
+movement
+weapons
+map control
+duel
+competition
+</code></pre></div>
+<p>Когда говорят «сделайте новый Quake», первый вопрос:</p>
+<div class="highlight"><pre><span></span><code>КАКОЙ
+ИМЕННО?
+</code></pre></div>
+<h3 id="quake-4-quake-ii">Quake 4 выбирает Quake II<a class="headerlink" href="#quake-4-quake-ii" title="Permanent link">¶</a></h3>
+<p>18 октября 2005 выходит Quake 4 от Raven Software в сотрудничестве с id.</p>
+<p>Это прямой sequel Quake II.</p>
+<div class="highlight"><pre><span></span><code>Quake II
+↓
+Stroggos
+↓
+война продолжается
+↓
+Quake 4
+</code></pre></div>
+<p>Original Quake mythology практически игнорируется.</p>
+<h3 id="campaign-cinematic-military-shooter">Campaign становится более cinematic military shooter<a class="headerlink" href="#campaign-cinematic-military-shooter" title="Permanent link">¶</a></h3>
+<p>Новый герой Matthew Kane, Rhino Squad, radio chatter, squadmates, vehicles, set pieces.</p>
+<p>На id Tech 4 получается значительно более быстрый run-and-gun experience, чем Doom 3.</p>
+<p>Raven показывает, что engine Doom 3 не обязан означать horror.</p>
+<h3 id="stroggification">Stroggification — действительно сильная идея<a class="headerlink" href="#stroggification" title="Permanent link">¶</a></h3>
+<p>Quake II всегда говорила:</p>
+<div class="highlight"><pre><span></span><code>ORGANIC
++
+MACHINE
+</code></pre></div>
+<p>Quake 4 заставляет player физически пройти превращение в Strogg.</p>
+<p>Это один из лучших случаев, когда franchise theme буквально превращается в состояние player character.</p>
+<h3 id="multiplayer-quake-4-quake-iii">Но multiplayer Quake 4 — почти Quake III<a class="headerlink" href="#multiplayer-quake-4-quake-iii" title="Permanent link">¶</a></h3>
+<p>И здесь вся identity problem серии помещается в одну коробку:</p>
+<div class="highlight"><pre><span></span><code>SINGLE PLAYER
+=
+Quake II 2
+
+MULTIPLAYER
+=
+Quake III-like arena
+</code></pre></div>
+<p>Не synthesis, а два разных определения Quake.</p>
+<h3 id="multiplayer-sequel-competitive-game">И multiplayer попадает в ловушку sequel'а competitive game<a class="headerlink" href="#multiplayer-sequel-competitive-game" title="Permanent link">¶</a></h3>
+<p>Если player уже имеет Quake III:</p>
+<ul>
+<li>
+<p>established community;</p>
+</li>
+<li>
+<p>изученные maps;</p>
+</li>
+<li>
+<p>movement mastery;</p>
+</li>
+<li>
+<p>configs;</p>
+</li>
+<li>
+<p>tournaments;</p>
+</li>
+</ul>
+<p>то зачем ему переходить на:</p>
+<div class="highlight"><pre><span></span><code>почти то же
++
+тяжелее engine
++
+новая graphics
+</code></pre></div>
+<p>Вот фундаментальная проблема arena sequel.</p>
+<h3 id="enemy-territory-quake-wars-quake-genre">Enemy Territory: Quake Wars делает Quake вообще другим genre<a class="headerlink" href="#enemy-territory-quake-wars-quake-genre" title="Permanent link">¶</a></h3>
+<p>2007, Splash Damage.</p>
+<p>Берётся:</p>
+<div class="highlight"><pre><span></span><code>QUAKE II
+FICTION
+</code></pre></div>
+<p>и соединяется с:</p>
+<div class="highlight"><pre><span></span><code>Enemy Territory
+objective-based
+class/team gameplay
+</code></pre></div>
+<p>Теперь Quake может означать:</p>
+<div class="highlight"><pre><span></span><code>CLASS-BASED
+TEAM WARFARE
+</code></pre></div>
+<p>Если определить Quake через Strogg universe — всё логично.</p>
+<p>Если через Quake III mechanics — почти нет.</p>
+<h3 id="quake-live">Quake Live делает обратный поворот<a class="headerlink" href="#quake-live" title="Permanent link">¶</a></h3>
+<p>2009.</p>
+<p>Идея почти гениально простая:</p>
+<div class="highlight"><pre><span></span><code>QUAKE III
+УЖЕ
+ХОРОШАЯ
+
+ПРОБЛЕМА
+НЕ В GAMEPLAY
+
+ПРОБЛЕМА
+В FRICTION
+</code></pre></div>
+<p>Добавляем accounts, friends, stats, matchmaking, leaderboards, skill matching, service infrastructure.</p>
+<p>Изначально — прямо через browser/plugin и free-to-play/ad-supported модель.</p>
+<p>То есть Quake Live не пытается сделать Quake IV Arena.</p>
+<p>Она говорит:</p>
+<div class="highlight"><pre><span></span><code>QUAKE III
+МОЖНО
+ПРОСТО
+ПРОДОЛЖАТЬ
+</code></pre></div>
+<h3 id="entry-barrier-skill-barrier">Но технический entry barrier убрать легче, чем skill barrier<a class="headerlink" href="#entry-barrier-skill-barrier" title="Permanent link">¶</a></h3>
+<p>Новичок заходит:</p>
+<div class="highlight"><pre><span></span><code>О
+FREE QUAKE
+</code></pre></div>
+<p>а через минуту:</p>
+<div class="highlight"><pre><span></span><code>rocket
+↓
+rail
+↓
+человек
+пролетел
+полкарты
+↓
+ты умер
+</code></pre></div>
+<p>Matchmaking помогает, но не меняет языка игры.</p>
+<p>Quake требует:</p>
+<ul>
+<li>
+<p>item timing;</p>
+</li>
+<li>
+<p>map knowledge;</p>
+</li>
+<li>
+<p>strafing;</p>
+</li>
+<li>
+<p>prediction;</p>
+</li>
+<li>
+<p>weapon ranges;</p>
+</li>
+<li>
+<p>rocket jumping;</p>
+</li>
+<li>
+<p>positioning.</p>
+</li>
+</ul>
+<p>И это тяжёлый массовый product.</p>
+<h3 id="quake-live-quake-sport">Quake Live закрепляет определение «Quake = sport»<a class="headerlink" href="#quake-live-quake-sport" title="Permanent link">¶</a></h3>
+<p>Для огромной аудитории:</p>
+<div class="highlight"><pre><span></span><code>QUAKE
+=
+DUEL
+ROCKET
+RAIL
+LIGHTNING
+RED ARMOR
+MEGAHEALTH
+TIMINGS
+MOVEMENT
+</code></pre></div>
+<p>Но фанат Quake I отвечает:</p>
+<div class="highlight"><pre><span></span><code>А ГДЕ
+GOTHIC
+LOVECRAFT
+SHAMBLER?
+</code></pre></div>
+<p>И тоже прав.</p>
+<h3 id="quake-champions-quake">Quake Champions пытается склеить разные Quake<a class="headerlink" href="#quake-champions-quake" title="Permanent link">¶</a></h3>
+<p>2016 announcement.</p>
+<p>Formula:</p>
+<div class="highlight"><pre><span></span><code>LOOK / MYTHOS
+=
+Quake I
+
+PLAY
+=
+Quake III / Live
+
+MODERN LAYER
+=
+Champions
+abilities
+F2P
+live service
+</code></pre></div>
+<p>Это, пожалуй, самая осознанная попытка сформулировать unified Quake.</p>
+<h3 id="heroeschampions-purists">Heroes/Champions вызывают закономерную ярость purists<a class="headerlink" href="#heroeschampions-purists" title="Permanent link">¶</a></h3>
+<p>Classic Quake III ideology:</p>
+<div class="highlight"><pre><span></span><code>ТЫ
+И Я
+ОДИНАКОВЫ
+
+РАЗНИЦА
+=
+SKILL
+</code></pre></div>
+<p>Champions вводит:</p>
+<ul>
+<li>
+<p>разные health pools;</p>
+</li>
+<li>
+<p>разные movement styles;</p>
+</li>
+<li>
+<p>passive traits;</p>
+</li>
+<li>
+<p>active abilities.</p>
+</li>
+</ul>
+<p>То есть pre-match asymmetry.</p>
+<p>Для purist это почти ересь.</p>
+<h3 id="overwatch-clone">Но идея глубже простого Overwatch clone<a class="headerlink" href="#overwatch-clone" title="Permanent link">¶</a></h3>
+<p>Разные historical Quake имели разные movement traditions.</p>
+<p>Champions превращает персонажей в контейнеры этих traditions.</p>
+<p>Например один champion может сильнее напоминать QuakeWorld air control, другой — другую movement lineage.</p>
+<p>Ranger получает Dire Orb/teleport — механику, привязанную к identity первого Quake.</p>
+<p>То есть characters одновременно:</p>
+<div class="highlight"><pre><span></span><code>GAMEPLAY VARIANTS
++
+FRANCHISE HISTORY
+</code></pre></div>
+<h3 id="classic-weapon-control">При этом classic weapon control сохраняется<a class="headerlink" href="#classic-weapon-control" title="Permanent link">¶</a></h3>
+<p>Weapons всё ещё лежат на map.</p>
+<p>Rocket Launcher, Railgun, Lightning Gun не прикреплены к героям.</p>
+<div class="highlight"><pre><span></span><code>CHARACTER
+влияет
+на способ игры
+
+НО
+MAP CONTROL
+остаётся
+</code></pre></div>
+<p>Поэтому Champions — не полноценный hero shooter в обычном смысле.</p>
+<h3 id="market-reality">Но market reality изменилась<a class="headerlink" href="#market-reality" title="Permanent link">¶</a></h3>
+<p>В 1999 Quake III vs Unreal Tournament — центр PC-FPS разговора.</p>
+<p>В 2017 рынок занят:</p>
+<ul>
+<li>
+<p>Counter-Strike;</p>
+</li>
+<li>
+<p>Overwatch;</p>
+</li>
+<li>
+<p>PUBG;</p>
+</li>
+<li>
+<p>Rainbow Six Siege;</p>
+</li>
+<li>
+<p>Call of Duty;</p>
+</li>
+<li>
+<p>Battlefield;</p>
+</li>
+<li>
+<p>Destiny;</p>
+</li>
+<li>
+<p>позднее Fortnite.</p>
+</li>
+</ul>
+<p>Quake остаётся brutal mastery game с очень высоким barrier.</p>
+<h3 id="_12">Коммерческая дилемма<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>KEEP IT PURE
+↓
+NICHE
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>MODERNIZE
+↓
+IDENTITY RISK
+</code></pre></div>
+<p>И это ловушка серии почти двадцать лет.</p>
+<h3 id="doom-reboot">Почему Doom reboot легче<a class="headerlink" href="#doom-reboot" title="Permanent link">¶</a></h3>
+<p>Single-player Doom может менять concrete mechanics, пока сохраняет player fantasy.</p>
+<p>Competitive Quake player чувствует изменения в:</p>
+<ul>
+<li>
+<p>acceleration;</p>
+</li>
+<li>
+<p>hitboxes;</p>
+</li>
+<li>
+<p>weapon timing;</p>
+</li>
+<li>
+<p>item timing;</p>
+</li>
+<li>
+<p>spawn logic;</p>
+</li>
+<li>
+<p>abilities.</p>
+</li>
+</ul>
+<p>Там mechanics — сама игра.</p>
+<h3 id="remasters-identity-crisis">Remasters обостряют identity crisis<a class="headerlink" href="#remasters-identity-crisis" title="Permanent link">¶</a></h3>
+<p>Quake Enhanced 2021 снова делает Quake I живым продуктом.</p>
+<p>И modern audience видит:</p>
+<div class="highlight"><pre><span></span><code>GOTHIC
+DIRT
+KNIGHTS
+OGRES
+SHAMBLERS
+SLIPGATES
+NIN
+</code></pre></div>
+<p>Потом Quake II Enhanced 2023 столь же уверенно возвращает Strogg-lineage.</p>
+<p>MachineGames делает официальный новый content для обеих веток.</p>
+<p>То есть remasters не выбирают «настоящую Quake».</p>
+<p>Они легитимизируют <strong>обе</strong>.</p>
+<h3 id="quake_1">Три оси Quake<a class="headerlink" href="#quake_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>A — WORLD
+
+gothic
+Lovecraft
+dimensions
+weirdness
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>B — FICTION
+
+Strogg
+Earth
+military sci-fi
+cybernetic horror
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>C — MECHANICS
+
+movement
+rocket jump
+rail
+lightning
+map control
+duel
+arena
+</code></pre></div>
+<p>Следующая большая Quake должна выбрать:</p>
+<div class="highlight"><pre><span></span><code>A?
+B?
+C?
+A+C?
+B+C?
+A+B+C?
+</code></pre></div>
+<h3 id="synthesis-a-c">Самый естественный synthesis кажется A + C<a class="headerlink" href="#synthesis-a-c" title="Permanent link">¶</a></h3>
+<p>Quake I world weirdness + Quake III mechanical mastery.</p>
+<p>Champions фактически пробовала именно это визуально/соревновательно.</p>
+<p>Но single-player answer всё ещё не дан.</p>
+<h3 id="original-quake-world">Почему original Quake world особенно ценен<a class="headerlink" href="#original-quake-world" title="Permanent link">¶</a></h3>
+<p>Его странная смесь:</p>
+<div class="highlight"><pre><span></span><code>sci-fi base
++
+medieval castle
++
+occult
++
+industrial
++
+Lovecraft
+</code></pre></div>
+<p>сегодня уникальнее обычного military sci-fi.</p>
+<p>Slipgates вообще дают идеальное оправдание несовместимым dimensions.</p>
+<p>Можно даже представить franchise thesis:</p>
+<div class="highlight"><pre><span></span><code>QUAKE
+=
+DIMENSIONAL WEIRDNESS
++
+HIGH-SKILL MOVEMENT FPS
+</code></pre></div>
+<p>Но если «всё может быть Quake», бренд легко перестаёт значить что-либо.</p>
+<h3 id="_13">Главный вывод<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<p>Quake была настолько революционной технологически и настолько непоследовательной художественно, что её <strong>наследие оказалось сильнее её идентичности</strong>.</p>
+<p>Мы отлично знаем, что Quake сделала с индустрией.</p>
+<p>Гораздо труднее сказать, что Quake должна быть как современная game.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p066">66. Doom: The Dark Ages и современная id Software<a class="headerlink" href="#p066" title="Permanent link">¶</a></h2>
+<p>После Doom 2016 и Eternal id впервые за долгое время могла просто продолжить успешную формулу.</p>
+<div class="highlight"><pre><span></span><code>DOOM 2016
+→ push-forward combat
+
+DOOM Eternal
+→ combat chess / mastery
+</code></pre></div>
+<p>Самый безопасный ход:</p>
+<div class="highlight"><pre><span></span><code>DOOM ETERNAL 2
++
+новые demons
++
+новые arenas
+</code></pre></div>
+<p>И id опять говорит: нет.</p>
+<h3 id="doom">Каждая Doom должна иметь свой глагол<a class="headerlink" href="#doom" title="Permanent link">¶</a></h3>
+<p>Hugo Martin формулирует:</p>
+<div class="highlight"><pre><span></span><code>DOOM 2016
+=
+RUN AND GUN
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>DOOM ETERNAL
+=
+JUMP AND SHOOT
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>THE DARK AGES
+=
+STAND AND FIGHT
+</code></pre></div>
+<p>Eternal Slayer — fighter jet.</p>
+<p>Dark Ages Slayer — iron tank.</p>
+<p>Это не просто marketing phrase, а смена combat philosophy.</p>
+<h3 id="eternal_2">Реакция на Eternal<a class="headerlink" href="#eternal_2" title="Permanent link">¶</a></h3>
+<p>Eternal довела decision density до почти character-action уровня.</p>
+<p>Игрок одновременно следит за:</p>
+<ul>
+<li>
+<p>movement;</p>
+</li>
+<li>
+<p>dash;</p>
+</li>
+<li>
+<p>Meat Hook;</p>
+</li>
+<li>
+<p>weapon switches;</p>
+</li>
+<li>
+<p>ammo;</p>
+</li>
+<li>
+<p>Flame Belch;</p>
+</li>
+<li>
+<p>grenades;</p>
+</li>
+<li>
+<p>weak points;</p>
+</li>
+<li>
+<p>cooldowns.</p>
+</li>
+</ul>
+<p>Для mastery — великолепно.</p>
+<p>Но input complexity тоже огромна.</p>
+<p>Dark Ages пытается часть глубины перенести:</p>
+<div class="highlight"><pre><span></span><code>ИЗ
+КОЛИЧЕСТВА
+КНОПОК
+
+В
+КАЧЕСТВО
+РЕШЕНИЙ
+</code></pre></div>
+<h3 id="stand-and-fight">Stand and Fight — не значит «стой за щитом»<a class="headerlink" href="#stand-and-fight" title="Permanent link">¶</a></h3>
+<p>Shield имеет durability и перегружается.</p>
+<p>Если просто держать block:</p>
+<div class="highlight"><pre><span></span><code>ты
+играешь
+неправильно
+</code></pre></div>
+<p>Нужно:</p>
+<ul>
+<li>
+<p>strafe;</p>
+</li>
+<li>
+<p>parry;</p>
+</li>
+<li>
+<p>reposition;</p>
+</li>
+<li>
+<p>pressure;</p>
+</li>
+<li>
+<p>counterattack.</p>
+</li>
+</ul>
+<p>Eternal избегает damage через extreme vertical mobility.</p>
+<p>Dark Ages контролирует damage через ground movement + active defense.</p>
+<h3 id="strafe-to-aim-classic-doom-feeling">Возвращается strafe-to-aim classic Doom feeling<a class="headerlink" href="#strafe-to-aim-classic-doom-feeling" title="Permanent link">¶</a></h3>
+<p>Player снова сильнее читает поле как поток projectiles.</p>
+<div class="highlight"><pre><span></span><code>THREAT
+↓
+STRAFE
+↓
+PARRY
+↓
+COUNTER
+</code></pre></div>
+<p>Это почти first-person bullet hell.</p>
+<h3 id="shield-saw">Shield Saw — центральная система<a class="headerlink" href="#shield-saw" title="Permanent link">¶</a></h3>
+<p>Один tool умеет:</p>
+<div class="highlight"><pre><span></span><code>BLOCK
+PARRY
+DEFLECT
+THROW
+STUN
+BREAK ARMOR
+SHIELD CHARGE
+TRAVERSAL
+PUZZLE INTERACTION
+</code></pre></div>
+<p>Очень modern id design:</p>
+<div class="highlight"><pre><span></span><code>ОДИН INPUT
+↓
+МНОГО
+КОНТЕКСТНЫХ
+РЕШЕНИЙ
+</code></pre></div>
+<h3 id="parry">Parry становится ресурсной механикой<a class="headerlink" href="#parry" title="Permanent link">¶</a></h3>
+<p>Successful parry не просто отменяет damage.</p>
+<p>Она создаёт offensive opportunity и восстанавливает melee charges.</p>
+<div class="highlight"><pre><span></span><code>ENEMY ATTACK
+↓
+PARRY
+↓
+MELEE CHARGE
+↓
+MELEE
+↓
+AMMO
+↓
+GUNS
+</code></pre></div>
+<p>Defense встроена в attack loop.</p>
+<h3 id="melee-chainsaw-function">Melee заменяет chainsaw-function<a class="headerlink" href="#melee-chainsaw-function" title="Permanent link">¶</a></h3>
+<p>Flail, Gauntlet, Mace.</p>
+<p>Melee replenishes ammo.</p>
+<p>То есть ресурс снова находится внутри aggression, а не в downtime.</p>
+<h3 id="eternal_3">Но система действительно местами проще Eternal<a class="headerlink" href="#eternal_3" title="Permanent link">¶</a></h3>
+<p>Shield Saw очень универсален.</p>
+<p>Есть риск:</p>
+<div class="highlight"><pre><span></span><code>ОДНА
+ОЧЕНЬ
+ХОРОШАЯ
+МЕХАНИКА
+
+НАЧИНАЕТ
+ПОЖИРАТЬ
+ОСТАЛЬНЫЕ
+</code></pre></div>
+<p>Weapons местами имеют менее жёсткие tactical identities, resource loop проще.</p>
+<p>Для игрока, который особенно любит высокую decision density Eternal, Dark Ages может ощущаться как сознательный overcorrection.</p>
+<h3 id="glory-kills-flow">Glory Kills переделывают ради flow<a class="headerlink" href="#glory-kills-flow" title="Permanent link">¶</a></h3>
+<p>Меньше ощущения отдельной synchronized animation sequence.</p>
+<p>Player control важнее красивого lock-in.</p>
+<p>Опять принцип:</p>
+<div class="highlight"><pre><span></span><code>ANIMATION
+SERVES
+GAMEPLAY
+</code></pre></div>
+<h3 id="_14">Масштаб войны<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<p>Dark Ages хочет быть не «Slayer зашёл в комнату», а:</p>
+<div class="highlight"><pre><span></span><code>HELL ARMIES
+VS
+SENTINEL ARMIES
++
+SLAYER
+КАК
+СУПЕРОРУЖИЕ
+</code></pre></div>
+<p>Больше enemies, шире battlefields.</p>
+<p>Fantasy:</p>
+<div class="highlight"><pre><span></span><code>2016
+→ dangerous combatant
+
+Eternal
+→ fighter jet
+
+Dark Ages
+→ siege machine
+</code></pre></div>
+<h3 id="open-zones">Open zones<a class="headerlink" href="#open-zones" title="Permanent link">¶</a></h3>
+<p>Не настоящий RPG-open-world.</p>
+<p>Но большие spaces с objectives, optional fights, secrets и разным порядком движения.</p>
+<p>Очень важный lesson после RAGE:</p>
+<div class="highlight"><pre><span></span><code>НЕ
+WORLD
+→ gameplay
+
+А
+GAMEPLAY
+→ нужный размер world
+</code></pre></div>
+<h3 id="atlan-dragon">Atlan и Dragon<a class="headerlink" href="#atlan-dragon" title="Permanent link">¶</a></h3>
+<p>Giant mech и cybernetic dragon — чистый blockbuster spectacle.</p>
+<p>Это сознательное расширение fantasy.</p>
+<p>Но system depth у этих segments ниже основного Slayer combat.</p>
+<p>Они скорее punctuation/intermission, чем второй полноценный combat game.</p>
+<h3 id="story-cinematic">Story становится cinematic<a class="headerlink" href="#story-cinematic" title="Permanent link">¶</a></h3>
+<p>Dark Ages — полноценный prequel с kings, Sentinels, Maykrs и большими cutscenes.</p>
+<p>На первый взгляд:</p>
+<div class="highlight"><pre><span></span><code>ОПЯТЬ
+DOOM 4?
+</code></pre></div>
+<p>Нет, потому что hierarchy другая.</p>
+<p>Старый Doom 4:</p>
+<div class="highlight"><pre><span></span><code>FICTION
+→ GAME
+</code></pre></div>
+<p>Dark Ages:</p>
+<div class="highlight"><pre><span></span><code>PLAYER FANTASY
+→ COMBAT SYSTEM
+→ WORLD / STORY
+</code></pre></div>
+<p>Cinematics не проблема, пока они не становятся хозяином gameplay.</p>
+<h3 id="id-tech-8">id Tech 8<a class="headerlink" href="#id-tech-8" title="Permanent link">¶</a></h3>
+<p>И вот здесь modern id снова делает hardcore engineering, но уже в правильной hierarchy.</p>
+<p>Game требует:</p>
+<ul>
+<li>
+<p>огромные levels;</p>
+</li>
+<li>
+<p>больше enemies;</p>
+</li>
+<li>
+<p>быстрое iteration content team;</p>
+</li>
+<li>
+<p>realtime lighting;</p>
+</li>
+<li>
+<p>60 FPS.</p>
+</li>
+</ul>
+<p>Engine отвечает.</p>
+<h3 id="real-time-ray-traced-gi">Real-time ray-traced GI<a class="headerlink" href="#real-time-ray-traced-gi" title="Permanent link">¶</a></h3>
+<p>Hardware RT становится baseline requirement на PC.</p>
+<p>Но смысл не только «красивее reflections».</p>
+<p>Realtime GI радикально улучшает production iteration:</p>
+<div class="highlight"><pre><span></span><code>изменил environment
+↓
+lighting
+сразу соответствует
+новой geometry
+</code></pre></div>
+<p>Не нужно бесконечно ждать bake.</p>
+<p>Technology одновременно улучшает:</p>
+<div class="highlight"><pre><span></span><code>PLAYER OUTPUT
++
+DEVELOPER WORKFLOW
+</code></pre></div>
+<h3 id="60hz">60Hz всё ещё священно<a class="headerlink" href="#60hz" title="Permanent link">¶</a></h3>
+<p>Даже с RTGI, огромными fights и масштабом engine target остаётся 60Hz-class performance на target platforms.</p>
+<p>Вот прямая institutionalized Carmack-value.</p>
+<h3 id="path-tracing">Path tracing после релиза<a class="headerlink" href="#path-tracing" title="Permanent link">¶</a></h3>
+<p>В июне 2025 PC получает path tracing / advanced RTX features.</p>
+<p>Billy Khan формулирует очень Carmack-like philosophy:</p>
+<div class="highlight"><pre><span></span><code>TECHNIQUE
+имеет смысл
+КОГДА
+ОНА
+SHIP'НУТА
+В COMMERCIAL GAME
+</code></pre></div>
+<p>Не просто research demo.</p>
+<h3 id="15-2025_1">15 мая 2025 — релиз<a class="headerlink" href="#15-2025_1" title="Permanent link">¶</a></h3>
+<p>Xbox Series X|S, PC, PS5, Game Pass.</p>
+<p>Критически — хорошая, но немного более спорная reception, чем 2016/Eternal.</p>
+<p>Главный раскол ровно ожидаемый:</p>
+<div class="highlight"><pre><span></span><code>Eternal mobility / density
+VS
+Dark Ages parry / ground control
+</code></pre></div>
+<h3 id="revelations-2026">Revelations 2026<a class="headerlink" href="#revelations-2026" title="Permanent link">¶</a></h3>
+<p>7 июля 2026 выходит большая expansion.</p>
+<p>И здесь id делает максимально характерную вещь:</p>
+<p>центральный Shield Saw сначала ломают и дают новый tool — Chain Spear.</p>
+<p>Он умеет parry, dash, grapple и возвращает часть mobility Eternal.</p>
+<p>Martin описывает это как:</p>
+<div class="highlight"><pre><span></span><code>MONSTER TRUCK
+WITH A JET ENGINE
+</code></pre></div>
+<p>То есть id уже через год корректирует собственную successful thesis.</p>
+<div class="highlight"><pre><span></span><code>STAND AND FIGHT
+↓
+А ЧТО ЕСЛИ
+ДОБАВИТЬ
+БОЛЬШЕ MOBILITY?
+</code></pre></div>
+<h3 id="ripatorium">Ripatorium<a class="headerlink" href="#ripatorium" title="Permanent link">¶</a></h3>
+<p>Post-launch combat sandbox получает всё больше customization.</p>
+<p>System должна жить дольше campaign.</p>
+<p>Далёкая рифма с old modding philosophy.</p>
+<h3 id="2026-layoffs">2026 layoffs<a class="headerlink" href="#2026-layoffs" title="Permanent link">¶</a></h3>
+<p>Летом Microsoft проводит крупную волну сокращений.</p>
+<p>id теряет значительное количество сотрудников, включая ветеранов.</p>
+<p>Это реальный новый institutional stress-test.</p>
+<p>Компания публично говорит:</p>
+<ul>
+<li>
+<p>team всё ещё достаточно велика;</p>
+</li>
+<li>
+<p>size сопоставим примерно с Doom 2016-era;</p>
+</li>
+<li>
+<p>games и technology продолжатся;</p>
+</li>
+<li>
+<p>maker/flat culture хотят сохранять.</p>
+</li>
+</ul>
+<h3 id="id-tech-unreal">id Tech не уходит на Unreal<a class="headerlink" href="#id-tech-unreal" title="Permanent link">¶</a></h3>
+<p>Marty Stratton публично подтверждает:</p>
+<div class="highlight"><pre><span></span><code>ALL IN
+ON id TECH
+</code></pre></div>
+<p>То есть own-engine identity всё ещё считается core competence.</p>
+<h3 id="id-1993">Что осталось от id 1993<a class="headerlink" href="#id-1993" title="Permanent link">¶</a></h3>
+<p>Не ownership.</p>
+<p>Не founders.</p>
+<p>Не tiny team.</p>
+<p>Не PC-only.</p>
+<p>Не shareware.</p>
+<p>Не external engine licensing.</p>
+<p>Но осталось:</p>
+<div class="highlight"><pre><span></span><code>СИЛЬНОЕ
+GAMEPLAY CORE
+
+BUILD
+ВАЖНЕЕ
+ТЕОРИИ
+
+PERFORMANCE
+=
+GAMEPLAY
+
+PLAYER CONTROL
+СВЯЩЕНЕН
+
+OWN TECH
+ДАЁТ
+СВОБОДУ
+
+НЕ БОЙСЯ
+СЛОМАТЬ
+СВОЮ
+УСПЕШНУЮ
+FORMULA
+</code></pre></div>
+<p>Поэтому современная id не та же компания буквально.</p>
+<p>Но алгоритм принятия хороших решений местами удивительно узнаваем.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<hr/>
+<p><a href="../09-rage-zenimax-carmack/">← IX. RAGE / ZeniMax / Carmack</a> · <a href="../">Общее оглавление</a> · <a href="../11-legacy-summary/">XI. Наследие и выводы →</a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: id Software — IX. RAGE, ZeniMax и конец Carmack-era" class="md-footer__link md-footer__link--prev" href="../09-rage-zenimax-carmack/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                id Software — IX. RAGE, ZeniMax и конец Carmack-era
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: id Software — XI. Наследие id: open source, modding и исторические выводы" class="md-footer__link md-footer__link--next" href="../11-legacy-summary/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                id Software — XI. Наследие id: open source, modding и исторические выводы
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

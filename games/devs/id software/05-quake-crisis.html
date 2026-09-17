@@ -1,0 +1,6375 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="04-doom-ecosystem.html" rel="prev"/>
+<link href="06-id-after-romero.html" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>id Software — V. Quake и распад первоначальной id - База данных</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#id-software-v-quake-id">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              id Software — V. Quake и распад первоначальной id
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Arkane.html">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.html">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="01-origins-softdisk-keen.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="02-wolfenstein.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="03-doom-birth.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="04-doom-ecosystem.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="05-quake-crisis.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p026">
+<span class="md-ellipsis">
+      
+        26. Quake: проект, который сломал первоначальную id
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p027">
+<span class="md-ellipsis">
+      
+        27. Michael Abrash и рост инженерной команды
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p028">
+<span class="md-ellipsis">
+      
+        28. Original Quake vs финальный Quake
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p029">
+<span class="md-ellipsis">
+      
+        29. War Room и предел гаражной культуры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p030">
+<span class="md-ellipsis">
+      
+        30. Уход John Romero
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p031">
+<span class="md-ellipsis">
+      
+        31. Массовый исход после Quake
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="06-id-after-romero.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="07-quake2-quake3-middleware.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="08-doom3-aaa.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="09-rage-zenimax-carmack.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="10-doom-rebirth-modern-id.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="11-legacy-summary.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="12-side-branches.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="MANIFEST.html">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/index.html">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/01-origins-steam.html">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/02-games-and-engines.html">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/03-inside-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/04-hardware-linux-vr.html">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/05-modern-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/06-valve-as-institution.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/07-ecosystem-and-catalog.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/08-appendices.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/09-sources-and-status.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Doom.html">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Doom30.html">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Doom3_45-103.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Quake.html">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Spider-Man.html">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/doom4-eternal.html">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/doom_eternal_51-80.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_8" id="__nav_1_2_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/index.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/01-origins-and-development.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/02-half-life-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/03-half-life-release-and-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/04-gearbox-and-consoles.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/05-half-life-2-development-and-tech.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/06-half-life-2-world-and-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/07-half-life-2-beta-release.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/08-episodes.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/09-half-life-3-and-cancelled-projects.html">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/10-vr-and-alyx-development.html">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/11-half-life-alyx-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/12-modding-and-community.html">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/13-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/14-audio.html">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/15-how-valve-makes-half-life.html">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/16-movement-and-speedrunning.html">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/CHANGES.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/Gabe%20Newell.html">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Carmack.html">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Romero.html">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stores/steam/Steam.html">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    University
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    University
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Go
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Go
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Lectures
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Lectures
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_1_1" id="__nav_2_1_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    1. Prod
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_1_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Prod
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../university/go/lectures/1.%20Prod/Production%20backend.html">
+<span class="md-ellipsis">
+    
+  
+    Лекция 1. Production backend и эволюция Go
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p026">
+<span class="md-ellipsis">
+      
+        26. Quake: проект, который сломал первоначальную id
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p027">
+<span class="md-ellipsis">
+      
+        27. Michael Abrash и рост инженерной команды
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p028">
+<span class="md-ellipsis">
+      
+        28. Original Quake vs финальный Quake
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p029">
+<span class="md-ellipsis">
+      
+        29. War Room и предел гаражной культуры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p030">
+<span class="md-ellipsis">
+      
+        30. Уход John Romero
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p031">
+<span class="md-ellipsis">
+      
+        31. Массовый исход после Quake
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="id-software-v-quake-id">id Software — V. Quake и распад первоначальной id<a class="headerlink" href="#id-software-v-quake-id" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>Часть большой базы по истории id Software. Пункты <strong>26–31</strong>. Содержательный текст исходного документа сохранён без сокращений.</p>
+</blockquote>
+<p><a href="04-doom-ecosystem.html">← IV. Экосистема DOOM</a> · <a href="index.html">Общее оглавление</a> · <a href="06-id-after-romero.html">VI. id после Romero →</a></p>
+<h3 id="contents">Содержание<a class="headerlink" href="#contents" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="#p026">26. Quake: проект, который сломал первоначальную id</a></li>
+<li><a href="#p027">27. Michael Abrash и рост инженерной команды</a></li>
+<li><a href="#p028">28. Original Quake vs финальный Quake</a></li>
+<li><a href="#p029">29. War Room и предел гаражной культуры</a></li>
+<li><a href="#p030">30. Уход John Romero</a></li>
+<li><a href="#p031">31. Массовый исход после Quake</a></li>
+</ul>
+<hr/>
+<h2 id="p026">26. Quake: проект, который сломал первоначальную id<a class="headerlink" href="#p026" title="Permanent link">¶</a></h2>
+<p>Quake — первый проект, на котором производственная философия ранней id Software перестала работать.</p>
+<p>Не технология.</p>
+<p>Технология как раз получилась выдающейся.</p>
+<p>Сломалась машина, которая с 1990-го производила игры примерно так:</p>
+<p>маленькая команда
++
+все понимают одну идею
++
+новая технология быстро становится playable
++
+все сидят рядом
++
+никакого management
++
+постоянный playtest
++
+несколько месяцев бешеной работы
+=
+готовая игра</p>
+<p>На Keen это работало.</p>
+<p>На Wolfenstein — почти идеально.</p>
+<p>На Doom — уже со страшным конфликтом вокруг Tom Hall, но всё ещё сработало.</p>
+<p>На Quake проект стал настолько технологически сложнее, команда настолько выросла, а представления ключевых людей о следующей игре настолько разошлись, что старая формула превратилась в:</p>
+<p>нет стабильного engine
++
+нет стабильного design
++
+нет человека,
+который способен зафиксировать оба
++
+месяцы выброшенной работы
++
+внутренние конфликты
++
+семь месяцев crunch
+=
+Quake</p>
+<p>Именно поэтому собственный GDC-постмортем John Romero называется совершенно недвусмысленно:</p>
+<p>“Quake: The End of the Original Id.”
+GDC Vault</p>
+<p>Проблема начиналась уже с самого масштаба замысла</p>
+<p>После Doom II id не хотела просто:</p>
+<p>DOOM III</p>
+<p>Компания снова решила совершить огромный скачок.</p>
+<p>А название Quake вообще существовало внутри id намного раньше.</p>
+<p>Ещё в 1991 году команда мечтала о fantasy/RPG-проекте, основанном на их Dungeons &amp; Dragons-кампаниях: герой Quake, чудовищно мощный Hammer of Thunderbolts, приключения значительно сложнее обычной action-игры. Технология 1991 года оказалась для этого недостаточной, и проект быстро отложили. После Doom II старую мечту воскресили уже с мыслью: теперь-то мы наконец можем её сделать.
+Shacknews
++1</p>
+<p>Первоначальная логика была примерно:</p>
+<p><strong>Wolfenstein</strong></p>
+<p>мы научились делать
+быстрое first-person 3D</p>
+<p><strong>DOOM</strong></p>
+<p>мы сделали пространство
+намного сложнее</p>
+<p><strong>Quake</strong></p>
+<p>теперь сделаем
+НАСТОЯЩИЙ ТРЁХМЕРНЫЙ МИР
++
+совершенно новый тип игры</p>
+<p>То есть Quake должен был быть революцией одновременно:</p>
+<p>ТЕХНОЛОГИЧЕСКОЙ</p>
+<p>И</p>
+<p>ДИЗАЙНЕРСКОЙ</p>
+<p>Вот именно сочетание этих двух амбиций и оказалось смертельно опасным для старой id.</p>
+<p>Потому что Carmack на этот раз не мог быстро дать дизайнерам устойчивую игрушку</p>
+<p>В Doom engine тоже постоянно менялся.</p>
+<p>Но Quake требовал решить принципиально другой класс проблем.</p>
+<p>Теперь нужно было сделать мир, где:</p>
+<p>стены
+полы
+потолки
+объекты
+монстры
+игроки</p>
+<p>существуют уже как настоящая 3D-геометрия, а не как хитро визуализированная двумерная карта Doom.</p>
+<p>American McGee позднее очень точно описывал весь проект:</p>
+<p>Quake двигала прежде всего попытка Carmack решить задачу настоящего 3D с шестью степенями свободы при нормальной скорости.
+Shacknews</p>
+<p>И это оказалось намного тяжелее, чем предыдущие скачки.</p>
+<p>Michael Abrash, пришедший в id уже во время разработки, вспоминал, что ожидал увидеть почти готовую архитектуру, которую нужно лишь оптимизировать. Вместо этого Carmack продолжал искать новые решения буквально до самого релиза; Abrash отмечал, что подобные многократные переписывания движков вообще были характерны для Carmack.
+GitHub</p>
+<p>По позднему подсчёту самой команды, к концу 1995 года Quake engine пережил примерно:</p>
+<p>ВОСЕМЬ
+крупных итераций</p>
+<p>прежде чем его наконец сочли достаточно стабильным.
+Shacknews</p>
+<p>И вот тут ломается старая связка Carmack → Romero</p>
+<p>Раньше процесс выглядел примерно так.</p>
+<p>Commander Keen
+Carmack:
+вот smooth scrolling</p>
+<p>Romero/Hall:
+понятно,
+какую игру с этим делать
+Wolfenstein
+Carmack:
+вот очень быстрый renderer</p>
+<p>Romero/Hall:
+понятно,
+давайте бегать и стрелять
+Doom
+Carmack:
+вот новый мир</p>
+<p>Romero:
+понятно,
+вот язык Doom-level</p>
+<p>А Quake:</p>
+<p>Carmack:
+engine ещё меняется</p>
+<p>↓</p>
+<p>design team:
+а что мы вообще
+можем на нём делать?</p>
+<p>↓</p>
+<p>Carmack:
+сегодня вот это</p>
+<p>↓</p>
+<p>designer делает content</p>
+<p>↓</p>
+<p>Carmack:
+архитектура изменилась</p>
+<p>↓</p>
+<p>часть content
+больше не нужна</p>
+<p>American McGee описывал работу буквально как получение от Carmack новых «игрушек»:</p>
+<p>О, появились двери.</p>
+<p>Теперь можем использовать двери.</p>
+<p>О, заработали platforms.</p>
+<p>Теперь можем использовать platforms.</p>
+<p>О, заработало collision/ray tracing.</p>
+<p>Теперь можно нормально делать weapons.</p>
+<p>То есть designer не работал от стабильного набора игровых возможностей. Его текущая работа зависела от того, до какой стадии сегодня дошёл engine.
+Shacknews</p>
+<p>Даже QuakeEd приходилось проектировать на движущемся фундаменте</p>
+<p>Romero должен был параллельно писать новый редактор — QuakeEd.</p>
+<p>Но editor описывает структуру мира.</p>
+<p>А структура мира постоянно меняется у Carmack.</p>
+<p>Поэтому:</p>
+<p>Carmack
+меняет representation
+уровня</p>
+<p>↓</p>
+<p>Romero
+меняет QuakeEd</p>
+<p>↓</p>
+<p>McGee
+делает test map</p>
+<p>↓</p>
+<p>Carmack
+проверяет новую engine architecture</p>
+<p>↓</p>
+<p>часть работы
+выбрасывается</p>
+<p>Первые версии QuakeEd в январе–феврале 1995 года были намеренно примитивными именно потому, что Carmack ещё менял структуры данных и способы представления уровней. McGee делал для него временные test maps, прекрасно понимая, что многие из них никогда не попадут в игру.
+Shacknews</p>
+<p>McGee потом описал весь ранний период очень коротко:</p>
+<p>built and thrown away, built and thrown away.
+Shacknews</p>
+<p>Вот это уже совершенно новая id.</p>
+<p>Раньше:</p>
+<p>работа
+↓
+почти сразу
+становится игрой</p>
+<p>Теперь:</p>
+<p>работа
+↓
+может быть
+R&amp;D-расходником
+И художники попали в ту же мясорубку</p>
+<p>Проблема касалась не только maps.</p>
+<p>Adrian Carmack и Kevin Cloud производили огромные библиотеки:</p>
+<p>textures;</p>
+<p>monsters;</p>
+<p>environmental concepts;</p>
+<p>оружие;</p>
+<p>архитектурные motifs.</p>
+<p>Но сама тема игры менялась.</p>
+<p>На ранних стадиях существовали quasi-Aztec мотивы.</p>
+<p>Потом сильнее закрепилась medieval-European fantasy.</p>
+<p>Под неё Nine Inch Nails даже записывали звуки:</p>
+<p>мечи
+цепи
+наковальни
+металл</p>
+<p>Потом проект снова начал дрейфовать в сторону технологического Doom-подобного shooter, и часть уже сделанной художественной работы пришлось выбрасывать или радикально переосмысливать. Wired в 1996 году прямо отмечала, что при сменах направления Adrian Carmack и Kevin Cloud потеряли месяцы art-production.
+WIRED</p>
+<p>Получается:</p>
+<p>ENGINE
+нестабилен</p>
+<p>+</p>
+<p>GAME DESIGN
+нестабилен</p>
+<p>=</p>
+<p>ART TARGET
+тоже нестабилен</p>
+<p>А это уже production-кошмар.</p>
+<p>Главный парадокс: id была богата именно настолько, чтобы позволить себе эту проблему</p>
+<p>Во времена Wolfenstein компания не могла два года:</p>
+<p>исследовать</p>
+<p>передумывать</p>
+<p>выбрасывать</p>
+<p>исследовать ещё</p>
+<p>Нужно было ship'нуть игру.</p>
+<p>После Doom и Doom II деньги уже есть.</p>
+<p>Wired приводила доходы id:</p>
+<p>1994
+$7.7 млн</p>
+<p>1995
+$15.6 млн</p>
+<p>Для такой маленькой компании это означало огромную финансовую свободу.
+WIRED</p>
+<p>А значит исчез один из самых полезных менеджеров ранней id:</p>
+<p>НЕТ ДЕНЕГ</p>
+<p>Раньше:</p>
+<p>нужно закончить
+↓
+потому что
+компании нужен следующий доход</p>
+<p>Теперь:</p>
+<p>деньги есть
+↓
+можно ещё попробовать
+↓
+и ещё
+↓
+и переписать
+↓
+и передумать</p>
+<p>То есть успех Doom позволил id сделать Quake.</p>
+<p>Но тот же успех позволил Quake слишком долго оставаться неопределённым.</p>
+<p>И здесь проявился страшный дефект философии «design by doing»</p>
+<p>Romero позже очень честно описывал способ разработки ранней id:</p>
+<p>придумали идею
+↓
+начали делать
+↓
+никаких огромных документов
+↓
+игра постепенно выкристаллизовалась</p>
+<p>Он называл это organic growth.</p>
+<p>Проблема в том, что раньше проект длился:</p>
+<p>2 месяца
+4 месяца
+11 месяцев</p>
+<p>и технология очень быстро становилась usable.</p>
+<p>На Quake Romero исходил из старого принципа:</p>
+<p>не надо слишком рано фиксировать дизайн — сначала engine должен показать нам, что вообще возможно.</p>
+<p>С его точки зрения это было абсолютно логично: невозможно детально спроектировать революционную игру вокруг технологии, которая ещё не существует.
+Shacknews</p>
+<p>Но остальные дизайнеры воспринимали происходящее иначе.</p>
+<p>Sandy Petersen вспоминал:</p>
+<p>Romero являлся lead designer, но не давал достаточно общего направления.</p>
+<p>American McGee описывал процесс как:</p>
+<p>каждый получил texture set
+↓
+разошлись по компьютерам
+↓
+начали что-нибудь строить</p>
+<p>Tim Willits позднее объяснял визуальную смесь финальной игры ровно этим: medieval castles, military bases и странная tech-архитектура оказались рядом, потому что разные люди просто делали разный материал без единой устойчивой спецификации.
+Shacknews</p>
+<p>И обе стороны здесь в какой-то степени правы</p>
+<p>Это важно.</p>
+<p>Легко сказать:</p>
+<p>Romero провалился как lead designer.</p>
+<p>Часть команды именно так это и воспринимала.</p>
+<p>Но и аргумент Romero объективно имеет смысл:</p>
+<p>КАК
+зафиксировать gameplay</p>
+<p>если:</p>
+<p>movement
+collision
+AI
+geometry
+weapons
+view model
+outdoor capability</p>
+<p>ещё меняются?</p>
+<p>Например, Romero хотел гораздо более амбициозные:</p>
+<p>connected areas;</p>
+<p>RPG-ish progression;</p>
+<p>fantasy mechanics;</p>
+<p>альтернативные combat states;</p>
+<p>более сложные взаимодействия.</p>
+<p>Но часть этих идей упиралась непосредственно в ещё нестабильную технологию.
+Shacknews
++1</p>
+<p>То есть проблема была системной:</p>
+<p>Carmack:
+нельзя стабилизировать игру,
+пока технология не готова</p>
+<p>Romero:
+нельзя стабилизировать design,
+пока мы не знаем,
+что технология реально умеет</p>
+<p>остальная команда:
+мы вообще-то
+должны что-то делать
+ПРЯМО СЕЙЧАС</p>
+<p>Именно такого deadlock ранняя id раньше не встречала.</p>
+<p>Старое отсутствие management теперь стало настоящей проблемой</p>
+<p>В Doom конфликт был:</p>
+<p>Hall
+VS
+остальная команда</p>
+<p>Его решили жёстко:</p>
+<p>Hall уходит
+↓
+направление фиксируется</p>
+<p>На Quake нет даже настолько простой картины.</p>
+<p>Есть:</p>
+<p>Carmack
+→ engine vision</p>
+<p>Romero
+→ большой game vision</p>
+<p>Petersen
+→ хочет понятного production direction</p>
+<p>McGee
+→ экспериментирует</p>
+<p>Adrian / Cloud
+→ должны производить art сейчас</p>
+<p>Taylor
+→ programming</p>
+<p>новые сотрудники
+→ ещё меньше общего исторического контекста</p>
+<p>И кто здесь producer?</p>
+<p>НИКТО
+Petersen прямо предложил назначить такого человека</p>
+<p>Он подошёл к Carmack и сказал примерно:</p>
+<p>Romero делает
+отличные levels</p>
+<p>НО</p>
+<p>кто-то должен
+руководить проектом в целом</p>
+<p>Petersen специально уточнил, что не пытается отобрать у Romero должность lead designer: он был готов работать под ним, а сам взять production-функцию и заставить проект двигаться системно.</p>
+<p>Ответ Carmack:</p>
+<p>НЕТ</p>
+<p>Romero способен
+работать как демон</p>
+<p>он всё сделает</p>
+<p>Petersen позже вспоминал:</p>
+<p>этого не произошло.
+Shacknews</p>
+<p>Вот здесь старая культура id буквально мешает компании создать роль, которая ей уже нужна.</p>
+<p>Потому что producer противоречил самому мифу id о себе</p>
+<p>С точки зрения основателей:</p>
+<p>менеджер нужен
+плохим разработчикам</p>
+<p>Их собственная история ведь доказывала это:</p>
+<p>Commander Keen
+без producer</p>
+<p>Wolfenstein
+без producer</p>
+<p>Doom
+без producer</p>
+<p>Зачем вдруг вводить человека, который будет:</p>
+<p>фиксировать scope</p>
+<p>назначать сроки</p>
+<p>синхронизировать departments</p>
+<p>требовать deliverables</p>
+<p>останавливать эксперименты</p>
+<p>если раньше всё это только мешало бы?</p>
+<p>Проблема:</p>
+<p>Quake уже не был проектом старой id.</p>
+<p>Но сама id всё ещё пыталась управлять им как проектом старой id.</p>
+<p>Даже физически компания перестала быть той самой комнатой из Wolfenstein</p>
+<p>Ранняя id работала потому, что:</p>
+<p>все сидят
+в нескольких метрах</p>
+<p>↓</p>
+<p>все всё слышат</p>
+<p>↓</p>
+<p>информация распространяется
+автоматически</p>
+<p>К 1995 году люди уже сидят в отдельных кабинетах.</p>
+<p>Wired, посетившая id летом 1995-го, увидела компанию, которая была out of sync: сотрудники приходили в разное время, уходили в собственные тёмные кабинеты и могли часами работать изолированно. Командный дух ещё существовал, но физическая структура уже позволяла легко выпасть из общего потока.
+WIRED</p>
+<p>То есть старая формула:</p>
+<p>нет management
+потому что
+все и так рядом</p>
+<p>перестала выполняться.</p>
+<p>Осталось:</p>
+<p>нет management</p>
+<p>А вторая половина исчезла.</p>
+<p>И Romero сам признаёт, что deathmatch начал жрать рабочее время</p>
+<p>Здесь тоже не надо строить карикатуру:</p>
+<p>Romero ничего не делал,
+только играл</p>
+<p>Он в этот период:</p>
+<p>писал QuakeEd;</p>
+<p>проектировал карты;</p>
+<p>занимался внешними партнёрами;</p>
+<p>курировал Raven;</p>
+<p>работал с Ultimate Doom;</p>
+<p>занимался Final Doom;</p>
+<p>взаимодействовал с прессой и стратегическими гайдами.</p>
+<p>То есть работы у него было дохуя.
+Shacknews</p>
+<p>Но он сам позднее признавал:</p>
+<p>deathmatch он действительно играл слишком много.</p>
+<p>Carmack однажды настолько заебал шум от постоянных матчей Romero, McGee и остальных, что просто собрал компьютер и ушёл программировать домой.</p>
+<p>Romero спустя годы говорил: если бы сотрудник его современной компании вёл себя так, как тогда он сам, тот бы долго не проработал.
+Shacknews</p>
+<p>Это очень важное признание.</p>
+<p>Потому что любимая культура id:</p>
+<p><strong>мы играем в свою игру</strong></p>
+<p>мы тестируем свою игру</p>
+<p>теперь тоже перестала иметь очевидную границу.</p>
+<p>Когда playtest заканчивается?</p>
+<p>И когда начинается:</p>
+<p>мы просто третий час
+хуяримся в deathmatch
+потому что это весело?
+И здесь фундаментально расходятся представления Carmack и Romero о самой компании</p>
+<p>Romero считал внешнюю активность естественным ростом id:</p>
+<p>Raven
+Final Doom
+community
+press
+strategy guides
+other projects</p>
+<p>Компания создала огромную технологическую и культурную платформу — значит, по его мнению, логично расширять влияние вокруг неё.</p>
+<p>Carmack видел противоположный риск:</p>
+<p><strong>все эти внешние вещи</strong></p>
+<p>отвлечение
+от Quake</p>
+<p>Он хотел:</p>
+<p>маленькая компания
++
+одна игра
++
+вся энергия
+на неё</p>
+<p>Romero хотел id, способную делать и поддерживать больше одного направления одновременно. Shacknews прямо фиксирует этот фундаментальный разрыв: Romero воспринимал внешние проекты как рост компании, Carmack предпочитал держать id маленькой, сфокусированной и занимающейся текущей игрой.
+Shacknews</p>
+<p>То есть конфликт уже вообще не только:</p>
+<p>каким должен быть Quake?</p>
+<p>А:</p>
+<p>КАКОЙ КОМПАНИЕЙ
+ДОЛЖНА БЫТЬ
+id Software?
+К лету 1995 Carmack понял, что проект едет в стену</p>
+<p>Engine занимает намного больше времени, чем ожидалось.</p>
+<p>Game design всё ещё плавает.</p>
+<p>Content производится, но неизвестно, что из него останется.</p>
+<p>И Carmack делает вещь, которая для старой id почти нехарактерна:</p>
+<p>начинает формально оценивать производительность сотрудников.</p>
+<p>По воспоминаниям Romero, Carmack разослал большой email с индивидуальными оценками людей и сообщил, что ожидает релиз Quake к:</p>
+<p>Christmas 1995</p>
+<p>Проблема:</p>
+<p>ИГРА
+ДАЖЕ БЛИЗКО
+НЕ БЫЛА ГОТОВА</p>
+<p>Shacknews
++1</p>
+<p>Это очень символический момент.</p>
+<p>Человек, культура которого десятилетиями звучит как:</p>
+<p>сильным людям manager не нужен,</p>
+<p>сам начинает выполнять роль manager через:</p>
+<p>performance ratings
++
+deadline</p>
+<p>То есть организация уже требует management-функцию, просто компания ещё не умеет нормально её оформить.</p>
+<p>А deadline ничего не решил, потому что главный вопрос всё ещё не был закрыт</p>
+<p>Можно сказать:</p>
+<p>работайте быстрее</p>
+<p>Но если люди не знают:</p>
+<p>ЧТО ИМЕННО
+МЫ ДЕЛАЕМ</p>
+<p>это не помогает.</p>
+<p>Именно поэтому к ноябрю 1995 года случается критический момент.</p>
+<p>Carmack собирает команду.</p>
+<p>К этому времени:</p>
+<p>ENGINE
+≈ наконец готов</p>
+<p>8 major revisions</p>
+<p>Но:</p>
+<p>большая часть
+design/content работы</p>
+<p>=
+выброшена
+или не складывается
+в одну игру</p>
+<p>Carmack резюмирует проблему и ставит вопрос практически ребром: технологическая революция уже получилась; будем ли мы теперь ещё пытаться совершить столь же огромную революцию в game design — или наконец сделаем понятный shooter и ship'нем эту хрень?
+Shacknews</p>
+<p>Подробно сам выбор между original Quake и финальным Quake разберём в пункте 28.</p>
+<p>Здесь важно другое:</p>
+<p>почти год production прошёл до того момента, когда компания окончательно определила фундаментальный тип игры.</p>
+<p>Для старой id это совершенно немыслимо.</p>
+<p>И это был фактически production reset</p>
+<p>Представим картину ноября 1995-го.</p>
+<p>После примерно года:</p>
+<p>ENGINE:
+наконец почти есть</p>
+<p>GAME:
+ещё надо собрать</p>
+<p>Большая часть предыдущих экспериментов теперь становится:</p>
+<p>SUNK COST</p>
+<p>Да, остаются:</p>
+<p>monsters;</p>
+<p>textures;</p>
+<p>fragments of levels;</p>
+<p>tools;</p>
+<p>code;</p>
+<p>звуки;</p>
+<p>идеи.</p>
+<p>Но всё это теперь нужно пересобрать вокруг нового фиксированного core.</p>
+<p>Именно Tim Willits позднее говорил, что финальная структура четырёх эпизодов появилась не из великого design master plan, а практически из вопроса:</p>
+<p>«у нас есть куча всякой хрени — как собрать её в нечто цельное?»
+Shacknews</p>
+<p>Это не традиционный production.</p>
+<p>Это salvage operation.</p>
+<p>И вот после этого впервые начинается настоящий корпоративный crunch id</p>
+<p>Ранние игры тоже делались чудовищными часами.</p>
+<p>Но сотрудники сами воспринимали это как:</p>
+<p>МЫ ХОТИМ
+СЕЙЧАС ЭТО ДОДЕЛАТЬ</p>
+<p>Quake — другое.</p>
+<p>После ноябрьского решения начинается примерно семимесячный режим постоянного crunch.</p>
+<p>Romero позднее называл его:</p>
+<p>худшим периодом в истории компании.</p>
+<p>График:</p>
+<p>7 дней в неделю</p>
+<p>столько часов,
+сколько физически выдержишь</p>
+<p>Ближе к релизу некоторые сотрудники уже буквально спали под столами.
+Shacknews
++1</p>
+<p>Вот где впервые меняется смысл старого:</p>
+<p>мы работаем по 12–16 часов
+Раньше
+одержимость
+↓
+долго сидим
+↓
+потому что
+всем весело
+Quake
+год потерян
+↓
+надо ship'нуть
+↓
+долго сидим
+↓
+потому что
+ИНАЧЕ МЫ ЭТО НЕ ЗАКОНЧИМ</p>
+<p>Romero специально различал эти два опыта: founders всегда работали огромными сессиями, но только на Quake это стало ощущаться как настоящий обязательный crunch.
+Shacknews</p>
+<p>Это фундаментальный культурный переход.</p>
+<p>И тогда id пытается буквально физически вернуть 1991 год</p>
+<p>В январе 1996-го компания расширяет офис.</p>
+<p>Но вместо того чтобы дать всем ещё более комфортные отдельные кабинеты, Carmack объявляет:</p>
+<p>ВСЕ
+ПЕРЕЕЗЖАЕМ
+В ОДНУ БОЛЬШУЮ КОМНАТУ</p>
+<p>Так возникает знаменитая:</p>
+<p>WAR ROOM</p>
+<p>Shacknews</p>
+<p>В неё переселяются:</p>
+<p>programmers;</p>
+<p>artists;</p>
+<p>level designers.</p>
+<p>Практически всё, что не связано непосредственно с Quake, убирается.</p>
+<p>Wired описывала длинные столы вдоль стен, забитые компьютерами, блокнотами, книгами и банками газировки; единственной реальной приватностью оставались наушники.
+WIRED</p>
+<p>Это чрезвычайно интересное организационное решение.</p>
+<p>Carmack фактически пытается восстановить старую id архитектурой помещения</p>
+<p>Проблема:</p>
+<p>ранняя id
+работала без management,
+потому что все сидели рядом</p>
+<p>Компания выросла:</p>
+<p>отдельные кабинеты
+↓
+люди рассинхронизировались</p>
+<p>Решение Carmack:</p>
+<p>УБРАТЬ КАБИНЕТЫ</p>
+<p>То есть вместо:</p>
+<p>новые процессы
+producer
+formal coordination</p>
+<p>он пытается вернуть:</p>
+<p>все снова
+в одной комнате</p>
+<p>По сути:</p>
+<p>не адаптировать организацию к выросшей компании, а физически заставить выросшую компанию снова вести себя как маленькая.</p>
+<p>И на короткой дистанции это действительно сработало.</p>
+<p>War Room ускорила проект</p>
+<p>Adrian Carmack считал, что общая комната помогла закончить Quake быстрее:</p>
+<p>все рядом
+↓
+вопрос решается сразу
+↓
+состояние проекта видно
+↓
+никто не исчезает
+в своём кабинете</p>
+<p>Wired тоже отмечала, что после переезда production резко ускорился и команда снова начала теснее координироваться.
+Shacknews
++1</p>
+<p>То есть Carmack диагностировал часть проблемы абсолютно правильно:</p>
+<p>КОММУНИКАЦИЯ
+сломалась</p>
+<p>Но лекарство:</p>
+<p>все сидят
+в одном помещении
+7 дней в неделю</p>
+<p>имело довольно очевидные побочные эффекты.</p>
+<p>Напряжение стало огромным</p>
+<p>Sandy Petersen War Room ненавидел.</p>
+<p>По его мнению, общая комната:</p>
+<p>мешала сосредоточиться;</p>
+<p>мешала нормально тестировать audio;</p>
+<p>лишала людей собственного рабочего пространства.</p>
+<p>Adrian оценивал её мягче: некомфортно, но эффективно.</p>
+<p>Wired описывала период ещё красочнее: стресс регулярно выливался в крики, ругань и агрессивные deathmatch-сессии.
+Shacknews
++1</p>
+<p>То есть:</p>
+<p>физическая близость</p>
+<p>из ранней сверхсилы id превращается почти в:</p>
+<p>ПРИНУДИТЕЛЬНУЮ
+ФИЗИЧЕСКУЮ БЛИЗОСТЬ</p>
+<p>Это уже совсем другая культура.</p>
+<p>Petersen потом очень хорошо свёл проблему Quake к трём вещам</p>
+<p>По его словам, разработку отравляли:</p>
+<p>1.
+постоянный crunch</p>
+<p>2.
+отсутствие
+единого guiding designer</p>
+<p>3.
+внутренняя перестройка
+влияния внутри команды</p>
+<p>Shacknews</p>
+<p>Первые две особенно важны для этого пункта.</p>
+<p>Потому что они являются двумя сторонами одной проблемы:</p>
+<p>нет direction
+↓
+работа тратится впустую
+↓
+проект опаздывает
+↓
+нужен crunch
+↓
+уставшая команда
+принимает хуже решения
+↓
+ещё больше трения</p>
+<p>Это замкнутый production loop.</p>
+<p>То есть Quake был не просто «слишком амбициозным»</p>
+<p>Амбициозные проекты id делала и раньше.</p>
+<p>Проблема была точнее:</p>
+<p>сложность проекта переросла организационную сложность самой компании.</p>
+<p>Ранняя id была оптимизирована под:</p>
+<p>короткий проект</p>
+<p>понятный core</p>
+<p>мгновенный playable build</p>
+<p>естественное разделение ролей</p>
+<p>маленькая команда</p>
+<p>быстрые bit flips</p>
+<p>Quake:</p>
+<p>многолетний R&amp;D</p>
+<p>неизвестный core</p>
+<p>технология долго непригодна
+для полноценного production</p>
+<p>больше сотрудников</p>
+<p>несколько design visions</p>
+<p>дорогой content</p>
+<p>дорогая переделка content</p>
+<p>отдельные кабинеты</p>
+<p>внешние проекты</p>
+<p>отсутствие producer</p>
+<p>Одна и та же организационная модель уже физически не соответствует задаче.</p>
+<p>А знаменитый «bit flip» теперь стоил не вечер работы</p>
+<p>Это ещё одно фундаментальное изменение.</p>
+<p>Раньше:</p>
+<p>не нравится направление?
+↓
+flip bit
+↓
+завтра делаем другое</p>
+<p>Например, в 1991 году ранний Fight for Justice могли просто отменить и перейти к следующей маленькой игре. Romero даже описывал тогдашнюю культуру словами:</p>
+<p>“We are the wind.”
+Shacknews</p>
+<p>Но в 1995:</p>
+<p>bit flip</p>
+<p>может означать:</p>
+<p>выбросить
+месяцы art</p>
+<p>месяцы levels</p>
+<p>sound work</p>
+<p>game mechanics</p>
+<p>tools assumptions</p>
+<p>То есть главное оружие маленькой id:</p>
+<p>МГНОВЕННО
+ПЕРЕДУМАТЬ</p>
+<p>перестало быть бесплатным.</p>
+<p>А культура всё ещё вела себя так, будто бесплатно.</p>
+<p>Именно поэтому Quake стал первым настоящим production disaster id</p>
+<p>Не потому что проект провалился.</p>
+<p>Он не провалился.</p>
+<p>Это принципиально.</p>
+<p>22 июня 1996 года Quake вышел и стал колоссальным технологическим и культурным событием.
+GameSpot</p>
+<p>Проблема:</p>
+<p><strong>RESULT</strong></p>
+<p>триумф</p>
+<p><strong>PROCESS</strong></p>
+<p>катастрофа</p>
+<p>И это один из самых интересных случаев в истории разработки вообще.</p>
+<p>Игрок видит
+полный 3D</p>
+<p>polygonal monsters</p>
+<p>mouselook</p>
+<p>огромные пространства</p>
+<p>dynamic lighting</p>
+<p>client/server multiplayer</p>
+<p>QuakeC</p>
+<p>Nine Inch Nails</p>
+<p>deathmatch
+Команда видит
+год выброшенных экспериментов</p>
+<p>8 engine revisions</p>
+<p>непонятное направление</p>
+<p>конфликт founders</p>
+<p>7 месяцев crunch</p>
+<p>war room</p>
+<p>людей,
+спящих под столами</p>
+<p>Обе картинки одновременно правдивы.</p>
+<p>И даже в момент релиза атмосфера уже совершенно не похожа на Doom</p>
+<p>Во время предыдущих игр команда обычно вместе дожидалась релиза — хоть до четырёх утра.</p>
+<p>На Quake, по воспоминаниям Romero, к финалу люди были настолько ментально уничтожены, что коллективного праздничного финала практически не получилось. Он вспоминал момент загрузки игры как особенно одинокий по сравнению с предыдущими релизами.
+Shacknews</p>
+<p>Это прекрасный символ.</p>
+<p>Doom:</p>
+<p>МЫ СДЕЛАЛИ ЭТУ ХРЕНЬ</p>
+<p>Quake:</p>
+<p>ГОСПОДИ,
+ОНА НАКОНЕЦ ЗАКОНЧИЛАСЬ
+И Carmack тоже вынес из Quake довольно жёсткий урок</p>
+<p>Уже в 1997 году, говоря о Quake II, он написал в своём .plan:</p>
+<p>“Quake 1 was pretty messed up from a game standpoint, and we don't plan on doing that again.”
+GitHub</p>
+<p>Это показательная оценка именно от человека, для которого Quake technology была огромным достижением.</p>
+<p>То есть:</p>
+<p>ENGINE:
+триумф</p>
+<p>GAME PRODUCTION:
+не повторять</p>
+<p>Именно поэтому Quake II затем будет строиться совсем иначе — но это пункт 36.</p>
+<p>Что именно Quake доказал неправильным в старой культуре id
+1. «Design можно придумать потом»</p>
+<p>Работает, если technology стабилизируется быстро.</p>
+<p>Не работает, если technology находится в R&amp;D год.</p>
+<ol>
+<li>«Менеджмент не нужен»</li>
+</ol>
+<p>Работает, если:</p>
+<p>5 человек
+в одной комнате</p>
+<p>Не работает автоматически, если:</p>
+<p>больше людей
++
+разные роли
++
+долгий проект
++
+дорогие зависимости
+3. «Bit flip всегда полезен»</p>
+<p>Работает, когда выбрасывается:</p>
+<p>три дня работы</p>
+<p>Не работает, когда выбрасывается:</p>
+<p>три месяца работы
+нескольких departments
+4. «Все сами понимают, что делают»</p>
+<p>Работает, если game vision очевиден.</p>
+<p>На Quake люди буквально производили:</p>
+<p>medieval
+tech
+Aztec
+military
+fantasy</p>
+<p>параллельно.</p>
+<ol>
+<li>«Crunch — просто наша любовь к работе»</li>
+</ol>
+<p>Quake впервые показал разницу между:</p>
+<p>Я НЕ ХОЧУ ИДТИ ДОМОЙ,
+ПОТОМУ ЧТО ЭТО ОХУЕННО</p>
+<p>и:</p>
+<p>Я НЕ МОГУ ИДТИ ДОМОЙ,
+ПОТОМУ ЧТО МЫ ОПОЗДАЛИ
+6. «Основатели естественно дополняют друг друга»</p>
+<p>На Doom:</p>
+<p>Carmack
+technology</p>
+<p>Romero
+game</p>
+<p>ещё работает.</p>
+<p>На Quake:</p>
+<p>Carmack:
+сфокусируйтесь
+и ship'ните shooter</p>
+<p>Romero:
+мы должны использовать
+эту технологию,
+чтобы двинуть game design дальше</p>
+<p>Два человека уже смотрят на один и тот же проект и видят разные цели.
+Shacknews</p>
+<p>И Quake особенно жестоко наказал id за отсутствие промежуточных ролей</p>
+<p>Компания имела:</p>
+<p>великих programmers</p>
+<p>великих designers</p>
+<p>великих artists</p>
+<p>Но между ними не было устойчивой функции:</p>
+<p>PROJECT DIRECTION
++
+PRODUCTION MANAGEMENT</p>
+<p>В Doom эту дыру частично закрывал Romero личной энергией.</p>
+<p>На Quake проект стал слишком большим, чтобы функция:</p>
+<p>«Romero как-нибудь
+всё склеит»</p>
+<p>оставалась нормальным production plan.</p>
+<p>Когда Petersen предложил formal production leadership, компания отказалась.</p>
+<p>Через несколько месяцев всё равно пришлось создать management-суррогат:</p>
+<p>Carmack deadline
++
+performance ratings
++
+war room
++
+семидневный crunch</p>
+<p>То есть management всё равно появился.</p>
+<p>Только в самой болезненной возможной форме.</p>
+<p>Это и есть главный организационный парадокс Quake</p>
+<p>id много лет избегала процессов, потому что процессы могли замедлить лучших людей.</p>
+<p>В Quake отсутствие процессов привело к тому, что лучших людей пришлось в конце заставить работать:</p>
+<p>7 дней в неделю
+в одной комнате</p>
+<p>чтобы компенсировать месяцы потерь.</p>
+<p>Можно записать почти уравнением:</p>
+<p>0 bureaucracy</p>
+<p>было преимуществом до некоторого масштаба.</p>
+<p>После него:</p>
+<p>0 coordination structure</p>
+<p>→</p>
+<p>огромный hidden coordination cost</p>
+<p>И этот hidden cost id заплатила человеческими отношениями.</p>
+<p>Поэтому фраза «Quake сломал первоначальную id» не означает, что Quake была плохой игрой</p>
+<p>Наоборот.</p>
+<p>Вот в чём трагедия.</p>
+<p>Если бы Quake вышел посредственным, история была бы простой:</p>
+<p>амбициозный проект развалился.</p>
+<p>Но он вышел Quake.</p>
+<p>То есть команда получила одновременно:</p>
+<p>один из величайших
+технологических скачков
+в истории 3D games</p>
+<p>и:</p>
+<p>доказательство,
+что больше не может
+работать так,
+как работала раньше</p>
+<p>Именно поэтому внутренний ущерб оказался настолько глубоким.</p>
+<p>Каждая сторона могла посмотреть на результат и сказать:</p>
+<p>ВИДИТЕ?
+МОЙ ПОДХОД РАБОТАЕТ.</p>
+<p>Carmack:</p>
+<p>мы в конце сфокусировались
+на shooter
+и выпустили великий продукт</p>
+<p>Romero:</p>
+<p>technology потрясающая,
+но мы упустили шанс
+столь же сильно двинуть
+game design</p>
+<p>Petersen:</p>
+<p>нам всё время
+не хватало
+центрального direction</p>
+<p>И у каждого есть аргументы.</p>
+<p>Поэтому Quake не разрешил конфликт</p>
+<p>Он его замаскировал успехом продукта.</p>
+<p>Production problem не получил красивого финала:</p>
+<p>мы нашли новый
+идеальный способ работать</p>
+<p>Команда просто:</p>
+<p>перестала экспериментировать</p>
+<p>↓</p>
+<p>выбрала достижимый core</p>
+<p>↓</p>
+<p>включила crunch</p>
+<p>↓</p>
+<p>заперлась в War Room</p>
+<p>↓</p>
+<p>додавила игру</p>
+<p>Это не решение организационной проблемы.</p>
+<p>Это способ пережить конкретный проект.</p>
+<p>И в этом смысле War Room — идеальный символ конца первой id</p>
+<p>В 1991:</p>
+<p>все сидят
+в одной комнате</p>
+<p>ПОТОМУ ЧТО
+компания состоит
+из нескольких друзей</p>
+<p>В 1996:</p>
+<p>все сидят
+в одной комнате</p>
+<p>ПОТОМУ ЧТО
+иначе выросшая компания
+больше не способна
+нормально синхронизироваться</p>
+<p>Внешне:</p>
+<p>одна и та же модель</p>
+<p>По сути:</p>
+<p>полная противоположность</p>
+<p>Ранняя близость была естественной.</p>
+<p>War Room — искусственной.</p>
+<p>И именно здесь заканчивается романтическая гаражная id.</p>
+<p>В сухом остатке
+после DOOM II</p>
+<p>id хочет
+ещё одну революцию</p>
+<p>↓</p>
+<p>Quake</p>
+<p>настоящий full 3D
++
+амбициозный fantasy/RPG-ish design</p>
+<p>↓</p>
+<p>Carmack
+начинает фундаментальный R&amp;D</p>
+<p>↓</p>
+<p>engine постоянно меняется</p>
+<p>8 крупных итераций</p>
+<p>↓</p>
+<p>Romero
+не хочет фиксировать design,
+пока technology нестабильна</p>
+<p>↓</p>
+<p>designers
+не получают общего направления</p>
+<p>и начинают:
+«design by doing»</p>
+<p>↓</p>
+<p>Aztec
+medieval
+tech
+military
+fantasy</p>
+<p>куча content</p>
+<p>↓</p>
+<p>часть engine меняется</p>
+<p>часть content
+выбрасывается</p>
+<p>↓</p>
+<p>проект опаздывает</p>
+<p>↓</p>
+<p>лето 1995</p>
+<p>Carmack:
+performance ratings
++
+Christmas deadline</p>
+<p>↓</p>
+<p>всё равно
+не готово</p>
+<p>↓</p>
+<p>ноябрь 1995</p>
+<p>engine наконец
+почти стабилен</p>
+<p>game design
+ещё нет</p>
+<p>↓</p>
+<p>большая часть
+экспериментов списывается</p>
+<p>направление фиксируется</p>
+<p>↓</p>
+<p>7 месяцев
+семидневного crunch</p>
+<p>↓</p>
+<p>январь 1996</p>
+<p>WAR ROOM</p>
+<p>всех снова физически
+сажают рядом</p>
+<p>↓</p>
+<p>22 июня 1996</p>
+<p>QUAKE</p>
+<p>↓</p>
+<p>технологический триумф</p>
+<p>организационная травма</p>
+<p>И поэтому Quake — возможно, самая важная игра для понимания самой id Software.</p>
+<p>Doom показывает, почему её модель была настолько сильной.</p>
+<p>Quake показывает, где именно у этой модели находился предел.</p>
+<p>Маленькая компания могла жить без менеджмента, без устойчивого design document, менять направление на лету и полагаться на гениальность отдельных людей — пока проекты оставались достаточно маленькими, чтобы стоимость хаоса была низкой.</p>
+<p>Quake впервые сделал хаос дорогим.</p>
+<p>И id всё-таки сумела из него вытащить шедевр.</p>
+<p>Но ту id Software, которая вошла в разработку Quake, обратно из неё уже не вышла.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p027">27. Michael Abrash и рост инженерной команды<a class="headerlink" href="#p027" title="Permanent link">¶</a></h2>
+<p>До Quake технологическая история id легко сводилась почти к одному человеку:</p>
+<p>Commander Keen
+John Carmack</p>
+<p>↓</p>
+<p>Wolfenstein
+John Carmack</p>
+<p>↓</p>
+<p>DOOM
+John Carmack</p>
+<p>Да, Romero писал tools и gameplay-код, Dave Taylor закрывал массу интеграционных задач, другие программисты тоже появлялись. Но именно архитектура игрового engine как технологического скачка в огромной степени существовала в голове Carmack.</p>
+<p>Quake впервые ломает эту модель.</p>
+<p>Не потому, что Carmack внезапно стал недостаточно хорош.</p>
+<p>А потому что задача стала настолько широкой, что компании понадобились люди, способные не просто выполнять его решения, а обсуждать с ним фундаментальные алгоритмические проблемы на сопоставимом уровне.</p>
+<p>Первым таким человеком стал Michael Abrash.</p>
+<p>А уже рядом с ним появился John Cash.</p>
+<p>И именно здесь технологическая id начинает превращаться из:</p>
+<p>Carmack
++
+несколько programmers вокруг</p>
+<p>в:</p>
+<p>ENGINE TEAM
+Причём Abrash был одним из людей, на которых вырос сам Carmack</p>
+<p>Здесь возникает прекрасная историческая петля.</p>
+<p>Michael Abrash был известным специалистом по:</p>
+<p>x86 assembly</p>
+<p>optimization</p>
+<p>VGA / PC graphics</p>
+<p>realtime rendering</p>
+<p>и годами писал технические статьи для Programmer's Journal и Dr. Dobb's Journal.</p>
+<p>В начале девяностых Carmack сам общался с ним на bulletin board Dr. Dobb's. Abrash вспоминал Carmack как необычного человека, который очень хорошо разбирался в 3D и почему-то разрабатывал под NeXTSTEP.
+GitHub</p>
+<p>Для Carmack и Romero Abrash был практически старшим поколением PC-графических хакеров.</p>
+<p>Shacknews отмечает, что книги и статьи Abrash были важным материалом для раннего Carmack; его работы по PC-графике помогали молодым разработчикам id понимать, как выжимать значительно больше из стандартного железа.
+Shacknews</p>
+<p>Получается интересная последовательность:</p>
+<p>1980-е</p>
+<p>Michael Abrash
+пишет о graphics optimization</p>
+<p>↓</p>
+<p>молодой Carmack
+читает</p>
+<p>↓</p>
+<p>Carmack
+делает Keen / Wolf / Doom</p>
+<p>↓</p>
+<p>1995</p>
+<p>Carmack нанимает
+САМОГО ABRASH
+делать следующий engine</p>
+<p>Учитель в некотором смысле приходит работать к ученику.</p>
+<p>Они заново нашли друг друга благодаря DOOM</p>
+<p>Abrash к этому моменту уже работал в Microsoft.</p>
+<p>В 1993 году его коллега Chris Hecker показал ему alpha-версию DOOM.</p>
+<p>По собственному рассказу Abrash, реакция была примерно:</p>
+<p>я чуть со стула не упал.</p>
+<p>Примерно год спустя Hecker переслал ему сообщение Carmack в newsgroup, и Abrash понял, что тот самый John с DDJ BBS — и есть человек, написавший технологию DOOM.</p>
+<p>Он написал Carmack поздравление.</p>
+<p>Началась переписка.</p>
+<p>Carmack, бывая в Seattle у семьи, заходил к Abrash, и они часами обсуждали graphics programming и будущее realtime 3D.
+GitHub</p>
+<p>То есть Abrash не приходит в id через:</p>
+<p>HR
+↓
+вакансия Senior Graphics Programmer
+↓
+техническое интервью</p>
+<p>А через:</p>
+<p>два одержимых graphics programmers
+несколько лет
+обсуждают задачи</p>
+<p>↓</p>
+<p>«а давай просто
+работать вместе»</p>
+<p>Очень id.</p>
+<p>Carmack пытался нанять его ещё после DOOM</p>
+<p>После выхода Doom Carmack предложил Abrash перейти в id.</p>
+<p>Abrash сначала отказался.</p>
+<p>В Microsoft он пытался запустить большой исследовательский проект, вдохновлённый в том числе Snow Crash: shared virtual worlds, сетевые пространства, фактически ранний образ того, что сегодня назвали бы cyberspace/virtual world infrastructure.</p>
+<p>Microsoft проект в какой-то форме одобрила, но наиболее интересную Abrash инфраструктурную часть передала другой группе.</p>
+<p>Abrash оказался деморализован: вместо желанной исследовательской работы ему светили управление, meetings и очередные циклы shipping Windows NT.
+WIRED</p>
+<p>И тут Carmack снова приезжает.</p>
+<p>Теперь уже рассказывает о Quake.</p>
+<p>Причём Abrash вспоминал этот pitch не как:</p>
+<p>нам нужен человек оптимизировать несколько функций.</p>
+<p>А как предложение:</p>
+<p>чистый лист</p>
+<p>никакого management overhead</p>
+<p>можно весь день программировать</p>
+<p>мы собираемся решить
+новый класс 3D-задач</p>
+<p>И Abrash согласился.
+dvara.net
++1</p>
+<p>В начале марта 1995 Abrash приходит в id</p>
+<p>Дату можно зафиксировать довольно точно благодаря самому Abrash:</p>
+<p>начало марта 1995 года.</p>
+<p>К этому моменту Carmack уже имел работающий prototype Quake engine и определённое представление о том, куда идти дальше.</p>
+<p>Abrash сначала подумал:</p>
+<p>архитектура есть</p>
+<p>↓</p>
+<p>теперь мы её
+закончим</p>
+<p>↓</p>
+<p>потом оптимизируем</p>
+<p>Очень быстро выяснилось:</p>
+<p>НЕТ</p>
+<p>Потому что Carmack продолжал фундаментально переписывать renderer практически до самого окончания проекта. Abrash позже подсчитал, что Carmack за четыре предыдущих года создал уже около двадцати различных engine iterations, и Quake продолжил тот же паттерн.
+GitHub</p>
+<p>То есть Abrash буквально пришёл в момент, когда:</p>
+<p>engine team
+уже нужна</p>
+<p>НО</p>
+<p>сам объект,
+которым эта team занимается,
+ещё постоянно меняет форму
+Почему именно Quake впервые потребовал такого человека</p>
+<p>DOOM renderer был сложным.</p>
+<p>Но Quake переводит id в совершенно другой класс задач:</p>
+<p>TRUE 3D WORLD</p>
+<p>Теперь нужно одновременно решать:</p>
+<p>arbitrary 3D geometry</p>
+<p>polygon visibility</p>
+<p>perspective-correct texture mapping</p>
+<p>lightmaps</p>
+<p>moving 3D models</p>
+<p>clipping</p>
+<p>culling</p>
+<p>software rasterization</p>
+<p>cache behavior</p>
+<p>floating point performance</p>
+<p>Pentium optimization</p>
+<p>network architecture</p>
+<p>tools</p>
+<p>multiple platforms</p>
+<p>Abrash отдельно называл visible-surface determination одной из самых тяжёлых задач realtime 3D: в большом Quake-level могут существовать тысячи polygon surfaces, но процессор не должен тратить время на рисование подавляющего большинства того, что игрок всё равно не увидит.
+GitHub</p>
+<p>То есть Carmack теперь решает уже не:</p>
+<p>«как быстро
+нарисовать стены?»</p>
+<p>а:</p>
+<p>«как представить
+произвольный 3D-мир</p>
+<p>и</p>
+<p>как понять,
+какие части этого мира
+вообще надо рисовать</p>
+<p>и</p>
+<p>как затем нарисовать их
+достаточно быстро
+на Pentium?»</p>
+<p>Объём пространства решений вырос радикально.</p>
+<p>И важнейшая функция Abrash была даже не «писать второй половине движка»</p>
+<p>Вот здесь надо не создавать новый миф:</p>
+<p><strong>Carmack + Abrash</strong></p>
+<p>50 / 50 authors
+Quake engine</p>
+<p>Нет.</p>
+<p>Сам Abrash позднее прямо написал:</p>
+<p>архитектура Quake и большая часть технологии были созданием John Carmack.
+Anyflip</p>
+<p>Carmack оставался:</p>
+<p>principal architect</p>
+<p>Он определял фундаментальные структуры.</p>
+<p>Он создавал и выбрасывал альтернативные designs.</p>
+<p>Он написал основную engine architecture.</p>
+<p>Abrash выполнял другую чрезвычайно ценную роль:</p>
+<p>Carmack
+придумывает архитектуру</p>
+<p>↕</p>
+<p>Abrash
+может её
+РАЗОБРАТЬ,
+ОСПОРИТЬ,
+ОПТИМИЗИРОВАТЬ
+и развить
+на том же техническом языке</p>
+<p>Это уже намного больше, чем обычный subordinate programmer.</p>
+<p>Впервые Carmack получает настоящего technical peer</p>
+<p>Sandy Petersen позднее довольно грубо, но точно описывал причину найма:</p>
+<p>Carmack было одиноко.</p>
+<p>Не эмоционально в бытовом смысле.</p>
+<p>У него просто почти не было человека внутри id, с которым можно обсуждать:</p>
+<p>сложные visibility algorithms</p>
+<p>cache architecture</p>
+<p>rasterization</p>
+<p>assembly optimization</p>
+<p>3D math</p>
+<p>CPU pipelines</p>
+<p>на уровне:</p>
+<p>«а если вместо этого
+использовать вот такую
+VSD architecture?»</p>
+<p>Shacknews пересказывает позицию Petersen именно так: Abrash наняли в значительной степени потому, что Carmack наконец понадобился программист, с которым он мог разговаривать на своём уровне и вместе проектировать решения.
+Shacknews</p>
+<p>И вот это исторически важнее конкретной функции Abrash.</p>
+<p>До:</p>
+<p>Carmack
+думает</p>
+<p>↓</p>
+<p>Carmack
+пишет</p>
+<p>↓</p>
+<p>остальные
+используют</p>
+<p>Теперь:</p>
+<p>Carmack
+   ↕
+Abrash</p>
+<p>обсуждают
+↓
+экспериментируют
+↓
+измеряют
+↓
+выбрасывают
+↓
+переписывают</p>
+<p>Появляется коллективное engine R&amp;D.</p>
+<p>Они реально работали бок о бок</p>
+<p>Wired в 1996 году описывала Abrash уже как бывшего «гуру» Carmack, превратившегося в его right-hand man.</p>
+<p>Рабочий цикл журналист увидел буквально таким:</p>
+<p>Carmack
+пишет engine code</p>
+<p>↓</p>
+<p>передаёт Abrash</p>
+<p>↓</p>
+<p>Abrash
+разбирает и оптимизирует
+для elegance / efficiency</p>
+<p>WIRED</p>
+<p>Это очень интересная смена ролей.</p>
+<p>Когда-то:</p>
+<p>Abrash
+пишет статьи</p>
+<p>↓</p>
+<p>Carmack
+читает</p>
+<p>Теперь:</p>
+<p>Carmack
+пишет bleeding-edge renderer</p>
+<p>↓</p>
+<p>Abrash
+оптимизирует</p>
+<p>То есть ученик уже сам находится на переднем крае области, но бывший наставник способен работать рядом, а не просто наблюдать.</p>
+<p>Причём Abrash пришёл не просто «ускорять C ассемблером»</p>
+<p>Да, эта часть его работы была огромной.</p>
+<p>Но сводить его к:</p>
+<p>assembly monkey</p>
+<p>неправильно.</p>
+<p>Он участвовал в обсуждении и анализе:</p>
+<p>visibility;</p>
+<p>rasterization;</p>
+<p>hidden-surface removal;</p>
+<p>lighting;</p>
+<p>BSP-related решений;</p>
+<p>способах представления и вывода geometry;</p>
+<p>производительности renderer.</p>
+<p>Его Graphics Programming Black Book содержит целый блок глав, фактически документирующий инженерные решения Quake ещё изнутри самой разработки — от BSP и visibility до sorted spans, lighting, surface caching и triangle-model rendering.
+GitHub
++1</p>
+<p>То есть он выполнял сразу две функции:</p>
+<p>ENGINEER</p>
+<p>и:</p>
+<p>человек,
+который формализует
+и объясняет,
+ПОЧЕМУ engine
+устроен именно так</p>
+<p>Для культуры id это тоже важно.</p>
+<p>Но assembly-оптимизация действительно была чудовищно значимой</p>
+<p>Quake должен был работать не на видеокарте будущего.</p>
+<p>Основная аудитория 1996 года всё ещё запускает:</p>
+<p>SOFTWARE RENDERER</p>
+<p>То есть CPU самостоятельно:</p>
+<p>transform</p>
+<p>clip</p>
+<p>light</p>
+<p>texture</p>
+<p>rasterize</p>
+<p>огромную часть сцены.</p>
+<p>И каждый цикл Pentium имеет значение.</p>
+<p>Abrash специализировался именно на такой работе.</p>
+<p>Современный анализ открытого Quake source показывает масштаб: десятки критичных routines имеют hand-written x86 assembly variants. Если собрать software renderer без этих оптимизированных путей, производительность в тестовой конфигурации может падать примерно вдвое — что соответствует предупреждению самого Carmack в опубликованном source README: C-only software build теряет почти половину скорости.
+Fabien Sanglard
++1</p>
+<p>Это разница не между:</p>
+<p>120 FPS</p>
+<p>и:</p>
+<p>80 FPS</p>
+<p>В 1996-м это может быть:</p>
+<p>играбельно</p>
+<p>против:</p>
+<p>неиграбельно
+И это показывает новый тип инженерной специализации</p>
+<p>Раньше Carmack мог сделать:</p>
+<p>architecture
++
+implementation
++
+optimization</p>
+<p>в значительной степени один.</p>
+<p>Quake уже позволяет разделить:</p>
+<p>CARMACK</p>
+<p>higher-level architecture
++
+experiments
++
+renderer design
++
+game architecture</p>
+<p>и:</p>
+<p>ABRASH</p>
+<p>algorithmic analysis
++
+low-level optimization
++
+x86 assembly
++
+renderer performance</p>
+<p>При этом граница не жёсткая.</p>
+<p>Оба понимают обе области.</p>
+<p>Именно поэтому сотрудничество работает: Abrash не получает от Carmack specification:</p>
+<p>optimize function X by 12%.</p>
+<p>Он способен спросить:</p>
+<p>а сам алгоритм вообще правильный?</p>
+<p>Причём Carmack регулярно делал Abrash очень больно</p>
+<p>Потому что Michael мог потратить много времени, тщательно оптимизируя критический участок.</p>
+<p>А затем Carmack приходил:</p>
+<p>я поменял architecture</p>
+<p>и вся прекрасная assembly-работа становилась ненужной.</p>
+<p>Сам Carmack позднее признавал это довольно честно: Abrash мог серьёзно оптимизировать низкоуровневую routine, после чего архитектурное изменение заставляло начинать заново; Carmack чувствовал себя немного виноватым, хотя считал итоговое сотрудничество однозначно полезным. Abrash также занимался merge'ами их параллельной работы.
+Fabien Sanglard</p>
+<p>То есть даже engine team ещё не работала как:</p>
+<p>architecture freeze</p>
+<p>↓</p>
+<p>optimization phase</p>
+<p>Это всё ещё id:</p>
+<p>optimize</p>
+<p>↓</p>
+<p>ПОДОЖДИ,
+Я ПРИДУМАЛ ЛУЧШЕ</p>
+<p>↓</p>
+<p>выкинуть</p>
+<p>↓</p>
+<p>оптимизировать заново</p>
+<p>Просто теперь в этой мясорубке участвуют уже два мирового уровня graphics programmer.</p>
+<p>И Abrash своими глазами увидел знаменитую Carmack-модель R&amp;D</p>
+<p>Один из лучших фрагментов его воспоминаний — история visible-surface determination.</p>
+<p>Carmack перебирал разные способы решить проблему visibility:</p>
+<p>beam trees</p>
+<p>subdividing raycast</p>
+<p>vertex-free surfaces</p>
+<p>draw buffer</p>
+<p>span-based rendering</p>
+<p>portals</p>
+<p>...</p>
+<p>Некоторые существовали только как обсуждение.</p>
+<p>Некоторые он реально писал за ночь или выходные.</p>
+<p>Потом выбрасывал.
+GitHub</p>
+<p>Abrash вспоминает почти ритуал:</p>
+<p>Carmack заходит:</p>
+<p>«Last night
+I couldn't get to sleep,
+so I was thinking...»</p>
+<p>и дальше появляется очередная фундаментально иная architecture.
+GitHub</p>
+<p>То есть Abrash попал не на этап:</p>
+<p>помоги оптимизировать гениальное готовое решение Carmack.</p>
+<p>Он находился внутри процесса:</p>
+<p>давайте вместе переживём момент, пока Carmack ещё не знает, какое решение окажется гениальным.</p>
+<p>И очень важно: Abrash не присваивает себе Carmack breakthroughs</p>
+<p>Например, одна из ключевых идей Quake visibility — precomputed Potentially Visible Set, PVS.</p>
+<p>Уровень делится BSP-структурой.</p>
+<p>Для каждого leaf заранее считается:</p>
+<p>какие другие leaves
+потенциально видимы отсюда?</p>
+<p>В runtime вместо дорогостоящего полного visibility analysis:</p>
+<p>lookup
+↓
+вот ограниченный набор
+того, что вообще стоит рассматривать</p>
+<p>Abrash подробно описывает, как Carmack после очередных экспериментов пришёл именно к предварительно рассчитанному PVS и как это радикально стабилизировало worst-case performance сложных сцен.
+GitHub
++1</p>
+<p>То есть роли хорошо видны:</p>
+<p>ABRASH
+не переписывает историю:</p>
+<p>«мы с John придумали всё вместе»</p>
+<p>Он довольно чётко говорит:</p>
+<p><strong>Carmack</strong></p>
+<p>driving technical force</p>
+<p>Но присутствие Abrash делает сам поиск решений более мощным инженерным процессом, чем Carmack в одиночку.</p>
+<p>И появление Abrash освобождает самого Carmack</p>
+<p>Вот организационно ключевой эффект.</p>
+<p>До этого если Carmack упёрся в сложнейшую rendering-задачу:</p>
+<p>Carmack
+должен её решить</p>
+<p>И если после решения нужен месяц assembly tuning:</p>
+<p>Carmack
+должен делать tuning</p>
+<p>Если надо исследовать альтернативный algorithm:</p>
+<p>Carmack
+должен исследовать</p>
+<p>С Abrash:</p>
+<p>Carmack
+может двигать architecture</p>
+<p>ПОКА</p>
+<p>Abrash
+углубляется
+в другой сложный кусок</p>
+<p>Shacknews прямо связывает найм Abrash с тем, что Carmack получил возможность разделить внимание между graphics и другими engine components.
+Shacknews</p>
+<p>Это и есть реальный смысл команды:</p>
+<p>не просто два человека пишут вдвое больше строк, а несколько сложных инженерных задач могут развиваться параллельно.</p>
+<p>И именно в этот момент Carmack начинает писать вещи, которые уже не являются просто renderer</p>
+<p>Например:</p>
+<p>console</p>
+<p>внутри игры.</p>
+<p>Дизайнер может открыть её и менять значения прямо во время работы.</p>
+<p>Из этой идеи развивается:</p>
+<p>QuakeC</p>
+<p>— отдельный scripting/gameplay layer, который позволяет дизайнерам менять игровые правила без перекомпиляции всего native engine.
+Shacknews</p>
+<p>То есть пока Abrash глубже занимается частью graphics/performance-задач, Carmack может архитектурно двигать engine как платформу, а не только renderer.</p>
+<p>Это уже совсем другой масштаб технологии.</p>
+<p>А потом приходит John Cash</p>
+<p>И здесь переход к настоящей engine team становится окончательным.</p>
+<p>Летом 1995 года id нанимает John Cash, специалиста по networking.</p>
+<p>Wired прямо описывала его роль: Quake проектировался как сетевой мир, а Cash должен был обеспечить достаточно качественную работу networking через modem и Internet.
+WIRED</p>
+<p>Теперь можно записать:</p>
+<p>QUAKE ENGINE TEAM</p>
+<p>John Carmack
+architecture /
+graphics /
+core engine /
+QuakeC /
+technology direction</p>
+<p>Michael Abrash
+graphics algorithms /
+software rendering /
+x86 optimization /
+technical R&amp;D</p>
+<p>John Cash
+networking /
+Internet-oriented engine work</p>
+<p>И это уже качественно отличается от Doom.</p>
+<p>Потому что networking Quake тоже слишком велико, чтобы быть просто «ещё одной функцией Carmack»</p>
+<p>В DOOM Carmack буквально в конце разработки сам написал networking core.</p>
+<p>Quake задумывается уже так, что:</p>
+<p>CLIENT</p>
+<p>и:</p>
+<p>SERVER</p>
+<p>являются фундаментальными архитектурными понятиями.</p>
+<p>Abrash в интервью Wired даже объяснял Quake через эту модель:</p>
+<p>server
+симулирует world</p>
+<p>↓</p>
+<p>client
+занимается input / presentation</p>
+<p>↓</p>
+<p>даже на одном PC
+логическая модель
+остаётся той же</p>
+<p>WIRED</p>
+<p>То есть networking больше не:</p>
+<p>feature</p>
+<p>а:</p>
+<p>ENGINE ARCHITECTURE</p>
+<p>Следовательно, нужен человек, для которого networking — не вторичная задача.</p>
+<p>Это John Cash.</p>
+<p>Получается первая настоящая специализация инженерной id</p>
+<p>Старая id:</p>
+<p><strong>Carmack</strong></p>
+<p>«technology»</p>
+<p>Новая id Quake:</p>
+<p><strong>TECHNOLOGY</strong></p>
+<p>несколько самостоятельных областей
+graphics architecture
+software rasterization
+optimization
+networking
+game scripting
+platform code</p>
+<p>Один человек по-прежнему способен понимать всю систему.</p>
+<p>Но уже совершенно не рационально заставлять одного человека лично реализовывать и доводить каждую её часть.</p>
+<p>И важно: Carmack не теряет техническую власть</p>
+<p>Переход:</p>
+<p>one-man engine
+↓
+engine team</p>
+<p>не означает:</p>
+<p>Carmack становится
+обычным lead manager
+и больше не кодит</p>
+<p>Наоборот.</p>
+<p>Wired в 1996 году видит его непосредственно пишущим engine code рядом с Abrash.
+WIRED</p>
+<p>Carmack остаётся человеком, который:</p>
+<p>определяет architecture</p>
+<p>делает фундаментальные experiments</p>
+<p>выбирает technical direction</p>
+<p>пишет критичный code</p>
+<p>То есть новая модель:</p>
+<p><strong>CARMACK</strong></p>
+<p>principal architect
++
+elite programmer</p>
+<p>не</p>
+<p>единственный engine programmer</p>
+<p>Это гораздо более масштабируемая роль.</p>
+<p>Но Abrash при этом не был просто ещё одним employee</p>
+<p>Wired приводит прекрасную оценку Jay Wilbur.</p>
+<p>После найма Abrash тот считал, что в id теперь находятся:</p>
+<p>два из трёх лучших graphics programmer мира.
+WIRED</p>
+<p>Разумеется, это рекламная и субъективная формулировка.</p>
+<p>Но она хорошо показывает, что делала id.</p>
+<p>Компания не пыталась расширяться так:</p>
+<p>нам нужно 10 programmers
+по средней зарплате</p>
+<p>Она всё ещё следовала своей старой философии:</p>
+<p>лучше
+очень мало людей</p>
+<p>НО</p>
+<p>каждый
+абсурдно сильный</p>
+<p>То есть масштабирование первой id происходило не столько количеством, сколько плотностью таланта.</p>
+<p>И это отлично соответствовало Carmack</p>
+<p>Carmackу не нужен был человек, которому можно сказать:</p>
+<p>реализуй эту функцию
+по моей спецификации</p>
+<p>Для этого он и сам часто быстрее написал бы код.</p>
+<p>Ценность Abrash:</p>
+<p>он способен сказать:</p>
+<p>«а почему мы вообще
+решаем проблему
+ИМЕННО ТАК?»</p>
+<p>То есть второй инженер увеличивает не только throughput.</p>
+<p>Он увеличивает пространство идей.</p>
+<p>И именно поэтому hire настолько важен.</p>
+<p>Abrash ещё и был первым человеком, который мог публично документировать bleeding-edge id почти в реальном времени</p>
+<p>Это отдельная культурная вещь.</p>
+<p>Abrash продолжал писать о Quake technology для Dr. Dobb's Journal ещё до релиза игры.</p>
+<p>Он подробно объяснял:</p>
+<p>BSP;</p>
+<p>visibility;</p>
+<p>hidden-surface removal;</p>
+<p>lighting;</p>
+<p>surface caching;</p>
+<p>renderer architecture.</p>
+<p>И id это разрешала.
+GitHub
++1</p>
+<p>То есть компания буквально делает:</p>
+<p>мы строим
+один из самых передовых
+3D engines мира</p>
+<p>↓</p>
+<p>наш инженер
+публично рассказывает,
+как он работает</p>
+<p>↓</p>
+<p>ДО ТОГО,
+как technology
+успела устареть</p>
+<p>Это абсолютно соответствует open-knowledge философии Carmack.</p>
+<p>Но Abrash делает её намного системнее.</p>
+<p>В некотором смысле Abrash становится переводчиком Carmack</p>
+<p>Carmack:</p>
+<p>придумал
+сложную architecture</p>
+<p>Abrash способен:</p>
+<p>понять её</p>
+<p>↓</p>
+<p>разобрать</p>
+<p>↓</p>
+<p>объяснить,
+какие альтернативы
+были рассмотрены</p>
+<p>↓</p>
+<p>показать,
+почему конкретное решение
+быстрее</p>
+<p>Это важно не только для внешней аудитории.</p>
+<p>Наличие человека, способного формализовать чужую интуицию, полезно и самой engineering team.</p>
+<p>Carmack мог двигаться чрезвычайно быстро и выбрасывать идеи столь же быстро.</p>
+<p>Abrash оставляет интеллектуальный след этого процесса.</p>
+<p>И их характеры инженерно отлично дополнялись</p>
+<p>Очень грубо:</p>
+<p>CARMACK</p>
+<p>архитектурная агрессия</p>
+<p>«может, вообще
+надо решить проблему иначе?»
+ABRASH</p>
+<p>аналитическая глубина</p>
+<p>«хорошо,
+давайте разберём,
+почему этот вариант
+быстрее или медленнее»</p>
+<p>Carmack любит:</p>
+<p>перепридумать</p>
+<p>Abrash:</p>
+<p>докопаться до железа
+и измерить</p>
+<p>Конечно, оба умели и то и другое.</p>
+<p>Но сочетание особенно хорошо работает на Quake, где одновременно требовались:</p>
+<p>новая architecture</p>
+<p>и:</p>
+<p>бесчеловечная optimization
+этой architecture
+И результаты были видны буквально в performance</p>
+<p>Quake был совершенно ненормальной задачей для тогдашних PC.</p>
+<p>Полностью polygonal 3D.</p>
+<p>Perspective-correct textures.</p>
+<p>Lightmaps.</p>
+<p>Polygonal enemies.</p>
+<p>Networking.</p>
+<p>И всё это должно:</p>
+<p>не просто работать</p>
+<p>а</p>
+<p>ощущаться как
+ID SOFTWARE GAME</p>
+<p>То есть быстро.</p>
+<p>В собственном source release Carmack спустя годы отдельно предупреждал: отключение x86 assembly paths почти вдвое замедляет software renderer.
+GitHub</p>
+<p>Это отличный материальный след того, насколько серьёзно команда относилась к low-level optimization.</p>
+<p>Quake не мог позволить себе модель:</p>
+<p>ну 12 FPS
+тоже технически realtime</p>
+<p>У id технология считалась законченной только тогда, когда она могла стать action game.</p>
+<p>И здесь впервые становится видно, что будущая id уже не сможет вернуться к «Carmack написал engine один»</p>
+<p>Quake слишком сильно поднял планку.</p>
+<p>После него engine уже включает:</p>
+<p>graphics</p>
+<p>networking</p>
+<p>tools</p>
+<p>scripting</p>
+<p>platforms</p>
+<p>hardware acceleration</p>
+<p>software rendering</p>
+<p>asset pipelines</p>
+<p>И рынок теперь ожидает следующую id technology именно такого масштаба.</p>
+<p>То есть успешный Quake делает невозможным возврат:</p>
+<p>один Carmack</p>
+<p>сидит полгода</p>
+<p>↓</p>
+<p>готов следующий engine</p>
+<p>Не потому, что Carmack стал хуже.</p>
+<p>А потому что само определение игрового движка стало шире.</p>
+<p>И это важнейший организационный переход всей id</p>
+<p>Посмотрим на эволюцию.</p>
+<p>Keen
+TECH TEAM</p>
+<p>John Carmack</p>
+<p>Romero пишет production tools, но breakthrough engine практически один Carmack.</p>
+<p>Wolfenstein
+CORE TECH</p>
+<p>John Carmack</p>
+<p>плюс programmers вокруг продукта.</p>
+<p>Doom
+CORE ENGINE</p>
+<p>John Carmack</p>
+<p>+</p>
+<p>Romero / Taylor
+gameplay / tools / integration
+Quake
+ENGINE TECHNOLOGY</p>
+<p>John Carmack
+Michael Abrash
+John Cash</p>
+<p>+</p>
+<p>другие programmers
+вокруг product/platform work</p>
+<p>Это уже другая организация.</p>
+<p>И Quake впервые показывает, что engineering itself может иметь departments внутри себя</p>
+<p>Раньше:</p>
+<p>PROGRAMMERS</p>
+<p>была практически достаточная категория.</p>
+<p>Теперь:</p>
+<p>GRAPHICS / RENDERING</p>
+<p>NETWORKING</p>
+<p>GAME LOGIC</p>
+<p>TOOLS</p>
+<p>PLATFORM</p>
+<p>начинают становиться отдельными engineering disciplines.</p>
+<p>Это и есть момент, когда id переходит от:</p>
+<p>несколько программистов,
+которые делают игру</p>
+<p>к:</p>
+<p>компания,
+у которой существует
+ENGINEERING ORGANIZATION</p>
+<p>Пусть пока крошечная.</p>
+<p>Самое интересное — это происходит одновременно с крахом старой production-культуры</p>
+<p>В прошлом пункте мы видели:</p>
+<p>GAME PRODUCTION
+Quake
+=
+хаос</p>
+<p>Но параллельно:</p>
+<p>ENGINEERING
+Quake
+=
+становится
+более профессионально
+специализированным</p>
+<p>Получается парадокс:</p>
+<p>id
+организационно ломается
+как game-development team</p>
+<p>ПОКА</p>
+<p>становится значительно зрелее
+как engine-development team</p>
+<p>Именно поэтому после Quake компания будет всё сильнее восприниматься как:</p>
+<p>TECHNOLOGY-DRIVEN COMPANY</p>
+<p>Это не возникает магически после ухода Romero.</p>
+<p>Фундамент уже закладывается здесь.</p>
+<p>Abrash ещё и показывает Carmack ценность работы с равным специалистом</p>
+<p>До этого сила Carmack частично строилась вокруг:</p>
+<p>я могу
+разобраться сам</p>
+<p>Quake добавляет:</p>
+<p>но если рядом
+есть другой выдающийся инженер</p>
+<p>↓</p>
+<p>можно одновременно
+идти глубже
+И
+шире</p>
+<p>Это очень важный урок для дальнейшей id.</p>
+<p>Engine team не уменьшает значение Carmack.</p>
+<p>Наоборот:</p>
+<p>она позволяет использовать Carmack именно там, где его уникальность даёт максимальную отдачу — в архитектуре и следующем сложном решении, а не в доводке каждой отдельной routine.</p>
+<p>И при этом Abrash в id пробыл недолго</p>
+<p>После выхода Quake он ушёл обратно в Microsoft.</p>
+<p>Его период в id — в основном:</p>
+<p>1995
+↓
+Quake development
+↓
+1996
+Quake ships
+↓
+Abrash leaves</p>
+<p>Википедия</p>
+<p>То есть он не становится постоянной фигурой компании уровня Kevin Cloud.</p>
+<p>Но его значение непропорционально короткому tenure.</p>
+<p>Потому что именно на Quake впервые закрепляется мысль:</p>
+<p>technology id
+слишком сложна,
+чтобы быть
+биографией одного программиста
+И John Cash делает этот вывод необратимым</p>
+<p>Если Abrash можно ещё представить как:</p>
+<p>Carmack
++
+один великий graphics peer</p>
+<p>то Cash уже показывает структуру:</p>
+<p>у нас существует
+отдельная область</p>
+<p>NETWORKING</p>
+<p>↓</p>
+<p>ей нужен
+отдельный expert</p>
+<p>Wired в 1996 году прямо выделяла Cash как specialist, нанятого специально для сетевой стороны Quake.
+WIRED</p>
+<p>Получается:</p>
+<p>не:</p>
+<p>Carmack
+делает всё</p>
+<p>и Abrash помогает</p>
+<p>а:</p>
+<p><strong>ENGINE</strong></p>
+<p>композиция
+нескольких
+высокоспециализированных систем</p>
+<p>↓</p>
+<p>каждая может иметь
+своего владельца</p>
+<p>Вот это уже настоящий engine team.</p>
+<p>И в этом смысле Quake завершает одну из главных эпох Кармака</p>
+<p>Не в том смысле, что он перестаёт быть главным техническим человеком.</p>
+<p>Он останется им ещё много лет.</p>
+<p>Заканчивается другое:</p>
+<p><strong>«новый engine id»</strong></p>
+<p>«новый engine,
+который Carmack
+практически лично написал»</p>
+<p>После Quake правильнее всё сильнее говорить:</p>
+<p>Carmack-led engine team</p>
+<p>Это тонкая, но фундаментальная разница.</p>
+<p>Если собрать переход буквально
+ранняя id</p>
+<p>CARMACK
+↓
+engine architecture
+↓
+engine implementation
+↓
+optimization
+↓
+следующая game technology</p>
+<p>Работает, пока:</p>
+<p>engine относительно компактный
++
+platform targets ограничены
++
+networking вторичен
++
+graphics problem
+ещё помещается
+в одну голову</p>
+<p>↓</p>
+<p>QUAKE</p>
+<p>true 3D
++
+сложная visibility
++
+polygon models
++
+lighting
++
+software rasterizer
++
+network-first architecture
++
+scripting
++
+несколько platforms</p>
+<p>↓</p>
+<p>объём технической задачи
+становится слишком большим
+для старой модели</p>
+<p>↓</p>
+<p>март 1995</p>
+<p>MICHAEL ABRASH</p>
+<p>↓</p>
+<p>Carmack
+получает technical peer</p>
+<p>architecture
+↕
+algorithms
+↕
+optimization</p>
+<p>↓</p>
+<p>лето 1995</p>
+<p>JOHN CASH</p>
+<p>↓</p>
+<p>отдельная
+network specialization</p>
+<p>↓</p>
+<p>QUAKE ENGINE</p>
+<p>John Carmack
++
+Michael Abrash
++
+John Cash
++
+product programmers</p>
+<p>↓</p>
+<p>не один programming genius</p>
+<p>а</p>
+<p>ENGINE TEAM</p>
+<p>И это один из самых важных переходов во всей истории id Software.</p>
+<p>Компания по-прежнему строится вокруг исключительных отдельных людей.</p>
+<p>Но Quake впервые доказывает:</p>
+<p>даже John Carmack уже не может быть всей технологической организацией id Software одновременно.</p>
+<p>Масштаб задач, который породили его собственные предыдущие успехи, стал настолько большим, что вокруг него пришлось строить отдельную инженерную систему.</p>
+<p>И именно с этого момента technology-driven id означает уже не просто:</p>
+<p>«у нас есть Carmack»</p>
+<p>а:</p>
+<p>«у нас есть команда,
+способная превращать
+идеи Carmack
+в полноценное следующее поколение
+игровой технологии».</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p028">28. Original Quake vs финальный Quake<a class="headerlink" href="#p028" title="Permanent link">¶</a></h2>
+<p>Quake, который id собиралась делать, и Quake, который вышел 22 июня 1996 года, — это практически две разные игры на одном технологическом фундаменте.</p>
+<p>И здесь важно не пересказывать историю как:</p>
+<p>сначала хотели fantasy
+↓
+потом передумали
+↓
+сделали shooter</p>
+<p>Масштаб конфликта был намного больше.</p>
+<p>В первоначальном замысле Quake должен был стать тем проектом, который впервые после Wolfenstein/Doom радикально двинет вперёд не только технологию, но и сам game design id.</p>
+<p>Финальный Quake стал противоположным компромиссом:</p>
+<p>технологическую революцию мы уже совершили; сейчас хватит экспериментов — используем знакомую Doom-подобную структуру и наконец выпустим игру.</p>
+<p>И решение в ноябре 1995 года стало одной из главных развилок всей истории компании.
+Shacknews
++1</p>
+<p>Сам Quake существовал ещё до Wolfenstein</p>
+<p>Имя возникло из Dungeons &amp; Dragons-кампаний John Carmack.</p>
+<p>В настольной игре Quake был сверхмощным персонажем из группы Silver Shadow Band. Одним из его ключевых предметов был Hammer of Thunderbolts — практически фэнтезийное супероружие.</p>
+<p>В январе 1991 года совсем молодая id даже попыталась сделать игру по этому персонажу — The Fight for Justice.</p>
+<p>Концепция была слишком амбициозной для доступной технологии, поэтому её практически мгновенно похоронили и вернулись к более реалистичным проектам. Для ранней id это был обычный bit flip:</p>
+<p>охуенная идея
+↓
+технология не тянет
+↓
+ладно
+↓
+следующая игра</p>
+<p>Но сам Quake остался в коллективной мифологии компании как:</p>
+<p>игра, которую мы когда-нибудь сделаем, когда компьютеры наконец позволят.</p>
+<p>После Doom II Carmack решил, что время пришло. Его новый engine должен был дать настоящее трёхмерное пространство с полноценной осью Z и гораздо большей свободой движения — именно тот технологический скачок, которого старому проекту Quake не хватало.
+Shacknews
++1</p>
+<p>Original Quake не был просто Doom с мечом</p>
+<p>Вот здесь особенно важно.</p>
+<p>Да, камера — first person.</p>
+<p>Да, action присутствует.</p>
+<p>Но первоначальная концепция не строилась прежде всего вокруг:</p>
+<p>shotgun
++
+rocket launcher
++
+беги по levels
++
+убивай monsters</p>
+<p>Romero хотел гораздо более странную fantasy/action-RPG-ish игру, основанную на возможностях настоящего 3D. Позже он прямо говорил, что ранний Quake вообще не задумывался прежде всего как shooter.
+Shacknews</p>
+<p>Центральным героем был сам:</p>
+<p>QUAKE</p>
+<p>Не безымянный Ranger.</p>
+<p>И его главным оружием должен был быть:</p>
+<p>HAMMER OF THUNDERBOLTS</p>
+<p>То есть не:</p>
+<p>пушка
+↓
+hitscan/projectile</p>
+<p>а тяжёлое физическое melee-оружие.</p>
+<p>Romero хотел, чтобы молот буквально использовал возможности нового 3D</p>
+<p>Именно здесь была логика дизайна.</p>
+<p>Если новый engine действительно умеет полноценное трёхмерное пространство, зачем делать на нём:</p>
+<p>DOOM
+но polygonal?</p>
+<p>Почему не построить механику, которая раньше была невозможна?</p>
+<p>Представлялись вещи вроде:</p>
+<p>подошёл к enemy
+↓
+ударил молотом
+↓
+враг физически отлетел
+↓
+упал со скалы</p>
+<p>То есть геометрия и физическое расположение должны были быть частью combat, а не только красивым окружением. Romero описывал первоначальную fantasy-концепцию именно как попытку построить другой тип action вокруг новой пространственной свободы.
+Outcast
++1</p>
+<p>А ещё был Hellgate Cube</p>
+<p>У Quake должен был быть летающий спутник:</p>
+<p>HELLGATE CUBE</p>
+<p>Не просто power-up.</p>
+<p>Фактически отдельный companion со своим поведением и характером.</p>
+<p>По замыслу Romero, Cube вращался вокруг героя и помогал в бою, например вытягивая души из убитых противников.</p>
+<p>Причём у него должна была существовать собственная «воля»:</p>
+<p>игрок нормально убивает enemies
+↓
+Cube помогает</p>
+<p>игрок недостаточно эффективен
+↓
+Cube раздражается</p>
+<p>↓
+может улететь</p>
+<p>↓
+потом его надо искать</p>
+<p>То есть id рассматривала механику, которая была бы почти невозможна в предыдущих её играх:</p>
+<p>не weapon</p>
+<p>не key</p>
+<p>не inventory item</p>
+<p>а</p>
+<p>полуавтономный игровой агент,
+связанный с игроком</p>
+<p>Это довольно хорошо показывает, насколько далеко Romero хотел уйти от Doom.
+Shacknews</p>
+<p>Планировались и совершенно другие способы взаимодействия с миром</p>
+<p>Например, Romero придумал view triggers.</p>
+<p>Обычный trigger:</p>
+<p>игрок наступил сюда
+↓
+произошло событие</p>
+<p>View trigger:</p>
+<p>игрок ПОСМОТРЕЛ сюда
+↓
+произошло событие</p>
+<p>Пример Romero:</p>
+<p>идёшь по лесу</p>
+<p>↓</p>
+<p>справа пещера</p>
+<p>↓</p>
+<p>можешь вообще
+не посмотреть туда</p>
+<p>↓</p>
+<p>НО</p>
+<p>если посмотрел</p>
+<p>↓</p>
+<p>видишь красные глаза</p>
+<p>↓</p>
+<p>слышишь growl</p>
+<p>↓</p>
+<p>существо выходит
+из пещеры</p>
+<p>То есть игра должна была реагировать не только на:</p>
+<p>ГДЕ находится игрок</p>
+<p>но и:</p>
+<p>КУДА он смотрит</p>
+<p>Для 1995 года это весьма амбициозная режиссёрская идея.
+Shacknews
++1</p>
+<p>Romero хотел и гораздо более связный мир</p>
+<p>Ещё со времён Doom существовала мечта сделать не просто:</p>
+<p>MAP01
+↓
+MAP02
+↓
+MAP03</p>
+<p>а:</p>
+<p>большой мир</p>
+<p>↓</p>
+<p>connected zones</p>
+<p>↓</p>
+<p>перемещение между областями</p>
+<p>↓</p>
+<p>возвращение назад</p>
+<p>↓</p>
+<p>состояние мира сохраняется</p>
+<p>То есть нечто, гораздо более близкое по духу к тому, что Raven параллельно исследовала в Hexen.</p>
+<p>Romero хотел использовать Quake для нового захода на эту идею:</p>
+<p>dark fantasy world</p>
+<p>+</p>
+<p>interconnected areas</p>
+<p>+</p>
+<p>настоящее 3D</p>
+<p>+</p>
+<p>системное взаимодействие</p>
+<p>Это опять очень далеко от финальной структуры:</p>
+<p>start level
+↓
+найди exit
+↓
+следующий level</p>
+<p>Shacknews</p>
+<p>Причём даже outdoors были частью мечты</p>
+<p>Настоящее 3D логично провоцировало идею:</p>
+<p>почему мы опять
+должны сидеть
+в коридорах?</p>
+<p>Romero хотел:</p>
+<p>горы;</p>
+<p>леса;</p>
+<p>пещеры;</p>
+<p>открытые пространства;</p>
+<p>переходы между разными областями.</p>
+<p>Но тут очень быстро выяснилось:</p>
+<p>Quake technology революционна, но не волшебна.</p>
+<p>Большие outdoor vistas сильно увеличивали сложность rendering/visibility и плохо совпадали с производительностью engine.</p>
+<p>И эта часть original Quake постепенно ушла одной из первых.</p>
+<p>То есть даже до большого design reset игра уже начала терять элементы исходного vision из-за реальных технических ограничений.
+Shacknews</p>
+<p>А художники тем временем реально производили материал под эту игру</p>
+<p>Это была не концепция, существовавшая только в голове Romero.</p>
+<p>Adrian Carmack и Kevin Cloud делали:</p>
+<p>fantasy textures</p>
+<p>medieval materials</p>
+<p>Aztec-like motifs</p>
+<p>stone</p>
+<p>wood</p>
+<p>metal</p>
+<p>organic surfaces</p>
+<p>Часть направлений существовала месяцами.</p>
+<p>Сначала команда исследовала quasi-Aztec эстетику.</p>
+<p>Потом сильнее ушла в medieval European castles.</p>
+<p>Nine Inch Nails записывали для игры звуки:</p>
+<p>цепей
+мечей
+металла
+наковален</p>
+<p>То есть production всерьёз двигался к мрачному fantasy/action миру. Когда направление снова поменялось, часть этих месяцев работы пришлось списать.
+WIRED</p>
+<p>Но всё это время существовала фундаментальная проблема</p>
+<p>Никто не мог толком ответить:</p>
+<p>как все эти идеи складываются в работающую игру?</p>
+<p>Потому что engine всё ещё менялся.</p>
+<p>Romero объяснял собственную позицию примерно так:</p>
+<p>у меня есть идеи,
+которые НЕ являются
+обычными FPS ideas</p>
+<p>НО</p>
+<p>мы не можем
+нормально проверять их,
+пока engine
+не умеет нужные вещи</p>
+<p>То есть он сознательно не хотел слишком рано фиксировать дизайн.</p>
+<p>Логика:</p>
+<p>сначала узнать,
+что реально возможно</p>
+<p>↓</p>
+<p>потом построить
+новую форму игры</p>
+<p>Это тот же метод, которым id раньше нашла Wolfenstein и Doom.</p>
+<p>Только в этот раз engine создавался настолько долго, что «потом» всё не наступало.
+Shacknews</p>
+<p>Поэтому команда постепенно начала делать то, что уже умела</p>
+<p>Designers не могут год сидеть и ждать.</p>
+<p>American McGee описывал production так:</p>
+<p>Carmack:
+теперь работают doors</p>
+<p>↓</p>
+<p>designer:
+о,
+теперь можем делать
+что-то с doors</p>
+<p>↓</p>
+<p>Carmack:
+теперь работает collision</p>
+<p>↓</p>
+<p>designer:
+о,
+можем делать guns</p>
+<p>↓</p>
+<p>Carmack:
+теперь platforms</p>
+<p>↓</p>
+<p>designer:
+делаем levels
+с platforms</p>
+<p>Фактически engine выдавал им по одной новой игрушке.</p>
+<p>А единственная готовая школа дизайна, которую вся команда уже отлично знала, была:</p>
+<p>DOOM</p>
+<p>Поэтому даже без формального решения Quake сам начинал дрейфовать к shooter.
+Shacknews</p>
+<p>У команды уже был готовый язык shooter</p>
+<p>Это очень важно.</p>
+<p>Если им говорят:</p>
+<p>сделайте новую RPG/action system</p>
+<p>нужно:</p>
+<p>придумать
+↓
+прототипировать
+↓
+выяснить, весело ли
+↓
+переработать</p>
+<p>Если им говорят:</p>
+<p>сделайте FPS</p>
+<p>у id уже есть:</p>
+<p>movement
+weapon progression
+monster placement
+ammo economy
+keys
+doors
+switches
+secrets
+deathmatch
+map flow</p>
+<p>То есть это не просто:</p>
+<p>команда была ленивой.</p>
+<p>Это:</p>
+<p>у неё уже существовала зрелая производственная грамматика одного типа игры и совершенно незрелая грамматика другого.</p>
+<p>И American McGee случайно показал Carmack самый безопасный выход</p>
+<p>Вот буквально turning point.</p>
+<p>American McGee взял Doom textures, перенёс их в Quake engine и сделал небольшой тестовый фрагмент level.</p>
+<p>Carmack посмотрел на:</p>
+<p>знакомый Doom-like visual language</p>
+<p>НО</p>
+<p>в настоящем 3D
++
+с новым lighting
++
+с новой geometry</p>
+<p>и подумал:</p>
+<p>это выглядит охуенно.</p>
+<p>Позднее он называл именно этот эксперимент моментом, когда идея «просто сделать shooter» перестала казаться ему разочарованием.
+Shacknews
++1</p>
+<p>Это очень важный психологический сдвиг.</p>
+<p>До:</p>
+<p>новый engine
+должен означать
+новый genre/design</p>
+<p>После:</p>
+<p>новый engine
++
+проверенный FPS design</p>
+<p>может быть
+достаточно большой революцией
+сам по себе
+Ноябрь 1995: большая встреча</p>
+<p>И вот здесь наконец происходит развязка.</p>
+<p>Engine пережил примерно:</p>
+<p>8 крупных revisions</p>
+<p>и стал более-менее пригодным для финального production.</p>
+<p>За спиной:</p>
+<p>почти год экспериментов
++
+куча выброшенных levels
++
+куча выброшенного art
++
+команда заебана
++
+игры всё ещё толком нет</p>
+<p>John Carmack собирает основных разработчиков:</p>
+<p>Romero;</p>
+<p>Petersen;</p>
+<p>McGee;</p>
+<p>Dave Taylor;</p>
+<p>Kevin Cloud;</p>
+<p>Adrian Carmack.</p>
+<p>И говорит, по существу:</p>
+<p>technology
+наконец есть</p>
+<p>↓</p>
+<p>теперь надо
+зафиксировать game design</p>
+<p>Shacknews
++1</p>
+<p>Для Romero вопрос звучал почти философски</p>
+<p>Он сформулировал его так:</p>
+<p>мы уже совершили огромную инновацию в технологии — собираемся ли мы теперь настолько же сильно двинуть game design?</p>
+<p>То есть:</p>
+<p>ВАРИАНТ A</p>
+<p>технологическая революция
++
+дизайнерская революция</p>
+<p>против:</p>
+<p>ВАРИАНТ B</p>
+<p>технологическая революция
++
+проверенный Doom-style game design</p>
+<p>Romero хотел A.
+Shacknews</p>
+<p>Его аргумент был вполне разумным</p>
+<p>Компания потратила столько времени именно потому, что хотела сделать нечто невозможное раньше.</p>
+<p>Теперь, когда engine наконец позволяет:</p>
+<p>настоящее 3D</p>
+<p>vertical combat</p>
+<p>полигональных monsters</p>
+<p>новые типы пространства</p>
+<p>новую physics freedom</p>
+<p>сделать на нём:</p>
+<p>shotgun
+rocket launcher
+exit switch</p>
+<p>означает, с его точки зрения:</p>
+<p>протащить Doom gameplay в новый renderer и упустить половину смысла всего проекта.</p>
+<p>Он хотел дать original Quake ещё время.</p>
+<p>Доделать:</p>
+<p>молот;</p>
+<p>другие способы боя;</p>
+<p>новую структуру progression;</p>
+<p>более системные взаимодействия;</p>
+<p>fantasy-world mechanics.</p>
+<p>То есть реально попробовать выяснить:</p>
+<p>какую новую игру рождает true 3D?</p>
+<p>Но остальные смотрели на ситуацию уже совсем иначе</p>
+<p>Для них за этой формулировкой стояло:</p>
+<p>ЕЩЁ
+неизвестно сколько месяцев
+экспериментов</p>
+<p>Они уже почти год:</p>
+<p>строили
+↓
+выбрасывали
+↓
+строили
+↓
+выбрасывали</p>
+<p>McGee вспоминал, что уровни, которые существовали к моменту встречи, уже гораздо лучше подходили именно shooter structure, а не концепции с hammer.</p>
+<p>Petersen вообще воспринимал решение менее драматично, чем Romero: с его точки зрения команда фактически весь год делала action-heavy FPS-контент, поэтому встреча только формально закрепила то, чем Quake уже стала на практике.
+Shacknews</p>
+<p>Вот две совершенно разные картины одного проекта:</p>
+<p>Romero
+мы ещё
+НЕ НАЧАЛИ
+настоящий design experiment
+Остальная часть команды
+мы УЖЕ ГОД
+находимся
+в design experiment
+и заебались</p>
+<p>Обе позиции можно понять.</p>
+<p>Carmack в итоге продавил решение</p>
+<p>Вот здесь лидерство уже совершенно не похоже на id 1991-го.</p>
+<p>Carmack не просто:</p>
+<p>предложил идею</p>
+<p>Он фактически сказал:</p>
+<p>Quake будет first-person shooter в духе Doom.</p>
+<p>Имеющиеся:</p>
+<p>monsters;</p>
+<p>weapons;</p>
+<p>maps;</p>
+<p>textures;</p>
+<p>fragments of systems</p>
+<p>нужно собрать вокруг этого решения. Shacknews формулирует исход встречи довольно однозначно: Carmack put his foot down, а остальные в основном поддержали безопасное направление.
+Shacknews
++1</p>
+<p>То есть decision structure:</p>
+<p>Romero:
+продолжать искать
+новый game design</p>
+<p>VS</p>
+<p>Carmack:
+фиксируем shooter
+и заканчиваем</p>
+<p>↓</p>
+<p>большинство команды
+ближе к Carmack</p>
+<p>↓</p>
+<p>SHOOTER</p>
+<p>Это один из самых значимых моментов смены баланса власти внутри id.</p>
+<p>Потому что nominal lead designer проигрывает техническому лидеру вопрос о самом жанре игры</p>
+<p>Формально:</p>
+<p><strong>John Romero</strong></p>
+<p>lead designer</p>
+<p>Но решение:</p>
+<p>КАКУЮ ИГРУ МЫ ДЕЛАЕМ?</p>
+<p>в конечном счёте проходит не через его authority.</p>
+<p>Это практически зеркальная ситуация относительно Tom Hall.</p>
+<p>На Doom:</p>
+<p>Hall
+Creative Director</p>
+<p>НО</p>
+<p>Carmack + Romero + остальные
+не принимают его vision</p>
+<p>На Quake:</p>
+<p>Romero
+Lead Designer</p>
+<p>НО</p>
+<p>Carmack + большая часть команды
+не принимают его vision</p>
+<p>И именно после ноябрьской встречи Romero, по собственным воспоминаниям, решил, что уйдёт из id после завершения Quake.
+GamesBeat
++1</p>
+<p>Но сам уход — уже отдельный пункт 30.</p>
+<p>Почему команда выбрала shooter на самом деле</p>
+<p>Не потому что у них внезапно закончились идеи.</p>
+<p>Причин несколько.</p>
+<ol>
+<li>Команда была выжжена</li>
+</ol>
+<p>Romero позднее сформулировал это особенно прямо:</p>
+<p>engine занял настолько много времени, что у компании уже не осталось stamina ещё и на полноценную дизайнерскую революцию.</p>
+<p>В итоге Doom-style shooter удалось закончить примерно за следующие семь месяцев.
+Shacknews
++1</p>
+<ol>
+<li>Engine уже сам был революцией огромного масштаба</li>
+</ol>
+<p>Компания получила:</p>
+<p>full polygonal world
++
+polygonal monsters
++
+true verticality
++
+mouselook
++
+dynamic-ish lighting / lightmaps
++
+network architecture
++
+QuakeC</p>
+<p>То есть даже с знакомым game loop результат всё равно выглядел совершенно новым.</p>
+<p>Carmack больше не считал, что Quake обязана одновременно изобретать и новый жанр.</p>
+<ol>
+<li>Shooter был production-safe</li>
+</ol>
+<p>id уже знала:</p>
+<p>как балансировать guns</p>
+<p>как делать enemies</p>
+<p>как строить FPS maps</p>
+<p>как расставлять ammo</p>
+<p>как делать deathmatch</p>
+<p>как создавать secrets</p>
+<p>То есть после года неопределённости появляется задача с понятным путём к DONE.</p>
+<ol>
+<li>Значительная часть уже существующего контента подходила shooter</li>
+</ol>
+<p>Уровни McGee и других designers уже были action-oriented.</p>
+<p>Современное оружие уже обсуждалось.</p>
+<p>Даже fantasy monsters прекрасно работали как:</p>
+<p>targets for guns</p>
+<p>Не нужно выбрасывать вообще всё.</p>
+<ol>
+<li>Ещё один год экспериментов мог снова ничего не дать</li>
+</ol>
+<p>Это, пожалуй, главное.</p>
+<p>Original Quake существовал как:</p>
+<p>набор очень интересных идей</p>
+<p>но не как:</p>
+<p>проверенный,
+удовольственный
+core loop</p>
+<p>Чтобы понять, работает ли:</p>
+<p>hammer combat;</p>
+<p>Hellgate Cube;</p>
+<p>RPG-ish progression;</p>
+<p>connected world;</p>
+<p>новые systemic mechanics,</p>
+<p>нужно было ещё всё это построить.</p>
+<p>А потом вполне могло выясниться:</p>
+<p>НЕ ВЕСЕЛО</p>
+<p>И тогда id потеряла бы ещё год.</p>
+<p>Поэтому решение было не «Doom лучше RPG»</p>
+<p>Решение:</p>
+<p>RISK</p>
+<p>против:</p>
+<p>SHIP</p>
+<p>Это намного точнее.</p>
+<p>Romero хотел сказать:</p>
+<p>мы уже рисковали технологически — давайте доведём риск до конца и сделаем новый вид игры.</p>
+<p>Carmack и большинство команды:</p>
+<p>мы уже рисковали технологически достаточно — теперь нужна игра, которую мы знаем, как закончить.</p>
+<p>И в ноябре 1995 победила вторая логика.</p>
+<p>А вот дальше случилось самое интересное: старый Quake не исчез полностью</p>
+<p>Можно было после встречи удалить всё fantasy и сделать:</p>
+<p>DOOM 3D</p>
+<p>Но это означало бы ещё раз выбросить огромный объём production.</p>
+<p>Поэтому id делает очень прагматичную вещь:</p>
+<p>НЕ ПЕРЕДЕЛЫВАТЬ
+ВСЁ С НУЛЯ</p>
+<p>↓</p>
+<p>сохранить то,
+что можно встроить
+в shooter</p>
+<p>Именно поэтому финальный Quake выглядит как великолепный культурный Франкенштейн.</p>
+<p>От original Quake остаётся fantasy</p>
+<p>Например:</p>
+<p>ogres
+knights / death knights
+dark castles
+eldritch creatures
+medieval stone architecture
+Lovecraftian gods</p>
+<p>Но игрок получает:</p>
+<p>shotgun
+double-barrel shotgun
+nailgun
+super nailgun
+grenade launcher
+rocket launcher
+lightning gun</p>
+<p>Получается:</p>
+<p>MEDIEVAL CASTLE</p>
+<p>+</p>
+<p>OGRE</p>
+<p>+</p>
+<p>CHAINSAW-LIKE GRENADE MACHINE</p>
+<p>+</p>
+<p>SHOTGUN</p>
+<p>+</p>
+<p>NAILGUN</p>
+<p>И каким-то образом это становится не багом идентичности, а самой идентичностью Quake.</p>
+<p>Даже Ogre прекрасно показывает производственный компромисс</p>
+<p>Если игра была бы чистым fantasy:</p>
+<p>ogre
+↓
+топор / medieval weapon</p>
+<p>Но теперь это shooter.</p>
+<p>Поэтому:</p>
+<p>OGRE
++
+CHAINSAW
++
+GRENADE LAUNCHER</p>
+<p>Petersen вспоминал это именно как попытку сохранить fantasy creatures и одновременно встроить их в более современную Doom-like combat structure.
+Shacknews</p>
+<p>В нормальном design bible подобное сочетание могло бы не пережить первую встречу.</p>
+<p>В Quake:</p>
+<p>у нас уже есть Ogre
++
+нам нужен ranged combat</p>
+<p>↓</p>
+<p>пусть Ogre
+кидает гранаты</p>
+<p>И это работает.</p>
+<p>Военные базы остаются рядом со средневековыми замками</p>
+<p>Отсюда же знаменитая шизофрения environments.</p>
+<p>Финальная игра начинается:</p>
+<p>military / tech base</p>
+<p>а затем бросает игрока через Slipgates в:</p>
+<p>gothic castles
+ancient dimensions
+eldritch spaces</p>
+<p>Tim Willits позднее совершенно прямо объяснял это отсутствием первоначально единого art/design direction:</p>
+<p>разные designers
+делали разные вещи</p>
+<p>↓</p>
+<p>к финалу нужно было
+понять,
+как всё это
+объединить</p>
+<p>Отсюда:</p>
+<p>Slipgates</p>
+<p>dimensions</p>
+<p>elder gods</p>
+<p>четыре episodes</p>
+<p>становятся не только lore.</p>
+<p>Это ещё и production glue, объясняющий, почему совершенно разные наборы контента могут существовать в одной игре.
+Shacknews</p>
+<p>То есть сюжет Quake частично существует для оправдания production history</p>
+<p>Это очень id.</p>
+<p>Не:</p>
+<p>сначала lore</p>
+<p>↓</p>
+<p>потом levels</p>
+<p>А:</p>
+<p>у нас есть:</p>
+<p>military levels
+medieval levels
+weird dimensions
+разные monsters</p>
+<p>↓</p>
+<p>как это объяснить?</p>
+<p>↓</p>
+<p>SLIPGATES</p>
+<p>other dimensions</p>
+<p>elder gods</p>
+<p>Willits прямо вспоминал финальную структуру четырёх episodes как попытку сделать уже накопившуюся «кучу всего» более-менее цельной, а не как реализацию заранее разработанного master plan.
+Shacknews</p>
+<p>И главный герой Quake вообще исчезает из Quake</p>
+<p>Это, пожалуй, самый красивый символ transformation.</p>
+<p>В 1991:</p>
+<p><strong>QUAKE</strong></p>
+<p>ИМЯ ГЕРОЯ</p>
+<p>В первоначальном проекте:</p>
+<p>ты играешь Quake</p>
+<p>В финальной игре:</p>
+<p><strong>главный герой</strong></p>
+<p>Ranger</p>
+<p>А слово:</p>
+<p>QUAKE</p>
+<p>остаётся названием продукта.</p>
+<p>Сам персонаж, ради которого проект вообще получил имя, в игру не попадает.</p>
+<p>Hammer of Thunderbolts тоже исчезает.</p>
+<p>Hellgate Cube исчезает.</p>
+<p>Большая часть изначальной RPG/action-концепции исчезает.</p>
+<p>Остаётся бренд:</p>
+<p>QUAKE</p>
+<p>и некоторые генетические следы старой fantasy-идеи.</p>
+<p>Romero, публикуя в 2016 году архивный QUAKETALK 95, специально подчёркивал: документ показывает оригинальные планы всего за месяц до судьбоносной встречи, и они мало похожи на финальную игру.
+Rome.ro
++1</p>
+<p>Поэтому финальный Quake нельзя назвать просто «Doom в 3D»</p>
+<p>Это одновременно справедливо и несправедливо.</p>
+<p>На уровне core loop:</p>
+<p>move
++
+shoot
++
+collect weapons/ammo
++
+keys/switches
++
+exit</p>
+<p>Да:</p>
+<p>DOOM DNA</p>
+<p>очень очевидна.</p>
+<p>Но новый engine настолько сильно меняет саму физику пространства, что тот же design grammar начинает играть иначе:</p>
+<p>настоящая вертикальность</p>
+<p>полигональные enemies</p>
+<p>3D projectile interactions</p>
+<p>mouselook</p>
+<p>сложная geometry</p>
+<p>platforming</p>
+<p>rocket jumping</p>
+<p>полноценное 3D multiplayer</p>
+<p>То есть Carmack оказался в значительной степени прав:</p>
+<p>одной технологической революции хватало, чтобы знакомый shooter снова ощущался новым.</p>
+<p>А Romero тоже оказался в некотором смысле прав</p>
+<p>Потому что финальный Quake действительно чувствуется так, будто:</p>
+<p>GAME DESIGN
+не дошёл
+так далеко,
+как TECHNOLOGY</p>
+<p>Визуально и технически:</p>
+<p>1996</p>
+<p>Структурно:</p>
+<p>DOOM lineage</p>
+<p>И сама id впоследствии не раз признавала, насколько хаотично складывалась design-часть. Carmack уже при Quake II называл первый Quake «довольно messed up с точки зрения game design», а Petersen описывал его практически как Doom 2.5, возникший потому, что команде не удалось реализовать первоначальную RPG-мечту.
+Shacknews</p>
+<p>Поэтому конфликт не разрешается простой фразой:</p>
+<p>Carmack был прав</p>
+<p>или:</p>
+<p>Romero был прав
+Carmack оказался прав в production</p>
+<p>К ноябрю 1995:</p>
+<p>команда выгорела</p>
+<p>engine наконец готов</p>
+<p>контента много</p>
+<p>дизайн не определён</p>
+<p>релиз постоянно уезжает</p>
+<p>Продолжать ещё год было реально опасно.</p>
+<p>Shooter позволил:</p>
+<p>зафиксировать scope
+↓
+перестать выбрасывать работу
+↓
+использовать существующие assets
+↓
+перейти в production
+↓
+закончить игру</p>
+<p>И после решения Quake действительно удалось довести примерно за семь месяцев чудовищного, но целенаправленного производства.
+Shacknews
++1</p>
+<p>Romero оказался прав в стратегическом вопросе</p>
+<p>Потому что вопрос:</p>
+<p>что нового может дать настоящее 3D самому game design?</p>
+<p>никуда не исчез.</p>
+<p>И очень быстро другие компании начнут отвечать:</p>
+<p>Tomb Raider
+System Shock lineage
+Half-Life
+Thief
+Deus Ex</p>
+<p>и дальше.</p>
+<p>То есть индустрия действительно будет использовать 3D не только для:</p>
+<p>более красивого Doom</p>
+<p>а для:</p>
+<p>новых типов пространства
+новой режиссуры
+новой физики
+нового narrative
+нового systemic design</p>
+<p>Просто первой id в 1995-м уже не хватило организационной энергии искать этот ответ.</p>
+<p>И в этом самая интересная трагедия Original Quake</p>
+<p>Технология наконец достигла уровня, которого команда ждала с 1991 года.</p>
+<p>1991:</p>
+<p>мы хотим сделать Quake</p>
+<p>НО</p>
+<p>компьютеры ещё не могут</p>
+<p>↓</p>
+<p>1995:</p>
+<p>компьютеры наконец могут</p>
+<p>НО</p>
+<p>КОМАНДА
+уже не может
+позволить себе ещё год
+выяснять,
+каким должен быть Quake</p>
+<p>Это практически идеальная историческая ирония.</p>
+<p>Они четыре года ждали технологию.</p>
+<p>Когда она появилась, production crisis заставил отказаться от игры, ради которой технология первоначально понадобилась.</p>
+<p>Поэтому ноябрь 1995 — не просто design pivot</p>
+<p>Это изменение самой философии id.</p>
+<p>До этого великая формула компании была:</p>
+<p>НОВАЯ TECHNOLOGY</p>
+<p>↓</p>
+<p>НАЙТИ
+НОВУЮ ИГРУ,
+КОТОРАЯ ИСПОЛЬЗУЕТ ЕЁ</p>
+<p>Quake заканчивается иначе:</p>
+<p>НОВАЯ TECHNOLOGY</p>
+<p>↓</p>
+<p>мы слишком долго
+искали новую игру</p>
+<p>↓</p>
+<p>БЕРЁМ
+УЖЕ ПРОВЕРЕННУЮ
+ИГРОВУЮ ФОРМУ</p>
+<p>Это огромный переход.</p>
+<p>И он напрямую повлияет на post-Romero id.</p>
+<p>После Quake компания станет намного осторожнее именно с game design</p>
+<p>Carmack вынес из production примерно такой урок:</p>
+<p>НЕ НУЖНО</p>
+<p>одновременно</p>
+<p>изобретать:
+новый renderer
+новую engine architecture
+новый networking
+новый scripting model
+новый genre
+новую combat system
+новую world structure</p>
+<p>Технологический риск и дизайнерский риск лучше не складывать без необходимости.</p>
+<p>Это одна из причин, почему Quake II будет проектироваться гораздо стабильнее и консервативнее.</p>
+<p>Но тогда возникает другая проблема:</p>
+<p>если id перестаёт постоянно рисковать в game design, не превращается ли она постепенно из «компании, которая изобретает новые игры» в «компанию, которая изобретает новые engines и делает на них shooters»?</p>
+<p>Вот этот переход после Quake уже станет совершенно реальным.</p>
+<p>В сухом остатке: Original Quake
+старый D&amp;D-персонаж Quake</p>
+<p>+</p>
+<p>Hammer of Thunderbolts</p>
+<p>+</p>
+<p>Hellgate Cube companion</p>
+<p>+</p>
+<p>dark fantasy world</p>
+<p>+</p>
+<p>melee / physical combat</p>
+<p>+</p>
+<p>RPG-ish ambitions</p>
+<p>+</p>
+<p>connected areas</p>
+<p>+</p>
+<p>view triggers</p>
+<p>+</p>
+<p>настоящее 3D</p>
+<p>То есть:</p>
+<p>ТЕХНОЛОГИЧЕСКАЯ
+РЕВОЛЮЦИЯ</p>
+<p>+</p>
+<p>ДИЗАЙНЕРСКАЯ
+РЕВОЛЮЦИЯ
+Production reality
+engine
+делается слишком долго</p>
+<p>↓</p>
+<p>8 major revisions</p>
+<p>↓</p>
+<p>design невозможно
+нормально прототипировать</p>
+<p>↓</p>
+<p>designers
+делают то,
+что уже умеют</p>
+<p>↓</p>
+<p>получаются
+FPS-like levels</p>
+<p>↓</p>
+<p>огромный объём
+работы выбрасывается</p>
+<p>↓</p>
+<p>команда выгорает
+Ноябрь 1995
+McGee
+переносит Doom-like textures
+в Quake engine</p>
+<p>↓</p>
+<p>Carmack:
+«а это,
+блядь,
+выглядит отлично»</p>
+<p>↓</p>
+<p>общая встреча</p>
+<p>↓</p>
+<p>Romero:</p>
+<p>technology
+мы уже двинули</p>
+<p>давайте теперь
+двинем GAME DESIGN</p>
+<p>против:</p>
+<p>Carmack + большинство:</p>
+<p>хватит экспериментов</p>
+<p>делаем shooter</p>
+<p>и ship'им</p>
+<p>↓</p>
+<p>Carmack
+фиксирует решение
+Финальный Quake
+Doom-like weapon loop</p>
+<p>+</p>
+<p>modern firearms</p>
+<p>+</p>
+<p>fantasy monsters</p>
+<p>+</p>
+<p>military bases</p>
+<p>+</p>
+<p>medieval castles</p>
+<p>+</p>
+<p>Lovecraftian dimensions</p>
+<p>+</p>
+<p>куча salvaged assets</p>
+<p>+</p>
+<p>революционный true-3D engine</p>
+<p>↓</p>
+<p>QUAKE
+1996</p>
+<p>И вот почему его знаменитая художественная шизофрения — это не просто стиль.</p>
+<p>Она является археологией разработки.</p>
+<p>Military bases — один слой.</p>
+<p>Gothic castles — другой.</p>
+<p>Ogres с гранатомётами — буквально компромисс между ними.</p>
+<p>Название Quake — останок игры, которой больше нет.</p>
+<p>А вся игра целиком — памятник моменту, когда id Software решила:</p>
+<p>мы уже совершили одну революцию. Вторую сейчас не переживём. Надо наконец выпустить игру.</p>
+<p>И это решение спасло Quake как коммерческий продукт.</p>
+<p>Но одновременно окончательно добило представление Romero о том, какой должна быть следующая id Software.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p029">29. War Room и предел гаражной культуры<a class="headerlink" href="#p029" title="Permanent link">¶</a></h2>
+<p>War Room — один из самых наглядных символов всей истории первоначальной id Software.</p>
+<p>Потому что внешне она выглядела как возвращение к истокам:</p>
+<p>1991</p>
+<p>несколько человек
+сидят в одной комнате
+↓
+быстро разговаривают
+↓
+быстро принимают решения
+↓
+быстро делают игру</p>
+<p>В январе 1996-го id попыталась буквально воспроизвести ту же конструкцию:</p>
+<p>все разработчики
+снова сидят
+в одной большой комнате</p>
+<p>Но смысл уже был совершенно другим.</p>
+<p>В 1991-м люди сидели вместе, потому что это была маленькая команда друзей и другого устройства компании почти не существовало.</p>
+<p>В 1996-м их посадили вместе, потому что разросшаяся команда больше не синхронизировалась естественным образом и Quake нужно было каким-то способом дотащить до релиза.
+Shacknews
++1</p>
+<p>Сначала id физически выросла из собственной старой модели</p>
+<p>После Doom компания уже позволяла себе нормальные индивидуальные кабинеты.</p>
+<p>Это выглядело как очевидный прогресс:</p>
+<p>раньше:</p>
+<p>все орут
+друг другу через комнату</p>
+<p>↓</p>
+<p>теперь:</p>
+<p>у каждого
+собственное рабочее пространство</p>
+<p>Программист может программировать в тишине.</p>
+<p>Художник — слушать свою музыку.</p>
+<p>Designer — тестировать level.</p>
+<p>Звучит гораздо профессиональнее.</p>
+<p>Но старая id никогда не строила формальных механизмов, которые обычно заменяют физическую близость:</p>
+<p>producer</p>
+<p>регулярная синхронизация</p>
+<p>централизованный production plan</p>
+<p>жёсткое ownership зависимостей</p>
+<p>milestones</p>
+<p>formal decision process</p>
+<p>Поэтому когда стены появились, исчезла часть системы, которая раньше сама выполняла эти функции.</p>
+<p>Wired ещё летом 1995 года описывала id как команду, постепенно потерявшую синхронность: люди приходили в разное время, закрывались в отдельных кабинетах, а работа над Quake шла фрагментированно.
+WIRED</p>
+<p>Старая формула была:</p>
+<p>нет management</p>
+<p>ПОТОМУ ЧТО</p>
+<p>все постоянно
+видят и слышат всех</p>
+<p>После роста осталось:</p>
+<p>нет management</p>
+<p>а вторую половину они случайно удалили.</p>
+<p>И Quake особенно сильно наказал их за это</p>
+<p>Если Carmack сегодня меняет фундаментальную engine-систему, последствия могут касаться:</p>
+<p>Abrash
+renderer</p>
+<p>Cash
+networking</p>
+<p>Romero
+QuakeEd</p>
+<p>McGee
+levels</p>
+<p>Petersen
+levels</p>
+<p>Willits
+levels</p>
+<p>Adrian / Cloud
+art</p>
+<p>Trent Reznor
+audio assumptions</p>
+<p>При Doom взаимозависимостей уже было много.</p>
+<p>При Quake они стали намного дороже.</p>
+<p>И если каждый сидит отдельно, недостаточно просто:</p>
+<p>«я знаю,
+что сосед сегодня
+что-то программирует»</p>
+<p>Нужно знать:</p>
+<p>что изменилось?</p>
+<p>сломает ли это мой level?</p>
+<p>можно ли уже использовать feature?</p>
+<p>останется ли feature вообще?</p>
+<p>когда перестать делать старую версию?</p>
+<p>кто принял решение?</p>
+<p>А устойчивой производственной системы для этого у id по-прежнему почти не было.</p>
+<p>В январе 1996 id ещё и расширяет офис</p>
+<p>Компания до этого занимала знаменитый Suite 666 в Town East Tower.</p>
+<p>В январе 1996-го основатели арендуют практически весь шестой этаж — кроме помещения стоматолога, которого решили не выселять.
+Shacknews</p>
+<p>Нормальная растущая компания в такой ситуации могла бы сделать:</p>
+<p>больше людей
+↓
+больше команд
+↓
+лучше структурированные помещения
+↓
+production management</p>
+<p>Carmack делает почти противоположное.</p>
+<p>Через пару месяцев после решения окончательно превратить Quake в shooter он объявляет:</p>
+<p>все разработчики собирают необходимое оборудование и переезжают в одну большую центральную комнату.
+Shacknews</p>
+<p>Так появляется:</p>
+<p>WAR ROOM
+Это фактически попытка решить организационную проблему архитектурой помещения</p>
+<p>Логика очень понятная.</p>
+<p>Проблема:</p>
+<p>люди рассредоточены
+↓
+плохо общаются
+↓
+работают несинхронно</p>
+<p>Решение:</p>
+<p>УБРАТЬ РАССТОЯНИЕ</p>
+<p>Не добавить management layer.</p>
+<p>Не назначить полноценного producer.</p>
+<p>Не разработать новый workflow.</p>
+<p>А:</p>
+<p>programmers
+artists
+designers</p>
+<p>↓</p>
+<p>ВСЕ В ОДНУ КОМНАТУ</p>
+<p>Это настолько чисто выражает культуру Carmack-era id, что почти выглядит экспериментом.</p>
+<p>Фактически Carmack пытался искусственно восстановить условия Commander Keen</p>
+<p>Старая id:</p>
+<p>Romero:
+«John, можно сделать X?»</p>
+<p>Carmack:
+«сейчас»</p>
+<p>Hall:
+«а если Y?»</p>
+<p>Adrian:
+«посмотрите сюда»</p>
+<p>↓
+всё происходит
+в одном пространстве</p>
+<p>Проблема Quake:</p>
+<p>этой коммуникации
+больше нет</p>
+<p>Решение:</p>
+<p>сделаем так,
+чтобы она снова
+была неизбежной</p>
+<p>То есть Carmack пытался не масштабировать систему, а вернуть компанию к состоянию, в котором масштабирование раньше не требовалось.</p>
+<p>И сотрудники переехали туда не особенно добровольно</p>
+<p>Это важнейшая разница с 1991 годом.</p>
+<p>Romero позже, отвечая непосредственно на вопрос о War Room, подчёркивал:</p>
+<p>это не напоминало времена Keen, хотя тогда они тоже работали одной комнатой.</p>
+<p>Почему?</p>
+<p>Потому что:</p>
+<p>во времена Keen им нравилось работать вместе; в War Room люди туда не хотели.
+Cerebral Cortex 314</p>
+<p>Вот буквально вся разница между двумя эпохами id:</p>
+<p>KEEN ROOM</p>
+<p>«мы хотим
+сидеть вместе»</p>
+<p>против:</p>
+<p>QUAKE WAR ROOM</p>
+<p>«нам сказали
+сидеть вместе»</p>
+<p>Физическая конфигурация одинаковая.</p>
+<p>Социальная — противоположная.</p>
+<p>Как выглядела War Room</p>
+<p>Wired посетила id именно в этот период и оставила почти идеальное описание.</p>
+<p>Идёт расширение офиса.</p>
+<p>Вокруг:</p>
+<p>снятые потолочные панели;</p>
+<p>строительная пыль;</p>
+<p>кабели, свисающие сверху;</p>
+<p>пластиковые перегородки;</p>
+<p>длинные низкие столы вдоль стен;</p>
+<p>CRT-мониторы;</p>
+<p>блокноты;</p>
+<p>книги;</p>
+<p>банки газировки;</p>
+<p>CD-плееры.</p>
+<p>Почти всё, не связанное непосредственно с завершением Quake, из комнаты убрали.</p>
+<p>Единственным подобием приватности стали наушники.
+WIRED</p>
+<p>Это уже не:</p>
+<p>уютная квартира,
+где друзья
+делают Keen</p>
+<p>А практически:</p>
+<p>PROJECT COMMAND CENTER
+И даже Carmack и Romero снова сидят рядом</p>
+<p>Masters of Doom описывает War Room буквально как возвращение двух Джонов за соседние рабочие места: Carmack и Romero оказались бок о бок, компьютеры пришлось соединять кабелями через разобранный подвесной потолок, пространства было настолько мало, что люди едва не сталкивались локтями.
+Valve Archive</p>
+<p>Это почти издевательски символично.</p>
+<p>В начале id:</p>
+<p>Carmack + Romero
+рядом
+=
+химия,
+из которой рождается компания</p>
+<p>В конце первоначальной id:</p>
+<p>Carmack + Romero
+снова рядом
+=
+два человека,
+которые уже решили,
+что хотят разного будущего</p>
+<p>Причём Romero к январю 1996 года уже связался с Tom Hall и начал обсуждать создание новой компании после завершения Quake.
+GamesBeat</p>
+<p>То есть War Room физически пытается собрать обратно команду, которая психологически уже распадается.</p>
+<p>При этом War Room реально сработала</p>
+<p>Вот это важно.</p>
+<p>Нельзя просто написать:</p>
+<p>Carmack придумал токсичную хуйню, которая всем мешала.</p>
+<p>Adrian Carmack вспоминал иначе.</p>
+<p>Да, людям было неудобно.</p>
+<p>Но:</p>
+<p>все работают рядом
+↓
+решения принимаются быстрее
+↓
+проблему можно обсудить сразу
+↓
+проект двигается быстрее</p>
+<p>По его оценке, Quake, вероятно, действительно закончили быстрее благодаря общей комнате.
+Shacknews</p>
+<p>Wired тоже отмечала заметный рост:</p>
+<p>efficiency</p>
+<p>+</p>
+<p>closely coordinated teamwork</p>
+<p>после перехода в War Room.
+WIRED</p>
+<p>То есть Carmack диагностировал проблему не неправильно.</p>
+<p>Коммуникация действительно была bottleneck.</p>
+<p>Но War Room устраняла симптом, а не причину</p>
+<p>Почему люди плохо синхронизировались?</p>
+<p>Не только потому, что стены мешали говорить.</p>
+<p>Глубже:</p>
+<p>Quake слишком долго
+не имел стабильного design</p>
+<p>+</p>
+<p>company roles
+стали сложнее</p>
+<p>+</p>
+<p>людей стало больше</p>
+<p>+</p>
+<p>одновременно шёл
+сложнейший R&amp;D</p>
+<p>+</p>
+<p>не существовало
+устойчивого production leadership</p>
+<p>+</p>
+<p>личные отношения
+уже были повреждены</p>
+<p>War Room решает:</p>
+<p>«ты не слышишь коллегу»</p>
+<p>Но не решает:</p>
+<p>«вы принципиально
+не согласны,
+какой должна быть компания»</p>
+<p>или:</p>
+<p>«мы год делали
+несовместимый content»</p>
+<p>или:</p>
+<p>«у нас нет человека,
+который системно
+управляет зависимостями»
+Sandy Petersen War Room ненавидел</p>
+<p>Его аргументы были совершенно практическими.</p>
+<p>В большой общей комнате:</p>
+<p>нельзя спокойно
+слушать звук level</p>
+<p>нельзя включить
+свою музыку</p>
+<p>сложнее сосредоточиться</p>
+<p>сложнее нормально
+playtest'ить audio</p>
+<p>постоянно кто-то рядом</p>
+<p>Наушники частично помогали, но не решали всё.</p>
+<p>Petersen прямо говорил, что с его точки зрения совместная комната делала работу менее эффективной, а не более.
+Shacknews</p>
+<p>И это важный момент.</p>
+<p>Одна и та же система могла:</p>
+<p>ускорить
+командное согласование</p>
+<p>и одновременно:</p>
+<p>ухудшить
+индивидуальную работу</p>
+<p>Оба эффекта реальны.</p>
+<p>Ранняя id могла позволить себе общий шум, потому что задачи были другими</p>
+<p>1991:</p>
+<p>4 человека</p>
+<p>маленький проект</p>
+<p>короткие задачи</p>
+<p>быстрая iteration</p>
+<p>простые assets</p>
+<p>минимум специализации</p>
+<p>1996:</p>
+<p>programmer
+пытается решить
+сложный renderer bug</p>
+<p>рядом</p>
+<p>designer
+тестирует monsters</p>
+<p>рядом</p>
+<p>artist
+слушает reference audio</p>
+<p>рядом</p>
+<p>ещё один designer
+играет deathmatch</p>
+<p>То есть сама специализация делает один общий акустический режим менее подходящим.</p>
+<p>И War Room существовала внутри уже идущего семидневного crunch</p>
+<p>Вот здесь система становится намного жёстче.</p>
+<p>После ноябрьского design reset id вошла в режим:</p>
+<p>7 дней в неделю</p>
+<p>столько часов,
+сколько способен выдержать</p>
+<p>Romero позднее именно так описывал финальную фазу Quake. Petersen называл постоянный crunch одной из трёх главных проблем разработки.
+Shacknews</p>
+<p>Masters of Doom описывает график ещё жёстче — восемнадцатичасовые дни и семь дней в неделю как характерную картину War Room-периода.
+Valve Archive</p>
+<p>То есть:</p>
+<p>WAR ROOM</p>
+<p>сама по себе могла быть просто способом улучшить коммуникацию.</p>
+<p>Но:</p>
+<p>WAR ROOM
++
+7-day crunch
++
+burnout
++
+interpersonal conflict</p>
+<p>— уже совершенно другая система.</p>
+<p>Это фактически превращается в социальное давление без формального менеджера</p>
+<p>Очень интересный эффект.</p>
+<p>Если ты сидишь в отдельном кабинете:</p>
+<p>можешь уйти домой
+↓
+кто-то может
+даже не заметить</p>
+<p>В War Room:</p>
+<p>все видят:</p>
+<p>когда ты пришёл</p>
+<p>что ты делаешь</p>
+<p>играешь ли ты</p>
+<p>работаешь ли ты</p>
+<p>когда ты ушёл</p>
+<p>Carmack не обязательно должен каждый час говорить:</p>
+<p>работай.</p>
+<p>Само пространство создаёт:</p>
+<p>PEER PRESSURE</p>
+<p>С точки зрения production это чрезвычайно эффективно.</p>
+<p>С точки зрения культуры — уже далеко от знаменитой:</p>
+<p>сильным людям не нужно управление.</p>
+<p>Управление просто стало неформальным и пространственным.</p>
+<p>То есть management не исчез</p>
+<p>Это вообще главный вывод War Room.</p>
+<p>id гордилась тем, что у неё:</p>
+<p>почти нет management</p>
+<p>Но в Quake всё равно возникли управленческие механизмы.</p>
+<p>Только вместо:</p>
+<p>producer</p>
+<p>planning</p>
+<p>milestones</p>
+<p>coordination process</p>
+<p>появились:</p>
+<p>Carmack
+задаёт deadline</p>
+<p>+</p>
+<p>performance ratings</p>
+<p>+</p>
+<p>mandatory common room</p>
+<p>+</p>
+<p>7-day crunch</p>
+<p>+</p>
+<p>социальная прозрачность</p>
+<p>То есть управление существует.</p>
+<p>Просто оно стало:</p>
+<p>AD HOC</p>
+<p>и очень сильно завязано на власти Carmack.</p>
+<p>И здесь Carmack фактически превращается из technical authority в руководителя всей production machine</p>
+<p>Ранняя id:</p>
+<p>Carmack:
+«вот что engine
+может сделать»</p>
+<p>Quake:</p>
+<p>Carmack:
+«мы делаем shooter»</p>
+<p>«релиз должен быть тогда-то»</p>
+<p>«вот оценка
+вашей работы»</p>
+<p>«все переезжают
+в одну комнату»</p>
+<p>Это уже не просто роль:</p>
+<p>Lead Programmer</p>
+<p>Это фактическая:</p>
+<p>ORGANIZATIONAL AUTHORITY</p>
+<p>Именно в Quake становится видно, что технологический вес Carmack постепенно превратился в власть над устройством всей компании.</p>
+<p>А Romero всё сильнее воспринимал это как конец той id, которую он создавал</p>
+<p>Для него ранняя культура была:</p>
+<p>сильные люди
++
+автономия
++
+игры
++
+веселье
++
+неформальность</p>
+<p>War Room ощущалась уже иначе.</p>
+<p>Masters of Doom передаёт его внутреннее ощущение очень выразительно:</p>
+<p>ранняя id:</p>
+<p>«let's make
+a great game together
+and have fun»</p>
+<p>против:</p>
+<p>War Room id:</p>
+<p>«shut up
+and work»</p>
+<p>Valve Archive</p>
+<p>И даже если эта формулировка неизбежно окрашена перспективой Romero, она прекрасно выражает культурный разрыв.</p>
+<p>Deathmatch тоже изменил функцию</p>
+<p>Раньше:</p>
+<p><strong>deathmatch</strong></p>
+<p>веселье
++
+playtest
++
+изобретение</p>
+<p>В War Room он становится ещё и:</p>
+<p>разрядкой
+накопившейся агрессии</p>
+<p>Wired описывала, как напряжение общей комнаты периодически выливалось в крики и ругань, после чего программисты бросались за компьютеры устраивать ожесточённые внутренние матчи Quake.
+WIRED</p>
+<p>То есть игра всё ещё соединяет команду.</p>
+<p>Но уже не в духе:</p>
+<p>«смотрите,
+какую смешную штуку
+мы сделали»</p>
+<p>а иногда:</p>
+<p>«я сейчас
+тебя разъебу
+в нашей игре,
+потому что
+ты меня бесишь»</p>
+<p>Очень характерная мутация первоначальной культуры.</p>
+<p>И самое важное: физическая близость больше не создаёт автоматически единство</p>
+<p>Это главный провал попытки Carmack.</p>
+<p>Он воспроизводит:</p>
+<p>THE ROOM</p>
+<p>но невозможно воспроизвести:</p>
+<p>THE PEOPLE</p>
+<p>образца 1991 года.</p>
+<p>Тогда:</p>
+<p>все примерно
+на одной жизненной стадии</p>
+<p>все недавно
+ушли из Softdisk</p>
+<p>все рискуют
+одинаково</p>
+<p>компания
+почти вся их жизнь</p>
+<p>все получают
+похожий эмоциональный payoff</p>
+<p>Теперь:</p>
+<p>одни founders</p>
+<p>другие employees</p>
+<p>кто-то хочет
+расширять id</p>
+<p>кто-то хочет
+держать её маленькой</p>
+<p>кто-то устал</p>
+<p>кто-то строит карьеру</p>
+<p>кто-то уже собирается уйти</p>
+<p>То есть:</p>
+<p>близость может улучшить коммуникацию, но она не может восстановить потерянное совпадение интересов.</p>
+<p>И количество людей тоже уже принципиально другое</p>
+<p>Когда говорят:</p>
+<p>«всего-то около десятка человек,
+какая ещё проблема масштаба?»</p>
+<p>важно помнить, что complexity растёт не линейно.</p>
+<p>У четырёх человек максимальное число прямых парных связей:</p>
+<p><strong>4 × 3 / 2</strong></p>
+<p>6</p>
+<p>У тринадцати:</p>
+<p><strong>13 × 12 / 2</strong></p>
+<p>78</p>
+<p>Не все 78, конечно, реально требуют постоянной координации.</p>
+<p>Но порядок проблемы виден.</p>
+<p>При четырёх людях:</p>
+<p>каждый
+может почти постоянно
+держать модель остальных
+в голове</p>
+<p>При десяти с лишним специализированных людях это уже значительно сложнее.</p>
+<p>А id продолжала использовать культурную модель, придуманную для первой ситуации.</p>
+<p>Поэтому «гаражная культура» имеет скрытое условие</p>
+<p>Мы часто романтизируем:</p>
+<p>никакой бюрократии</p>
+<p>никаких managers</p>
+<p>все creators</p>
+<p>все сидят рядом</p>
+<p>быстрые решения</p>
+<p>Но такая система великолепно работает только при определённых предпосылках:</p>
+<p>маленький n</p>
+<p>одна очевидная цель</p>
+<p>короткий project</p>
+<p>низкая стоимость переделки</p>
+<p>сильное доверие</p>
+<p>совпадающие incentives</p>
+<p>простые коммуникационные связи</p>
+<p>Убери несколько условий —</p>
+<p>и:</p>
+<p>flat structure</p>
+<p>может превратиться не в свободу, а в:</p>
+<p>неопределённость
++
+неформальную борьбу за власть
++
+перегрузку ключевых людей
++
+crunch</p>
+<p>Quake показал именно это.</p>
+<p>War Room была попыткой вернуть одну предпосылку
+physical proximity</p>
+<p>Не возвращая:</p>
+<p>small n</p>
+<p>shared vision</p>
+<p>cheap iteration</p>
+<p>healthy relationships</p>
+<p>Поэтому она могла повысить productivity.</p>
+<p>Но не могла вернуть старую компанию.</p>
+<p>В некотором смысле Carmack решил проблему как инженер</p>
+<p>Это даже очень похоже на его стиль программирования.</p>
+<p>Есть система:</p>
+<p>коммуникационная latency
+слишком высокая</p>
+<p>Как снизить latency?</p>
+<p>уменьшить физическое
+расстояние между nodes</p>
+<p>То есть:</p>
+<p>office topology</p>
+<p>используется как performance optimization.</p>
+<p>И она реально:</p>
+<p>снижает latency</p>
+<p>Но организация — не только сеть передачи информации.</p>
+<p>В ней есть:</p>
+<p>мотивация;</p>
+<p>власть;</p>
+<p>доверие;</p>
+<p>усталость;</p>
+<p>статус;</p>
+<p>личные цели.</p>
+<p>Эти параметры физическим размещением не исправляются.</p>
+<p>И поэтому War Room одновременно была успехом и провалом
+Как emergency production technique:
+УСПЕХ</p>
+<p>Команда быстрее синхронизировалась.</p>
+<p>Quake начал двигаться быстрее.</p>
+<p>Релиз приближался.
+Shacknews
++1</p>
+<p>Как способ восстановить старую id:
+ПРОВАЛ</p>
+<p>Romero уже планировал новую компанию.</p>
+<p>Petersen был недоволен.</p>
+<p>Команда была истощена.</p>
+<p>После релиза начнётся массовый исход сотрудников. Romero позднее вспоминал, что id после Quake сократилась примерно с 13 человек до 7 в течение последующего периода.
+Merlin'in Kazanı</p>
+<p>То есть War Room помогла закончить игру.</p>
+<p>Но не сохранила команду.</p>
+<p>И это, пожалуй, идеальный финал гаражной эпохи id</p>
+<p>В 1991-м:</p>
+<p>ОДНА КОМНАТА</p>
+<p>=
+причина,
+почему всё работает</p>
+<p>В 1996-м:</p>
+<p>ОДНА КОМНАТА</p>
+<p>=
+последняя попытка
+компенсировать,
+почему всё
+перестало работать</p>
+<p>Это внешне одна и та же картинка.</p>
+<p>Но смысл перевёрнут полностью.</p>
+<p>Полная дуга
+1991</p>
+<p>Cross Lake / early id</p>
+<p>маленькая команда
+↓
+все рядом
+↓
+нет management
+↓
+это не проблема
+↓
+мгновенная коммуникация
+↓
+Keen</p>
+<p>↓</p>
+<p>Wolfenstein / Doom</p>
+<p>команда растёт</p>
+<p>но</p>
+<p>по-прежнему
+достаточно маленькая
+↓
+flat culture
+ещё работает</p>
+<p>↓</p>
+<p>Quake</p>
+<p>больше людей
++
+отдельные кабинеты
++
+сложный engine
++
+долгий R&amp;D
++
+разные design visions
+↓
+естественная
+синхронизация исчезает</p>
+<p>↓</p>
+<p>id
+НЕ строит
+полноценную
+production-management system</p>
+<p>↓</p>
+<p>январь 1996</p>
+<p>расширение офиса</p>
+<p>↓</p>
+<p>Carmack:</p>
+<p>ВСЕ
+В ОДНУ КОМНАТУ</p>
+<p>↓</p>
+<p>WAR ROOM</p>
+<p>↓</p>
+<p>лучше communication
++
+выше production speed</p>
+<p>НО:</p>
+<p>меньше privacy
++
+больше pressure
++
+7-day crunch
++
+burnout
++
+старые конфликты
+никуда не исчезли</p>
+<p>↓</p>
+<p>Quake ships</p>
+<p>↓</p>
+<p>первая id
+распадается</p>
+<p>War Room поэтому не просто курьёз из истории разработки Quake.</p>
+<p>Это момент, когда id сама обнаружила предел собственной любимой идеи:</p>
+<p>«если собрать очень сильных людей в одной комнате и не мешать им, они сами всё решат».</p>
+<p>Для четырёх людей это почти оказалось правдой.</p>
+<p>Для десятка людей на многолетнем высокозависимом AAA-проекте — уже нет.</p>
+<p>И вместо того чтобы признать, что компании нужна новая организационная модель, id в последний раз попыталась буквально построить старую модель заново из стен, столов и сетевых кабелей.</p>
+<p>Этого хватило, чтобы закончить Quake.</p>
+<p>На то, чтобы сохранить первоначальную id Software, — уже нет.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p030">30. Уход John Romero<a class="headerlink" href="#p030" title="Permanent link">¶</a></h2>
+<p>Уход Romero из id очень удобно превращать в карикатуру:</p>
+<p>DOOM сделал Romero рок-звездой
+↓
+он перестал работать
+↓
+целыми днями играл в deathmatch
+↓
+Carmack один тащил Quake
+↓
+выгнал лентяя
+↓
+Romero пошёл делать Ion Storm</p>
+<p>В этой версии есть куски правды — но как объяснение она слабая.</p>
+<p>Реальная история гораздо неприятнее, потому что одновременно верны несколько вещей:</p>
+<p>Romero действительно
+провалил часть обязанностей
+lead designer Quake</p>
+<p>И</p>
+<p>Romero действительно
+был перегружен кучей полезной для id
+внешней работы</p>
+<p>И</p>
+<p>он действительно
+слишком много играл в deathmatch</p>
+<p>И</p>
+<p>Carmack действительно
+всё меньше доверял ему</p>
+<p>И</p>
+<p>они уже принципиально
+не соглашались,
+какой должна быть id Software</p>
+<p>И</p>
+<p>Romero сам решил уйти
+ЕЩЁ ДО того,
+как его официально выгнали</p>
+<p>Поэтому 6 августа 1996 года — не момент, когда один человек внезапно испортился.</p>
+<p>Это момент, когда многолетнее расхождение Carmack и Romero наконец оформилось организационно: один из них больше не хотел работать с другим, а второй уже и сам не хотел оставаться в этой компании.
+Shacknews
++1</p>
+<p>Начать надо с неприятного для Romero: как lead designer Quake он действительно допустил серьёзную ошибку</p>
+<p>У Romero была большая концепция original Quake.</p>
+<p>Мы её уже разобрали:</p>
+<p>Hammer of Thunderbolts
+Hellgate Cube
+fantasy
+RPG-ish systems
+connected world
+новые interactions</p>
+<p>Проблема была не в том, что идеи были плохими.</p>
+<p>Проблема:</p>
+<p>остальная design-команда в течение слишком долгого времени толком не понимала, как эта игра должна выглядеть на практике.</p>
+<p>Sandy Petersen наблюдал Romero, который продолжал строить Doom-подобные levels, и делал примерно то же самое. American McGee получал новые engine-features от Carmack и строил вокруг них то, что уже можно было сделать сегодня.</p>
+<p>Сам Romero впоследствии признал: его представление о том, как organic development работал в старой id, он недостаточно объяснил новым людям. Для founders было естественно ждать, пока technology кристаллизует игру. Для сотрудников это выглядело как отсутствие direction.
+Shacknews</p>
+<p>Получилось:</p>
+<p>Romero в голове:</p>
+<p>«сейчас engine созреет,
+и мы начнём строить
+настоящий Quake»</p>
+<p>А рядом:</p>
+<p>Petersen / McGee / остальные:</p>
+<p>«а что мы вообще
+делаем сегодня?»</p>
+<p>Это реальная management-ошибка.</p>
+<p>Не дизайнерская фантазия.</p>
+<p>Не вопрос таланта.</p>
+<p>Именно leadership failure.</p>
+<p>Romero оставался великолепным индивидуальным designer</p>
+<p>Это тоже важно зафиксировать.</p>
+<p>Во время финального War Room он мог делать Quake-level примерно за неделю, соревнуясь с Tim Willits; современная разработке статья Wired описывает его именно как очень продуктивного level designer уже во время последнего рывка.
+WIRED</p>
+<p>То есть проблема не:</p>
+<p>Romero
+больше не умел
+делать игру</p>
+<p>А:</p>
+<p>Romero
+как individual contributor
+всё ещё очень силён</p>
+<p>НО</p>
+<p>Romero как lead
+недостаточно хорошо
+синхронизирует
+всю design-команду</p>
+<p>Это две совершенно разные оценки.</p>
+<p>И впоследствии Tim Willits сформулирует её довольно жёстко: Romero был отличным человеком, но плохим manager.
+WIRED</p>
+<p>Второй реальный косяк: deathmatch действительно зашёл слишком далеко</p>
+<p>Тут защищать Romero бессмысленно, потому что он сам себя спустя годы защищать перестал.</p>
+<p>Он действительно проводил много времени:</p>
+<p>Doom deathmatch
+Doom II deathmatch
+потом Quake deathmatch</p>
+<p>с American McGee, Shawn Green и другими.</p>
+<p>Сам Romero объяснял это не только развлечением.</p>
+<p>Для него deathmatch был:</p>
+<p>playtest
++
+исследование mechanics
++
+вдохновение
++
+формирование Quake movement/combat</p>
+<p>И в этом была правда.</p>
+<p>Но была и вторая половина:</p>
+<p>deathmatch
++
+ещё deathmatch
++
+ещё deathmatch
+=
+уже просто много игры
+в рабочее время</p>
+<p>Romero позднее сказал практически убийственную для собственной защиты вещь: если бы сотрудник его современной компании вёл себя так, как тогда он сам, этого сотрудника бы уволили. Он отдельно сказал, что у него сейчас никто не стал бы играть в deathmatch до вечера.
+Shacknews</p>
+<p>То есть:</p>
+<p>«Romero слишком много играл на работе»</p>
+<p>— не выдумка Carmack.</p>
+<p>Это действительно было проблемой.</p>
+<p>Carmack это особенно бесило</p>
+<p>Потому что их личные рабочие стандарты уже стали радикально разными.</p>
+<p>Carmack:</p>
+<p>проснулся
+↓
+код
+↓
+код
+↓
+код
+↓
+ещё код
+↓
+рекреационный код</p>
+<p>Romero:</p>
+<p>design
+tools
+levels
+external projects
+press
+community
+deathmatch
+business ideas</p>
+<p>Carmack мог посмотреть на соседний стол и увидеть:</p>
+<p>я прямо сейчас
+пишу технологию,
+которой не существовало</p>
+<p>а он:
+играет</p>
+<p>Именно этот контраст постепенно превращался в resentment.</p>
+<p>В 2022 году Carmack уже ретроспективно прямо признал: да, он был человеком, который вытолкнул Romero из id, и нынешний Carmack считает, что молодой Carmack относился к ситуации недостаточно зрело. Он вспоминал, как его раздражало равноправное партнёрство при ощущении, что он работает значительно тяжелее другого совладельца.
+Fight</p>
+<p>Это чрезвычайно важная поздняя поправка.</p>
+<p>Carmack не говорит:</p>
+<p>я ошибался, Romero работал идеально.</p>
+<p>Он говорит примерно:</p>
+<p>проблема была, но я сам решал её не самым зрелым способом.</p>
+<p>Был даже спорный вопрос: сколько Romero вообще находился в офисе</p>
+<p>Некоторые сотрудники вспоминали, что в определённый период он:</p>
+<p>поздно приезжал
+долго обедал
+уезжал раньше
+часто бывал на мероприятиях</p>
+<p>По Masters of Doom, Carmack даже тайно поставил программу, которая логировала активность компьютера Romero, чтобы понять, сколько времени тот реально работает.</p>
+<p>Romero эту часть не подтверждает полностью. Он говорит: да, Carmack мог что-то логировать, но он не помнит какого-то официального разговора владельцев в стиле:</p>
+<p>тебя слишком мало в офисе.</p>
+<p>Поэтому историю с «тайным таймтрекером» лучше держать как свидетельство недоверия Carmack, а не как точную табельную ведомость Romero.
+Shacknews</p>
+<p>Но само наличие такого подозрения уже показывает, насколько далеко отношения ушли от:</p>
+<p>1991</p>
+<p>«John,
+посмотри,
+какую хрень я сделал!»</p>
+<p>к:</p>
+<p>1995</p>
+<p>«а он вообще
+сколько часов работает?»
+Но теперь обратная сторона: Romero был занят далеко не одной хуйнёй</p>
+<p>Вот почему фраза Carmack:</p>
+<p>Romero «не работал достаточно усердно»</p>
+<p>слишком груба как полное описание.</p>
+<p>В период Quake Romero параллельно занимался:</p>
+<p>QuakeEd</p>
+<p>То есть производственным инструментом, без которого всем level designers было бы гораздо тяжелее делать Quake.</p>
+<p>Плюс:</p>
+<p>The Ultimate Doom</p>
+<p>Он делал карты для нового Episode IV.</p>
+<p>Плюс:</p>
+<p>Final Doom</p>
+<p>Он находил и координировал community-map makers, из чьей работы выросли коммерческие проекты.</p>
+<p>Плюс:</p>
+<p>Raven Software</p>
+<p>Он был основным внутренним контактом id для Heretic и Hexen.</p>
+<p>Плюс:</p>
+<p>Prima strategy guides</p>
+<p>Передавал материалы и помогал официальной внешней продукции.</p>
+<p>Плюс:</p>
+<p>press / public face / community</p>
+<p>Romero фактически был главным евангелистом компании наружу.</p>
+<p>Shacknews прямо перечисляет эти направления и отмечает, что, кроме Kevin Cloud, Romero был практически единственным человеком development team, постоянно работающим с внешними партнёрами.
+Shacknews
++1</p>
+<p>То есть:</p>
+<p>Carmack:</p>
+<p>«ты недостаточно работаешь
+над QUAKE»</p>
+<p>не обязательно равно:</p>
+<p>«ты вообще
+ничего не делаешь»</p>
+<p>Romero делал дохуя.</p>
+<p>Вопрос — того ли самого, что Carmack считал главным.</p>
+<p>И вот это фундаментальная разница</p>
+<p>Romero воспринимал:</p>
+<p>Raven</p>
+<p>Final Doom</p>
+<p>community</p>
+<p>strategy guides</p>
+<p>press</p>
+<p>licensing</p>
+<p>внешних studios</p>
+<p>как:</p>
+<p>рост id Software.</p>
+<p>С его точки зрения компания превратилась из шести человек в центр целой экосистемы.</p>
+<p>Надо этим пользоваться:</p>
+<p>больше games
++
+больше teams
++
+больше genres
++
+больше partnerships</p>
+<p>Carmack смотрел на тот же список и видел:</p>
+<p>всё это отвлекает человека, который должен прямо сейчас делать Quake.</p>
+<p>Shacknews очень точно фиксирует этот конфликт: Romero считал внешние проекты частью естественного расширения компании, Carmack хотел оставлять id маленькой, сфокусированной и занятой текущей игрой.
+Shacknews</p>
+<p>То есть спор:</p>
+<p>«Romero работает
+или не работает?»</p>
+<p>во многом был на самом деле спором:</p>
+<p>«ЧТО СЧИТАЕТСЯ
+РАБОТОЙ ROMERO?»
+Carmack хотел studio</p>
+<p>Очень условно:</p>
+<p>10 отличных человек
+↓
+одна игра
+↓
+лучший engine
+↓
+лучший shooter
+↓
+следующая игра</p>
+<p>Romero хотел уже почти publisher/studio network:</p>
+<p>несколько команд
+↓
+несколько игр
+↓
+разные жанры
+↓
+использование id technology
+↓
+внешние developers
+↓
+расширяющаяся компания</p>
+<p>После ухода Romero Carmack сформулирует различие знаменитой фразой:</p>
+<p>Romero хочет «империю», а он хочет делать хорошие программы.
+Fabien Sanglard</p>
+<p>Это, разумеется, формулировка Carmack, а не объективное описание одного хорошего и одного плохого пути.</p>
+<p>Но она почти идеально передаёт разницу амбиций.</p>
+<p>Причём Romero уже понял это после ноябрьской встречи 1995 года</p>
+<p>Это очень важно для хронологии.</p>
+<p>Когда id решила отказаться от original Quake и сделать более Doom-подобный shooter, Romero пришёл к выводу:</p>
+<p>та id,
+в которой я хочу
+делать games,
+закончилась</p>
+<p>Он позднее сказал:</p>
+<p>именно тогда понял, что после Quake уйдёт.
+GamesBeat</p>
+<p>И уже в январе 1996 года, то есть примерно за полгода до выхода Quake, Romero позвонил Tom Hall.</p>
+<p>Смысл:</p>
+<p>когда Quake закончу,
+я ухожу</p>
+<p>↓</p>
+<p>хочешь снова
+делать компанию вместе?</p>
+<p>Hall ответил положительно.</p>
+<p>По словам Romero, они примерно семь месяцев уже планировали будущую компанию до фактического ухода из id.
+GamesBeat</p>
+<p>То есть Ion Storm — не реакция:</p>
+<p>«меня сегодня уволили,
+надо срочно что-нибудь придумать»</p>
+<p>Планы существовали заранее.</p>
+<p>Более того, Romero уже начал прощупывать издателей</p>
+<p>К моменту его ухода идея новой компании была довольно зрелой.</p>
+<p>Он уже смотрел, с кем можно будет заключить publishing/distribution deal.</p>
+<p>Позднее Romero вспоминал:</p>
+<p>ещё до «resignation thing» он уже изучал потенциальных publishers.
+GamesBeat</p>
+<p>То есть внутренне он уже находился в переходном состоянии:</p>
+<p>формально:
+co-founder id</p>
+<p>психологически:
+будущий founder
+другой компании</p>
+<p>Это тоже неизбежно влияет на commitment.</p>
+<p>Даже если человек физически делает текущий продукт.</p>
+<p>И Carmack, вероятно, это чувствовал</p>
+<p>С его точки зрения идеальный партнёр:</p>
+<p>вся энергия
+↓
+id
+↓
+Quake</p>
+<p>А рядом находится Romero, который:</p>
+<p>делает внешние проекты</p>
+<p>думает о расширении</p>
+<p>хочет несколько teams</p>
+<p>играет deathmatch</p>
+<p>уже эмоционально
+разочарован направлением Quake</p>
+<p>и тайно планирует
+следующую компанию</p>
+<p>Разрыв к этому моменту практически запрограммирован.</p>
+<p>После Quake у Romero вообще-то был простой путь: самому уйти</p>
+<p>Quake выходит:</p>
+<p>22 июня 1996</p>
+<p>Romero уже заранее решил:</p>
+<p>после Quake
+уйду</p>
+<p>Почему он не вышел из двери 23 июня?</p>
+<p>Потому что переход всё равно требовал времени, а внутри id уже начинались разговоры о следующем проекте. Romero ещё примерно за неделю до увольнения участвовал в brainstorming по будущему Quake 2 и предлагал, например, историю про шахтёра на Марсе или его спутнике.
+Shacknews</p>
+<p>То есть странная промежуточная ситуация:</p>
+<p>Romero знает:
+я ухожу</p>
+<p>id:
+ещё обсуждает
+с ним следующую игру</p>
+<p>Carmack:
+уже считает,
+что Romero плохо работает</p>
+<p>остальные владельцы:
+должны решить,
+оставлять ли его вообще
+И 6 августа 1996 они решают за него</p>
+<p>Источники долго использовали смягчённые формулировки:</p>
+<p>left</p>
+<p>resigned</p>
+<p>departure</p>
+<p>И современная пресса тогда действительно подавала историю довольно дипломатично. В декабре 1996 Wired цитировала Romero, называвшего расставание «totally amicable» и объяснявшего его прежде всего разными представлениями о будущем компании.
+WIRED</p>
+<p>Но исторически точнее:</p>
+<p>Romero был вытолкнут / уволен.</p>
+<p>Shacknews фиксирует дату прямо:</p>
+<p>August 6, 1996
+John Romero
+was dismissed
+from id Software</p>
+<p>Shacknews</p>
+<p>Сам Carmack позже тоже не оставляет пространства для PR-версии:</p>
+<p>да, я вытолкнул Romero из компании.
+Fight</p>
+<p>А ещё раньше он публично написал гораздо жёстче:</p>
+<p>Romero был убран из id, потому что недостаточно усердно работал.
+Fabien Sanglard</p>
+<p>Решение принимал уже не один Carmack</p>
+<p>Это тоже важно.</p>
+<p>К 1996 году id уже не была просто:</p>
+<p>Carmack
+Romero
+Adrian</p>
+<p>Kevin Cloud тоже стал частью ownership-структуры.</p>
+<p>В позднем рассказе Romero решение об увольнении описывается как решение группы владельцев — John Carmack, Adrian Carmack и Kevin Cloud.
+GamesBeat</p>
+<p>То есть:</p>
+<p>не:</p>
+<p>Carmack психанул
+и самовольно
+выкинул Romero</p>
+<p>а:</p>
+<p>остальные ключевые owners
+пришли к выводу,
+что больше не хотят
+работать с ним</p>
+<p>При этом очевидно, что Carmack был главным двигателем решения — это позже подтверждал он сам.</p>
+<p>И сама встреча оказалась очень короткой</p>
+<p>Как и с увольнением Tom Hall.</p>
+<p>Сегодня легко представить:</p>
+<p>два основателя</p>
+<p>5 лет истории</p>
+<p>DOOM</p>
+<p>Quake</p>
+<p>миллионы долларов</p>
+<p>↓</p>
+<p>трёхчасовой
+эмоциональный showdown</p>
+<p>Но Romero спустя годы говорил, что такие разговоры в реальности были довольно короткими; то, что заняло несколько абзацев в его книге, примерно соответствует реальному количеству сказанного.
+GamesBeat</p>
+<p>Это очень id.</p>
+<p>Компания годами избегала:</p>
+<p>formal management</p>
+<p>HR</p>
+<p>performance process</p>
+<p>длинных переговоров</p>
+<p>И поэтому даже разрыв с человеком, который был одним из её создателей, выглядит почти как старый bit flip:</p>
+<p>работает?</p>
+<p>НЕТ</p>
+<p>↓</p>
+<p>меняем состояние</p>
+<p>Только теперь этот «bit» — co-founder.</p>
+<p>После разговора Romero собирает вещи</p>
+<p>Shacknews описывает день довольно физически.</p>
+<p>Он собирает:</p>
+<p>дискеты;</p>
+<p>CD;</p>
+<p>постеры;</p>
+<p>личные вещи;</p>
+<p>памятные материалы.</p>
+<p>И покидает офис.
+Shacknews</p>
+<p>Совсем недавно, в 2026 году, Romero сам обозначил границу собственного архива ранней id именно так:</p>
+<p>Softdisk
+↓
+...
+↓
+August 6, 1996</p>
+<p>Он говорит, что сохранил материалы ранней истории компании вплоть до дня своего ухода.
+Bluesky Social</p>
+<p>То есть даже для него самого эта дата является практически официальной линией:</p>
+<p>EARLY id
+заканчивается здесь
+Ирония с Tom Hall почти идеальная</p>
+<p>В 1993 году:</p>
+<p>Carmack:
+Hall больше
+не подходит компании</p>
+<p>↓</p>
+<p>Romero
+сначала сопротивляется</p>
+<p>↓</p>
+<p>в итоге
+соглашается</p>
+<p>↓</p>
+<p>Hall уходит</p>
+<p>В 1996:</p>
+<p>Carmack:
+Romero больше
+не подходит компании</p>
+<p>↓</p>
+<p>остальные owners
+соглашаются</p>
+<p>↓</p>
+<p>Romero уходит</p>
+<p>GamesBeat прямо поднимает эту параллель как почти кармическую. Romero при этом не особенно драматизирует её: с его точки зрения он всё равно уже собирался уходить и ещё в январе позвал Hall в будущую компанию.
+GamesBeat</p>
+<p>Получается:</p>
+<p>1993:
+Romero участвует
+в увольнении Hall</p>
+<p>1996:
+Romero звонит Hall:</p>
+<p>«давай снова
+работать вместе»</p>
+<p>История замыкается довольно красиво.</p>
+<p>Но фраза «Romero ничего не делал» совершенно не выдерживает проверки</p>
+<p>К моменту ухода его след в Quake огромен.</p>
+<p>Он:</p>
+<p>создал QuakeEd
+был lead designer
+сделал shipped levels
+формировал combat / movement culture
+через playtesting
+работал с внешней ecosystem id
+был публичным лицом компании</p>
+<p>Именно в War Room он снова был способен быстро штамповать финальные levels; Wired наблюдала это непосредственно во время production.
+WIRED</p>
+<p>Поэтому:</p>
+<p>Carmack:
+«Romero wasn't working
+hard enough»</p>
+<p>следует читать скорее как:</p>
+<p>по стандарту Carmack и относительно роли, которую Carmack ожидал от co-owner/lead designer, вклад Romero в основной проект был недостаточным.</p>
+<p>Не как:</p>
+<p>Romero вообще ничего не сделал для Quake.</p>
+<p>Но и обратная апология «Carmack просто завидовал звёздности Romero» тоже слабая</p>
+<p>У Carmack были реальные основания для недовольства.</p>
+<p>Romero сам признаёт:</p>
+<p>deathmatch
+было слишком много</p>
+<p>Design team действительно:</p>
+<p>слишком долго
+оставалась без
+ясного общего направления</p>
+<p>У Romero было:</p>
+<p>слишком много
+параллельных external obligations</p>
+<p>И он уже:</p>
+<p>планировал уйти</p>
+<p>То есть если смотреть глазами владельца маленькой студии:</p>
+<p>мой partner
++
+lead designer
++
+owner</p>
+<p>не полностью сфокусирован
+на нашем единственном
+гигантском проекте</p>
+<p>— это реальная проблема.</p>
+<p>Carmack не придумал её из воздуха.</p>
+<p>Но Carmack сам позже увидел и свою часть вины</p>
+<p>Это, пожалуй, самая полезная поздняя перспектива.</p>
+<p>В разговоре 2022 года он вспоминал раннюю id как плохо устроенное равноправное партнёрство:</p>
+<p><strong>несколько founders</strong></p>
+<p>равные владельцы</p>
+<p>но</p>
+<p>вклад
+не всегда одинаковый</p>
+<p>А молодой Carmack реагировал на perceived imbalance слишком персонально.</p>
+<p>Он прямо признаёт:</p>
+<p>«я не был
+самым зрелым
+в том, как к этому относился»</p>
+<p>и говорит, что сейчас дал бы своему молодому себе другие советы о корпоративной структуре и обращении с такими конфликтами.
+Fight</p>
+<p>То есть даже сам человек, продавивший увольнение, спустя десятилетия уже не считает:</p>
+<p>ВСЁ БЫЛО
+ПРОСТО И ОЧЕВИДНО
+В действительности Carmack и Romero просто хотели построить две разные компании</p>
+<p>К 1996-му это уже невозможно было спрятать.</p>
+<p>Carmack-id
+маленькая
+↓
+элитные specialists
+↓
+одна игра
+↓
+cutting-edge engine
+↓
+FPS
+↓
+ship
+↓
+следующая technology
+Romero-id
+растущая
+↓
+несколько teams
+↓
+несколько games
+↓
+разные genres
+↓
+id technology
+как платформа
+↓
+designers получают
+большие ресурсы</p>
+<p>Wired буквально зафиксировала позицию Romero сразу после ухода: он хотел увеличивать компанию, делать больше одного типа игры одновременно и считал сохранение id в формате одной команды растратой потенциала технологии.
+WIRED</p>
+<p>А Carmack сформулировал противоположность ещё короче:</p>
+<p>Romero wants an empire</p>
+<p>I just want
+to create good programs</p>
+<p>Fabien Sanglard</p>
+<p>Это и есть настоящий развод.</p>
+<p>И Ion Storm задумывалась как сознательный анти-id</p>
+<p>Не будем сейчас уходить в историю самой Ion Storm — это уже не этот пункт.</p>
+<p>Но намерение важно.</p>
+<p>Romero хотел компанию, где:</p>
+<p>DESIGN
+не подчиняется
+ENGINE</p>
+<p>Вместо:</p>
+<p>Carmack:
+engine умеет X</p>
+<p>↓</p>
+<p>design:
+строимся вокруг X</p>
+<p>его новая философия должна была выглядеть:</p>
+<p>designer:
+игра должна быть X</p>
+<p>↓</p>
+<p>technology/team:
+значит делаем X</p>
+<p>Отсюда будущий лозунг:</p>
+<p>DESIGN IS LAW</p>
+<p>И идея сразу нескольких команд и жанров.</p>
+<p>То есть Ion Storm возникла не просто как:</p>
+<p>«моя собственная id».</p>
+<p>Она задумывалась как ответ на то, что Romero считал фундаментальной ошибкой id эпохи Quake.</p>
+<p>И тут есть очень важная ирония</p>
+<p>В id Romero считал, что:</p>
+<p>слишком мало management
++
+слишком мало ресурсов
++
+слишком много власти technology</p>
+<p>мешают реализовать большие design visions.</p>
+<p>Поэтому следующая компания должна иметь:</p>
+<p>много ресурсов
++
+много сотрудников
++
+много свободы designers</p>
+<p>История потом довольно жестоко покажет, что:</p>
+<p>БОЛЬШЕ РЕСУРСОВ</p>
+<p>само по себе не решает проблемы production management.</p>
+<p>Но это уже история Ion Storm, не id.</p>
+<p>На момент ухода логика Romero выглядела совершенно последовательной.</p>
+<p>Для самой id уход Romero означал гораздо больше, чем замену одного designer</p>
+<p>Он уносил с собой функцию, которую невозможно увидеть в credits.</p>
+<p>Romero был:</p>
+<p>энергией
+шумом
+евангелизмом
+community interface
+организатором внешних проектов
+конкурентом Carmack
+в разговорах о направлении</p>
+<p>Даже Adrian Carmack позже говорил, что во время Quake II ему Romero не хватало — прежде всего его юмора и атмосферы, которую тот приносил в офис.
+Shacknews</p>
+<p>То есть после увольнения id не просто меняет lead designer.</p>
+<p>Она меняет темперамент компании.</p>
+<p>Детально последствия для остальных сотрудников — уже следующий пункт.</p>
+<p>И поэтому современное «Romero ушёл из id» слишком нейтрально</p>
+<p>Точнее разделить три события.</p>
+<p>Ноябрь 1995
+Romero внутренне решает:</p>
+<p>после Quake
+я уйду</p>
+<p>GamesBeat</p>
+<p>Январь 1996
+Romero звонит Tom Hall</p>
+<p>↓</p>
+<p>они начинают
+планировать
+новую компанию</p>
+<p>GamesBeat</p>
+<p>6 августа 1996
+Romero ещё формально
+в id</p>
+<p>↓</p>
+<p>остальные owners
+решают,
+что больше
+не хотят с ним работать</p>
+<p>↓</p>
+<p>его увольняют /
+выталкивают
+из компании</p>
+<p>Shacknews
++1</p>
+<p>То есть:</p>
+<p>он собирался уйти — но его успели уволить раньше, чем он сам оформил уход.</p>
+<p>Вот это наиболее точная формулировка.</p>
+<p>И так заканчивается дуэт, на котором во многом стояла первая id</p>
+<p>В 1990-м их взаимодействие выглядело:</p>
+<p>Carmack:
+«это технически можно»</p>
+<p>↓</p>
+<p>Romero:
+«тогда сделаем
+из этого охуенную игру»</p>
+<p>К 1996-му:</p>
+<p>Carmack:
+«нам нужна
+маленькая сфокусированная
+technology company»</p>
+<p>↓</p>
+<p>Romero:
+«нам нужна
+большая design company,
+которая использует
+эту technology шире»</p>
+<p>То, что когда-то было комплементарностью, стало противоречием.</p>
+<p>Если снять обе карикатуры
+Карикатура №1
+ROMERO
+=
+ленивая рок-звезда,
+которая перестала работать</p>
+<p>Неверно.</p>
+<p>Он делал QuakeEd, levels, external production, Raven, Doom projects, community/business work и оставался выдающимся level designer.
+Shacknews
++1</p>
+<p>Карикатура №2
+CARMACK
+=
+злобный программист,
+который просто выгнал
+творческого гения</p>
+<p>Тоже неверно.</p>
+<p>Romero реально не дал design team достаточно direction, действительно слишком много играл в рабочее время, распылялся на внешние проекты и уже сам планировал другую компанию.
+Shacknews
++1</p>
+<p>Реальная формула
+Carmack
+и
+Romero</p>
+<p>годами усиливают
+друг друга</p>
+<p>↓</p>
+<p>успех DOOM
+делает компанию
+богатой и влиятельной</p>
+<p>↓</p>
+<p>Quake
+становится намного сложнее
+старых проектов</p>
+<p>↓</p>
+<p>Romero
+не масштабирует
+свою lead-designer роль
+достаточно хорошо</p>
+<p>↓</p>
+<p>он параллельно
+развивает внешнюю
+экосистему id</p>
+<p>↓</p>
+<p>Carmack воспринимает
+это как отсутствие
+фокуса</p>
+<p>↓</p>
+<p>deathmatch
+усиливает впечатление</p>
+<p>↓</p>
+<p>одновременно:</p>
+<p>Carmack хочет
+маленькую tech-driven id</p>
+<p>Romero хочет
+расширяющуюся
+multi-game company</p>
+<p>↓</p>
+<p>ноябрь 1995</p>
+<p>Romero:
+после Quake ухожу</p>
+<p>↓</p>
+<p>январь 1996</p>
+<p>Romero + Hall
+начинают планировать
+новую компанию</p>
+<p>↓</p>
+<p>22 июня 1996</p>
+<p>Quake ships</p>
+<p>↓</p>
+<p>6 августа 1996</p>
+<p>Carmack + остальные owners:</p>
+<p>мы больше
+не хотим работать
+с Romero</p>
+<p>↓</p>
+<p>FIRED</p>
+<p>Именно поэтому 6 августа — не внезапная катастрофа.</p>
+<p>Это дата, когда id официально признала то, что уже давно было правдой:</p>
+<p>John Carmack и John Romero больше не хотели строить одну и ту же id Software.</p>
+<p>И после этого первоначальная id — компания, где технологический радикализм Carmack постоянно уравновешивался игровой и культурной экспансивностью Romero, — фактически перестаёт существовать.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p031">31. Массовый исход после Quake<a class="headerlink" href="#p031" title="Permanent link">¶</a></h2>
+<p>Фраза «после Quake половина id разбежалась» по сути верна, но хронологически слишком грубая.</p>
+<p>Не было одного понедельника, когда:</p>
+<p>Quake вышел
+↓
+восемь человек
+одновременно хлопнули дверью</p>
+<p>Произошла цепная реакция примерно на два года:</p>
+<p>начало 1996
+Dave Taylor</p>
+<p>↓</p>
+<p>август 1996
+John Romero</p>
+<p>↓</p>
+<p>после Quake
+Michael Abrash</p>
+<p>↓</p>
+<p>январь 1997
+Mike Wilson
+Shawn Green</p>
+<p>↓</p>
+<p>1997
+Jay Wilbur</p>
+<p>↓</p>
+<p>июнь 1997
+Sandy Petersen</p>
+<p>↓</p>
+<p>март 1998
+American McGee</p>
+<p>Причины у всех разные. Кто-то ушёл сам, кого-то переманили, кого-то уволили, кто-то просто закончил то, ради чего приходил.</p>
+<p>Но коллективный результат один:</p>
+<p>команда, которая прошла через Doom → Doom II → Quake, за очень короткий срок перестала существовать как группа.</p>
+<p>Sandy Petersen в 2026 году сформулировал это максимально жёстко: Quake был выдающейся игрой, но работа над ним, по его ощущению, «сломала» команду; в течение пары лет ушли Romero, Shawn Green, Dave Taylor, Michael Abrash, American McGee и сам Petersen. Это его ретроспективная оценка, а не нейтральный корпоративный факт, но список потерь действительно впечатляет.
+Thread Reader App</p>
+<p>И первым вообще ушёл Dave Taylor — ещё до финального релиза Quake</p>
+<p>Это полезная поправка к самому названию «исход после Quake».</p>
+<p>Dave Taylor, тот самый spackle coder Doom, уже во время разработки Quake вкладывался в собственную компанию Crack dot Com.</p>
+<p>Причём его история не особенно похожа на конфликт Romero.</p>
+<p>Когда Taylor нанимался в id, он хотел получить ownership. После испытательного периода ему дали понять, что новых долей раздавать не собираются. Тогда он получил разрешение инвестировать в сторонний проект при определённых ограничениях и вложился в Crack dot Com, выпустившую Abuse.
+Fabien Sanglard</p>
+<p>Потом произошло простое экономическое и мотивационное расхождение:</p>
+<p>Crack dot Com
+начинает приносить Taylor
+ощутимые royalties</p>
+<p>↓</p>
+<p>Taylor всё сильнее
+интересует собственная компания</p>
+<p>↓</p>
+<p>Quake при этом
+кажется ему всё менее
+творчески привлекательным</p>
+<p>↓</p>
+<p>его вклад в Quake
+начинает снижаться</p>
+<p>Сам Taylor вспоминал, что Quake начинал ощущаться для него как «коричневый Doom» с меньшим количеством монстров и менее близкой ему тематикой. Carmack заметил падение вовлечённости и предложил разойтись после релиза; Taylor предпочёл уйти ещё раньше — после qtest1 в начале 1996-го.
+Fabien Sanglard</p>
+<p>То есть первая потеря выглядит не:</p>
+<p>Quake убил сотрудника</p>
+<p>а:</p>
+<p>талантливый человек
+уже перерос роль employee
+и хочет делать
+собственную компанию</p>
+<p>Но для id эффект тот же:</p>
+<p>человек, который закрывал огромный объём инженерной «шпаклёвки» Doom и работал над Quake, исчезает ещё до завершения самого тяжёлого проекта компании.</p>
+<p>Затем — Romero</p>
+<p>Это мы подробно разобрали в предыдущем пункте.</p>
+<p>6 августа 1996 года, примерно через полтора месяца после релиза Quake, Romero увольняют. Он уже давно планировал новую компанию с Tom Hall, поэтому разрыв был одновременно вынужденным и ожидаемым.
+WIRED</p>
+<p>Но для дальнейшего исхода важно другое.</p>
+<p>Romero был не только designer.</p>
+<p>Он был:</p>
+<p>внешними связями</p>
+<p>community</p>
+<p>press</p>
+<p>партнёрами</p>
+<p>лицензированием</p>
+<p>большими идеями
+о расширении компании</p>
+<p>и одним из немногих,
+кто регулярно спорил
+с Carmack о направлении id</p>
+<p>После его ухода внутри компании резко ослабевает именно альтернативный центр влияния.</p>
+<p>Wired уже в январе 1997 года цитировала Romero: по его версии, после его ухода атмосфера в id стала «dark and gloomy», прекратились планы активно расширять компанию и исчез человек, который спорил с Carmack по важным вопросам. Это, разумеется, позиция самого Romero, но одновременно Carmack в той же статье подтверждал фундаментальный разрыв стратегий: Romero хотел «империю», а он хотел маленькую technology-driven компанию.
+WIRED</p>
+<p>То есть увольнение Romero было не просто:</p>
+<p>-1 level designer</p>
+<p>а:</p>
+<p>-1 competing vision
+of what id should become
+Michael Abrash уходит совсем по другой причине</p>
+<p>И вот здесь особенно важно не сваливать все departures в один конфликт с Carmack.</p>
+<p>Abrash пришёл в id практически специально ради Quake.</p>
+<p>Для него это был уникальный инженерный проект:</p>
+<p>настоящее realtime 3D</p>
+<p>+</p>
+<p>работа рядом
+с Carmack</p>
+<p>+</p>
+<p>минимум корпоративного мусора</p>
+<p>Quake вышел — огромная техническая задача решена.</p>
+<p>После релиза Abrash вернулся в Microsoft, где затем занимался другими исследовательскими и графическими задачами.
+Википедия</p>
+<p>Не похоже на:</p>
+<p>Abrash ненавидел id
+и сбежал</p>
+<p>Но организационно id теряет человека, которого буквально нанимали как technical peer Carmack.</p>
+<p>То есть:</p>
+<p>Quake engineering</p>
+<p>Carmack
++
+Abrash
++
+Cash</p>
+<p>почти сразу превращается обратно в более Carmack-центричную конструкцию.</p>
+<p>Это серьёзная потеря даже при сохранении John Cash.</p>
+<p>И здесь особенно видно отличие «потеряли плохих сотрудников» от реальности</p>
+<p>Можно было бы объяснить кадровую чистку:</p>
+<p>Quake выявил слабых людей, id избавилась от балласта.</p>
+<p>Но Abrash — очень неудобный человек для такой теории.</p>
+<p>Это один из сильнейших low-level graphics engineers эпохи.</p>
+<p>Taylor тоже сделал затем самостоятельную компанию.</p>
+<p>Romero — один из людей, создавших всю раннюю id.</p>
+<p>Petersen впоследствии станет одним из ключевых дизайнеров Age of Empires.</p>
+<p>McGee создаст собственную авторскую карьеру.</p>
+<p>Именно на это спустя годы указывал Petersen: практически все ушедшие затем продолжили заметные карьеры, поэтому объяснение «они просто были недостаточно хороши» плохо соответствует фактам.
+Thread Reader App</p>
+<p>А потом Romero начинает буквально вытягивать людей из id в Ion Storm</p>
+<p>Вот здесь уже возникает настоящий brain drain.</p>
+<p>В ноябре 1996-го формируется Ion Storm.</p>
+<p>А 10 января 1997 года компания объявляет сразу о двух переходах из id:</p>
+<p>Mike Wilson</p>
+<p>и:</p>
+<p>Shawn Green</p>
+<p>Wired того времени прямо назвала происходящее “Braindrain at id”.
+WIRED</p>
+<p>Mike Wilson был очень важной потерей именно на business/marketing side</p>
+<p>Wilson не писал renderer и не строил уровни.</p>
+<p>Его зона:</p>
+<p>marketing</p>
+<p>retail</p>
+<p>PR</p>
+<p>business development</p>
+<p>distribution experiments</p>
+<p>Он в том числе занимался необычной retail-моделью Quake с CD, содержащими зашифрованный дополнительный контент, который можно было разблокировать после оплаты.
+Википедия</p>
+<p>То есть если Romero был человеком:</p>
+<p>давайте id
+делает БОЛЬШЕ РАЗНЫХ ИГР</p>
+<p>Wilson был человеком:</p>
+<p>давайте id
+БОЛЬШЕ И ИНТЕРЕСНЕЕ
+ПРОДАЁТ ИГРЫ</p>
+<p>И он тоже оказывается ближе к расширительной модели Romero, чем к Carmack-модели:</p>
+<p>маленькая компания
++
+разработка
++
+technology licensing</p>
+<p>В пресс-релизе о переходе Wilson в Ion Storm прозвучал довольно прозрачный укол: поскольку id решила оставаться маленькой technology-driven game company, значение творческого маркетинга и distribution внутри неё начало снижаться.
+WIRED</p>
+<p>То есть это уже не просто сотрудник меняет работу.</p>
+<p>Это человек с business side говорит:</p>
+<p>новая стратегия id делает мою функцию менее центральной.</p>
+<p>Shawn Green — ещё один кусок старой производственной ткани</p>
+<p>Shawn Green прошёл через старую id в разных ролях:</p>
+<p>support</p>
+<p>QA</p>
+<p>project management</p>
+<p>programming / design work</p>
+<p>Он был одним из тех универсальных людей ранней компании, которые трудно описываются одной современной должностью.</p>
+<p>В январе 1997 года Green тоже переходит в Ion Storm, уже как programmer.
+WIRED</p>
+<p>Это особенно символично:</p>
+<p>ROMERO
+уходит</p>
+<p>↓</p>
+<p>через несколько месяцев
+рядом с ним
+оказываются ещё люди,
+знавшие старую id изнутри</p>
+<p>Ion Storm начинает выглядеть не просто как новая компания Romero и Hall.</p>
+<p>Она начинает высасывать часть культурного кадрового слоя id.</p>
+<p>Причём пресса замечает изменение атмосферы практически сразу</p>
+<p>Январская Wired-заметка вышла всего через полгода после Quake.</p>
+<p>Заголовок:</p>
+<p>Braindrain at id. Mood “Dark and Gloomy”</p>
+<p>И в ней уже одновременно существуют две конкурирующие философии.</p>
+<p>Romero / Wilson
+id слишком
+сузила себя</p>
+<p>↓</p>
+<p>Ion Storm
+будет:</p>
+<p>больше</p>
+<p>разнообразнее</p>
+<p>сильнее в marketing</p>
+<p>несколько genres</p>
+<p>несколько teams
+Carmack
+нам не нужна
+огромная компания</p>
+<p>↓</p>
+<p>3 programmers
+3 artists
+3 level designers</p>
+<p>по-прежнему могут
+делать лучшие игры мира</p>
+<p>Carmack прямо писал, что id сокращает publishing-side и возвращается в первую очередь к роли developer.
+WIRED</p>
+<p>Это ключевой момент.</p>
+<p>Исход был не только следствием кризиса.</p>
+<p>Он был ещё и частью сознательного уменьшения амбиций id как широкой организации.</p>
+<p>То есть Carmack не обязательно видел весь brain drain как катастрофу</p>
+<p>Это очень важный нюанс.</p>
+<p>Со стороны выглядит:</p>
+<p>БЛЯТЬ,
+ЛЮДИ УХОДЯТ</p>
+<p>А Carmack фактически говорит:</p>
+<p>нам и не нужно
+столько разных функций</p>
+<p>↓</p>
+<p>маленькая элитная команда
+всё ещё оптимальна</p>
+<p>То есть:</p>
+<p>Romero:
+рост компании
+=
+успех</p>
+<p>Carmack:
+необязательный рост
+=
+лишняя сложность</p>
+<p>Следовательно, часть исхода даже соответствует стратегии Carmack.</p>
+<p>Не обязательно персонально желательна.</p>
+<p>Но организационно — вполне.</p>
+<p>Jay Wilbur тоже уходит</p>
+<p>Вот эта потеря особенно символична, потому что Wilbur связывал id буквально с её доисторическим периодом.</p>
+<p>Он:</p>
+<p>знал Romero ещё до Softdisk;</p>
+<p>помог собрать раннюю команду;</p>
+<p>был рядом с Gamer’s Edge;</p>
+<p>помогал в тайной разработке Keen;</p>
+<p>затем вернулся в id;</p>
+<p>построил существенную часть её business-side;</p>
+<p>организовывал self-publishing Doom.</p>
+<p>В 1997 году Wilbur покидает id и переходит в Epic MegaGames, где затем участвует уже в росте конкурирующей технологической и игровой компании вокруг Unreal.
+MobyGames</p>
+<p>И это особенно иронично с учётом будущей войны:</p>
+<p>id Tech
+VS
+Unreal Engine</p>
+<p>Один из людей, который помогал строить бизнес старой id, теперь оказывается у Epic.</p>
+<p>Но management-линию Wilbur → Hollenshead отдельно разберём следующим пунктом; здесь важен сам факт:</p>
+<p>ещё один человек из Softdisk/Keen-era organizational DNA исчезает.</p>
+<p>Sandy Petersen держится дольше — до июня 1997-го</p>
+<p>Petersen переживает:</p>
+<p>Doom
+Doom II
+Quake</p>
+<p>и ещё некоторое время остаётся в post-Romero id.</p>
+<p>Но в июне 1997 года уходит в Ensemble Studios.
+Age of Empires</p>
+<p>И вот здесь особенно интересно направление ухода.</p>
+<p>Не:</p>
+<p>ещё одна FPS-компания</p>
+<p>А:</p>
+<p>ENSEMBLE</p>
+<p>↓</p>
+<p>Age of Empires</p>
+<p>То есть человек, который пришёл в id с:</p>
+<p>tabletop RPG;</p>
+<p>MicroProse;</p>
+<p>системным дизайном,</p>
+<p>после нескольких лет pure-FPS production уходит делать стратегию.</p>
+<p>По собственной поздней оценке Petersen, он был просто ещё одной частью fallout после Quake. Он прямо говорил: Quake «уничтожил» прежнюю id, а компания после ухода ключевых людей уже никогда не была той же.
+Старые Игры
++1</p>
+<p>Это субъективная, очень жёсткая оценка.</p>
+<p>Но карьерный выбор показателен:</p>
+<p>id:
+ещё сильнее
+фокусируется на FPS</p>
+<p>Petersen:
+уходит туда,
+где можно делать
+совсем другой тип игры
+А American McGee показывает, что хвост распада тянулся уже через Quake II</p>
+<p>McGee после Quake не ушёл сразу.</p>
+<p>Это важно.</p>
+<p>Он остался и стал одним из level designers Quake II наряду с Tim Willits, Christian Antkow, Jennell Jaquays и Brandon James. Официальные credits Quake II хорошо показывают уже новую команду.
+MobyGames</p>
+<p>Но 12 марта 1998 года Carmack написал в .plan:</p>
+<p>American McGee has been let go from Id.</p>
+<p>И кратко объяснил: вклад McGee в Doom II, Quake и Quake II велик, но компания «не видела того, что хотела видеть».
+GitHub</p>
+<p>То есть ещё один человек Doom/Quake-поколения исчезает.</p>
+<p>McGee затем перейдёт в Electronic Arts и станет creative director American McGee’s Alice.
+Википедия</p>
+<p>Снова неудобно объяснять departure отсутствием таланта.</p>
+<p>В итоге «исход после Quake» правильнее понимать как волну 1996–1998</p>
+<p>Примерно:</p>
+<p>DAVE TAYLOR
+программист
+Doom / Quake
+↓
+Crack dot Com
+JOHN ROMERO
+co-founder / design / tools
+↓
+Ion Storm
+MICHAEL ABRASH
+graphics engineering
+↓
+Microsoft
+MIKE WILSON
+marketing / business
+↓
+Ion Storm
+SHAWN GREEN
+support / production / programming
+↓
+Ion Storm
+JAY WILBUR
+business / operations
+↓
+Epic MegaGames
+SANDY PETERSEN
+game / level design
+↓
+Ensemble Studios
+AMERICAN McGEE
+level design
+↓
+Electronic Arts</p>
+<p>Не за неделю.</p>
+<p>Но по меркам компании, которой самой всего несколько лет, — практически мгновенно.</p>
+<p>Причём они расходятся не в одну конкурирующую студию</p>
+<p>Вот это особенно важно.</p>
+<p>Если бы все ушли к Romero:</p>
+<p>id
+раскололась
+на два лагеря</p>
+<p>Но произошло другое:</p>
+<p>Romero / Wilson / Green
+→ Ion Storm</p>
+<p>Taylor
+→ Crack dot Com</p>
+<p>Abrash
+→ Microsoft</p>
+<p>Wilbur
+→ Epic</p>
+<p>Petersen
+→ Ensemble</p>
+<p>McGee
+→ EA</p>
+<p>Это значит, что проблема была шире одной личной войны:</p>
+<p>старая id оказалась мощным генератором людей, которые больше не обязательно видели своё будущее внутри id.</p>
+<p>Компания обучила их.</p>
+<p>Сделала известными.</p>
+<p>Дала деньги.</p>
+<p>Дала опыт мирового уровня.</p>
+<p>И теперь каждый мог найти себе следующий проект почти где угодно.</p>
+<p>Это типичная проблема сверхуспешной маленькой компании</p>
+<p>В 1991 человеку внутри id очень трудно сказать:</p>
+<p>я уйду,
+там будет лучше</p>
+<p>Потому что id сама — безумный новый шанс.</p>
+<p>К 1996:</p>
+<p>в резюме:</p>
+<p>DOOM
+DOOM II
+QUAKE</p>
+<p>Ты практически можешь выбирать работодателя.</p>
+<p>Или открыть собственную компанию.</p>
+<p>То есть успех id резко увеличил:</p>
+<p>OUTSIDE OPTIONS</p>
+<p>для каждого сотрудника.</p>
+<p>А старая культура компании при этом была не особенно хороша в:</p>
+<p>career ladders</p>
+<p>retention</p>
+<p>management</p>
+<p>разных параллельных
+творческих траекториях</p>
+<p>Если тебе перестало нравиться направление единственной игры id —</p>
+<p>внутри компании почти некуда перейти.</p>
+<p>Вот это особенно важно</p>
+<p>Современная крупная студия может сказать дизайнеру:</p>
+<p>тебе не нравится
+Project A?</p>
+<p>↓</p>
+<p>есть Project B</p>
+<p>или incubation team</p>
+<p>или new IP group</p>
+<p>id Carmack:</p>
+<p>у нас одна игра</p>
+<p>↓</p>
+<p>либо ты хочешь
+делать ЭТУ игру</p>
+<p>↓</p>
+<p>либо проблема</p>
+<p>Именно это было сознательной частью стратегии маленькой focused company. Carmack в 1997 году прямо защищал идею, что несколько programmers, artists и designers по-прежнему способны делать лучшие игры мира.
+WIRED</p>
+<p>Преимущество:</p>
+<p>сверхфокус</p>
+<p>Цена:</p>
+<p>для творческого человека
+почти нет альтернативной
+внутренней траектории
+Поэтому post-Quake id не просто потеряла людей — она потеряла разные типы мышления</p>
+<p>Посмотрим функционально.</p>
+<p>Romero уходит</p>
+<p>Теряется:</p>
+<p>design counterweight</p>
+<p>external expansion</p>
+<p>community evangelism</p>
+<p>tools tradition</p>
+<p>public rock-star energy
+Abrash уходит</p>
+<p>Теряется:</p>
+<p>technical peer Carmack
++
+low-level graphics specialization
+Taylor уходит</p>
+<p>Теряется:</p>
+<p>generalist / integration programmer
+с Unix-background
+Wilson уходит</p>
+<p>Теряется:</p>
+<p>aggressive marketing /
+distribution experimentation
+Green уходит</p>
+<p>Теряется:</p>
+<p>универсальный человек,
+выросший из support
+в production/programming
+Wilbur уходит</p>
+<p>Теряется:</p>
+<p>business continuity
+ещё от Softdisk-era
+Petersen уходит</p>
+<p>Теряется:</p>
+<p>senior systemic designer</p>
+<p>+</p>
+<p>человек с большим
+не-FPS игровым опытом
+McGee уходит чуть позже</p>
+<p>Теряется:</p>
+<p>ещё один Doom-grown
+авторский level designer</p>
+<p>Это не просто:</p>
+<p>8 employees</p>
+<p>Это разные противовесы внутри культуры компании.</p>
+<p>И кто остаётся?</p>
+<p>Вот здесь хорошо виден настоящий переход поколений.</p>
+<p>К Quake II 1997 года core credits уже выглядят совсем иначе.</p>
+<p>Programming
+John Carmack
+John Cash
+Brian Hook
+Art
+Adrian Carmack
+Kevin Cloud
+Paul Steed
+Level Design
+Tim Willits
+American McGee
+Christian Antkow
+Jennell Jaquays
+Brandon James
+Business</p>
+<p>уже новый набор людей.
+MobyGames
++1</p>
+<p>Сравним с Doom:</p>
+<p>Carmack
+Romero
+Adrian
+Cloud
+Petersen
+Taylor
+Hall legacy
+Wilbur</p>
+<p>Это уже практически другая production machine.</p>
+<p>Из центральных фигур первой id остаётся очень узкое ядро</p>
+<p>Если брать именно линию founders/ранней Doom-era:</p>
+<p>John Carmack
+остался</p>
+<p>Adrian Carmack
+остался</p>
+<p>Kevin Cloud
+остался</p>
+<p>Romero — нет.</p>
+<p>Hall — давно нет.</p>
+<p>Wilbur — уходит.</p>
+<p>Petersen — уходит.</p>
+<p>Taylor — нет.</p>
+<p>Abrash — нет.</p>
+<p>То есть к концу 1997:</p>
+<p>преемственность существует, но прежнего ансамбля больше нет.</p>
+<p>Именно поэтому говорить:</p>
+<p><strong>id 1993</strong></p>
+<p>id 1997</p>
+<p>только потому, что логотип тот же и Carmack всё ещё там, — очень слабая историческая модель.</p>
+<p>При этом новая id не становится слабой</p>
+<p>Это тоже важно.</p>
+<p>Нельзя написать:</p>
+<p>старые гении ушли
+↓
+остались бездари</p>
+<p>Quake II покажет обратное.</p>
+<p>Новая команда содержит:</p>
+<p>Carmack</p>
+<p>Adrian</p>
+<p>Cloud</p>
+<p>Cash</p>
+<p>Hook</p>
+<p>Willits</p>
+<p>McGee</p>
+<p>Steed</p>
+<p>Jaquays</p>
+<p>Antkow</p>
+<p>и других сильных людей.</p>
+<p>Quake II будет технически и коммерчески крупной игрой.</p>
+<p>А затем появится Quake III.</p>
+<p>То есть:</p>
+<p>ORIGINAL id DIES</p>
+<p>не равно:</p>
+<p>ID SOFTWARE DIES</p>
+<p>Правильнее:</p>
+<p>одна организационная версия
+компании заканчивается</p>
+<p>↓</p>
+<p>другая начинает
+работать иначе
+Собственно, Sandy поэтому и говорит «id never was the same»</p>
+<p>Не:</p>
+<p>после нас они ничего не умели.</p>
+<p>Хотя сам Petersen действительно довольно резко оценивает поздние игры компании — это уже его вкусовая позиция.</p>
+<p>Исторически более полезная часть его высказывания:</p>
+<p>после Quake ушла настолько большая доля ключевой команды, что человеческая система id стала другой.
+Thread Reader App</p>
+<p>С этим спорить намного сложнее.</p>
+<p>И современная пресса увидела это ещё в реальном времени</p>
+<p>Не спустя двадцать лет, когда мы уже знаем всю историю.</p>
+<p>18 января 1997 года Wired буквально публикует материал под заголовком:</p>
+<p>Braindrain at id. Mood “Dark and Gloomy”</p>
+<p>То есть уже через полгода после Quake внешний наблюдатель видел:</p>
+<p>Romero ушёл</p>
+<p>Wilson ушёл</p>
+<p>Green ушёл</p>
+<p>Ion Storm растёт</p>
+<p>id сокращает
+publishing ambitions</p>
+<p>Carmack публично
+защищает маленькую
+technology-driven модель</p>
+<p>Это уже воспринималось как смена эпохи.
+WIRED</p>
+<p>Особенно важно, что Carmack не пытался восстановить старую команду</p>
+<p>Он не говорит:</p>
+<p>надо найти
+нового Romero</p>
+<p>нового Petersen</p>
+<p>нового Wilbur</p>
+<p>нового Abrash</p>
+<p>Наоборот.</p>
+<p>Стратегия становится:</p>
+<p>упростить компанию</p>
+<p>↓</p>
+<p>уменьшить число
+параллельных ambitions</p>
+<p>↓</p>
+<p>сфокусироваться
+на game + technology</p>
+<p>↓</p>
+<p>набрать людей,
+которые хорошо работают
+именно внутри этой модели</p>
+<p>То есть brain drain одновременно:</p>
+<p>вынужденная потеря</p>
+<p>и:</p>
+<p>селекция новой
+корпоративной идентичности
+И вот это особенно видно на Tim Willits</p>
+<p>Willits — уже не founder.</p>
+<p>Не Softdisk.</p>
+<p>Не Keen.</p>
+<p>Не Wolfenstein.</p>
+<p>Он буквально:</p>
+<p>игрок Doom
+↓
+modder
+↓
+нанят id
+↓
+level designer Quake</p>
+<p>То есть человек, рождённый экосистемой, которую создала старая id.</p>
+<p>После ухода Romero/Petersen именно такие люди начинают представлять будущее design-side компании.</p>
+<p>Wired в 1998 году даже отмечала иронию: Willits теперь сидел в бывшем кабинете Romero.
+WIRED</p>
+<p>Практически физическая передача поколения:</p>
+<p>ROMERO OFFICE
+↓
+WILLITS OFFICE
+Поэтому Quake оказался одновременно вершиной и машиной кадрового рассеивания</p>
+<p>До Quake:</p>
+<p>id собирает
+необычайно сильных людей
+в одной компании</p>
+<p>После Quake:</p>
+<p>эти люди
+разносят полученный опыт
+по всей индустрии</p>
+<p>Посмотрите куда:</p>
+<p>id
+↓
+Ion Storm
+id
+↓
+Epic
+id
+↓
+Ensemble
+id
+↓
+Microsoft
+id
+↓
+Electronic Arts
+id
+↓
+Crack dot Com</p>
+<p>То есть влияние id после Quake растёт ещё и потому, что её бывшие сотрудники начинают строить другие компании и игры.</p>
+<p>Это почти кадровый аналог engine licensing.</p>
+<p>Можно сказать, id начала «лицензировать» индустрии уже не только код, но и людей</p>
+<p>Не буквально, конечно.</p>
+<p>Но эффект:</p>
+<p>человек приходит в id</p>
+<p>↓</p>
+<p>учится работать
+на Doom / Quake scale</p>
+<p>↓</p>
+<p>впитывает:</p>
+<p>tools
+3D design
+networking
+shareware culture
+modding
+engine mentality
+быстрый iteration</p>
+<p>↓</p>
+<p>уходит</p>
+<p>↓</p>
+<p>несёт эти идеи
+в другую компанию</p>
+<p>Именно поэтому genealogy id намного шире собственных релизов.</p>
+<p>Но для самой компании цена огромна</p>
+<p>Потому что tacit knowledge нельзя просто скопировать как source tree.</p>
+<p>Когда уходит Petersen, с ним уходит:</p>
+<p>память о том,
+как Doom собирался
+в последние десять недель</p>
+<p>Когда уходит Romero:</p>
+<p>память о Keen → Wolf →
+Doom production evolution</p>
+<p>Когда уходит Wilbur:</p>
+<p>business memory
+от Gamer's Edge
+до self-publishing Doom</p>
+<p>Когда уходит Abrash:</p>
+<p>часть Quake renderer
+engineering dialogue</p>
+<p>Документы останутся.</p>
+<p>Код останется.</p>
+<p>IP останется.</p>
+<p>Но:</p>
+<p>ПОЧЕМУ
+мы делали именно так?</p>
+<p>частично уходит вместе с людьми.</p>
+<p>Это и есть организационная память.</p>
+<p>Поэтому id 1997 года уже нельзя честно называть «той же командой, которая сделала Doom»</p>
+<p>Юридически:</p>
+<p>ID SOFTWARE</p>
+<p>та же компания.</p>
+<p>IP:</p>
+<p>Doom
+Quake
+Wolfenstein</p>
+<p>те же.</p>
+<p>Некоторые ключевые люди:</p>
+<p>John Carmack
+Adrian Carmack
+Kevin Cloud</p>
+<p>остались.</p>
+<p>Но production organism другой.</p>
+<p>Doom-era id
+Carmack
+technology</p>
+<p>Romero
+tools / gameplay / direction</p>
+<p>Adrian + Cloud
+art</p>
+<p>Petersen
+design</p>
+<p>Taylor
+integration</p>
+<p>Wilbur
+business</p>
+<p>+
+маленькая старая культура
+Post-Quake id
+Carmack
+ещё сильнее
+центр technology / direction</p>
+<p>Adrian + Cloud
+стабильное owner/art ядро</p>
+<p>Cash + Hook
+новая engineering generation</p>
+<p>Willits + McGee +
+Jaquays + Antkow + James
+новая design generation</p>
+<p>новая business structure</p>
+<p>Это уже id 4 из нашей будущей классификации поколений, а не Doom-id.</p>
+<p>И особенно хорошо это видно через один вопрос</p>
+<p>Представим совещание в 1993:</p>
+<p>Какой должна быть следующая игра id?</p>
+<p>В комнате могут спорить:</p>
+<p>Carmack</p>
+<p>Romero</p>
+<p>Hall / затем Petersen</p>
+<p>Adrian</p>
+<p>Cloud</p>
+<p>Разные философии.</p>
+<p>Разные вкусы.</p>
+<p>Разные источники власти.</p>
+<p>К 1997 центр тяжести заметно меняется:</p>
+<p>Carmack</p>
+<p>становится существенно труднее противопоставить равному по историческому весу человеку.</p>
+<p>Romero нет.</p>
+<p>Hall нет.</p>
+<p>Petersen уходит.</p>
+<p>Wilbur уходит с business side.</p>
+<p>И это создаёт предпосылку следующей эпохи:</p>
+<p>post-Romero id становится гораздо более явно Carmack-driven technology company.</p>
+<p>Но саму эту новую модель мы разберём уже в соответствующем пункте 33.</p>
+<p>Если собрать исход хронологически
+начало 1996</p>
+<p>Dave Taylor
+↓
+Crack dot Com</p>
+<p>↓</p>
+<p>22 июня 1996</p>
+<p>QUAKE</p>
+<p>↓</p>
+<p>6 августа 1996</p>
+<p>John Romero
+↓
+уволен
+↓
+Ion Storm</p>
+<p>↓</p>
+<p>1996</p>
+<p>Michael Abrash
+↓
+Microsoft</p>
+<p>↓</p>
+<p>10 января 1997</p>
+<p>Mike Wilson
++
+Shawn Green
+↓
+Ion Storm</p>
+<p>↓</p>
+<p>1997</p>
+<p>Jay Wilbur
+↓
+Epic MegaGames</p>
+<p>↓</p>
+<p>июнь 1997</p>
+<p>Sandy Petersen
+↓
+Ensemble Studios</p>
+<p>↓</p>
+<p>12 марта 1998</p>
+<p>American McGee
+↓
+уволен
+↓
+Electronic Arts</p>
+<p>И каждый departure отдельно можно объяснить.</p>
+<p>Но вместе они образуют именно структурный перелом.</p>
+<p>В этом смысле Quake действительно закончил первоначальную id</p>
+<p>Не потому что все люди ушли непосредственно из-за одного плохого проекта.</p>
+<p>Не потому что Carmack всех выгнал.</p>
+<p>Не потому что Romero увёл половину компании.</p>
+<p>Не потому что crunch был единственной причиной.</p>
+<p>А потому что Quake одновременно:</p>
+<p>выжег старую команду
++
+обострил различия founders
++
+сделал сотрудников чрезвычайно ценными
+на внешнем рынке
++
+показал разные представления
+о будущем id
++
+заставил компанию
+выбрать более узкую стратегию</p>
+<p>После чего люди начали расходиться по направлениям, которые лучше соответствовали уже их собственным амбициям.</p>
+<p>Именно поэтому Quake — последняя игра, на титрах которой ещё можно увидеть значительную часть того человеческого организма, который вырос из Doom-era id.</p>
+<p>После неё логотип остаётся.</p>
+<p>Carmack остаётся.</p>
+<p>Технологическая традиция остаётся.</p>
+<p>Но команда уже другая.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<hr/>
+<p><a href="04-doom-ecosystem.html">← IV. Экосистема DOOM</a> · <a href="index.html">Общее оглавление</a> · <a href="06-id-after-romero.html">VI. id после Romero →</a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing" class="md-footer__link md-footer__link--prev" href="04-doom-ecosystem.html">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D" class="md-footer__link md-footer__link--next" href="06-id-after-romero.html">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

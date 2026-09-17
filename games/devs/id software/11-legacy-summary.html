@@ -1,0 +1,4003 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="10-doom-rebirth-modern-id.html" rel="prev"/>
+<link href="12-side-branches.html" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>id Software — XI. Наследие id: open source, modding и исторические выводы - База данных</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#id-software-xi-id-open-source-modding">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              id Software — XI. Наследие id: open source, modding и исторические выводы
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Arkane.html">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.html">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="01-origins-softdisk-keen.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="02-wolfenstein.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="03-doom-birth.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="04-doom-ecosystem.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="05-quake-crisis.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="06-id-after-romero.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="07-quake2-quake3-middleware.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="08-doom3-aaa.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="09-rage-zenimax-carmack.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="10-doom-rebirth-modern-id.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="11-legacy-summary.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p067">
+<span class="md-ellipsis">
+      
+        67. id Software и open source — самое недооценённое наследие Carmack-era
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p068">
+<span class="md-ellipsis">
+      
+        68. id Software и modding community
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p069">
+<span class="md-ellipsis">
+      
+        69. Почему id Tech не стала Unreal Engine
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p070">
+<span class="md-ellipsis">
+      
+        70. Все поколения id Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p071">
+<span class="md-ellipsis">
+      
+        71. Кто реально сделал id Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p072">
+<span class="md-ellipsis">
+      
+        72. Что id Software исторически делала лучше всех — и где систематически была слабой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p073">
+<span class="md-ellipsis">
+      
+        73. Мифы об id Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p074">
+<span class="md-ellipsis">
+      
+        74. Главная историческая дуга id Software
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="12-side-branches.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="MANIFEST.html">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/index.html">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/01-origins-steam.html">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/02-games-and-engines.html">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/03-inside-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/04-hardware-linux-vr.html">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/05-modern-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/06-valve-as-institution.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/07-ecosystem-and-catalog.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/08-appendices.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/09-sources-and-status.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Doom.html">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Doom30.html">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Doom3_45-103.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Quake.html">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Spider-Man.html">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/doom4-eternal.html">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/doom_eternal_51-80.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_8" id="__nav_1_2_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/index.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/01-origins-and-development.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/02-half-life-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/03-half-life-release-and-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/04-gearbox-and-consoles.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/05-half-life-2-development-and-tech.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/06-half-life-2-world-and-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/07-half-life-2-beta-release.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/08-episodes.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/09-half-life-3-and-cancelled-projects.html">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/10-vr-and-alyx-development.html">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/11-half-life-alyx-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/12-modding-and-community.html">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/13-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/14-audio.html">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/15-how-valve-makes-half-life.html">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/16-movement-and-speedrunning.html">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/CHANGES.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/Gabe%20Newell.html">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Carmack.html">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Romero.html">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stores/steam/Steam.html">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    University
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    University
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Go
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Go
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Lectures
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Lectures
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1_1_1" id="__nav_2_1_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    1. Prod
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_1_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_2_1_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Prod
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../university/go/lectures/1.%20Prod/Production%20backend.html">
+<span class="md-ellipsis">
+    
+  
+    Лекция 1. Production backend и эволюция Go
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p067">
+<span class="md-ellipsis">
+      
+        67. id Software и open source — самое недооценённое наследие Carmack-era
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p068">
+<span class="md-ellipsis">
+      
+        68. id Software и modding community
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p069">
+<span class="md-ellipsis">
+      
+        69. Почему id Tech не стала Unreal Engine
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p070">
+<span class="md-ellipsis">
+      
+        70. Все поколения id Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p071">
+<span class="md-ellipsis">
+      
+        71. Кто реально сделал id Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p072">
+<span class="md-ellipsis">
+      
+        72. Что id Software исторически делала лучше всех — и где систематически была слабой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p073">
+<span class="md-ellipsis">
+      
+        73. Мифы об id Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p074">
+<span class="md-ellipsis">
+      
+        74. Главная историческая дуга id Software
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="id-software-xi-id-open-source-modding">id Software — XI. Наследие id: open source, modding и исторические выводы<a class="headerlink" href="#id-software-xi-id-open-source-modding" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>Часть большой базы по истории id Software. Пункты <strong>67–74</strong>. Содержательный текст исходного документа сохранён без сокращений.</p>
+</blockquote>
+<p><a href="10-doom-rebirth-modern-id.html">← X. Перерождение Doom</a> · <a href="index.html">Общее оглавление</a> · <a href="12-side-branches.html">XII. Боковые ветви →</a></p>
+<h3 id="contents">Содержание<a class="headerlink" href="#contents" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="#p067">67. id Software и open source — самое недооценённое наследие Carmack-era</a></li>
+<li><a href="#p068">68. id Software и modding community</a></li>
+<li><a href="#p069">69. Почему id Tech не стала Unreal Engine</a></li>
+<li><a href="#p070">70. Все поколения id Software</a></li>
+<li><a href="#p071">71. Кто реально сделал id Software</a></li>
+<li><a href="#p072">72. Что id Software исторически делала лучше всех — и где систематически была слабой</a></li>
+<li><a href="#p073">73. Мифы об id Software</a></li>
+<li><a href="#p074">74. Главная историческая дуга id Software</a></li>
+</ul>
+<hr/>
+<h2 id="p067">67. id Software и open source — самое недооценённое наследие Carmack-era<a class="headerlink" href="#p067" title="Permanent link">¶</a></h2>
+<p>Простой пересказ:</p>
+<blockquote>
+<p>Carmack любил open source и поэтому выкладывал старые engines.</p>
+</blockquote>
+<p>Правда, но масштаба не передаёт.</p>
+<p>id десятилетиями делала почти противоестественную для коммерческой AAA-компании вещь:</p>
+<div class="highlight"><pre><span></span><code>ПОТРАТИЛИ
+ГОДЫ
+НА ENGINE
+↓
+ПРОДАЛИ
+GAME
+↓
+ПРОДАВАЛИ
+LICENSES
+↓
+ENGINE
+УСТАРЕЛ
+↓
+ВОТ SOURCE
+</code></pre></div>
+<p>В публичный доступ уходят lineage Wolfenstein 3D, Doom, Quake, Quake II, Quake III, Doom 3/id Tech 4.</p>
+<h3 id="source-code">Source code ≠ бесплатная игра<a class="headerlink" href="#source-code" title="Permanent link">¶</a></h3>
+<p>Ключевое разделение:</p>
+<div class="highlight"><pre><span></span><code>ENGINE SOURCE
+=
+open / GPL
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ART
+LEVELS
+MUSIC
+SOUNDS
+GAME DATA
+=
+copyrighted
+</code></pre></div>
+<p>Можно сделать standalone game на открытом engine со своими assets.</p>
+<p>Но оригинальные commercial data всё ещё нужно легально иметь.</p>
+<p>Очень элегантная конструкция:</p>
+<div class="highlight"><pre><span></span><code>TECHNOLOGY
+→ public knowledge
+
+CONTENT
+→ commercial IP
+</code></pre></div>
+<h3 id="wolfenstein-3d">Wolfenstein 3D — начало традиции<a class="headerlink" href="#wolfenstein-3d" title="Permanent link">¶</a></h3>
+<p>1995 source release ещё не современный GPL-style open source: license была ограничительной/non-commercial.</p>
+<p>Но сама идея уже радикальна:</p>
+<div class="highlight"><pre><span></span><code>ВОТ
+SOURCE
+НАШЕЙ
+RECENT COMMERCIAL GAME
+</code></pre></div>
+<h3 id="doom-1997">Doom 1997<a class="headerlink" href="#doom-1997" title="Permanent link">¶</a></h3>
+<p>23 декабря 1997 Carmack публикует Doom source.</p>
+<p>Первоначально Linux version и не GPL.</p>
+<p>Почему не полный DOS release?</p>
+<p>Потому что proprietary DMX sound library не принадлежит id целиком.</p>
+<p>Вот первый большой lesson:</p>
+<div class="highlight"><pre><span></span><code>ТЫ
+НЕ МОЖЕШЬ
+ОТКРЫТЬ
+ТО,
+ЧЕМ
+НЕ ВЛАДЕЕШЬ
+</code></pre></div>
+<p>Это потом будет влиять на architectural choices Carmack.</p>
+<h3 id="doom-gpl">Doom переходит под GPL<a class="headerlink" href="#doom-gpl" title="Permanent link">¶</a></h3>
+<p>В 1999 Doom relicensed под GNU GPL.</p>
+<p>Теперь модель становится copyleft:</p>
+<div class="highlight"><pre><span></span><code>ВЗЯЛ
+SOURCE
+↓
+ИЗМЕНИЛ
+↓
+РАСПРОСТРАНЯЕШЬ
+DERIVED BINARY
+↓
+SOURCE CHANGES
+ТОЖЕ
+ДОЛЖНЫ
+ОСТАТЬСЯ
+ДОСТУПНЫ
+</code></pre></div>
+<p>Это уже не «посмотрите мой код».</p>
+<p>Это попытка создать живую публичную lineage.</p>
+<h3 id="gpl-public-domain">Почему GPL, а не просто public domain<a class="headerlink" href="#gpl-public-domain" title="Permanent link">¶</a></h3>
+<p>Carmack видел, как закрытые mod forks исчезают вместе с разработчиками/дисками.</p>
+<p>GPL защищает community от ситуации:</p>
+<div class="highlight"><pre><span></span><code>OPEN SOURCE
+↓
+кто-то
+улучшил
+↓
+закрыл
+↓
+source
+потерялся
+</code></pre></div>
+<p>То есть license — ещё и preservation mechanism.</p>
+<h3 id="quake-1999">Quake 1999<a class="headerlink" href="#quake-1999" title="Permanent link">¶</a></h3>
+<p>Открываются WinQuake, GLQuake, QuakeWorld, GLQuakeWorld.</p>
+<p>Community получает actual shipping implementation одной из самых влиятельных graphics/network architectures десятилетия.</p>
+<h3 id="quake-ii-2001">Quake II 2001<a class="headerlink" href="#quake-ii-2001" title="Permanent link">¶</a></h3>
+<p>Опять GPL.</p>
+<p>Carmack отдельно подчёркивает: commercial use возможен при соблюдении GPL.</p>
+<p>Хочешь закрытый commercial fork — можно отдельно договариваться с copyright owner о proprietary license.</p>
+<p>Получается dual model:</p>
+<div class="highlight"><pre><span></span><code>OPEN PROJECT
+→ GPL
+
+CLOSED COMMERCIAL
+→ отдельная licence
+</code></pre></div>
+<h3 id="cheats-argument">Cheats argument<a class="headerlink" href="#cheats-argument" title="Permanent link">¶</a></h3>
+<p>Открытый multiplayer source очевидно помогает читерам.</p>
+<p>Carmack отвечает очень характерно: absolute cheat-proof client всё равно фундаментально невозможен, если code исполняется на машине потенциально hostile user.</p>
+<p>Не надо платить вечной закрытостью за иллюзию полной security.</p>
+<h3 id="quake-iii-2005">Quake III 2005<a class="headerlink" href="#quake-iii-2005" title="Permanent link">¶</a></h3>
+<p>Открывается уже огромная часть development stack:</p>
+<ul>
+<li>
+<p>renderer;</p>
+</li>
+<li>
+<p>game code;</p>
+</li>
+<li>
+<p>OS layer;</p>
+</li>
+<li>
+<p>bot tools;</p>
+</li>
+<li>
+<p>QVM toolchain;</p>
+</li>
+<li>
+<p>q3map;</p>
+</li>
+<li>
+<p>Q3Radiant.</p>
+</li>
+</ul>
+<p>Теперь public получает не только runtime, но значительную часть того, <strong>как game производилась</strong>.</p>
+<h3 id="ioquake3">ioquake3<a class="headerlink" href="#ioquake3" title="Permanent link">¶</a></h3>
+<p>Из GPL-релиза вырастает долгоживущая free-software lineage:</p>
+<ul>
+<li>
+<p>bug fixes;</p>
+</li>
+<li>
+<p>новые OS;</p>
+</li>
+<li>
+<p>64-bit;</p>
+</li>
+<li>
+<p>audio improvements;</p>
+</li>
+<li>
+<p>networking;</p>
+</li>
+<li>
+<p>build systems;</p>
+</li>
+<li>
+<p>standalone games.</p>
+</li>
+</ul>
+<p>Компания перестаёт поддерживать engine — community не обязана прекращать.</p>
+<h3 id="doom-source-ports">Doom source ports<a class="headerlink" href="#doom-source-ports" title="Permanent link">¶</a></h3>
+<p>Это вообще отдельная цивилизация.</p>
+<p>После source release Doom постепенно становится независима от исходного DOS machine.</p>
+<p>Community переписывает platform layers, renderers, input, networking, scripting, limits.</p>
+<p>Отсюда культурное:</p>
+<div class="highlight"><pre><span></span><code>DOOM
+RUNS
+ON EVERYTHING
+</code></pre></div>
+<p>имеет технический фундамент, а не только мем.</p>
+<h3 id="doom-3-id-tech-4-2011">Doom 3 / id Tech 4 — 2011<a class="headerlink" href="#doom-3-id-tech-4-2011" title="Permanent link">¶</a></h3>
+<p>22 ноября 2011 id открывает Doom 3 source под GPLv3.</p>
+<p>Перед release всплывает patent issue с shadow technique.</p>
+<p>Carmack не говорит «ну ладно, отменяем».</p>
+<p>Он переписывает проблемную implementation, чтобы source можно было legal-safe выпустить.</p>
+<p>Это очень сильное доказательство личной conviction.</p>
+<h3 id="zenimax">И всё это происходит уже после продажи ZeniMax<a class="headerlink" href="#zenimax" title="Permanent link">¶</a></h3>
+<p>То есть формула:</p>
+<div class="highlight"><pre><span></span><code>ZeniMax
+купила id
+↓
+open source
+сразу умер
+</code></pre></div>
+<p>неверна.</p>
+<p>После acquisition выходят RTCW/Enemy Territory source и Doom 3 GPL.</p>
+<p>Пока Carmack внутри и продавливает policy — ZeniMax её допускает.</p>
+<h3 id="carmack">Почему Carmack это делал<a class="headerlink" href="#carmack" title="Permanent link">¶</a></h3>
+<p>Не одна причина.</p>
+<h4 id="_1">Обучение<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
+<p>Молодой developer может открыть <strong>реальный shipping engine</strong>, а не tutorial sample.</p>
+<h4 id="preservation">Preservation<a class="headerlink" href="#preservation" title="Permanent link">¶</a></h4>
+<p>OS меняется — community портирует.</p>
+<p>Compiler меняется — community чинит.</p>
+<p>Company исчезла — code всё ещё живёт.</p>
+<h4 id="_2">Инженерная честность<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<p>Старая технология, которая больше не является competitive secret, может стать knowledge.</p>
+<h4 id="community-maintenance">Community maintenance<a class="headerlink" href="#community-maintenance" title="Permanent link">¶</a></h4>
+<p>id больше не финансирует engine, но community продолжает fixes/ports.</p>
+<h4 id="foundation-games">Foundation для новых games<a class="headerlink" href="#foundation-games" title="Permanent link">¶</a></h4>
+<p>GPL-engine + свои assets = standalone product.</p>
+<h3 id="source-releases-graphics-programming">Source releases как исторический архив graphics programming<a class="headerlink" href="#source-releases-graphics-programming" title="Permanent link">¶</a></h3>
+<p>Можно буквально читать эволюцию:</p>
+<div class="highlight"><pre><span></span><code>Wolf3D
+→ ray casting
+
+Doom
+→ BSP / 2.5D
+
+Quake
+→ polygonal 3D / client-server
+
+Quake II
+→ mature OpenGL / game modules
+
+Quake III
+→ shaders / VM / arena architecture
+
+Doom 3
+→ unified dynamic lighting / modern C++
+</code></pre></div>
+<p>Редчайший публичный geological record коммерческого realtime 3D.</p>
+<h3 id="id-tech-5">id Tech 5 должна была продолжить традицию<a class="headerlink" href="#id-tech-5" title="Permanent link">¶</a></h3>
+<p>Carmack в 2007 прямо говорил: id Tech 5 eventually тоже должна стать open source. Он называл это «law of the land» внутри id и personal conviction.</p>
+<p>Более того, architectural decisions старались принимать так, чтобы proprietary dependencies не сделали будущий source release невозможным.</p>
+<p>Но этого не произошло.</p>
+<h3 id="_3">Граница эпох<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>id Tech 1
+open
+
+id Tech 2
+open
+
+id Tech 3
+open
+
+id Tech 4
+open
+
+────────────
+
+id Tech 5
+closed
+
+id Tech 6
+closed
+
+id Tech 7
+closed
+
+id Tech 8
+closed
+</code></pre></div>
+<p>Очень символично:</p>
+<div class="highlight"><pre><span></span><code>2011
+последний major GPL release
+↓
+2013
+Carmack leaves
+↓
+дальше
+ни одного major idTech
+GPL release
+</code></pre></div>
+<h3 id="bethesda">Но не надо писать «Bethesda запретила»<a class="headerlink" href="#bethesda" title="Permanent link">¶</a></h3>
+<p>Одной официальной причины нет.</p>
+<p>Вероятнее всего складываются:</p>
+<ul>
+<li>
+<p>уход главного internal champion;</p>
+</li>
+<li>
+<p>изменение strategic role idTech;</p>
+</li>
+<li>
+<p>shared internal branches;</p>
+</li>
+<li>
+<p>third-party/console NDA complexity;</p>
+</li>
+<li>
+<p>дорогой legal cleanup;</p>
+</li>
+<li>
+<p>отсутствие business priority.</p>
+</li>
+</ul>
+<p>Главное различие:</p>
+<div class="highlight"><pre><span></span><code>CARMACK-era:
+FUTURE OPEN SOURCE
+=
+ARCHITECTURAL CONSTRAINT
+СЕГОДНЯ
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>MODERN era:
+FUTURE OPEN SOURCE
+=
+НЕ ЗАЯВЛЕННАЯ
+DESIGN GOAL
+</code></pre></div>
+<p>Вот реальный культурный разрыв.</p>
+<h3 id="modern-id">Парадокс modern id<a class="headerlink" href="#modern-id" title="Permanent link">¶</a></h3>
+<p>Она значительно лучше занимается preservation <strong>игр</strong>:</p>
+<ul>
+<li>
+<p>Doom 64;</p>
+</li>
+<li>
+<p>Quake;</p>
+</li>
+<li>
+<p>Quake II;</p>
+</li>
+<li>
+<p>DOOM + DOOM II;</p>
+</li>
+<li>
+<p>Heretic/Hexen.</p>
+</li>
+</ul>
+<p>Но хуже занимается preservation <strong>engine source</strong>.</p>
+<p>Официальный remaster означает:</p>
+<div class="highlight"><pre><span></span><code>КОМПАНИЯ
+ДАЁТ
+ТЕБЕ
+СОВРЕМЕННУЮ
+ВЕРСИЮ
+</code></pre></div>
+<p>Open source означает:</p>
+<div class="highlight"><pre><span></span><code>ДАЖЕ
+ЕСЛИ
+КОМПАНИЯ
+ИСЧЕЗНЕТ
+
+COMMUNITY
+МОЖЕТ
+ПРОДОЛЖАТЬ
+</code></pre></div>
+<p>И это более радикальная свобода.</p>
+<h3 id="_4">Главный итог<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>id сохранила Carmack-values:</p>
+<div class="highlight"><pre><span></span><code>PERFORMANCE
+LOW LATENCY
+OWN ENGINE
+LOW-LEVEL CONTROL
+SHIP WORKING CODE
+</code></pre></div>
+<p>Но почти не сохранила:</p>
+<div class="highlight"><pre><span></span><code>OLD ENGINE
+SHOULD
+EVENTUALLY
+BECOME
+FREE SOFTWARE
+</code></pre></div>
+<p>Это отличный пример разницы между <strong>company DNA</strong> и <strong>personal Carmack DNA</strong>.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p068">68. id Software и modding community<a class="headerlink" href="#p068" title="Permanent link">¶</a></h2>
+<p>id не изобрела модификацию игр.</p>
+<p>Но она сделала нечто важнее для modern PC culture:</p>
+<h3 id="moddability">превратила moddability из случайной уязвимости программы в сознательное свойство продукта.<a class="headerlink" href="#moddability" title="Permanent link">¶</a></h3>
+<h3 id="wolfenstein-3d-lesson">Wolfenstein 3D — lesson<a class="headerlink" href="#wolfenstein-3d-lesson" title="Permanent link">¶</a></h3>
+<p>Игроки сами начинают reverse-engineer data, менять maps/sprites.</p>
+<p>Carmack видит:</p>
+<div class="highlight"><pre><span></span><code>ЛЮДИ
+ВСЁ РАВНО
+БУДУТ
+ЛОМАТЬ
+GAME
+</code></pre></div>
+<p>И в Doom решает архитектурно облегчить это.</p>
+<h3 id="doom-engine-data">Doom разделяет engine и data<a class="headerlink" href="#doom-engine-data" title="Permanent link">¶</a></h3>
+<p>Условно:</p>
+<div class="highlight"><pre><span></span><code>DOOM.EXE
+=
+engine / logic
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>DOOM.WAD
+=
+levels
+textures
+sprites
+sounds
+music
+data
+</code></pre></div>
+<p>PWAD позволяет распространять только delta/replacement resources, а не всю игру.</p>
+<p>Это гениально одновременно технически и коммерчески:</p>
+<div class="highlight"><pre><span></span><code>MOD
+маленький
+↓
+легко качать
+↓
+не содержит
+всю Doom
+↓
+base game
+всё ещё нужна
+</code></pre></div>
+<h3 id="editor-id-consumer-product">Но editor id не выдала как consumer product в день релиза<a class="headerlink" href="#editor-id-consumer-product" title="Permanent link">¶</a></h3>
+<p>Community сама строит toolchain:</p>
+<ul>
+<li>
+<p>Unofficial Doom Specs;</p>
+</li>
+<li>
+<p>DEU;</p>
+</li>
+<li>
+<p>node builders;</p>
+</li>
+<li>
+<p>graphics/audio tools;</p>
+</li>
+<li>
+<p>tutorials.</p>
+</li>
+</ul>
+<p>Уже весной 1994 полноценные user maps реально распространяются.</p>
+<p>То есть id открывает дверь, а community строит лестницу.</p>
+<h3 id="doom-wad">Doom WAD сначала не даёт менять всё<a class="headerlink" href="#doom-wad" title="Permanent link">¶</a></h3>
+<p>Можно менять maps/assets, но game logic сильно hard-coded.</p>
+<p>Community отвечает DeHackEd и другими hacks.</p>
+<p>И следующая id-game уже делает следующий логичный шаг.</p>
+<h3 id="quakec-game-logic">QuakeC — теперь можно менять game logic<a class="headerlink" href="#quakec-game-logic" title="Permanent link">¶</a></h3>
+<p>Quake даёт специальный C-like language для значительной части game-side logic.</p>
+<p>Теперь modder может быть:</p>
+<div class="highlight"><pre><span></span><code>LEVEL DESIGNER
++
+GAMEPLAY PROGRAMMER
++
+SYSTEM DESIGNER
+</code></pre></div>
+<p>Вот переход от «новая карта» к «новая game внутри game».</p>
+<h3 id="team-fortress">Team Fortress<a class="headerlink" href="#team-fortress" title="Permanent link">¶</a></h3>
+<p>Начинается как Quake mod.</p>
+<p>Вводит class-based team structure, roles, unique weapons, cooperation.</p>
+<p>Дальше creators уходят в Valve.</p>
+<p>Появляются Team Fortress Classic и Team Fortress 2.</p>
+<p>То есть Quake mod порождает самостоятельную franchise другой компании.</p>
+<h3 id="threewave-ctf">Threewave CTF<a class="headerlink" href="#threewave-ctf" title="Permanent link">¶</a></h3>
+<p>Community превращает capture-the-flag в один из стандартных multiplayer FPS modes.</p>
+<p>Позднее автор Zoid работает в id.</p>
+<p>Community design становится official design vocabulary.</p>
+<h3 id="rocket-arena">Rocket Arena<a class="headerlink" href="#rocket-arena" title="Permanent link">¶</a></h3>
+<p>Берёт Quake и говорит:</p>
+<div class="highlight"><pre><span></span><code>А ЧТО
+ЕСЛИ
+УБРАТЬ
+RESOURCE PICKUPS
+
+И ДАТЬ
+ВСЕМ
+WEAPONS
+СРАЗУ?
+</code></pre></div>
+<p>То есть mods становятся distributed game-design R&amp;D.</p>
+<h3 id="machinima">Machinima<a class="headerlink" href="#machinima" title="Permanent link">¶</a></h3>
+<p>Quake demo recording + controllable actors/camera превращаются в early machinima.</p>
+<p>Game становится не только game platform, но programmable realtime 3D culture platform.</p>
+<h3 id="modding-hiring-pipeline">Modding превращается в hiring pipeline<a class="headerlink" href="#modding-hiring-pipeline" title="Permanent link">¶</a></h3>
+<p>Willits — Doom modder → id.</p>
+<p>Zoid — community creator → id.</p>
+<p>Другие люди уходят в Valve, Ion Storm, Looking Glass, Ritual и т.д.</p>
+<p>Теперь level designer может доказать skill:</p>
+<div class="highlight"><pre><span></span><code>НЕ CV
+
+А
+ГОТОВАЯ MAP
+</code></pre></div>
+<h3 id="master-levels-final-doom">Master Levels и Final Doom<a class="headerlink" href="#master-levels-final-doom" title="Permanent link">¶</a></h3>
+<p>id начинает официально покупать/курировать community content.</p>
+<p>Final Doom особенно красивая петля:</p>
+<div class="highlight"><pre><span></span><code>COMMUNITY
+делает megawad
+↓
+id
+превращает
+в official retail Doom
+</code></pre></div>
+<p>То есть UGC становится commercial product задолго до современного creator-economy языка.</p>
+<h3 id="quake-ii-quake-iii-sdk-culture">Quake II / Quake III институционализируют SDK culture<a class="headerlink" href="#quake-ii-quake-iii-sdk-culture" title="Permanent link">¶</a></h3>
+<p>Game modules, QVM, Radiant, map compilers.</p>
+<p>К концу 1990-х id technology почти предполагает:</p>
+<div class="highlight"><pre><span></span><code>КТО-ТО
+ОБЯЗАТЕЛЬНО
+БУДЕТ
+ЭТО
+МЕНЯТЬ
+</code></pre></div>
+<h3 id="doom-3-mod-friendly">Doom 3 всё ещё глубоко mod-friendly<a class="headerlink" href="#doom-3-mod-friendly" title="Permanent link">¶</a></h3>
+<p>SDK открывает AI, entities, physics, weapons, animation, scripting, game logic.</p>
+<p>The Dark Mod — великолепный пример:</p>
+<div class="highlight"><pre><span></span><code>DOOM 3
+ENGINE
+↓
+полноценная
+STEALTH GAME
+</code></pre></div>
+<p>После open-source id Tech 4 проект становится standalone.</p>
+<h3 id="rage-aaa-modding">RAGE показывает новую проблему AAA modding<a class="headerlink" href="#rage-aaa-modding" title="Permanent link">¶</a></h3>
+<p>id выпускает реальные production tools.</p>
+<p>Но toolkit — десятки гигабайт и industrial complexity.</p>
+<p>Формально openness остаётся.</p>
+<p>Практически entry barrier взрывается.</p>
+<p>Сравнение:</p>
+<div class="highlight"><pre><span></span><code>DOOM 1994
+map
+→ маленький editor
+→ WAD
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>RAGE
+map
+→ industrial pipeline
+→ huge assets
+→ complex tools
+</code></pre></div>
+<p>Проблема не только corporate closure.</p>
+<h3 id="_5">Сама разработка игры стала на порядки сложнее.<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<h3 id="consoles">Consoles усложняют всё ещё сильнее<a class="headerlink" href="#consoles" title="Permanent link">¶</a></h3>
+<p>Modern game живёт в мире:</p>
+<ul>
+<li>
+<p>signed packages;</p>
+</li>
+<li>
+<p>certification;</p>
+</li>
+<li>
+<p>sandboxing;</p>
+</li>
+<li>
+<p>security;</p>
+</li>
+<li>
+<p>entitlements;</p>
+</li>
+<li>
+<p>online services;</p>
+</li>
+<li>
+<p>UGC moderation.</p>
+</li>
+</ul>
+<p>Нельзя просто сказать console player:</p>
+<div class="highlight"><pre><span></span><code>положи
+любой binary
+в папку
+</code></pre></div>
+<h3 id="snapmap-2016">SnapMap 2016 — другая философия<a class="headerlink" href="#snapmap-2016" title="Permanent link">¶</a></h3>
+<p>SnapMap не traditional modding.</p>
+<p>Это accessible consumer creation system.</p>
+<div class="highlight"><pre><span></span><code>Classic Quake modding:
+POWER ██████████
+ACCESSIBILITY ██
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>SnapMap:
+POWER ████
+ACCESSIBILITY ██████████
+</code></pre></div>
+<p>Rooms/logic/enemies уже готовы. Player собирает LEGO-like structures даже с controller.</p>
+<p>Очень удобно.</p>
+<p>Но нельзя импортировать полноценный custom art или переписать engine/game code как в QuakeC-era.</p>
+<p>Цена accessibility — sandbox.</p>
+<h3 id="community-eternal-game">Community Eternal снова начинает ломать game сама<a class="headerlink" href="#community-eternal-game" title="Permanent link">¶</a></h3>
+<p>Даже без official tools люди reverse-engineer Doom Eternal, меняют encounters, balance, assets и gameplay.</p>
+<p>И modern id неожиданно повторяет old Wolfenstein lesson:</p>
+<div class="highlight"><pre><span></span><code>COMMUNITY
+ВСЁ РАВНО
+ДЕЛАЕТ
+MODS
+↓
+ДАВАЙТЕ
+ДАДИМ
+НОРМАЛЬНЫЕ
+TOOLS
+</code></pre></div>
+<h3 id="idstudio-doom-eternal">idStudio для Doom Eternal<a class="headerlink" href="#idstudio-doom-eternal" title="Permanent link">¶</a></h3>
+<p>В 2024 public beta, в 2025 полноценный official mod support.</p>
+<p>И здесь уже важно: это не SnapMap.</p>
+<p>idStudio — production-grade editor той же линии, которой реально пользовались разработчики.</p>
+<p>Можно менять/создавать:</p>
+<ul>
+<li>
+<p>materials;</p>
+</li>
+<li>
+<p>textures;</p>
+</li>
+<li>
+<p>models;</p>
+</li>
+<li>
+<p>animations;</p>
+</li>
+<li>
+<p>sounds;</p>
+</li>
+<li>
+<p>declarations;</p>
+</li>
+<li>
+<p>entities;</p>
+</li>
+<li>
+<p>map geometry;</p>
+</li>
+<li>
+<p>navigation;</p>
+</li>
+<li>
+<p>полноценные maps.</p>
+</li>
+</ul>
+<p>То есть deep modding возвращается.</p>
+<h3 id="_6">Но цена современности огромна<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>Editor ~десятки гигабайт, asset packs тоже огромные, нужны серьёзные RAM/CPU/GPU и понимание production pipeline.</p>
+<p>Поэтому:</p>
+<div class="highlight"><pre><span></span><code>REAL MODDING
+ВЕРНУЛОСЬ
+
+НО
+OLD-SCHOOL
+LOW ENTRY COST
+НЕ ВЕРНУЛСЯ
+</code></pre></div>
+<h3 id="distribution">Distribution тоже централизованнее<a class="headerlink" href="#distribution" title="Permanent link">¶</a></h3>
+<p>Bethesda accounts, mod portal, supported versions, EULA.</p>
+<p>Техническая power высокая.</p>
+<p>Анархическая независимость Quake 1996 — ниже.</p>
+<h3 id="doom-doom-ii-modern-mod-browser">DOOM + DOOM II modern mod browser<a class="headerlink" href="#doom-doom-ii-modern-mod-browser" title="Permanent link">¶</a></h3>
+<p>Classic Doom получает integrated browser, publishing и modern UX.</p>
+<p>При этом PC-local WAD workflow тоже сохраняется.</p>
+<p>Это очень правильная комбинация:</p>
+<div class="highlight"><pre><span></span><code>OLD OPEN FILE CULTURE
++
+MODERN DISTRIBUTION
+</code></pre></div>
+<h3 id="doom-1993-modding">Почему Doom 1993 modding невозможно буквально повторить<a class="headerlink" href="#doom-1993-modding" title="Permanent link">¶</a></h3>
+<p>Не только из-за корпораций.</p>
+<p>Doom попала в уникальный sweet spot:</p>
+<div class="highlight"><pre><span></span><code>ДОСТАТОЧНО
+СЛОЖНАЯ
+ЧТОБЫ
+СОЗДАВАТЬ
+НЕВЕРОЯТНЫЕ
+ВЕЩИ
+
+И
+
+ДОСТАТОЧНО
+ПРОСТАЯ
+ЧТОБЫ
+ОДИН
+ЧЕЛОВЕК
+МОГ
+ПОНЯТЬ
+ПОЧТИ
+ВСЮ
+SYSTEM
+</code></pre></div>
+<p>Modern AAA level требует специалистов по art, materials, animation, nav, lighting, VFX, sound, streaming, collision и т.д.</p>
+<p>Открыть дверь можно.</p>
+<p>Но за дверью уже завод, а не мастерская.</p>
+<h3 id="_7">Главный итог<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>id вернула modding как современную product value.</p>
+<p>Но hacker-level свобода old Doom/Quake всё равно выше — особенно потому, что engine source тогда eventually становился public.</p>
+<div class="highlight"><pre><span></span><code>TOOLKIT
+=
+разработчик
+задаёт границы
+
+SOURCE
+=
+границу
+можно
+переписать
+</code></pre></div>
+<p>Именно поэтому classic Doom остаётся почти бесконечно расширяемой.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p069">69. Почему id Tech не стала Unreal Engine<a class="headerlink" href="#p069" title="Permanent link">¶</a></h2>
+<p>Очень легко построить неправильный сюжет:</p>
+<div class="highlight"><pre><span></span><code>id Tech
+была лучшая
+↓
+потом Unreal
+стала технически лучше
+↓
+все ушли туда
+</code></pre></div>
+<p>Нет.</p>
+<p>id technology была чудовищно влиятельна и коммерчески успешна. На Quake/Quake II/Quake III lineage выросли Half-Life, Medal of Honor, Call of Duty, Jedi Knight, Alice, Elite Force, Soldier of Fortune и другие.</p>
+<p>Проблема другая:</p>
+<h3 id="id-engine-epic-middleware-company">id продавала великолепный engine. Epic строила middleware company.<a class="headerlink" href="#id-engine-epic-middleware-company" title="Permanent link">¶</a></h3>
+<h3 id="engine-middleware">Engine и middleware — не одно и то же<a class="headerlink" href="#engine-middleware" title="Permanent link">¶</a></h3>
+<p>Internal engine может работать так:</p>
+<div class="highlight"><pre><span></span><code>что-то сломалось
+↓
+крикнул
+через комнату
+ДЖОН!
+</code></pre></div>
+<p>Middleware customer находится в другой стране, делает другой genre и должен сам понять:</p>
+<ul>
+<li>
+<p>install;</p>
+</li>
+<li>
+<p>build;</p>
+</li>
+<li>
+<p>import assets;</p>
+</li>
+<li>
+<p>write gameplay;</p>
+</li>
+<li>
+<p>profile;</p>
+</li>
+<li>
+<p>port to console;</p>
+</li>
+<li>
+<p>upgrade version;</p>
+</li>
+<li>
+<p>ship.</p>
+</li>
+</ul>
+<p>То есть продаётся не renderer.</p>
+<p>Продаётся <strong>production system</strong>.</p>
+<h3 id="middleware">Настоящий middleware состоит из скучной инфраструктуры<a class="headerlink" href="#middleware" title="Permanent link">¶</a></h3>
+<p>Нужны:</p>
+<ul>
+<li>
+<p>documentation;</p>
+</li>
+<li>
+<p>tools;</p>
+</li>
+<li>
+<p>sample projects;</p>
+</li>
+<li>
+<p>import/export pipeline;</p>
+</li>
+<li>
+<p>support;</p>
+</li>
+<li>
+<p>training;</p>
+</li>
+<li>
+<p>bug database;</p>
+</li>
+<li>
+<p>stable APIs;</p>
+</li>
+<li>
+<p>console support;</p>
+</li>
+<li>
+<p>middleware integrations;</p>
+</li>
+<li>
+<p>versioning;</p>
+</li>
+<li>
+<p>migration path;</p>
+</li>
+<li>
+<p>account management.</p>
+</li>
+</ul>
+<p>И главное — человек, которому licensee может позвонить, когда всё горит.</p>
+<h3 id="epic">Epic очень рано понимает это<a class="headerlink" href="#epic" title="Permanent link">¶</a></h3>
+<p>Unreal ещё не вышла, а technology уже лицензируют сторонним studios.</p>
+<p>Это означает, что engine development с самого начала получает pressure:</p>
+<div class="highlight"><pre><span></span><code>ДРУГИЕ
+ЛЮДИ
+ДОЛЖНЫ
+ЭТИМ
+ПОЛЬЗОВАТЬСЯ
+</code></pre></div>
+<p>Tools становятся commercial product, а не внутренним инструментом.</p>
+<h3 id="deus-ex-case">Deus Ex — почти идеальный case<a class="headerlink" href="#deus-ex-case" title="Permanent link">¶</a></h3>
+<p>Ion Storm Austin рассматривает Quake technology.</p>
+<p>Технически впечатляюще.</p>
+<p>Но Deus Ex — не просто shooter:</p>
+<div class="highlight"><pre><span></span><code>FPS
++
+RPG
++
+STEALTH
++
+DIALOGUE
++
+SYSTEMIC WORLD
+</code></pre></div>
+<p>Маленькой engineering team пришлось бы серьёзно переделывать shooter-oriented Quake engine.</p>
+<p>Unreal предлагает более usable tools и реальную поддержку Epic.</p>
+<p>Для studio важнее:</p>
+<div class="highlight"><pre><span></span><code>TIME TO SHIP
+</code></pre></div>
+<p>чем:</p>
+<div class="highlight"><pre><span></span><code>КТО
+ИМЕЕТ
+КРАСИВЕЕ
+RENDERER
+</code></pre></div>
+<h3 id="carmack-sweeney">Carmack и Sweeney задают разные вопросы<a class="headerlink" href="#carmack-sweeney" title="Permanent link">¶</a></h3>
+<p>Условно:</p>
+<div class="highlight"><pre><span></span><code>CARMACK:
+
+КАК
+СДЕЛАТЬ
+ЛУЧШУЮ
+TECHNOLOGY
+ДЛЯ
+НАШЕЙ
+СЛЕДУЮЩЕЙ
+GAME?
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>SWEENEY / EPIC:
+
+КАК
+СДЕЛАТЬ
+PLATFORM
+НА КОТОРОЙ
+100 STUDIOS
+СМОГУТ
+SHIP?
+</code></pre></div>
+<p>Оба требуют великого engineering.</p>
+<p>Но культуры разные.</p>
+<h3 id="id-engines-breakthrough">id engines часто специализированы под конкретный breakthrough<a class="headerlink" href="#id-engines-breakthrough" title="Permanent link">¶</a></h3>
+<p>Doom 3:</p>
+<div class="highlight"><pre><span></span><code>unified lighting
+↓
+horror / darkness
+</code></pre></div>
+<p>RAGE:</p>
+<div class="highlight"><pre><span></span><code>virtual texturing
+↓
+large unique surfaces
+</code></pre></div>
+<p>Doom 2016:</p>
+<div class="highlight"><pre><span></span><code>60 FPS combat
+↓
+id Tech 6
+</code></pre></div>
+<p>Это отлично для собственных games.</p>
+<p>Universal middleware обязан думать про чужие genres.</p>
+<h3 id="epic-platform-flywheel">Epic строит platform flywheel<a class="headerlink" href="#epic-platform-flywheel" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>MORE LICENSEES
+↓
+MORE FEEDBACK
+↓
+BETTER TOOLS
+↓
+MORE EXPERIENCED DEVELOPERS
+↓
+MORE THIRD-PARTY INTEGRATIONS
+↓
+LOWER RISK
+FOR NEXT STUDIO
+↓
+MORE LICENSEES
+</code></pre></div>
+<p>Потом добавляются training, marketplace, plugins, schools, hiring pool.</p>
+<p>И после определённой точки рынок выбирает Unreal не только за features, а за ecosystem.</p>
+<h3 id="id-boutique-licensing">id сознательно предпочитала boutique licensing<a class="headerlink" href="#id-boutique-licensing" title="Permanent link">¶</a></h3>
+<p>Hollenshead прямо говорил: лучше несколько сильных licensees и prestigious games, чем сотни клиентов, для которых нужно строить огромную support organization.</p>
+<p>Это хорошая стратегия для:</p>
+<div class="highlight"><pre><span></span><code>BOUTIQUE
+TECH PROVIDER
+</code></pre></div>
+<p>И плохая, если хочешь стать world standard.</p>
+<h3 id="middleware-service-business">Middleware — service business<a class="headerlink" href="#middleware-service-business" title="Permanent link">¶</a></h3>
+<p>License продал — работа не закончилась.</p>
+<div class="highlight"><pre><span></span><code>PS3 SDK
+обновился
+↓
+помоги
+
+plugin
+сломался
+↓
+помоги
+
+engine version
+новая
+↓
+migration
+
+crash
+у customer
+↓
+debug
+</code></pre></div>
+<p>Epic согласилась стать такой компанией.</p>
+<p>id исторически хотела делать games.</p>
+<h3 id="tools-id">Tools у id не были плохими<a class="headerlink" href="#tools-id" title="Permanent link">¶</a></h3>
+<p>Radiant lineage, Q3Radiant, scripting, SDKs — всё реально сильное.</p>
+<p>Но:</p>
+<div class="highlight"><pre><span></span><code>МОЩНЫЙ
+INTERNAL TOOL
+≠
+ХОРОШО
+PRODUCTIZED
+EXTERNAL TOOL
+</code></pre></div>
+<p>Вот ключ.</p>
+<h3 id="ue3">UE3 — момент, когда гонка почти решена<a class="headerlink" href="#ue3" title="Permanent link">¶</a></h3>
+<p>К середине 2000-х Epic уже имеет огромный licensee ecosystem и partnerships.</p>
+<p>id только к id Tech 5 начинает серьёзно усиливать tools programmers, support staff и licensee liaisons.</p>
+<p>То есть она наконец диагностирует проблему, но competitor уже десять лет строит business.</p>
+<h3 id="id-epic">И даже тогда id не хочет масштабироваться как Epic<a class="headerlink" href="#id-epic" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>НЕ
+100 LICENSEES
+
+А
+НЕСКОЛЬКО
+СИЛЬНЫХ
+PARTNERS
+</code></pre></div>
+<p>Но industry standard требует количества и ecosystem.</p>
+<h3 id="zenimax_1">Потом ZeniMax вообще выключает соревнование<a class="headerlink" href="#zenimax_1" title="Permanent link">¶</a></h3>
+<p>2009 acquisition.</p>
+<p>2010:</p>
+<div class="highlight"><pre><span></span><code>id Tech 5
+НЕ
+ЛИЦЕНЗИРУЕМ
+EXTERNALLY
+</code></pre></div>
+<p>Теперь technology — competitive advantage Bethesda/ZeniMax.</p>
+<p>После этого вопрос «почему id Tech 6 не победила Unreal» уже неправильный.</p>
+<p>Она <strong>не участвует на этом рынке</strong>.</p>
+<h3 id="machinegames-arkane-tango">MachineGames / Arkane / Tango<a class="headerlink" href="#machinegames-arkane-tango" title="Permanent link">¶</a></h3>
+<p>idTech превращается в internal platform lineage.</p>
+<p>Сестринские studios получают technology и адаптируют под свои needs.</p>
+<p>У Arkane/Tango появляются глубокие собственные branches/derivatives.</p>
+<p>Это снова показывает: technology сильная, но не generic drop-in engine для всего мира.</p>
+<h3 id="unreal">Unreal идёт в противоположную сторону<a class="headerlink" href="#unreal" title="Permanent link">¶</a></h3>
+<p>UE4 становится доступной почти всем.</p>
+<p>Потом marketplace, plugins, enormous learning ecosystem.</p>
+<p>Теперь студент:</p>
+<div class="highlight"><pre><span></span><code>DOWNLOAD
+↓
+START
+</code></pre></div>
+<p>idTech:</p>
+<div class="highlight"><pre><span></span><code>НЕ ПРОДАЁТСЯ
+НАРУЖУ
+</code></pre></div>
+<p>Network effect становится вообще несравнимым.</p>
+<h3 id="hiring-effect">Hiring effect<a class="headerlink" href="#hiring-effect" title="Permanent link">¶</a></h3>
+<p>Studio выбирает Unreal и получает рынок специалистов, которые уже знают editor/materials/Blueprint/C++ architecture.</p>
+<p>Чем больше studios используют Unreal, тем больше людей его знают.</p>
+<p>Чем больше людей знают, тем рациональнее следующей studio использовать Unreal.</p>
+<h3 id="modern-id-unreal">Почему modern id не должна пытаться догнать Unreal<a class="headerlink" href="#modern-id-unreal" title="Permanent link">¶</a></h3>
+<p>Чтобы открыть id Tech 8 внешнему рынку, мало:</p>
+<div class="highlight"><pre><span></span><code>UPLOAD ENGINE
+</code></pre></div>
+<p>Нужно построить:</p>
+<ul>
+<li>
+<p>docs;</p>
+</li>
+<li>
+<p>devrel;</p>
+</li>
+<li>
+<p>support;</p>
+</li>
+<li>
+<p>public stable APIs;</p>
+</li>
+<li>
+<p>certifications;</p>
+</li>
+<li>
+<p>training;</p>
+</li>
+<li>
+<p>integrations;</p>
+</li>
+<li>
+<p>onboarding;</p>
+</li>
+<li>
+<p>customer QA;</p>
+</li>
+<li>
+<p>licensing business.</p>
+</li>
+</ul>
+<p>Это огромная новая компания внутри компании.</p>
+<p>А напротив уже существует Unreal с тридцатилетним flywheel.</p>
+<p>Зачем?</p>
+<h3 id="id">Что id получила взамен<a class="headerlink" href="#id" title="Permanent link">¶</a></h3>
+<p>Она может специализировать engine под свою game.</p>
+<p>Не надо поддерживать MMO, racing, film, education, mobile и всё остальное.</p>
+<p>Нужно:</p>
+<div class="highlight"><pre><span></span><code>DOOM
+</code></pre></div>
+<p>И сделать technology ебануто хорошей именно для неё.</p>
+<p>Парадоксально, отказ от middleware ambitions помог modern Doom.</p>
+<h3 id="_8">Главный вывод<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p>Epic посмотрела на engine и увидела:</p>
+<div class="highlight"><pre><span></span><code>PRODUCT / PLATFORM
+</code></pre></div>
+<p>id посмотрела на engine и прежде всего увидела:</p>
+<div class="highlight"><pre><span></span><code>WEAPON
+FOR OUR NEXT GAME
+</code></pre></div>
+<p>Именно поэтому Unreal Engine — мировая платформа, а id Tech — специализированная внутренняя high-performance lineage.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p070">70. Все поколения id Software<a class="headerlink" href="#p070" title="Permanent link">¶</a></h2>
+<p>Самый полезный способ смотреть на 35 лет id — не как на одну и ту же компанию, а как на несколько почти разных организаций под одним именем.</p>
+<h3 id="id-1-softdisk-commander-keen-19901991">id 1 — Softdisk / Commander Keen, 1990–1991<a class="headerlink" href="#id-1-softdisk-commander-keen-19901991" title="Permanent link">¶</a></h3>
+<p>Главные люди:</p>
+<div class="highlight"><pre><span></span><code>John Carmack
+John Romero
+Tom Hall
+Adrian Carmack
++
+Jay Wilbur
+</code></pre></div>
+<p>Главный вопрос:</p>
+<div class="highlight"><pre><span></span><code>МОЖЕМ ЛИ
+МЫ
+СДЕЛАТЬ
+PC GAME,
+КОТОРАЯ
+ВЫГЛЯДИТ
+КАК
+КОНСОЛЬНАЯ?
+</code></pre></div>
+<p>Carmack решает scrolling problem. Commander Keen доказывает независимую business model через shareware.</p>
+<p>Компания ещё почти hacker collective.</p>
+<p>Главный продукт — не только Keen, а способ работы:</p>
+<div class="highlight"><pre><span></span><code>SMALL TEAM
+↓
+TECH BREAKTHROUGH
+↓
+FAST GAME
+↓
+DIRECT MARKET
+↓
+REPEAT
+</code></pre></div>
+<p>Эпоха заканчивается, когда команда понимает: Softdisk больше не нужен как работодатель.</p>
+<h3 id="id-2-wolfenstein-doom-19911993">id 2 — Wolfenstein / Doom, 1991–1993<a class="headerlink" href="#id-2-wolfenstein-doom-19911993" title="Permanent link">¶</a></h3>
+<p>Это классическая мифологическая id.</p>
+<p>Главная ось:</p>
+<div class="highlight"><pre><span></span><code>CARMACK
+↔
+ROMERO
+</code></pre></div>
+<p>Carmack отвечает «что технически возможно?», Romero — «как превратить это в игру?», Hall тянет world/fiction, Adrian — visual identity, Wilbur — business.</p>
+<p>Wolfenstein формулирует principle:</p>
+<div class="highlight"><pre><span></span><code>ЕСЛИ
+FEATURE
+ТОРМОЗИТ
+CORE
+→ CUT
+</code></pre></div>
+<p>Doom доводит систему до идеального совпадения technology, game feel, art, sound, distribution, modding, multiplayer.</p>
+<p>Именно здесь появляются почти все великие cultural innovations компании.</p>
+<p>Эпоха ломается под собственным успехом: маленькая flat team больше не соответствует масштабу ожиданий.</p>
+<h3 id="id-3-quake-romero-carmack-19941996">id 3 — Quake / конфликт Romero-Carmack, 1994–1996<a class="headerlink" href="#id-3-quake-romero-carmack-19941996" title="Permanent link">¶</a></h3>
+<p>Главная проблема:</p>
+<div class="highlight"><pre><span></span><code>TECHNOLOGY REVOLUTION
++
+GAME DESIGN REVOLUTION
+ОДНОВРЕМЕННО
+</code></pre></div>
+<p>Carmack строит full 3D/networking frontier. Design team пытается понять, что такое Quake.</p>
+<p>Engine меняется, content устаревает, vision плавает, flat structure не умеет разрешить founder-level conflict.</p>
+<p>Quake всё равно становится шедевром и меняет индустрию, но original social structure id практически погибает.</p>
+<p>Уход Romero — конец эпохи.</p>
+<h3 id="id-4-post-romero-carmack-company-19962004">id 4 — post-Romero Carmack company, 1996–2004<a class="headerlink" href="#id-4-post-romero-carmack-company-19962004" title="Permanent link">¶</a></h3>
+<p>Центр тяжести становится technology roadmap.</p>
+<div class="highlight"><pre><span></span><code>CARMACK
+↓
+NEXT ENGINE
+↓
+TEAM:
+КАКУЮ GAME
+ДЕЛАЕМ
+НА ЭТОМ?
+</code></pre></div>
+<p>Hollenshead профессионализирует business.</p>
+<p>Quake II — более production-oriented.</p>
+<p>Quake III почти чистая лаборатория movement/weapons/networking.</p>
+<p>Engine licensing становится огромной внешней influence.</p>
+<p>Doom 3 — вершина technology-first model: rendering thesis буквально рождает horror thesis.</p>
+<p>Но здесь уже видно: новая graphics revolution больше не гарантирует новую design revolution.</p>
+<h3 id="id-5-aaa-rage-zenimax-20042013">id 5 — AAA / RAGE / ZeniMax, 2004–2013<a class="headerlink" href="#id-5-aaa-rage-zenimax-20042013" title="Permanent link">¶</a></h3>
+<p>Главный вопрос:</p>
+<div class="highlight"><pre><span></span><code>КАК
+МАЛЕНЬКОЙ
+TECH-DRIVEN
+id
+СТАТЬ
+СОВРЕМЕННОЙ
+AAA-STUDIO?
+</code></pre></div>
+<p>Team растёт. Adrian уходит. id Tech 5 требует огромной production infrastructure.</p>
+<p>RAGE пытается расширить id в driving/hubs/open-world/crafting и показывает предел старой модели.</p>
+<p>2009 — ZeniMax: независимость заканчивается, капитал/portfolio infrastructure появляются.</p>
+<p>Old Doom 4 — identity crisis: компания смотрит на market language вместо собственного core.</p>
+<p>2013 — Hollenshead + Carmack OUT.</p>
+<p>Старая post-Romero power structure заканчивается.</p>
+<h3 id="id-6-post-carmack-reboot-20132020">id 6 — post-Carmack reboot, 2013–2020<a class="headerlink" href="#id-6-post-carmack-reboot-20132020" title="Permanent link">¶</a></h3>
+<p>Главный вопрос:</p>
+<div class="highlight"><pre><span></span><code>МОЖЕТ ЛИ
+id
+СУЩЕСТВОВАТЬ
+БЕЗ ЛЮДЕЙ,
+КОТОРЫЕ
+ЕЁ
+СОЗДАЛИ?
+</code></pre></div>
+<p>Новый порядок:</p>
+<div class="highlight"><pre><span></span><code>PLAYER EXPERIENCE
+↓
+PROTOTYPE
+↓
+SYSTEMS
+↓
+TECH
+</code></pre></div>
+<p>Stratton — production/institutional leadership.</p>
+<p>Martin — creative.</p>
+<p>Willits — continuity.</p>
+<p>Engine team — distributed engineering.</p>
+<p>Doom 2016 доказывает, что game identity survived.</p>
+<p>id Tech 6 доказывает, что engineering survived.</p>
+<p>Eternal доказывает, что новая id умеет не только reboot, но и создавать собственную дальнейшую philosophy.</p>
+<h3 id="id-7-xbox-era-modern-id-2021">id 7 — Xbox-era modern id, 2021–<a class="headerlink" href="#id-7-xbox-era-modern-id-2021" title="Permanent link">¶</a></h3>
+<p>Microsoft владеет ZeniMax.</p>
+<p>Но id уже достаточно сильная institution, чтобы owner не был главной creative story.</p>
+<p>Dark Ages снова меняет combat thesis.</p>
+<p>id Tech 8 строится вокруг game requirements.</p>
+<p>MachineGames/Nightdive/external ecosystem расширяют IP stewardship.</p>
+<p>Open-source tradition почти исчезает, modding частично возвращается.</p>
+<p>2026 layoffs становятся новым stress-test institutional memory.</p>
+<h3 id="_9">Семь поколений одним взглядом<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>id 1
+SOFTDISK / KEEN
+→ hacker startup
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>id 2
+WOLF / DOOM
+→ tech + game perfect loop
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>id 3
+QUAKE
+→ revolutionary tech + creative conflict
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>id 4
+POST-ROMERO
+→ technology-driven professional studio
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>id 5
+AAA / RAGE / ZENIMAX
+→ scale + identity crisis
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>id 6
+POST-CARMACK
+→ game-first distributed leadership
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>id 7
+XBOX ERA
+→ mature institutional id
+</code></pre></div>
+<h3 id="_10">Что является дефицитом в каждом поколении<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>id 1
+→ деньги / hardware capability
+
+id 2
+→ время
+
+id 3
+→ согласие
+
+id 4
+→ game design сопоставимого масштаба с tech
+
+id 5
+→ production capacity + identity
+
+id 6
+→ доверие
+
+id 7
+→ focus + institutional knowledge
+</code></pre></div>
+<h3 id="_11">Что проходит через все поколения<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>own technology;</p>
+</li>
+<li>
+<p>performance as gameplay;</p>
+</li>
+<li>
+<p>сильный core;</p>
+</li>
+<li>
+<p>prototype &gt; theory;</p>
+</li>
+<li>
+<p>отсутствие священного прошлого;</p>
+</li>
+<li>
+<p>точный player control.</p>
+</li>
+</ul>
+<p>Что умерло:</p>
+<ul>
+<li>
+<p>founder ownership;</p>
+</li>
+<li>
+<p>shareware economics;</p>
+</li>
+<li>
+<p>external engine licensing;</p>
+</li>
+<li>
+<p>automatic open-source tradition;</p>
+</li>
+<li>
+<p>tiny-team production буквально;</p>
+</li>
+<li>
+<p>PC exclusivity;</p>
+</li>
+<li>
+<p>Carmack-model <code>next technology → next game</code>.</p>
+</li>
+</ul>
+<h3 id="_12">Главный итог<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<p>Современная id не является старой id буквально.</p>
+<p>Но существует цепочка передачи criteria:</p>
+<div class="highlight"><pre><span></span><code>IS IT FAST?
+DOES IT FEEL GOOD?
+IS THE IDEA CLEAR?
+CAN WE REMOVE SOMETHING?
+DOES THE PLAYER HAVE CONTROL?
+CAN A GREAT PLAYER GET BETTER?
+</code></pre></div>
+<p>И именно поэтому логотип ещё не пустой.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p071">71. Кто реально сделал id Software<a class="headerlink" href="#p071" title="Permanent link">¶</a></h2>
+<p>Здесь надо уничтожить две одинаково плохие версии истории:</p>
+<div class="highlight"><pre><span></span><code>CARMACK
+СДЕЛАЛ
+ВСЁ
+</code></pre></div>
+<p>и:</p>
+<div class="highlight"><pre><span></span><code>ВСЕ
+БЫЛИ
+ОДИНАКОВО
+ВАЖНЫ
+</code></pre></div>
+<p>Нет.</p>
+<p>Люди были незаменимы <strong>в разных функциях и в разные эпохи</strong>.</p>
+<h3 id="john-carmack">John Carmack — технологический горизонт<a class="headerlink" href="#john-carmack" title="Permanent link">¶</a></h3>
+<p>Без него id в известной форме почти наверняка не возникает.</p>
+<p>Adaptive tile refresh → Keen.</p>
+<p>3D experiments → Wolfenstein.</p>
+<p>Doom renderer.</p>
+<p>Quake architecture.</p>
+<p>Doom 3/id Tech 4.</p>
+<p>id Tech 5.</p>
+<p>Но его суперсила не просто «хорошо программировал».</p>
+<p>Он умел:</p>
+<div class="highlight"><pre><span></span><code>НАЙТИ
+ФУНДАМЕНТАЛЬНУЮ
+ПРОБЛЕМУ
+↓
+ОТБРОСИТЬ
+ЛИШНЕЕ
+↓
+НАЙТИ
+ПРАКТИЧЕСКИЙ
+КОМПРОМИСС
+↓
+SHIP CODE
+</code></pre></div>
+<p>Он — главный technical founder.</p>
+<p>Но renderer сам по себе не Doom.</p>
+<h3 id="john-romero-technology-game">John Romero — превращение technology в game<a class="headerlink" href="#john-romero-technology-game" title="Permanent link">¶</a></h3>
+<p>Romero был не «просто level designer».</p>
+<p>Он одновременно:</p>
+<ul>
+<li>
+<p>programmer;</p>
+</li>
+<li>
+<p>tools programmer;</p>
+</li>
+<li>
+<p>designer;</p>
+</li>
+<li>
+<p>level designer;</p>
+</li>
+<li>
+<p>playtester;</p>
+</li>
+<li>
+<p>public face;</p>
+</li>
+<li>
+<p>creative catalyst.</p>
+</li>
+</ul>
+<p>Он писал TEd/TED5, DoomEd, QuakeEd и другие production tools.</p>
+<p>То есть даже уровни, которые строил не Romero, частично зависели от его ability сделать rapid iteration возможной.</p>
+<p>Его труднее мифологизировать алгоритмом, потому что вклад часто выглядит так:</p>
+<div class="highlight"><pre><span></span><code>ПЕРЕДВИНУЛ
+MONSTER
+НА 64 UNITS
+↓
+КАРТА
+СТАЛА
+ЛУЧШЕ
+</code></pre></div>
+<p>Но из тысяч таких решений и состоит game feel.</p>
+<p>Если Carmack отвечает:</p>
+<div class="highlight"><pre><span></span><code>ЧТО
+МОЖНО?
+</code></pre></div>
+<p>Romero:</p>
+<div class="highlight"><pre><span></span><code>ЧТО
+С ЭТИМ
+ПРИКОЛЬНО
+ДЕЛАТЬ?
+</code></pre></div>
+<p>И ранняя id настолько сильна именно из-за этой пары.</p>
+<h3 id="tom-hall-world-game-imagination">Tom Hall — world / game imagination<a class="headerlink" href="#tom-hall-world-game-imagination" title="Permanent link">¶</a></h3>
+<p>Очень легко свести его к:</p>
+<div class="highlight"><pre><span></span><code>написал
+Doom Bible
+↓
+его идеи
+выкинули
+</code></pre></div>
+<p>Но он создаёт большую часть Commander Keen identity, characters/world, ранние design concepts, работает над Catacomb lineage.</p>
+<p>Он приносит в id вопросы:</p>
+<div class="highlight"><pre><span></span><code>КТО
+ГЕРОЙ?
+ГДЕ
+ОН?
+ПОЧЕМУ
+МИР
+ТАКОЙ?
+ЧТО
+МОЖНО
+С НИМ
+ДЕЛАТЬ?
+</code></pre></div>
+<p>Его конфликт с более system/gameplay-first Carmack/Romero важен ещё и потому, что через него Doom определяет, чем она <strong>не хочет быть</strong>.</p>
+<h3 id="adrian-carmack-visual-soul">Adrian Carmack — visual soul<a class="headerlink" href="#adrian-carmack-visual-soul" title="Permanent link">¶</a></h3>
+<p>Без него можно получить прекрасно работающую Doom, которая не выглядит как Doom.</p>
+<p>Он приносит:</p>
+<ul>
+<li>
+<p>flesh;</p>
+</li>
+<li>
+<p>gore;</p>
+</li>
+<li>
+<p>bone;</p>
+</li>
+<li>
+<p>satanic imagery;</p>
+</li>
+<li>
+<p>grotesque body horror;</p>
+</li>
+<li>
+<p>heavy-metal-cover energy.</p>
+</li>
+</ul>
+<p>Программист создаёт возможность нарисовать sprite.</p>
+<p>Artist создаёт Cyberdemon, который помнят 30 лет.</p>
+<p>Adrian ещё и долго остаётся крупным owner, то есть влияет не только art, но и corporate strategy.</p>
+<h3 id="kevin-cloud-">Kevin Cloud — человек-мост<a class="headerlink" href="#kevin-cloud-" title="Permanent link">¶</a></h3>
+<p>Приходит в 1992 как artist.</p>
+<p>Работает через Wolfenstein, Doom, Quake и дальше.</p>
+<p>Потом art lead/owner/producer.</p>
+<p>Его историческая функция особенно важна как continuity:</p>
+<div class="highlight"><pre><span></span><code>EARLY id
+↓
+MATURE id
+↓
+MODERN id
+</code></pre></div>
+<p>Он не всегда получает headline «изобрёл X», но именно такие люди делают организацию живучей.</p>
+<h3 id="jay-wilbur-business-shield-id">Jay Wilbur — business shield ранней id<a class="headerlink" href="#jay-wilbur-business-shield-id" title="Permanent link">¶</a></h3>
+<p>Не programmer и не artist.</p>
+<p>И поэтому pop-history часто его съедает.</p>
+<p>Но кто-то должен вести publishers, distribution, operations, contracts, business.</p>
+<div class="highlight"><pre><span></span><code>DEVELOPERS
+↓
+WILBUR
+↓
+EXTERNAL WORLD
+</code></pre></div>
+<p>Если Carmack/ Romero не тратят половину дня на business bullshit, это не значит, что bullshit не существует. Значит, рядом есть человек, который его забрал.</p>
+<h3 id="bobby-prince-audiogame-feel">Bobby Prince — audio/game feel<a class="headerlink" href="#bobby-prince-audiogame-feel" title="Permanent link">¶</a></h3>
+<p>Shotgun feel — это не только damage table.</p>
+<div class="highlight"><pre><span></span><code>INPUT
++
+ANIMATION
++
+RECOIL
++
+ENEMY REACTION
++
+SOUND
+</code></pre></div>
+<p>Убери iconic sound — оружие уже слабее.</p>
+<p>Музыка тоже связывает Doom с metal/violent energy.</p>
+<h3 id="dave-taylor-shipping-glue">Dave Taylor — shipping glue<a class="headerlink" href="#dave-taylor-shipping-glue" title="Permanent link">¶</a></h3>
+<p>Сам Taylor иронично называл себя spackle coder.</p>
+<p>Automap, status bar, sound integration, transitions, cheat codes, network chat, ports и куча glue.</p>
+<p>Great renderer без этого не превращается в shipping game.</p>
+<h3 id="sandy-petersen-production-speed-design-variety">Sandy Petersen — production speed и design variety<a class="headerlink" href="#sandy-petersen-production-speed-design-variety" title="Permanent link">¶</a></h3>
+<p>После Hall нужен огромный объём maps.</p>
+<p>Petersen умеет строить очень быстро и приносит другую design voice: более странную, злую, асимметричную.</p>
+<p>Он делает огромную долю Doom/Doom II content и позже влияет на Quake weirdness.</p>
+<h3 id="american-mcgee-craft">American McGee — доказательство передачи craft<a class="headerlink" href="#american-mcgee-craft" title="Permanent link">¶</a></h3>
+<p>Он не founder.</p>
+<p>Он приходит в уже легендарную id и становится Doom II/Quake designer.</p>
+<p>Это важно организационно:</p>
+<div class="highlight"><pre><span></span><code>ID DESIGN DNA
+МОЖНО
+ПЕРЕДАТЬ
+НЕ-FOUNDER'У
+</code></pre></div>
+<p>Без этого studio умирает вместе с первой командой.</p>
+<h3 id="michael-abrash-quake-engineering">Michael Abrash — усиливает Quake engineering до технической команды<a class="headerlink" href="#michael-abrash-quake-engineering" title="Permanent link">¶</a></h3>
+<p>Carmack в молодости читает Abrash.</p>
+<p>Потом нанимает его.</p>
+<p>Abrash приносит high-end low-level optimization, graphics knowledge и культуру технического объяснения.</p>
+<p>Он ещё один proof:</p>
+<div class="highlight"><pre><span></span><code>QUAKE
+ENGINEERING
+УЖЕ
+НЕ
+ONE-MAN SHOW
+</code></pre></div>
+<h3 id="john-cash-networking">John Cash — networking<a class="headerlink" href="#john-cash-networking" title="Permanent link">¶</a></h3>
+<p>Quake исторически велика не только full 3D, но и networked world.</p>
+<p>Cash нанимают именно за networking expertise.</p>
+<p>Client/server, Internet play, QuakeWorld lineage — это часть социальной революции Quake, и его вклад в эту сторону часто вспоминают намного меньше Carmack.</p>
+<h3 id="paul-steed-3d-content-production">Paul Steed — переход к 3D content production<a class="headerlink" href="#paul-steed-3d-content-production" title="Permanent link">¶</a></h3>
+<p>Doom sprites → Quake polygonal characters.</p>
+<p>Новая technology требует нового типа artist/animator.</p>
+<p>Steed — часть этого перехода.</p>
+<h3 id="todd-hollenshead-business-longevity-mature-id">Todd Hollenshead — business longevity mature id<a class="headerlink" href="#todd-hollenshead-business-longevity-mature-id" title="Permanent link">¶</a></h3>
+<p>После Quake компания должна пережить founders.</p>
+<p>Hollenshead строит professional business structure: finance, publishers, licensing, corporate negotiation.</p>
+<p>Один из крупнейших его strategic acts — ZeniMax sale.</p>
+<p>Он помогает построить структуру, которая затем позволяет id пережить RAGE/Doom4/Carmack departure.</p>
+<h3 id="tim-willits-continuity">Tim Willits — continuity<a class="headerlink" href="#tim-willits-continuity" title="Permanent link">¶</a></h3>
+<p>Quake-era designer → Doom 3 lead/design → co-owner → RAGE creative → studio director.</p>
+<p>Главное — мост через несколько поколений.</p>
+<p>Не «новый Carmack», а institutional memory.</p>
+<h3 id="robert-duffy-engineering-continuity">Robert Duffy — engineering continuity<a class="headerlink" href="#robert-duffy-engineering-continuity" title="Permanent link">¶</a></h3>
+<p>После Carmack technology не начинается с нуля, потому что внутри уже есть многолетние veterans.</p>
+<p>Duffy — один из ключевых примеров.</p>
+<h3 id="marty-stratton-post-carmack-organizational-resurrection">Marty Stratton — post-Carmack organizational resurrection<a class="headerlink" href="#marty-stratton-post-carmack-organizational-resurrection" title="Permanent link">¶</a></h3>
+<p>Его вклад не «лично придумал Glory Kill».</p>
+<p>Его функция:</p>
+<div class="highlight"><pre><span></span><code>СОБРАТЬ
+ОГРОМНУЮ
+TEAM
+ВОКРУГ
+ПРАВИЛЬНОГО
+ВОПРОСА
+</code></pre></div>
+<p>После Doom 4:</p>
+<div class="highlight"><pre><span></span><code>ЧТО
+ТАКОЕ
+DOOM?
+</code></pre></div>
+<p>Stratton-era hierarchy:</p>
+<div class="highlight"><pre><span></span><code>GAME
+ЦЕНТР
+
+TECH
+SERVES
+GAME
+</code></pre></div>
+<p>Это огромный managerial shift.</p>
+<h3 id="hugo-martin-modern-doom-creative-voice">Hugo Martin — modern Doom creative voice<a class="headerlink" href="#hugo-martin-modern-doom-creative-voice" title="Permanent link">¶</a></h3>
+<p>Он приносит cinematic/visual literacy, но подчиняет её player action.</p>
+<p>2016 → Eternal → Dark Ages показывают, что он не хранитель brand bible, а человек, который постоянно пытается переопределять Doom без уничтожения её identity.</p>
+<h3 id="tiago-sousa-modern-engine-team">Tiago Sousa и modern engine team<a class="headerlink" href="#tiago-sousa-modern-engine-team" title="Permanent link">¶</a></h3>
+<p>Sousa приходит из Crytek и доказывает: elite engineering id можно усиливать людьми извне без потери identity.</p>
+<p>Но главное — он не «новый Carmack».</p>
+<p>Современный idTech строят Duffy, Sousa, Khan, Gneiting, Geffroy и множество других engineers.</p>
+<p>Это уже:</p>
+<div class="highlight"><pre><span></span><code>SPECIALIZED
+HIGH-END
+ENGINEERING TEAM
+</code></pre></div>
+<p>а не один technical monarch.</p>
+<h3 id="_13">Если спросить «кто самый важный?»<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<p>Самый фундаментальный technical founder — Carmack.</p>
+<p>Самый фундаментальный game/tools человек original id — Romero.</p>
+<p>Главный early world/concept voice — Hall.</p>
+<p>Главный classic visual DNA — Adrian.</p>
+<p>Главный continuity-человек между founders и mature id — Cloud.</p>
+<p>Главный business builder mature independent id — Hollenshead, с Wilbur как ранним функциональным предшественником.</p>
+<p>Главный transition bridge Quake-era → modern id — Willits.</p>
+<p>Главный лидер post-Carmack resurrection — Stratton.</p>
+<p>Главный modern Doom creative voice — Martin.</p>
+<p>А главное engineering achievement post-Carmack era принадлежит уже <strong>не одному человеку</strong>.</p>
+<h3 id="_14">Самая точная формулировка<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>CARMACK
+СОЗДАЛ
+ТЕХНОЛОГИЧЕСКИЙ
+ПОЗВОНОЧНИК id
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ROMERO
+СОЗДАЛ
+ЗНАЧИТЕЛЬНУЮ
+ЧАСТЬ
+ЕЁ ИГРОВОЙ
+НЕРВНОЙ СИСТЕМЫ
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ОСТАЛЬНЫЕ
+ДАЛИ
+ТЕЛО
+ЛИЦО
+ГОЛОС
+БИЗНЕС
+И СПОСОБНОСТЬ
+ПЕРЕЖИТЬ
+СОЗДАТЕЛЕЙ
+</code></pre></div>
+<p>И именно последний пункт в итоге оказался самым удивительным.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p072">72. Что id Software исторически делала лучше всех — и где систематически была слабой<a class="headerlink" href="#p072" title="Permanent link">¶</a></h2>
+<p>После всей истории компании можно поставить диагноз самой id.</p>
+<p>Не «была ли id великой?» — очевидно была.</p>
+<p>Интереснее:</p>
+<h3 id="_15">почему она раз за разом была великой в одних вещах и раз за разом вляпывалась в очень похожие проблемы в других?<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
+<p>Потому что сменились founders, managers, owners, team size, technology и business model, а некоторые patterns удивительно стабильны.</p>
+<p>Самая грубая формулировка:</p>
+<h3 id="id_1">id исторически великолепна, когда ей нужно сделать несколько фундаментальных действий игрока невероятно хорошо.<a class="headerlink" href="#id_1" title="Permanent link">¶</a></h3>
+<p>И заметно менее естественна для задач вроде «огромный мир, десятки систем, много narrative layers и production coordination на годы».</p>
+<h3 id="no1-game-feel">Сильная сторона №1 — game feel<a class="headerlink" href="#no1-game-feel" title="Permanent link">¶</a></h3>
+<p>Это, возможно, самое устойчивое преимущество id.</p>
+<p>Не просто graphics.</p>
+<p>Не gore.</p>
+<p>Не Doom как IP.</p>
+<p>А:</p>
+<div class="highlight"><pre><span></span><code>КАК
+GAME
+ОЩУЩАЕТСЯ
+ПОД РУКАМИ
+</code></pre></div>
+<p>Хороший shotgun — это не damage number.</p>
+<p>Это:</p>
+<div class="highlight"><pre><span></span><code>INPUT LATENCY
++
+MUZZLE FLASH
++
+SOUND
++
+RECOIL
++
+ANIMATION
++
+ENEMY REACTION
++
+DAMAGE
++
+RANGE
++
+RECOVERY TIME
+</code></pre></div>
+<p>Каждый компонент может быть нормальным, а вместе — хуйня.</p>
+<p>Или наоборот — всё складывается в физическое удовольствие.</p>
+<p>id десятилетиями особенно хорошо умеет второй вариант.</p>
+<h3 id="performance-id-design">Отсюда performance для id — часть design<a class="headerlink" href="#performance-id-design" title="Permanent link">¶</a></h3>
+<p>60 FPS historically означает не красивую цифру benchmark, а:</p>
+<div class="highlight"><pre><span></span><code>INPUT
+↓
+MOTION
+↓
+FEEDBACK
+↓
+CONTROL
+</code></pre></div>
+<p>Поэтому modern post-Carmack id так же болезненно держится за high framerate, как старая Carmack-id.</p>
+<h3 id="no2-technology">Сильная сторона №2 — technology, которая открывает новое поведение<a class="headerlink" href="#no2-technology" title="Permanent link">¶</a></h3>
+<p>Лучшие breakthroughs id важны не только количеством polygons.</p>
+<p>Keen scrolling → новый тип PC action.</p>
+<p>Wolfenstein renderer → быстрый first-person action.</p>
+<p>Doom architecture/networking → более сложное space + deathmatch.</p>
+<p>Quake full 3D/client-server → vertical movement, online worlds, modding.</p>
+<p>То есть technology создаёт <strong>new verbs</strong>, а не только screenshots.</p>
+<h3 id="no3-core">Сильная сторона №3 — радикальная концентрация на core<a class="headerlink" href="#no3-core" title="Permanent link">¶</a></h3>
+<p>Когда id в лучшей форме, она задаёт:</p>
+<div class="highlight"><pre><span></span><code>ЧТО
+ЗДЕСЬ
+САМОЕ
+ИНТЕРЕСНОЕ?
+</code></pre></div>
+<p>и выкидывает остальное.</p>
+<p>Wolfenstein убирает лишнюю simulation/stealth complexity.</p>
+<p>Quake III почти выбрасывает campaign и оставляет movement, weapons, maps, item control.</p>
+<p>Doom 2016 снова делает тот же mental move после RAGE/Doom4 crisis.</p>
+<p>Важно: simple у id не равно shallow.</p>
+<div class="highlight"><pre><span></span><code>МАЛО
+ФУНДАМЕНТАЛЬНЫХ
+ПРАВИЛ
+</code></pre></div>
+<p>может дать огромный decision space.</p>
+<h3 id="no4">Сильная сторона №4 — высокая плотность решений<a class="headerlink" href="#no4" title="Permanent link">¶</a></h3>
+<p>Лучшие id-games постоянно делают:</p>
+<div class="highlight"><pre><span></span><code>INPUT
+↓
+REACTION
+↓
+DECISION
+↓
+NEW STATE
+</code></pre></div>
+<p>Doom:</p>
+<ul>
+<li>
+<p>кого убить;</p>
+</li>
+<li>
+<p>куда двигаться;</p>
+</li>
+<li>
+<p>какое оружие;</p>
+</li>
+<li>
+<p>брать ли health;</p>
+</li>
+<li>
+<p>можно ли проскочить между projectiles.</p>
+</li>
+</ul>
+<p>Quake III:</p>
+<ul>
+<li>
+<p>где opponent;</p>
+</li>
+<li>
+<p>когда item respawn;</p>
+</li>
+<li>
+<p>какой route;</p>
+</li>
+<li>
+<p>какое оружие;</p>
+</li>
+<li>
+<p>где перехватить.</p>
+</li>
+</ul>
+<p>Eternal доводит это почти до overload.</p>
+<h3 id="no5-mastery">Сильная сторона №5 — mastery живёт в игроке<a class="headerlink" href="#no5-mastery" title="Permanent link">¶</a></h3>
+<p>Не только:</p>
+<div class="highlight"><pre><span></span><code>+25% DAMAGE
+потому что
+LEVEL 37
+</code></pre></div>
+<p>А:</p>
+<div class="highlight"><pre><span></span><code>Я
+НАУЧИЛСЯ
+ЛУЧШЕ
+ДВИГАТЬСЯ
+ЦЕЛИТЬСЯ
+ЧИТАТЬ SPACE
+ВЫБИРАТЬ TOOLS
+</code></pre></div>
+<p>Quake III — pure form.</p>
+<p>Eternal — single-player version той же ценности.</p>
+<h3 id="no6-tools-rapid-iteration">Сильная сторона №6 — tools и rapid iteration<a class="headerlink" href="#no6-tools-rapid-iteration" title="Permanent link">¶</a></h3>
+<p>Старая id — огромная петля:</p>
+<div class="highlight"><pre><span></span><code>IDEA
+↓
+IMPLEMENT
+↓
+PLAY
+↓
+THIS SUCKS
+↓
+CHANGE
+↓
+PLAY
+</code></pre></div>
+<p>Romero tools исторически важны именно потому, что сокращали расстояние между idea и playable result.</p>
+<p>Modern Willits-era management пытается масштабировать тот же принцип через feature ownership и fast playable prototypes.</p>
+<h3 id="no7-specialists-autonomy">Сильная сторона №7 — сильные specialists с autonomy<a class="headerlink" href="#no7-specialists-autonomy" title="Permanent link">¶</a></h3>
+<p>Carmack → tech.</p>
+<p>Romero → gameplay/tools.</p>
+<p>Adrian → art.</p>
+<p>Petersen → levels.</p>
+<p>Abrash → optimization.</p>
+<p>Cash → networking.</p>
+<p>Модель:</p>
+<div class="highlight"><pre><span></span><code>ВОТ
+ТВОЯ
+ТЕРРИТОРИЯ
+↓
+СДЕЛАЙ
+ОХУЕННО
+</code></pre></div>
+<p>Даёт очень сильный характер продукта.</p>
+<h3 id="no8">Сильная сторона №8 — готовность выбрасывать работу<a class="headerlink" href="#no8" title="Permanent link">¶</a></h3>
+<p>Quake меняет direction.</p>
+<p>Darkness превращается в RAGE.</p>
+<p>Старый Doom 4 отправляется в мусор.</p>
+<p>Modern Doom потом тоже ломает собственные successful formulas.</p>
+<p>Sunk cost для id исторически не всегда священен.</p>
+<p>Это дорого, но творчески очень ценно.</p>
+<h3 id="no9-id">Сильная сторона №9 — id создаёт новый язык, а не только игры<a class="headerlink" href="#no9-id" title="Permanent link">¶</a></h3>
+<p>Doom → deathmatch, WAD culture, shareware explosion.</p>
+<p>Quake → client/server, clans, QuakeC, CTF culture, machinima, competitive FPS lineage.</p>
+<p>То есть великие id games часто являются platforms for behaviour.</p>
+<h3 id="no10-community-consumer">Сильная сторона №10 — community не только consumer<a class="headerlink" href="#no10-community-consumer" title="Permanent link">¶</a></h3>
+<p>Player → modder → level designer → professional developer.</p>
+<p>Willits и Zoid — прямые примеры.</p>
+<p>Community historically работает как audience, R&amp;D, content factory и hiring pool.</p>
+<h3 id="no11">Сильная сторона №11 — техническая смелость<a class="headerlink" href="#no11" title="Permanent link">¶</a></h3>
+<p>True 3D, Internet play, dynamic lighting, virtual texturing, Vulkan, RTGI, path tracing.</p>
+<p>Причём важный id-standard:</p>
+<div class="highlight"><pre><span></span><code>НЕ
+TECH DEMO
+↓
+SHIP IT
+</code></pre></div>
+<h3 id="_16">Теперь слабые стороны<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
+<p>Почти каждая слабость — shadow side сильной стороны.</p>
+<h3 id="no1-management-at-scale-natural-competence">Слабость №1 — management at scale исторически не natural competence<a class="headerlink" href="#no1-management-at-scale-natural-competence" title="Permanent link">¶</a></h3>
+<p>Flat structure прекрасно работает при 6–10 людях.</p>
+<p>При 50–100:</p>
+<div class="highlight"><pre><span></span><code>КТО
+ПРИНИМАЕТ
+РЕШЕНИЕ?
+
+КТО
+ВЛАДЕЕТ
+SCHEDULE?
+
+КТО
+СИНХРОНИЗИРУЕТ
+DEPARTMENTS?
+</code></pre></div>
+<p>Quake — первый огромный crash этой модели.</p>
+<h3 id="no2-production-planning-when-its-done">Слабость №2 — production planning / When It's Done<a class="headerlink" href="#no2-production-planning-when-its-done" title="Permanent link">¶</a></h3>
+<p>Романтика:</p>
+<div class="highlight"><pre><span></span><code>НЕ SHIP
+ГОВНО
+РАДИ DEADLINE
+</code></pre></div>
+<p>Обратная сторона:</p>
+<div class="highlight"><pre><span></span><code>ГОДЫ
+БЕЗ
+DISCIPLINE
+</code></pre></div>
+<p>Carmack позднее сам признавал всё растущие интервалы между релизами одной из ошибок trajectory id.</p>
+<p>Время — не бесплатный ресурс: salary, opportunity cost, changing market, staff turnover, tech debt.</p>
+<h3 id="no3-technology-first">Слабость №3 — technology-first может стать ловушкой<a class="headerlink" href="#no3-technology-first" title="Permanent link">¶</a></h3>
+<p>Пока frontier автоматически создаёт new gameplay — отлично.</p>
+<p>Позже:</p>
+<div class="highlight"><pre><span></span><code>NEW RENDERER
+≠
+NEW GREAT GAME
+</code></pre></div>
+<p>RAGE — главный пример.</p>
+<h3 id="no4-rd">Слабость №4 — R&amp;D может стать самоцелью<a class="headerlink" href="#no4-rd" title="Permanent link">¶</a></h3>
+<p>Carmack для себя может прожить год внутри difficult technical problem и быть счастлив.</p>
+<p>Game studio получает деньги за games.</p>
+<p>Quake engine rewrites, Doom 3 rendering obsession, RAGE virtual texturing показывают tension:</p>
+<div class="highlight"><pre><span></span><code>RESEARCH LAB
++
+GAME STUDIO
+</code></pre></div>
+<h3 id="no5-narrativesystemic-worlds-natural-action">Слабость №5 — большие narrative/systemic worlds менее natural, чем action<a class="headerlink" href="#no5-narrativesystemic-worlds-natural-action" title="Permanent link">¶</a></h3>
+<p>id элитна в вопросе:</p>
+<div class="highlight"><pre><span></span><code>КАК
+ДОЛЖЕН
+ОЩУЩАТЬСЯ
+SHOTGUN?
+</code></pre></div>
+<p>Менее естественный home field:</p>
+<div class="highlight"><pre><span></span><code>50 NPC
+10 factions
+quests
+economy
+world state
+dialogue
+open-world simulation
+</code></pre></div>
+<p>RAGE демонстрирует это особенно хорошо.</p>
+<h3 id="no6-story-mechanics">Слабость №6 — story часто вторична к mechanics<a class="headerlink" href="#no6-story-mechanics" title="Permanent link">¶</a></h3>
+<p>Это плюс для Doom.</p>
+<p>Но если проект сам выбирает narrative-heavy form, появляется conflict.</p>
+<p>Old Doom 4 уходит слишком далеко в story/world spectacle и теряет player fantasy.</p>
+<p>Modern Doom находит баланс:</p>
+<div class="highlight"><pre><span></span><code>STORY
+ЕСТЬ
+↓
+PLAYER ACTION
+ПЕРВИЧНА
+</code></pre></div>
+<h3 id="no7">Слабость №7 — слишком сильная зависимость от конкретных людей<a class="headerlink" href="#no7" title="Permanent link">¶</a></h3>
+<p>Ранняя id:</p>
+<div class="highlight"><pre><span></span><code>Carmack
+= tech roadmap
+
+Romero
+= gameplay/tools
+
+Adrian
+= art
+
+Wilbur
+= business
+</code></pre></div>
+<p>Эффективность огромная.</p>
+<p>Bus factor — ужасный.</p>
+<p>Каждый departure меняет компанию.</p>
+<p>Post-Carmack id велика именно потому, что наконец решает эту проблему через distributed leadership.</p>
+<h3 id="no8-middleware-support">Слабость №8 — middleware support<a class="headerlink" href="#no8-middleware-support" title="Permanent link">¶</a></h3>
+<p>id умеет сделать великий engine.</p>
+<p>Исторически хуже умеет сделать так, чтобы чужая studio без боли на нём ship'нула game.</p>
+<p>Engineering excellence ≠ middleware excellence.</p>
+<h3 id="no9-systems-game">Слабость №9 — набор локально отличных systems может не стать цельной game<a class="headerlink" href="#no9-systems-game" title="Permanent link">¶</a></h3>
+<p>RAGE:</p>
+<div class="highlight"><pre><span></span><code>SHOOTING good
+CARS good
+ART good
+ANIMATION good
+</code></pre></div>
+<p>Но:</p>
+<div class="highlight"><pre><span></span><code>WHY
+IS THIS
+ONE GAME?
+</code></pre></div>
+<p>Old Doom 4 — аналогично: departments работают, а central identity нет.</p>
+<h3 id="no10-id">Слабость №10 — иногда id путала «новое» с «больше»<a class="headerlink" href="#no10-id" title="Permanent link">¶</a></h3>
+<p>Старая id innovates через:</p>
+<div class="highlight"><pre><span></span><code>NEW RULE
+</code></pre></div>
+<p>AAA-era иногда через:</p>
+<div class="highlight"><pre><span></span><code>MORE WORLD
+MORE SYSTEMS
+MORE STORY
+MORE CONTENT
+</code></pre></div>
+<p>RAGE снова отличный пример.</p>
+<p>Doom 2016 исправляет это фокусом.</p>
+<h3 id="no11-identity-crisis-id">Слабость №11 — identity crisis, когда id слишком долго смотрит на рынок<a class="headerlink" href="#no11-identity-crisis-id" title="Permanent link">¶</a></h3>
+<p>Великая id:</p>
+<div class="highlight"><pre><span></span><code>РЫНОК:
+ВОТ ЧТО МЫ ДЕЛАЕМ
+↓
+id:
+ПОХУЙ
+ВОТ НАША ШТУКА
+</code></pre></div>
+<p>Кризисная id:</p>
+<div class="highlight"><pre><span></span><code>РЫНОК:
+ВОТ ЧТО УСПЕШНО
+↓
+id:
+А МОЖЕТ
+НАМ ТОЖЕ?
+</code></pre></div>
+<p>Old Doom 4 — чистейший пример.</p>
+<h3 id="no12-studio-ip">Слабость №12 — одна studio не может обслуживать столько IP<a class="headerlink" href="#no12-studio-ip" title="Permanent link">¶</a></h3>
+<p>Doom, Quake, Wolfenstein, RAGE, engine.</p>
+<p>Исторически id слишком долго пыталась быть bottleneck.</p>
+<p>ZeniMax ecosystem решает через MachineGames, Nightdive, Avalanche и других partners.</p>
+<h3 id="no13">Слабость №13 — стабильность скучна, но необходима<a class="headerlink" href="#no13" title="Permanent link">¶</a></h3>
+<p>id любит:</p>
+<div class="highlight"><pre><span></span><code>NEW
+FASTER
+DIFFERENT
+REWRITE
+</code></pre></div>
+<p>Production любит:</p>
+<div class="highlight"><pre><span></span><code>STABLE
+DOCUMENTED
+PREDICTABLE
+</code></pre></div>
+<p>Этот конфликт виден и в middleware-history, и в internal production.</p>
+<h3 id="no14-heroic-crunch">Слабость №14 — heroic crunch как замена процессу<a class="headerlink" href="#no14-heroic-crunch" title="Permanent link">¶</a></h3>
+<p>Старая culture часто предполагала:</p>
+<div class="highlight"><pre><span></span><code>В КОНЦЕ
+СИЛЬНЫЕ ЛЮДИ
+ВЫТАЩАТ
+</code></pre></div>
+<p>Иногда вытаскивали.</p>
+<p>Но аварийный режим — не production system.</p>
+<h3 id="_17">Почти каждый минус — гипертрофированный плюс<a class="headerlink" href="#_17" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>SMALL AUTONOMOUS TEAM
++
+→ скорость / ownership
+-
+→ плохо масштабируется
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>STRONG PERSONALITIES
++
+→ авторские решения
+-
+→ conflict / bus factor
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>TECH-FIRST
++
+→ индустриальные breakthroughs
+-
+→ game может стать приложением к tech demo
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>WHEN IT'S DONE
++
+→ quality protection
+-
+→ schedule discipline collapses
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>GAMEPLAY FIRST
++
+→ плотность / feel
+-
+→ world/story layers могут быть слабее
+</code></pre></div>
+<h3 id="_18">Самая точная профессиональная формулировка<a class="headerlink" href="#_18" title="Permanent link">¶</a></h3>
+<h3 id="id-exceptional-specialist-studio-aaa-">id — exceptional specialist studio, которая иногда ошибочно пыталась вести себя как универсальная AAA-компания.<a class="headerlink" href="#id-exceptional-specialist-studio-aaa-" title="Permanent link">¶</a></h3>
+<p>Когда:</p>
+<div class="highlight"><pre><span></span><code>ВОТ
+НАША
+СИЛЬНАЯ
+ИДЕЯ
+↓
+ДОВЕДЁМ
+ДО АБСОЛЮТА
+</code></pre></div>
+<p>получается Doom.</p>
+<p>Когда:</p>
+<div class="highlight"><pre><span></span><code>МЫ
+ДОЛЖНЫ
+УМЕТЬ
+ВСЁ
+</code></pre></div>
+<p>начинаются RAGE/Doom4-type проблемы.</p>
+<h3 id="modern-id_1">Modern id сильнее старой не потому, что потеряла старые черты<a class="headerlink" href="#modern-id_1" title="Permanent link">¶</a></h3>
+<p>Она научилась управлять их обратной стороной:</p>
+<ul>
+<li>
+<p>strong people + distributed leadership;</p>
+</li>
+<li>
+<p>own engine + game-first hierarchy;</p>
+</li>
+<li>
+<p>iteration + production structure;</p>
+</li>
+<li>
+<p>strong core + Bethesda/Microsoft infrastructure;</p>
+</li>
+<li>
+<p>external specialists вместо необходимости самой быть лучшей во всём.</p>
+</li>
+</ul>
+<p>И это, пожалуй, главный признак зрелости компании.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p073">73. Мифы об id Software<a class="headerlink" href="#p073" title="Permanent link">¶</a></h2>
+<p>id настолько мифологизирована, что историю легко превратить в набор красивых, но кривых формул.</p>
+<h3 id="1-john-carmack-doom">Миф 1. «John Carmack сделал Doom»<a class="headerlink" href="#1-john-carmack-doom" title="Permanent link">¶</a></h3>
+<p>Вердикт: сильное искажение.</p>
+<p>Правильнее:</p>
+<div class="highlight"><pre><span></span><code>БЕЗ CARMACK
+DOOM
+ПОЧТИ НАВЕРНЯКА
+НЕ БЫЛО БЫ
+</code></pre></div>
+<p>Но это не равно:</p>
+<div class="highlight"><pre><span></span><code>CARMACK
+СДЕЛАЛ
+DOOM
+</code></pre></div>
+<p>Carmack — engine/architecture/performance.</p>
+<p>Romero — tools/game-facing code/design/levels/feel.</p>
+<p>Adrian/Cloud — visual identity/art production.</p>
+<p>Petersen — огромное количество maps.</p>
+<p>Prince — audio/music.</p>
+<p>Taylor — glue/ports/systems.</p>
+<p>Wilbur — business.</p>
+<div class="highlight"><pre><span></span><code>CARMACK
+СДЕЛАЛ
+DOOM
+ТЕХНИЧЕСКИ
+ВОЗМОЖНОЙ
+
+КОМАНДА
+СДЕЛАЛА
+DOOM
+DOOM'ОМ
+</code></pre></div>
+<h3 id="2-romero-doom">Миф 2. «Romero после Doom ничего не делал»<a class="headerlink" href="#2-romero-doom" title="Permanent link">¶</a></h3>
+<p>Ложь, выросшая из реального конфликта.</p>
+<p>Carmack действительно был зол на work style Romero в Quake-era.</p>
+<p>Но даже Carmack позднее признавал: Romero реально работал, делал отличные levels, занимался external teams и оставил огромный отпечаток на Doom/Quake.</p>
+<p>Правильная проблема:</p>
+<div class="highlight"><pre><span></span><code>ROMERO
+И
+CARMACK
+ПЕРЕСТАЛИ
+СОВПАДАТЬ
+ПО
+VISION
+WORK STYLE
+AUTHORITY
+</code></pre></div>
+<p>Не «один стал бесполезным».</p>
+<h3 id="3-id-fps">Миф 3. «id изобрела FPS»<a class="headerlink" href="#3-id-fps" title="Permanent link">¶</a></h3>
+<p>Буквально неправда.</p>
+<p>First-person shooting/network combat существовал задолго до id — Maze War, Spasim и другие ранние experiments.</p>
+<p>Но id сделала нечто почти важнее:</p>
+<h3 id="action-fps">сформировала массовую грамматику action FPS.<a class="headerlink" href="#action-fps" title="Permanent link">¶</a></h3>
+<p>Wolfenstein/Doom показали рынку:</p>
+<div class="highlight"><pre><span></span><code>ВОТ
+КАК
+ЭТО
+ДОЛЖНО
+ИГРАТЬСЯ
+</code></pre></div>
+<h3 id="4-doom-multiplayer-fps-deathmatch">Миф 4. «Doom изобрела multiplayer FPS и deathmatch»<a class="headerlink" href="#4-doom-multiplayer-fps-deathmatch" title="Permanent link">¶</a></h3>
+<p>Networked first-person combat существовал раньше.</p>
+<p>Но Doom превратила deathmatch в массовую PC-culture и сам термин закрепила в языке жанра.</p>
+<div class="highlight"><pre><span></span><code>НЕ ПЕРВАЯ
+СЕТЕВАЯ
+СТРЕЛЬБА
+
+НО
+МАССОВЫЙ
+CULTURAL BREAKTHROUGH
+</code></pre></div>
+<h3 id="5-doom-true-3d-fps">Миф 5. «Doom была первой true 3D FPS»<a class="headerlink" href="#5-doom-true-3d-fps" title="Permanent link">¶</a></h3>
+<p>Нет.</p>
+<p>Doom world representation имеет ограничения и не является general polygonal 3D world Quake-type.</p>
+<p>Но реакционный тезис «Doom вообще не 3D» тоже бессмысленный: для player это полноценное spatial first-person experience.</p>
+<p>Quake — более правильная граница <code>true polygonal 3D</code> для самой id.</p>
+<h3 id="6-quake">Миф 6. «Quake с самого начала была задумана именно такой»<a class="headerlink" href="#6-quake" title="Permanent link">¶</a></h3>
+<p>Совсем нет.</p>
+<p>Original Quake vision имела fantasy/RPG/melee elements, персонажа Quake, hammer/Hellgate Cube lineage и множество идей, которые не пережили production.</p>
+<p>Финальная Quake стала shooter значительно ближе к Doom grammar после design chaos и pivot.</p>
+<p>То есть masterpiece может быть результатом:</p>
+<div class="highlight"><pre><span></span><code>ХАОС
++
+ОТМЕНЁННЫЕ ИДЕИ
++
+TECH BREAKTHROUGH
++
+КОМПРОМИСС
+</code></pre></div>
+<p>а не идеального master plan.</p>
+<h3 id="7-carmack-quake-romero">Миф 7. «Carmack один спас Quake от ленивого Romero»<a class="headerlink" href="#7-carmack-quake-romero" title="Permanent link">¶</a></h3>
+<p>Удобная версия победителя конфликта.</p>
+<p>Carmack действительно требовал discipline/ship.</p>
+<p>Romero действительно хотел более амбициозный leap и работал не так, как Carmack ожидал от design lead.</p>
+<p>Но collapse ранней Quake — collective production problem:</p>
+<div class="highlight"><pre><span></span><code>ENGINE
+МЕНЯЕТСЯ
+↓
+CONTENT
+УСТАРЕВАЕТ
+↓
+VISION
+ПЛЫВЁТ
+↓
+TEAM
+ВЫГОРЕЛА
+↓
+FLAT STRUCTURE
+НЕ РАЗРЕШАЕТ
+CONFLICT
+</code></pre></div>
+<h3 id="8-id-carmack">Миф 8. «id всегда была компанией Carmack»<a class="headerlink" href="#8-id-carmack" title="Permanent link">¶</a></h3>
+<p>Для post-Romero эпохи — очень Carmack-centric.</p>
+<p>Для всей истории — нет.</p>
+<p>1991 id — founder collective: Carmack, Romero, Hall, Adrian плюс business/operations вокруг них.</p>
+<p>Ownership и authority тоже распределены.</p>
+<p>А после 2013 id вообще продолжает существовать без Carmack.</p>
+<h3 id="9-id-tech-commercial-engine-epic">Миф 9. «id Tech всегда была лучшим commercial engine, Epic просто лучше продавала»<a class="headerlink" href="#9-id-tech-commercial-engine-epic" title="Permanent link">¶</a></h3>
+<p>Слово «лучший» без задачи бессмысленно.</p>
+<p>idTech была очень успешной technology.</p>
+<p>Но middleware — это не только renderer/source.</p>
+<p>Epic лучше построила:</p>
+<ul>
+<li>
+<p>support;</p>
+</li>
+<li>
+<p>docs;</p>
+</li>
+<li>
+<p>tools;</p>
+</li>
+<li>
+<p>integrations;</p>
+</li>
+<li>
+<p>licensee relationships;</p>
+</li>
+<li>
+<p>stable workflows;</p>
+</li>
+<li>
+<p>ecosystem.</p>
+</li>
+</ul>
+<p>И с 2010 id вообще выходит из external middleware race.</p>
+<h3 id="10-id-flat-studio">Миф 10. «id всегда была маленькой flat studio, пока корпорации всё не испортили»<a class="headerlink" href="#10-id-flat-studio" title="Permanent link">¶</a></h3>
+<p>Flat structure дала ранней id скорость и autonomy.</p>
+<p>Она же сделала Quake production чрезвычайно болезненным.</p>
+<p>При 6 людях:</p>
+<div class="highlight"><pre><span></span><code>СПРОСИ
+ЧЕРЕЗ КОМНАТУ
+</code></pre></div>
+<p>При 100:</p>
+<div class="highlight"><pre><span></span><code>КТО
+ВЛАДЕЕТ
+SCHEDULE?
+КТО
+ПРИНИМАЕТ
+FINAL DECISION?
+</code></pre></div>
+<p>Professional management возник не только как corporate evil, а потому что старая модель не масштабировалась.</p>
+<h3 id="11-zenimax-id-id">Миф 11. «ZeniMax купила id — настоящая id закончилась»<a class="headerlink" href="#11-zenimax-id-id" title="Permanent link">¶</a></h3>
+<p>Корпоративно:</p>
+<div class="highlight"><pre><span></span><code>НЕЗАВИСИМАЯ id
+ЗАКОНЧИЛАСЬ
+</code></pre></div>
+<p>Творчески — слишком просто.</p>
+<p>После acquisition появляются Doom 2016/Eternal — игры, которые очень хорошо продолжают performance/control/core-system DNA компании.</p>
+<p>То есть ZeniMax убила sovereignty, но не автоматически culture.</p>
+<h3 id="12-id-doom-1993">Миф 12. «Современная id — та же команда Doom 1993»<a class="headerlink" href="#12-id-doom-1993" title="Permanent link">¶</a></h3>
+<p>Нет.</p>
+<p>Hall, Romero, Adrian, Carmack давно ушли. Modern leadership — другие люди и другие departments.</p>
+<p>Но существует цепочка передачи culture.</p>
+<div class="highlight"><pre><span></span><code>НЕ
+ОДНА TEAM
+
+А
+ЦЕПОЧКА
+ПЕРЕДАЧИ
+</code></pre></div>
+<h3 id="13-doom-2016-doom-1993">Миф 13. «Doom 2016 — просто возврат к Doom 1993»<a class="headerlink" href="#13-doom-2016-doom-1993" title="Permanent link">¶</a></h3>
+<p>Нет.</p>
+<p>Это translation design values на modern language.</p>
+<p>Glory Kills, weapon mods, vertical arenas, progression, modern AI — всего этого не было в 1993.</p>
+<p>Но emotional function — speed, power, aggression, projectile avoidance, weapon/enemy identity — восстанавливается.</p>
+<h3 id="14-doom-2016-old-school-fps">Миф 14. «Doom 2016 доказала, что old-school FPS просто были лучше»<a class="headerlink" href="#14-doom-2016-old-school-fps" title="Permanent link">¶</a></h3>
+<p>Сама Doom 2016 — очень современная AAA game:</p>
+<ul>
+<li>
+<p>upgrades;</p>
+</li>
+<li>
+<p>mods;</p>
+</li>
+<li>
+<p>checkpoints;</p>
+</li>
+<li>
+<p>cinematic animation;</p>
+</li>
+<li>
+<p>controller design;</p>
+</li>
+<li>
+<p>online systems;</p>
+</li>
+<li>
+<p>UGC tool;</p>
+</li>
+<li>
+<p>modern art pipeline.</p>
+</li>
+</ul>
+<p>Это не 1993 победил 2016.</p>
+<p>Это 2016 грамотно перевёл часть принципов 1993.</p>
+<h3 id="15-carmack-id">Миф 15. «Carmack ушёл — технологическая id закончилась»<a class="headerlink" href="#15-carmack-id" title="Permanent link">¶</a></h3>
+<p>История уже опровергла.</p>
+<p>id Tech 6, 7, 8, Vulkan, RTGI, path tracing.</p>
+<p>Но часть персональных Carmack-values действительно не пережила его — например systematic eventual open-source release.</p>
+<h3 id="16-id">Миф 16. «id всегда была впереди всей индустрии»<a class="headerlink" href="#16-id" title="Permanent link">¶</a></h3>
+<p>Нет.</p>
+<p>В 1990-е технологически часто да.</p>
+<p>Позже narrative FPS, immersive sim, open-world, middleware, console shooter design развиваются сильнее у других компаний.</p>
+<p>RAGE/Doom4 era особенно показывает, что id сама начинает смотреть на рынок.</p>
+<p>Doom 2016 выигрывает, когда перестаёт пытаться быть центром <strong>всего</strong> жанра и становится лучшей в своём конкретном языке.</p>
+<h3 id="17-id">Миф 17. «Гении без менеджмента и сделали id великой»<a class="headerlink" href="#17-id" title="Permanent link">¶</a></h3>
+<p>Талант не решает автоматически:</p>
+<div class="highlight"><pre><span></span><code>КТО
+ПРИНИМАЕТ
+РЕШЕНИЕ?
+КТО
+ОТВЕЧАЕТ
+ЗА SCHEDULE?
+КАК
+РАЗРЕШИТЬ
+CONFLICT?
+</code></pre></div>
+<p>Quake — доказательство.</p>
+<h3 id="18-quake-doom-3d">Миф 18. «Quake — творческий провал, потому что стала Doom в 3D»<a class="headerlink" href="#18-quake-doom-3d" title="Permanent link">¶</a></h3>
+<p>Original design vision действительно не реализовалась полностью.</p>
+<p>Но final game создаёт новый spatial/network/modding/competitive язык.</p>
+<div class="highlight"><pre><span></span><code>НЕ СТАЛА
+ТОЙ ИГРОЙ,
+КОТОРУЮ
+ПЛАНИРОВАЛИ
+
+≠
+
+ПРОВАЛИЛАСЬ
+</code></pre></div>
+<h3 id="19-doom-phenomenon-carmack">Миф 19. «Doom стала phenomenon просто потому, что Carmack был впереди технологически»<a class="headerlink" href="#19-doom-phenomenon-carmack" title="Permanent link">¶</a></h3>
+<p>Если бы technology автоматически создавала phenomenon, RAGE повторила бы Doom-level cultural impact.</p>
+<p>Doom — multiplicative system:</p>
+<div class="highlight"><pre><span></span><code>TECH
+×
+GAMEPLAY
+×
+ART
+×
+AUDIO
+×
+SHAREWARE
+×
+MODDING
+×
+DEATHMATCH
+×
+HISTORICAL MOMENT
+</code></pre></div>
+<h3 id="20-id-software">Миф 20. «Существует одна настоящая id Software»<a class="headerlink" href="#20-id-software" title="Permanent link">¶</a></h3>
+<p>Какая?</p>
+<p>Softdisk/Keen?</p>
+<p>Doom founders?</p>
+<p>Quake conflict-era?</p>
+<p>Carmack post-Romero company?</p>
+<p>Doom 3 id?</p>
+<p>RAGE/ZeniMax?</p>
+<p>Doom 2016?</p>
+<p>Microsoft-era?</p>
+<p>Мы уже увидели несколько почти разных компаний.</p>
+<p>Поэтому фраза:</p>
+<div class="highlight"><pre><span></span><code>НАСТОЯЩАЯ id
+УМЕРЛА
+В XXXX
+</code></pre></div>
+<p>имеет смысл только после уточнения — какую именно id ты считаешь настоящей.</p>
+<p>Founder-id умерла давно.</p>
+<p>Independent-id — в 2009.</p>
+<p>Carmack-id — в 2013.</p>
+<p>Но development culture, основанная на feel, performance, control, own tech и strong core, пока полностью не исчезла.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p074">74. Главная историческая дуга id Software<a class="headerlink" href="#p074" title="Permanent link">¶</a></h2>
+<p>Теперь можно собрать всю историю не как список игр, а как одну причинную цепь.</p>
+<p>Самое странное в id — не то, что она сделала Doom или Quake.</p>
+<p>Самое странное:</p>
+<h3 id="_19">как эта компания вообще до сих пор существует?<a class="headerlink" href="#_19" title="Permanent link">¶</a></h3>
+<p>Почти всё, что определяло её рождение, исчезло:</p>
+<div class="highlight"><pre><span></span><code>FOUNDERS
+→ почти все ушли
+
+OWNERS
+→ сменились
+
+INDEPENDENCE
+→ исчезла
+
+SHAREWARE
+→ исчез
+
+PC-ONLY CULTURE
+→ исчезла
+
+EXTERNAL ENGINE LICENSING
+→ исчезло
+
+CARMACK
+→ ушёл
+
+ROMERO
+→ ушёл
+
+HOLLENSHEAD
+→ ушёл
+
+WILLITS
+→ ушёл
+
+TECH-FIRST MODEL
+→ закончилась
+</code></pre></div>
+<p>1991 и 2026 буквально похожи на две разные организации.</p>
+<p>И всё же modern Doom всё ещё часто ощущается как id.</p>
+<h3 id="_20">Начало — не миссия изменить индустрию<a class="headerlink" href="#_20" title="Permanent link">¶</a></h3>
+<p>Softdisk team просто хочет:</p>
+<div class="highlight"><pre><span></span><code>САМИ
+КОНТРОЛИРОВАТЬ
+ТО,
+ЧТО
+ДЕЛАЕМ
+</code></pre></div>
+<p>Это первый ген id — creative/technical autonomy.</p>
+<h3 id="carmack-technical-leverage">Carmack даёт независимости technical leverage<a class="headerlink" href="#carmack-technical-leverage" title="Permanent link">¶</a></h3>
+<p>Smooth scrolling на PC → Commander Keen.</p>
+<p>И возникает identity:</p>
+<div class="highlight"><pre><span></span><code>МЫ
+МОЖЕМ
+ЗАСТАВИТЬ
+КОМПЬЮТЕР
+ДЕЛАТЬ
+ТО,
+ЧТО
+ОН
+ВРОДЕ БЫ
+НЕ ДОЛЖЕН
+</code></pre></div>
+<h3 id="shareware-independence-economically-real">Shareware делает independence economically real<a class="headerlink" href="#shareware-independence-economically-real" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>СДЕЛАЛИ
+↓
+ДАЛИ
+ПОПРОБОВАТЬ
+↓
+ПОНРАВИЛОСЬ
+↓
+PLAYER
+ПЛАТИТ
+</code></pre></div>
+<p>Компания получает belief:</p>
+<div class="highlight"><pre><span></span><code>GOOD PRODUCT
+&gt;
+GATEKEEPER
+</code></pre></div>
+<h3 id="wolfenstein-density-principle">Wolfenstein формулирует density principle<a class="headerlink" href="#wolfenstein-density-principle" title="Permanent link">¶</a></h3>
+<p>Лишние mechanics, которые тормозят action, выкидываются.</p>
+<div class="highlight"><pre><span></span><code>GAME
+НЕ ОБЯЗАНА
+МОДЕЛИРОВАТЬ
+МИР
+
+ОНА
+ДОЛЖНА
+СОЗДАВАТЬ
+ИНТЕРЕСНОЕ
+ПОВЕДЕНИЕ
+</code></pre></div>
+<h3 id="doom">Doom — идеальное совпадение всех частей<a class="headerlink" href="#doom" title="Permanent link">¶</a></h3>
+<p>Technology, tools, art, levels, audio, business, distribution, modding, multiplayer — всё тянет в одну сторону.</p>
+<p>И поэтому Doom создаёт не только campaign, а ecosystem:</p>
+<div class="highlight"><pre><span></span><code>shareware
+→ viral distribution
+
+WAD
+→ modding
+
+LAN
+→ deathmatch
+
+community
+→ future developers
+</code></pre></div>
+<h3 id="doom-id">Успех Doom ломает маленькую id<a class="headerlink" href="#doom-id" title="Permanent link">¶</a></h3>
+<p>Следующий project уже обязан быть «следующей революцией».</p>
+<p>И тут Quake соединяет одновременно слишком много риска:</p>
+<div class="highlight"><pre><span></span><code>TECH REVOLUTION
++
+DESIGN REVOLUTION
++
+FLAT MANAGEMENT
+</code></pre></div>
+<p>Engine меняется, content устаревает, vision плавает, team выгорает.</p>
+<p>Quake всё равно великая — и именно поэтому organization может неправильно решить, что process тоже был нормальный.</p>
+<h3 id="romero-id">Уход Romero — первая культурная смерть id<a class="headerlink" href="#romero-id" title="Permanent link">¶</a></h3>
+<p>Баланс:</p>
+<div class="highlight"><pre><span></span><code>CARMACK
+↔
+ROMERO
+</code></pre></div>
+<p>ломается.</p>
+<p>Компания постепенно превращается в technology-centered studio.</p>
+<h3 id="quake-ii-quake-iii-carmack-company">Quake II / Quake III показывают преимущества Carmack-company<a class="headerlink" href="#quake-ii-quake-iii-carmack-company" title="Permanent link">¶</a></h3>
+<p>Больше production discipline.</p>
+<p>Quake III особенно идеально совпадает с strengths:</p>
+<div class="highlight"><pre><span></span><code>TECHNICAL PRECISION
++
+MECHANICAL PRECISION
++
+MINIMUM NARRATIVE OVERHEAD
+</code></pre></div>
+<h3 id="engine-licensing-identity">Engine licensing создаёт вторую identity<a class="headerlink" href="#engine-licensing-identity" title="Permanent link">¶</a></h3>
+<p>id становится не только game studio, но technology supplier для огромной части FPS-индустрии.</p>
+<p>Возникает иллюзия:</p>
+<div class="highlight"><pre><span></span><code>МОЖЕТ
+ENGINE
+И ЕСТЬ
+НАШ
+ГЛАВНЫЙ
+PRODUCT?
+</code></pre></div>
+<h3 id="doom-3-technology-first-model">Doom 3 — вершина technology-first model<a class="headerlink" href="#doom-3-technology-first-model" title="Permanent link">¶</a></h3>
+<p>Renderer thesis буквально рождает horror thesis.</p>
+<p>Но теперь уже видно:</p>
+<div class="highlight"><pre><span></span><code>GRAPHICS
+REVOLUTION
+≠
+AUTOMATIC
+GAME DESIGN
+REVOLUTION
+</code></pre></div>
+<h3 id="aaa-old-assumptions">AAA ломает old assumptions<a class="headerlink" href="#aaa-old-assumptions" title="Permanent link">¶</a></h3>
+<p>Старая model:</p>
+<div class="highlight"><pre><span></span><code>SMALL TEAM
++
+NEW ENGINE
++
+ONE GAME
+</code></pre></div>
+<p>AAA требует:</p>
+<div class="highlight"><pre><span></span><code>100+ PEOPLE
+MULTIPLATFORM
+ART PIPELINE
+ANIMATION
+TOOLS
+OUTSOURCING
+MULTI-YEAR PRODUCTION
+</code></pre></div>
+<p>Это уже другая профессия.</p>
+<h3 id="rage-old-carmack-model-new-aaa-reality">RAGE — попытка натянуть old Carmack model на new AAA reality<a class="headerlink" href="#rage-old-carmack-model-new-aaa-reality" title="Permanent link">¶</a></h3>
+<p>Technology рождает concept, concept расползается на vehicles/hubs/crafting/open-world ambitions.</p>
+<p>Лучшее всё равно shooting.</p>
+<p>Именно здесь старая formula начинает реально проигрывать.</p>
+<h3 id="zenimax-id">ZeniMax — конец независимой id<a class="headerlink" href="#zenimax-id" title="Permanent link">¶</a></h3>
+<p>2009.</p>
+<p>Суверенитет исчезает.</p>
+<p>Но появляются capital, publisher infrastructure, sister studios и возможность пережить дорогие ошибки.</p>
+<h3 id="old-doom-4">Old Doom 4 — низшая точка самоопределения<a class="headerlink" href="#old-doom-4" title="Permanent link">¶</a></h3>
+<p>id, которая когда-то заставляла рынок копировать себя, теперь смотрит на рынок и спрашивает:</p>
+<div class="highlight"><pre><span></span><code>КАК
+ДОЛЖЕН
+ВЫГЛЯДЕТЬ
+СОВРЕМЕННЫЙ
+BLOCKBUSTER FPS?
+</code></pre></div>
+<p>Ответ получается качественным production, но без Doom soul.</p>
+<h3 id="_21">Спасительный акт — признать ошибку<a class="headerlink" href="#_21" title="Permanent link">¶</a></h3>
+<p>Несколько лет work отправляются в мусор.</p>
+<p>Это дорогой, но фундаментальный принцип:</p>
+<div class="highlight"><pre><span></span><code>IDENTITY
+&gt;
+SUNK COST
+</code></pre></div>
+<h3 id="2013-power-structure">2013 — старая power structure исчезает<a class="headerlink" href="#2013-power-structure" title="Permanent link">¶</a></h3>
+<p>Hollenshead OUT.</p>
+<p>Carmack OUT.</p>
+<p>По всем законам история должна закончиться.</p>
+<p>Если id = её создатели, всё.</p>
+<p>Но к этому моменту часть culture уже распределена между людьми, tools, processes, code и expectations.</p>
+<h3 id="doom-reboot-implicit-culture-explicit-principles">Doom reboot превращает implicit culture в explicit principles<a class="headerlink" href="#doom-reboot-implicit-culture-explicit-principles" title="Permanent link">¶</a></h3>
+<p>Founders могли просто чувствовать Doom.</p>
+<p>Новая team обязана ответить:</p>
+<div class="highlight"><pre><span></span><code>WHAT IS DOOM?
+</code></pre></div>
+<p>И формулирует:</p>
+<div class="highlight"><pre><span></span><code>GUNS
+DEMONS
+MOVEMENT
+AGGRESSION
+PLAYER POWER
+</code></pre></div>
+<p>Это момент, когда culture перестаёт быть только личной интуицией founders.</p>
+<h3 id="doom-2016">Doom 2016 доказывает невозможное<a class="headerlink" href="#doom-2016" title="Permanent link">¶</a></h3>
+<p>Без Carmack/Romero/Hall/Adrian studio делает game, которая ощущается не corporate imitation, а настоящим Doom comeback.</p>
+<p>Значит логотип не пустой.</p>
+<h3 id="id-tech-6-proof">id Tech 6 делает второй proof<a class="headerlink" href="#id-tech-6-proof" title="Permanent link">¶</a></h3>
+<p>Engineering standard тоже survives.</p>
+<p>Performance, low latency, own technology продолжаются без Carmack.</p>
+<h3 id="eternal-proof">Eternal делает третий proof<a class="headerlink" href="#eternal-proof" title="Permanent link">¶</a></h3>
+<p>Новая id способна не только восстановить old values, но <strong>сама создать дальнейшую evolution</strong>.</p>
+<p>Это уже не cargo cult.</p>
+<h3 id="willits-studio">Willits уходит — studio почти не шатается<a class="headerlink" href="#willits-studio" title="Permanent link">¶</a></h3>
+<p>Чем меньше departure одного человека способен уничтожить company, тем больше company стала institution.</p>
+<h3 id="microsoft-acquisition-ownership">Microsoft acquisition — ещё один слой ownership<a class="headerlink" href="#microsoft-acquisition-ownership" title="Permanent link">¶</a></h3>
+<p>Но id уже достаточно зрелая, чтобы owner не становился главным creative автором.</p>
+<p>Doom остаётся distinct внутри огромного shooter portfolio.</p>
+<h3 id="dark-ages-successful-formula">Dark Ages снова ломает successful formula<a class="headerlink" href="#dark-ages-successful-formula" title="Permanent link">¶</a></h3>
+<p>И это очень id-like.</p>
+<p>Не Eternal 2.</p>
+<p>Shield, parry, ground combat, iron-tank fantasy.</p>
+<p>А Revelations ещё через год корректирует Dark Ages mobility.</p>
+<p>То есть slogan тоже не sacred.</p>
+<h3 id="id_2">Почему id выжила<a class="headerlink" href="#id_2" title="Permanent link">¶</a></h3>
+<h4 id="1-technical-capital">1. Сильный technical capital<a class="headerlink" href="#1-technical-capital" title="Permanent link">¶</a></h4>
+<p>Code/tools/architecture/performance practices переживают отдельных людей.</p>
+<h4 id="2-founders-founders">2. Founders успели вырастить не-founders<a class="headerlink" href="#2-founders-founders" title="Permanent link">¶</a></h4>
+<p>Cloud, McGee, Willits, Duffy, Stratton и новые поколения.</p>
+<p>Craft можно передавать.</p>
+<h4 id="3-community">3. Community хранит внешнюю память<a class="headerlink" href="#3-community" title="Permanent link">¶</a></h4>
+<p>Doom/Quake communities десятилетиями сохраняют design language, movement culture, maps, source ports, mods.</p>
+<h4 id="4-ip-constraints">4. IP становятся культурными constraints<a class="headerlink" href="#4-ip-constraints" title="Permanent link">¶</a></h4>
+<p>Doom уже диктует ожидания: shotgun, demons, aggression, player power.</p>
+<p>Новый developer приходит не в пустоту.</p>
+<h4 id="5">5. Компания не пытается буквально заморозить старую форму<a class="headerlink" href="#5" title="Permanent link">¶</a></h4>
+<p>После Romero не ищут Romero 2.</p>
+<p>После Carmack — Carmack 2.</p>
+<p>После shareware — не пытаются навечно жить shareware.</p>
+<p>Identity сохраняется через adaptation, а не мумификацию.</p>
+<h4 id="6-zenimax">6. ZeniMax дала время пережить ошибки<a class="headerlink" href="#6-zenimax" title="Permanent link">¶</a></h4>
+<p>RAGE + Doom4 write-offs могли быть очень опасны для независимой studio.</p>
+<p>Parent capital делает creative reset финансово возможным.</p>
+<h4 id="7-modern-leadership">7. Modern leadership правильно диагностирует прошлое<a class="headerlink" href="#7-modern-leadership" title="Permanent link">¶</a></h4>
+<p>Не pixel art/keycards как surface.</p>
+<p>А deeper functions: speed, power, enemy/weapon identity, forward momentum.</p>
+<h4 id="8-engineering-culture">8. Engineering culture действительно институционализировалась<a class="headerlink" href="#8-engineering-culture" title="Permanent link">¶</a></h4>
+<p>Sousa приходит извне, но не превращает id в Crytek. Он становится частью idTech culture.</p>
+<h4 id="9-id-expertise">9. id учится признавать чужую expertise<a class="headerlink" href="#9-id-expertise" title="Permanent link">¶</a></h4>
+<p>Wolfenstein → MachineGames.</p>
+<p>Open-world RAGE 2 → Avalanche.</p>
+<p>Preservation → Nightdive.</p>
+<h4 id="10-quality-checksum">10. Сохраняется внутренний quality checksum<a class="headerlink" href="#10-quality-checksum" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>IS IT FAST?
+DOES IT FEEL GOOD?
+IS THE PLAYER IN CONTROL?
+IS THE CORE ACTUALLY FUN?
+DOES THIS FEATURE HELP THE CORE?
+CAN A GREAT PLAYER GET BETTER?
+IS THE GAME CLEAR ABOUT WHAT IT IS?
+</code></pre></div>
+<h3 id="_22">Главный парадокс<a class="headerlink" href="#_22" title="Permanent link">¶</a></h3>
+<p>Первая id стала великой, потому что была маленькой.</p>
+<p>Чтобы выжить — пришлось перестать быть маленькой.</p>
+<p>Стала великой благодаря founders ownership.</p>
+<p>Чтобы финансировать AAA — пришлось продаться.</p>
+<p>Стала великой благодаря Carmack.</p>
+<p>Чтобы пережить Carmack — пришлось перестать быть компанией Carmack.</p>
+<p>Стала великой через technology-first.</p>
+<p>Чтобы снова делать великие games — пришлось заставить technology служить gameplay.</p>
+<p>Была построена вокруг незаменимых людей.</p>
+<p>Чтобы жить 35 лет — пришлось научиться не иметь незаменимых людей.</p>
+<h3 id="_23">Самый точный ответ<a class="headerlink" href="#_23" title="Permanent link">¶</a></h3>
+<p>id не осталась той же компанией.</p>
+<p>Она <strong>стала другой компанией, не перестав быть узнаваемой id</strong>.</p>
+<p>Сохранилась не форма, а constraints:</p>
+<div class="highlight"><pre><span></span><code>PLAYER CONTROL
+ДОЛЖЕН
+БЫТЬ
+ТОЧНЫМ
+
+CORE LOOP
+ДОЛЖЕН
+БЫТЬ
+СИЛЬНЫМ
+
+PERFORMANCE
+НЕ РОСКОШЬ
+
+TECH
+ДОЛЖНА
+ПОМОГАТЬ
+GAME
+
+MASTERY
+ДОЛЖНА
+ВОЗНАГРАЖДАТЬСЯ
+
+BUILD
+ИМЕЕТ
+ПРАВО
+ПОБЕДИТЬ
+ТЕОРИЮ
+</code></pre></div>
+<p>Вот почему современная id может быть совершенно другой организацией и всё равно периодически выдавать ощущение:</p>
+<div class="highlight"><pre><span></span><code>ДА
+БЛЯДЬ
+ЭТО id
+</code></pre></div>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<hr/>
+<p><a href="10-doom-rebirth-modern-id.html">← X. Перерождение Doom</a> · <a href="index.html">Общее оглавление</a> · <a href="12-side-branches.html">XII. Боковые ветви →</a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: id Software — X. Перерождение Doom и современная id" class="md-footer__link md-footer__link--prev" href="10-doom-rebirth-modern-id.html">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                id Software — X. Перерождение Doom и современная id
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven" class="md-footer__link md-footer__link--next" href="12-side-branches.html">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

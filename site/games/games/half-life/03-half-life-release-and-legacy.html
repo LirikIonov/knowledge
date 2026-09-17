@@ -1,0 +1,4963 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="02-half-life-design.html" rel="prev"/>
+<link href="04-gearbox-and-consoles.html" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Half-Life — финал, релиз и рождение наследия - База данных</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#half-life">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Half-Life — финал, релиз и рождение наследия
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/Arkane.html">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/index.html">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/01-origins-softdisk-keen.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/02-wolfenstein.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/03-doom-birth.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/04-doom-ecosystem.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/05-quake-crisis.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/06-id-after-romero.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/07-quake2-quake3-middleware.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/08-doom3-aaa.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/09-rage-zenimax-carmack.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/10-doom-rebirth-modern-id.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/11-legacy-summary.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/12-side-branches.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/MANIFEST.html">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/index.html">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/01-origins-steam.html">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/02-games-and-engines.html">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/03-inside-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/04-hardware-linux-vr.html">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/05-modern-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/06-valve-as-institution.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/07-ecosystem-and-catalog.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/08-appendices.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/09-sources-and-status.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Doom.html">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Doom30.html">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Doom3_45-103.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Half-Life-58-111.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — темы 58–111
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Half-Life-complete-research.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Half-Life_2_33-57.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life_2_33-57
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Half-Life_history_1-33.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life_history_1-33
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Quake.html">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Spider-Man.html">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../doom4-eternal.html">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../doom_eternal_51-80.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_2_13" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_13" id="__nav_1_2_13_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half Life revised 17 documents
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_2_13_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_13">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half Life revised 17 documents
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="01-origins-and-development.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="02-half-life-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="03-half-life-release-and-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p018">
+<span class="md-ellipsis">
+      
+        18. Xen и почему финальная часть получилась настолько другой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p019">
+<span class="md-ellipsis">
+      
+        19. G-Man и загадочная сторона Half-Life
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p020">
+<span class="md-ellipsis">
+      
+        20. Half-Life в 1998 году
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p021">
+<span class="md-ellipsis">
+      
+        21. Реакция прессы и игроков
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p022">
+<span class="md-ellipsis">
+      
+        22. Почему Half-Life считается революционным FPS
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p023">
+<span class="md-ellipsis">
+      
+        23. Что Half-Life действительно изобрела, а что существовало до неё
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p024">
+<span class="md-ellipsis">
+      
+        24. Half-Life Multiplayer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p025">
+<span class="md-ellipsis">
+      
+        25. Half-Life: Uplink и Day One
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p026">
+<span class="md-ellipsis">
+      
+        26. SDK Half-Life и начало мод-сцены
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hl1-preservation">
+<span class="md-ellipsis">
+      
+        Какую Half-Life мы запускаем, когда возвращаемся в 1998 год
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#materials">
+<span class="md-ellipsis">
+      
+        Материалы к главе
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="04-gearbox-and-consoles.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="05-half-life-2-development-and-tech.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="06-half-life-2-world-and-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="07-half-life-2-beta-release.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="08-episodes.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="09-half-life-3-and-cancelled-projects.html">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="10-vr-and-alyx-development.html">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="11-half-life-alyx-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="12-modding-and-community.html">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="13-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="14-audio.html">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="15-how-valve-makes-half-life.html">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="16-movement-and-speedrunning.html">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="CHANGES.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2_14" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_14" id="__nav_1_2_14_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_14_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_14">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/index.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — оглавление
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/01-origins-and-development.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/03-half-life-release-and-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/04-gearbox-and-consoles.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/06-half-life-2-world-and-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/07-half-life-2-beta-release.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/08-episodes.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/09-half-life-3-and-cancelled-projects.html">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/10-vr-and-alyx-development.html">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/11-half-life-alyx-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/12-modding-and-community.html">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/13-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/14-audio.html">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/15-how-valve-makes-half-life.html">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/16-movement-and-speedrunning.html">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/Gabe%20Newell.html">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Carmack.html">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Romero.html">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stores/steam/Steam.html">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p018">
+<span class="md-ellipsis">
+      
+        18. Xen и почему финальная часть получилась настолько другой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p019">
+<span class="md-ellipsis">
+      
+        19. G-Man и загадочная сторона Half-Life
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p020">
+<span class="md-ellipsis">
+      
+        20. Half-Life в 1998 году
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p021">
+<span class="md-ellipsis">
+      
+        21. Реакция прессы и игроков
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p022">
+<span class="md-ellipsis">
+      
+        22. Почему Half-Life считается революционным FPS
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p023">
+<span class="md-ellipsis">
+      
+        23. Что Half-Life действительно изобрела, а что существовало до неё
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p024">
+<span class="md-ellipsis">
+      
+        24. Half-Life Multiplayer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p025">
+<span class="md-ellipsis">
+      
+        25. Half-Life: Uplink и Day One
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p026">
+<span class="md-ellipsis">
+      
+        26. SDK Half-Life и начало мод-сцены
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hl1-preservation">
+<span class="md-ellipsis">
+      
+        Какую Half-Life мы запускаем, когда возвращаемся в 1998 год
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#materials">
+<span class="md-ellipsis">
+      
+        Материалы к главе
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="half-life">Half-Life — финал, релиз и рождение наследия<a class="headerlink" href="#half-life" title="Permanent link">¶</a></h1>
+<p>Релиз, реакция современников и поздняя репутация — разные слои этой истории. Как сцены работают изнутри, разбирает <a href="02-half-life-design.html">глава 02</a>; что унаследовали другие игры — <a href="13-legacy.html">глава 13</a>.</p>
+<p>Эта страница завершает историю первой Half-Life как отдельной игры. Сначала — Xen и G-Man, то есть две вещи, которые резко расширяют масштаб происходящего за пределы Black Mesa. Затем — сам релиз 1998 года, реакция прессы и игроков и аккуратный разбор того, почему Half-Life действительно стала революционной, хотя почти каждую её отдельную идею можно найти у предшественников.</p>
+<p>В конце фокус начинает смещаться от законченной кампании к тому, что происходит <strong>после</strong> релиза: встроенный multiplayer, Day One и Uplink, SDK и первые месяцы mod-сцены. Именно здесь Half-Life постепенно перестаёт быть только выдающимся single-player FPS и начинает превращаться в платформу, на которой другие люди будут делать собственные игры.</p>
+<h2 id="p018">18. Xen и почему финальная часть получилась настолько другой<a class="headerlink" href="#p018" title="Permanent link">¶</a></h2>
+<p>Xen — самая спорная часть первой Half-Life и участок, где особенно хорошо видно:</p>
+<blockquote>
+<p><strong>Valve нашла собственную формулу игры — а потом в самом конце на несколько глав от неё почти отошла.</strong></p>
+</blockquote>
+<p>На Земле Half-Life к этому моменту уже очень чётко знает, чем хочет быть: узнаваемое пространство, Black Mesa как реальное место, NPC, HECU, разные типы AI, scripted scenes, environmental storytelling, бои внутри понятной архитектуры, постоянное чередование режимов и масштаба.</p>
+<p>А затем Gordon прыгает в портал и получает:</p>
+<blockquote>
+<p><strong>плавающие острова, низкую гравитацию, платформинг над бездной, органические пещеры, абстрактную навигацию и значительно меньше того самого языка Half-Life, который игра весь предыдущий путь так тщательно строила.</strong></p>
+</blockquote>
+<p>И проблема не сводится к:</p>
+<blockquote>
+<p>Valve зачем-то решила сделать плохой alien level.</p>
+</blockquote>
+<p>Xen оказался <strong>принципиально другой дизайнерской и производственной задачей</strong>.</p>
+<h3 id="xen">Xen — не просто «родная планета всех пришельцев»<a class="headerlink" href="#xen" title="Permanent link">¶</a></h3>
+<p>Это первое упрощение, которое лучше сразу убрать.</p>
+<p>В первой игре легко считать:</p>
+<div class="highlight"><pre><span></span><code>Земля
+↓
+портал
+↓
+планета Xen
+</code></pre></div>
+<p>Но Xen задуман как <strong>borderworld</strong>, пограничное измерение.</p>
+<p>Полезнее представлять его чем-то вроде:</p>
+<div class="highlight"><pre><span></span><code>мир A
+  \
+   XEN
+  /
+мир B
+</code></pre></div>
+<p>То есть это пространство между мирами, узел перехода, а не обязательно нормальная планета с собственной единой экосистемой.</p>
+<p>И это важно ещё потому, что существа, которых Gordon встречал в Black Mesa, не обязаны все быть «коренными жителями Xen».</p>
+<p>Поздняя серия намного сильнее разовьёт саму идею пограничного мира, но фундамент уже здесь.</p>
+<h3 id="gordon">Зачем Gordon вообще туда отправляют<a class="headerlink" href="#gordon" title="Permanent link">¶</a></h3>
+<p>К Lambda Complex становится ясно: проблема не ограничивается случайными порталами после Resonance Cascade.</p>
+<p>Есть сила по ту сторону, которая удерживает связь и продолжает давление на Землю.</p>
+<p>Учёные Lambda отправляют Gordon в Xen, чтобы устранить её.</p>
+<p>Перед переходом ему выдают <strong>Long Jump Module</strong> и прямо готовят к тому, что там действуют другие пространственные условия.</p>
+<p>То есть игра заранее говорит:</p>
+<blockquote>
+<p><strong>сейчас правила изменятся.</strong></p>
+</blockquote>
+<p>И меняются они действительно сильно.</p>
+<h3 id="long-jump-half-life-platformer">Низкая гравитация и Long Jump превращают Half-Life почти в platformer<a class="headerlink" href="#long-jump-half-life-platformer" title="Permanent link">¶</a></h3>
+<p>На Земле основные навыки — бой, чтение пространства, использование механизмов, navigation, реакция на scripted events, управление ресурсами.</p>
+<p>В Xen внезапно огромную роль начинает играть:</p>
+<blockquote>
+<p><strong>прыжок.</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>разбег
+↓
+long jump
+↓
+летишь над бездной
+↓
+пытаешься понять, куда приземлишься
+</code></pre></div>
+<p>И вот тут Half-Life упирается в фундаментальную проблему first-person platforming.</p>
+<p>Ты плохо видишь собственное тело. Не видишь ноги. Труднее считываешь край. Труднее понимаешь точную траекторию. Неудача часто означает:</p>
+<blockquote>
+<p>упал → умер → load.</p>
+</blockquote>
+<p>То есть одна из главных особенностей Xen механически конфликтует с тем, насколько хорошо земная часть Half-Life обычно старается давать человеку читаемые ситуации.</p>
+<h3 id="black-mesa">Black Mesa использовала реальность как бесплатный интерфейс<a class="headerlink" href="#black-mesa" title="Permanent link">¶</a></h3>
+<p>На Земле ты видишь:</p>
+<blockquote>
+<p>дверь.</p>
+</blockquote>
+<p>И понимаешь:</p>
+<blockquote>
+<p>возможно, через неё можно пройти.</p>
+</blockquote>
+<p>Видишь лестницу — понимаешь функцию. Лифт. Железнодорожные пути. Панель управления. Коридор.</p>
+<p>Black Mesa не обязана каждый раз объяснять правила объекта, потому что player уже жил в реальном мире.</p>
+<p>Xen теряет это преимущество.</p>
+<div class="highlight"><pre><span></span><code>три плавающих острова
++
+органическая хрень
++
+зелёная лужа
++
+какая-то мембрана
++
+дырка в стене
+=
+куда, блядь?
+</code></pre></div>
+<p>Художественно это логично. Чужой мир <strong>должен</strong> быть чужим.</p>
+<p>Но с точки зрения game design Valve одновременно выбрасывает огромный накопленный словарь понятной архитектуры.</p>
+<h3 id="_1">Это ещё и проблема инструментов<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p>GoldSrc великолепно подходит для комнат, коридоров, шахт, лестниц, индустриальных пространств, офисов и лабораторий.</p>
+<p>Xen требует органических пещер, плавающих масс, асимметричных природных форм, биологических поверхностей, alien infrastructure и геометрии, которая не должна выглядеть человеческой.</p>
+<p>То есть pipeline, который отлично обслуживал Black Mesa, внезапно надо заставить говорить на совсем другом языке.</p>
+<p>И проблема не только техническая.</p>
+<p>На Земле художник может посмотреть фотографии:</p>
+<blockquote>
+<p>вот склад.</p>
+<p>вот лаборатория.</p>
+<p>вот техническое помещение.</p>
+</blockquote>
+<p>Для Xen нет референса:</p>
+<blockquote>
+<p><strong>как выглядит межпространственный пограничный мир?</strong></p>
+</blockquote>
+<p>Нужно одновременно придумать форму, материалы, навигацию, биологию, инфраструктуру, визуальные правила и gameplay-функцию каждого элемента.</p>
+<p>Задача намного дороже, чем кажется из формулы:</p>
+<blockquote>
+<p>«ну теперь сделайте alien level».</p>
+</blockquote>
+<h3 id="xen_1">Xen вводит слишком много новых правил слишком поздно<a class="headerlink" href="#xen_1" title="Permanent link">¶</a></h3>
+<p>В хорошей земной Half-Life Valve любит:</p>
+<div class="highlight"><pre><span></span><code>показать
+↓
+дать попробовать
+↓
+усложнить
+↓
+смешать со старым
+</code></pre></div>
+<p>В Xen уже почти финал.</p>
+<p>А игра внезапно говорит:</p>
+<blockquote>
+<p>низкая gravity.</p>
+<p>Long Jump.</p>
+<p>плавающие острова.</p>
+<p>непонятные биологические механизмы.</p>
+<p>новые типы пространства.</p>
+<p>другая архитектура.</p>
+</blockquote>
+<p>И у неё просто меньше времени, чтобы весь этот язык нормально стабилизировать в голове player.</p>
+<h3 id="xen_2">При этом первый выход в Xen художественно очень сильный<a class="headerlink" href="#xen_2" title="Permanent link">¶</a></h3>
+<p>Ты проводишь почти всю игру среди бетона, металла, труб, лабораторий, офисов и индустриальных машин.</p>
+<p>Потом:</p>
+<blockquote>
+<p>портал.</p>
+</blockquote>
+<p>И внезапно:</p>
+<ul>
+<li>чёрная бездна;</li>
+<li>плавающие каменные массы;</li>
+<li>странное небо;</li>
+<li>alien flora;</li>
+<li>непонятные sounds;</li>
+<li>низкая gravity;</li>
+<li>отсутствие нормальной земной архитектуры.</li>
+</ul>
+<p>Контраст ебанический.</p>
+<p>Игра мгновенно продаёт:</p>
+<blockquote>
+<p><strong>ты больше не на Земле.</strong></p>
+</blockquote>
+<p>Даже сегодня идея работает.</p>
+<p>А в 1998 году сам масштаб смены пространства был важной кульминацией.</p>
+<h3 id="_2">Меняется ещё и перспектива вторжения<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>До этого aliens приходят <strong>к тебе</strong>.</p>
+<p>Теперь Gordon сам становится вторженцем:</p>
+<blockquote>
+<p><strong>он приходит в их пространство.</strong></p>
+</blockquote>
+<p>И сразу начинает выясняться, что ситуация сложнее обычного:</p>
+<blockquote>
+<p>пришельцы из портала напали на Землю.</p>
+</blockquote>
+<p>В Xen есть инфраструктура, производство, Controllers, Vortigaunts, Alien Grunts и явно существующая иерархия.</p>
+<p>То есть player впервые видит не просто существ, а <strong>кусок системы</strong>, из которой они появились.</p>
+<h3 id="interloper-vortigaunts">Interloper особенно важен для будущего Vortigaunts<a class="headerlink" href="#interloper-vortigaunts" title="Permanent link">¶</a></h3>
+<p>В Black Mesa Vortigaunt легко считывается как:</p>
+<blockquote>
+<p>ещё один alien enemy.</p>
+</blockquote>
+<p>В Xen становится гораздо заметнее, что они не обязательно являются хозяевами происходящего.</p>
+<p>Можно прочитать примерно такую иерархию:</p>
+<div class="highlight"><pre><span></span><code>Vortigaunts
+↓
+рабочая / подчинённая сила
+
+Alien Controllers
+↓
+контроль и надзор
+
+Nihilanth
+↓
+верхний уровень локальной системы
+</code></pre></div>
+<p>Поздняя серия полностью переосмыслит Vortigaunts и сделает их союзниками.</p>
+<p>Но зерно этого поворота уже находится здесь:</p>
+<blockquote>
+<p><strong>мы неправильно поняли этих существ, когда видели их только внутри Black Mesa.</strong></p>
+</blockquote>
+<p>Это одна из лучших narrative-функций Xen.</p>
+<h3 id="gonarch">Gonarch — прекрасная биологическая идея<a class="headerlink" href="#gonarch" title="Permanent link">¶</a></h3>
+<p>Всю игру headcrab — маленький паразит.</p>
+<p>А затем встречается гигантская репродуктивная форма — Gonarch.</p>
+<p>Сам визуальный образ достаточно безумный: огромная ходячая биологическая конструкция, от которой произошли те маленькие твари, которые всю игру прыгали Gordon в лицо.</p>
+<p>Это хорошо расширяет ecology.</p>
+<p>Headcrab перестаёт быть просто:</p>
+<blockquote>
+<p>videogame monster №1.</p>
+</blockquote>
+<p>У существа появляется биологический контекст.</p>
+<h3 id="gonarch-encounter-boss-fight">Но сам Gonarch encounter уже ближе к обычному boss fight<a class="headerlink" href="#gonarch-encounter-boss-fight" title="Permanent link">¶</a></h3>
+<p>На Земле крупные угрозы часто работают как задачи пространства.</p>
+<p><code>Blast Pit</code>:</p>
+<blockquote>
+<p>не просто стреляй в Tentacle.</p>
+</blockquote>
+<p>Gargantua:</p>
+<blockquote>
+<p>разберись с окружением и infrastructure.</p>
+</blockquote>
+<p>Gonarch:</p>
+<blockquote>
+<p>наносишь damage → существо уходит дальше → повторяешь.</p>
+</blockquote>
+<p>Он всё ещё перемещается через несколько пространств, то есть это не просто закрытая circular arena.</p>
+<p>Но структура уже гораздо традиционнее:</p>
+<blockquote>
+<p><strong>стреляй в большую штуку достаточно долго.</strong></p>
+</blockquote>
+<p>И это один из сигналов, что Xen частично возвращается к более обычному videogame language.</p>
+<h3 id="interloper">Interloper ещё сильнее меняет темп<a class="headerlink" href="#interloper" title="Permanent link">¶</a></h3>
+<p>Там много vertical traversal, platforms, alien elevators, Controllers, Alien Grunts и повторяющихся bioindustrial spaces.</p>
+<p>Macro-идея интересная:</p>
+<blockquote>
+<p>увидеть внутреннюю alien infrastructure.</p>
+</blockquote>
+<p>Но micro-level сильнее повторяется.</p>
+<p>Именно поэтому Xen часто ощущается не только необычным, но и <strong>менее отредактированным</strong>, чем лучшая Black Mesa.</p>
+<h3 id="valve">«Valve просто поленилась» — слишком тупое объяснение<a class="headerlink" href="#valve" title="Permanent link">¶</a></h3>
+<p>Правильнее:</p>
+<blockquote>
+<p><strong>Xen оказался значительно более дорогой задачей, чем ожидала команда, а времени на ту же степень iteration, которую получила земная часть, уже не осталось.</strong></p>
+</blockquote>
+<p>Чтобы нормально сделать Black Mesa, Valve уже несколько лет строила tools, переделывала кампанию, научилась работать с human spaces, отлаживала AI, ставила scenes и гоняла playtests.</p>
+<p>Xen требует почти заново решить:</p>
+<blockquote>
+<p>как вообще читается мир?</p>
+</blockquote>
+<p>И только после этого можно запускать тот же iteration loop.</p>
+<p>Так что проблема реальна не только для Valve 1998.</p>
+<p>Много лет спустя Crowbar Collective сделает огромный Black Mesa remake — и именно Xen снова станет отдельным многолетним production challenge.</p>
+<h3 id="xen-half-life">В Xen почти исчезает человеческий слой Half-Life<a class="headerlink" href="#xen-half-life" title="Permanent link">¶</a></h3>
+<p>Земля:</p>
+<div class="highlight"><pre><span></span><code>Gordon
++
+scientists
++
+security
++
+HECU
++
+aliens
+</code></pre></div>
+<p>Xen:</p>
+<div class="highlight"><pre><span></span><code>Gordon
++
+aliens
+</code></pre></div>
+<p>Почти всё.</p>
+<p>Исчезают человеческие разговоры, паника учёных, security guards, HECU squads, бытовые сцены и человеческое узнавание пространства.</p>
+<p>То есть значительная часть режиссёрского словаря Half-Life просто становится неприменима.</p>
+<p>Вместо него остаётся:</p>
+<blockquote>
+<p>alien environment storytelling.</p>
+</blockquote>
+<p>Это интересная замена, но она намного более абстрактна.</p>
+<h3 id="nihilanth-half-life">Nihilanth тоже выглядит традиционнее, чем лучшие столкновения Half-Life<a class="headerlink" href="#nihilanth-half-life" title="Permanent link">¶</a></h3>
+<p>После всей игры финальный confrontation:</p>
+<blockquote>
+<p>большой boss в большой комнате.</p>
+</blockquote>
+<p>Nihilanth летает, атакует энергетическими projectile, телепортирует, подпитывается от внешних систем и требует сначала разобраться с поддерживающей инфраструктурой, затем атаковать его самого.</p>
+<p>Механическая структура есть.</p>
+<p>Но всё равно ощущение:</p>
+<blockquote>
+<p><strong>FINAL BOSS ROOM</strong></p>
+</blockquote>
+<p>намного сильнее, чем в большинстве земной кампании.</p>
+<p>Поэтому Nihilanth редко называют механической вершиной Half-Life.</p>
+<h3 id="nihilanth">Но сам образ Nihilanth намного интереснее обычного финального демона<a class="headerlink" href="#nihilanth" title="Permanent link">¶</a></h3>
+<p>Он не выглядит как:</p>
+<blockquote>
+<p>абсолютное зло, огромный Satan, убей и спаси мир.</p>
+</blockquote>
+<p>Существо деформировано, физически странное, связано с machinery, говорит обрывками, звучит почти испуганно и явно имеет собственную историю давления и подчинения.</p>
+<p>Уже сама презентация намекает:</p>
+<blockquote>
+<p><strong>перед Gordon не обязательно верховный хозяин всей инопланетной реальности.</strong></p>
+</blockquote>
+<p>Поздняя серия радикально увеличит масштаб и даст контекст, в котором Nihilanth оказывается не только врагом Gordon, но и существом, само оказавшимся под угрозой большей силы.</p>
+<h3 id="nihilanth_1">В ретроспективе Nihilanth перестаёт быть верхней точкой иерархии<a class="headerlink" href="#nihilanth_1" title="Permanent link">¶</a></h3>
+<p>В 1998:</p>
+<div class="highlight"><pre><span></span><code>Black Mesa
+↓
+Xen
+↓
+Nihilanth
+</code></pre></div>
+<p>Кажется почти полной картиной.</p>
+<p>После Half-Life 2 перспектива сильно расширяется:</p>
+<div class="highlight"><pre><span></span><code>большие межпространственные силы
+↓
+давление на Nihilanth и другие виды
+↓
+Xen / бегство / контроль
+↓
+Resonance Cascade
+↓
+Земля
+</code></pre></div>
+<p>И тогда финал HL1 начинает выглядеть совсем иначе.</p>
+<p>Gordon думал, что добрался до источника проблемы.</p>
+<p>На самом деле:</p>
+<blockquote>
+<p><strong>до одного промежуточного уровня гораздо большей системы.</strong></p>
+</blockquote>
+<h3 id="xen-half-life_1">Почему Xen всё равно необходим Half-Life<a class="headerlink" href="#xen-half-life_1" title="Permanent link">¶</a></h3>
+<p>Если закончить игру в Lambda Complex, история остаётся:</p>
+<blockquote>
+<p>катастрофа в секретной лаборатории.</p>
+</blockquote>
+<p>Xen говорит:</p>
+<blockquote>
+<p><strong>нет, Black Mesa реально задела огромную внешнюю реальность.</strong></p>
+</blockquote>
+<p>Без Xen масштаб всей серии был бы значительно меньше.</p>
+<p>И G-Man в финале работал бы слабее, потому что player не получил бы ощущения:</p>
+<blockquote>
+<p>за Black Mesa находится ещё большее пространство, а за Xen — возможно, ещё одно.</p>
+</blockquote>
+<h3 id="xen_3">Что Xen делает хорошо<a class="headerlink" href="#xen_3" title="Permanent link">¶</a></h3>
+<ul>
+<li>огромный контраст;</li>
+<li>ощущение полного выхода за пределы Земли;</li>
+<li>alien ecology;</li>
+<li>новую перспективу Vortigaunts;</li>
+<li>Controllers;</li>
+<li>производство Alien Grunts;</li>
+<li>Gonarch;</li>
+<li>Nihilanth;</li>
+<li>расширение масштаба мира;</li>
+<li>переход к G-Man.</li>
+</ul>
+<h3 id="xen_4">Что Xen делает хуже<a class="headerlink" href="#xen_4" title="Permanent link">¶</a></h3>
+<ul>
+<li>first-person platforming;</li>
+<li>читаемость маршрута;</li>
+<li>pacing;</li>
+<li>повторяемость;</li>
+<li>social storytelling;</li>
+<li>взаимодействие фракций;</li>
+<li>плотность scripted micro-events;</li>
+<li>часть boss design.</li>
+</ul>
+<h3 id="_3">Почему возникает ощущение «я внезапно играю в другую игру»<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>Земная формула:</p>
+<div class="highlight"><pre><span></span><code>узнаваемое пространство
++
+NPC
++
+AI
++
+scripts
++
+combat
++
+environmental storytelling
++
+понятная архитектура
+</code></pre></div>
+<p>Xen:</p>
+<div class="highlight"><pre><span></span><code>чужое пространство
++
+combat
++
+platforming
++
+alien mechanisms
+</code></pre></div>
+<p>Valve буквально выбрасывает несколько собственных сильнейших элементов одновременно.</p>
+<p>Поэтому смена настолько резкая.</p>
+<h3 id="xen_5">Но ошибка не в самом существовании Xen<a class="headerlink" href="#xen_5" title="Permanent link">¶</a></h3>
+<p>После долгой Black Mesa игре нужна финальная эскалация.</p>
+<p>Если бы после Lambda тебя ждали:</p>
+<blockquote>
+<p>ещё три бетонных коридора,</p>
+</blockquote>
+<p>масштаб финала был бы слабее.</p>
+<p>Идея закончить Half-Life переходом в полностью чужой мир очень хорошая.</p>
+<p>Проблема в другом:</p>
+<blockquote>
+<p><strong>Xen не получил той же степени редакторской и плейтестовой отточенности, которую получила Black Mesa после перезапуска.</strong></p>
+</blockquote>
+<h3 id="black-mesa-remake">Black Mesa remake позже почти докажет обе стороны проблемы<a class="headerlink" href="#black-mesa-remake" title="Permanent link">¶</a></h3>
+<p>Crowbar Collective решает реально построить Xen как полноценный alien world.</p>
+<p>Появляются развитая ecology, исследовательские лагеря, яснее Vortigaunt slavery, огромная alien infrastructure, более сложные Gonarch/Nihilanth и намного больше worldbuilding.</p>
+<p>Это великолепно показывает:</p>
+<blockquote>
+<p>сколько потенциала было в самой идее Xen.</p>
+</blockquote>
+<p>Но ремейк местами перегибает в противоположную сторону.</p>
+<p>Оригинал:</p>
+<blockquote>
+<p>слишком быстро и сыро.</p>
+</blockquote>
+<p>Black Mesa:</p>
+<blockquote>
+<p>местами слишком долго и подробно.</p>
+</blockquote>
+<p>То есть исправить:</p>
+<blockquote>
+<p><strong>«тут мало»</strong></p>
+</blockquote>
+<p>не автоматически означает:</p>
+<blockquote>
+<p><strong>«надо сделать в четыре раза больше».</strong></p>
+</blockquote>
+<h3 id="_4">Итог<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>Xen я бы описал не как «плохой финал плохой игры» и не как «несправедливо затравленный шедевр».</p>
+<p>Скорее:</p>
+<blockquote>
+<p><strong>необходимая и очень сильная концептуальная кульминация, которая получила существенно меньше iteration, чем основная Half-Life.</strong></p>
+</blockquote>
+<p>Она расширяет вселенную, меняет перспективу и закладывает будущую мифологию.</p>
+<p>Но механически местами теряет именно те качества, которые на Земле сделали игру революционной.</p>
+<p>Valve уже почти придумала собственный язык FPS.</p>
+<p>А в Xen в последний час иногда снова начинает говорить более старым языком:</p>
+<blockquote>
+<p>platforming, boss rooms, абстрактные игровые пространства, прыжки над бездной.</p>
+</blockquote>
+<p>Поэтому Xen одновременно одна из <strong>самых важных</strong> и одна из <strong>самых слабых</strong> частей Half-Life.</p>
+<h2 id="p019">19. G-Man и загадочная сторона Half-Life<a class="headerlink" href="#p019" title="Permanent link">¶</a></h2>
+<p>G-Man важен именно потому, что первая Half-Life почти ничего о нём не объясняет.</p>
+<p>Всю игру ты пытаешься разобраться с понятной большой катастрофой:</p>
+<blockquote>
+<p>что произошло в Black Mesa?</p>
+<p>откуда aliens?</p>
+<p>почему военные убивают свидетелей?</p>
+</blockquote>
+<p>Но Valve параллельно подсовывает второй вопрос:</p>
+<blockquote>
+<p><strong>кто этот мужик с чемоданом и какого хуя он постоянно оказывается впереди меня?</strong></p>
+</blockquote>
+<p>К финалу внезапно выясняется: второй вопрос, возможно, намного больше первого.</p>
+<h3 id="_5">Игра даже нормально его не представляет<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>Ни один NPC не подходит и не говорит:</p>
+<blockquote>
+<p>знакомься, это G-Man.</p>
+</blockquote>
+<p>Внутри fiction он практически безымянный.</p>
+<p>В коде и assets имя уже существует: <code>gman</code>, <code>monster_gman</code>, <code>gman.mdl</code>.</p>
+<p>То есть само обозначение не было поздней фанатской выдумкой.</p>
+<p>Но player не получает должность, организацию, нормальное имя, биографию или фракцию.</p>
+<p>Визуально сначала всё очень просто.</p>
+<p>Костюм. Галстук. Чемодан. Холодная физиономия.</p>
+<p>Архетип:</p>
+<blockquote>
+<p><strong>government man.</strong></p>
+</blockquote>
+<p>Для секретного научного объекта такое объяснение кажется совершенно нормальным.</p>
+<p>Поначалу.</p>
+<h3 id="resonance-cascade">Он появляется ещё до Resonance Cascade<a class="headerlink" href="#resonance-cascade" title="Permanent link">¶</a></h3>
+<p>И это чрезвычайно важная деталь.</p>
+<p>G-Man не материализуется только после открытия portal.</p>
+<p>Он уже находится в Black Mesa.</p>
+<p>Его можно увидеть во время transit ride, за стеклом и в момент спора с учёным ещё до того, как experiment окончательно летит в пизду.</p>
+<p>Первое прохождение:</p>
+<blockquote>
+<p>наверное какой-то начальник.</p>
+</blockquote>
+<p>После финала:</p>
+<blockquote>
+<p>подожди.</p>
+<p><strong>он был здесь ещё до катастрофы.</strong></p>
+</blockquote>
+<p>Обычная фоновая фигура ретроактивно становится частью главной загадки.</p>
+<h3 id="_6">После катастрофы он постоянно наблюдает<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>G-Man появляется по всему маршруту Gordon.</p>
+<p>Но почти всегда далеко, через стекло, на другом балконе, в недоступной зоне или уже уходит, когда player добирается ближе.</p>
+<p>Игра не делает:</p>
+<blockquote>
+<p><code>G-MAN SPOTTED</code>.</p>
+</blockquote>
+<p>Нет отдельного music sting каждый раз.</p>
+<p>Нет обязательного zoom.</p>
+<p>Можно вообще пропустить большую часть появлений.</p>
+<p>И именно поэтому они работают настолько хорошо.</p>
+<p>Если ты сам заметил:</p>
+<blockquote>
+<p><strong>там снова этот мужик</strong></p>
+</blockquote>
+<p>ощущение другое, чем от обычной обязательной сюжетной сцены.</p>
+<h3 id="-">Он почти всегда каким-то образом впереди<a class="headerlink" href="#-" title="Permanent link">¶</a></h3>
+<p>Gordon ползёт через вентиляцию, включает generators, воюет с HECU, ездит, прыгает и ломает путь.</p>
+<p>G-Man:</p>
+<blockquote>
+<p>уже там.</p>
+</blockquote>
+<p>Иногда география делает обычное объяснение практически абсурдным.</p>
+<p>Ты видел его в месте, до которого Gordon еле добирается.</p>
+<p>Пришёл.</p>
+<p>Человека нет.</p>
+<p>Уйти нормальным маршрутом он вроде не мог.</p>
+<p>Игра ничего не подчёркивает.</p>
+<p>Просто раз за разом создаёт мысль:</p>
+<blockquote>
+<p><strong>он вообще движется по тем же правилам, что я?</strong></p>
+</blockquote>
+<h3 id="lambda-core">Lambda Core окончательно ломает версию про обычного чиновника<a class="headerlink" href="#lambda-core" title="Permanent link">¶</a></h3>
+<p>До этого можно фантазировать:</p>
+<blockquote>
+<p>секретные проходы.</p>
+<p>высший уровень security clearance.</p>
+<p>знает комплекс лучше Gordon.</p>
+</blockquote>
+<p>Но ближе к Lambda player видит G-Man, связанного с межпространственным перемещением.</p>
+<p>Тут уже трудно удерживать:</p>
+<blockquote>
+<p>обычный федеральный агент.</p>
+</blockquote>
+<p>Valve всё равно не даёт лекцию:</p>
+<blockquote>
+<p>«Я представитель организации X и обладаю такими-то способностями».</p>
+</blockquote>
+<p>Действий достаточно.</p>
+<h3 id="_7">Самое жуткое — он наблюдает, но почти не помогает<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>Black Mesa рушится.</p>
+<p>Scientists умирают.</p>
+<p>HECU убивают witnesses.</p>
+<p>Gordon десятки раз находится на грани смерти.</p>
+<p>G-Man:</p>
+<blockquote>
+<p>смотрит.</p>
+</blockquote>
+<p>То есть отношение к Gordon очень быстро начинает напоминать:</p>
+<blockquote>
+<p><strong>evaluation.</strong></p>
+</blockquote>
+<p>Он не companion.</p>
+<p>Не спасатель.</p>
+<p>Не обычный antagonist.</p>
+<p>Скорее кто-то, кто хочет понять:</p>
+<blockquote>
+<p>насколько этот человек полезен.</p>
+</blockquote>
+<h3 id="_8">В финале вся игра превращается в гигантское собеседование<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p>После Nihilanth нет обычного:</p>
+<blockquote>
+<p>Gordon спасся, credits.</p>
+</blockquote>
+<p>G-Man просто забирает его.</p>
+<p>И наконец разговаривает напрямую.</p>
+<p>Причём не как человек, благодарящий героя за спасение мира.</p>
+<p>Он почти <strong>оценивает проделанную работу</strong>.</p>
+<p>Gordon всю игру воспринимал ситуацию так:</p>
+<div class="highlight"><pre><span></span><code>выжить
+↓
+выбраться
+↓
+остановить катастрофу
+</code></pre></div>
+<p>G-Man мог смотреть на то же путешествие так:</p>
+<div class="highlight"><pre><span></span><code>evaluation
+↓
+candidate performs unusually well
+↓
+candidate is employable
+</code></pre></div>
+<p>И это отличный финальный переворот.</p>
+<p>Оказывается, герой весь путь был частью процесса, о котором вообще не знал.</p>
+<h3 id="employers">Самое важное слово — employers<a class="headerlink" href="#employers" title="Permanent link">¶</a></h3>
+<p>G-Man не говорит:</p>
+<blockquote>
+<p>мое правительство.</p>
+</blockquote>
+<p>Он говорит:</p>
+<blockquote>
+<p><strong>employers.</strong></p>
+</blockquote>
+<p>И мгновенно появляются вопросы:</p>
+<ul>
+<li>кто они;</li>
+<li>люди ли это;</li>
+<li>государство ли это;</li>
+<li>организация ли это;</li>
+<li>связаны ли они с Xen;</li>
+<li>что они хотят;</li>
+<li>почему им нужен Gordon.</li>
+</ul>
+<p>Правильное решение Valve:</p>
+<blockquote>
+<p><strong>не отвечать.</strong></p>
+</blockquote>
+<p>Для первой Half-Life достаточно знать: этот человек кому-то подчиняется, и эти «кто-то» стоят достаточно высоко, чтобы рассматривать судьбу Gordon и Xen как ресурс.</p>
+<h3 id="black-mesa_1">Black Mesa внезапно перестаёт быть верхним уровнем истории<a class="headerlink" href="#black-mesa_1" title="Permanent link">¶</a></h3>
+<p>В начале модель:</p>
+<div class="highlight"><pre><span></span><code>Black Mesa
+↓
+эксперимент
+↓
+Xen
+</code></pre></div>
+<p>После финала:</p>
+<div class="highlight"><pre><span></span><code>?
+↓
+G-Man
+↓
+Gordon
+↓
+Black Mesa / Xen
+</code></pre></div>
+<p>То есть и Black Mesa, и Xen могут быть просто нижними элементами намного большей игры.</p>
+<p>Это великолепный способ одновременно закончить локальный conflict и не закрыть universe.</p>
+<h3 id="g-man">G-Man работает именно потому, что выглядит обычным<a class="headerlink" href="#g-man" title="Permanent link">¶</a></h3>
+<p>Если бы в финале появился трёхметровый glowing alien god, мозг сразу дал бы категорию:</p>
+<blockquote>
+<p>могущественный инопланетянин.</p>
+</blockquote>
+<p>G-Man выглядит почти человеком.</p>
+<p>Но постоянно что-то <strong>не так</strong>:</p>
+<ul>
+<li>слишком неподвижный;</li>
+<li>слишком бледный;</li>
+<li>необычно держится;</li>
+<li>странно говорит;</li>
+<li>делает слишком длинные паузы;</li>
+<li>носит костюм и чемодан в местах, где это выглядит абсурдно;</li>
+<li>появляется там, где обычный человек быть не должен.</li>
+</ul>
+<p>Возникает uncanny feeling:</p>
+<blockquote>
+<p><strong>будто кто-то очень старательно изображает человека.</strong></p>
+</blockquote>
+<h3 id="_9">Голос делает половину персонажа<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<p>Он не рычит.</p>
+<p>Не говорит:</p>
+<blockquote>
+<p>Я ВЕЛИКИЙ ЗЛОДЕЙ.</p>
+</blockquote>
+<p>Наоборот.</p>
+<p>Максимально вежливый. Медленный. С неправильными акцентами и паузами.</p>
+<p>Как будто сам процесс человеческой речи ему немного неудобен.</p>
+<p>Очень точная формула:</p>
+<blockquote>
+<p><strong>сотрудник отдела кадров из межпространственного ада.</strong></p>
+</blockquote>
+<h3 id="npc">Он даже технически стоит чуть в стороне от нормальных NPC<a class="headerlink" href="#npc" title="Permanent link">¶</a></h3>
+<p>Обычные characters игры имеют понятные роли:</p>
+<blockquote>
+<p>scientist.</p>
+<p>guard.</p>
+<p>HECU.</p>
+<p>alien enemy.</p>
+</blockquote>
+<p>G-Man функционирует иначе и не предназначен для нормального combat interaction.</p>
+<p>Техническое устройство довольно удачно совпадает с художественной функцией:</p>
+<blockquote>
+<p>он существует внутри мира, но как будто не полностью подчиняется тем же правилам.</p>
+</blockquote>
+<h3 id="_10">Он поправляет галстук<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p>Мелочь, но почти идеальная.</p>
+<p>Вокруг трупы, aliens, explosions, portals и military cleanup.</p>
+<p>G-Man спокойно приводит костюм в порядок.</p>
+<p>Для Gordon:</p>
+<blockquote>
+<p>катастрофа всей жизни.</p>
+</blockquote>
+<p>Для G-Man:</p>
+<blockquote>
+<p><strong>рабочий день.</strong></p>
+</blockquote>
+<h3 id="_11">Финальный выбор — почти издевательство над словом «выбор»<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<p>Формально G-Man предлагает:</p>
+<blockquote>
+<p>принять работу</p>
+</blockquote>
+<p>или:</p>
+<blockquote>
+<p>отказаться.</p>
+</blockquote>
+<p>Но отказ приводит Gordon в ситуацию, где его окружает огромная масса врагов.</p>
+<div class="highlight"><pre><span></span><code>A:
+работаешь на меня
+
+B:
+удачи умереть
+</code></pre></div>
+<p>Уже здесь серия связывает G-Man с очень характерной темой:</p>
+<blockquote>
+<p><strong>иллюзия выбора внутри чужой системы.</strong></p>
+</blockquote>
+<p>Gordon всю игру ощущался человеком, который сам двигался через мир.</p>
+<p>Финал сообщает:</p>
+<blockquote>
+<p>теперь твоей дальнейшей судьбой распоряжается кто-то другой.</p>
+</blockquote>
+<h3 id="-_1">Мета-чтение тоже очень соблазнительное<a class="headerlink" href="#-_1" title="Permanent link">¶</a></h3>
+<p>G-Man наблюдает Gordon и определяет его дальнейший маршрут.</p>
+<p>Player управляет Gordon.</p>
+<p>Valve на самом деле очень жёстко ведёт player через линейную кампанию.</p>
+<div class="highlight"><pre><span></span><code>G-Man
+наблюдает / направляет Gordon
+
+Игрок
+управляет Gordon
+
+Valve
+направляет игрока
+</code></pre></div>
+<p>Поэтому G-Man легко читать почти как внутримировое отражение авторской власти: знает больше player, появляется вне нормального маршрута, наблюдает, оценивает, решает, что будет дальше.</p>
+<p>Но это именно <strong>интерпретация</strong>, а не буквальный канон.</p>
+<h3 id="valve-1998-g-man-lore">Не надо приписывать Valve 1998 года весь будущий G-Man lore<a class="headerlink" href="#valve-1998-g-man-lore" title="Permanent link">¶</a></h3>
+<p>Сегодня существуют Half-Life 2, Episodes, Vortigaunts, Combine, Alyx и новые ограничения G-Man.</p>
+<p>Очень легко ретроактивно представить:</p>
+<blockquote>
+<p>в 1998 году где-то уже лежала папка на 700 страниц, где полностью написана истинная природа G-Man.</p>
+</blockquote>
+<p>Оснований для такого взгляда нет.</p>
+<p>Half-Life вообще не создавалась как идеально расписанная франшиза.</p>
+<p>История росла итеративно.</p>
+<p>Самый разумный взгляд на G-Man первой игры:</p>
+<blockquote>
+<p><strong>это намеренно открытая загадка, достаточно сильная и гибкая, чтобы будущие авторы могли развивать её в разные стороны.</strong></p>
+</blockquote>
+<h3 id="_12">Неопределённость и сделала его настолько живучим<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<p>До сих пор можно спрашивать:</p>
+<ul>
+<li>кто он;</li>
+<li>кто employers;</li>
+<li>насколько он свободен;</li>
+<li>помогал ли он Black Mesa Incident;</li>
+<li>использует ли он человечество;</li>
+<li>что для него Gordon;</li>
+<li>насколько его способности абсолютны.</li>
+</ul>
+<p>Серия десятилетиями добавляет правила и ограничения, но не обязана раскрывать центральную природу существа.</p>
+<p>Это редкая дисциплина mystery-writing.</p>
+<h3 id="g-man_1">G-Man идеально завершает расширение масштаба первой игры<a class="headerlink" href="#g-man_1" title="Permanent link">¶</a></h3>
+<p>Вся структура:</p>
+<div class="highlight"><pre><span></span><code>сломался эксперимент
+↓
+Black Mesa в катастрофе
+↓
+HECU зачищает witnesses
+↓
+есть Xen
+↓
+есть Nihilanth
+↓
+над всем этим существует
+ещё один неизвестный слой
+</code></pre></div>
+<p>Half-Life могла закончить:</p>
+<blockquote>
+<p>Gordon убил босса и спас положение.</p>
+</blockquote>
+<p>Она заканчивает:</p>
+<blockquote>
+<p><strong>ты был настолько эффективен, что странное существо решило забрать тебя на работу — а теперь исчезни из нормального времени до следующей задачи.</strong></p>
+</blockquote>
+<p>И это одновременно конец первой игры и идеальная открытая дверь в продолжение.</p>
+<h3 id="canon-reading">Что именно мы знаем о G-Man<a class="headerlink" href="#canon-reading" title="Permanent link">¶</a></h3>
+<p>У загадки есть очень полезная конструкция: <strong>увиденное и объяснённое не обязаны совпадать</strong>.</p>
+<p>Игрок может непосредственно наблюдать появление G-Man, его необычное положение относительно происходящего и финальное вмешательство. Но работодатели, оценка заслуг Гордона и условия предложения сообщаются самим G-Man. Он является источником этой информации внутри истории. Из этого ещё не следует, что он рассказал всё, ничего не исказил и вообще использует человеческие понятия буквально.</p>
+<p>Для чтения серии достаточно четырёх простых вопросов.</p>
+<table>
+<thead>
+<tr>
+<th>Откуда пришла информация</th>
+<th>Как с ней обращаться</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Событие показано в выпущенной игре</td>
+<td>Это произошло в предъявленной нам версии истории; интерпретация причины может оставаться открытой</td>
+</tr>
+<tr>
+<td>О событии говорит персонаж</td>
+<td>У него есть знания, позиция и возможная заинтересованность</td>
+</tr>
+<tr>
+<td>Разработчик объясняет замысел вне игры</td>
+<td>Это ценный контекст производства; не каждое объяснение автоматически стало сценой канона</td>
+</tr>
+<tr>
+<td>Мы соединяем детали самостоятельно</td>
+<td>Это интерпретация, которую можно аргументировать, не выдавая за окончательный ответ</td>
+</tr>
+</tbody>
+</table>
+<p>Никакой полицейской проверки каждой реплики здесь не нужно. Различие полезно в нескольких центральных местах: кто направляет катастрофу, чего хочет Combine, что означает свобода Гордона, как устроено вмешательство во время.</p>
+<p>И ещё одно ограничение: ранняя сцена не обязана содержать в зашифрованном виде все будущие игры. Поздняя Half-Life может вернуться к старому образу и придать ему дополнительное значение. Это нормальная работа сериального повествования. <a href="https://www.marclaidlaw.com/writing-half-life/">Лэйдлоу описывает создание истории</a> как работу внутри меняющейся игры, а не последовательную экранизацию готового многотомного плана.</p>
+<p>Поэтому хороший разговор о G-Man оставляет две радости одновременно: можно строить гипотезу и можно признать, что игра пока не дала ответа. Загадка от этого не становится слабее.</p>
+<h2 id="p020">20. Half-Life в 1998 году<a class="headerlink" href="#p020" title="Permanent link">¶</a></h2>
+<p>К ноябрю 1998 года Half-Life уже была совсем не той игрой, которую Valve собиралась выпустить годом раньше.</p>
+<p>Изначальный ориентир:</p>
+<blockquote>
+<p>конец 1997-го.</p>
+</blockquote>
+<p>Реальный релиз:</p>
+<blockquote>
+<p><strong>19 ноября 1998 года.</strong></p>
+</blockquote>
+<p>Между этими точками — не просто ещё один год polishing.</p>
+<p>Игра переживает почти полный пересмотр кампании, Cabal, новый design process, массивные playtests, переработку pacing, levels, mechanics и scripting.</p>
+<p>Поэтому релизная Half-Life — результат не одного ровного production cycle, а фактически:</p>
+<blockquote>
+<p><strong>провала первой версии и последующей попытки найти правильную игру внутри уже существующих технологий.</strong></p>
+</blockquote>
+<h3 id="valve_1">Valve реально могла выпустить игру годом раньше<a class="headerlink" href="#valve_1" title="Permanent link">¶</a></h3>
+<p>Это важно помнить.</p>
+<p>Проблема версии 1997 была не:</p>
+<blockquote>
+<p>программа не запускается.</p>
+</blockquote>
+<p>Можно было урезать, дополировать, закрыть самые очевидные дыры, выпустить к праздничному сезону и потом патчить.</p>
+<p>Для молодой студии и издателя такой вариант совершенно логичный.</p>
+<p>Но Valve решает:</p>
+<blockquote>
+<p><strong>нет.</strong></p>
+</blockquote>
+<p>Сегодня это звучит как героический очевидный выбор, потому что мы уже знаем, чем стала Half-Life.</p>
+<p>В 1997 никто не знает.</p>
+<p>Вполне реален сценарий:</p>
+<div class="highlight"><pre><span></span><code>отложили
+↓
+потратили деньги
+↓
+не успели
+↓
+студия умерла
+</code></pre></div>
+<p>Так что решение было не только творческим, но и большим финансовым риском.</p>
+<h3 id="_13">Дополнительный год — не «та же игра, только отполированная»<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<p>Неправильная схема:</p>
+<div class="highlight"><pre><span></span><code>1997:
+почти готовая Half-Life
+↓
+12 месяцев bug fixing
+↓
+1998:
+та же Half-Life, но отличная
+</code></pre></div>
+<p>На деле за этот период оформляются и перестраиваются именно те вещи, которыми игра потом будет знаменита:</p>
+<ul>
+<li>последовательность Black Mesa;</li>
+<li>Cabal;</li>
+<li>experiential density;</li>
+<li>способ вводить enemies;</li>
+<li>способы использовать AI;</li>
+<li>сцены;</li>
+<li>narrative flow;</li>
+<li>переходы;</li>
+<li>плейтестовый подход;</li>
+<li>связность кампании.</li>
+</ul>
+<p>То есть происходит:</p>
+<blockquote>
+<p><strong>не polish старой Half-Life, а уточнение самой формулы Half-Life.</strong></p>
+</blockquote>
+<h3 id="e3-1998">E3 1998 становится важной внешней проверкой<a class="headerlink" href="#e3-1998" title="Permanent link">¶</a></h3>
+<p>У команды есть очень понятная психологическая проблема.</p>
+<p>Они уже однажды думали:</p>
+<blockquote>
+<p>кажется, игра получается.</p>
+</blockquote>
+<p>Потом посмотрели на неё целиком и решили:</p>
+<blockquote>
+<p>нет, получается посредственно.</p>
+</blockquote>
+<p>После перезапуска можно легко начать сомневаться:</p>
+<blockquote>
+<p>а вдруг мы снова себя обманываем?</p>
+</blockquote>
+<p>На E3 1998 новая версия получает очень сильную реакцию.</p>
+<p>И это впервые даёт команде масштабное внешнее подтверждение:</p>
+<blockquote>
+<p><strong>перезапуск реально сработал.</strong></p>
+</blockquote>
+<p>Но после хорошей выставки всё ещё остаётся самая скучная и страшная часть:</p>
+<blockquote>
+<p>надо закончить продукт.</p>
+</blockquote>
+<h3 id="_14">Последние месяцы — интеграционный ад<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<p>Half-Life к этому моменту очень сложная программа.</p>
+<div class="highlight"><pre><span></span><code>десятки BSP
++
+AI
++
+scripts
++
+save/load
++
+переходы карт
++
+NPC
++
+weapon systems
++
+multiplayer
++
+renderer
++
+sound
++
+огромное количество entity logic
+</code></pre></div>
+<p>Изменение в одном месте может сломать что-то через три часа кампании.</p>
+<p>Починил NPC.</p>
+<p>После load в другой главе scripted sequence больше не завершилась.</p>
+<p>Изменил save state.</p>
+<p>Дверь в старой карте теперь не активируется.</p>
+<p>И в 1998 нельзя спокойно рассчитывать:</p>
+<blockquote>
+<p>выпустим завтра, через сутки 14 GB day-one patch.</p>
+</blockquote>
+<p>Master disc физически уходит в производство.</p>
+<p>Сломал release build — сломанные CD реально существуют.</p>
+<h3 id="valve_2">Valve в конце буквально бесконечно проходит собственную игру<a class="headerlink" href="#valve_2" title="Permanent link">¶</a></h3>
+<p>На позднем этапе всё меньше людей делает новый content.</p>
+<p>Всё больше:</p>
+<ul>
+<li>играет;</li>
+<li>проверяет;</li>
+<li>воспроизводит bugs;</li>
+<li>чинит;</li>
+<li>заново проходит.</li>
+</ul>
+<p>Ищутся уже не чуть странные textures, а showstoppers:</p>
+<blockquote>
+<p>ошибка, из-за которой человек через несколько часов вообще не сможет пройти дальше.</p>
+</blockquote>
+<p>Один такой bug — и master нельзя отправлять.</p>
+<h3 id="_15">Вся гигантская история разработки в итоге сводится к «почините последнюю ошибку»<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
+<p>В этом есть прекрасная производственная ирония.</p>
+<p>Quake Engine.</p>
+<p>GoldSrc.</p>
+<p>Skeletal animation.</p>
+<p>AI.</p>
+<p>Cabal.</p>
+<p>Полностью перестроенная campaign.</p>
+<p>Xen.</p>
+<p>Два года работы.</p>
+<p>А в последний момент реальность любой software-команды:</p>
+<blockquote>
+<p><strong>пожалуйста, почините эту ебаную последнюю ошибку.</strong></p>
+</blockquote>
+<h3 id="_16">На диск при этом уехала удивительно цельная игра<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
+<p>Конечно, bugs есть.</p>
+<p>AI можно сломать.</p>
+<p>NPC застревают.</p>
+<p>Script иногда ведёт себя странно.</p>
+<p>Если специально эксплуатировать systems — можно найти огромное количество дыр.</p>
+<p>Но retail Half-Life — <strong>законченная кампания</strong>.</p>
+<p>Не Early Access.</p>
+<p>Не:</p>
+<blockquote>
+<p>финальный act добавим потом.</p>
+</blockquote>
+<p>На диске:</p>
+<div class="highlight"><pre><span></span><code>Black Mesa
+↓
+Lambda
+↓
+Xen
+↓
+Nihilanth
+↓
+G-Man
+↓
+конец
+</code></pre></div>
+<p>С учётом истории производства это очень важная часть успеха.</p>
+<h3 id="half-life-1998">Half-Life не обязана быть самой красивой игрой 1998 года<a class="headerlink" href="#half-life-1998" title="Permanent link">¶</a></h3>
+<p>Если хочется показать новый 3D accelerator:</p>
+<blockquote>
+<p>Unreal — очень серьёзный showcase.</p>
+</blockquote>
+<p>Half-Life стоит на технологии, корни которой идут в Quake 1996 года.</p>
+<p>Да, Valve радикально её расширила.</p>
+<p>Есть skeletal animation, цветной lightmapping, decals, улучшенные models, effects и новые systems.</p>
+<p>Но главный technological flex игры выглядит иначе.</p>
+<p>Не:</p>
+<blockquote>
+<p>посмотрите на воду.</p>
+</blockquote>
+<p>А:</p>
+<blockquote>
+<p><strong>посмотрите, что произошло в этой комнате.</strong></p>
+</blockquote>
+<h3 id="technology-feature-list">Technology перестаёт быть feature list<a class="headerlink" href="#technology-feature-list" title="Permanent link">¶</a></h3>
+<p>Можно рекламировать:</p>
+<blockquote>
+<p>skeletal animation.</p>
+</blockquote>
+<p>Player видит:</p>
+<blockquote>
+<p>scientist панически дёргает дверь.</p>
+</blockquote>
+<p>Можно рекламировать:</p>
+<blockquote>
+<p>AI.</p>
+</blockquote>
+<p>Player видит:</p>
+<blockquote>
+<p>HECU кинул grenade за cover.</p>
+</blockquote>
+<p>Можно рекламировать:</p>
+<blockquote>
+<p>scripting.</p>
+</blockquote>
+<p>Player видит:</p>
+<blockquote>
+<p>человека утащили в вентиляцию.</p>
+</blockquote>
+<p>Можно рекламировать:</p>
+<blockquote>
+<p>map transitions.</p>
+</blockquote>
+<p>Player думает:</p>
+<blockquote>
+<p><strong>я всё ещё иду через одну Black Mesa.</strong></p>
+</blockquote>
+<p>Вот один из главных успехов переработанной игры.</p>
+<p>Технологии больше не должны кричать:</p>
+<blockquote>
+<p>СМОТРИ, FEATURE.</p>
+</blockquote>
+<p>Они должны создавать:</p>
+<blockquote>
+<p>ситуацию.</p>
+</blockquote>
+<h3 id="run-think-shoot-live">Run. Think. Shoot. Live.<a class="headerlink" href="#run-think-shoot-live" title="Permanent link">¶</a></h3>
+<p>Маркетинговый слоган очень удачно описывает реальную форму игры.</p>
+<p>Не:</p>
+<blockquote>
+<p>SHOOT.</p>
+</blockquote>
+<p>А четыре глагола.</p>
+<p><code>RUN</code></p>
+<blockquote>
+<p>перемещайся, спасайся, проходи пространство.</p>
+</blockquote>
+<p><code>THINK</code></p>
+<blockquote>
+<p>считывай задачу, механизм, encounter.</p>
+</blockquote>
+<p><code>SHOOT</code></p>
+<blockquote>
+<p>это всё ещё полноценный FPS.</p>
+</blockquote>
+<p><code>LIVE</code></p>
+<blockquote>
+<p>выживи внутри этого мира.</p>
+</blockquote>
+<p>То есть сама реклама уже говорит:</p>
+<blockquote>
+<p>Half-Life хочет быть чем-то шире shooting gallery.</p>
+</blockquote>
+<h3 id="_17">Обложка тоже довольно необычная<a class="headerlink" href="#_17" title="Permanent link">¶</a></h3>
+<p>Не огромный Gordon с weapon.</p>
+<p>Не monster.</p>
+<p>Не battlefield.</p>
+<p>Главный образ:</p>
+<blockquote>
+<p><strong>λ.</strong></p>
+</blockquote>
+<p>Лямбда на оранжевом фоне.</p>
+<p>Это scientific symbol, связь с Lambda Complex, узнаваемый графический знак и позднее символ всей франшизы.</p>
+<p>И довольно красиво совпадает с тем, что внутри игры сам Gordon визуально почти отсутствует.</p>
+<h3 id="pc-centric">Релиз максимально PC-centric<a class="headerlink" href="#pc-centric" title="Permanent link">¶</a></h3>
+<p>Первая Half-Life на старте — продукт Windows PC культуры.</p>
+<ul>
+<li>mouse;</li>
+<li>keyboard;</li>
+<li>3D accelerator;</li>
+<li>online multiplayer;</li>
+<li>save system;</li>
+<li>console;</li>
+<li>будущие mods.</li>
+</ul>
+<p>Консольные версии придут значительно позже.</p>
+<p>Поэтому исторически HL1 очень трудно отделить от той PC FPS-сцены, из которой выросли Doom и Quake.</p>
+<h3 id="_18">Круг замыкается<a class="headerlink" href="#_18" title="Permanent link">¶</a></h3>
+<p>История начинается:</p>
+<div class="highlight"><pre><span></span><code>неизвестная студия
+↓
+лицензирует Quake Engine
+↓
+хочет сделать fancy Quake TC
+</code></pre></div>
+<p>Заканчивается:</p>
+<blockquote>
+<p><strong>игрой, которую уже никто не воспринимает просто как Quake derivative.</strong></p>
+</blockquote>
+<p>Не потому, что Valve с нуля придумала каждый элемент.</p>
+<p>А потому, что заставила:</p>
+<div class="highlight"><pre><span></span><code>engine
++
+AI
++
+animation
++
+level design
++
+story
++
+sound
++
+combat
++
+scripting
+</code></pre></div>
+<p>работать на <strong>один experience</strong>.</p>
+<p>И в этом смысле Half-Life — игра, которую Valve буквально <strong>обнаружила через разработку</strong>:</p>
+<div class="highlight"><pre><span></span><code>идея
+↓
+посредственная почти готовая версия
+↓
+перезапуск
+↓
+Cabal
+↓
+playtests
+↓
+сотни переделок
+↓
+последние showstoppers
+↓
+19 ноября 1998
+</code></pre></div>
+<h2 id="p021">21. Реакция прессы и игроков<a class="headerlink" href="#p021" title="Permanent link">¶</a></h2>
+<p>Half-Life не понадобилось десять лет, чтобы стать:</p>
+<blockquote>
+<p>«недооценённой классикой, которую позже переосмыслили».</p>
+</blockquote>
+<p>Её практически сразу приняли как событие.</p>
+<p>Современники не просто получили хороший шутер, который потом задним числом объявили революционным.</p>
+<p>Практически сразу журналисты писали о Half-Life как о заметном скачке жанра.</p>
+<h3 id="_19">Особенно интересно читать реакцию без знания будущего<a class="headerlink" href="#_19" title="Permanent link">¶</a></h3>
+<p>В 1998 никто ещё не знает:</p>
+<ul>
+<li>Half-Life 2;</li>
+<li>Steam;</li>
+<li>Portal;</li>
+<li>Counter-Strike как будущий гигант;</li>
+<li>культ Gordon;</li>
+<li>мем HL3.</li>
+</ul>
+<p>Журналист оценивает:</p>
+<blockquote>
+<p>первую игру неизвестной студии.</p>
+</blockquote>
+<p>И тон уже примерно:</p>
+<blockquote>
+<p><strong>мы, кажется, получили одну из лучших PC-игр вообще.</strong></p>
+</blockquote>
+<p>В исходном материале зафиксированы, например:</p>
+<ul>
+<li>PC Gamer — 97%;</li>
+<li>GameSpot — 9.4/10;</li>
+<li>множество других оценок в районе 90+.</li>
+</ul>
+<p>То есть это не один особенно восторженный reviewer.</p>
+<p>Очень быстро возникает <strong>широкий консенсус</strong>.</p>
+<h3 id="_20">И хвалят не литературный сюжет<a class="headerlink" href="#_20" title="Permanent link">¶</a></h3>
+<p>Это принципиально.</p>
+<p>Современники прекрасно способны заметить:</p>
+<div class="highlight"><pre><span></span><code>эксперимент
+↓
+portal
+↓
+aliens
+</code></pre></div>
+<p>— не литературная революция.</p>
+<p>Главным достижением становится:</p>
+<blockquote>
+<p><strong>как всё это проживается.</strong></p>
+</blockquote>
+<p>Нет постоянного разделения:</p>
+<ul>
+<li>gameplay;</li>
+<li>exposition;</li>
+<li>level;</li>
+<li>cutscene;</li>
+<li>next mission.</li>
+</ul>
+<p>Мир ощущается цельным за счёт огромного количества малых решений.</p>
+<p>То есть люди почти сразу считывают ровно то, что потом станет историческим тезисом:</p>
+<blockquote>
+<p>революционна не фабула, а presentation/integration.</p>
+</blockquote>
+<h3 id="ai-hecu">AI HECU производит огромный эффект<a class="headerlink" href="#ai-hecu" title="Permanent link">¶</a></h3>
+<p>Мы сегодня уже знаем:</p>
+<blockquote>
+<p>там не Skynet.</p>
+</blockquote>
+<p>Но player 1998 года видит:</p>
+<blockquote>
+<p>спрятался → grenade прилетела за cover.</p>
+</blockquote>
+<p>Сегодня:</p>
+<blockquote>
+<p>ну да, enemy grenade.</p>
+</blockquote>
+<p>Тогда:</p>
+<blockquote>
+<p><strong>ОН ПОНЯЛ, ЧТО Я СПРЯТАЛСЯ?</strong></p>
+</blockquote>
+<p>Контекст эпохи решает всё.</p>
+<p>HECU очень быстро превращаются в одну из главных тем обзоров и player stories.</p>
+<h3 id="_21">Непрерывность уровней тоже воспринимается как нечто необычное<a class="headerlink" href="#_21" title="Permanent link">¶</a></h3>
+<p>Журналист не думает:</p>
+<blockquote>
+<p>Valve хорошо спрятала переход <code>c2a3a</code> → <code>c2a3b</code>.</p>
+</blockquote>
+<p>Он думает:</p>
+<blockquote>
+<p><strong>эта игра как будто вообще не заканчивает levels.</strong></p>
+</blockquote>
+<p>Это означает, что дизайнерский трюк сработал.</p>
+<p>Техническая реальность BSP-карт перестала быть основной воспринимаемой структурой.</p>
+<h3 id="_22">Очень хорошо принимают постоянное разнообразие<a class="headerlink" href="#_22" title="Permanent link">¶</a></h3>
+<p>И вот здесь особенно красиво замыкается кризис 1997 года.</p>
+<p>Valve сказала:</p>
+<blockquote>
+<p>наша игра недостаточно интересна.</p>
+</blockquote>
+<p>Перестроила process вокруг experiential density.</p>
+<p>После релиза люди говорят:</p>
+<blockquote>
+<p><strong>она постоянно подбрасывает что-нибудь новое.</strong></p>
+</blockquote>
+<p>То есть центральная проблема старой версии была реально решена.</p>
+<h3 id="half-life_1">Но Half-Life не считали идеальной<a class="headerlink" href="#half-life_1" title="Permanent link">¶</a></h3>
+<p>Не надо строить агиографию.</p>
+<p>Замечали повторяющиеся модели NPC, шероховатости, отдельные uneven sections, puzzles не одинакового качества и technical imperfections.</p>
+<p>Xen ещё не успел превратиться в двадцатилетнюю мем-категорию:</p>
+<blockquote>
+<p><code>XEN BAD</code>.</p>
+</blockquote>
+<p>Но разница качества уже была видна.</p>
+<h3 id="multiplayer">Multiplayer воспринимается как дополнительная часть<a class="headerlink" href="#multiplayer" title="Permanent link">¶</a></h3>
+<p>На релизе:</p>
+<div class="highlight"><pre><span></span><code>single-player:
+главное событие
+
+multiplayer:
+крепкий бонус
+</code></pre></div>
+<p>И это невероятно забавно задним числом.</p>
+<p>Потому что именно multiplayer infrastructure и SDK потом станут основой для Counter-Strike и других игр, которые изменят саму Valve.</p>
+<p>Но в ноябре 1998 Half-Life покупают прежде всего ради:</p>
+<blockquote>
+<p><strong>Black Mesa.</strong></p>
+</blockquote>
+<h3 id="_23">Награды приходят очень быстро<a class="headerlink" href="#_23" title="Permanent link">¶</a></h3>
+<p>К 1999 счёт Game of the Year идёт на десятки.</p>
+<p>Позднее Valve будет говорить о более чем пятидесяти GOTY.</p>
+<p>То есть игра не просто хорошо стартовала.</p>
+<p>Она практически сразу входит в канон PC gaming.</p>
+<h3 id="1998">При этом сам 1998 год невероятно сильный<a class="headerlink" href="#1998" title="Permanent link">¶</a></h3>
+<p>Очень важно не писать:</p>
+<blockquote>
+<p>Half-Life вышла, а вокруг был вакуум и все остальные игры исчезли.</p>
+</blockquote>
+<p>Рядом:</p>
+<ul>
+<li>The Legend of Zelda: Ocarina of Time;</li>
+<li>Metal Gear Solid;</li>
+<li>StarCraft;</li>
+<li>Baldur's Gate;</li>
+<li>Grim Fandango;</li>
+<li>Fallout 2;</li>
+<li>Thief;</li>
+<li>Unreal;</li>
+<li>Rainbow Six.</li>
+</ul>
+<p>Поэтому корректнее:</p>
+<blockquote>
+<p><strong>Half-Life сразу стала одной из главных PC-игр своего поколения и одной из центральных игр одного из самых сильных годов индустрии.</strong></p>
+</blockquote>
+<p>Не нужно доказывать величие, делая вид, что вокруг ничего больше не было.</p>
+<h3 id="_24">Продажи подтверждают, что это не только критический культ<a class="headerlink" href="#_24" title="Permanent link">¶</a></h3>
+<p>Для совершенно нового IP от студии без прошлых релизов рост очень быстрый.</p>
+<p>Уже через несколько месяцев продажи приближаются к миллиону.</p>
+<p>И это не короткий маркетинговый всплеск.</p>
+<p>Half-Life становится <strong>длинным PC-хитом</strong>.</p>
+<p>На новый игровой компьютер конца девяностых рекомендация:</p>
+<blockquote>
+<p>купи Half-Life</p>
+</blockquote>
+<p>очень быстро становится почти стандартной.</p>
+<h3 id="_25">Это особенно впечатляет рядом с брендами эпохи<a class="headerlink" href="#_25" title="Permanent link">¶</a></h3>
+<p>Unreal — новый technological flagship.</p>
+<p>Quake II — id Software.</p>
+<p>SiN — активно рекламируемый FPS.</p>
+<p>Daikatana — проект с огромным именем John Romero.</p>
+<p>И среди них внимание забирает новая игра компании, которой ещё недавно вообще никто не знал.</p>
+<p>Причём не потому, что у неё безусловно лучший renderer.</p>
+<p>А потому, что player выходит из Black Mesa с ощущением:</p>
+<blockquote>
+<p><strong>я никогда не играл в FPS, который вёл себя вот так.</strong></p>
+</blockquote>
+<h3 id="opening">Opening невозможно было не обсуждать<a class="headerlink" href="#opening" title="Permanent link">¶</a></h3>
+<p>FPS.</p>
+<p>Нажимаешь New Game.</p>
+<p>Игра:</p>
+<blockquote>
+<p>садись в вагон.</p>
+</blockquote>
+<p>Едешь.</p>
+<p>Ещё едешь.</p>
+<p>Рабочие.</p>
+<p>Комплекс.</p>
+<p>Охрана.</p>
+<p>Учёные.</p>
+<p>Никакого weapon.</p>
+<p>Потом идёшь на работу.</p>
+<p>Потом HEV.</p>
+<p>Потом experiment.</p>
+<p>И только потом начинается катастрофа.</p>
+<p>Сам opening буквально заявляет:</p>
+<blockquote>
+<p><strong>мы собираемся использовать first-person view иначе.</strong></p>
+</blockquote>
+<p>Это один из самых сильных способов объяснить игру ещё до первого боя.</p>
+<h3 id="half-life-quake-engine">Half-Life очень быстро перестаёт быть «игрой на Quake Engine»<a class="headerlink" href="#half-life-quake-engine" title="Permanent link">¶</a></h3>
+<p>До релиза внешний взгляд:</p>
+<blockquote>
+<p>очередная команда лицензировала модный движок id.</p>
+</blockquote>
+<p>После релиза категория становится:</p>
+<blockquote>
+<p><strong>Half-Life.</strong></p>
+</blockquote>
+<p>То есть technology lineage остаётся исторически важной.</p>
+<p>Но культурно игра за очень короткий срок перестаёт восприниматься как производная от Quake.</p>
+<p>Это огромный успех для дебютного IP.</p>
+<h3 id="_26">Канонизация происходит почти сразу<a class="headerlink" href="#_26" title="Permanent link">¶</a></h3>
+<p>Уже примерно через год разговор легко переходит от:</p>
+<blockquote>
+<p>лучший FPS 1998</p>
+</blockquote>
+<p>к:</p>
+<blockquote>
+<p><strong>одна из лучших PC-игр вообще.</strong></p>
+</blockquote>
+<p>И это ещё до огромного будущего наследия.</p>
+<h3 id="counter-strike-steam-half-life-2">Репутация игры появилась раньше Counter-Strike, Steam и Half-Life 2<a class="headerlink" href="#counter-strike-steam-half-life-2" title="Permanent link">¶</a></h3>
+<p>Это очень важно причинно.</p>
+<p>Нельзя объяснять успех HL1 так:</p>
+<blockquote>
+<p>ну Valve потом стала великой компанией, поэтому старую игру возвели в культ.</p>
+</blockquote>
+<p>Наоборот.</p>
+<p>В начале 1999:</p>
+<ul>
+<li>Steam нет;</li>
+<li>Half-Life 2 нет;</li>
+<li>Source нет;</li>
+<li>Portal нет;</li>
+<li>Counter-Strike только начинает свой путь как mod.</li>
+</ul>
+<p>А Half-Life уже продаётся, получает огромные оценки, собирает награды и становится PC-классикой.</p>
+<p>То есть:</p>
+<blockquote>
+<p><strong>Valve получила возможность превратиться в будущую Valve именно потому, что Half-Life оказалась настолько сильным дебютом.</strong></p>
+</blockquote>
+<h3 id="contemporary-reception">Реакция 1998 года и наше прохождение сегодня — разные свидетельства<a class="headerlink" href="#contemporary-reception" title="Permanent link">¶</a></h3>
+<p>У старой рецензии есть достоинство, которого нет у современного видеоэссе: её автор ещё не знает, чем закончится история влияния игры. Он не обязан увидеть в каждом ящике будущий Garry's Mod, а в каждом скрипте — начало Call of Duty.</p>
+<p>В <a href="https://www.gamespot.com/reviews/half-life-review/1900-2537398/">рецензии GameSpot от 20 ноября 1998 года</a> Рон Дулин хвалил не только общую идею повествования, но и конкретное удовольствие от оружия, разнообразие уровней и происходящего. При этом замечал повторяемость внешности людей и отдельные проблемы устройства сцен. Это полезный контраст с сегодняшним чтением: нынешняя слабость gunplay для конкретного игрока не означает, что и при релизе стрельбу все считали терпимым приложением к сюжету.</p>
+<p>Здесь важно сохранить личную позицию Кирилла. Первую Half-Life можно уважать и не хотеть проходить. Историческая рецензия не отменяет этого отношения. Она объясняет, <strong>какая сравнительная планка существовала у другого человека в другое время</strong>.</p>
+<p>Есть как минимум три самостоятельных вопроса: насколько хорошо игра работала рядом с конкурентами 1998 года; какие её решения распространились позже; что получает от прохождения сегодняшний человек. Ответ «великая» на второй вопрос не обязан автоматически закрывать первый и третий.</p>
+<h3 id="_27">Как узнаваемая новизна превращается в невидимую норму<a class="headerlink" href="#_27" title="Permanent link">¶</a></h3>
+<p>Новая сцена может производить впечатление двумя способами. Первый — собственным исполнением: хороший темп, сильный звук, ясная опасность. Второй — нарушением ожидания: оказывается, такой шутер вообще возможен.</p>
+<p>Со временем второй эффект ослабевает. Игрок уже видел десятки FPS с NPC и событиями вокруг себя. Тогда исходная Half-Life проходит более жестокую проверку первым способом: насколько интересен этот конкретный бой, удобно ли читать маршрут, не задержалась ли глава дольше своей идеи?</p>
+<p>Именно поэтому не стоит объяснять все современные претензии фразой «вы просто не были там в 1998-м». Исторический контекст возвращает смысл достижения, но не превращает неудобное действие в удобное. Для нашей базы это существенное различие: она должна объяснять величие, не заставляя любить прохождение по обязанности.</p>
+<h2 id="p022">22. Почему Half-Life считается революционным FPS<a class="headerlink" href="#p022" title="Permanent link">¶</a></h2>
+<p>Самое точное описание революции Half-Life звучит немного парадоксально:</p>
+<blockquote>
+<p><strong>она почти не изобрела главные составляющие, которыми прославилась. Она изменила представление о том, как эти составляющие должны работать вместе.</strong></p>
+</blockquote>
+<p>До неё уже были FPS с историями, NPC, objectives, dialogue, interactive environments, scripted events, environmental storytelling, connected spaces, сильным AI и silent protagonists.</p>
+<p>Но Half-Life собрала всё это в настолько последовательную систему, что после неё становится намного сложнее воспринимать большой single-player FPS просто как:</p>
+<div class="highlight"><pre><span></span><code>LEVEL
+↓
+монстры
+↓
+ключ
+↓
+ещё монстры
+↓
+EXIT
+</code></pre></div>
+<h3 id="half-life_2">Half-Life меняет саму единицу дизайна<a class="headerlink" href="#half-life_2" title="Permanent link">¶</a></h3>
+<p>Для Doom основная единица очень часто:</p>
+<blockquote>
+<p><strong>уровень / encounter / arena.</strong></p>
+</blockquote>
+<p>Для Half-Life всё сильнее:</p>
+<blockquote>
+<p><strong>ситуация.</strong></p>
+</blockquote>
+<p>Не только:</p>
+<blockquote>
+<p>какая следующая карта?</p>
+</blockquote>
+<p>А:</p>
+<blockquote>
+<p><strong>что player переживёт следующие тридцать секунд?</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>тихий коридор
+↓
+звук
+↓
+NPC
+↓
+маленькая сцена
+↓
+игрок вмешался
+↓
+открылся маршрут
+↓
+новая угроза
+</code></pre></div>
+<p>Игра начинает восприниматься как цепочка <strong>поставленных игровых эпизодов</strong>, а не просто коллекция BSP.</p>
+<h3 id="fps">Она не превращает FPS в кино<a class="headerlink" href="#fps" title="Permanent link">¶</a></h3>
+<p>Это очень важно.</p>
+<p>Часто влияние Half-Life описывают:</p>
+<blockquote>
+<p>сделала шутеры кинематографичными.</p>
+</blockquote>
+<p>Но это легко понять неправильно.</p>
+<p>Valve не говорит:</p>
+<blockquote>
+<p>видеоигра должна как можно чаще превращаться в фильм.</p>
+</blockquote>
+<p>Скорее:</p>
+<blockquote>
+<p><strong>можно использовать режиссёрские принципы, не переставая быть игрой.</strong></p>
+</blockquote>
+<p>В кино:</p>
+<div class="highlight"><pre><span></span><code>автор контролирует событие
++
+автор контролирует камеру
+</code></pre></div>
+<p>В Half-Life:</p>
+<div class="highlight"><pre><span></span><code>автор контролирует событие
++
+игрок контролирует камеру
+</code></pre></div>
+<p>Вот этот компромисс и оказывается исторически очень влиятельным.</p>
+<h3 id="scripted-event">Scripted event становится нормальным языком кампании<a class="headerlink" href="#scripted-event" title="Permanent link">¶</a></h3>
+<p>После Half-Life гораздо естественнее ожидать, что во время обычного движения NPC что-то скажет, конструкция рухнет, monster проломит стену, helicopter пролетит, ally погибнет, enemies начнут fighting или состояние level изменится.</p>
+<p>И это происходит не потому, что игра переключилась:</p>
+<blockquote>
+<p>в cinematic mode.</p>
+</blockquote>
+<p>А потому, что ты дошёл до нужного места.</p>
+<div class="highlight"><pre><span></span><code>географическая координата
+=
+драматургическая координата
+</code></pre></div>
+<p>Пространство становится timeline.</p>
+<h3 id="storytelling">Маршрут сам начинает быть storytelling<a class="headerlink" href="#storytelling" title="Permanent link">¶</a></h3>
+<p>Black Mesa до catastrophe.</p>
+<p>Black Mesa после.</p>
+<p>Сначала aliens.</p>
+<p>Потом надежда на military rescue.</p>
+<p>Потом HECU.</p>
+<p>Потом понимание cleanup operation.</p>
+<p>Потом война HECU и Xen.</p>
+<p>Потом Lambda.</p>
+<p>Ты узнаёшь историю не потому, что открыл журнал:</p>
+<blockquote>
+<p><code>STORY ENTRY 7</code>.</p>
+</blockquote>
+<p>А потому, что:</p>
+<blockquote>
+<p><strong>физически проходишь через изменяющееся состояние мира.</strong></p>
+</blockquote>
+<h3 id="_28">Психологически исчезает «уровень закончился»<a class="headerlink" href="#_28" title="Permanent link">¶</a></h3>
+<p>Технически BSP transitions остаются.</p>
+<p>Но:</p>
+<div class="highlight"><pre><span></span><code>коридор
+↓
+Loading...
+↓
+тот же мир
+</code></pre></div>
+<p>И это становится настолько нормальной формой позже, что современный player может вообще не воспринимать её как historical innovation.</p>
+<p>Это один из лучших признаков влияния:</p>
+<blockquote>
+<p><strong>идея перестала выглядеть идеей и стала нормой.</strong></p>
+</blockquote>
+<h3 id="half-life-fps">Half-Life меняет отношение к сюжету в FPS<a class="headerlink" href="#half-life-fps" title="Permanent link">¶</a></h3>
+<p>Она не доказывает:</p>
+<blockquote>
+<p>каждый shooter обязан иметь сложную литературную историю.</p>
+</blockquote>
+<p>Она доказывает другое:</p>
+<blockquote>
+<p><strong>контекст способен сделать сам gameplay сильнее.</strong></p>
+</blockquote>
+<p>Почему я иду туда?</p>
+<p>Почему здесь enemies?</p>
+<p>Что случилось с этой комнатой?</p>
+<p>Почему HECU внезапно враждебны?</p>
+<p>Что находится дальше?</p>
+<p>Player хочет идти вперёд не только ради следующей пачки enemies, но и ради:</p>
+<blockquote>
+<p><strong>что там произойдёт?</strong></p>
+</blockquote>
+<h3 id="_29">Сам сюжет при этом очень простой<a class="headerlink" href="#_29" title="Permanent link">¶</a></h3>
+<p>Если выжать фабулу:</p>
+<div class="highlight"><pre><span></span><code>experiment broke
+↓
+aliens
+↓
+military
+↓
+Xen
+↓
+boss
+↓
+mysterious man
+</code></pre></div>
+<p>Не в тексте революция.</p>
+<p>А:</p>
+<blockquote>
+<p><strong>в драматургии игрового пространства.</strong></p>
+</blockquote>
+<h3 id="player">Player становится свидетелем<a class="headerlink" href="#player" title="Permanent link">¶</a></h3>
+<p>Очень важная формула:</p>
+<div class="highlight"><pre><span></span><code>не:
+player смотрит сцену
+
+а:
+player ∈ scene
+</code></pre></div>
+<p>Не Gordon показали Resonance Cascade.</p>
+<p>Ты стоишь внутри test chamber.</p>
+<p>Не тебе показали cleanup team.</p>
+<p>Ты сам сталкиваешься с HECU.</p>
+<p>Не ролик показал Xen.</p>
+<p>Ты туда прыгаешь.</p>
+<p>Даже G-Man в финале говорит прямо в first-person camera.</p>
+<p>Из-за этого история ощущается не показанной персонажу, а:</p>
+<blockquote>
+<p><strong>случившейся со мной.</strong></p>
+</blockquote>
+<h3 id="npc-target">NPC перестаёт автоматически означать target<a class="headerlink" href="#npc-target" title="Permanent link">¶</a></h3>
+<p>Ученый населяет мир, разговаривает, боится, открывает, сообщает, участвует в scenes.</p>
+<p>Охранник — ally, часть security, подтверждение нормального мира, combat helper, иногда ключ к двери.</p>
+<div class="highlight"><pre><span></span><code>NPC != TARGET
+</code></pre></div>
+<p>Для жанра, где прицел почти всегда находится по центру экрана, это важный культурный сдвиг.</p>
+<h3 id="enemy">Даже enemy начинает восприниматься как субъект<a class="headerlink" href="#enemy" title="Permanent link">¶</a></h3>
+<p>HECU важны не потому, что Valve создала настоящий artificial general intelligence.</p>
+<p>А потому что player описывает:</p>
+<blockquote>
+<p><strong>он меня обошёл.</strong></p>
+<p><strong>он спрятался.</strong></p>
+<p><strong>он выкуривает меня grenade.</strong></p>
+</blockquote>
+<p>То есть game AI меняет человеческий язык описания.</p>
+<p>Player больше не говорит:</p>
+<blockquote>
+<p>объект сменил node.</p>
+</blockquote>
+<p>Он приписывает:</p>
+<blockquote>
+<p>намерение.</p>
+</blockquote>
+<p>Это очень сильный эффект.</p>
+<h3 id="half-life_3">Half-Life показывает силу убедительной иллюзии<a class="headerlink" href="#half-life_3" title="Permanent link">¶</a></h3>
+<p>Black Mesa не реальный единый объект.</p>
+<p>NPC не настоящие люди.</p>
+<p>События часто scripted.</p>
+<p>Кампания очень линейная.</p>
+<p>И всё равно возникает:</p>
+<blockquote>
+<p><strong>живой мир.</strong></p>
+</blockquote>
+<p>Почему?</p>
+<p>Потому что мозгу дают много согласованных сигналов:</p>
+<div class="highlight"><pre><span></span><code>коридор продолжается после load
++
+NPC знают Gordon
++
+за стеной звучит событие
++
+HECU реагирует
++
+G-Man наблюдает
++
+aliens воюют с military
+=
+мир кажется намного больше
+реальной simulation
+</code></pre></div>
+<p>Не обязательно симулировать всю реальность.</p>
+<p>Нужно построить:</p>
+<blockquote>
+<p><strong>достаточно хорошую иллюзию причинного мира.</strong></p>
+</blockquote>
+<h3 id="_30">Линейность становится инструментом, а не недостатком<a class="headerlink" href="#_30" title="Permanent link">¶</a></h3>
+<p>Сегодня свободу легко автоматически считать:</p>
+<blockquote>
+<p>лучше.</p>
+</blockquote>
+<p>Half-Life демонстрирует противоположное преимущество.</p>
+<p>Если author знает:</p>
+<blockquote>
+<p>ты видел A, B и C,</p>
+</blockquote>
+<p>он может очень точно строить D.</p>
+<p>Игра понимает, какое weapon у тебя почти наверняка есть, какого enemy ты уже знаешь, что думаешь о HECU, какой mechanic можно усложнить и какое событие ещё неожиданно.</p>
+<p>Свобода остаётся:</p>
+<blockquote>
+<p>внутри момента.</p>
+</blockquote>
+<p>Последовательность моментов остаётся:</p>
+<blockquote>
+<p>авторской.</p>
+</blockquote>
+<p>Это один из главных источников плотности Half-Life.</p>
+<h3 id="_31">Режиссура внимания обходится без большой стрелки<a class="headerlink" href="#_31" title="Permanent link">¶</a></h3>
+<p>Valve использует movement, sound, lighting, geometry, NPC gaze и contrast.</p>
+<p>Player:</p>
+<blockquote>
+<p>я сам туда посмотрел.</p>
+</blockquote>
+<p>Designer:</p>
+<blockquote>
+<p>конечно. Абсолютно случайно посмотрел на единственную движущуюся ярко освещённую штуку сразу после громкого звука.</p>
+</blockquote>
+<p>Это очень тонкий control layer.</p>
+<h3 id="fps_1">FPS становится более событийным<a class="headerlink" href="#fps_1" title="Permanent link">¶</a></h3>
+<p>Doom создаёт интерес через combat, enemy composition, architecture и resource management.</p>
+<p>Half-Life добавляет огромный новый слой:</p>
+<blockquote>
+<p><strong>что сейчас произойдёт в мире?</strong></p>
+</blockquote>
+<p>За следующей дверью может быть scientist, scripted death, puzzle, military, G-Man, новый monster, новый тип пространства, explosion или выход наружу.</p>
+<p>Forward momentum усиливается не только mechanics, но и curiosity.</p>
+<h3 id="fps_2">Плотность становится новой мерой качества сюжетного FPS<a class="headerlink" href="#fps_2" title="Permanent link">¶</a></h3>
+<p>Значение Half-Life не в том, что она первой добавила событие между двумя перестрелками. Она сделала последовательность таких изменений центральной частью ожидаемого качества.</p>
+<p>Новый вид места, угроза, информация, механика или неожиданное сочетание знакомых правил должны были регулярно менять положение игрока. В результате большой сюжетный FPS стало труднее оправдывать одним хорошим набором оружия.</p>
+<p>Это исторический вывод о смене критериев, а не обещание, что вся HL1 одинаково хорошо работает сегодня. Кирилл вполне может признавать важность подхода и уставать от конкретных коридоров. Между правилом дизайна и качеством каждого его исполнения остаётся расстояние.</p>
+<p>Предметный разбор того, где смена задач удаётся и где начинает затягиваться, находится <a href="02-half-life-design.html#hl1-campaign">в кампании HL1</a>. Здесь важнее, почему после успеха игры сам вопрос о времени <strong>между</strong> боями стал труднее игнорировать.</p>
+<h3 id="technology">Technology служит режиссуре<a class="headerlink" href="#technology" title="Permanent link">¶</a></h3>
+<p>Quake революционен прежде всего как technology.</p>
+<p>Half-Life берёт технологию и превращает её в infrastructure experience.</p>
+<div class="highlight"><pre><span></span><code>skeletal animation → NPC performance
+AI → encounters
+scripting → scenes
+decals → reaction of world
+sound → attention
+BSP transitions → continuity
+</code></pre></div>
+<p>Technology становится менее заметной как отдельный showcase.</p>
+<p>И более заметной как:</p>
+<blockquote>
+<p><strong>то, что позволяет сцене работать.</strong></p>
+</blockquote>
+<h3 id="_32">Поздняя привычность мешает восстановить реакцию первого знакомства<a class="headerlink" href="#_32" title="Permanent link">¶</a></h3>
+<p>NPC разговаривает во время движения, событие запускается прямо на уровне, следующий участок продолжает предыдущий — поздний игрок уже встречал такие решения во множестве игр.</p>
+<p>Из-за этого он может оценить историческую новизну ниже, чем современник. Но обратная ошибка тоже возможна: поклонник приписывает Half-Life всякое похожее решение, забывая о предшественниках и параллельных школах.</p>
+<p>Поэтому здесь нужны две опоры. Рецензии времени релиза показывают, что тогда действительно выделяли. Сравнение с предшествующими играми помогает понять, какие элементы существовали раньше и как изменилось их сочетание.</p>
+<p>Само по себе чувство знакомости не доказывает ни прямого заимствования, ни отсутствия оригинальности. Подробные пути влияния на другие игры собраны <a href="13-legacy.html#influence-evidence">в итоговой главе</a>; здесь мы восстанавливаем историческую дистанцию восприятия.</p>
+<h3 id="half-life-fps_1">Но Half-Life не убила старую ветку FPS<a class="headerlink" href="#half-life-fps_1" title="Permanent link">¶</a></h3>
+<p>Через год:</p>
+<ul>
+<li>Quake III Arena;</li>
+<li>Unreal Tournament.</li>
+</ul>
+<p>Позже:</p>
+<ul>
+<li>Serious Sam;</li>
+<li>Painkiller;</li>
+<li>Doom 2016;</li>
+<li>Doom Eternal.</li>
+</ul>
+<p>То есть gameplay-first arena/action FPS никуда не исчезает.</p>
+<p>Half-Life не находит единственно правильную форму жанра.</p>
+<p>Она создаёт другую огромную ветку:</p>
+<blockquote>
+<p><strong>авторское сюжетное first-person adventure.</strong></p>
+</blockquote>
+<p>Именно так её революцию правильнее всего и понимать.</p>
+<h2 id="p023">23. Что Half-Life действительно изобрела, а что существовало до неё<a class="headerlink" href="#p023" title="Permanent link">¶</a></h2>
+<p>Вот здесь особенно легко скатиться в мифологию.</p>
+<p>Через двадцать лет великая игра почти неизбежно обрастает формулировками:</p>
+<blockquote>
+<p>Half-Life первой сделала сюжет в FPS.</p>
+<p>Half-Life придумала environmental storytelling.</p>
+<p>Half-Life первой сделала умных врагов.</p>
+<p>Half-Life первой отказалась от катсцен.</p>
+<p>Half-Life первой сделала интерактивный мир.</p>
+</blockquote>
+<p>Почти всё это в буквальном виде неверно.</p>
+<p>И это вообще не уменьшает её исторической роли.</p>
+<p>Наоборот, интереснее понять:</p>
+<blockquote>
+<p><strong>почему игра оказалась революционной, если почти всё её сырьё уже где-то существовало?</strong></p>
+</blockquote>
+<p>Ответ:</p>
+<blockquote>
+<p>потому что игровая революция очень часто состоит не в первом появлении feature, а в первом <strong>убедительном синтезе</strong>, после которого вся индустрия понимает, как этим языком пользоваться.</p>
+</blockquote>
+<h3 id="fps-half-life">Сюжетный FPS существовал задолго до Half-Life<a class="headerlink" href="#fps-half-life" title="Permanent link">¶</a></h3>
+<p><code>Marathon</code> уже строил довольно сложную sci-fi историю в first-person action.</p>
+<p>Там были:</p>
+<ul>
+<li>AI;</li>
+<li>factions;</li>
+<li>терминалы;</li>
+<li>narrative;</li>
+<li>более масштабный lore.</li>
+</ul>
+<p><code>System Shock</code> ещё в 1994 году показывал, что first-person game может быть не только стрельбой, но и пространством, которое игрок изучает как реальное место.</p>
+<p><code>Strife</code> совмещал FPS с NPC, dialogue и branching elements.</p>
+<p><code>Dark Forces</code> и <code>Jedi Knight</code> имели контекстные mission objectives и полноценную сюжетную кампанию.</p>
+<p>То есть формула:</p>
+<blockquote>
+<p><strong>«в шутере может быть история»</strong></p>
+</blockquote>
+<p>к 1998 году вообще не новая.</p>
+<p>Half-Life делает другое:</p>
+<blockquote>
+<p><strong>пытается убрать видимый шов между историей и самим движением через FPS.</strong></p>
+</blockquote>
+<h3 id="immersive-first-person-world-black-mesa">Immersive first-person world тоже не появился в Black Mesa<a class="headerlink" href="#immersive-first-person-world-black-mesa" title="Permanent link">¶</a></h3>
+<p><code>Ultima Underworld</code>.</p>
+<p><code>System Shock</code>.</p>
+<p>Позже <code>Thief</code>.</p>
+<p>До Valve уже существует школа, где first-person view используется для:</p>
+<ul>
+<li>исследования;</li>
+<li>пространственного присутствия;</li>
+<li>системного взаимодействия;</li>
+<li>environmental storytelling.</li>
+</ul>
+<p>Причём Looking Glass в некоторых аспектах идёт <strong>гораздо глубже</strong>, чем Half-Life.</p>
+<p>System Shock сложнее системно.</p>
+<p>Игрок получает больше инструментов, интерфейсов и способов взаимодействия.</p>
+<p>Поэтому не надо строить историю:</p>
+<div class="highlight"><pre><span></span><code>до Half-Life
+тупые стрелялки
+
+после Half-Life
+внезапно появились миры
+</code></pre></div>
+<p>Это просто исторически неправильно.</p>
+<h3 id="objectives-valve">Objectives тоже не изобрела Valve<a class="headerlink" href="#objectives-valve" title="Permanent link">¶</a></h3>
+<p><code>Dark Forces</code>.</p>
+<p><code>Jedi Knight</code>.</p>
+<p>Особенно <code>GoldenEye 007</code>.</p>
+<p>Уже были кампании, где цель:</p>
+<ul>
+<li>уничтожить объект;</li>
+<li>установить устройство;</li>
+<li>получить данные;</li>
+<li>встретиться с персонажем;</li>
+<li>защитить NPC;</li>
+<li>не убивать определённых людей.</li>
+</ul>
+<p>Half-Life не придумала:</p>
+<blockquote>
+<p><strong>у FPS может быть задача кроме «найти exit».</strong></p>
+</blockquote>
+<p>Её вклад в другом.</p>
+<p>Она старается убрать сам интерфейс mission structure.</p>
+<p>GoldenEye:</p>
+<div class="highlight"><pre><span></span><code>BRIEFING
+↓
+OBJECTIVES A/B/C
+↓
+миссия
+</code></pre></div>
+<p>Half-Life:</p>
+<div class="highlight"><pre><span></span><code>scientist:
+— нам нужно попасть на поверхность
+↓
+ты идёшь на поверхность
+</code></pre></div>
+<p>Objective ощущается не как внешний список условий.</p>
+<p>А как:</p>
+<blockquote>
+<p><strong>естественное продолжение происходящей ситуации.</strong></p>
+</blockquote>
+<h3 id="_33">Интерактивное окружение тоже существовало<a class="headerlink" href="#_33" title="Permanent link">¶</a></h3>
+<p><code>Duke Nukem 3D</code> уже давал:</p>
+<ul>
+<li>зеркала;</li>
+<li>камеры;</li>
+<li>выключатели;</li>
+<li>автоматы;</li>
+<li>toilets;</li>
+<li>glass;</li>
+<li>разрушаемые элементы;</li>
+<li>кучку бытовых объектов, с которыми можно взаимодействовать.</li>
+</ul>
+<p>В некоторых бытовых деталях Duke вообще может быть интерактивнее Half-Life.</p>
+<p>Разница скорее в функции.</p>
+<p>Duke часто говорит:</p>
+<blockquote>
+<p><strong>о, смотри, можно потрогать. Прикольно.</strong></p>
+</blockquote>
+<p>Half-Life старается встроить реактивность в общий тезис:</p>
+<blockquote>
+<p><strong>мир признаёт действие игрока и поэтому ощущается менее декорационным.</strong></p>
+</blockquote>
+<p>Отсюда:</p>
+<ul>
+<li>bullet decals;</li>
+<li>blood;</li>
+<li>стекло;</li>
+<li>machinery;</li>
+<li>NPC reactions;</li>
+<li>buttons;</li>
+<li>doors;</li>
+<li>environmental change.</li>
+</ul>
+<h3 id="scripted-events">Scripted events тоже существовали<a class="headerlink" href="#scripted-events" title="Permanent link">¶</a></h3>
+<p>Doom уже мог:</p>
+<ul>
+<li>открыть стену;</li>
+<li>выпустить enemies;</li>
+<li>изменить состояние level;</li>
+<li>устроить trap.</li>
+</ul>
+<p>Build games умели сложные triggers и environmental events.</p>
+<p>Valve не придумала:</p>
+<blockquote>
+<p>trigger.</p>
+</blockquote>
+<p>И не первая заставила:</p>
+<blockquote>
+<p>enemy проломить стену.</p>
+</blockquote>
+<p>Сильное отличие Half-Life:</p>
+<blockquote>
+<p><strong>scripted micro-events становятся почти постоянным языком single-player campaign.</strong></p>
+</blockquote>
+<p>Не:</p>
+<blockquote>
+<p>три большие set piece на всю игру.</p>
+</blockquote>
+<p>А:</p>
+<blockquote>
+<p>маленькие поставленные события через несколько минут или даже секунд.</p>
+</blockquote>
+<p>И именно их <strong>плотность и интеграция</strong> создают новый ритм.</p>
+<h3 id="ai-hecu_1">AI тоже не начинается с HECU<a class="headerlink" href="#ai-hecu_1" title="Permanent link">¶</a></h3>
+<p><code>GoldenEye</code>, <code>Unreal</code> и другие игры уже делают enemies заметно сложнее ранних Doom-like противников.</p>
+<p>Half-Life не изобретает:</p>
+<blockquote>
+<p>smart enemy.</p>
+</blockquote>
+<p>Она особенно хорошо собирает:</p>
+<div class="highlight"><pre><span></span><code>AI
++
+уровень
++
+cover
++
+grenades
++
+squad context
++
+voice barks
++
+animation
++
+scripting
+</code></pre></div>
+<p>И получает врага, которого player <strong>легко интерпретирует как разумного</strong>.</p>
+<p>Это важнее голого вопроса:</p>
+<blockquote>
+<p>у кого в 1998 было больше строк AI-кода.</p>
+</blockquote>
+<h3 id="_34">Связный мир тоже имеет предшественников<a class="headerlink" href="#_34" title="Permanent link">¶</a></h3>
+<p><code>Hexen</code> использовал hub structure.</p>
+<p>Immersive sims уже строили связанные пространства.</p>
+<p>Разные игры экспериментировали с возвращением, continuity и миром, не сведённым к независимым arenas.</p>
+<p>Half-Life не впервые говорит:</p>
+<blockquote>
+<p>level может быть частью большего места.</p>
+</blockquote>
+<p>Но очень агрессивно применяет этот принцип к <strong>линейной FPS-кампании</strong>.</p>
+<p>Ты практически не чувствуешь:</p>
+<blockquote>
+<p>Mission 3 закончилась.</p>
+</blockquote>
+<p>Именно это потом станет очень воспроизводимой моделью.</p>
+<h3 id="first-person">Молчаливый first-person герой тоже не уникален<a class="headerlink" href="#first-person" title="Permanent link">¶</a></h3>
+<p>FPS до Half-Life прекрасно существовали с очень тонко прописанными или почти безличными protagonists.</p>
+<p>Marathon тоже использовал игрока как в значительной степени функциональный avatar.</p>
+<p>Так что формула:</p>
+<blockquote>
+<p>Gordon молчит → Valve изобрела silent protagonist</p>
+</blockquote>
+<p>тоже не работает.</p>
+<p>Что Valve делает хорошо:</p>
+<blockquote>
+<p><strong>молчание Gordon встроено в общую систему first-person continuity, отсутствия внешней камеры и передачи эмоциональной реакции окружающим персонажам.</strong></p>
+</blockquote>
+<p>То есть снова:</p>
+<blockquote>
+<p>не feature сама по себе, а место feature внутри whole.</p>
+</blockquote>
+<h3 id="environmental-storytelling-half-life">Environmental storytelling тоже старше Half-Life<a class="headerlink" href="#environmental-storytelling-half-life" title="Permanent link">¶</a></h3>
+<p><code>System Shock</code>.</p>
+<p><code>Ultima Underworld</code>.</p>
+<p><code>Unreal</code>.</p>
+<p>Другие игры уже дают:</p>
+<ul>
+<li>следы прошлых событий;</li>
+<li>сообщения;</li>
+<li>architecture;</li>
+<li>environmental clues;</li>
+<li>мир, который надо реконструировать по остаткам.</li>
+</ul>
+<p>Half-Life особенно сильно комбинирует два типа narrative:</p>
+<div class="highlight"><pre><span></span><code>ПОСЛЕДСТВИЯ
+→ ты пришёл после события
+
+и
+
+СОБЫТИЕ
+→ оно происходит прямо перед тобой
+</code></pre></div>
+<p>Вот это сочетание и делает Black Mesa такой убедительной.</p>
+<h3 id="_35">Что тогда реально нового?<a class="headerlink" href="#_35" title="Permanent link">¶</a></h3>
+<p>Если искать отдельный feature, список будет коротким и спорным.</p>
+<p>Если смотреть на <strong>систему дизайна</strong>, вклад становится намного яснее.</p>
+<p>Half-Life особенно сильно канонизирует несколько вещей.</p>
+<h3 id="1-continuous-first-person-narrative-mainstream-fps">1. Continuous first-person narrative как основа большого mainstream FPS<a class="headerlink" href="#1-continuous-first-person-narrative-mainstream-fps" title="Permanent link">¶</a></h3>
+<p>Не просто:</p>
+<blockquote>
+<p>иногда сюжет происходит внутри уровня.</p>
+</blockquote>
+<p>А:</p>
+<blockquote>
+<p><strong>вся campaign старается существовать в одном first-person mode.</strong></p>
+</blockquote>
+<h3 id="2-scripted-micro-events">2. Scripted micro-events как постоянный ритм<a class="headerlink" href="#2-scripted-micro-events" title="Permanent link">¶</a></h3>
+<p>Не только большие роликовые моменты.</p>
+<p>А огромное количество маленьких:</p>
+<ul>
+<li>NPC reaction;</li>
+<li>break;</li>
+<li>sound cue;</li>
+<li>death;</li>
+<li>battle behind glass;</li>
+<li>G-Man sighting.</li>
+</ul>
+<h3 id="3-npc">3. NPC как население мира<a class="headerlink" href="#3-npc" title="Permanent link">¶</a></h3>
+<p>Не каждый человек:</p>
+<blockquote>
+<p>target.</p>
+</blockquote>
+<p>Не каждый человек:</p>
+<blockquote>
+<p>quest giver.</p>
+</blockquote>
+<p>NPC может существовать просто чтобы:</p>
+<blockquote>
+<p>мир был живым.</p>
+</blockquote>
+<h3 id="4-objective-mission-interface">4. Objective без отдельного mission interface<a class="headerlink" href="#4-objective-mission-interface" title="Permanent link">¶</a></h3>
+<p>Игровая задача старается возникнуть из ситуации:</p>
+<blockquote>
+<p>ученый сказал → дверь открылась → world state изменился → ты идёшь.</p>
+</blockquote>
+<h3 id="5-level-timeline">5. Level как драматическая timeline<a class="headerlink" href="#5-level-timeline" title="Permanent link">¶</a></h3>
+<p>То, <strong>где</strong> player находится, определяет то, <strong>что</strong> сейчас должно произойти.</p>
+<h3 id="6-player">6. Player как свидетель<a class="headerlink" href="#6-player" title="Permanent link">¶</a></h3>
+<p>Не каждый moment обязан требовать action.</p>
+<p>Иногда:</p>
+<blockquote>
+<p><strong>увидеть — уже gameplay beat.</strong></p>
+</blockquote>
+<p>Ты вошёл.</p>
+<p>Посмотрел.</p>
+<p>Понял.</p>
+<p>И пошёл дальше.</p>
+<p>Никаких очков.</p>
+<p>Никакого <code>OBJECTIVE COMPLETE</code>.</p>
+<p>Сцена просто изменила понимание мира.</p>
+<h3 id="7">7. Режиссура внимания без полного контроля камеры<a class="headerlink" href="#7" title="Permanent link">¶</a></h3>
+<p>Half-Life не изобрела sound cue, light или composition.</p>
+<p>Но собирает из них устойчивую систему:</p>
+<blockquote>
+<p>заставить человека самому посмотреть туда, куда нужно author.</p>
+</blockquote>
+<h3 id="half-life_4">Ближайшие предки Half-Life — не одна игра<a class="headerlink" href="#half-life_4" title="Permanent link">¶</a></h3>
+<p>Правильнее видеть её не как:</p>
+<blockquote>
+<p>один гений внезапно придумал жанр.</p>
+</blockquote>
+<p>А как точку, где сходятся несколько исторических линий.</p>
+<p><code>Doom / Quake</code></p>
+<blockquote>
+<p>FPS-фундамент, скорость, оружие, technology.</p>
+</blockquote>
+<p><code>System Shock</code></p>
+<blockquote>
+<p>first-person world как место и narrative environment.</p>
+</blockquote>
+<p><code>Marathon</code></p>
+<blockquote>
+<p>амбициозная sci-fi story внутри FPS и тонкий avatar.</p>
+</blockquote>
+<p><code>Duke Nukem 3D</code></p>
+<blockquote>
+<p>узнаваемые пространства и reactive environment.</p>
+</blockquote>
+<p><code>Strife</code></p>
+<blockquote>
+<p>NPC и мысль, что FPS world населяют не только targets.</p>
+</blockquote>
+<p><code>Dark Forces / Jedi Knight</code></p>
+<blockquote>
+<p>mission structure и cinematic narrative ambition.</p>
+</blockquote>
+<p><code>GoldenEye</code></p>
+<blockquote>
+<p>objectives, human enemies и situational mission design.</p>
+</blockquote>
+<p><code>Unreal</code></p>
+<blockquote>
+<p>атмосферный чужой world и масштабное environmental worldbuilding.</p>
+</blockquote>
+<p>Valve берёт всё это и задаёт:</p>
+<blockquote>
+<p><strong>а можно сделать игру, где ни одна из этих вещей не ощущается отдельной подсистемой?</strong></p>
+</blockquote>
+<p>Вот здесь и появляется Half-Life.</p>
+<h3 id="half-life_5">Главный урок вообще не только про Half-Life<a class="headerlink" href="#half-life_5" title="Permanent link">¶</a></h3>
+<p>Игровая революция часто происходит не тогда, когда кто-то впервые пишет feature X.</p>
+<p>А когда выходит произведение, после которого остальные говорят:</p>
+<blockquote>
+<p><strong>А. Вот как этим надо пользоваться.</strong></p>
+</blockquote>
+<p>До <code>Doom</code> существовал first-person action.</p>
+<p>До <code>Mario 64</code> существовали 3D platformers.</p>
+<p>До Half-Life существовало почти всё её сырьё.</p>
+<p>Но такие игры создают:</p>
+<blockquote>
+<p><strong>понятную воспроизводимую модель.</strong></p>
+</blockquote>
+<p>После Half-Life разработчик может сказать:</p>
+<blockquote>
+<p>сделаем повествование в духе Half-Life.</p>
+</blockquote>
+<p>И другой разработчик уже примерно понимает набор принципов:</p>
+<ul>
+<li>first-person continuity;</li>
+<li>staged events;</li>
+<li>world-based objectives;</li>
+<li>contextual NPC;</li>
+<li>environmental clues;</li>
+<li>controlled pacing.</li>
+</ul>
+<p>Вот это и есть более серьёзный тип влияния, чем:</p>
+<blockquote>
+<p>кто первым в истории сделал дверь, которая открывается от trigger.</p>
+</blockquote>
+<h3 id="precedents-map">Предшественники: одинаковый элемент ещё не означает одинаковую конструкцию<a class="headerlink" href="#precedents-map" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Линия до Half-Life</th>
+<th>Что уже было возможно</th>
+<th>Что важно сопоставлять с HL1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Doom и Quake</td>
+<td>Режиссура боя, ловушки, пространственный ритм, модифицируемая игра</td>
+<td>Valve наследует сильную игровую основу, а не начинает историю FPS с нуля</td>
+</tr>
+<tr>
+<td>Duke Nukem 3D</td>
+<td>Узнаваемые городские функции и множество предметных реакций</td>
+<td>Black Mesa использует бытовую убедительность для длинной драматической дуги катастрофы</td>
+</tr>
+<tr>
+<td>System Shock</td>
+<td>История через пространство, следы и сообщения</td>
+<td>HL1 заметно усиливает события, свидетелем которых игрок становится непосредственно</td>
+</tr>
+<tr>
+<td>Dark Forces / Jedi Knight</td>
+<td>Сюжетные задачи, приключенческая структура, кинематографическое обрамление</td>
+<td>Half-Life теснее связывает возникновение цели с текущей внутриигровой ситуацией</td>
+</tr>
+<tr>
+<td>Unreal</td>
+<td>Атмосфера чужого мира и переходы между масштабами</td>
+<td>У Valve знакомая рабочая среда превращается в источник тревоги через разрушение её нормальности</td>
+</tr>
+</tbody>
+</table>
+<p>Таблица показывает соседство решений, а не тайный список игр, у которых Valve всё скопировала. Для прямого влияния нужен отдельный разговор разработчика или иной конкретный след. Без него корректнее сравнивать конструкции.</p>
+<p>Новизна Half-Life проявляется в <strong>плотности взаимных обязательств между элементами</strong>. NPC нужен повествованию, повествование объясняет маршрут, маршрут готовит встречу с противником, противник меняет использование пространства. Удаление одного элемента начинает повреждать остальные. Именно эта сцепка отличает цельную форму от набора модных возможностей.</p>
+<p>В <a href="13-legacy.html#influence-evidence">итоговой главе</a> другой вопрос: кто затем действительно перенял эти решения и какими путями они разошлись. Здесь достаточно установить, с каким уже существовавшим игровым языком разговаривала Half-Life при рождении.</p>
+<h2 id="p024">24. Half-Life Multiplayer<a class="headerlink" href="#p024" title="Permanent link">¶</a></h2>
+<p>На фоне single-player Half-Life её встроенный multiplayer очень легко вообще забыть.</p>
+<p>И примерно так его воспринимали в 1998 году.</p>
+<p>Half-Life разъебала всех прежде всего Black Mesa.</p>
+<p>Multiplayer:</p>
+<blockquote>
+<p><strong>хорошая дополнительная часть, но не причина, по которой игру объявили революцией.</strong></p>
+</blockquote>
+<p>Ирония в том, что именно эта сравнительно второстепенная часть плюс открытая architecture GoldSrc очень быстро превратятся в фундамент для одного из крупнейших multiplayer-феноменов PC.</p>
+<p>Но здесь важно отдельно посмотреть именно на <strong>Half-Life Deathmatch</strong>, ещё до Counter-Strike и огромной mod-сцены.</p>
+<h3 id="deathmatch">В основе — классический deathmatch<a class="headerlink" href="#deathmatch" title="Permanent link">¶</a></h3>
+<p>Valve не пытается в 1998 заново изобрести network FPS.</p>
+<p>Quake уже прекрасно сформулировал цикл:</p>
+<div class="highlight"><pre><span></span><code>spawn
+↓
+найти weapon
+↓
+найти opponent
+↓
+kill / die
+↓
+respawn
+↓
+repeat
+</code></pre></div>
+<p>Half-Life сохраняет эту основу.</p>
+<p>Главный режим:</p>
+<blockquote>
+<p><strong>free-for-all deathmatch.</strong></p>
+</blockquote>
+<p>Никакого объяснения lore.</p>
+<p>Никто не рассказывает, почему десять Gordon Freeman одновременно носятся по складу и стреляют друг в друга из Gauss.</p>
+<p>И правильно.</p>
+<p>Здесь Valve не пытается сохранять immersion single-player.</p>
+<p>Это:</p>
+<blockquote>
+<p><strong>игровая площадка.</strong></p>
+</blockquote>
+<p>GoldSrc вырос из Quake, и deathmatch lineage здесь видна особенно чисто.</p>
+<h3 id="half-life-deathmatch">Но арсенал Half-Life мгновенно делает deathmatch гораздо более хаотичным<a class="headerlink" href="#half-life-deathmatch" title="Permanent link">¶</a></h3>
+<p>В single-player все эти вещи вводятся постепенно:</p>
+<ul>
+<li>Glock;</li>
+<li>.357;</li>
+<li>MP5 + grenade launcher;</li>
+<li>shotgun;</li>
+<li>crossbow;</li>
+<li>RPG;</li>
+<li>Gauss;</li>
+<li>Gluon Gun;</li>
+<li>hand grenade;</li>
+<li>satchel;</li>
+<li>tripmine;</li>
+<li>Snarks.</li>
+</ul>
+<p>В multiplayer всё это встречается одновременно.</p>
+<p>Получается:</p>
+<div class="highlight"><pre><span></span><code>кто-то стреляет из MP5
++
+кто-то сидит с crossbow
++
+кто-то заряжает Gauss
++
+кто-то поставил tripmine
++
+кто-то кинул satchel
++
+какой-то долбоёб выпустил Snarks
+=
+Half-Life Deathmatch
+</code></pre></div>
+<p>Поэтому HLDM менее «чистый», чем Quake deathmatch.</p>
+<p>Но намного более:</p>
+<blockquote>
+<p><strong>игрушечный и хаотичный.</strong></p>
+</blockquote>
+<p>Карта постоянно может превратиться в маленькую катастрофу из-за взаимодействия нескольких странных систем.</p>
+<h3 id="launch-black-mesa">Launch-набор карт специально строится иначе, чем Black Mesa<a class="headerlink" href="#launch-black-mesa" title="Permanent link">¶</a></h3>
+<p>На старте в исходном материале зафиксированы восемь основных multiplayer maps:</p>
+<ul>
+<li>Boot Camp;</li>
+<li>Bounce;</li>
+<li>Datacore;</li>
+<li>Lambda Bunker;</li>
+<li>Snark Pit;</li>
+<li>Stalkyard;</li>
+<li>Subtransit;</li>
+<li>Undertow.</li>
+</ul>
+<p>И здесь сразу видно другое устройство level design.</p>
+<p>Single-player:</p>
+<div class="highlight"><pre><span></span><code>A → B → C → D
+</code></pre></div>
+<p>Пространство должно вести вперёд.</p>
+<p>Deathmatch:</p>
+<div class="highlight"><pre><span></span><code>     A
+   ↙   ↘
+  B     C
+   ↘   ↙
+     D
+</code></pre></div>
+<p>Нужны:</p>
+<ul>
+<li>loops;</li>
+<li>verticality;</li>
+<li>несколько маршрутов;</li>
+<li>weapon pickups;</li>
+<li>health;</li>
+<li>пересечения;</li>
+<li>точки риска;</li>
+<li>места, куда player возвращается снова и снова.</li>
+</ul>
+<p>То есть GoldSrc практически сразу показывает две противоположные способности.</p>
+<p>Он умеет быть:</p>
+<blockquote>
+<p>линейным режиссируемым путешествием</p>
+</blockquote>
+<p>и:</p>
+<blockquote>
+<p>циклической ареной, которая живёт бесконечно.</p>
+</blockquote>
+<h3 id="stalkyard-quake">Stalkyard буквально хранит ДНК Quake<a class="headerlink" href="#stalkyard-quake" title="Permanent link">¶</a></h3>
+<p>Это особенно хороший исторический артефакт из исходного материала.</p>
+<p>Stalkyard начали делать настолько рано, что Half-Life multiplayer ещё было неудобно нормально тестировать.</p>
+<p>Карту временно переносили обратно в Quake под рабочим именем вроде <code>warez_dm</code>.</p>
+<p>Получается прекрасная цепочка:</p>
+<div class="highlight"><pre><span></span><code>Quake
+↓
+ранняя Half-Life map
+↓
+Half-Life multiplayer ещё сырой
+↓
+портируем карту назад в Quake
+↓
+тестируем
+↓
+позже возвращаем в Half-Life
+↓
+Stalkyard
+</code></pre></div>
+<p>Это почти идеальная иллюстрация переходного состояния GoldSrc.</p>
+<p>Half-Life уже становится собственной технологией.</p>
+<p>Но ещё достаточно близка к Quake, чтобы разработчики могли использовать родственника как рабочий костыль.</p>
+<h3 id="deathmatch-fps-single-player">Deathmatch показывает, насколько быстрый FPS скрывается под постановкой single-player<a class="headerlink" href="#deathmatch-fps-single-player" title="Permanent link">¶</a></h3>
+<p>Single-player регулирует темп:</p>
+<div class="highlight"><pre><span></span><code>тишина
+↓
+сцена
+↓
+бой
+↓
+exploration
+↓
+puzzle
+↓
+следующая сцена
+</code></pre></div>
+<p>Убираем это.</p>
+<p>Остаётся:</p>
+<ul>
+<li>быстрое movement;</li>
+<li>weapon control;</li>
+<li>health;</li>
+<li>ammo;</li>
+<li>positioning;</li>
+<li>map knowledge.</li>
+</ul>
+<p>И внезапно underlying Half-Life очень хорошо показывает Quake-корни.</p>
+<p>Кинематографическая структура не заменила old-school FPS.</p>
+<p>Она просто <strong>построена сверху</strong>.</p>
+<h3 id="snarks-multiplayer">Snarks в multiplayer особенно прекрасны<a class="headerlink" href="#snarks-multiplayer" title="Permanent link">¶</a></h3>
+<p>В campaign Snark — забавное ситуативное biological weapon.</p>
+<p>В deathmatch:</p>
+<blockquote>
+<p><strong>оружие психологического террора.</strong></p>
+</blockquote>
+<p>Ты выпускаешь несколько существ в комнату.</p>
+<p>Они сами:</p>
+<ul>
+<li>ищут людей;</li>
+<li>меняют маршруты;</li>
+<li>создают noise;</li>
+<li>заставляют двигаться.</li>
+</ul>
+<p>Player, который вообще не видит человека, бросившего Snarks, всё равно вынужден реагировать.</p>
+<p>И на старом internet connection, где высокий ping — обычная реальность, self-guided chaos особенно забавен.</p>
+<h3 id="tripmines-satchels">Tripmines и satchels делают пространство опасным даже без прямой дуэли<a class="headerlink" href="#tripmines-satchels" title="Permanent link">¶</a></h3>
+<p>В Quake-like deathmatch большое значение имеют:</p>
+<ul>
+<li>aim;</li>
+<li>movement;</li>
+<li>item control.</li>
+</ul>
+<p>Half-Life добавляет:</p>
+<blockquote>
+<p><strong>я могу изменить саму безопасность прохода.</strong></p>
+</blockquote>
+<p>Tripmine превращает doorway в trap.</p>
+<p>Satchel позволяет заранее подготовить explosion.</p>
+<p>Snarks могут временно превратить комнату в хаос.</p>
+<p>То есть player взаимодействует не только:</p>
+<blockquote>
+<p>противник ↔ прицел.</p>
+</blockquote>
+<p>Но и:</p>
+<blockquote>
+<p><strong>пространство ↔ подготовленная угроза.</strong></p>
+</blockquote>
+<h3 id="gauss">Gauss становится отдельной культурой движения и убийства<a class="headerlink" href="#gauss" title="Permanent link">¶</a></h3>
+<p>В single-player Gauss — experimental weapon.</p>
+<p>В multiplayer его необычный recoil и взаимодействие с geometry дают совершенно другую глубину.</p>
+<p>Позднее эти свойства станут огромной частью movement/speedrunning культуры, но даже внутри deathmatch оружие сильно выделяется на фоне обычных firearms.</p>
+<p>Это снова хороший пример:</p>
+<blockquote>
+<p>один и тот же system имеет разные значения в разных игровых формах.</p>
+</blockquote>
+<h3 id="launch-half-life-crossfire">В launch Half-Life не было знаменитого Crossfire<a class="headerlink" href="#launch-half-life-crossfire" title="Permanent link">¶</a></h3>
+<p>Это важная историческая поправка из исходного материала.</p>
+<p><code>Crossfire</code>, которая позднее станет одной из самых узнаваемых HLDM maps, добавляется <strong>после релиза</strong>.</p>
+<p>И это уже показывает ещё одну будущую черту Valve:</p>
+<blockquote>
+<p>игра ушла на CD, но продукт не перестал развиваться.</p>
+</blockquote>
+<h3 id="valve-multiplayer">Valve начинает обновлять multiplayer почти сразу<a class="headerlink" href="#valve-multiplayer" title="Permanent link">¶</a></h3>
+<p>Half-Life выходит:</p>
+<blockquote>
+<p>19 ноября 1998.</p>
+</blockquote>
+<p>Уже очень быстро после релиза появляются:</p>
+<ul>
+<li>patches;</li>
+<li>дополнительная map <code>Frenzy</code>;</li>
+<li>первые SDK-материалы.</li>
+</ul>
+<p>В январе 1999 крупное обновление 1.0.0.8 приносит изменения network/bandwidth, дополнительные models/maps и полноценный teamplay.</p>
+<p>То есть модель:</p>
+<div class="highlight"><pre><span></span><code>диск ушёл в печать
+↓
+игра закончена навсегда
+</code></pre></div>
+<p>у Valve начинает разрушаться практически сразу.</p>
+<p>Half-Life превращается в:</p>
+<blockquote>
+<p><strong>живущий PC-продукт.</strong></p>
+</blockquote>
+<p>Это очень важно для следующего шага — modding.</p>
+<h3 id="crossfire-half-life-deathmatch">Crossfire идеально объясняет характер именно Half-Life Deathmatch<a class="headerlink" href="#crossfire-half-life-deathmatch" title="Permanent link">¶</a></h3>
+<p>Главная идея map:</p>
+<blockquote>
+<p><strong>airstrike.</strong></p>
+</blockquote>
+<p>Кто-то активирует удар.</p>
+<p>Начинается предупреждение.</p>
+<p>Все снаружи понимают:</p>
+<blockquote>
+<p>СУКА, В БУНКЕР.</p>
+</blockquote>
+<p>И обычный матч внезапно меняет состояние:</p>
+<div class="highlight"><pre><span></span><code>обычный deathmatch
+↓
+кто-то нажал кнопку
+↓
+сирена
+↓
+все бегут к shelter
+↓
+в bunker начинается резня
+↓
+airstrike убивает тех, кто остался
+↓
+матч возвращается к обычному состоянию
+</code></pre></div>
+<p>Это удивительно Half-Life-подобная идея.</p>
+<p>В campaign scripted event:</p>
+<blockquote>
+<p>меняет состояние пространства.</p>
+</blockquote>
+<p>В Crossfire:</p>
+<blockquote>
+<p>multiplayer event временно меняет <strong>поведение всех живых игроков</strong>.</p>
+</blockquote>
+<p>Одна кнопка создаёт маленькую социальную историю.</p>
+<h3 id="goldsrc-">Персонализация тоже важна для GoldSrc-культуры<a class="headerlink" href="#goldsrc-" title="Permanent link">¶</a></h3>
+<p>Half-Life позволяет менять player model/colors и использовать <strong>spray logos</strong>.</p>
+<p>Сегодня:</p>
+<blockquote>
+<p>мелочь.</p>
+</blockquote>
+<p>В конце 90-х очень характерная часть server identity.</p>
+<p>Человек буквально может оставить на стене:</p>
+<blockquote>
+<p>свой decal.</p>
+</blockquote>
+<p>То есть не просто anonymous avatar.</p>
+<p>А:</p>
+<blockquote>
+<p><strong>я здесь был.</strong></p>
+</blockquote>
+<p>И sprays потом станут очень узнаваемой частью культуры GoldSrc games.</p>
+<h3 id="co-op-retail-half-life">Co-op в retail Half-Life нет<a class="headerlink" href="#co-op-retail-half-life" title="Permanent link">¶</a></h3>
+<p>Ранние планы и эксперименты могли обсуждать разные multiplayer forms.</p>
+<p>Но на release полноценной co-op campaign нет.</p>
+<p>Есть deathmatch.</p>
+<p>Позже:</p>
+<ul>
+<li><code>Sven Co-op</code> решит это как mod;</li>
+<li><code>Decay</code> даст официальный кооператив через Gearbox.</li>
+</ul>
+<p>Полезное напоминание:</p>
+<blockquote>
+<p>development ideas и marketing expectations ≠ final shipped product.</p>
+</blockquote>
+<h3 id="hldm-single-player">HLDM не был революцией уровня single-player<a class="headerlink" href="#hldm-single-player" title="Permanent link">¶</a></h3>
+<p>Это важно не натягивать.</p>
+<p>Single-player Half-Life:</p>
+<blockquote>
+<p>меняет mainstream language сюжетной FPS.</p>
+</blockquote>
+<p>Half-Life Deathmatch:</p>
+<blockquote>
+<p><strong>крепкий, быстрый, хаотичный deathmatch на хорошей сетевой базе.</strong></p>
+</blockquote>
+<p>Quake multiplayer culture в 1998 значительно зрелее.</p>
+<p>А вскоре Quake III Arena и Unreal Tournament вообще построят целые великие игры вокруг multiplayer-first philosophy.</p>
+<p>Half-Life остаётся прежде всего single-player phenomenon.</p>
+<h3 id="hldm">Но историческое значение HLDM станет видно очень быстро<a class="headerlink" href="#hldm" title="Permanent link">¶</a></h3>
+<p>Valve уже имеет:</p>
+<div class="highlight"><pre><span></span><code>client/server engine
++
+prediction
++
+dedicated-server основу
++
+master-server ecosystem
++
+Worldcraft
++
+game DLL
++
+multiplayer entities
+</code></pre></div>
+<p>И выясняется:</p>
+<blockquote>
+<p>всё это можно использовать не только для Half-Life Deathmatch.</p>
+</blockquote>
+<p>Можно построить:</p>
+<blockquote>
+<p><strong>совсем другую multiplayer game поверх GoldSrc.</strong></p>
+</blockquote>
+<p>Именно поэтому базовый HL multiplayer исторически важнее собственной соревновательной сцены.</p>
+<p>Он доказывает:</p>
+<blockquote>
+<p><strong>GoldSrc — полноценная интернет-платформа для action games.</strong></p>
+</blockquote>
+<p>А дальше modders сделают с этим выводом намного больше, чем Valve могла предсказать в ноябре 1998.</p>
+<h2 id="p025">25. Half-Life: Uplink и Day One<a class="headerlink" href="#p025" title="Permanent link">¶</a></h2>
+<p>У Half-Life есть две очень разные ранние демонстрационные версии, и их легко смешать, хотя они решают почти противоположные задачи.</p>
+<p><strong>Day One</strong> — это ранний OEM-срез самой настоящей Half-Life, замороженный ещё до retail-релиза и предназначенный прежде всего для hardware bundles.</p>
+<p><strong>Uplink</strong> — уже отдельная маленькая кампания, специально сделанная после завершения основной игры как нормальная публичная demo.</p>
+<p>И вместе они прекрасно показывают, как быстро Valve научилась различать:</p>
+<blockquote>
+<p><strong>«дать человеку кусок продукта»</strong></p>
+</blockquote>
+<p>и:</p>
+<blockquote>
+<p><strong>«спроектировать отдельный короткий опыт, который объясняет, почему продукт вообще хорош».</strong></p>
+</blockquote>
+<h3 id="day-one-pc-1990-">Day One появляется из очень конкретной PC-экономики конца 1990-х<a class="headerlink" href="#day-one-pc-1990-" title="Permanent link">¶</a></h3>
+<p>Сегодня demo можно просто положить в Steam.</p>
+<p>В 1998 всё иначе.</p>
+<p>Игровой PC — это рынок:</p>
+<ul>
+<li>3D accelerators;</li>
+<li>sound cards;</li>
+<li>controllers;</li>
+<li>magazine CDs;</li>
+<li>OEM bundles.</li>
+</ul>
+<p>Производитель железа хочет положить Half-Life в коробку с новым устройством.</p>
+<p>Но hardware нельзя собрать вечером перед релизом.</p>
+<p>Нужны заранее:</p>
+<ul>
+<li>master discs;</li>
+<li>упаковка;</li>
+<li>производство;</li>
+<li>логистика.</li>
+</ul>
+<p>Поэтому OEM-build Half-Life приходится заморозить <strong>раньше retail-версии</strong>.</p>
+<p>Так появляется:</p>
+<blockquote>
+<p><strong>Half-Life: Day One.</strong></p>
+</blockquote>
+<h3 id="day-one-half-life">Day One — это почти просто первая большая часть самой Half-Life<a class="headerlink" href="#day-one-half-life" title="Permanent link">¶</a></h3>
+<p>В неё входят:</p>
+<ul>
+<li>Hazard Course;</li>
+<li>Black Mesa Inbound;</li>
+<li>Anomalous Materials;</li>
+<li>Unforeseen Consequences;</li>
+<li>Office Complex;</li>
+<li>We've Got Hostiles.</li>
+</ul>
+<p>После чего:</p>
+<blockquote>
+<p><code>TO BE CONTINUED...</code></p>
+</blockquote>
+<p>То есть по современным меркам это вообще очень жирная demo.</p>
+<p>Не пятнадцать минут.</p>
+<p>А серьёзный кусок основного путешествия.</p>
+<h3 id="valve-day-one">Почему Valve не хотела просто выложить Day One всему интернету<a class="headerlink" href="#valve-day-one" title="Permanent link">¶</a></h3>
+<p>Проблем сразу две.</p>
+<p>Первая:</p>
+<blockquote>
+<p><strong>размер.</strong></p>
+</blockquote>
+<p>Для интернета 1998 года большой build — совсем не то же самое, что сегодня скачать 20 GB за вечер.</p>
+<p>Вторая ещё важнее:</p>
+<blockquote>
+<p><strong>Day One отдаёт слишком много самой игры.</strong></p>
+</blockquote>
+<p>Ты уже видишь:</p>
+<ul>
+<li>train ride;</li>
+<li>Black Mesa до катастрофы;</li>
+<li>Resonance Cascade;</li>
+<li>последствия;</li>
+<li>первых aliens;</li>
+<li>HECU;</li>
+<li>значительную часть драматической дуги opening.</li>
+</ul>
+<p>Потом покупаешь retail Half-Life и должен всё это пройти ещё раз.</p>
+<p>А opening HL1 особенно важен именно тем, что работает как одно непрерывное первое знакомство.</p>
+<p>Получается странная demo:</p>
+<blockquote>
+<p>чтобы убедить купить игру, мы бесплатно отдали человеку один из самых сильных и тщательно поставленных её кусков.</p>
+</blockquote>
+<h3 id="day-one-oem-">Но Day One разошлась намного шире задуманной OEM-аудитории<a class="headerlink" href="#day-one-oem-" title="Permanent link">¶</a></h3>
+<p>Builds попадали к прессе.</p>
+<p>Люди копировали.</p>
+<p>Разные OEM-поставки распространялись.</p>
+<p>В результате Day One стала заметнее, чем обычный бонус в коробке с hardware.</p>
+<p>Для молодой Valve это ещё один важный сигнал:</p>
+<blockquote>
+<p><strong>интерес к Half-Life реально большой.</strong></p>
+</blockquote>
+<p>Люди не просто читают preview.</p>
+<p>Они хотят получить executable и самим посмотреть, что это за странная игра, где первые минуты вообще почти не стреляют.</p>
+<h3 id="day-one-development-archaeology">Сегодня Day One особенно интересна как development archaeology<a class="headerlink" href="#day-one-development-archaeology" title="Permanent link">¶</a></h3>
+<p>Потому что это не просто:</p>
+<blockquote>
+<p>retail Half-Life, обрезанная на пятой главе.</p>
+</blockquote>
+<p>Существуют builds, зафиксированные до финального релиза.</p>
+<p>А значит в них можно увидеть промежуточное состояние игры.</p>
+<p>Сохраняются:</p>
+<ul>
+<li>ранние HUD-elements;</li>
+<li>старые названия глав;</li>
+<li>отличия balance;</li>
+<li>промежуточные assets;</li>
+<li>раннее weapon behaviour;</li>
+<li>другие детали практически готовой, но всё ещё меняющейся Half-Life.</li>
+</ul>
+<p>То есть Day One — отличный reminder:</p>
+<blockquote>
+<p><strong>даже программа, уже достаточно стабильная, чтобы её печатать на CD и класть к видеокарте, ещё не обязана быть финальной игрой.</strong></p>
+</blockquote>
+<p>Software продолжает течь почти до master.</p>
+<h3 id="day-one-demo">И вот поэтому Day One сегодня ценнее как архив, чем как demo<a class="headerlink" href="#day-one-demo" title="Permanent link">¶</a></h3>
+<p>Для человека, который просто хочет попробовать Half-Life:</p>
+<blockquote>
+<p>Uplink интереснее.</p>
+</blockquote>
+<p>Для человека, который хочет посмотреть:</p>
+<blockquote>
+<p><strong>какой Half-Life была за несколько месяцев до окончательной фиксации,</strong></p>
+</blockquote>
+<p>Day One значительно полезнее.</p>
+<p>Это почти snapshot development history.</p>
+<p>И именно поэтому её не обязательно пихать сегодня в <code>New Game</code> рядом с основной кампанией.</p>
+<p>Она выполняет другую функцию.</p>
+<h3 id="valve-demo">После релиза Valve делает demo уже гораздо умнее<a class="headerlink" href="#valve-demo" title="Permanent link">¶</a></h3>
+<p>Half-Life вышла.</p>
+<p>Теперь можно спокойно спросить:</p>
+<blockquote>
+<p>если мы хотим дать человеку попробовать игру, <strong>что именно ему надо показать?</strong></p>
+</blockquote>
+<p>Самый очевидный вариант:</p>
+<blockquote>
+<p>отрезать первые двадцать минут.</p>
+</blockquote>
+<p>Но Valve выбирает гораздо более интересное решение.</p>
+<p>Она делает:</p>
+<blockquote>
+<p><strong>отдельную маленькую Half-Life.</strong></p>
+</blockquote>
+<p>Так появляется Uplink.</p>
+<h3 id="uplink">Uplink — не просто вырезанная глава основной кампании<a class="headerlink" href="#uplink" title="Permanent link">¶</a></h3>
+<p>Это важно.</p>
+<p>Она действительно использует старые идеи и материал, связанный с Communications Center.</p>
+<p>Но финальные levels собираются <strong>специально для demo уже после gold master основной Half-Life</strong>.</p>
+<p>То есть правильная формулировка:</p>
+<blockquote>
+<p>не «Valve достала из корзины готовый вырезанный уровень».</p>
+</blockquote>
+<p>А:</p>
+<blockquote>
+<p><strong>маленькая команда взяла часть старых идей и зрелый инструментарий Half-Life и быстро написала новую короткую кампанию.</strong></p>
+</blockquote>
+<h3 id="production-experiment">Это ещё и production experiment<a class="headerlink" href="#production-experiment" title="Permanent link">¶</a></h3>
+<p>После мучительной разработки оригинала у Valve естественный вопрос:</p>
+<blockquote>
+<p>теперь, когда engine, entities, AI, weapons и tools готовы, можем ли мы делать новый Half-Life content быстрее?</p>
+</blockquote>
+<p>Над Uplink работает небольшая группа, прежде всего используя уже готовый язык игры.</p>
+<p>Не надо заново писать:</p>
+<ul>
+<li>scientist;</li>
+<li>HECU;</li>
+<li>headcrab;</li>
+<li>trigger system;</li>
+<li>Worldcraft;</li>
+<li>weapons;</li>
+<li>save/load;</li>
+<li>basic AI.</li>
+</ul>
+<p>Можно сосредоточиться:</p>
+<blockquote>
+<p><strong>на самой последовательности.</strong></p>
+</blockquote>
+<p>Это очень важный сдвиг.</p>
+<p>Half-Life начинает превращаться из:</p>
+<blockquote>
+<p>уникального проекта, который два года строили вручную,</p>
+</blockquote>
+<p>в:</p>
+<blockquote>
+<p><strong>production platform, на которой можно сравнительно быстро собрать новую историю.</strong></p>
+</blockquote>
+<h3 id="uplink_1">У Uplink одновременно две аудитории<a class="headerlink" href="#uplink_1" title="Permanent link">¶</a></h3>
+<p>Первая:</p>
+<blockquote>
+<p>человек, который ещё не купил Half-Life.</p>
+</blockquote>
+<p>Ему надо показать:</p>
+<blockquote>
+<p>почему игра особенная.</p>
+</blockquote>
+<p>Вторая:</p>
+<blockquote>
+<p>человек, который уже прошёл Half-Life.</p>
+</blockquote>
+<p>Обычная demo ему вообще не нужна.</p>
+<p>Но Uplink даёт:</p>
+<blockquote>
+<p><strong>новый официальный мини-эпизод.</strong></p>
+</blockquote>
+<p>Это очень умное решение.</p>
+<p>Marketing content одновременно становится маленьким бонусным произведением.</p>
+<h3 id="_36">Сюжет намеренно простой<a class="headerlink" href="#_36" title="Permanent link">¶</a></h3>
+<p>События происходят после containment failure.</p>
+<p>Gordon оказывается у района Lambda Reactor Complex.</p>
+<p>Scientist и guard объясняют:</p>
+<blockquote>
+<p>нужно восстановить uplink и отправить all-clear signal, но оборудование повреждено.</p>
+</blockquote>
+<p>Дальше задача понятна без lore dump.</p>
+<p>Не нужно заранее знать:</p>
+<ul>
+<li>Nihilanth;</li>
+<li>G-Man employers;</li>
+<li>будущий Combine;</li>
+<li>всю структуру Black Mesa.</li>
+</ul>
+<p>Есть:</p>
+<div class="highlight"><pre><span></span><code>катастрофа
+↓
+связь не работает
+↓
+нужно добраться до transmitter
+↓
+восстановить
+↓
+вернуться
+</code></pre></div>
+<p>Именно то, что нужно для demo.</p>
+<h3 id="uplink-half-life-greatest-hits">Uplink фактически является Half-Life Greatest Hits<a class="headerlink" href="#uplink-half-life-greatest-hits" title="Permanent link">¶</a></h3>
+<p>За короткое время player получает почти все главные pillars игры:</p>
+<ul>
+<li>scientist;</li>
+<li>security guard;</li>
+<li>разрушенную Black Mesa;</li>
+<li>environmental storytelling;</li>
+<li>objective;</li>
+<li>radiation;</li>
+<li>Headcrabs;</li>
+<li>Zombies;</li>
+<li>Vortigaunts;</li>
+<li>HECU;</li>
+<li>людей и aliens, которые сражаются друг с другом;</li>
+<li>scripted events;</li>
+<li>базовое оружие;</li>
+<li>Gargantua;</li>
+<li>G-Man.</li>
+</ul>
+<p>То есть Uplink не пытается быть:</p>
+<blockquote>
+<p>«первые двадцать минут основной игры».</p>
+</blockquote>
+<p>Она пытается быть:</p>
+<blockquote>
+<p><strong>миниатюрной моделью того, что Half-Life вообще умеет.</strong></p>
+</blockquote>
+<h3 id="demo-demo">Вот разница между плохой demo и хорошей demo<a class="headerlink" href="#demo-demo" title="Permanent link">¶</a></h3>
+<p>Плохая:</p>
+<blockquote>
+<p>отрезали первые два level.</p>
+</blockquote>
+<p>Хорошая:</p>
+<blockquote>
+<p><strong>спроектировали короткий experience, который показывает характер всей игры.</strong></p>
+</blockquote>
+<p>Для Half-Life это особенно важно.</p>
+<p>Её сила не в одной mechanic.</p>
+<p>Поэтому demo должна показать:</p>
+<ul>
+<li>темп;</li>
+<li>NPC;</li>
+<li>бой;</li>
+<li>scripting;</li>
+<li>puzzle;</li>
+<li>world;</li>
+<li>переходы между состояниями.</li>
+</ul>
+<p>И Uplink именно это делает.</p>
+<h3 id="gargantua-demo-cliffhanger">Gargantua — идеальный demo-cliffhanger<a class="headerlink" href="#gargantua-demo-cliffhanger" title="Permanent link">¶</a></h3>
+<p>За короткую кампанию нужно оставить последнюю сильную картинку.</p>
+<p>Gargantua:</p>
+<ul>
+<li>огромный;</li>
+<li>явно опаснее обычного enemy;</li>
+<li>визуально запоминающийся;</li>
+<li>показывает ещё один уровень monster scale.</li>
+</ul>
+<p>И главное:</p>
+<blockquote>
+<p>demo заканчивается не после победы.</p>
+</blockquote>
+<p>А в момент:</p>
+<blockquote>
+<p><strong>А КАК Я ЭТО ВООБЩЕ БУДУ УБИВАТЬ?</strong></p>
+</blockquote>
+<p>Это очень правильная marketing dramaturgy.</p>
+<p>Полная игра где-то там содержит ещё больше такой хуйни.</p>
+<h3 id="g-man_2">G-Man добавляет второй крючок<a class="headerlink" href="#g-man_2" title="Permanent link">¶</a></h3>
+<p>Если бы Uplink закончилась только monster cliffhanger:</p>
+<blockquote>
+<p>хороший action-demo.</p>
+</blockquote>
+<p>G-Man напоминает:</p>
+<blockquote>
+<p>в Half-Life есть ещё mystery layer.</p>
+</blockquote>
+<p>И финальные сообщения:</p>
+<p><code>UPLINK COMPLETED.</code></p>
+<p><code>REQUIRE FURTHER DATA.</code></p>
+<p>работают сразу в нескольких смыслах.</p>
+<p>Внутри fiction:</p>
+<blockquote>
+<p>кто-то оценивает полученную информацию.</p>
+</blockquote>
+<p>Как meta-joke:</p>
+<blockquote>
+<p>демо закончилась, хочешь больше данных — нужна полная игра.</p>
+</blockquote>
+<p>Очень Valve.</p>
+<h3 id="_37">Канон здесь вообще вторичен<a class="headerlink" href="#_37" title="Permanent link">¶</a></h3>
+<p>Uplink не обязательно нужно математически вставлять между двумя BSP основной Half-Life.</p>
+<p>Её время, geography и inventory state могут не совпадать с идеальной chronology.</p>
+<p>И это нормально.</p>
+<p>Потому что функция:</p>
+<blockquote>
+<p><strong>демонстрационная mini-campaign.</strong></p>
+</blockquote>
+<p>Если заставить её идеально учитывать:</p>
+<ul>
+<li>где Gordon;</li>
+<li>что уже подобрал;</li>
+<li>какой enemy видел;</li>
+<li>какой маршрут прошёл,</li>
+</ul>
+<p>авторы только лишатся свободы собрать лучший demo-slice.</p>
+<p>Поэтому разумнее воспринимать Uplink как официальный демонстрационный side-story, а не как критически важный кусок основной timeline.</p>
+<h3 id="uplink-lost-coast">Uplink — ранний предок Lost Coast<a class="headerlink" href="#uplink-lost-coast" title="Permanent link">¶</a></h3>
+<p>Сравнение очень красивое.</p>
+<p><code>Uplink</code>:</p>
+<div class="highlight"><pre><span></span><code>основная игра готова
+↓
+маленькая команда
+↓
+короткий отдельный experience
+↓
+показывает язык Half-Life
++
+тестирует production model
+</code></pre></div>
+<p><code>Lost Coast</code>:</p>
+<div class="highlight"><pre><span></span><code>Half-Life 2 готова
+↓
+маленький отдельный level
+↓
+HDR
++
+commentary
++
+новый asset pipeline
+</code></pre></div>
+<p>То есть Valve довольно рано обнаруживает удобную форму:</p>
+<blockquote>
+<p><strong>маленькая Half-Life как публичная лаборатория.</strong></p>
+</blockquote>
+<p>Не надо ради каждого experiment строить ещё одну 12-часовую игру.</p>
+<h3 id="uplink_2">Uplink показывает зрелость инструментария<a class="headerlink" href="#uplink_2" title="Permanent link">¶</a></h3>
+<p>Есть:</p>
+<ul>
+<li>Worldcraft;</li>
+<li>GoldSrc;</li>
+<li>HECU;</li>
+<li>scientist;</li>
+<li>scripted_sequence;</li>
+<li>sounds;</li>
+<li>weapons;</li>
+<li>entities.</li>
+</ul>
+<p>И маленькая группа может собрать новый experience намного быстрее.</p>
+<div class="highlight"><pre><span></span><code>не строим engine
+↓
+не пишем NPC заново
+↓
+не пишем weapon заново
+↓
+берём готовый язык
+↓
+пишем новую фразу
+</code></pre></div>
+<p>Это очень важная production-эволюция.</p>
+<h3 id="2023-valve-uplink">В 2023 Valve наконец возвращает Uplink туда, где ей место<a class="headerlink" href="#2023-valve-uplink" title="Permanent link">¶</a></h3>
+<p>На 25-летие Half-Life Uplink встраивают прямо в современную версию игры.</p>
+<p>И это правильный preservation move.</p>
+<p>Потому что для части аудитории конца девяностых именно Uplink была:</p>
+<blockquote>
+<p><strong>первой Half-Life.</strong></p>
+</blockquote>
+<p>Через magazine CD.</p>
+<p>Через hardware bundle.</p>
+<p>Через отдельную бесплатную demo.</p>
+<p>Теперь исторический кусок не надо искать отдельно.</p>
+<h3 id="day-one-new-game">Почему Day One при этом не обязательно делать полноценным пунктом New Game<a class="headerlink" href="#day-one-new-game" title="Permanent link">¶</a></h3>
+<p>Uplink:</p>
+<blockquote>
+<p>самостоятельная finished mini-campaign.</p>
+</blockquote>
+<p>Day One:</p>
+<blockquote>
+<p>исторический prerelease snapshot и кусок уже существующей кампании.</p>
+</blockquote>
+<p>То есть они ценны <strong>по-разному</strong>.</p>
+<p>Day One:</p>
+<blockquote>
+<p>archaeology.</p>
+</blockquote>
+<p>Uplink:</p>
+<blockquote>
+<p>произведение.</p>
+</blockquote>
+<h3 id="demo-distribution-culture-valve">Исторически обе demo показывают изменение distribution culture Valve<a class="headerlink" href="#demo-distribution-culture-valve" title="Permanent link">¶</a></h3>
+<p>Day One:</p>
+<blockquote>
+<p>hardware bundle.</p>
+</blockquote>
+<p>Uplink:</p>
+<blockquote>
+<p>отдельный интернет/CD demo-content.</p>
+</blockquote>
+<p>Позднее Lost Coast:</p>
+<blockquote>
+<p>Steam delivery владельцам игры.</p>
+</blockquote>
+<p>Ещё позже:</p>
+<blockquote>
+<p>Episodes как цифровое продолжение.</p>
+</blockquote>
+<p>То есть даже такая маленькая тема уже показывает переход:</p>
+<div class="highlight"><pre><span></span><code>hardware OEM
+↓
+downloadable demo
+↓
+digital platform
+</code></pre></div>
+<h3 id="uplink_3">И отдельно: Uplink очень хорошо попадает в мою любовь к компактной форме<a class="headerlink" href="#uplink_3" title="Permanent link">¶</a></h3>
+<p>У неё есть:</p>
+<ul>
+<li>начало;</li>
+<li>цель;</li>
+<li>NPC;</li>
+<li>puzzle;</li>
+<li>несколько типов combat;</li>
+<li>escalation;</li>
+<li>большой финальный visual;</li>
+<li>mystery;</li>
+<li>конец.</li>
+</ul>
+<p>Без:</p>
+<ul>
+<li>filler;</li>
+<li>прокачки ради прокачки;</li>
+<li>огромной карты;</li>
+<li>обязательного повторения.</li>
+</ul>
+<p>Практически:</p>
+<blockquote>
+<p><strong>короткая законченная Half-Life, которая знает, зачем существует каждая её часть.</strong></p>
+</blockquote>
+<p>Именно поэтому Uplink спустя десятилетия интереснее большинства обычных demo disc той эпохи.</p>
+<h2 id="p026">26. SDK Half-Life и начало мод-сцены<a class="headerlink" href="#p026" title="Permanent link">¶</a></h2>
+<p>Вот здесь Half-Life начинает превращаться из <strong>игры</strong> в <strong>платформу</strong>.</p>
+<p>И это одна из самых важных вещей во всей истории Valve.</p>
+<p>Компания после релиза не относится к Half-Life как к запечатанной коробке:</p>
+<blockquote>
+<p>мы сделали content, вы его потребили, всем спасибо.</p>
+</blockquote>
+<p>Она фактически говорит:</p>
+<blockquote>
+<p><strong>Вот инструменты. Разбирайте игру. Стройте своё.</strong></p>
+</blockquote>
+<p>И последствия этого решения в итоге окажутся почти такими же важными, как сама Black Mesa.</p>
+<h3 id="valve-modding">Но Valve не изобрела modding<a class="headerlink" href="#valve-modding" title="Permanent link">¶</a></h3>
+<p>Это принципиально.</p>
+<p>Mod culture огромна ещё до Half-Life.</p>
+<p>Особенно через id Software.</p>
+<p><code>Wolfenstein 3D</code></p>
+<blockquote>
+<p>люди ковыряют data.</p>
+</blockquote>
+<p><code>Doom</code></p>
+<blockquote>
+<p>WAD-культура превращает custom levels и total conversions в массовое явление.</p>
+</blockquote>
+<p><code>Quake</code></p>
+<blockquote>
+<p>полноценное 3D, QuakeC, maps, models, gameplay modifications.</p>
+</blockquote>
+<p>К середине девяностых уже существует субкультура, где игра означает не только:</p>
+<blockquote>
+<p>пройти.</p>
+</blockquote>
+<p>Но и:</p>
+<blockquote>
+<p><strong>разобрать и пересобрать.</strong></p>
+</blockquote>
+<p>Valve сама выросла внутри этой культуры.</p>
+<p>GoldSrc происходит от Quake.</p>
+<p>Worldcraft вообще начинается как сторонний Quake editor.</p>
+<p>Поэтому Half-Life modding — не отказ от наследия id.</p>
+<p>Это:</p>
+<blockquote>
+<p><strong>его прямое продолжение и масштабирование.</strong></p>
+</blockquote>
+<h3 id="worldcraft-valve">Worldcraft изначально вообще не был внутренним инструментом Valve<a class="headerlink" href="#worldcraft-valve" title="Permanent link">¶</a></h3>
+<p>Editor создаёт Ben Morris.</p>
+<p>Изначально:</p>
+<blockquote>
+<p>для Quake.</p>
+</blockquote>
+<p>Valve видит, что инструмент полезен, получает его и интегрирует в собственный production.</p>
+<p>Это очень характерная линия всей компании:</p>
+<blockquote>
+<p>взять хороший внешний инструмент/идею, встроить в workflow и потом развивать дальше.</p>
+</blockquote>
+<p>Позднее Worldcraft станет Hammer.</p>
+<p>Но на этом этапе он уже является одной из центральных дверей в modding Half-Life.</p>
+<h3 id="game-logic-engine-core">Главное преимущество — game logic не намертво зашита в engine core<a class="headerlink" href="#game-logic-engine-core" title="Permanent link">¶</a></h3>
+<p>Если всё поведение Half-Life существовало бы только внутри закрытого engine:</p>
+<blockquote>
+<p>modder мог бы поменять textures и maps.</p>
+</blockquote>
+<p>Но architecture позволяет гораздо глубже менять game layer.</p>
+<p>Условно:</p>
+<blockquote>
+<p>headcrab не нужен?</p>
+</blockquote>
+<p>Убрать.</p>
+<blockquote>
+<p>оружие будет другим?</p>
+</blockquote>
+<p>Написать.</p>
+<blockquote>
+<p>вместо free-for-all нужны команды?</p>
+</blockquote>
+<p>Изменить game rules.</p>
+<blockquote>
+<p>HUD другой?</p>
+</blockquote>
+<p>Менять client side.</p>
+<blockquote>
+<p>protagonist вообще не Gordon?</p>
+</blockquote>
+<p>Без проблем.</p>
+<p>Получается:</p>
+<div class="highlight"><pre><span></span><code>GoldSrc
+=
+инфраструктура
+
+Mod
+=
+конкретная игра поверх неё
+</code></pre></div>
+<p>По современным меркам API и tools древние.</p>
+<p>Для конца 90-х это колоссальная возможность.</p>
+<h3 id="original-install">Моды могут жить рядом, а не уничтожать original install<a class="headerlink" href="#original-install" title="Permanent link">¶</a></h3>
+<p>Отдельные game directories делают саму идею модификации намного удобнее.</p>
+<p>Условно:</p>
+<div class="highlight"><pre><span></span><code>Half-Life/
+│
+├── valve/
+│   └── original game
+│
+├── mymod/
+│   ├── maps/
+│   ├── models/
+│   ├── sound/
+│   ├── sprites/
+│   └── dlls/
+│
+└── anothermod/
+</code></pre></div>
+<p>Engine знает:</p>
+<blockquote>
+<p>какую game directory загрузить.</p>
+</blockquote>
+<p>Конфигурация вроде <code>liblist.gam</code> описывает конкретный mod.</p>
+<p>Для пользователя модель естественная:</p>
+<blockquote>
+<p><strong>одна установленная Half-Life → много отдельных игр рядом.</strong></p>
+</blockquote>
+<p>И это очень важно для формирования ecosystem.</p>
+<h3 id="fps_3">Порог создания собственного FPS падает чудовищно<a class="headerlink" href="#fps_3" title="Permanent link">¶</a></h3>
+<p>Маленькая команда без engine в 1999 должна сама сделать:</p>
+<div class="highlight"><pre><span></span><code>renderer
+networking
+collision
+map format
+level editor
+animation
+AI framework
+input
+sound
+save/load
+game loop
+multiplayer
+</code></pre></div>
+<p>Поздравляю.</p>
+<p>Вы уже несколько лет строите technology company.</p>
+<p>С Half-Life:</p>
+<div class="highlight"><pre><span></span><code>GoldSrc
++
+Worldcraft
++
+SDK
+↓
+можно тратить время
+на собственную игру
+</code></pre></div>
+<p>Это не Unity:</p>
+<blockquote>
+<p>скачал → вечером собрал продукт.</p>
+</blockquote>
+<p>Но разница всё равно гигантская.</p>
+<h3 id="valve-half-life">Valve ещё и позволяет посмотреть, как сделана сама Half-Life<a class="headerlink" href="#valve-half-life" title="Permanent link">¶</a></h3>
+<p>Вот это очень важная педагогическая часть.</p>
+<p>В SDK идут:</p>
+<ul>
+<li>sample maps;</li>
+<li>source maps;</li>
+<li>examples entities;</li>
+<li>models;</li>
+<li>code.</li>
+</ul>
+<p>Человек может открыть реальный или демонстрационный кусок production и спросить:</p>
+<blockquote>
+<p>как Valve сделала эту дверь?</p>
+<p>почему здесь trigger?</p>
+<p>как работает <code>scripted_sequence</code>?</p>
+<p>что делает <code>targetname</code>?</p>
+<p>почему NPC стартует именно тут?</p>
+</blockquote>
+<p>То есть магия игры становится:</p>
+<blockquote>
+<p><strong>разбираемой.</strong></p>
+</blockquote>
+<h3 id="reverse-engineering-production-files">Получается почти учебник через reverse engineering production files<a class="headerlink" href="#reverse-engineering-production-files" title="Permanent link">¶</a></h3>
+<p>Процесс:</p>
+<div class="highlight"><pre><span></span><code>увидел эффект в Half-Life
+↓
+открыл map/source
+↓
+посмотрел entities
+↓
+понял принцип
+↓
+повторил
+↓
+изменил
+↓
+сделал своё
+</code></pre></div>
+<p>Это уже больше, чем обычный map editor.</p>
+<p>Это почти неформальный курс game development, где учебником является игра, которую ты только что прошёл.</p>
+<h3 id="_38">Конец девяностых был идеальной средой для взрыва<a class="headerlink" href="#_38" title="Permanent link">¶</a></h3>
+<p>Совпадает почти всё:</p>
+<ul>
+<li>домашние PC становятся мощнее;</li>
+<li>интернет растёт;</li>
+<li>Quake уже приучил к mods;</li>
+<li>magazine CDs разносят files;</li>
+<li>FTP/fan sites живут;</li>
+<li>IRC/forums помогают собирать teams;</li>
+<li>множество студентов имеют доступ к компьютерам;</li>
+<li>сама Half-Life получает огромную install base.</li>
+</ul>
+<p>В эту среду падает:</p>
+<blockquote>
+<p>популярнейшая PC-игра с официальными tools.</p>
+</blockquote>
+<p>Получается почти идеальный шторм:</p>
+<div class="highlight"><pre><span></span><code>огромная аудитория
++
+гибкий engine
++
+официальный editor
++
+SDK
++
+Quake mod culture
++
+интернет
+=
+GoldSrc mod scene
+</code></pre></div>
+<h3 id="_39">Первые модификации начинают появляться практически сразу<a class="headerlink" href="#_39" title="Permanent link">¶</a></h3>
+<p>Игра ещё новая.</p>
+<p>Люди только заканчивают Black Mesa.</p>
+<p>А уже появляются:</p>
+<ul>
+<li>custom maps;</li>
+<li>replacement models;</li>
+<li>experiments;</li>
+<li>multiplayer changes;</li>
+<li>первые полноценные mods.</li>
+</ul>
+<p>Valve/Sierra не делают вид:</p>
+<blockquote>
+<p>неофициальный content нас не касается.</p>
+</blockquote>
+<p>Наоборот, community resources получают внимание.</p>
+<p>Это очень важная культурная установка.</p>
+<h3 id="valve-modder">Для Valve modder не становится врагом<a class="headerlink" href="#valve-modder" title="Permanent link">¶</a></h3>
+<p>Компания могла бы смотреть:</p>
+<blockquote>
+<p>человек делает бесплатный content на нашей технологии → конкурирует с нашим продуктом.</p>
+</blockquote>
+<p>Вместо этого постепенно формируется противоположная логика:</p>
+<blockquote>
+<p><strong>чем больше интересного существует вокруг Half-Life, тем ценнее сама Half-Life как платформа.</strong></p>
+</blockquote>
+<p>Игрок купил один продукт и продолжает жить внутри него:</p>
+<ul>
+<li>новые maps;</li>
+<li>servers;</li>
+<li>mods;</li>
+<li>total conversions.</li>
+</ul>
+<p>То есть community content увеличивает lifespan базовой игры.</p>
+<h3 id="sdk">Одного SDK, конечно, было бы мало<a class="headerlink" href="#sdk" title="Permanent link">¶</a></h3>
+<p>Нужно ещё, чтобы сама platform действительно что-то умела.</p>
+<p>GoldSrc уже предоставляет:</p>
+<h4 id="multiplayer_1">Multiplayer<a class="headerlink" href="#multiplayer_1" title="Permanent link">¶</a></h4>
+<p>Можно строить network game.</p>
+<h4 id="ai">AI<a class="headerlink" href="#ai" title="Permanent link">¶</a></h4>
+<p>Можно строить single-player campaign.</p>
+<h4 id="scripted-sequences">Scripted sequences<a class="headerlink" href="#scripted-sequences" title="Permanent link">¶</a></h4>
+<p>Можно делать authored narrative content.</p>
+<h4 id="bsp-worldcraft">BSP / Worldcraft<a class="headerlink" href="#bsp-worldcraft" title="Permanent link">¶</a></h4>
+<p>Есть работающий level-design pipeline.</p>
+<h4 id="game-dll-separation">Game DLL separation<a class="headerlink" href="#game-dll-separation" title="Permanent link">¶</a></h4>
+<p>Можно глубоко менять gameplay rules.</p>
+<h4 id="install-base">Огромная install base<a class="headerlink" href="#install-base" title="Permanent link">¶</a></h4>
+<p>У потенциального mod уже есть аудитория.</p>
+<p>Последний пункт особенно важен.</p>
+<p>Если твоя бесплатная игра требует:</p>
+<blockquote>
+<p>obscure technology, которую купили двадцать тысяч человек,</p>
+</blockquote>
+<p>community маленькая.</p>
+<p>Если нужно иметь:</p>
+<blockquote>
+<p>Half-Life,</p>
+</blockquote>
+<p>масштаб совсем другой.</p>
+<h3 id="_40">Здесь начинают появляться будущие самостоятельные игры<a class="headerlink" href="#_40" title="Permanent link">¶</a></h3>
+<p>Позже ecosystem даст огромную жизнь:</p>
+<ul>
+<li>Counter-Strike;</li>
+<li>Day of Defeat;</li>
+<li>Natural Selection;</li>
+<li>Sven Co-op;</li>
+<li>They Hunger;</li>
+<li>огромному количеству других mods.</li>
+</ul>
+<p>Но подробно разбирать потомков здесь не нужно.</p>
+<p>Этому будет посвящена отдельная поздняя глава про modding/community.</p>
+<p>Здесь важен момент рождения:</p>
+<blockquote>
+<p><strong>Half-Life перестаёт принадлежать только Valve как пространство игровых идей.</strong></p>
+</blockquote>
+<p>Теперь тысячи людей начинают писать свои игры на её языке.</p>
+<h3 id="_41">Моддинг становится кадровым механизмом<a class="headerlink" href="#_41" title="Permanent link">¶</a></h3>
+<p>Некоторые проекты останутся hobby mods.</p>
+<p>Некоторые станут коммерческими.</p>
+<p>Некоторых authors Valve наймёт.</p>
+<p>Получается довольно необычная pipeline:</p>
+<div class="highlight"><pre><span></span><code>игрок
+↓
+modder
+↓
+известный mod
+↓
+профессиональный developer
+</code></pre></div>
+<p>То есть инструменты создают не только дополнительный content.</p>
+<p>Они создают:</p>
+<blockquote>
+<p><strong>людей для индустрии.</strong></p>
+</blockquote>
+<h3 id="half-life-gamedev">Half-Life становится неформальной школой gamedev<a class="headerlink" href="#half-life-gamedev" title="Permanent link">¶</a></h3>
+<p>Для огромного числа людей путь мог выглядеть так:</p>
+<div class="highlight"><pre><span></span><code>прошёл Half-Life
+↓
+скачал Worldcraft
+↓
+сделал ужасную серую коробку
+↓
+поставил headcrab
+↓
+научился light
+↓
+научился entities
+↓
+сделал нормальную map
+↓
+полез в C++ SDK
+↓
+собрал mod
+↓
+пошёл работать в игры
+</code></pre></div>
+<p>Даже если человек никогда не создаст Counter-Strike, он получает практический опыт:</p>
+<ul>
+<li>3D level design;</li>
+<li>scripting;</li>
+<li>game logic;</li>
+<li>multiplayer;</li>
+<li>asset pipeline;</li>
+<li>C/C++;</li>
+<li>collaborative mod production.</li>
+</ul>
+<p>То есть Half-Life становится огромной <strong>неформальной образовательной системой</strong>.</p>
+<h3 id="_42">И это связывает моддинг с самой философией первой игры<a class="headerlink" href="#_42" title="Permanent link">¶</a></h3>
+<p>Мы уже обсуждали, как Valve сама собирает Half-Life:</p>
+<ul>
+<li>пространство;</li>
+<li>entities;</li>
+<li>triggers;</li>
+<li>AI;</li>
+<li>scripts;</li>
+<li>sound.</li>
+</ul>
+<p>Теперь игроку дают часть тех же building blocks.</p>
+<p>Он может буквально посмотреть:</p>
+<blockquote>
+<p><strong>из каких кирпичей состоит та самая «магия Half-Life».</strong></p>
+</blockquote>
+<p>Сцена перестаёт быть недостижимым фокусом профессиональной студии.</p>
+<p>Ты можешь открыть editor и собрать собственную.</p>
+<p>Пусть сначала очень хуёво.</p>
+<p>Но можешь.</p>
+<h3 id="goldsrc-community-hardware">GoldSrc community в итоге переживает абсурдно много поколений hardware<a class="headerlink" href="#goldsrc-community-hardware" title="Permanent link">¶</a></h3>
+<p>Технологическая база уходит корнями в середину 1990-х.</p>
+<p>Логично ожидать:</p>
+<blockquote>
+<p>исчезнет вместе с CRT и dial-up.</p>
+</blockquote>
+<p>Но community живёт.</p>
+<p>Выходят mods.</p>
+<p>Работают servers.</p>
+<p>Люди продолжают копаться в engine.</p>
+<p>Valve десятилетиями поддерживает compatibility и к юбилею Half-Life всё ещё вносит изменения, полезные старым модификациям.</p>
+<p>То есть engine живёт не только благодаря technical quality.</p>
+<p>Он живёт потому, что:</p>
+<blockquote>
+<p><strong>вокруг него накопилась культура.</strong></p>
+</blockquote>
+<h3 id="sdk_1">И вот почему SDK — не побочный бонус<a class="headerlink" href="#sdk_1" title="Permanent link">¶</a></h3>
+<p>Представим альтернативную историю.</p>
+<p>Half-Life выходит.</p>
+<p>Получает отличные reviews.</p>
+<p>Valve закрывает tools.</p>
+<p>Никакого нормального SDK.</p>
+<p>Никакого массового Worldcraft ecosystem.</p>
+<p>Player проходит игру.</p>
+<p>Ждёт sequel.</p>
+<p>В таком мире HL1 всё равно остаётся великой FPS.</p>
+<p>Но её исторический вес на PC был бы <strong>значительно меньше</strong>.</p>
+<p>Реальная Half-Life становится одновременно:</p>
+<div class="highlight"><pre><span></span><code>выдающимся single-player FPS
++
+network platform
++
+level-design platform
++
+mod ecosystem
++
+инкубатор новых игр
++
+инкубатор разработчиков
+</code></pre></div>
+<p>Вот эта комбинация уже выходит далеко за пределы одной кампании.</p>
+<h3 id="valve_3">И Valve ещё не знает, насколько далеко всё зайдёт<a class="headerlink" href="#valve_3" title="Permanent link">¶</a></h3>
+<p>Компания просто даёт людям:</p>
+<blockquote>
+<p>tools.</p>
+</blockquote>
+<p>Через совсем небольшое время community начинает строить проекты, которые изменят судьбу самой Valve.</p>
+<p>Некоторые из них в итоге станут:</p>
+<blockquote>
+<p><strong>крупнее самой Half-Life как ongoing multiplayer phenomena.</strong></p>
+</blockquote>
+<p>Но это уже следующая большая история.</p>
+<p>А здесь важно зафиксировать переход:</p>
+<blockquote>
+<p><strong>19 ноября 1998 года Valve выпустила игру. В течение следующих месяцев выяснилось, что на самом деле она выпустила ещё и платформу.</strong></p>
+</blockquote>
+<p>И именно с этого момента наследие Half-Life начинает расти быстрее количества официальных уровней, которые сделала сама Valve.</p>
+<h2 id="hl1-preservation">Какую Half-Life мы запускаем, когда возвращаемся в 1998 год<a class="headerlink" href="#hl1-preservation" title="Permanent link">¶</a></h2>
+<p>У старой игры постепенно появляются две биографии. Первая — то, что было выпущено и повлияло на современников. Вторая — то, что десятилетиями обновлялось и теперь запускается у нас на компьютере.</p>
+<p>Юбилейная Half-Life поддерживает современный экран и управление, возвращает исторические материалы и исправляет проблемы. Это делает её доступнее. Но для конкретного сравнения иногда важно знать, не обсуждаем ли мы поведение, изменённое поздним обновлением. Особенно в движении, интерфейсе и совместимости модов.</p>
+<p><a href="https://www.half-life.com/en/halflife/25th">Официальное обновление к 25-летию</a> полезно понимать как редакцию живого каталога. Оно не делает старые диски бессмысленными, а старые диски не объявляют позднюю версию «неправильной». У них разные задачи: историческое воспроизведение и удобное продолжение жизни произведения.</p>
+<p>Ремейк Black Mesa стоит ещё дальше: он создаёт новый маршрут через знакомую историю. Его нельзя использовать как незаметную подмену при анализе того, как работала сцена 1998 года. Зато можно сравнивать, <strong>что современный автор счёл необходимым изменить</strong>. Именно это рассматривает <a href="12-modding-and-community.html#black-mesa-earth">разбор земной кампании ремейка</a>.</p>
+<p>Так у нас появляются три полезных объекта: исходная игра, поддерживаемая официальная версия и авторское переосмысление. Для обычного чтения достаточно слова Half-Life. Различать объекты нужно там, где это меняет сам вывод.</p>
+<h2 id="materials">Материалы к главе<a class="headerlink" href="#materials" title="Permanent link">¶</a></h2>
+<p><a href="https://www.gamespot.com/reviews/half-life-review/1900-2537398/">Ron Dulin: рецензия GameSpot от 20 ноября 1998 года</a>.</p>
+<p><a href="https://www.half-life.com/en/halflife/25th">Valve: юбилейная редакция и архивные материалы HL1</a>.</p>
+<hr/>
+<p><a href="02-half-life-design.html">← 02</a> · <a href="index.html">Оглавление</a> · <a href="04-gearbox-and-consoles.html">04 →</a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Half-Life — дизайн первой игры" class="md-footer__link md-footer__link--prev" href="02-half-life-design.html">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Half-Life — дизайн первой игры
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Half-Life — Gearbox, параллельные кампании и консоли" class="md-footer__link md-footer__link--next" href="04-gearbox-and-consoles.html">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Half-Life — Gearbox, параллельные кампании и консоли
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,5477 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="05-quake-crisis.html" rel="prev"/>
+<link href="07-quake2-quake3-middleware.html" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D - База данных</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#id-software-vi-id-romero-quakeworld-3d">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Arkane.html">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.html">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="01-origins-softdisk-keen.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="02-wolfenstein.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="03-doom-birth.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="04-doom-ecosystem.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="05-quake-crisis.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="06-id-after-romero.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p032">
+<span class="md-ellipsis">
+      
+        32. Jay Wilbur → Todd Hollenshead: кто вообще управлял id
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p033">
+<span class="md-ellipsis">
+      
+        33. id после Romero: technology-driven company
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p034">
+<span class="md-ellipsis">
+      
+        34. QuakeWorld и GLQuake как послерелизная лаборатория
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p035">
+<span class="md-ellipsis">
+      
+        35. id и революция 3D-видеокарт
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="07-quake2-quake3-middleware.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="08-doom3-aaa.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="09-rage-zenimax-carmack.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="10-doom-rebirth-modern-id.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="11-legacy-summary.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="12-side-branches.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="MANIFEST.html">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/index.html">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/01-origins-steam.html">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/02-games-and-engines.html">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/03-inside-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/04-hardware-linux-vr.html">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/05-modern-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/06-valve-as-institution.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/07-ecosystem-and-catalog.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/08-appendices.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../valve/09-sources-and-status.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Doom.html">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Doom30.html">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Doom3_45-103.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-58-111.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — темы 58–111
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-complete-research.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life_2_33-57.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life_2_33-57
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life_history_1-33.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life_history_1-33
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Quake.html">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Spider-Man.html">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/doom4-eternal.html">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/doom_eternal_51-80.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2_13" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_13" id="__nav_1_2_13_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half Life revised 17 documents
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_13_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_13">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half Life revised 17 documents
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/index.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/01-origins-and-development.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/02-half-life-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/03-half-life-release-and-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/04-gearbox-and-consoles.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/05-half-life-2-development-and-tech.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/06-half-life-2-world-and-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/07-half-life-2-beta-release.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/08-episodes.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/09-half-life-3-and-cancelled-projects.html">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/10-vr-and-alyx-development.html">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/11-half-life-alyx-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/12-modding-and-community.html">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/13-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/14-audio.html">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/15-how-valve-makes-half-life.html">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/16-movement-and-speedrunning.html">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/Half-Life-revised-17-documents/CHANGES.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2_14" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_14" id="__nav_1_2_14_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_14_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_14">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/index.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — оглавление
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/01-origins-and-development.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/03-half-life-release-and-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/04-gearbox-and-consoles.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/06-half-life-2-world-and-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/07-half-life-2-beta-release.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/08-episodes.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/09-half-life-3-and-cancelled-projects.html">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/10-vr-and-alyx-development.html">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/11-half-life-alyx-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/12-modding-and-community.html">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/13-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/14-audio.html">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/15-how-valve-makes-half-life.html">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/16-movement-and-speedrunning.html">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../games/half-life/17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/Gabe%20Newell.html">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Carmack.html">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Romero.html">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stores/steam/Steam.html">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p032">
+<span class="md-ellipsis">
+      
+        32. Jay Wilbur → Todd Hollenshead: кто вообще управлял id
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p033">
+<span class="md-ellipsis">
+      
+        33. id после Romero: technology-driven company
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p034">
+<span class="md-ellipsis">
+      
+        34. QuakeWorld и GLQuake как послерелизная лаборатория
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p035">
+<span class="md-ellipsis">
+      
+        35. id и революция 3D-видеокарт
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="id-software-vi-id-romero-quakeworld-3d">id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D<a class="headerlink" href="#id-software-vi-id-romero-quakeworld-3d" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>Часть большой базы по истории id Software. Пункты <strong>32–35</strong>. Содержательный текст исходного документа сохранён без сокращений.</p>
+</blockquote>
+<p><a href="05-quake-crisis.html">← V. Quake и распад первой id</a> · <a href="index.html">Общее оглавление</a> · <a href="07-quake2-quake3-middleware.html">VII. Quake II / Quake III →</a></p>
+<h3 id="contents">Содержание<a class="headerlink" href="#contents" title="Permanent link">¶</a></h3>
+<ul>
+<li><a href="#p032">32. Jay Wilbur → Todd Hollenshead: кто вообще управлял id</a></li>
+<li><a href="#p033">33. id после Romero: technology-driven company</a></li>
+<li><a href="#p034">34. QuakeWorld и GLQuake как послерелизная лаборатория</a></li>
+<li><a href="#p035">35. id и революция 3D-видеокарт</a></li>
+</ul>
+<hr/>
+<h2 id="p032">32. Jay Wilbur → Todd Hollenshead: кто вообще управлял id<a class="headerlink" href="#p032" title="Permanent link">¶</a></h2>
+<p>У id девяностых есть странная проблема с историей управления: про разработчиков написано дохуя, поэтому возникает ощущение, что компания каким-то образом сама:</p>
+<p>заключала контракты;</p>
+<p>принимала деньги;</p>
+<p>платила налоги;</p>
+<p>нанимала людей;</p>
+<p>работала с издателями;</p>
+<p>оформляла лицензии;</p>
+<p>отправляла тысячи коробок;</p>
+<p>решала юридические вопросы;</p>
+<p>строила офис;</p>
+<p>вела бухгалтерию.</p>
+<p>А Carmack в перерывах между BSP и lightmaps, видимо, ещё декларации заполнял.</p>
+<p>Нет.</p>
+<p>У id практически с самого начала существовала отдельная business-side линия, просто она была очень маленькой и долго почти никак не вмешивалась непосредственно в разработку игр.</p>
+<p>И её эволюция выглядит примерно так:</p>
+<p>ранняя id
+│
+├─ founders
+│  сами принимают ключевые решения
+│
+├─ коротко Mark Rein
+│  probationary president / business
+│
+↓
+Jay Wilbur
+business manager / operations
+1992–1997
+│
+│
+├─ Mike Wilson
+│  marketing / PR
+│
+├─ Donna Jackson
+│  administration / business support
+│
+↓
+Todd Hollenshead
+CEO
+с ноября 1996
+│
+↓
+профессионализированная
+business-side id</p>
+<p>Но здесь главное сразу отделить две вещи:</p>
+<p>УПРАВЛЕНИЕ КОМПАНИЕЙ</p>
+<p>и</p>
+<p>УПРАВЛЕНИЕ РАЗРАБОТКОЙ ИГРЫ</p>
+<p>Потому что именно смешение этих понятий создаёт половину мифов про id.</p>
+<p>Jay Wilbur мог управлять бизнесом id и при этом Quake всё равно мог годами не иметь нормального production management.</p>
+<p>Это не противоречие.</p>
+<p>До Wilbur у id уже была неудачная попытка завести «президента»</p>
+<p>Мы раньше упоминали Mark Rein только вскользь, но именно здесь его логично поставить на место.</p>
+<p>Rein был фанатом Commander Keen, связался с Romero и сначала оказался рядом с командой как tester.</p>
+<p>Затем его пригласили заниматься business-side и дали довольно характерный титул:</p>
+<p>probationary president</p>
+<p>То есть буквально:</p>
+<p>испытательный президент.</p>
+<p>Очень ранняя id.</p>
+<p>Rein успел сделать важные вещи. Например, именно он помог договориться с FormGen о retail-релизе Commander Keen, а отношения с FormGen затем привели и к retail-направлению Spear of Destiny. Но во время разработки Wolfenstein у него произошёл конфликт с командой, после чего id его быстро убрала.
+IPFS
++1</p>
+<p>И компания обнаружила:</p>
+<p>у нас больше нет
+единственного business guy</p>
+<p>Разработчики могли сами договариваться.</p>
+<p>Romero и Carmack вообще с подросткового возраста продавали собственный software.</p>
+<p>Но они всё меньше хотели тратить время на:</p>
+<p>bills
+supplies
+calls
+contracts
+orders
+administration</p>
+<p>Masters of Doom довольно точно описывает этот момент: команда хотела человека, который возьмёт на себя растущий внешний мир, пока они сами продолжают делать игры.
+retrogamer.biz</p>
+<p>И они позвали человека, которого уже хорошо знали.</p>
+<p>Jay Wilbur возвращается</p>
+<p>Wilbur не был случайным «нанятым менеджером».</p>
+<p>Он существовал ещё до id.</p>
+<p>Именно он:</p>
+<p>работал с Romero ещё до Softdisk;</p>
+<p>помог Romero попасть в Softdisk;</p>
+<p>управлял Gamer's Edge;</p>
+<p>находился рядом с будущей командой id;</p>
+<p>помогал во время тайной разработки Keen;</p>
+<p>знал людей задолго до того, как они стали миллионерами.</p>
+<p>Когда id ушла из Softdisk, Wilbur сначала остался там.</p>
+<p>После увольнения Rein команда позвала его уже в самостоятельную id руководить бизнесом. MobyGames именно так и описывает переход: после ухода Rein бывшие коллеги попросили Wilbur взять business-side на себя.
+MobyGames</p>
+<p>Это очень важно психологически.</p>
+<p>id не сказала:</p>
+<p>нам нужен
+профессиональный CEO</p>
+<p>↓</p>
+<p>ищем MBA</p>
+<p>Она сказала:</p>
+<p>нам нужен человек,
+которому мы доверяем</p>
+<p>↓</p>
+<p>JAY</p>
+<p>То есть management ранней id вырос из личного доверия, как почти всё остальное в этой компании.</p>
+<p>И титул Wilbur не надо переоценивать</p>
+<p>В разных источниках можно встретить:</p>
+<p>business manager
+COO
+CEO</p>
+<p>Но для понимания функции лучше всего использовать то, как его описывала пресса непосредственно в эпоху Quake:</p>
+<p>business manager.</p>
+<p>Wired в 1996 году именно так называет Wilbur.
+WIRED</p>
+<p>Потому что если написать:</p>
+<p>Jay Wilbur
+CEO id Software</p>
+<p>современный читатель автоматически представляет:</p>
+<p>Satya Nadella</p>
+<p>или</p>
+<p>Andrew Wilson</p>
+<p>Человека, который находится на вершине корпоративной пирамиды и окончательно определяет всю стратегию.</p>
+<p>У id всё было совсем иначе.</p>
+<p>Wilbur управлял бизнесом вокруг разработчиков</p>
+<p>Его функция была ближе к:</p>
+<p>DEVELOPMENT CORE</p>
+<p>Carmack
+Romero
+Adrian
+Hall / Petersen / etc.</p>
+<div class="highlight"><pre><span></span><code>    ↑
+    │
+</code></pre></div>
+<p>защищён от
+ большей части
+ внешнего геморроя
+        │
+        ↑</p>
+<div class="highlight"><pre><span></span><code>JAY WILBUR
+</code></pre></div>
+<p>contracts
+sales
+operations
+publishing
+licenses
+administration
+distribution
+external contacts</p>
+<p>Не:</p>
+<p>Wilbur
+↓
+Carmack
+↓
+Romero
+↓
+artists</p>
+<p>А скорее:</p>
+<p>developers
+делают игру</p>
+<p>Wilbur
+делает так,
+чтобы вокруг них
+существовала компания</p>
+<p>Это именно та модель, которую ранняя id считала идеальной.</p>
+<p>И даже сам Wilbur прекрасно понимал реальную иерархию</p>
+<p>Wired в 1996-м спросила его о структуре власти id.</p>
+<p>Ответ Wilbur:</p>
+<p>“Word comes from God, to Carmack, to us.”</p>
+<p>То есть в его собственной шутливой формуле:</p>
+<p>GOD
+↓
+JOHN CARMACK
+↓
+ОСТАЛЬНЫЕ</p>
+<p>WIRED</p>
+<p>Это прекрасная фраза, потому что одновременно показывает две вещи.</p>
+<p>Формально Wilbur занимается бизнесом компании.</p>
+<p>Но внутри id к середине 1990-х главный неформальный центр власти уже Carmack.</p>
+<p>И Wilbur не делает вид, что CEO-style hierarchy выглядит иначе.</p>
+<p>Поэтому кто «руководил id» времён Doom?</p>
+<p>Правильный ответ:</p>
+<p>никто один.</p>
+<p>Компания была распределена по нескольким центрам власти.</p>
+<p>Примерно:</p>
+<p>JOHN CARMACK
+technology
++
+огромный стратегический авторитет
+JOHN ROMERO
+gameplay
+tools
+design
+external creative relationships
+ADRIAN CARMACK
+art
++
+owner-level influence
+KEVIN CLOUD
+art
++
+постепенно organisation /
+owner-level influence
+JAY WILBUR
+business
+operations
+contracts
+external commercial world</p>
+<p>Это не корпоративная вертикаль.</p>
+<p>Это скорее:</p>
+<p>несколько сильных доменов
+с очень короткими
+линиями общения</p>
+<p>Именно поэтому id долго могла существовать без классического CEO в современном смысле.</p>
+<p>А кто тогда управлял проектами?</p>
+<p>Вот здесь ответ куда неприятнее:</p>
+<p>ПОЧТИ НИКТО</p>
+<p>На маленьких играх эту функцию выполняла сама структура команды.</p>
+<p>Wolfenstein:</p>
+<p>несколько человек
++
+четыре месяца
++
+одна комната</p>
+<p>→ producer почти не нужен</p>
+<p>Doom:</p>
+<p>Romero
+частично склеивает game-side</p>
+<p>Carmack
+склеивает tech-side</p>
+<p>остальные
+сами владеют своими областями</p>
+<p>Quake:</p>
+<p>это перестаёт работать</p>
+<p>И Wilbur эту дыру не закрывает, потому что это не его функция.</p>
+<p>Он не обязан ежедневно спрашивать Petersen:</p>
+<p>E3M4 готова на 73% или 81%?</p>
+<p>Он не обязан решать спор:</p>
+<p>Hammer of Thunderbolts или shotgun?</p>
+<p>Он не должен определять:</p>
+<p>когда engine feature достаточно стабилен, чтобы designers перестали переделывать карты?</p>
+<p>Это production management.</p>
+<p>И именно его id не хватало.</p>
+<p>Поэтому фраза «у id был business manager, как же у неё не было менеджмента?» — неправильна</p>
+<p>Схематично:</p>
+<p>BUSINESS MANAGEMENT
+      ≠
+GAME PRODUCTION MANAGEMENT</p>
+<p>Wilbur мог идеально решить:</p>
+<p>publisher contract</p>
+<p>и никак не решить:</p>
+<p>Quake design
+до сих пор не определён
+после года работы</p>
+<p>Это независимые проблемы.</p>
+<p>Wilbur особенно сильно проявился на Doom как издательской машине</p>
+<p>Когда id решила отказаться от Apogee и самостоятельно выпускать Doom, именно business-side компании должен был обеспечить:</p>
+<p>orders
+payments
+shipping
+pricing
+distribution
+licenses
+legal issues
+marketing strategy</p>
+<p>Поэтому роль Wilbur после Wolfenstein становится только больше.</p>
+<p>На Final Doom credits он буквально указан одной строкой:</p>
+<p>Biz — Jay Wilbur</p>
+<p>рядом с:</p>
+<p>Biz Assistant — Donna Jackson</p>
+<p>MobyGames</p>
+<p>И эта простота credits прекрасно описывает старую id:</p>
+<p>CODE
+несколько людей</p>
+<p>ART
+несколько людей</p>
+<p>DESIGN
+несколько людей</p>
+<p>BIZ
+Jay</p>
+<p>Одна функция — один человек.</p>
+<p>Donna Jackson показывает, что даже business-side начинает понемногу масштабироваться</p>
+<p>К середине 1990-х Wilbur уже физически не может делать всё сам.</p>
+<p>Появляется Donna Jackson, которую Wired называла id-momma.</p>
+<p>Она закрывала значительную часть административной рутины и помогала business side. В той же статье Wilbur появляется буквально с пачкой Doom, которую нужно срочно отправить американскому военнослужащему в Боснии, а Jackson помогает с подобной организационной работой.
+WIRED</p>
+<p>То есть даже бизнес начинает переходить:</p>
+<p>Jay
+делает всё</p>
+<p>↓</p>
+<p>business function</p>
+<p>Пока маленькую.</p>
+<p>Но уже функцию.</p>
+<p>Параллельно появляется Mike Wilson</p>
+<p>И здесь можно разделить ещё точнее.</p>
+<p>Wilbur:</p>
+<p>BUSINESS / OPERATIONS</p>
+<p>Mike Wilson:</p>
+<p>MARKETING / PR /
+DISTRIBUTION EXPERIMENTS</p>
+<p>То есть id постепенно начинает иметь не просто:</p>
+<p>«человека по бизнесу»</p>
+<p>а несколько коммерческих специализаций.</p>
+<p>Это естественный результат масштаба Doom и Quake.</p>
+<p>Проблема только в том, что именно этот слой затем сильно рассыпется после ухода Romero:</p>
+<p>Wilson → Ion Storm;</p>
+<p>Wilbur → Epic.</p>
+<p>И вот здесь появляется Todd Hollenshead</p>
+<p>Это один из самых странных hires id вообще.</p>
+<p>Потому что Todd не:</p>
+<p>моддер;</p>
+<p>programmer;</p>
+<p>artist;</p>
+<p>designer;</p>
+<p>приятель из Softdisk.</p>
+<p>Он был профессиональным бухгалтером и налоговым консультантом.</p>
+<p>До id Hollenshead пять лет работал в Arthur Andersen — тогда одной из крупнейших аудиторско-консалтинговых компаний мира.</p>
+<p>Причём id была его клиентом ещё до того, как он пришёл туда работать.</p>
+<p>Сам Hollenshead позднее рассказывал:</p>
+<p>id несколько лет была его клиентом в Arthur Andersen; он работал в public accounting и после пяти лет там перешёл непосредственно в компанию.
+Kikizo Games
++1</p>
+<p>То есть схема:</p>
+<p>ранняя id:</p>
+<p>«нам нужен свой старый приятель
+Jay»</p>
+<p>сменяется:</p>
+<p>post-Quake id:</p>
+<p>«нам нужен человек,
+который ПРОФЕССИОНАЛЬНО
+понимает business»</p>
+<p>Это огромный культурный переход.</p>
+<p>Причём Hollenshead уже видел id изнутри как внешний консультант</p>
+<p>Он не пришёл с улицы и не спросил:</p>
+<p>а чем вообще ваша компания занимается?</p>
+<p>Как tax/accounting-консультант Arthur Andersen он уже работал с id как клиентом.</p>
+<p>По собственным словам Hollenshead, он ещё и был фанатом игр компании начиная с Wolfenstein 3D.
+WGF2000</p>
+<p>То есть у него была довольно редкая комбинация:</p>
+<p>formal business expertise</p>
+<p>+</p>
+<p>реальное знание
+финансов id</p>
+<p>+</p>
+<p>понимание
+самой компании</p>
+<p>+</p>
+<p>интерес к её продуктам</p>
+<p>Для id это значительно безопаснее найма случайного corporate executive, который попытается превратить студию в Electronic Arts.</p>
+<p>6 ноября 1996: id назначает Todd Hollenshead CEO</p>
+<p>И вот здесь уже титул однозначный.</p>
+<p>Hollenshead присоединяется к id в ноябре 1996 года именно как CEO; исторические источники датируют назначение 6 ноября.
+Википедия</p>
+<p>Обратим внимание на дату:</p>
+<p>22 июня 1996
+Quake</p>
+<p>↓</p>
+<p>6 августа 1996
+Romero уволен</p>
+<p>↓</p>
+<p>6 ноября 1996
+Hollenshead — CEO</p>
+<p>Всего три месяца после Romero.</p>
+<p>Это не случайное совпадение эпох.</p>
+<p>Компания только что:</p>
+<p>пережила самый тяжёлый production;</p>
+<p>потеряла одного из главных founders;</p>
+<p>начала массовую кадровую перестройку;</p>
+<p>решила стать меньше и сфокусированнее;</p>
+<p>имела миллионы долларов доходов;</p>
+<p>имела международные контракты;</p>
+<p>лицензировала engine;</p>
+<p>работала с крупными издателями.</p>
+<p>И всё это уже слишком велико для модели:</p>
+<p>«Jay разберётся»
+Но важная поправка: Hollenshead НЕ мгновенно «заменил Wilbur»</p>
+<p>Вот здесь хронология обычно слишком гладкая:</p>
+<p>Jay ушёл
+↓
+Todd пришёл</p>
+<p>Нет.</p>
+<p>Они пересекались.</p>
+<p>Hollenshead становится CEO в ноябре 1996-го.</p>
+<p>Wilbur остаётся business manager ещё часть 1997 года, а затем переходит в Epic. Исторические кадровые списки датируют Wilbur в id до 1997-го.
+Unvis
++1</p>
+<p>То есть был переходный период:</p>
+<p>TODD HOLLENSHEAD
+CEO</p>
+<div class="highlight"><pre><span></span><code>    +
+</code></pre></div>
+<p>JAY WILBUR
+business manager</p>
+<p>Это важно.</p>
+<p>Новая business structure некоторое время росла рядом со старой, а не просто включилась в день увольнения предыдущего человека.</p>
+<p>Почему вообще нужен CEO, если есть Wilbur?</p>
+<p>Потому что масштаб функции изменился.</p>
+<p>Wilbur вырос вместе с компанией практически органически:</p>
+<p>договориться
+↓
+решить проблему
+↓
+продать игру
+↓
+позвонить человеку</p>
+<p>Hollenshead приносит уже профессиональную финансово-корпоративную компетенцию:</p>
+<p>tax</p>
+<p>corporate finance</p>
+<p>contracts</p>
+<p>long-term business structure</p>
+<p>publisher relations</p>
+<p>formal planning</p>
+<p>risk</p>
+<p>организационное масштабирование</p>
+<p>До id он был manager в Dallas-практике Arthur Andersen, занимавшейся manufacturing и high technology tax. GameSpot именно так описывал его background.
+GameSpot</p>
+<p>Это другой тип business executive.</p>
+<p>Можно выразить разницу грубо
+Jay Wilbur
+«как сделать так,
+чтобы эти конкретные
+безумные разработчики
+могли спокойно делать игры?»
+Todd Hollenshead
+«как сделать так,
+чтобы id Software
+как корпорация
+могла существовать
+следующие десять лет?»</p>
+<p>Это не означает, что Wilbur не умел думать стратегически.</p>
+<p>И не означает, что Hollenshead был скучным бухгалтером.</p>
+<p>Разница прежде всего в стадии компании.</p>
+<p>Wilbur — management через отношения</p>
+<p>Он знает всех лично с ранних лет.</p>
+<p>Его власть основана на:</p>
+<p>истории</p>
+<p>доверии</p>
+<p>личных отношениях</p>
+<p>понимании founders</p>
+<p>старой культуре</p>
+<p>Hollenshead:</p>
+<p>профессиональная роль
+CEO</p>
+<p>+</p>
+<p>формальная ответственность
+за business</p>
+<p>Это и есть переход от:</p>
+<p>FOUNDER-ERA MANAGEMENT</p>
+<p>к:</p>
+<p>INSTITUTIONAL MANAGEMENT
+И очень характерно, что Hollenshead не приходит переделывать game development</p>
+<p>Вот почему он вообще прижился в id.</p>
+<p>Он не говорит Carmack:</p>
+<p>как CTO,
+теперь согласовывай
+technology roadmap
+со мной</p>
+<p>И не говорит designers:</p>
+<p>у нас focus groups,
+сделайте игру такую</p>
+<p>Его функция остаётся в значительной степени той же стеной между:</p>
+<p>CREATIVE / TECH CORE</p>
+<p>и:</p>
+<p>BUSINESS WORLD</p>
+<p>Но эта стена теперь намного профессиональнее.</p>
+<p>В 2013 году Bethesda при его уходе специально подчеркнула: Hollenshead не был частью development teams, но являлся ключевым business head студии.
+Shacknews</p>
+<p>Это очень важное определение его роли.</p>
+<p>Поэтому CEO id всё равно не был «главным над Carmack»</p>
+<p>Современная интуиция:</p>
+<p>CEO
+↓
+CTO</p>
+<p>В id работала плохо.</p>
+<p>Carmack:</p>
+<p>founder;</p>
+<p>owner;</p>
+<p>technical director;</p>
+<p>главный технологический авторитет;</p>
+<p>лицо компании;</p>
+<p>человек, вокруг технологии которого строится продукт.</p>
+<p>Hollenshead первоначально вообще не был владельцем id.</p>
+<p>Он был hired CEO.</p>
+<p>Лишь в 2004 году ему, одновременно с Tim Willits, дали ownership shares. До этого ownership group составляли John Carmack, Adrian Carmack и Kevin Cloud.
+GameSpot</p>
+<p>Это очень полезная юридическая деталь.</p>
+<p>До 2004:</p>
+<p>TODD HOLLENSHEAD
+CEO</p>
+<p>НО</p>
+<p><strong>OWNERS</strong></p>
+<p>John Carmack
+Adrian Carmack
+Kevin Cloud</p>
+<p>То есть CEO управляет business-side от имени владельцев, а не становится новым хозяином компании.</p>
+<p>И Hollenshead сам позже шутливо называл себя именно так</p>
+<p>Когда в 2004 году его сделали co-owner, он назвал себя:</p>
+<p>“the obligatory businessman”</p>
+<p>id.
+GameSpot</p>
+<p>Очень точная формулировка.</p>
+<p>Не:</p>
+<p>VISIONARY CEO</p>
+<p>Не:</p>
+<p>STUDIO CREATIVE MASTER</p>
+<p>А:</p>
+<p>ну кто-то же
+должен заниматься
+бизнесом</p>
+<p>Это вообще почти идеальный business executive для культуры id.</p>
+<p>При этом приход Hollenshead означает реальную профессионализацию</p>
+<p>Потому что компания уже больше не может вести себя как:</p>
+<p>несколько друзей
++
+банковский счёт</p>
+<p>К концу девяностых возникают:</p>
+<p>engine licenses
+на сотни тысяч долларов</p>
+<p>publisher agreements</p>
+<p>console contracts</p>
+<p>international business</p>
+<p>employees</p>
+<p>stock ownership</p>
+<p>tax structure</p>
+<p>IP</p>
+<p>QuakeCon</p>
+<p>marketing</p>
+<p>legal issues</p>
+<p>И всё это должно существовать годами.</p>
+<p>Hollenshead останется в id 17 лет, до 2013 года, пережив:</p>
+<p>Quake II</p>
+<p>Quake III</p>
+<p>Doom 3</p>
+<p>Rage</p>
+<p>ZeniMax acquisition</p>
+<p>То есть уже сам срок показывает: это не emergency hire после Quake, а человек, который стал фундаментальной частью следующей id.
+Shacknews</p>
+<p>И под ним id действительно перестала быть микрофирмой</p>
+<p>Когда Hollenshead приходит:</p>
+<p>≈13 сотрудников</p>
+<p>К поздним годам его tenure компания выросла до 200+ сотрудников; эти цифры приводились при его переходе в Nerve Software в 2018-м.
+Ворплейинг</p>
+<p>Это огромный организационный переход:</p>
+<p>13
+↓
+200+</p>
+<p>Такую компанию уже физически нельзя вести исключительно через:</p>
+<p>«Jay знает ребят»</p>
+<p>Или:</p>
+<p>«Carmack скажет,
+что делать»</p>
+<p>Нужна полноценная корпоративная инфраструктура.</p>
+<p>Но Hollenshead всё равно сохранял очень id-шную публичную культуру</p>
+<p>Он не превращается в безликого finance executive.</p>
+<p>Напротив, со временем становится одним из самых узнаваемых публичных лиц компании:</p>
+<p>длинные волосы;</p>
+<p>QuakeCon;</p>
+<p>интервью;</p>
+<p>stage presentations;</p>
+<p>постоянное общение с фанатами.</p>
+<p>То есть id нашла человека, который сочетал:</p>
+<p>ARTHUR ANDERSEN</p>
+<p>с:</p>
+<p>QUAKECON</p>
+<p>Что довольно редкое сочетание.</p>
+<p>И именно поэтому Hollenshead культурно встроился в компанию намного лучше, чем мог бы какой-нибудь классический corporate CEO.</p>
+<p>А Jay Wilbur уходит в очень символическое место — Epic MegaGames</p>
+<p>В 1997-м Wilbur покидает id и присоединяется к Epic MegaGames, где становится связан уже с бизнес-развитием компании вокруг Unreal. Его биография прямо фиксирует этот переход.
+MobyGames</p>
+<p>И это практически историческая шутка.</p>
+<p>Человек, который помогал строить:</p>
+<p>id engine business</p>
+<p>уходит к компании, которая затем построит гораздо более мощный middleware business вокруг Unreal Engine.</p>
+<p>Ещё раньше туда ушёл бывший кратковременный президент id Mark Rein.</p>
+<p>Получается:</p>
+<p>MARK REIN
+id
+↓
+Epic</p>
+<p>и позже:</p>
+<p>JAY WILBUR
+id
+↓
+Epic</p>
+<p>То есть часть business DNA ранней id буквально переезжает к её главному будущему engine-конкуренту.</p>
+<p>Это особенно интересно после предыдущего пункта о том, почему Epic в итоге организовала engine licensing лучше самой id.</p>
+<p>И вот здесь становится видно, что management id разделился на две школы</p>
+<p>Очень условно.</p>
+<p>Школа расширения</p>
+<p>Romero / Wilson / в некоторой степени Wilbur:</p>
+<p>technology id
+↓
+можно построить
+больше игр
+больше партнёров
+больше направлений</p>
+<p>Часть этих людей уходит:</p>
+<p>Ion Storm
+Epic
+Школа фокуса</p>
+<p>Carmack / новая id:</p>
+<p>не нужна империя
+↓
+маленькое сильное core
+↓
+один главный продукт
+↓
+technology</p>
+<p>Но при этом business-world всё равно становится слишком сложным.</p>
+<p>И вот туда идеально входит Hollenshead:</p>
+<p>НЕ расширять творческие
+амбиции до десяти studios</p>
+<p>НО</p>
+<p>профессионально управлять
+всё более сложной компанией</p>
+<p>Это очень важный компромисс.</p>
+<p>То есть новая id стала одновременно меньше и взрослее</p>
+<p>После Quake:</p>
+<p>творчески:</p>
+<p>меньше разных visions
+меньше внешних side-project ambitions
+больше focus</p>
+<p>Но:</p>
+<p>корпоративно:</p>
+<p>больше formal business
+больше structure
+профессиональный CEO</p>
+<p>Парадокс только кажущийся.</p>
+<p>Carmack хотел маленькую development organization.</p>
+<p>Это не значит, что он хотел любительскую бухгалтерию.</p>
+<p>Наоборот:</p>
+<p>чем меньше разработчики занимаются business bullshit, тем больше они могут программировать и делать игры.</p>
+<p>Hollenshead идеально обслуживает именно эту модель.</p>
+<p>А Kevin Cloud начинает занимать внутреннюю организационную роль</p>
+<p>Здесь уже появляется мост к следующей эпохе.</p>
+<p>Masters of Doom описывает production Quake II как гораздо более дисциплинированный и отдельно отмечает Kevin Cloud как наиболее дипломатичного и организованного из владельцев; новая команда работает уже в более тихой и структурированной атмосфере, а Hollenshead закрывает CEO/business-side.
+Anyflip</p>
+<p>Получается новая конструкция:</p>
+<p>TODD HOLLENSHEAD
+business / CEO</p>
+<p>JOHN CARMACK
+technology / technical authority</p>
+<p>KEVIN CLOUD
+owner + internal organisation /
+production diplomacy</p>
+<p>TIM WILLITS
+design-side leadership</p>
+<p>ADRIAN CARMACK
+art / owner</p>
+<p>Это уже почти полноценный leadership team.</p>
+<p>И это совершенно другая вещь, чем:</p>
+<p>Carmack + Romero + Hall + Adrian
+сидят в квартире
+Именно поэтому Quake II окажется значительно стабильнее производственно</p>
+<p>Не будем разбирать сам Quake II раньше пункта 36.</p>
+<p>Но организационная предпосылка возникает здесь.</p>
+<p>На Quake:</p>
+<p>кто управляет компанией?
+Jay</p>
+<p>кто управляет game production?
+ээээ...</p>
+<p>На post-Quake id структура постепенно становится понятнее:</p>
+<p>BUSINESS
+Todd Hollenshead</p>
+<p>TECH
+John Carmack</p>
+<p>ART / OWNER ORGANISATION
+Adrian / Kevin Cloud</p>
+<p>DESIGN
+новая design hierarchy</p>
+<p>PRODUCTION
+уже более явное распределение ответственности</p>
+<p>То есть хаос Quake не просто пережили.</p>
+<p>Компания действительно начала строить роли там, где раньше полагалась на естественную химию founders.</p>
+<p>И это, пожалуй, главное различие Wilbur и Hollenshead</p>
+<p>Wilbur помогал сохранять первоначальную id именно такой, какой она была:</p>
+<p>разработчики
+почти полностью свободны</p>
+<p>↓</p>
+<p>Jay
+разбирается
+со всем остальным</p>
+<p>Hollenshead пришёл уже в момент, когда первоначальной id больше нет.</p>
+<p>Его задача:</p>
+<p>не сохранить
+гаражную группу друзей</p>
+<p>а</p>
+<p>превратить
+технологически уникальную,
+но организационно травмированную студию</p>
+<p>в устойчивую компанию</p>
+<p>И в этом он оказался очень успешен: он продержался в роли CEO/президента почти до конца Carmack-era и в итоге участвовал в продаже id ZeniMax в 2009 году. При его последующем уходе Bethesda прямо называла его не разработчиком, а business head, фундаментально важным для успеха студии.
+Ворплейинг
++1</p>
+<p>Если собрать всю management-линию ранней id
+SOFTDISK</p>
+<p>Jay Wilbur
+уже управляет людьми,
+из которых потом вырастет id</p>
+<p>↓</p>
+<p>1991</p>
+<p>id founders
+управляют собой сами</p>
+<p>↓</p>
+<p>Mark Rein</p>
+<p>probationary president
+business deals
+FormGen</p>
+<p>↓</p>
+<p>разрыв с Rein</p>
+<p>↓</p>
+<p>Jay Wilbur</p>
+<p>business manager
+operations
+contracts
+publishing
+sales
+external world</p>
+<p>↓</p>
+<p>DOOM</p>
+<p>id становится
+ещё и self-publisher</p>
+<p>↓</p>
+<p>Mike Wilson
+marketing / PR</p>
+<p>Donna Jackson
+business administration</p>
+<p>business function
+уже начинает
+разделяться</p>
+<p>↓</p>
+<p>QUAKE</p>
+<p>компания:
+богатая
+международная
+technology licensor</p>
+<p>НО</p>
+<p>production management
+всё ещё слабое</p>
+<p>↓</p>
+<p>6 августа 1996
+Romero уходит</p>
+<p>↓</p>
+<p>6 ноября 1996</p>
+<p>Todd Hollenshead
+CEO</p>
+<p>↓</p>
+<p>1997</p>
+<p>Jay Wilbur
+уходит в Epic</p>
+<p>↓</p>
+<p>новая id</p>
+<p>Todd:
+business</p>
+<p>Carmack:
+technology</p>
+<p>Cloud / owners:
+организационное ядро</p>
+<p>новые leads:
+production/design</p>
+<p>И вот здесь наконец можно нормально ответить на вопрос:</p>
+<p>кто вообще управлял id Software?</p>
+<p>В разные эпохи — разные люди и разные виды власти.</p>
+<p>Ранняя id практически не имела одного руководителя. Founders коллективно определяли компанию, Carmack постепенно становился главным неформальным стратегическим авторитетом, а Jay Wilbur управлял бизнесом вокруг development team.</p>
+<p>После Quake такая конструкция перестала быть достаточной.</p>
+<p>Поэтому появление Todd Hollenshead — не просто замена одного «бизнес-мужика» другим.</p>
+<p>Это момент, когда id впервые признала:</p>
+<p>бизнесом компании такого масштаба должен профессионально заниматься человек, для которого управление бизнесом — основная профессия, а не побочная обязанность старого друга разработчиков.</p>
+<p>И именно с Hollenshead начинается id Software уже не как гаражная компания, которой каким-то чудом приходится иметь бухгалтерию, а как настоящая корпорация, сознательно разделившая creative/technical власть и профессиональное управление бизнесом.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p033">33. id после Romero: technology-driven company<a class="headerlink" href="#p033" title="Permanent link">¶</a></h2>
+<p>После августа 1996-го id Software не просто потеряла John Romero.</p>
+<p>Компания сменила внутренний центр тяжести.</p>
+<p>До Quake её можно было грубо представить как постоянное напряжение нескольких равных сил:</p>
+<p>John Carmack
+technology</p>
+<p>↕</p>
+<p>John Romero
+gameplay / tools / design / expansion</p>
+<p>↕</p>
+<p>Adrian Carmack
+art / ownership</p>
+<p>↕</p>
+<p>Kevin Cloud
+art / production / ownership</p>
+<p>↕</p>
+<p>business side
+Wilbur</p>
+<p>После ухода Romero, последующего ухода Wilbur и Petersen и перестройки команды такого противовеса Carmack больше практически нет.</p>
+<p>Новая система постепенно становится:</p>
+<div class="highlight"><pre><span></span><code>               JOHN CARMACK
+           technical direction
+          engine / architecture
+                  │
+                  ▼
+            ENGINEERING
+         Cash / Hook / others
+
+
+    ADRIAN CARMACK + KEVIN CLOUD
+         ownership / studio core
+                  │
+         ┌────────┴────────┐
+         ▼                 ▼
+      ART SIDE        PRODUCTION
+                       Cloud
+
+
+             TIM WILLITS
+          design generation
+         выросшая из Doom
+
+
+            HOLLENSHEAD
+         business / CEO
+</code></pre></div>
+<p>Это уже не компания четырёх авторов, которые постоянно спорят о том, какой должна быть следующая игра.</p>
+<p>Это гораздо более специализированная система:</p>
+<p>Carmack определяет технологический горизонт; остальные подразделения должны построить внутри него максимально хорошую игру.</p>
+<p>Именно это я бы считал началом technology-driven id в зрелом смысле.</p>
+<p>Сначала резко упрощается ownership</p>
+<p>К концу 1990-х Kevin Cloud прямо описывал себя как одного из трёх владельцев id вместе с John Carmack и Adrian Carmack.
+Game Developer</p>
+<p>Это очень важное изменение относительно founder-era.</p>
+<p>Когда-то:</p>
+<p>Carmack
+Romero
+Hall
+Adrian</p>
+<p>были четырьмя людьми с сильно различающимися представлениями о дизайне и устройстве компании.</p>
+<p>После всех расколов ядро ownership фактически становится:</p>
+<p>John Carmack
+Adrian Carmack
+Kevin Cloud</p>
+<p>И это уже гораздо более согласованная конструкция.</p>
+<p>Не обязательно потому, что все трое одинаково думают.</p>
+<p>Но исчезают два крупнейших исторических источника творческого противодействия Carmack:</p>
+<p>Tom Hall
+→ world / systems / narrative</p>
+<p>John Romero
+→ gameplay / design / expansion</p>
+<p>Carmack больше не приходится каждый большой проект начинать с фундаментального спора:</p>
+<p>а должна ли технология вообще определять следующую игру?</p>
+<p>В новой id ответ всё чаще заранее:</p>
+<p>ДА
+Но Carmack не превращается в человека, который лично управляет всеми</p>
+<p>Вот это особенно важно.</p>
+<p>После Quake можно было ожидать:</p>
+<p>Romero ушёл
+↓
+Carmack теперь
+главный вообще во всём</p>
+<p>Но опыт Quake как раз показал, насколько плохо работает ситуация, когда Carmack вынужден одновременно:</p>
+<p>делать technology</p>
+<p>и</p>
+<p>следить,
+готовы ли levels</p>
+<p>и</p>
+<p>контролировать art</p>
+<p>и</p>
+<p>разруливать project direction</p>
+<p>На Quake II он уже отдельно подчёркивал, насколько ему приятно, что впервые не приходится заниматься всей остальной production-машиной: Kevin Cloud стал project manager, который координирует уровни, art, monsters и schedule, а Carmack может почти полностью заниматься кодом.
+Fabien Sanglard</p>
+<p>То есть пост-Romero модель — это не:</p>
+<p>CARMACK
+↓
+MICROMANAGES EVERYTHING</p>
+<p>А гораздо умнее:</p>
+<p>CARMACK
+↓
+контролирует
+TECHNOLOGY + FINAL TECHNICAL VETO</p>
+<p>Cloud
+↓
+контролирует
+PROJECT COORDINATION</p>
+<p>И это, пожалуй, первый действительно зрелый ответ id на катастрофу Quake.</p>
+<p>Kevin Cloud становится намного важнее, чем кажется по старым credits</p>
+<p>Мы начинали с него как с:</p>
+<p>1992</p>
+<p>assistant artist</p>
+<p>Потом:</p>
+<p>Doom</p>
+<p>artist
++
+человек,
+который думает
+о структуре команды</p>
+<p>А после Romero он уже:</p>
+<p>OWNER</p>
+<p>+</p>
+<p>PROJECT DIRECTOR</p>
+<p>+</p>
+<p>ARTIST</p>
+<p>В интервью о Quake II Cloud прямо говорил, что был artist и project director: координировал проект, контролировал design и следил за schedule.
+Game Developer</p>
+<p>Это гигантская эволюция роли.</p>
+<p>То есть именно Kevin Cloud начинает закрывать дыру, которую id так болезненно обнаружила на Quake:</p>
+<p>КТО-ТО ДОЛЖЕН
+СМОТРЕТЬ НА ПРОЕКТ ЦЕЛИКОМ</p>
+<p>Не только:</p>
+<p>как выглядит texture?</p>
+<p>А:</p>
+<p>какие levels готовы?</p>
+<p>какие monsters готовы?</p>
+<p>как art связан с design?</p>
+<p>мы вообще идём
+по графику?</p>
+<p>кто от кого зависит?</p>
+<p>То, что Sandy Petersen предлагал формализовать ещё во время Quake, новая id фактически делает уже после распада старой команды.</p>
+<p>Сам Carmack даже формулирует новую модель очень откровенно</p>
+<p>В интервью эпохи Quake II он объяснял: раньше ему приходилось дополнительно следить, чтобы остальные части игры вообще сходились; теперь Cloud занимается coordination, а Carmack может концентрироваться на коде. При этом Carmack всё равно остаётся последним фильтром: если какая-то идея требует его реализации и он считает её недостаточно хорошей, она просто не попадёт в игру.
+Fabien Sanglard</p>
+<p>Получается довольно интересная власть:</p>
+<p>Kevin Cloud
+может организовать
+КАК сделать игру</p>
+<p>Но:</p>
+<p>John Carmack
+в значительной степени
+контролирует,
+ЧТО engine вообще
+разрешит этой игре делать</p>
+<p>И это уже гораздо более technology-driven структура, чем старая id.</p>
+<p>В старой id дизайнер мог спорить с технологией</p>
+<p>Например Hall:</p>
+<p>нам нужны
+такие системы</p>
+<p>Carmack:</p>
+<p>не нужны /
+слишком сложно /
+не подходит</p>
+<p>И шёл фундаментальный конфликт.</p>
+<p>Romero:</p>
+<p>давайте original Quake
+будет новым типом игры</p>
+<p>Carmack:</p>
+<p>нет,
+ship'им shooter</p>
+<p>После Romero design-side уже гораздо реже обладает сопоставимым политическим весом.</p>
+<p>Это не значит, что дизайнеры ничего не решают.</p>
+<p>Но структура скорее такая:</p>
+<p>TECHNOLOGY FRAME
+задаётся сверху</p>
+<p>↓</p>
+<p>DESIGN TEAM
+ищет лучшую игру
+внутри frame</p>
+<p>А не:</p>
+<p>DESIGN VISION
+↓
+technology обязана
+под него перестроиться</p>
+<p>Вот это и есть главный культурный сдвиг.</p>
+<p>При этом engineering тоже больше не равен одному Carmack</p>
+<p>Парадоксально, новая technology-driven id одновременно становится менее персонально Carmack-only на уровне реализации.</p>
+<p>Quake II credits:</p>
+<p>PROGRAMMING</p>
+<p>John Carmack
+John Cash
+Brian Hook</p>
+<p>GitHub
++1</p>
+<p>И Carmack сам говорил, что работа теперь довольно хорошо сегментирована между ним, Cash и Hook.
+Fabien Sanglard</p>
+<p>То есть:</p>
+<p>POWER
+становится
+более Carmack-centric</p>
+<p>НО</p>
+<p>ENGINEERING LABOR
+становится
+менее Carmack-only</p>
+<p>Очень важное различие.</p>
+<p>John Cash превращается из networking specialist в полноценного game/engine programmer</p>
+<p>Cash пришёл в id ещё в середине разработки первого Quake именно как человек, который должен был помочь с networking. Wired тогда прямо описывала его как network-programming specialist, нанятого для оптимизации сетевой игры через modem и Internet.
+WIRED</p>
+<p>Но post-Quake его роль становится шире.</p>
+<p>Теперь это не:</p>
+<p>Carmack:
+engine</p>
+<p>Cash:
+network.dll</p>
+<p>Carmack в интервью Quake II уже описывал Cash как человека, который много занимается game programming, тогда как сам Carmack сильнее держит engine-side, а работа разделена между ним, Cash и Hook.
+Fabien Sanglard</p>
+<p>То есть новая инженерная организация начинает выглядеть:</p>
+<p>JOHN CARMACK
+core architecture /
+rendering /
+technology direction</p>
+<p>JOHN CASH
+game-side programming /
+network / systems</p>
+<p>BRIAN HOOK
+graphics APIs /
+OpenGL /
+hardware acceleration /
+engine work</p>
+<p>Это уже настоящий division of labor.</p>
+<p>Brian Hook — особенно характерный hire новой id</p>
+<p>Carmack публично сообщил о найме Hook 6 мая 1997 года.</p>
+<p>И специально представил его через технический background:</p>
+<p>написал Glide API для 3dfx;</p>
+<p>работал над CosmoGL;</p>
+<p>занимался 3D programming.
+GitHub</p>
+<p>То есть кого новая id ищет после исхода старой команды?</p>
+<p>Не:</p>
+<p>ещё одну
+рок-звезду дизайна</p>
+<p>А:</p>
+<p>очень сильного
+graphics/engine programmer</p>
+<p>Это практически кадровая декларация новой идентичности.</p>
+<p>И Hook идеально попадает в новую эпоху PC</p>
+<p>Первоначальная Carmack-era была про:</p>
+<p>CPU</p>
+<p>software rasterizer</p>
+<p>ручную assembly optimization</p>
+<p>Но 1996–1997 — момент взрыва:</p>
+<p>3dfx Voodoo</p>
+<p>Rendition</p>
+<p>PowerVR</p>
+<p>OpenGL</p>
+<p>hardware acceleration</p>
+<p>Quake внезапно становится одним из главных инструментов, через которые игроки вообще понимают:</p>
+<p>зачем мне 3D-ускоритель?</p>
+<p>Hook приходит буквально из среды, где эти API и hardware paths строятся.</p>
+<p>Его hiring поэтому означает:</p>
+<p>ENGINE TEAM
+больше не только
+пишет renderer</p>
+<p>↓</p>
+<p>она должна взаимодействовать
+с целой новой индустрией
+3D hardware</p>
+<p>В материалах 1997 года Hook уже выступает как человек, работающий с OpenGL-стороной Quake II и хорошо понимающий как OpenGL, так и Direct3D с уровня драйверов.
+Azillion Monkeys</p>
+<p>Это очень важная профессионализация технологии id.</p>
+<p>Раньше Carmack мог быть почти всей связью между id и hardware</p>
+<p>Теперь:</p>
+<p>Carmack
++
+Hook
++
+Cash</p>
+<p>могут параллельно заниматься:</p>
+<p>renderer architecture</p>
+<p>hardware APIs</p>
+<p>networking</p>
+<p>game code</p>
+<p>platform integration</p>
+<p>То есть id перестаёт зависеть от сценария:</p>
+<p>если Carmack
+не написал X</p>
+<p>то X
+не существует</p>
+<p>Хотя окончательное техническое authority всё ещё остаётся у него.</p>
+<p>А design-side теперь представляет совсем другое поколение</p>
+<p>Quake II credits показывают:</p>
+<p>LEVEL DESIGN</p>
+<p>Tim Willits
+American McGee
+Christian Antkow
+Jennell Jaquays
+Brandon James</p>
+<p>GitHub
++1</p>
+<p>Из них почти никто не относится к исходной founder-generation.</p>
+<p>И особенно символичен Tim Willits.</p>
+<p>Willits — буквально продукт старой id, который становится частью новой id</p>
+<p>Его путь:</p>
+<p>игрок DOOM
+↓
+делает свои WAD
+↓
+его замечает id
+↓
+1995
+его нанимают
+↓
+он работает с Romero
+над Quake
+↓
+после ухода Romero
+остаётся</p>
+<p>Wired в 1998 году описывала Willits как одного из лучших Doom-моддеров, которых индустрия начала нанимать; он пришёл в id в 1995-м именно тогда, когда разработка Quake начала идти плохо. И особенно символичная деталь: после ухода Romero Willits сидел в бывшем кабинете Romero.
+WIRED</p>
+<p>Практически:</p>
+<p>OLD DESIGN CULTURE
+Romero
+        ↓
+     office
+        ↓
+NEW DESIGN CULTURE
+Willits</p>
+<p>Это почти слишком красиво, чтобы быть реальностью.</p>
+<p>Но Willits не был Romero 2.0</p>
+<p>Вот это принципиально.</p>
+<p>Romero:</p>
+<p>founder</p>
+<p>owner</p>
+<p>programmer</p>
+<p>tools programmer</p>
+<p>designer</p>
+<p>public face</p>
+<p>external producer</p>
+<p>человек,
+который спорит
+с Carmack
+о будущем всей компании</p>
+<p>Willits:</p>
+<p>level designer</p>
+<p>потом design lead /
+studio leadership</p>
+<p>НО</p>
+<p>входит уже
+в существующую
+Carmack-led structure</p>
+<p>Он не приходит с политической властью сооснователя.</p>
+<p>Поэтому даже очень сильный design lead новой id имеет другую позицию относительно technology side.</p>
+<p>Это снижает количество конфликтов — но и разнообразие власти</p>
+<p>Старая id:</p>
+<p>Carmack:
+X</p>
+<p>Romero:
+НЕТ,
+Y</p>
+<p>Hall:
+вообще Z</p>
+<p>Adrian:
+а я хочу
+больше мяса</p>
+<p>↓</p>
+<p>КОНФЛИКТ</p>
+<p>Новая:</p>
+<p>technology direction
+зафиксировано сильнее</p>
+<p>↓</p>
+<p>design team
+ищет лучший продукт
+внутри него</p>
+<p>↓</p>
+<p>Cloud
+координирует</p>
+<p>Это намного эффективнее.</p>
+<p>Но оно одновременно означает:</p>
+<p>меньше шансов, что человек на design-side сможет остановить всю компанию и потребовать принципиально иной game-design paradigm.</p>
+<p>Именно поэтому Quake II production выглядит почти как анти-Quake</p>
+<p>Не будем разбирать сам Quake II подробно раньше пункта 36.</p>
+<p>Но как доказательство новой организации он идеален.</p>
+<p>GameSpot во время разработки описывала команду как lean team of nine:</p>
+<p>3 programmers</p>
+<p>3 artists</p>
+<p>3 level designers</p>
+<p>и цитировала Willits:</p>
+<p>каждый человек здесь критически важен и каждый критически важный человек работает.</p>
+<p>Carmack в том же материале подчёркивал, что команда идёт по графику и продукт складывается хорошо.
+GameSpot</p>
+<p>Обратите внимание, насколько это противоположно культуре Quake.</p>
+<p>Quake:</p>
+<p>кто-то deathmatch</p>
+<p>кто-то external projects</p>
+<p>кто-то делает fantasy</p>
+<p>кто-то military</p>
+<p>engine переписывается</p>
+<p>production drift</p>
+<p>Новая id сознательно подчёркивает:</p>
+<p>ВСЕ РАБОТАЮТ
+НАД ОДНОЙ ИГРОЙ
+Даже фраза Willits звучит как сознательная реакция на Romero-era</p>
+<p>GameSpot приводит его формулировку:</p>
+<p>«We don’t play deathmatches. We work.»
+GameSpot</p>
+<p>Трудно придумать более прозрачное отличие от Quake-era.</p>
+<p>Это практически новая корпоративная мантра:</p>
+<p>OLD id</p>
+<p>work
++
+play
++
+chaos
++
+experimentation
++
+external stuff</p>
+<p>↓</p>
+<p>NEW id</p>
+<p>FOCUS</p>
+<p>Не обязательно веселее.</p>
+<p>Но предсказуемее.</p>
+<p>Carmack явно был этим счастлив</p>
+<p>В материалах того периода он буквально звучит как человек, который наконец получил команду своей мечты:</p>
+<p>маленькая</p>
+<p>сильная</p>
+<p>все заняты текущей игрой</p>
+<p>нет большого политического конфликта</p>
+<p>не надо самому
+следить за level schedule</p>
+<p>можно программировать</p>
+<p>В интервью он называл тогдашний состав лучшей командой, которая когда-либо была у id, и особенно хвалил чистоту и целостность production Quake II по сравнению с первым Quake.
+Fabien Sanglard</p>
+<p>Это важно.</p>
+<p>Post-Romero id не ощущала себя:</p>
+<p>обломками великой команды</p>
+<p>С точки зрения Carmack происходило почти обратное:</p>
+<p>НАМ НАКОНЕЦ
+НЕ МЕШАЕТ ХАОС
+И это очень хорошо объясняет, почему новая id стала technology-driven</p>
+<p>Потому что теперь компания организована вокруг следующего цикла:</p>
+<p>CARMACK / ENGINE TEAM</p>
+<p>что будет
+следующим поколением
+technology?</p>
+<p>↓</p>
+<p>ENGINE FRAME</p>
+<p>↓</p>
+<p>CLOUD / PRODUCTION</p>
+<p>как организовать
+создание полноценной игры?</p>
+<p>↓</p>
+<p>DESIGN TEAM</p>
+<p>как получить
+максимально хороший gameplay
+внутри technology?</p>
+<p>↓</p>
+<p>ART TEAM</p>
+<p>как сделать
+цельный visual world?</p>
+<p>↓</p>
+<p>SHIP</p>
+<p>Не:</p>
+<p>CREATIVE DIRECTOR
+придумал game</p>
+<p>↓</p>
+<p>engine team
+строит technology
+под его vision</p>
+<p>Вот это фундаментальная разница.</p>
+<p>При этом Kevin Cloud не даёт компании стать чистой лабораторией Carmack</p>
+<p>Именно поэтому его роль так важна.</p>
+<p>Если оставить только:</p>
+<p>Carmack
+Cash
+Hook</p>
+<p>получится:</p>
+<p>ENGINE COMPANY</p>
+<p>Но id всё-таки должна выпускать игры.</p>
+<p>Cloud как project director представляет противоположный вопрос:</p>
+<p>engine охуенный — а игра вообще будет закончена вовремя?</p>
+<p>В интервью о Quake II он прямо говорил, что проект был для него не только созданием игры, но и строительством новой команды. Он подчёркивал, что команда поставила конкретные gameplay и scheduling goals и пыталась их выполнить.
+Game Developer</p>
+<p>Это практически признание:</p>
+<p>после Quake
+мы сознательно
+перестраивали
+НЕ ТОЛЬКО игру</p>
+<p>НО И СТУДИЮ
+Но новая production model всё ещё не была мягкой и корпоративно вылизанной</p>
+<p>Cloud в том же интервью честно признавал: последние месяцы Quake II всё равно были уже не вопросом прекрасного scheduling, а вопросом огромного человеческого усилия.
+Game Developer</p>
+<p>То есть нельзя писать:</p>
+<p>Quake:
+хаос</p>
+<p>↓</p>
+<p>Quake II:
+никакого crunch,
+идеальный Scrum</p>
+<p>Нет.</p>
+<p>id остаётся id.</p>
+<p>Всё ещё:</p>
+<p>маленькая команда</p>
+<p>очень высокие требования</p>
+<p>сильнейшая личная ответственность</p>
+<p>длинные финальные рывки</p>
+<p>Разница:</p>
+<p>CRUNCH
+теперь компенсирует
+финальный production push</p>
+<p>а не</p>
+<p>год фундаментальной
+неопределённости</p>
+<p>Это огромный прогресс.</p>
+<p>И Carmack начинает ещё сильнее разделять GAME и NEXT TECHNOLOGY</p>
+<p>Вот здесь появляется ещё одна характерная черта зрелой id.</p>
+<p>В конце 1996-го Carmack писал: пока большая часть id работает над Quake II, значительная часть его собственной энергии уже уходит на следующее поколение technology.
+Quake Wiki</p>
+<p>То есть модель DOOM II становится постоянной:</p>
+<p>CURRENT GAME TEAM
+↓
+делает product</p>
+<p>ПОКА</p>
+<p>CARMACK
+↓
+уже думает
+про NEXT ENGINE</p>
+<p>И вот это окончательно превращает id в technology-driven studio.</p>
+<p>Потому что компания начинает жить не в одном временном горизонте.</p>
+<p>Условно
+1997</p>
+<p>Cloud / Willits / art team думают:</p>
+<p>как закончить
+Quake II?</p>
+<p>Carmack одновременно думает:</p>
+<p>а какой engine
+будет нужен
+ПОСЛЕ Quake II?</p>
+<p>И Cloud прямо говорил о будущем проекте Trinity: technology пока находится в руках Carmack, а game ideas лучше не фиксировать слишком рано, чтобы не ограничивать его программные исследования.
+Game Developer</p>
+<p>Вот это практически официальное формулирование philosophy post-Romero id.</p>
+<p>Сравним это с Original Quake</p>
+<p>Romero говорил:</p>
+<p>давайте сначала
+сформулируем
+новую большую
+game idea</p>
+<p>или как минимум:</p>
+<p>technology созреет
+↓
+мы откроем
+новую game form</p>
+<p>Post-Romero Kevin Cloud уже описывает другое:</p>
+<p>Carmack
+пусть свободно
+исследует technology</p>
+<p>↓</p>
+<p>когда technology
+станет понятнее</p>
+<p>↓</p>
+<p>тогда уже
+начнём серьёзно
+фиксировать game design</p>
+<p>Game Developer</p>
+<p>То есть организационно победила именно Carmack philosophy.</p>
+<p>Но есть тонкая разница с хаосом Quake</p>
+<p>На Quake это происходило стихийно:</p>
+<p>engine не готов</p>
+<p>↓</p>
+<p>designers всё равно
+пытаются работать</p>
+<p>↓</p>
+<p>хаос</p>
+<p>Новая id теперь может сказать:</p>
+<p>ENGINE R&amp;D</p>
+<p>пока отдельный
+research stream</p>
+<p>↓</p>
+<p>НЕ НАДО
+в этот момент
+сажать всю content team
+делать финальные assets</p>
+<p>То есть урок:</p>
+<p>technology-first не означает, что все остальные должны год сидеть на движущемся фундаменте.</p>
+<p>Нужно разделить стадии производства.</p>
+<p>Это уже гораздо взрослее.</p>
+<p>John Carmack при этом остаётся final veto</p>
+<p>Новая специализация не превращает id в демократию.</p>
+<p>Скорее наоборот.</p>
+<p>В интервью эпохи Quake II Carmack довольно открыто говорил, что не особенно верит в committee decision-making; его предпочтение — маленькое число людей, способных быстро принимать решения.
+Scribd</p>
+<p>И practical authority видно ещё проще:</p>
+<p>если feature
+требует engine work</p>
+<p>и</p>
+<p>Carmack считает,
+что feature не стоит того</p>
+<p>↓</p>
+<p>feature
+скорее всего
+не существует</p>
+<p>Он сам описывал себя как final filter таких идей.
+Fabien Sanglard</p>
+<p>Это не должность CEO.</p>
+<p>Но с точки зрения game design это очень серьёзная власть.</p>
+<p>Получается интересный тип «технической диктатуры»</p>
+<p>Не:</p>
+<p>Carmack лично
+проектирует каждый level</p>
+<p>И не:</p>
+<p>Carmack говорит художнику,
+какую texture нарисовать</p>
+<p>А:</p>
+<p>он определяет
+технические законы мира</p>
+<p>и</p>
+<p>имеет veto
+над вещами,
+которые требуют
+изменить эти законы</p>
+<p>Внутри этих границ:</p>
+<p>Cloud
+координирует</p>
+<p>Willits / design team
+проектируют</p>
+<p>Adrian / Cloud / Steed
+строят art</p>
+<p>Cash / Hook
+расширяют code</p>
+<p>Это довольно эффективная система.</p>
+<p>Особенно после Quake.</p>
+<p>Adrian Carmack тоже остаётся важной частью баланса</p>
+<p>Его легко потерять на фоне роста Cloud.</p>
+<p>Но Adrian по-прежнему:</p>
+<p>co-owner</p>
+<p>art authority</p>
+<p>исторический founder</p>
+<p>То есть Carmack-технологическая власть не становится абсолютно единоличной в юридическом смысле.</p>
+<p>Ownership остаётся:</p>
+<p>John Carmack
+Adrian Carmack
+Kevin Cloud</p>
+<p>Game Developer</p>
+<p>И именно Adrian + Cloud представляют непрерывность ещё с Wolfenstein/Doom visual culture.</p>
+<p>Разница только в том, что они не являются идеологическим антиподом technology-first модели, каким временами были Hall и Romero.</p>
+<p>Поэтому конфликтов меньше.</p>
+<p>Kevin Cloud становится связующим звеном между founders и новой командой</p>
+<p>Это, возможно, самая недооценённая роль post-Romero id.</p>
+<p>Cloud одновременно:</p>
+<p>Softdisk-era человек</p>
+<p>↓</p>
+<p>Doom artist</p>
+<p>↓</p>
+<p>owner</p>
+<p>↓</p>
+<p>project director</p>
+<p>↓</p>
+<p>человек,
+который работает
+с новыми designers</p>
+<p>То есть он соединяет:</p>
+<p>OLD id</p>
+<p>и:</p>
+<p>NEW id</p>
+<p>Без него post-Romero переход мог бы выглядеть гораздо резче:</p>
+<p>Carmack
++
+куча новых сотрудников</p>
+<p>Cloud сохраняет организационную память:</p>
+<p>как реально
+делались Wolfenstein
+и Doom</p>
+<p>как работает
+маленькая команда</p>
+<p>как общаться
+с Carmack</p>
+<p>где нужно
+его остановить</p>
+<p>где нужно
+дать ему свободу</p>
+<p>И при этом обладает ownership authority.</p>
+<p>Именно поэтому он постепенно становится одним из главных столпов компании.</p>
+<p>Willits представляет уже противоположную форму преемственности</p>
+<p>Cloud:</p>
+<p>преемственность
+ИЗНУТРИ старой id</p>
+<p>Willits:</p>
+<p>преемственность
+ЧЕРЕЗ community
+старой id</p>
+<p>Это очень красиво.</p>
+<p>Старая id создаёт:</p>
+<p>DOOM
++
+WAD culture</p>
+<p>↓</p>
+<p>появляется:</p>
+<p>Tim Willits
+modder</p>
+<p>↓</p>
+<p>новая id:</p>
+<p>нанимает его</p>
+<p>↓</p>
+<p>после ухода Romero:</p>
+<p>он становится
+одним из центральных
+design-side людей</p>
+<p>То есть новая id буквально вырастает из ecosystem, которую создала старая.</p>
+<p>И это меняет саму культуру design hiring</p>
+<p>Раньше ключевой designer:</p>
+<p>FOUNDER</p>
+<p>или:</p>
+<p>очень опытный человек
+вроде Sandy Petersen</p>
+<p>Теперь:</p>
+<p>покажи level</p>
+<p>становится достаточным входом в элиту.</p>
+<p>Wired подчёркивала, что Doom-моддеры фактически приходили уже обученными: у них были годы практики создания реальных уровней.
+WIRED</p>
+<p>Для маленькой компании это идеально.</p>
+<p>Не надо строить:</p>
+<p>junior designer academy</p>
+<p>Community уже сделала её бесплатно.</p>
+<p>И новая id сознательно остаётся маленькой</p>
+<p>GameSpot описывала Quake II-команду как примерно:</p>
+<p>3 programmers
++
+3 artists
++
+3 level designers</p>
+<p>GameSpot</p>
+<p>Это практически реализация Carmack-мечты после Romero:</p>
+<p>не Empire</p>
+<p>не 100 developers</p>
+<p>а</p>
+<p>маленькая elite strike team</p>
+<p>И каждый человек должен быть:</p>
+<p>CRITICAL</p>
+<p>Не:</p>
+<p>у нас 20 interchangeable artists</p>
+<p>А:</p>
+<p>если один человек исчез,
+это реально проблема</p>
+<p>Очень ранняя id философия сохраняется.</p>
+<p>Но теперь она организована лучше.</p>
+<p>То есть id не отказалась от flat structure</p>
+<p>Это тоже важно.</p>
+<p>Tim Willits позднее, вспоминая Quake II, говорил, что design team старалась работать достаточно плоско и каждый участник привносил собственный стиль.
+PC Gamer</p>
+<p>То есть новая id не стала:</p>
+<p>producer
+↓
+lead
+↓
+senior
+↓
+mid
+↓
+junior</p>
+<p>в современном AAA-виде.</p>
+<p>Она сохранила:</p>
+<p>маленькое количество
+очень автономных людей</p>
+<p>Но добавила:</p>
+<p>PROJECT DIRECTION</p>
+<p>через Cloud.</p>
+<p>Вот это и есть главное отличие.</p>
+<p>Можно сформулировать эволюцию так
+Doom-era flat structure
+автономия
++
+почти никакой coordination layer</p>
+<p>↓</p>
+<p>работает,
+пока все совпадают
+Quake
+автономия
++
+нет coordination layer
++
+нет общего vision</p>
+<p>↓</p>
+<p>КАТАСТРОФА
+Post-Romero
+автономия
++
+маленькая команда</p>
+<p>НО</p>
+<p>есть project director</p>
+<p>+</p>
+<p>гораздо яснее
+разделены domains</p>
+<p>↓</p>
+<p>работает значительно лучше</p>
+<p>То есть id не отказывается от собственной культуры.</p>
+<p>Она патчит её.</p>
+<p>Brian Hook и John Cash особенно хорошо показывают domain ownership</p>
+<p>Теперь programmer не обязан быть:</p>
+<p>человеком,
+который может сделать
+вообще всё</p>
+<p>Можно иметь:</p>
+<p>Cash
+game/network systems</p>
+<p>Hook
+hardware graphics / OpenGL</p>
+<p>Carmack
+architecture / core tech</p>
+<p>Carmack в 1997 году прямо писал о найме Hook как о новом программисте с глубокой 3D-графической квалификацией.
+GitHub</p>
+<p>Это уже инженерная организация, где:</p>
+<p>expertise
+разложена
+по людям</p>
+<p>а не концентрирована исключительно в одном Carmack.</p>
+<p>Но roadmap всё равно идёт от Carmack</p>
+<p>Вот здесь technology-driven становится особенно буквальным.</p>
+<p>Собственная .plan Carmack за 1997 год выглядит практически как публичный технический roadmap всей компании:</p>
+<p>новая rendering architecture</p>
+<p>QuakeWorld</p>
+<p>OpenGL</p>
+<p>DLL game logic</p>
+<p>Win32</p>
+<p>Linux</p>
+<p>новый BSP format</p>
+<p>hardware drivers</p>
+<p>Quake II foundations</p>
+<p>GitHub</p>
+<p>То есть обычный игрок может буквально читать:</p>
+<p>что Carmack сегодня считает правильной архитектурой,</p>
+<p>и понимать:</p>
+<p>куда через несколько месяцев пойдёт сама id.</p>
+<p>Очень немного компаний настолько буквально завязаны на технический дневник одного человека.</p>
+<p>И важный пример — отказ от DOS</p>
+<p>В марте 1997-го Carmack просто публично пишет:</p>
+<p>мы больше
+не будем делать DOS games</p>
+<p>Аргументация техническая:</p>
+<p>TCP/IP;</p>
+<p>dynamic linking;</p>
+<p>virtual memory;</p>
+<p>device drivers;</p>
+<p>Win32 infrastructure.
+GitHub</p>
+<p>То есть огромное стратегическое решение:</p>
+<p>какую OS
+поддерживает
+следующее поколение id?</p>
+<p>принимается прежде всего через:</p>
+<p>TECHNICAL COST/BENEFIT</p>
+<p>а не:</p>
+<p>marketing department:
+у DOS ещё X% рынка</p>
+<p>Это textbook technology-driven company.</p>
+<p>То же с OpenGL</p>
+<p>Carmack и Hook активно участвуют практически в отраслевой войне:</p>
+<p>OpenGL
+VS
+Direct3D</p>
+<p>не как сторонние комментаторы, а как люди, чьи решения реально влияют на hardware vendors.</p>
+<p>Hook приходит из 3dfx/GL-world, а Carmack через Quake/Quake II фактически заставляет производителей видеокарт обеспечивать хорошие OpenGL paths, если они хотят впечатлять PC-геймеров.
+Azillion Monkeys
++1</p>
+<p>То есть technology team становится не просто внутренним подразделением id.</p>
+<p>Она взаимодействует с:</p>
+<p>Microsoft</p>
+<p>Intel</p>
+<p>3dfx</p>
+<p>Rendition</p>
+<p>PowerVR</p>
+<p>SGI / OpenGL ecosystem</p>
+<p>Компания начинает влиять на саму PC-платформу.</p>
+<p>А game team при этом сознательно становится более традиционной</p>
+<p>Парадокс.</p>
+<p>Снаружи id выглядит всё более:</p>
+<p>технологически радикальной</p>
+<p>Но внутренний game production становится:</p>
+<p>МЕНЕЕ хаотичным</p>
+<p>Уже есть:</p>
+<p>project director
+clearer schedule
+clearer team ownership
+defined programmer/art/design groups</p>
+<p>И Carmack специально радуется, что Quake II имеет гораздо более цельный design и flow, чем Quake.
+Fabien Sanglard</p>
+<p>То есть:</p>
+<p>RISK
+переносится
+из production chaos</p>
+<p>в</p>
+<p>technology R&amp;D</p>
+<p>Это очень умное перераспределение.</p>
+<p>Старая id рисковала сразу всем
+новая technology</p>
+<p>+</p>
+<p>новая game design</p>
+<p>+</p>
+<p>хаотичный production</p>
+<p>Новая:</p>
+<p>technology
+может быть радикальной</p>
+<p>НО</p>
+<p>production
+должен быть
+предсказуемее</p>
+<p>И это прямо следует из травмы Quake.</p>
+<p>Именно поэтому post-Romero id кажется менее «авторски безумной»</p>
+<p>Потому что исчезает постоянный внутренний конфликт:</p>
+<p>а давайте вообще
+перепридумем,
+что такое videogame</p>
+<p>На первый план выходит:</p>
+<p>а давайте
+технологически
+сделаем это
+лучше всех</p>
+<p>Плюсы очевидны:</p>
+<p>стабильнее production</p>
+<p>яснее roles</p>
+<p>меньше wasted work</p>
+<p>лучше schedule</p>
+<p>сильнее engine specialization</p>
+<p>Минус:</p>
+<p>game design
+становится
+более эволюционным,
+чем революционным</p>
+<p>И это будет очень характерно для id конца девяностых и начала двухтысячных.</p>
+<p>Carmack сам очень хорошо описывает новую иерархию через собственную свободу</p>
+<p>Главное, что он получает после Quake:</p>
+<p>Я МОГУ
+ПРОСТО ПРОГРАММИРОВАТЬ</p>
+<p>На Quake ему приходилось:</p>
+<p>architecture</p>
+<p>+</p>
+<p>design crisis</p>
+<p>+</p>
+<p>deadline</p>
+<p>+</p>
+<p>staff performance</p>
+<p>+</p>
+<p>War Room</p>
+<p>+</p>
+<p>production pressure</p>
+<p>На Quake II:</p>
+<p>Cloud
+держит project</p>
+<p>↓</p>
+<p>Hollenshead
+держит business</p>
+<p>↓</p>
+<p>design team
+держит levels</p>
+<p>↓</p>
+<p>art team
+держит art</p>
+<p>↓</p>
+<p>Cash / Hook
+делят programming</p>
+<p>↓</p>
+<p>Carmack
+может заниматься technology</p>
+<p>Это практически идеальная организационная система для John Carmack.</p>
+<p>Неудивительно, что он считал новую команду лучшей в истории id.
+Fabien Sanglard</p>
+<p>И вот тут можно понять, почему исход старых людей не пытались полностью обратить</p>
+<p>Если Carmack считает:</p>
+<p>теперь компания
+работает ЛУЧШЕ</p>
+<p>то он не будет говорить:</p>
+<p>давайте вернём старый баланс сил.</p>
+<p>Наоборот.</p>
+<p>Новая id начинает закреплять этот дизайн.</p>
+<p>Структура после Romero</p>
+<p>Примерно:</p>
+<div class="highlight"><pre><span></span><code>              OWNERSHIP CORE
+
+  John Carmack     Adrian Carmack
+            \       /
+             Kevin Cloud
+
+
+              BUSINESS
+
+          Todd Hollenshead
+                 │
+                 ▼
+       contracts / publisher /
+         company operations
+
+
+             TECHNOLOGY
+
+           John Carmack
+                 │
+    ┌────────────┴────────────┐
+    ▼                         ▼
+John Cash                 Brian Hook
+</code></pre></div>
+<p>game/network                 graphics/
+ systems                      hardware/API</p>
+<div class="highlight"><pre><span></span><code>             PRODUCTION
+
+           Kevin Cloud
+        project direction
+                 │
+   ┌─────────────┼──────────────┐
+   ▼             ▼              ▼
+ CODE           ART           DESIGN
+
+
+                ART
+
+    Adrian Carmack
+    Kevin Cloud
+    Paul Steed
+
+
+               DESIGN
+
+    Tim Willits
+    American McGee
+    Christian Antkow
+    Jennell Jaquays
+    Brandon James
+</code></pre></div>
+<p>Quake II credits практически буквально показывают эту новую трёхчастную development structure: три programmers, три основных artists и отдельную level-design группу, плюс business team Hollenshead.
+GitHub
++1</p>
+<p>И это уже не founder-band</p>
+<p>Сравним.</p>
+<p>1991
+идея возникла
+↓
+кто свободен —
+тот делает
+1997
+новый rendering feature</p>
+<p>↓</p>
+<p>ENGINEERING</p>
+<p>новый monster</p>
+<p>↓</p>
+<p>ART
++
+game programming
++
+level placement</p>
+<p>schedule / integration</p>
+<p>↓</p>
+<p>PROJECT DIRECTION</p>
+<p>Уже существует настоящая organizational topology.</p>
+<p>Пусть компания по-прежнему маленькая.</p>
+<p>Но дух старой id всё равно сохраняется в трёх вещах
+1. Очень мало людей</p>
+<p>Никакой армии developers.</p>
+<ol>
+<li>Каждый человек должен быть сильным и автономным</li>
+</ol>
+<p>Не interchangeable resource.</p>
+<ol>
+<li>Технология остаётся первичным конкурентным преимуществом</li>
+</ol>
+<p>Не narrative department.</p>
+<p>Не IP catalogue.</p>
+<p>Не marketing.</p>
+<p>Именно:</p>
+<p>ENGINE</p>
+<p>остаётся центром self-image компании.</p>
+<p>Поэтому post-Romero id — не просто «Carmack победил»</p>
+<p>Такая формулировка слишком личная.</p>
+<p>Правильнее:</p>
+<p>после Quake компания институционализировала ту сторону собственной культуры, которую Carmack всегда представлял сильнее всего.</p>
+<p>То есть:</p>
+<p>маленькая команда</p>
+<p>+</p>
+<p>сильная специализация</p>
+<p>+</p>
+<p>technology R&amp;D впереди продукта</p>
+<p>+</p>
+<p>минимум параллельных проектов</p>
+<p>+</p>
+<p>ясное ownership областей</p>
+<p>+</p>
+<p>централизованный technical authority</p>
+<p>+</p>
+<p>профессиональная business-side</p>
+<p>+</p>
+<p>отдельный project direction</p>
+<p>Это уже не improvisational startup Softdisk-беженцев.</p>
+<p>Это довольно чётко устроенная студия.</p>
+<p>А Romero-era принцип постепенно исчезает</p>
+<p>Раньше:</p>
+<p>TECHNOLOGY
+↕
+GAME DESIGN</p>
+<p>отношения почти равных сил.</p>
+<p>Теперь:</p>
+<p>TECHNOLOGY
+↓
+определяет пространство</p>
+<p>GAME DESIGN
+↓
+максимизирует его</p>
+<p>И это будет фундаментально определять:</p>
+<p>Quake II</p>
+<p>Quake III</p>
+<p>Doom 3</p>
+<p>Rage</p>
+<p>в разных формах.</p>
+<p>Поэтому Quake II важен не только как следующая игра</p>
+<p>Опять же, саму игру подробно разберём позже.</p>
+<p>Но организационно она — proof of concept новой id.</p>
+<p>GameSpot ещё до релиза видела маленькую, сфокусированную команду с явным распределением programmer/artist/designer и подчёркнутым отсутствием Quake-era deathmatch-раздолбайства; Cloud позже называл проект строительством новой команды, а Carmack — наиболее цельной production-машиной компании на тот момент.
+GameSpot
++2
+Game Developer
++2</p>
+<p>То есть результат после катастрофы:</p>
+<p>QUAKE
+сломал старую id</p>
+<p>↓</p>
+<p>массовый исход</p>
+<p>↓</p>
+<p>компания не пытается
+вернуть прежнюю
+творческую химию</p>
+<p>↓</p>
+<p>вместо этого
+строит новую систему
+Новая система
+JOHN CARMACK</p>
+<p>не обязан
+тащить весь project</p>
+<p>↓</p>
+<p>KEVIN CLOUD</p>
+<p>project direction
++
+coordination</p>
+<p>↓</p>
+<p>CASH + HOOK</p>
+<p>расширяют
+engineering capacity</p>
+<p>↓</p>
+<p>WILLITS + новая
+design generation</p>
+<p>производят gameplay
+без founder-level
+войны за власть</p>
+<p>↓</p>
+<p>ADRIAN + CLOUD</p>
+<p>сохраняют
+visual / ownership continuity</p>
+<p>↓</p>
+<p>HOLLENSHEAD</p>
+<p>профессионализирует
+business side</p>
+<p>И самое главное:</p>
+<p>ENGINE R&amp;D</p>
+<p>больше не является просто одной из функций компании.</p>
+<p>Она всё сильнее становится осью, вокруг которой компания организована.</p>
+<p>Поэтому термин technology-driven id здесь уже можно использовать буквально</p>
+<p>Не потому что id вдруг перестала любить игры.</p>
+<p>А потому что workflow теперь выглядит примерно так:</p>
+<p>1.</p>
+<p>Carmack / engineering
+исследуют,
+что следующее поколение
+technology позволит</p>
+<p>↓</p>
+<p>2.</p>
+<p>когда frame
+становится понятен,
+компания определяет
+game direction</p>
+<p>↓</p>
+<p>3.</p>
+<p>Cloud / production
+организует команду</p>
+<p>↓</p>
+<p>4.</p>
+<p>design + art
+строят game
+внутри technology</p>
+<p>↓</p>
+<p>5.</p>
+<p>engine team
+уже начинает
+думать дальше</p>
+<p>И это почти противоположно студии, где сначала существует:</p>
+<p>CREATIVE VISION</p>
+<p>а затем инженерия просто исполняет его.</p>
+<p>В сухом остатке
+AUGUST 1996</p>
+<p>Romero уходит</p>
+<p>↓</p>
+<p>старый баланс:</p>
+<p>Carmack
+VS
+Romero</p>
+<p>исчезает.</p>
+<p>↓</p>
+<p>OWNERSHIP</p>
+<p>John Carmack
+Adrian Carmack
+Kevin Cloud</p>
+<p>↓</p>
+<p>BUSINESS</p>
+<p>Todd Hollenshead</p>
+<p>↓</p>
+<p>PROJECT DIRECTION</p>
+<p>Kevin Cloud</p>
+<p>↓</p>
+<p>ENGINEERING</p>
+<p>Carmack
+Cash
+Hook</p>
+<p>↓</p>
+<p>DESIGN</p>
+<p>новая generation:
+Willits
+McGee
+Antkow
+Jaquays
+James</p>
+<p>↓</p>
+<p>маленькая
+сфокусированная
+команда</p>
+<p>↓</p>
+<p>TECHNOLOGY
+становится
+главным стратегическим
+двигателем</p>
+<p>Именно поэтому id после Romero нельзя описать просто как «та же id без Romero».</p>
+<p>Это уже другая компания.</p>
+<p>Старая id была союзом нескольких сильных авторов, чьи несовместимые идеи постоянно сталкивались — и иногда из этого столкновения рождались Keen, Doom и Quake.</p>
+<p>Новая id решила, что подобный хаос слишком дорог.</p>
+<p>Она сохранила маленький размер, автономию и элитных специалистов, но добавила project direction, профессиональный business management и специализированную engine team.</p>
+<p>И главное — впервые довольно чётко определила, какая из всех её старых суперсил является центральной:</p>
+<p>не shareware, не эксцентричная культура, не конкретный IP и даже не отдельный designer.</p>
+<p>Технология.</p>
+<p>А игру теперь должна была строить вокруг неё уже более дисциплинированная id Software.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p034">34. QuakeWorld и GLQuake как послерелизная лаборатория<a class="headerlink" href="#p034" title="Permanent link">¶</a></h2>
+<p>Обычно релиз игры означает примерно:</p>
+<p>разработка
+↓
+gold master
+↓
+релиз
+↓
+патчи / багфиксы
+↓
+следующий проект</p>
+<p>У Quake произошло иначе.</p>
+<p>После 22 июня 1996 года Carmack фактически продолжил использовать уже проданную игру как публичный R&amp;D-стенд следующего поколения id.</p>
+<p>Причём речь не о косметических патчах.</p>
+<p>За следующий год id радикально переделала две фундаментальные части Quake:</p>
+<p>NETWORKING
+↓
+QuakeWorld</p>
+<p>GRAPHICS
+↓
+GLQuake</p>
+<p>А затем начала сливать обе экспериментальные ветки обратно в архитектуру, из которой вырастет Quake II. Сам Carmack в апреле 1997 года прямо писал, что сочетание QuakeWorld networking и переключаемого rendering станет основой, на которую команда перенесёт работу Quake II.
+GitHub</p>
+<p>То есть:</p>
+<p>QUAKE 1996
+не конец engine development</p>
+<p>а</p>
+<p>публичная версия 1
+огромной продолжающейся
+engineering laboratory
+И QuakeWorld вообще начинается с признания Carmack: «я облажался»</p>
+<p>Это очень характерный эпизод.</p>
+<p>Оригинальный Quake уже имел принципиально более современную сетевую архитектуру, чем Doom:</p>
+<p>SERVER
+↓
+авторитетно симулирует world</p>
+<p>CLIENTS
+↓
+посылают input
+и получают результат</p>
+<p>На LAN это было великолепно.</p>
+<p>Проблема:</p>
+<p>интернет 1996 года — не LAN.</p>
+<p>Огромная часть игроков сидит через:</p>
+<p>28.8 kbps modem
+↓
+PPP
+↓
+ISP
+↓
+Internet</p>
+<p>и получает ping в сотни миллисекунд.</p>
+<p>Оригинальная модель Quake заставляла клиента ждать авторитетного ответа server, прежде чем игрок визуально ощущал результат собственного движения.</p>
+<p>Получалось:</p>
+<p>НАЖАЛ ВПЕРЁД
+↓
+packet → server
+↓
+server simulation
+↓
+packet → client
+↓
+ТЕПЕРЬ персонаж двигается</p>
+<p>На LAN задержка почти незаметна.</p>
+<p>При 300 ms:</p>
+<p>НАЖАЛ ВПЕРЁД</p>
+<p>...</p>
+<p>...</p>
+<p>ПОШЁЛ</p>
+<p>Для Quake, построенного на мгновенном movement и реакции, это почти убийство самой игры.</p>
+<p>И 2 августа 1996 года, всего через полтора месяца после релиза, Carmack публично написал, что скопировал Quake codebase и начал крупную отдельную переделку специально для Internet play.</p>
+<p>Название:</p>
+<p>QuakeWorld</p>
+<p>Причём он честно объяснил причину собственного просчёта:</p>
+<p>у него дома был T1, поэтому он просто плохо представлял реальную жизнь пользователей PPP/modem.</p>
+<p>В той же записи он оценивал типичный modem round trip как 300+ ms и буквально признавал: “I made a bad call.”
+Hugging Face</p>
+<p>Вот это чрезвычайно важный Carmack-паттерн:</p>
+<p>архитектурное решение
+оказалось неправильным</p>
+<p>↓</p>
+<p>не защищать решение</p>
+<p>↓</p>
+<p>НЕ ЛАТАТЬ</p>
+<p>↓</p>
+<p>переписать фундамент
+Причём он специально форкнул Quake, чтобы не быть связанным совместимостью</p>
+<p>Это тоже ключевой момент.</p>
+<p>Carmack не хотел:</p>
+<p>Quake 1.01
+↓
+маленький fix
+↓
+1.02
+↓
+ещё fix</p>
+<p>Он сделал:</p>
+<div class="highlight"><pre><span></span><code>       Quake 1.x
+      /         \
+</code></pre></div>
+<p>bugfix branch     QuakeWorld
+                   experimental
+                   incompatible</p>
+<p>В августовском .plan он прямо пишет:</p>
+<p>старый Quake продолжат чинить;</p>
+<p>новый код может позволить себе major changes;</p>
+<p>QuakeWorld пока будет исключительно internet-oriented;</p>
+<p>client и server будут отдельными executable;</p>
+<p>позже лучшие решения можно вернуть в следующую игру.
+GitHub
++1</p>
+<p>То есть released Quake превращается в:</p>
+<p>stable product</p>
+<p>+</p>
+<p>experimental branch</p>
+<p>Практически software engineering model, которую сегодня совершенно нормально видеть у браузера или серверного framework.</p>
+<p>Для игры 1996 года это выглядит довольно радикально.</p>
+<p>Первое, что Carmack сделал, — выкинул старый network layer</p>
+<p>Не:</p>
+<p>оптимизировал несколько packets.</p>
+<p>Он посчитал исходную основу ошибочной.</p>
+<p>Первоначальный код вырос из модели reliable stream, к которой позже прикрутили unreliable channel для Internet play.</p>
+<p>Carmack охарактеризовал результат очень просто:</p>
+<p>большой mess.</p>
+<p>И сделал новую архитектуру, где unreliable packets становятся основной primitive, а reliability там, где она требуется, строится уже поверх этого.
+Hugging Face</p>
+<p>То есть:</p>
+<p>OLD</p>
+<p>reliable communication
+как фундамент</p>
+<p>+
+сбоку unreliable</p>
+<p>становится:</p>
+<p>NEW</p>
+<p>unreliable datagrams
+как реальность Internet</p>
+<p>+
+явно решаем,
+что действительно
+нужно гарантировать</p>
+<p>Очень важная смена мышления.</p>
+<p>Затем появляется bandwidth awareness</p>
+<p>Оригинальная игра могла отправлять данные быстрее, чем modem способен физически передать.</p>
+<p>Тогда происходит худшая вещь для twitch game:</p>
+<p>данные прибывают
+быстрее канала
+↓
+network buffers
+накапливаются
+↓
+ping растёт
+↓
+ещё packets
+↓
+ещё latency</p>
+<p>Carmack вместо максимизации throughput начинает оптимизировать latency.</p>
+<p>Например, QuakeWorld должен понимать:</p>
+<p>этот modem реально
+переваривает примерно
+2000 bytes/sec</p>
+<p>↓</p>
+<p>НЕ ОТПРАВЛЯТЬ
+больше</p>
+<p>Пусть update rate иногда снизится.</p>
+<p>Главное:</p>
+<p>НЕ СОЗДАВАТЬ
+ОЧЕРЕДЬ ИЗ ПРОШЛОГО</p>
+<p>Он прямо объяснял этот подход в первой QuakeWorld design-записи.
+Hugging Face</p>
+<p>Для realtime multiplayer это фундаментальный принцип:</p>
+<p>свежая неполная информация часто полезнее идеальной информации, пришедшей слишком поздно.</p>
+<p>Но главная революция — client-side prediction</p>
+<p>Оригинальный Quake:</p>
+<p>CLIENT:
+«я нажал W»</p>
+<p>↓</p>
+<p>SERVER:
+«да, ты действительно
+можешь пройти вперёд»</p>
+<p>↓</p>
+<p>CLIENT:
+показывает движение</p>
+<p>QuakeWorld:</p>
+<p>CLIENT:
+«я нажал W»</p>
+<p>↓</p>
+<p>CLIENT:
+НЕМЕДЛЕННО предполагает,
+куда я должен переместиться</p>
+<p>↓</p>
+<p>показывает движение</p>
+<p>↓</p>
+<p>параллельно:
+server считает
+авторитетный результат</p>
+<p>↓</p>
+<p>если prediction расходится
+с server</p>
+<p>↓</p>
+<p>client корректируется</p>
+<p>Carmack в августе 1996-го называл это “biiiig architectural change”: клиент теперь сам должен знать solidity, friction, gravity и часть movement simulation, хотя окончательное слово всё равно остаётся за server.
+Hugging Face</p>
+<p>Это фундаментальная смена роли клиента.</p>
+<p>До:</p>
+<p><strong>CLIENT</strong></p>
+<p>терминал</p>
+<p>После:</p>
+<p><strong>CLIENT</strong></p>
+<p>локальный predictor
+авторитетного мира</p>
+<p>И этот принцип затем станет стандартным инструментом realtime network games.</p>
+<p>Причём Carmack сначала переборщил — и публичные тесты его поправили</p>
+<p>Вот здесь особенно хорошо видно «лабораторию».</p>
+<p>Можно было написать статью:</p>
+<p>client prediction solved.</p>
+<p>Но реальные игроки мгновенно обнаружили проблемы.</p>
+<p>Если client слишком далеко симулирует будущее самостоятельно:</p>
+<p>client думает:
+rocket уже здесь</p>
+<p>server:
+нет,
+на самом деле rocket
+ещё там</p>
+<p>Или:</p>
+<p>client:
+я убежал</p>
+<p>server:
+нет,
+тебя там уже задели</p>
+<p>Возникают абсурдные расхождения.</p>
+<p>10 августа 1996 года, всего через восемь дней после первоначального плана, Carmack уже пишет, что сильную prediction пришлось ограничить: симулировать ~300 ms будущего в twitch-shooter оказалось слишком рискованно. Он оставил более короткое prediction-window, достаточное для отзывчивости и сглаживания arrival jitter.
+Hugging Face</p>
+<p>То есть цикл:</p>
+<p>2 августа</p>
+<p>ИДЕЯ:
+агрессивный prediction</p>
+<p>↓</p>
+<p>эксперимент</p>
+<p>↓</p>
+<p>8 дней</p>
+<p>↓</p>
+<p>ВЫВОД:
+слишком много prediction
+ломает Quake</p>
+<p>↓</p>
+<p>перестройка</p>
+<p>Это буквально исследовательская разработка уже после продажи игры.</p>
+<p>Даже несколько байтов вдруг становятся игровой механикой</p>
+<p>На modem:</p>
+<p><strong>каждый byte</strong></p>
+<p>время передачи</p>
+<p>Carmack в августе писал, что за один день выкинул в среднем:</p>
+<p>17 bytes
+server → client</p>
+<p>8 bytes
+client → server</p>
+<p>и подчёркивал:</p>
+<p>на modem каждый сэкономленный байт фактически означает уменьшение latency.
+Hugging Face</p>
+<p>Это хороший пример того, насколько глубоко id относилась к responsiveness.</p>
+<p>Для игрока:</p>
+<p>QuakeWorld
+«ощущается быстрее»</p>
+<p>Для Carmack:</p>
+<p>минус несколько bytes
+в packet structure</p>
+<p>+</p>
+<p>другой scheduling input</p>
+<p>+</p>
+<p>prediction</p>
+<p>+</p>
+<p>bandwidth estimation</p>
+<p>Game feel оказывается сетевой инженерией.</p>
+<p>К сентябрю QuakeWorld уже тестируют реальные люди</p>
+<p>18 сентября 1996 года Carmack пишет:</p>
+<p>мы beta-test'им
+первый QuakeWorld</p>
+<p>И уже может оценивать поведение не на бумаге, а на реальных соединениях.</p>
+<p>Его вывод:</p>
+<p>latency действительно заметно ниже;</p>
+<p>control отзывчивее;</p>
+<p>отдельная потеря packet практически не ощущается;</p>
+<p>burst packet loss всё ещё неприятен;</p>
+<p>стабильный 28.8 link может дать очень приличную игру;</p>
+<p>ISP в идеале должен ставить QuakeWorld server прямо рядом со своими modem POP, чтобы сократить маршрут.
+Hugging Face</p>
+<p>Вот здесь id уже мыслит не только:</p>
+<p>GAME CLIENT</p>
+<p>а:</p>
+<p>NETWORK TOPOLOGY</p>
+<p>ISP</p>
+<p>SERVER PLACEMENT</p>
+<p>LATENCY</p>
+<p>PACKET LOSS</p>
+<p>То есть game design выходит далеко за пределы executable.</p>
+<p>QuakeWorld вышел в декабре 1996-го — и master server сразу чуть не умер</p>
+<p>Публичный rollout произошёл в декабре.</p>
+<p>17 декабря Carmack написал:</p>
+<p>QuakeWorld went up
+↓
+около 4000 пользователей
+↓
+master server exploded</p>
+<p>После чего пришлось усиливать server-side infrastructure.
+Hugging Face</p>
+<p>Это почти идеальная иллюстрация новой модели id:</p>
+<p>выпустили эксперимент</p>
+<p>↓</p>
+<p>НЕПРЕДСКАЗУЕМАЯ
+РЕАЛЬНАЯ НАГРУЗКА</p>
+<p>↓</p>
+<p>система сломалась</p>
+<p>↓</p>
+<p>чинить</p>
+<p>Не лабораторный benchmark.</p>
+<p>Тысячи настоящих людей.</p>
+<p>И релиз вовсе не означал «QuakeWorld готов»</p>
+<p>Вот здесь отличие от boxed-game мышления становится особенно сильным.</p>
+<p>В феврале 1997-го Carmack уже переписывает protocol снова.</p>
+<p>Он повышает масштаб до:</p>
+<p>32 players</p>
+<p>оптимизирует multiplayer, чтобы удалённые игроки не съедали бессмысленно modem bandwidth, и прямо предупреждает:</p>
+<p>следующая версия
+будет несовместима
+с текущей</p>
+<p>client protocol
+изменился</p>
+<p>server protocol
+изменился</p>
+<p>GitHub</p>
+<p>То есть live users реально находятся на:</p>
+<p>RESEARCH BRANCH</p>
+<p>Не:</p>
+<p>compatibility forever.</p>
+<p>А:</p>
+<p>если следующий protocol сильно лучше — сломаем compatibility.</p>
+<p>В марте Carmack опять собирается feature-freeze — и опять не выдерживает</p>
+<p>Это очень Carmack.</p>
+<p>5 марта 1997 года:</p>
+<p>думал,
+что feature freeze
+уже неделю как начался</p>
+<p>↓</p>
+<p>два дня назад:</p>
+<p>«не удержался»</p>
+<p>↓</p>
+<p>начал делать
+ещё одну большую
+network improvement</p>
+<p>Обоснование:</p>
+<p>лучше сломать protocol сейчас один раз, чем потом ломать ещё раз.
+GitHub</p>
+<p>Это идеальный пример post-release Quake как engineering laboratory.</p>
+<p>Коммерческий продукт обычно говорит:</p>
+<p>НЕ ЛОМАЙТЕ
+ПОЛЬЗОВАТЕЛЯМ НИЧЕГО</p>
+<p>Carmack:</p>
+<p>мы всё равно
+переделываем эту систему</p>
+<p>↓</p>
+<p>лучше сделать
+правильно сейчас
+2 апреля выходит «второе поколение» QuakeWorld</p>
+<p>И Carmack уже пишет не просто о Quake patch.</p>
+<p>Он подводит R&amp;D-результаты.</p>
+<p>Новая версия:</p>
+<p>заметно улучшила gameplay;</p>
+<p>лучше работает с modem;</p>
+<p>минимизирует packet sizes;</p>
+<p>продолжает развивать prediction;</p>
+<p>планирует лучшие spectator options;</p>
+<p>будет основой следующего networking architecture.
+GitHub</p>
+<p>И ключевая строка:</p>
+<p>сочетание QuakeWorld networking и switchable rendering станет базой, куда id перенесёт Quake II.
+GitHub</p>
+<p>То есть:</p>
+<p>QUAKEWORLD</p>
+<p>не patch</p>
+<p>а:</p>
+<p>QUAKE II NETWORK R&amp;D
+которым сегодня
+уже играют тысячи людей
+Параллельно происходит почти то же самое с графикой</p>
+<p>Quake при релизе — прежде всего software-rendered игра.</p>
+<p>То есть Pentium самостоятельно занимается:</p>
+<p>transform
+clip
+texture mapping
+lighting
+rasterization</p>
+<p>Но рынок PC прямо во время жизни Quake начинает меняться:</p>
+<p>3dfx Voodoo
+Rendition Vérité
+PowerVR
+Intergraph
+и т.д.</p>
+<p>У потребительского PC впервые появляется отдельное железо, способное серьёзно ускорять 3D.</p>
+<p>Carmack не говорит:</p>
+<p>это уже задача следующей игры.</p>
+<p>Он начинает переписывать уже вышедший Quake под новое поколение hardware.</p>
+<p>Так появляется GLQuake</p>
+<p>22 января 1997 года Carmack выкладывает preliminary GLQuake и специальный 3dfx driver в idstuff/unsup.</p>
+<p>Причём источник почти комично показывает темп:</p>
+<p>релиз</p>
+<p>↓</p>
+<p>ЧЕРЕЗ ЧАС</p>
+<p>3dfx присылает
+новый VXD</p>
+<p>↓</p>
+<p>Carmack
+перепаковывает release</p>
+<p>GitHub
++1</p>
+<p>Вот буквально новая PC-экосистема:</p>
+<p>id
+↓
+игра</p>
+<p>↕</p>
+<p>3dfx
+↓
+driver</p>
+<p>↕</p>
+<p>players
+↓
+real hardware tests</p>
+<p>Все три стороны практически одновременно меняют систему.</p>
+<p>И слово unsupported здесь крайне важно</p>
+<p>GLQuake первоначально лежит не как:</p>
+<p>OFFICIAL
+Quake 1.10</p>
+<p>а как:</p>
+<p>UNSUPPORTED
+experimental build</p>
+<p>То есть id может позволить себе:</p>
+<p>попробуйте</p>
+<p>↓</p>
+<p>сломалось?
+сообщите</p>
+<p>↓</p>
+<p>мы тоже
+не гарантировали</p>
+<p>Для Carmack это практически идеальная среда R&amp;D.</p>
+<p>Большая аудитория получает bleeding-edge technology.</p>
+<p>Он получает:</p>
+<p>огромный hardware test matrix</p>
+<p>которого невозможно построить внутри маленького офиса.</p>
+<p>И community мгновенно начинает находить баги, которые id не нашла</p>
+<p>25 января, всего через три дня после первой GLQuake-версии, Carmack пишет:</p>
+<p>сторонний goats demo выявил crash с 256×256 textures;</p>
+<p>другой пользовательский demo показал проблемы с нестандартными player models и colormaps.
+GitHub</p>
+<p>То есть моддинг-экосистема Doom/Quake теперь выполняет ещё одну функцию:</p>
+<p><strong>COMMUNITY CONTENT</strong></p>
+<p>FUZZ TESTING ENGINE</p>
+<p>Игроки делают вещи, которые штатная игра id вообще не делает.</p>
+<p>Именно поэтому обнаруживаются assumptions внутри renderer:</p>
+<p>«никто никогда
+не даст нам такую texture»</p>
+<p>↓</p>
+<p>community:</p>
+<p>ДЕРЖИ</p>
+<p>↓</p>
+<p>CRASH</p>
+<p>↓</p>
+<p>Carmack чинит.</p>
+<p>Это исключительно ценный feedback loop.</p>
+<p>GLQuake меняет не только скорость, но и сам вид PC-игры</p>
+<p>Software Quake имеет:</p>
+<p>жёсткие пиксели</p>
+<p>ограниченное разрешение</p>
+<p>CPU-bound rendering</p>
+<p>GLQuake может использовать hardware для:</p>
+<p>bilinear texture filtering</p>
+<p>высоких resolutions</p>
+<p>более плавного rendering</p>
+<p>улучшенных lighting effects</p>
+<p>accelerated 3D</p>
+<p>Современники описывали переход почти как взгляд на знакомый Quake заново: те же карты и assets вдруг выглядели как продукт следующего поколения.</p>
+<p>То есть:</p>
+<p>GAME DATA
+1996</p>
+<p>+</p>
+<p>RENDERER
+1997</p>
+<p>=</p>
+<p>визуально
+новая игра</p>
+<p>Это чрезвычайно важное открытие для id.</p>
+<p>Renderer теперь может эволюционировать независимо от content.</p>
+<p>И Quake становится battlefield нескольких renderer</p>
+<p>На короткое время существует почти безумный зоопарк:</p>
+<p>Quake
+software renderer</p>
+<p>WinQuake</p>
+<p>VQuake
+Rendition Vérité</p>
+<p>GLQuake
+OpenGL / 3dfx etc.</p>
+<p>QuakeWorld</p>
+<p>GLQuakeWorld</p>
+<p>Carmack в феврале 1997-го уже прямо пишет:</p>
+<p>это надо чистить.</p>
+<p>Он хочет одну новую rendering architecture, которая позволит объединить:</p>
+<p>regular Quake</p>
+<p>GLQuake</p>
+<p>Windows VQuake</p>
+<p>под более общей структурой.
+GitHub</p>
+<p>То есть эти public forks становятся исследовательскими ветками, из которых затем выбирается следующая архитектура.</p>
+<p>И вот тут начинается Quake II прямо внутри Quake I</p>
+<p>Это, пожалуй, центральная мысль пункта.</p>
+<p>23 февраля 1997 года Carmack пишет:</p>
+<p>я определю
+новую rendering architecture</p>
+<p>↓</p>
+<p>разрабатывать её
+буду поверх QuakeWorld</p>
+<p>↓</p>
+<p>если всё хорошо</p>
+<p>↓</p>
+<p>она станет
+new guts of Quake 2</p>
+<p>GitHub</p>
+<p>То есть Quake II engine не начинается так:</p>
+<p>NEW PROJECT DIRECTORY
+↓
+main.c</p>
+<p>Он постепенно появляется как:</p>
+<p>живой QuakeWorld branch
+↓
+новый network code
+↓
+новый renderer abstraction
+↓
+hardware paths
+↓
+новые lessons
+↓
+BREAK COMPATIBILITY
+↓
+Quake II</p>
+<p>Это практически continuous evolutionary development.</p>
+<p>Carmack буквально использует QuakeWorld, чтобы не мешать другим программистам</p>
+<p>Ещё одна отличная инженерная деталь.</p>
+<p>Quake codebase всё ещё нужен другим людям.</p>
+<p>Michael Abrash и John Cash занимаются своими областями.</p>
+<p>Carmack хочет:</p>
+<p>hack and slash
+through the codebase</p>
+<p>и не хочет постоянно ломать им работу.</p>
+<p>Поэтому экспериментирует в QuakeWorld branch.</p>
+<p>Он сам это прямо объясняет.
+GitHub</p>
+<p>Получается:</p>
+<p>MAIN PRODUCT
+Quake</p>
+<p>↓</p>
+<p>EXPERIMENTAL BRANCH
+QuakeWorld</p>
+<p>↓</p>
+<p>NEXT PRODUCT ARCHITECTURE
+Quake II</p>
+<p>Очень современная инженерная модель, возникшая фактически естественным образом.</p>
+<p>И даже Apple получает не «Quake port», а кусок будущего Quake II</p>
+<p>В мае 1997-го Apple неожиданно хочет показать Quake на WWDC.</p>
+<p>Carmack за несколько дней делает порт под будущую Rhapsody.</p>
+<p>Но что именно он портирует?</p>
+<p>Не shipping Quake.</p>
+<p>Он пишет:</p>
+<p>это порт текущего research codebase, где QuakeWorld уже сливается в Quake II.</p>
+<p>Поэтому эта версия на тот момент вообще умеет только network play.
+GitHub</p>
+<p>То есть к весне 1997 года граница:</p>
+<p>Quake</p>
+<p>и:</p>
+<p>Quake II R&amp;D</p>
+<p>уже настолько размыта, что внешний platform prototype фактически работает на переходной эволюционной форме между двумя играми.</p>
+<p>Но Carmack всё-таки упирается в цену backward compatibility</p>
+<p>И здесь лабораторный период получает естественный конец.</p>
+<p>Пока он пытается одновременно:</p>
+<p>развивать QuakeWorld</p>
+<p>поддерживать GLQuake</p>
+<p>не ломать Quake 1 maps/data</p>
+<p>и</p>
+<p>строить Quake II</p>
+<p>возникает всё больше ограничений.</p>
+<p>22 мая 1997 года Carmack пишет, что совместимость с Quake 1 data уже реально держит его назад.</p>
+<p>Формулировка чрезвычайно характерная:</p>
+<p>stagnant codebase</p>
+<p>И он объявляет, что теперь должен необратимо сломать совместимость, чтобы двигать новый BSP format и будущую технологию дальше.
+GitHub</p>
+<p>То есть:</p>
+<p>QUAKE
+был лабораторией</p>
+<p>пока</p>
+<p>стоимость совместимости
+не стала выше,
+чем ценность лаборатории</p>
+<p>После этого:</p>
+<p>BREAK
+↓
+Quake II
+И он отдаёт старую лабораторию community</p>
+<p>Вот очень id-шный финал.</p>
+<p>Carmack понимает:</p>
+<p>я больше
+не могу тратить время
+на QuakeWorld</p>
+<p>Но QuakeWorld community всё ещё огромна.</p>
+<p>Решение:</p>
+<p>Dave "Zoid" Kirsch
++
+Jack Mathews</p>
+<p>получают фактически разрешение продолжать и расширять QuakeWorld codebase. Carmack в мае 1997-го пишет, что это может даже пойти проекту на пользу, потому что они уделят ему больше внимания, чем теперь способен он.
+GitHub</p>
+<p>Позднее, уже в 1998-м, Carmack прямо пишет, что Zoid имеет ownership Quake/GLQuake/QuakeWorld codebases в практическом смысле: id сама больше не собирается их модифицировать, поэтому ему дана большая свобода.
+GitHub</p>
+<p>Это очень интересная модель жизненного цикла:</p>
+<p>id создаёт technology</p>
+<p>↓</p>
+<p>id использует её
+как product</p>
+<p>↓</p>
+<p>id использует её
+как R&amp;D branch</p>
+<p>↓</p>
+<p>следующее поколение
+забирает лучшие идеи</p>
+<p>↓</p>
+<p>старая technology
+передаётся людям,
+которые всё ещё
+хотят её развивать</p>
+<p>Практически экологическая утилизация кода.</p>
+<p>И community здесь уже не только тестеры</p>
+<p>Появляются люди вроде Dave “Zoid” Kirsch из Threewave.</p>
+<p>Zoid сделал Quake Capture the Flag, а затем стал настолько значимой фигурой вокруг networking/ports, что в январе 1997 Carmack публично объявил его человеком, официально отвечающим за Unix-порты Quake/QuakeWorld — причём это была волонтёрская роль.
+GitHub</p>
+<p>То есть граница:</p>
+<p>ID EMPLOYEE</p>
+<p>VS</p>
+<p>PLAYER / MODDER</p>
+<p>становится ещё более размытой.</p>
+<p>Сначала community делает WAD.</p>
+<p>Потом QuakeC-mod.</p>
+<p>Теперь community-разработчик фактически обслуживает официальную платформенную ветку Quake.</p>
+<p>Это продолжение той же кадровой модели, которую мы видели с Tim Willits.</p>
+<p>И QuakeWorld практически мгновенно поглощает моды</p>
+<p>Team Fortress существовал для обычного Quake уже с августа 1996 года.</p>
+<p>22 декабря 1996-го, практически сразу после появления QuakeWorld, выходит Team Fortress 2.0 под QuakeWorld.
+GitHub
++1</p>
+<p>Это очень важно для самой лаборатории:</p>
+<p>Carmack
+меняет networking</p>
+<p>↓</p>
+<p>modders
+немедленно используют
+новую networking platform</p>
+<p>↓</p>
+<p>реальные игроки
+нагружают её
+совсем иными game rules</p>
+<p>↓</p>
+<p>новые bugs /
+bandwidth patterns /
+server demands</p>
+<p>То есть tests уже не только:</p>
+<p>vanilla deathmatch</p>
+<p>а:</p>
+<p>CTF
+Team Fortress
+custom maps
+custom models
+custom sounds</p>
+<p>Фактически community создаёт огромный combinatorial test suite, который id никогда не смогла бы произвести самостоятельно.</p>
+<p>QuakeWorld ещё и впервые делает dedicated Internet server самостоятельным центром ecosystem</p>
+<p>Original Quake уже имел dedicated server.</p>
+<p>Но QuakeWorld начинает проектироваться именно вокруг мира:</p>
+<p>SERVER
+где-то в Internet</p>
+<p>↓</p>
+<p>игроки
+из разных мест</p>
+<p>↓</p>
+<p>master server /
+server browser tools</p>
+<p>↓</p>
+<p>remote administration</p>
+<p>↓</p>
+<p>persistent community</p>
+<p>Carmack добавляет rcon, позволяющий администратору удалённо:</p>
+<p>менять map</p>
+<p>менять cvars</p>
+<p>банить игроков</p>
+<p>останавливать server</p>
+<p>и делать это даже без входа на заполненный сервер.
+Hugging Face</p>
+<p>То есть вокруг игры начинает появляться уже server operations layer.</p>
+<p>Не просто:</p>
+<p>мы сегодня
+с друзьями запустили матч</p>
+<p>а:</p>
+<p>я АДМИНИСТРИРУЮ
+публичный игровой сервер</p>
+<p>Это фундамент будущего online FPS infrastructure.</p>
+<p>Но id здесь снова обучается об живых людей довольно болезненно</p>
+<p>Например, централизованный master server сначала выглядит удобно:</p>
+<p>все QuakeWorld servers
+регистрируются здесь</p>
+<p>↓</p>
+<p>id знает
+всю сеть</p>
+<p>↓</p>
+<p>игроки находят servers</p>
+<p>Потом начинают обсуждаться:</p>
+<p>single point of failure;</p>
+<p>network dependency;</p>
+<p>privacy/centralization;</p>
+<p>масштаб.</p>
+<p>Уже 10 августа 1996-го Carmack после аргументов community меняет первоначальный план и соглашается, что одного global master недостаточно; он планирует возможность нескольких доверенных master servers.
+Hugging Face</p>
+<p>То есть даже инфраструктурный design:</p>
+<p>централизация
+VS
+распределение</p>
+<p>обсуждается фактически публично с пользователями.</p>
+<p>В этом и заключается уникальность .plan-эпохи id</p>
+<p>Сегодня AAA studio:</p>
+<p>R&amp;D
+↓
+NDA
+↓
+closed beta
+↓
+PR-approved dev diary</p>
+<p>Carmack:</p>
+<p>сегодня
+я переписал protocol</p>
+<p>↓</p>
+<p>вот почему</p>
+<p>↓</p>
+<p>вот что
+оказалось плохой идеей</p>
+<p>↓</p>
+<p>завтра
+попробую другое</p>
+<p>И всё это читают:</p>
+<p>игроки;</p>
+<p>modders;</p>
+<p>hardware vendors;</p>
+<p>ISP;</p>
+<p>конкурирующие programmers;</p>
+<p>журналисты.</p>
+<p>Quake/QuakeWorld development становится практически публичным инженерным дневником.</p>
+<p>Это уникальная форма отношений id с собственной аудиторией.</p>
+<p>GLQuake делает то же самое с hardware vendors</p>
+<p>Очень показательная цепочка:</p>
+<p>Carmack
+пишет GLQuake
+↓
+выкладывает
+unsupported build</p>
+<p>↓</p>
+<p>тысячи игроков
+запускают
+на реальном железе</p>
+<p>↓</p>
+<p>выясняются
+driver bugs</p>
+<p>↓</p>
+<p>3dfx / другие vendors
+правят drivers</p>
+<p>↓</p>
+<p>Carmack
+меняет renderer</p>
+<p>↓</p>
+<p>следующий build</p>
+<p>То есть игроки фактически выполняют distributed compatibility testing для:</p>
+<p>id</p>
+<p>И</p>
+<p>3D card manufacturers</p>
+<p>Одновременно.</p>
+<p>И именно поэтому следующий пункт про id и революцию 3D-видеокарт вообще существует: связь становится двусторонней.</p>
+<p>Но сейчас важно лишь зафиксировать производственную модель.</p>
+<p>Quake после релиза продолжает фундаментально меняться в двух измерениях
+Сетевая ветка
+QUAKE
+↓
+реальные modem players:
+«лагает»
+↓
+Carmack:
+я неправильно спроектировал networking
+↓
+QuakeWorld
+↓
+unreliable-first protocol
+bandwidth awareness
+client-side prediction
+server infrastructure
+↓
+тысячи users
+↓
+ещё protocol revisions
+↓
+Quake II networking
+Графическая ветка
+QUAKE
+software renderer
+↓
+появляется consumer 3D hardware
+↓
+GLQuake
+↓
+real users + real drivers
+↓
+bugs / compatibility /
+performance lessons
+↓
+renderer abstraction
+↓
+Quake II graphics architecture</p>
+<p>Две системы развиваются поверх уже выпущенной игры.</p>
+<p>И это радикально отличается от обычного expansion pack</p>
+<p>Mission pack:</p>
+<p>новые levels
+новые enemies
+новое оружие</p>
+<p>QuakeWorld / GLQuake:</p>
+<p>та же игра</p>
+<p>НО</p>
+<p>другая фундаментальная
+инженерная архитектура</p>
+<p>То есть id не просто продолжает продавать content.</p>
+<p>Она продолжает исследовать, что такое сам Quake как software system.</p>
+<p>При этом Carmack совершенно не боится признать, что shipping architecture была неправильной</p>
+<p>Это, пожалуй, одна из сильнейших инженерных черт компании того периода.</p>
+<p>Quake уже:</p>
+<p>вышел</p>
+<p>получил восторги</p>
+<p>признан технологической революцией</p>
+<p>Можно сказать:</p>
+<p>отлично, следующий проект.</p>
+<p>Вместо этого главный архитектор пишет:</p>
+<p>я плохо понял
+реальность modem users</p>
+<p>и переписывает network stack.</p>
+<p>Потом:</p>
+<p>prediction architecture
+слишком агрессивна</p>
+<p>и снова переделывает.</p>
+<p>Потом:</p>
+<p>Quake 1 compatibility
+мешает новой технологии</p>
+<p>и наконец ломает compatibility.</p>
+<p>То есть авторитет архитектуры:</p>
+<p>НЕ В ТОМ,
+что её написал Carmack</p>
+<p>а:</p>
+<p>В ТОМ,
+что она продолжает
+выдерживать реальность</p>
+<p>Если не выдерживает —</p>
+<p>ВЫКИНУТЬ
+И это ещё одно отличие post-Romero id</p>
+<p>Интересная ирония.</p>
+<p>Game production после Quake становится более дисциплинированным:</p>
+<p>меньше хаоса</p>
+<p>Но technology side одновременно получает почти абсолютную свободу:</p>
+<p>QuakeWorld
+GLQuake
+new BSP
+new renderer
+new protocol</p>
+<p>То есть хаос не исчез.</p>
+<p>Он переносится в отдельную инженерную лабораторию, где его можно позволить себе без разрушения всей content team.</p>
+<p>Это как раз та более зрелая модель, о которой мы говорили в пункте 33.</p>
+<p>Carmack сам практически обозначает границу лаборатории</p>
+<p>В мае 1997-го:</p>
+<p>GLQuake и QuakeWorld
+были fun to do</p>
+<p>Но backward compatibility начинает мешать новому engine.</p>
+<p>Значит:</p>
+<p>эксперимент
+выполнил свою функцию</p>
+<p>Дальше:</p>
+<p>НЕ ПОЛИРОВАТЬ
+БЕСКОНЕЧНО</p>
+<p>а:</p>
+<p>забрать уроки
+↓
+перейти в Quake II</p>
+<p>GitHub</p>
+<p>Это очень id-шная граница.</p>
+<p>Поэтому QuakeWorld и GLQuake — не просто две улучшенные версии Quake</p>
+<p>Они показывают новый production loop компании:</p>
+<p>SHIP GAME</p>
+<p>↓</p>
+<p>миллионы игроков
+получают game</p>
+<p>↓</p>
+<p>реальная среда
+выявляет ограничения</p>
+<p>↓</p>
+<p>Carmack
+делает experimental fork</p>
+<p>↓</p>
+<p>PUBLIC RELEASE</p>
+<p>↓</p>
+<p>players / modders /
+hardware vendors /
+server admins
+нагружают fork</p>
+<p>↓</p>
+<p>bugs
+feedback
+performance data
+unexpected use cases</p>
+<p>↓</p>
+<p>ещё architecture changes</p>
+<p>↓</p>
+<p>лучшие решения
+переезжают
+в NEXT ENGINE</p>
+<p>↓</p>
+<p>старую ветку
+отдают community</p>
+<p>Это практически:</p>
+<p>публичная evolutionary разработка движка.</p>
+<p>И особенно важно, что аудитория здесь становится частью R&amp;D id</p>
+<p>В Doom community была:</p>
+<p>CONTENT LAB</p>
+<p>Тысячи людей исследуют:</p>
+<p>уровни;</p>
+<p>WAD;</p>
+<p>mods;</p>
+<p>gameplay possibilities.</p>
+<p>После Quake она становится ещё и:</p>
+<p>ENGINE LAB</p>
+<p>Игроки тестируют:</p>
+<p>modem conditions;</p>
+<p>packet loss;</p>
+<p>серверы;</p>
+<p>32-player loads;</p>
+<p>custom models;</p>
+<p>нестандартные textures;</p>
+<p>OpenGL drivers;</p>
+<p>hardware accelerators;</p>
+<p>mods;</p>
+<p>новые server architectures.</p>
+<p>То есть:</p>
+<p>id team
+≈ десяток человек</p>
+<p>получает вокруг технологии:</p>
+<p>тысячи
+бесплатных
+реальных test cases</p>
+<p>И это колоссальное конкурентное преимущество.</p>
+<p>Полная цепочка
+22 июня 1996</p>
+<p>QUAKE SHIPS</p>
+<p>↓</p>
+<p>реальные Internet players:</p>
+<p>networking
+слишком latent</p>
+<p>↓</p>
+<p>2 августа</p>
+<p>Carmack:
+«I made a bad call»</p>
+<p>fork Quake
+↓
+QuakeWorld</p>
+<p>↓</p>
+<p>новый protocol</p>
+<p>bandwidth control</p>
+<p>client prediction</p>
+<p>server infrastructure</p>
+<p>↓</p>
+<p>beta users</p>
+<p>↓</p>
+<p>prediction переделывается</p>
+<p>protocol переделывается</p>
+<p>master infrastructure
+переделывается</p>
+<p>↓</p>
+<p>декабрь 1996</p>
+<p>QuakeWorld public
+↓
+тысячи users
+↓
+master server падает</p>
+<p>↓</p>
+<p>параллельно:</p>
+<p>consumer 3D cards
+становятся реальностью</p>
+<p>↓</p>
+<p>22 января 1997</p>
+<p>GLQuake</p>
+<p>↓</p>
+<p>players
++
+3dfx
++
+community mods</p>
+<p>↓</p>
+<p>bugs / drivers /
+performance feedback</p>
+<p>↓</p>
+<p>февраль–апрель 1997</p>
+<p>Carmack начинает
+сливать:</p>
+<p>QuakeWorld networking
++
+GL rendering
++
+новую architecture</p>
+<p>↓</p>
+<p>QUAKE II FOUNDATION</p>
+<p>↓</p>
+<p>май 1997</p>
+<p>Quake 1 compatibility
+начинает мешать</p>
+<p>↓</p>
+<p>BREAK</p>
+<p>↓</p>
+<p>QuakeWorld / GLQuake
+передаются дальше
+community maintainers</p>
+<p>↓</p>
+<p>id
+идёт в следующее поколение</p>
+<p>И вот здесь особенно хорошо видно, какой компанией стала id после Quake.</p>
+<p>Раньше её лабораторией была следующая маленькая игра:</p>
+<p>Hovertank
+→ Catacomb
+→ Wolfenstein</p>
+<p>Теперь масштаб изменился.</p>
+<p>Лабораторией стала уже выпущенная мировая игра и вся её живая аудитория.</p>
+<p>QuakeWorld и GLQuake — это момент, когда id впервые начинает относиться к релизу не как к точке окончания технологии, а как к моменту, когда технология наконец попадает в достаточно большой реальный мир, чтобы показать, что в ней всё ещё неправильно.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<h2 id="p035">35. id и революция 3D-видеокарт<a class="headerlink" href="#p035" title="Permanent link">¶</a></h2>
+<p>До Quake понятие «игровая видеокарта» в современном смысле ещё только формировалось.</p>
+<p>У PC, конечно, были VGA/SVGA-карты, но основную работу Doom и первоначального Quake выполнял CPU:</p>
+<p>geometry
+↓
+visibility
+↓
+texture mapping
+↓
+lighting
+↓
+rasterization
+↓
+FRAMEBUFFER</p>
+<p>Видеокарта в значительной степени была:</p>
+<p>«возьми готовую картинку
+и покажи её на мониторе»</p>
+<p>А затем примерно за два года происходит переход:</p>
+<p>1996</p>
+<p>Quake
+software renderer</p>
+<p>↓</p>
+<p>Rendition Vérité
+VQuake</p>
+<p>↓</p>
+<p>3dfx Voodoo
+GLQuake</p>
+<p>↓</p>
+<p>1997–1998</p>
+<p>OpenGL becomes
+real consumer gaming API</p>
+<p>↓</p>
+<p>3D accelerator
+становится почти обязательной
+частью игрового PC</p>
+<p>И id Software оказалась в совершенно уникальном положении.</p>
+<p>Она не производила видеокарты.</p>
+<p>Но её игры фактически отвечали на главный вопрос покупателя:</p>
+<p>«А нахуй мне вообще нужна эта новая 3D-карта?»</p>
+<p>Ответ:</p>
+<p>«Посмотри на Quake.»</p>
+<p>Изначально Quake вообще не требовал 3D-ускорителя</p>
+<p>Это важно.</p>
+<p>Quake 1996 года был технологическим чудом именно потому, что весь полноценный polygonal 3D-world работал:</p>
+<p>НА CPU</p>
+<p>Carmack + Abrash выжимали Pentium через:</p>
+<p>BSP/PVS;</p>
+<p>surface caching;</p>
+<p>hand-written assembly;</p>
+<p>тщательно оптимизированный software rasterizer.</p>
+<p>То есть первоначальная формула:</p>
+<p>Pentium
++
+очень умный код
+=
+Quake</p>
+<p>Работала.</p>
+<p>Но у неё существовал очевидный предел.</p>
+<p>Хочешь:</p>
+<p>640×480</p>
+<p>вместо:</p>
+<p>320×200</p>
+<p>?</p>
+<p>Количество pixels резко растёт.</p>
+<p>Хочешь:</p>
+<p>texture filtering</p>
+<p>?</p>
+<p>CPU получает ещё больше работы.</p>
+<p>Хочешь:</p>
+<p>больше geometry
++
+больше effects
++
+лучше lighting</p>
+<p>?</p>
+<p>Тот же процессор одновременно должен:</p>
+<p>симулировать игру</p>
+<p>И</p>
+<p>рисовать игру</p>
+<p>То есть id буквально упиралась в то, что графику пора было снимать с CPU.</p>
+<p>Первой серьёзной ставкой id была не 3dfx</p>
+<p>А Rendition.</p>
+<p>Вот эту часть истории часто забывают, потому что 3dfx в итоге победила культурно.</p>
+<p>Rendition делала чип:</p>
+<p>Vérité V1000</p>
+<p>— один из первых потребительских 3D-accelerators, достаточно программируемых и мощных, чтобы реально заинтересовать Carmack.</p>
+<p>Он первоначально относился к нему чрезвычайно позитивно и даже называл Vérité предполагаемой premier platform for Quake. Позже id и Rendition вместе сделали специальную аппаратно ускоренную версию игры.
+PC Gamer
++1</p>
+<p>Название:</p>
+<p>VQuake</p>
+<p>Она вышла в конце 1996 года и стала первой hardware-accelerated версией Quake, раньше GLQuake.
+Quake Wiki
++1</p>
+<p>И VQuake уже показывал будущее</p>
+<p>Software Quake:</p>
+<p>CPU
+рисует всё</p>
+<p>VQuake:</p>
+<p>CPU
+делает значительную часть
+game / geometry work</p>
+<p>↓</p>
+<p>Vérité
+помогает рендерить
+pixels / texture spans</p>
+<p>Результат:</p>
+<p>выше разрешение;</p>
+<p>bilinear texture filtering;</p>
+<p>меньше пиксельной ряби;</p>
+<p>более плавное изображение;</p>
+<p>дополнительное antialiasing-поведение.</p>
+<p>На типичном тогда Pentium 166 аппаратная версия могла заметно обгонять software-rendered Quake и при этом выглядеть существенно чище.
+TechSpot</p>
+<p>И для игрока это был почти шок.</p>
+<p>Потому что впервые upgrade видеокарты означал не:</p>
+<p>больше цветов</p>
+<p>или:</p>
+<p>выше desktop resolution</p>
+<p>а:</p>
+<p>ТА ЖЕ ИГРА</p>
+<p>вдруг:</p>
+<p>быстрее
++
+резче
++
+плавнее
++
+красивее</p>
+<p>Здесь и рождается современное ощущение:</p>
+<p>GPU — это часть производительности самой игры.</p>
+<p>Но VQuake одновременно показал Carmack проблему proprietary API</p>
+<p>Vérité был интересным железом.</p>
+<p>Но для того, чтобы получить максимум, id работала практически напрямую с его специфической технологией.</p>
+<p>Michael Abrash позднее объяснял: для VQuake пришлось использовать проприетарный Speedy3D API, плюс специальные вызовы и код непосредственно под Vérité — стандартный API не давал нужной производительности.
+Phatcode</p>
+<p>Получается:</p>
+<p>RENDITION CARD
+↓
+RENDITION-SPECIFIC RENDERER</p>
+<p>Отлично для одной карты.</p>
+<p>Теперь приходит:</p>
+<p>3dfx</p>
+<p>Нужно:</p>
+<p>ещё один renderer?</p>
+<p>Потом:</p>
+<p>PowerVR</p>
+<p>Ещё один?</p>
+<p>NVIDIA</p>
+<p>Ещё один?</p>
+<p>ATI</p>
+<p>Ещё один?</p>
+<p>Если так продолжать:</p>
+<p><strong>GAME ENGINE</strong></p>
+<p>15 hardware backends</p>
+<p>И каждый:</p>
+<p>имеет свои bugs;</p>
+<p>свои features;</p>
+<p>свой API;</p>
+<p>свои оптимизации;</p>
+<p>требует отдельного support.</p>
+<p>Для маленькой id это кошмар.</p>
+<p>И здесь Carmack делает стратегически гораздо более важный выбор, чем поддержка одной карты</p>
+<p>Он начинает двигать Quake к:</p>
+<p>OpenGL</p>
+<p>Не Glide.</p>
+<p>Не Speedy3D.</p>
+<p>Не ещё одному id-specific API.</p>
+<p>А открытому стандартному graphics API.</p>
+<p>Логика:</p>
+<p>id пишет
+ОДИН renderer</p>
+<p>↓</p>
+<p>hardware vendor
+делает хороший
+OpenGL driver</p>
+<p>↓</p>
+<p>Quake работает</p>
+<p>Вместо:</p>
+<p>id
+сама пишет
+под каждую карту</p>
+<p>Это фундаментально другой division of labor.</p>
+<p>Так появляется GLQuake</p>
+<p>22 января 1997 года Carmack выкладывает первую публичную предварительную версию GLQuake.</p>
+<p>Причём это ещё буквально experimental release в idstuff/unsup.</p>
+<p>И в тот же день очень показательный эпизод:</p>
+<p>Carmack:
+выложил GLQuake</p>
+<p>↓</p>
+<p>через час</p>
+<p>3dfx:
+вот новый VXD,
+он чинит crash
+на Pentium Pro</p>
+<p>↓</p>
+<p>Carmack:
+перепаковал release</p>
+<p>GitHub</p>
+<p>Вот уже новая индустрия PC gaming в миниатюре:</p>
+<p>GAME DEVELOPER
+id</p>
+<p>↕</p>
+<p>GPU VENDOR
+3dfx</p>
+<p>↕</p>
+<p>PLAYERS
+тысячи разных PC</p>
+<p>Не консоль, где один platform holder выдаёт фиксированное железо.</p>
+<p>А живая экосистема, где игра фактически заставляет производителей драйверов чинить железо сегодня, потому что завтра тысячи людей запустят на нём Quake.</p>
+<p>И именно 3dfx оказалась в идеальном месте в идеальное время</p>
+<p>Voodoo Graphics была довольно странной картой.</p>
+<p>Она даже не являлась полноценной заменой обычной 2D-видеокарты.</p>
+<p>Типичная конфигурация:</p>
+<p>2D CARD
+для Windows / DOS desktop</p>
+<div class="highlight"><pre><span></span><code>    +
+</code></pre></div>
+<p>3DFX VOODOO
+только для 3D</p>
+<p>Кабель шёл через Voodoo, и когда запускалась поддерживаемая 3D-игра, карта фактически перехватывала вывод.</p>
+<p>То есть человек буквально покупал:</p>
+<p>ОТДЕЛЬНУЮ КАРТУ</p>
+<p>только чтобы
+3D games выглядели лучше</p>
+<p>Сегодня это кажется нормальным.</p>
+<p>Тогда покупателю нужно было объяснить, зачем отдавать сотни долларов за устройство, которое даже Windows desktop нормально не рисует.</p>
+<p>До GLQuake у 3dfx была проблема: железо впечатляет, killer app неочевиден</p>
+<p>Демо выглядели великолепно.</p>
+<p>Игры вроде Tomb Raider тоже помогали.</p>
+<p>Но PCGamesN в историческом разборе Voodoo формулирует ситуацию очень точно: Voodoo выглядела потрясающе, однако массовому PC-геймеру всё ещё нужен был killer app, оправдывающий покупку дорогого 3D-only accelerator.</p>
+<p>Им стал в том числе GLQuake.
+PCGamesN</p>
+<p>Потому что Quake к этому моменту уже знают все hardcore PC gamers.</p>
+<p>Сравнение можно сделать буквально:</p>
+<p>QUAKE
+SOFTWARE</p>
+<p>VS</p>
+<p>GLQUAKE
+VOODOO</p>
+<p>И отличие видно мгновенно.</p>
+<p>Текстуры вдруг перестают быть огромными прыгающими квадратами</p>
+<p>Software renderer:</p>
+<p>близко к стене</p>
+<p>↓</p>
+<p>огромные texels</p>
+<p>GLQuake + Voodoo:</p>
+<p>bilinear filtering</p>
+<p>сглаживает переходы между texels.</p>
+<p>Сегодня можно спорить:</p>
+<p>пиксельный software Quake выглядит художественно лучше.</p>
+<p>Но в 1997 впечатление было другим:</p>
+<p>БЛЯТЬ, КАРТИНКА ГЛАДКАЯ.</p>
+<p>Плюс:</p>
+<p>640×480</p>
+<p>становится практической целью вместо низких software-resolutions.</p>
+<p>Плюс hardware снимает огромную часть fill-rate работы с CPU.</p>
+<p>И человек буквально получает другую визуальную эпоху, просто вставив карту.</p>
+<p>PCGamesN формулирует эффект очень прямо</p>
+<p>GLQuake sold 3dfx cards.</p>
+<p>И это не просто красивая фигура речи: Quake стал одной из игр, через которые hardcore-аудитория увидела очевидное преимущество Voodoo, после чего growing installed base заставляла всё больше разработчиков поддерживать 3dfx.
+PCGamesN</p>
+<p>Получается feedback loop:</p>
+<p>3dfx
+хорошо запускает GLQuake</p>
+<p>↓</p>
+<p>gamers
+покупают Voodoo</p>
+<p>↓</p>
+<p>у Voodoo
+растёт installed base</p>
+<p>↓</p>
+<p>developers:
+надо поддерживать 3dfx</p>
+<p>↓</p>
+<p>ещё больше игр
+для Voodoo</p>
+<p>↓</p>
+<p>ещё больше
+причин купить Voodoo</p>
+<p>И Quake находится почти в центре этого цикла.</p>
+<p>Причём 3dfx хитро реализовала не весь OpenGL</p>
+<p>Полноценный OpenGL driver для потребительского железа в 1996–1997 году был большой инженерной задачей.</p>
+<p>Но Quake использовал только часть OpenGL.</p>
+<p>Решение:</p>
+<p>MiniGL</p>
+<p>То есть не:</p>
+<p>реализовать
+ВЕСЬ OpenGL</p>
+<p>а:</p>
+<p>реализовать
+тот subset,
+который нужен Quake</p>
+<p>И первоначальный MiniGL 3dfx фактически строился именно вокруг запуска GLQuake.
+Википедия</p>
+<p>Это очень смешная инверсия стандартов:</p>
+<p>не игра
+адаптируется
+под карту</p>
+<p>а</p>
+<p>драйвер карты
+адаптируется
+под требования Quake</p>
+<p>Вот насколько большой переговорной силой стала id.</p>
+<p>Quake фактически начинает диктовать минимальный набор возможностей 3D-карты</p>
+<p>Представим производителя accelerator.</p>
+<p>Можно написать в рекламной брошюре:</p>
+<p>50 million
+triangle megaflops
+ultra 3D</p>
+<p>Геймер спрашивает:</p>
+<p>а GLQuake
+сколько FPS?</p>
+<p>И весь marketing внезапно сжимается до числа.</p>
+<p>Это важнейшее изменение компьютерного железа.</p>
+<p>Раньше видеокарты сравнивали:</p>
+<p>Windows acceleration;</p>
+<p>2D performance;</p>
+<p>RAMDAC;</p>
+<p>resolutions;</p>
+<p>color depth.</p>
+<p>Теперь появляется:</p>
+<p>QUAKE TIMEDemo
+Quake становится почти стандартной единицей измерения GPU</p>
+<p>У Quake есть встроенный deterministic demo/timedemo mechanism.</p>
+<p>Следовательно, журналист может сделать:</p>
+<p>Card A
+↓
+timedemo</p>
+<p>Card B
+↓
+timedemo</p>
+<p>Card C
+↓
+timedemo</p>
+<p>и получить:</p>
+<p>FPS</p>
+<p>Вместо субъективного:</p>
+<p>мне кажется, тут плавнее.</p>
+<p>Уже к 1997–1998 годам hardware reviewers массово используют GLQuake и затем Quake II как реальные benchmarks 3D-карт. В обзоре Tom’s Hardware того периода формулировка практически безоговорочная: Voodoo «rules the Quake world», а поскольку Quake тогда задаёт игровой рынок, Voodoo становится почти неизбежным выбором серьёзного PC-геймера.
+Tom's Hardware</p>
+<p>Вот здесь id получает совершенно особую власть.</p>
+<p>Теперь hardware vendor заинтересован в том, чтобы ЕГО карта хорошо работала именно с id</p>
+<p>Потому что:</p>
+<p>плохой Quake FPS</p>
+<p>=</p>
+<p>плохая review graph</p>
+<p>=</p>
+<p>игрок видит,
+что конкурент быстрее</p>
+<p>=</p>
+<p>потерянные продажи</p>
+<p>Поэтому vendor имеет огромный стимул:</p>
+<p>присылать Carmack hardware заранее;</p>
+<p>присылать pre-release drivers;</p>
+<p>исправлять bugs;</p>
+<p>объяснять undocumented features;</p>
+<p>оптимизировать OpenGL implementation;</p>
+<p>спрашивать, что понадобится следующему engine.</p>
+<p>Получается практически:</p>
+<p>GPU ROADMAP
+↕
+id ENGINE ROADMAP</p>
+<p>Они начинают влиять друг на друга.</p>
+<p>И Carmack превращается в почти независимую лабораторию оценки GPU</p>
+<p>Это особенно хорошо видно по его .plan.</p>
+<p>Он не пишет:</p>
+<p>наши официальные
+technology partners
+все прекрасны</p>
+<p>Он публично говорит, что реально думает о железе.</p>
+<p>Например, в 1998 году оценивает:</p>
+<p>ATI Rage Pro
+Intel i740
+3dfx Voodoo
+Rendition
+PowerVR
+NVIDIA RIVA</p>
+<p>по:</p>
+<p>fillrate;</p>
+<p>rendering quality;</p>
+<p>OpenGL drivers;</p>
+<p>blending modes;</p>
+<p>texture memory;</p>
+<p>feature support.
+GitHub</p>
+<p>Для hardware vendor это довольно страшный человек.</p>
+<p>Потому что миллионы энтузиастов знают:</p>
+<p>Carmack реально понимает эту хрень и использует её в одной из самых требовательных игр рынка.</p>
+<p>И он мог буквально уничтожить marketing bullet одним абзацем</p>
+<p>Очень хороший пример — NVIDIA RIVA 128.</p>
+<p>NVIDIA сегодня настолько доминирует в PC-графике, что легко переписать историю как:</p>
+<p>NVIDIA
+всегда была очевидным
+партнёром id</p>
+<p>Нет.</p>
+<p>Carmack в 1998 году писал про RIVA 128 довольно жёстко:</p>
+<p>быстрая</p>
+<p>НО:</p>
+<p>есть сломанные /
+неудобные аспекты</p>
+<p>не хватает
+важной feature</p>
+<p>я её
+не рекомендовал</p>
+<p>А затем в сентябре того же года получает production RIVA TNT и пишет совершенно иначе:</p>
+<p>“There aren't any troublesome aspects to TNT. It's just great. Good work, Nvidia.”
+GitHub</p>
+<p>То есть отношения id с NVIDIA — не:</p>
+<p>брендовая дружба</p>
+<p>а:</p>
+<p>ПОКАЖИТЕ
+НОРМАЛЬНОЕ ЖЕЛЕЗО</p>
+<p>↓</p>
+<p>Carmack оценит</p>
+<p>И с TNT NVIDIA уже начинает выглядеть совсем иначе.</p>
+<p>Это особенно важно для истории NVIDIA</p>
+<p>Потому что в середине девяностых рынок совершенно не выглядел так:</p>
+<p>NVIDIA
+AMD
+и всё</p>
+<p>Там одновременно существуют:</p>
+<p>3dfx
+Rendition
+NVIDIA
+ATI
+S3
+PowerVR
+3Dlabs
+Intel
+Matrox</p>
+<p>и ещё несколько компаний.</p>
+<p>Никто не знает, кто останется через десять лет.</p>
+<p>Quake/Quake II становятся одним из полей, на которых эти компании буквально доказывают:</p>
+<p>наше железо имеет смысл для игр.</p>
+<p>Rendition при этом показывает опасность proprietary path</p>
+<p>VQuake действительно была первой.</p>
+<p>И выглядела впечатляюще.</p>
+<p>Но её специальный Speedy3D-path существовал только для:</p>
+<p>Vérité</p>
+<p>GLQuake:</p>
+<p>OpenGL</p>
+<p>теоретически мог работать на:</p>
+<p>3dfx
+Rendition
+NVIDIA
+ATI
+Intel
+...</p>
+<p>если vendor предоставляет хороший driver.</p>
+<p>Carmack затем прямо предпочитал не плодить специфические code paths. В мае 1997-го он даже рассматривал native Glide renderer — он мог дать Voodoo ещё 10–15% скорости — но отказался: каждый дополнительный rendering path, по его словам, тормозит будущие инновации.
+GitHub</p>
+<p>Это чрезвычайно важный принцип.</p>
+<p>Carmack выбирает не самую быструю карту, а архитектурную свободу</p>
+<p>Можно:</p>
+<p>Voodoo
++
+native Glide
+=
+ещё быстрее</p>
+<p>Но цена:</p>
+<p>ещё один backend</p>
+<p>ещё одна implementation</p>
+<p>ещё одна compatibility matrix</p>
+<p>ещё одна вещь,
+которую надо поддерживать</p>
+<p>Carmack выбирает:</p>
+<p>OpenGL</p>
+<p>даже если конкретный proprietary path иногда способен выдать больше FPS.</p>
+<p>Потому что долгосрочно:</p>
+<p>ONE API
++
+MANY CARDS</p>
+<p>лучше для id, чем:</p>
+<p>ONE GAME
++
+MANY VENDOR APIs</p>
+<p>И это решение оказалось чрезвычайно влиятельным для PC-графики.</p>
+<p>Потому что теперь hardware vendor должен прийти к стандарту</p>
+<p>Старая модель:</p>
+<p>VENDOR:
+вот наш API</p>
+<p>GAME:
+поддержи его</p>
+<p>Модель Carmack:</p>
+<p>GAME:
+мы используем OpenGL</p>
+<p>VENDOR:
+значит нам нужен
+нормальный OpenGL driver</p>
+<p>Для маленькой id это гениальный leverage.</p>
+<p>Компания перекладывает значительную часть integration cost на производителей железа.</p>
+<p>И Quake дал OpenGL то, чего ему очень не хватало: массовую consumer killer app</p>
+<p>OpenGL родился не как игровой API для домашнего PC.</p>
+<p>Это мир:</p>
+<p>SGI
+workstations
+professional graphics
+CAD
+visualization</p>
+<p>А тут:</p>
+<p>GLQuake</p>
+<p>и внезапно teenager покупает Voodoo не потому, что хочет проектировать Boeing.</p>
+<p>А потому что хочет:</p>
+<p>frag'ать людей
+в 640×480</p>
+<p>Это огромный культурный сдвиг.</p>
+<p>OpenGL превращается из:</p>
+<p>professional 3D API</p>
+<p>ещё и в:</p>
+<p>HARDCORE PC GAMING API</p>
+<p>И id сыграла в этом совершенно непропорционально большую роль.</p>
+<p>Поэтому Microsoft Direct3D тоже пришлось конкурировать уже не с абстрактным стандартом</p>
+<p>А с:</p>
+<p>OpenGL
++
+QUAKE</p>
+<p>То есть когда разработчику/производителю железа говорят:</p>
+<p>используйте Direct3D,</p>
+<p>у Carmack есть убийственный аргумент:</p>
+<p>а вот
+GLQuake</p>
+<p>— реальная shipped game, которая:</p>
+<p>работает;</p>
+<p>быстрая;</p>
+<p>визуально впечатляющая;</p>
+<p>популярная;</p>
+<p>продаёт карты.</p>
+<p>Отношение Carmack к Direct3D в этот период было широко известно как резко критическое; выбор OpenGL имел вес именно потому, что за ним стояли не академические предпочтения, а реальные результаты Quake.</p>
+<p>И Brian Hook — бывший автор Glide API 3dfx — затем приходит работать прямо в id и участвует в OpenGL/hardware стороне следующего поколения. Carmack объявил о его найме в мае 1997 года именно через его 3dfx/CosmoGL background.
+GitHub</p>
+<p>То есть даже talent начинает циркулировать:</p>
+<p>GPU INDUSTRY
+↓
+id
+А 3dfx получает практически идеальное совпадение с Quake</p>
+<p>Voodoo сильна именно там, где нужна игре:</p>
+<p>texture mapping</p>
+<p>bilinear filtering</p>
+<p>fillrate</p>
+<p>blending</p>
+<p>Z-related 3D operations</p>
+<p>и не тратит silicon на полноценную 2D-функциональность.</p>
+<p>То есть карта практически говорит:</p>
+<p>я существую, чтобы такой продукт, как Quake, выглядел охуенно.</p>
+<p>А Quake говорит:</p>
+<p>вот причина, зачем покупать такую карту.</p>
+<p>Это почти идеальная co-evolution:</p>
+<p>GAME
+создаёт спрос
+на GPU</p>
+<p>↓</p>
+<p>GPU
+позволяет GAME
+выглядеть намного лучше</p>
+<p>↓</p>
+<p>игры начинают
+рассчитывать на GPU</p>
+<p>↓</p>
+<p>GPU становится
+обязательным</p>
+<p>↓</p>
+<p>следующие игры id
+могут требовать
+ещё больше GPU
+Именно здесь PC снова начинает отрываться от консолей технологически</p>
+<p>В 1995–1996 консоли имеют важное преимущество:</p>
+<p>PlayStation
+Saturn
+Nintendo 64</p>
+<p>=
+специализированное
+3D hardware</p>
+<p>А обычный PC:</p>
+<p>Pentium
++
+2D VGA card</p>
+<p>должен делать огромное количество graphics work CPU.</p>
+<p>С Voodoo:</p>
+<p><strong>PC</strong></p>
+<p>fast CPU</p>
+<p>+</p>
+<p>dedicated 3D accelerator</p>
+<p>И самое главное:</p>
+<p>через год можно заменить:</p>
+<p>Voodoo 1</p>
+<p>на:</p>
+<p>Voodoo 2</p>
+<p>Потом:</p>
+<p>TNT</p>
+<p>и получить новый уровень graphics без покупки новой игровой платформы.</p>
+<p>Это становится фундаментальным преимуществом PC:</p>
+<p>МОДУЛЬНАЯ
+ТЕХНОЛОГИЧЕСКАЯ ГОНКА</p>
+<p>А игры id — одним из главных способов эту гонку показать.</p>
+<p>И отсюда появляется современный цикл PC hardware hype</p>
+<p>Очень грубо:</p>
+<p>id показывает
+следующую игру</p>
+<p>↓</p>
+<p>игрок:
+«что нужно,
+чтобы это запустить?»</p>
+<p>↓</p>
+<p>GPU vendors:
+«НАША КАРТА»</p>
+<p>↓</p>
+<p>hardware reviews:
+Quake timedemo</p>
+<p>↓</p>
+<p>игрок покупает
+новую карту</p>
+<p>↓</p>
+<p>id теперь может
+поднять minimum spec
+следующей игры</p>
+<p>↓</p>
+<p>hardware vendors
+делают следующую карту</p>
+<p>Это уже знакомая нам модель:</p>
+<p>Crysis</p>
+<p>Cyberpunk</p>
+<p>ray tracing demos</p>
+<p>Но в массовом PC 3D одна из самых ранних и влиятельных версий этого цикла строилась вокруг Quake.</p>
+<p>Поэтому фраза «игры id продавали железо» не преувеличение — если понимать её правильно</p>
+<p>Не существует аккуратной таблицы:</p>
+<p>GLQuake
+продала ровно
+X Voodoo cards</p>
+<p>Но есть очень сильная совокупность свидетельств:</p>
+<p>Quake стал killer app аппаратного ускорения;</p>
+<p>GLQuake открыто демонстрировал разницу software/hardware;</p>
+<p>Voodoo стал de facto игровым стандартом эпохи;</p>
+<p>hardware reviewers измеряли карты через Quake;</p>
+<p>vendors специально правили драйверы под Quake;</p>
+<p>Carmack публично оценивал их железо;</p>
+<p>id проектировала следующее поколение, уже учитывая hardware acceleration.</p>
+<p>Современная историческая ретроспектива 3dfx буквально формулирует: GLQuake sold 3dfx cards.
+PCGamesN</p>
+<p>Вот это и есть реальный смысл.</p>
+<p>А Quake II закрепит benchmark relationship окончательно</p>
+<p>Мы ещё отдельно разберём Quake II как игру.</p>
+<p>Здесь только hardware-факт.</p>
+<p>К 1997 Carmack уже пишет:</p>
+<p>Quake II
+будет активно
+тестироваться в GL</p>
+<p>и</p>
+<p>мы будем делать
+часть разработки
+специально с учётом GL</p>
+<p>Он на тот момент предполагал, что около 15% покупателей запустят аппаратную OpenGL-версию — очень осторожная оценка с учётом того, насколько быстро потом пошёл рынок.
+GitHub</p>
+<p>То есть hardware acceleration меняется из:</p>
+<p>Quake optional experiment</p>
+<p>в:</p>
+<p>Quake II
+НАСТОЯЩИЙ TARGET</p>
+<p>А через следующее поколение id уже будет проектировать графику практически вокруг GPU.</p>
+<p>И параллельно Quake II становится ещё более удобным hardware benchmark</p>
+<p>К концу девяностых обзоры видеокарт выглядят буквально так:</p>
+<p>GLQuake
+Quake II
+Unreal
+3DMark / synthetic tests</p>
+<p>Tom's Hardware и другие крупные hardware-сайты строят сравнительные графики вокруг Quake II; даже конкуренция TNT против Voodoo регулярно оценивается именно через его timedemo.
+Tom's Hardware
++1</p>
+<p>То есть id теперь влияет не только на:</p>
+<p>КАК ДЕЛАЮТ ИГРЫ</p>
+<p>но и:</p>
+<p>КАК МЕРЯЮТ ВИДЕОКАРТЫ</p>
+<p>Это очень редкий статус для одной студии.</p>
+<p>И Carmack фактически становится неофициальным quality gate отрасли</p>
+<p>В 1998-м он публично сравнивает целую пачку карт.</p>
+<p>Про Intel i740:</p>
+<p>competent chip
+flawless driver behavior</p>
+<p>Про Voodoo:</p>
+<p>очень зрелые drivers
+и высокая производительность</p>
+<p>Про Rendition:</p>
+<p>хорошие features,
+включая 24-bit rendering</p>
+<p>Про PowerVR:</p>
+<p>не хватает
+необходимых blending modes</p>
+<p>Про RIVA 128:</p>
+<p>быстрая,
+но problematic</p>
+<p>Позже:</p>
+<p>TNT:
+just great</p>
+<p>GitHub</p>
+<p>С точки зрения vendor:</p>
+<p>лучший graphics programmer
+самой заметной 3D-студии</p>
+<p>публично пишет о твоём продукте.</p>
+<p>Это почти hardware review от человека, чья следующая игра сама станет benchmark для этой карты.</p>
+<p>Невероятная рыночная власть.</p>
+<p>И при этом id не подписывается навечно под одного vendor</p>
+<p>Это очень важная часть её независимости.</p>
+<p>Сначала:</p>
+<p>Rendition</p>
+<p>потом фактическим победителем Quake становится:</p>
+<p>3dfx</p>
+<p>затем всё серьёзнее:</p>
+<p>NVIDIA</p>
+<p>параллельно рассматриваются:</p>
+<p>Intel
+ATI
+PowerVR
+и другие</p>
+<p>Позиция Carmack:</p>
+<p>не:
+«кто наш маркетинговый партнёр?»</p>
+<p>а:</p>
+<p>«кто сейчас
+сделал хорошее железо
+и хороший driver?»</p>
+<p>Именно OpenGL позволяет id сохранять эту позицию.</p>
+<p>Это очень отличается от console model</p>
+<p>На PlayStation:</p>
+<p>Sony
+определила GPU</p>
+<p>и всё.</p>
+<p>Разработчик может:</p>
+<p>оптимизировать</p>
+<p>но не может сказать:</p>
+<p>мне не нравится PlayStation GPU, пусть пользователь вставит другой.</p>
+<p>На PC:</p>
+<p>GAME
+может пережить
+несколько поколений GPU</p>
+<p>Quake буквально это и сделал:</p>
+<p>1996
+software</p>
+<p>↓</p>
+<p>VQuake</p>
+<p>↓</p>
+<p>GLQuake / Voodoo</p>
+<p>↓</p>
+<p>другие OpenGL cards</p>
+<p>Одна и та же игра становится витриной нескольких поколений rendering.</p>
+<p>Это уникальная сила PC.</p>
+<p>И поэтому Carmack всё больше пишет не под сегодняшний средний компьютер</p>
+<p>А под:</p>
+<p>ЖЕЛЕЗО,
+КОТОРОЕ БУДЕТ
+У ИГРОКА,
+КОГДА ИГРА ВЫЙДЕТ</p>
+<p>В 1998-м, рассуждая о следующем engine, он прямо говорит: graphics architecture проектируется на несколько лет вперёд, поэтому в текущий момент требования могут выглядеть завышенными — к реальному релизу появятся accelerator'ы, которые смогут их полноценно использовать.
+GitHub</p>
+<p>Вот здесь окончательно формируется характерная id-стратегия:</p>
+<p>не спрашивать:</p>
+<p>«что умеет
+средний PC сегодня?»</p>
+<p>а:</p>
+<p>«что сможет
+high-end PC
+к релизу?»</p>
+<p>И hardware vendors получают incentive эту цель обеспечить.</p>
+<p>Это превращает отношения id и GPU-индустрии в двустороннюю гонку</p>
+<p>Не:</p>
+<p>NVIDIA / 3dfx
+делают GPU</p>
+<p>↓</p>
+<p>id адаптируется</p>
+<p>И не:</p>
+<p>id делает engine</p>
+<p>↓</p>
+<p>vendor адаптируется</p>
+<p>А:</p>
+<p>id:
+нам нужны
+такие features</p>
+<p>↕</p>
+<p>GPU vendor:
+следующее железо
+будет быстрее
+вот здесь</p>
+<p>↕</p>
+<p>id:
+тогда следующий renderer
+может делать вот это</p>
+<p>↕</p>
+<p>vendor:
+тогда оптимизируем
+driver под ваш workload</p>
+<p>Получается co-design экосистемы — пусть и совершенно неформальный.</p>
+<p>И Quake превращает graphics API из внутренней технической детали в предмет потребительского интереса</p>
+<p>Сегодня обычный игрок знает:</p>
+<p>DirectX 12
+Vulkan
+ray tracing
+DLSS</p>
+<p>В середине девяностых это ещё очень необычно.</p>
+<p>Но hardcore Quake player уже начинает понимать:</p>
+<p>software Quake</p>
+<p>VQuake</p>
+<p>GLQuake</p>
+<p>OpenGL</p>
+<p>3dfx</p>
+<p>MiniGL</p>
+<p>Glide</p>
+<p>Потому что от этих слов непосредственно зависит:</p>
+<p>СКОЛЬКО У МЕНЯ FPS</p>
+<p>И как выглядит любимая игра.</p>
+<p>То есть id фактически обучает массового PC-геймера думать о graphics stack.</p>
+<p>И это станет одной из самых устойчивых частей PC-культуры</p>
+<p>После Quake вопрос:</p>
+<p>«а сколько оно выдаёт
+в Quake?»</p>
+<p>постепенно превращается в жанр.</p>
+<p>Позже:</p>
+<p>Quake II</p>
+<p>Quake III</p>
+<p>Doom 3</p>
+<p>будут играть ту же роль для следующих поколений hardware.</p>
+<p>Особенно Quake III станет одним из самых долгоживущих GPU/CPU benchmarks своего времени.</p>
+<p>То есть id не случайно один раз помогла продать Voodoo.</p>
+<p>Компания постепенно превратилась в:</p>
+<p>одного из производителей эталонных workloads для всей PC-графической индустрии.</p>
+<p>И вот что особенно интересно: id ничего для этого не пришлось превращать в synthetic benchmark</p>
+<p>Quake остаётся:</p>
+<p>ИГРОЙ</p>
+<p>Это важно.</p>
+<p>Synthetic test может показать:</p>
+<p>card A:
+1200 points</p>
+<p>card B:
+1100</p>
+<p>Quake показывает:</p>
+<p>на card A
+мой любимый deathmatch
+реально ощущается лучше</p>
+<p>И это намного сильнее для покупателя.</p>
+<p>Hardware benchmark совпадает с реальной причиной купить hardware.</p>
+<p>Вот почему Quake оказался настолько эффективным продавцом accelerator'ов.</p>
+<p>В итоге id стала почти нейтральным арбитром ранней GPU-войны</p>
+<p>Очень условно:</p>
+<p>1996</p>
+<p>Rendition:
+«мы будущее»</p>
+<p>↓</p>
+<p>VQuake</p>
+<p>↓</p>
+<p>1997</p>
+<p>3dfx:
+«мы намного быстрее»</p>
+<p>↓</p>
+<p>GLQuake</p>
+<p>↓</p>
+<p>1997–98</p>
+<p>NVIDIA
+ATI
+Intel
+PowerVR
+Rendition
+3dfx
+...</p>
+<p>↓</p>
+<p>Quake / Quake II
+timedemos
++
+Carmack comments
++
+OpenGL compatibility</p>
+<p>↓</p>
+<p>рынок сам начинает понимать:</p>
+<p>КТО РЕАЛЬНО
+ТЯНЕТ НОВОЕ 3D</p>
+<p>И это влияние невозможно отделить от репутации самой id:</p>
+<p>если карта плохо запускает игру Carmack, возможно, проблема не в игре.</p>
+<p>В сухом остатке
+1996</p>
+<p>QUAKE</p>
+<p>полностью software-rendered</p>
+<p>↓</p>
+<p>CPU становится
+главным bottleneck</p>
+<p>↓</p>
+<p>Rendition Vérité</p>
+<p>Carmack + Abrash
+↓
+VQuake</p>
+<p>↓</p>
+<p>первая аппаратно
+ускоренная версия Quake</p>
+<p>↓</p>
+<p>НО</p>
+<p>proprietary API
++
+vendor-specific code
+=
+плохая масштабируемость</p>
+<p>↓</p>
+<p>Carmack
+выбирает OpenGL</p>
+<p>↓</p>
+<p>22 января 1997</p>
+<p>GLQuake</p>
+<p>↓</p>
+<p>3dfx Voodoo
++
+MiniGL</p>
+<p>↓</p>
+<p>огромный визуальный
+и performance скачок</p>
+<p>↓</p>
+<p>gamers:
+ХОЧУ</p>
+<p>↓</p>
+<p>GLQuake
+становится killer app
+для 3D acceleration</p>
+<p>↓</p>
+<p>Quake timedemo
+становится
+hardware benchmark</p>
+<p>↓</p>
+<p>GPU vendors:</p>
+<p>нужно,
+чтобы Quake
+хорошо работал
+НА НАШЕЙ КАРТЕ</p>
+<p>↓</p>
+<p>drivers / APIs /
+hardware roadmaps
+начинают учитывать
+id workload</p>
+<p>↓</p>
+<p>Quake II
+ещё глубже
+ориентируется на OpenGL</p>
+<p>↓</p>
+<p>3dfx
+Rendition
+NVIDIA
+ATI
+Intel
+PowerVR</p>
+<p>соревнуются уже в мире,
+где игра id
+является одним из
+главных экзаменов железа</p>
+<p>Именно поэтому связь id Software с PC hardware настолько необычна.</p>
+<p>Большинство студий получают железо и спрашивают:</p>
+<p>«как нам заставить нашу игру работать на этой карте?»</p>
+<p>В середине девяностых производители видеокарт всё чаще вынуждены были задавать зеркальный вопрос:</p>
+<p>«как нам заставить нашу карту хорошо работать в Quake?»</p>
+<p>И вот в этот момент id перестаёт быть только компанией, двигающей графику в видеоиграх.</p>
+<p>Она становится одним из факторов, двигающих само железо персонального компьютера.</p>
+<p><a href="#contents">↑ К содержанию</a></p>
+<hr/>
+<hr/>
+<p><a href="05-quake-crisis.html">← V. Quake и распад первой id</a> · <a href="index.html">Общее оглавление</a> · <a href="07-quake2-quake3-middleware.html">VII. Quake II / Quake III →</a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: id Software — V. Quake и распад первоначальной id" class="md-footer__link md-footer__link--prev" href="05-quake-crisis.html">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                id Software — V. Quake и распад первоначальной id
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: id Software — VII. Quake II, Quake III и война движков" class="md-footer__link md-footer__link--next" href="07-quake2-quake3-middleware.html">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                id Software — VII. Quake II, Quake III и война движков
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

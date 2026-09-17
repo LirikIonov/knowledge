@@ -1,0 +1,3004 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="09-half-life-3-and-cancelled-projects.html" rel="prev"/>
+<link href="11-half-life-alyx-design.html" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Создание Half-Life: Alyx - База данных</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#half-life-alyx">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Создание Half-Life: Alyx
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/Arkane.html">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/index.html">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/01-origins-softdisk-keen.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/02-wolfenstein.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/03-doom-birth.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/04-doom-ecosystem.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/05-quake-crisis.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/06-id-after-romero.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/07-quake2-quake3-middleware.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/08-doom3-aaa.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/09-rage-zenimax-carmack.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/10-doom-rebirth-modern-id.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/11-legacy-summary.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/12-side-branches.html">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/id%20software/MANIFEST.html">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/index.html">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/01-origins-steam.html">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/02-games-and-engines.html">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/03-inside-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/04-hardware-linux-vr.html">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/05-modern-valve.html">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/06-valve-as-institution.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/07-ecosystem-and-catalog.html">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/08-appendices.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../devs/valve/09-sources-and-status.html">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Doom.html">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Doom30.html">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Doom3_45-103.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Half-Life-58-111.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — темы 58–111
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Half-Life-complete-research.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Half-Life_2_33-57.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life_2_33-57
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Half-Life_history_1-33.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life_history_1-33
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Quake.html">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Spider-Man.html">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../doom4-eternal.html">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../doom_eternal_51-80.html">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_2_13" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_13" id="__nav_1_2_13_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half Life revised 17 documents
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_2_13_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_13">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half Life revised 17 documents
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="01-origins-and-development.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="02-half-life-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="03-half-life-release-and-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="04-gearbox-and-consoles.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="05-half-life-2-development-and-tech.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="06-half-life-2-world-and-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="07-half-life-2-beta-release.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="08-episodes.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="09-half-life-3-and-cancelled-projects.html">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="10-vr-and-alyx-development.html">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p076">
+<span class="md-ellipsis">
+      
+        76. Half-Life и VR-эксперименты Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p077">
+<span class="md-ellipsis">
+      
+        77. Как ранние VR-прототипы привели к новой Half-Life
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p078">
+<span class="md-ellipsis">
+      
+        78. Разработка Half-Life: Alyx
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alyx-production-gates">
+<span class="md-ellipsis">
+      
+        Как отделить успех прототипа от готовности большой игры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p079">
+<span class="md-ellipsis">
+      
+        79. Почему выбрали Alyx, а не Half-Life 3
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p080">
+<span class="md-ellipsis">
+      
+        80. Почему Half-Life: Alyx сделали только для VR
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#materials">
+<span class="md-ellipsis">
+      
+        Материалы к главе
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="11-half-life-alyx-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="12-modding-and-community.html">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="13-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="14-audio.html">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="15-how-valve-makes-half-life.html">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="16-movement-and-speedrunning.html">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="CHANGES.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2_14" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_14" id="__nav_1_2_14_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_14_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_14">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/index.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — оглавление
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/01-origins-and-development.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/03-half-life-release-and-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/04-gearbox-and-consoles.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/06-half-life-2-world-and-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/07-half-life-2-beta-release.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/08-episodes.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/09-half-life-3-and-cancelled-projects.html">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/10-vr-and-alyx-development.html">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/11-half-life-alyx-design.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/12-modding-and-community.html">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/13-legacy.html">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/14-audio.html">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/15-how-valve-makes-half-life.html">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/16-movement-and-speedrunning.html">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../half-life/17-half-life-and-film.html">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/Gabe%20Newell.html">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Carmack.html">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../people/John%20Romero.html">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../stores/steam/Steam.html">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p076">
+<span class="md-ellipsis">
+      
+        76. Half-Life и VR-эксперименты Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p077">
+<span class="md-ellipsis">
+      
+        77. Как ранние VR-прототипы привели к новой Half-Life
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p078">
+<span class="md-ellipsis">
+      
+        78. Разработка Half-Life: Alyx
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alyx-production-gates">
+<span class="md-ellipsis">
+      
+        Как отделить успех прототипа от готовности большой игры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p079">
+<span class="md-ellipsis">
+      
+        79. Почему выбрали Alyx, а не Half-Life 3
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p080">
+<span class="md-ellipsis">
+      
+        80. Почему Half-Life: Alyx сделали только для VR
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#materials">
+<span class="md-ellipsis">
+      
+        Материалы к главе
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="half-life-alyx">Создание Half-Life: Alyx<a class="headerlink" href="#half-life-alyx" title="Permanent link">¶</a></h1>
+<p>Эта глава прослеживает решения и производственные развилки, которые позволили HLVR стать выпущенной игрой. Подробные правила рук, боя, инвентаря и кампании находятся <a href="11-half-life-alyx-design.html">в главе о дизайне Alyx</a>.</p>
+<p>После многолетних неудачных попыток вернуть Half-Life Valve наконец находит проект, у которого есть то, чего постоянно не хватало отменённым версиям Half-Life 3:</p>
+<blockquote>
+<p><strong>ясная технологическая причина существовать, работающий prototype и команда, которая сразу понимает, почему это интересно.</strong></p>
+</blockquote>
+<p>Эта причина — VR.</p>
+<p>Но Half-Life: Alyx важно не рассказывать как историю:</p>
+<blockquote>
+<p>Valve захотела сделать новую Half-Life и прикрутила к ней VR.</p>
+</blockquote>
+<p>Причинность была почти обратной.</p>
+<p>Valve много лет исследовала VR как новый интерфейс: positional tracking, room-scale, motion controls, Lighthouse, Vive, The Lab. Компания пыталась понять, какие игровые формы вообще естественно работают, когда камера перестаёт быть виртуальной точкой и становится реальной головой человека, а две руки игрока физически присутствуют внутри пространства.</p>
+<p>И уже внутри этих экспериментов выясняется:</p>
+<blockquote>
+<p><strong>Half-Life подходит VR почти пугающе хорошо.</strong></p>
+</blockquote>
+<p>Серия всегда строилась вокруг присутствия. Игрок не наблюдает событие со стороны. Он находится внутри сцены. Камера принадлежит ему. Мир должен реагировать. Предметы должны ощущаться вещами. Персонажи должны существовать рядом, а не только внутри ролика.</p>
+<p>VR просто радикально усиливает старую идею Half-Life.</p>
+<p>При этом именно VR заставляет Valve заново пересобрать почти всю FPS-грамматику: locomotion, стрельбу, перезарядку, скорость врагов, melee, размер пространства, руки, инвентарь и даже то, сколько времени игрок способен спокойно стоять и слушать персонажа.</p>
+<p>Поэтому Alyx рождается одновременно как:</p>
+<div class="highlight"><pre><span></span><code>VR R&amp;D
++
+Source 2
++
+Half-Life
++
+долгая культура playtesting Valve
+</code></pre></div>
+<p>И только постепенно превращается в полноценное возвращение серии.</p>
+<hr/>
+<h2 id="p076">76. Half-Life и VR-эксперименты Valve<a class="headerlink" href="#p076" title="Permanent link">¶</a></h2>
+<p>VR не появляется в Valve внезапно ради Alyx.</p>
+<p>Компания занимается VR R&amp;D с начала 2010-х.</p>
+<p>Michael Abrash приходит в Valve в 2011 году и становится одним из ключевых людей раннего VR-исследования.</p>
+<p>К 2012 году команда уже экспериментирует с positional tracking через камеры и fiducials.</p>
+<p>В 2013 появляется Telescope prototype с акцентом на низкую latency.</p>
+<p>Team Fortress 2 получает VR Mode.</p>
+<p>И довольно быстро Valve узнаёт неприятную вещь:</p>
+<blockquote>
+<p>обычный быстрый FPS в VR может быть физиологически ужасным.</p>
+</blockquote>
+<p>Классическое WASD-движение, резкие повороты и скорость TF2 дают motion sickness.</p>
+<p>В 2013–2014 Valve строит знаменитую Valve Room — room-scale prototype с markers/fiducials, где человек уже реально ходит по пространству.</p>
+<p>Постепенно появляется Lighthouse tracking.</p>
+<p>Steam Dev Days 2014 показывает часть этих идей разработчикам.</p>
+<p>В 2015 Valve и HTC объявляют Vive.</p>
+<p>В 2016 выходит The Lab — набор коротких VR experiments.</p>
+<p>Для The Lab даже существовал Half-Life Shooter prototype, который в итоге не выпустили.</p>
+<p>Параллельно Laidlaw пробует VR Borealis.</p>
+<p>И постепенно становится очевидно:</p>
+<blockquote>
+<p>Half-Life очень хорошо совпадает с VR по философии.</p>
+</blockquote>
+<p>Она всегда была про присутствие, physical world, отсутствие внешней камеры.</p>
+<p>Portal, наоборот, имеет проблему: core mechanic буквально швыряет player через пространство. Для VR это физиологический ад.</p>
+<p>Поэтому длинная цепочка выглядит так:</p>
+<blockquote>
+<p>VR R&amp;D → tracking → Vive → The Lab → Half-Life prototypes → HLVR → Alyx.</p>
+</blockquote>
+<h3 id="vr-valve-presence">VR у Valve начинается не с игры, а с вопроса о presence<a class="headerlink" href="#vr-valve-presence" title="Permanent link">¶</a></h3>
+<p>Самая важная ранняя идея здесь вообще не Half-Life.</p>
+<p>И даже не motion controls.</p>
+<p>Valve сначала пытается понять:</p>
+<blockquote>
+<p><strong>что должно произойти технически, чтобы мозг перестал воспринимать экран как экран и реально начал чувствовать присутствие внутри другого пространства?</strong></p>
+</blockquote>
+<p>Michael Abrash в Steam Dev Days 2014 строит весь разговор вокруг слова <strong>presence</strong>.</p>
+<p>Не:</p>
+<blockquote>
+<p>высокая графика.</p>
+</blockquote>
+<p>Не:</p>
+<blockquote>
+<p>3D телевизор на лице.</p>
+</blockquote>
+<p>А состояние, в котором человек инстинктивно начинает реагировать на виртуальный объект как на пространственно присутствующий.</p>
+<p>Если virtual ledge находится перед тобой, тело не хочет сделать шаг.</p>
+<p>Если объект летит в лицо, человек рефлекторно отшатывается.</p>
+<p>Если кто-то стоит слишком близко, нарушается чувство личного пространства.</p>
+<p>И вот это чрезвычайно Half-Life-шная проблема ещё до того, как команда решит делать Half-Life.</p>
+<p>Вся серия двадцать лет пытается убрать промежуточный слой:</p>
+<div class="highlight"><pre><span></span><code>игрок
+↓
+интерфейс
+↓
+персонаж
+↓
+мир
+</code></pre></div>
+<p>VR потенциально говорит:</p>
+<div class="highlight"><pre><span></span><code>голова игрока = camera
+руки игрока = interaction
+пространство вокруг = level
+</code></pre></div>
+<p>То есть старая идея серии вдруг получает буквальное физическое воплощение.</p>
+<h3 id="michael-abrash-valve-vr">Michael Abrash и ранняя инженерная школа Valve VR<a class="headerlink" href="#michael-abrash-valve-vr" title="Permanent link">¶</a></h3>
+<p>Abrash приходит в Valve в 2011 году.</p>
+<p>Это довольно символическая фигура.</p>
+<p>Он работал вместе с John Carmack над Quake, то есть находится буквально внутри той технологической родословной, из которой когда-то выросла первая Half-Life.</p>
+<p>Но теперь его интересует следующая граница realtime graphics:</p>
+<blockquote>
+<p><strong>как построить VR, который не разваливается от latency, blur и плохого tracking.</strong></p>
+</blockquote>
+<p>Ключевые проблемы выглядят скучно на бумаге:</p>
+<ul>
+<li>display persistence;</li>
+<li>refresh rate;</li>
+<li>motion-to-photon latency;</li>
+<li>positional tracking;</li>
+<li>rotational tracking;</li>
+<li>optics;</li>
+<li>calibration;</li>
+<li>distortion;</li>
+<li>prediction.</li>
+</ul>
+<p>Но в VR каждая из них внезапно становится частью <strong>физиологии игрока</strong>.</p>
+<p>В обычной игре dropped frame:</p>
+<blockquote>
+<p>раздражает.</p>
+</blockquote>
+<p>В VR неправильное движение мира относительно головы:</p>
+<blockquote>
+<p>может сделать человеку физически плохо.</p>
+</blockquote>
+<p>Поэтому software/hardware problem сразу превращается в game design constraint.</p>
+<h3 id="telescope-vr">Telescope — почти лабораторный прибор для исследования VR<a class="headerlink" href="#telescope-vr" title="Permanent link">¶</a></h3>
+<p>В 2013 году Valve делает prototype, известный как <strong>Telescope</strong>.</p>
+<p>Это ещё не нормальный consumer headset.</p>
+<p>Скорее аппарат для ответа на вопрос:</p>
+<blockquote>
+<p>насколько низкой вообще можно сделать задержку и как будет ощущаться low-persistence display?</p>
+</blockquote>
+<p>У Valve получился single-eye prototype с near-zero latency и измеренной motion-to-photon задержкой порядка нескольких миллисекунд.</p>
+<p>Смысл был не:</p>
+<blockquote>
+<p>сейчас продадим Telescope.</p>
+</blockquote>
+<p>А:</p>
+<blockquote>
+<p>доказать собственными глазами, что технические параметры, необходимые для presence, вообще достижимы.</p>
+</blockquote>
+<p>Valve здесь работает почти как hardware research lab.</p>
+<p>И это очень важный этап.</p>
+<p>До него VR легко воспринимать как:</p>
+<blockquote>
+<p>технология, которой просто нужно побольше resolution.</p>
+</blockquote>
+<p>После таких experiments становится ясно:</p>
+<blockquote>
+<p><strong>latency и tracking иногда важнее чистого количества пикселей.</strong></p>
+</blockquote>
+<h3 id="tf2-vr-mode-fps">TF2 VR Mode — первый удар реальности по обычному FPS<a class="headerlink" href="#tf2-vr-mode-fps" title="Permanent link">¶</a></h3>
+<p>В марте 2013 Valve выпускает VR Mode для Team Fortress 2.</p>
+<p>И это крайне полезный отрицательный результат.</p>
+<p>TF2 — великолепная игра.</p>
+<p>Но её движение построено вокруг:</p>
+<ul>
+<li>огромной скорости;</li>
+<li>резких strafes;</li>
+<li>мгновенных поворотов мышью;</li>
+<li>rocket jumps;</li>
+<li>air control;</li>
+<li>постоянного изменения направления.</li>
+</ul>
+<p>На мониторе:</p>
+<blockquote>
+<p>кайф.</p>
+</blockquote>
+<p>В headset:</p>
+<blockquote>
+<p>организм спрашивает, какого хуя комната летит в сторону, если тело стоит на месте.</p>
+</blockquote>
+<p>То есть Valve получает один из фундаментальных уроков будущей Alyx:</p>
+<blockquote>
+<p><strong>хороший flatscreen FPS нельзя просто засунуть в VR и ожидать, что он останется хорошим VR FPS.</strong></p>
+</blockquote>
+<p>Игровая грамматика должна меняться.</p>
+<p>Это потом объяснит практически всё:</p>
+<ul>
+<li>более медленную скорость;</li>
+<li>отсутствие обычного jump;</li>
+<li>более редких врагов;</li>
+<li>другой combat rhythm;</li>
+<li>разные locomotion modes;</li>
+<li>ручную перезарядку;</li>
+<li>намного меньшие пространства.</li>
+</ul>
+<h3 id="valve-room-vr">Valve Room — первый момент, когда VR перестаёт быть экраном на лице<a class="headerlink" href="#valve-room-vr" title="Permanent link">¶</a></h3>
+<p>Следующий гигантский шаг — так называемая <strong>Valve Room</strong>.</p>
+<p>Комната физически покрыта fiducial markers.</p>
+<p>Headset отслеживается внешней системой достаточно точно, чтобы человек мог <strong>реально ходить по комнате</strong>, а виртуальная камера повторяла движение головы и тела.</p>
+<p>Современному человеку после Vive/Quest это может казаться:</p>
+<blockquote>
+<p>ну room-scale.</p>
+</blockquote>
+<p>Тогда это было почти откровение.</p>
+<p>До этого VR легко мыслить как:</p>
+<div class="highlight"><pre><span></span><code>сижу
+↓
+вращаю головой
+↓
+смотрю в виртуальный мир
+</code></pre></div>
+<p>Valve Room показывает другое:</p>
+<div class="highlight"><pre><span></span><code>встал
+↓
+подошёл
+↓
+наклонился
+↓
+заглянул сбоку
+↓
+пространство действительно осталось на месте
+</code></pre></div>
+<p>Вот здесь появляется та самая <strong>presence</strong>, о которой говорил Abrash.</p>
+<p>Brendan Iribe из Oculus, известный чувствительностью к VR sickness, после демонстрации Valve prototype описывал опыт как качественно другой класс VR.</p>
+<p>И это важный технологический момент не только для Valve.</p>
+<p>Valve в этот период активно делится частью исследований с Oculus и помогает индустрии двигаться в сторону low persistence и более качественного tracking.</p>
+<h3 id="steam-dev-days-2014-valve-vr">Steam Dev Days 2014 — Valve фактически говорит индустрии: VR уже не игрушка<a class="headerlink" href="#steam-dev-days-2014-valve-vr" title="Permanent link">¶</a></h3>
+<p>На Steam Dev Days Valve делает необычную вещь.</p>
+<p>Она не анонсирует:</p>
+<blockquote>
+<p>Valve VR Headset — $599.</p>
+</blockquote>
+<p>Напротив.</p>
+<p>Abrash прямо говорит, что у Valve <strong>нет текущего плана выпускать собственный headset</strong>, но компания уверена:</p>
+<blockquote>
+<p>consumer VR, способный создавать presence, технологически уже достижим в ближайшие годы.</p>
+</blockquote>
+<p>Одновременно Valve показывает:</p>
+<ul>
+<li>VR hardware prototypes;</li>
+<li>SteamVR direction;</li>
+<li>будущую software infrastructure;</li>
+<li>Room demo.</li>
+</ul>
+<p>То есть компания пытается построить <strong>экосистему до продукта</strong>.</p>
+<p>Очень в духе Steam.</p>
+<p>Не:</p>
+<blockquote>
+<p>вот наша одна VR-game.</p>
+</blockquote>
+<p>А:</p>
+<blockquote>
+<p>давайте сначала сделаем так, чтобы PC вообще умел нормально быть VR-платформой.</p>
+</blockquote>
+<h3 id="abrash-oculus-valve">Потом Abrash и часть ранней команды уходят в Oculus — а Valve продолжает<a class="headerlink" href="#abrash-oculus-valve" title="Permanent link">¶</a></h3>
+<p>В 2014 Michael Abrash переходит в Oculus.</p>
+<p>Для Valve это могло стать:</p>
+<blockquote>
+<p>ну ладно, эксперимент закончился.</p>
+</blockquote>
+<p>Не становится.</p>
+<p>Компания продолжает tracking research и начинает двигаться к собственной системе, которая будет значительно практичнее комнаты с маркерами на каждой стене.</p>
+<h3 id="lighthouse-room-scale">Lighthouse рождается из room-scale, а не наоборот<a class="headerlink" href="#lighthouse-room-scale" title="Permanent link">¶</a></h3>
+<p>Это важная причинность.</p>
+<p>Valve сначала поняла:</p>
+<blockquote>
+<p><strong>нам нужен VR, в котором человек может ходить и пользоваться руками.</strong></p>
+</blockquote>
+<p>И уже потом инженерная команда стала искать tracking system, которую можно реально отдать потребителю.</p>
+<p>Первый marker-room великолепен как лаборатория.</p>
+<p>Ужасен как consumer product.</p>
+<p>Никто не будет обклеивать квартиру сотнями fiducials и ставить отдельные камеры ради игры.</p>
+<p>Lighthouse решает именно эту проблему.</p>
+<p>К 2014 Valve уже имеет laser-tracked headset prototypes.</p>
+<p>Позже — spatially tracked controllers.</p>
+<p>И теперь можно отслеживать не только голову.</p>
+<p>Можно отслеживать <strong>руки</strong>.</p>
+<p>Вот это особенно важно для будущей Alyx.</p>
+<p>Потому что VR без рук всё ещё легко остаётся:</p>
+<blockquote>
+<p>необычным способом смотреть.</p>
+</blockquote>
+<p>VR с руками становится:</p>
+<blockquote>
+<p><strong>новым способом действовать.</strong></p>
+</blockquote>
+<h3 id="htc-vive-research-consumer-platform">HTC Vive превращает research в consumer platform<a class="headerlink" href="#htc-vive-research-consumer-platform" title="Permanent link">¶</a></h3>
+<p>В 2015 Valve и HTC публично показывают <strong>Vive</strong>.</p>
+<p>И здесь многолетняя лабораторная работа превращается в понятный продуктовый набор:</p>
+<ul>
+<li>headset;</li>
+<li>room-scale;</li>
+<li>Lighthouse/base stations;</li>
+<li>motion controllers;</li>
+<li>SteamVR.</li>
+</ul>
+<p>Причём сама Valve не идёт по самой очевидной дороге:</p>
+<blockquote>
+<p>сделаем закрытый Valve headset только под Valve games.</p>
+</blockquote>
+<p>Она работает с HTC и строит SteamVR как более широкий PC layer.</p>
+<p>Для истории Alyx это важно, потому что к 2016 году Valve уже не исследует:</p>
+<blockquote>
+<p>можно ли вообще отслеживать руку?</p>
+</blockquote>
+<p>Эта проблема достаточно решена.</p>
+<p>Теперь можно исследовать:</p>
+<blockquote>
+<p><strong>что хорошая игра должна делать с двумя отслеживаемыми руками?</strong></p>
+</blockquote>
+<h3 id="the-lab">The Lab — маленькие ответы на один большой вопрос<a class="headerlink" href="#the-lab" title="Permanent link">¶</a></h3>
+<p>В 2016 Valve выпускает <strong>The Lab</strong>.</p>
+<p>На поверхности:</p>
+<blockquote>
+<p>бесплатная коллекция VR mini-games.</p>
+</blockquote>
+<p>В производственной истории:</p>
+<blockquote>
+<p>огромная батарея controlled experiments.</p>
+</blockquote>
+<p>Каждый кусок спрашивает что-то своё.</p>
+<p>Можно ли:</p>
+<ul>
+<li>комфортно перемещать человека;</li>
+<li>заставить его физически наклоняться;</li>
+<li>строить interaction вокруг рук;</li>
+<li>дать понятную archery;</li>
+<li>сделать spatial toy;</li>
+<li>разговаривать с player внутри VR;</li>
+<li>удерживать внимание без обычной camera direction?</li>
+</ul>
+<p>Это идеально Valve.</p>
+<p>Вместо одного design document:</p>
+<blockquote>
+<p>«Вот правила виртуальной реальности»,</p>
+</blockquote>
+<p>делаем несколько маленьких вещей и смотрим:</p>
+<blockquote>
+<p><strong>что люди реально делают.</strong></p>
+</blockquote>
+<h3 id="half-life-vr-shooter">И здесь появляется первая отменённая Half-Life VR — Shooter<a class="headerlink" href="#half-life-vr-shooter" title="Permanent link">¶</a></h3>
+<p>Для The Lab Valve делала отдельный <strong>Half-Life-themed Shooter</strong>.</p>
+<p>Его описывали как почти theme-park ride:</p>
+<blockquote>
+<p>короткий FPS-аттракцион внутри мира Half-Life.</p>
+</blockquote>
+<p>И это очень логичная первая попытка.</p>
+<p>Не двадцатичасовая игра.</p>
+<p>Не Half-Life 3.</p>
+<p>Просто:</p>
+<blockquote>
+<p>можем ли мы взять Half-Life action и сделать из неё хороший короткий VR piece?</p>
+</blockquote>
+<p>Проект не успели довести в ограниченное production window The Lab и вырезали.</p>
+<p>Очень важная деталь:</p>
+<blockquote>
+<p><strong>даже Half-Life IP ещё не гарантировала, что prototype получит momentum и релиз.</strong></p>
+</blockquote>
+<p>Valve уже могла делать VR.</p>
+<p>Уже могла делать Source 2.</p>
+<p>Уже могла делать Half-Life assets.</p>
+<p>А законченной новой Half-Life всё ещё не было.</p>
+<h3 id="borealis">Borealis — другая тупиковая ветка<a class="headerlink" href="#borealis" title="Permanent link">¶</a></h3>
+<p>Примерно в том же 2015 году Marc Laidlaw ведёт маленький VR-проект под кодовым названием <strong>Borealis</strong>.</p>
+<p>Идея очень Half-Life-шная и очень странная:</p>
+<blockquote>
+<p>игрок находится на Aperture Science Borealis, а корабль скачет между разными эпохами.</p>
+</blockquote>
+<p>Можно было увидеть:</p>
+<ul>
+<li>Seven Hour War;</li>
+<li>время после Episode Two;</li>
+<li>разные состояния одного пространства.</li>
+</ul>
+<p>Даже обсуждалась мини-игра с рыбалкой с борта.</p>
+<p>То есть проект пытался использовать VR и временную нестабильность как новую форму storytelling.</p>
+<p>Но momentum не возник.</p>
+<p>Сам Laidlaw позже формулировал проблему очень просто:</p>
+<blockquote>
+<p><strong>для такого проекта было слишком рано.</strong></p>
+</blockquote>
+<p>Когда basic tools ещё мешают людям даже нормально накидать концепцию, трудно продать команде большое авторское видение.</p>
+<p>И это очень хорошо связывается с проблемой старого Half-Life 3 на раннем Source 2.</p>
+<p>Новая технология может быть потенциально великолепной.</p>
+<p>Но если designer каждый день борется с инструментом, проект теряет энергию раньше, чем становится игрой.</p>
+<h3 id="alyx">Поэтому путь к Alyx — это ещё и серия неудач<a class="headerlink" href="#alyx" title="Permanent link">¶</a></h3>
+<p>Очень важно не пересказывать историю так:</p>
+<div class="highlight"><pre><span></span><code>Valve придумала VR
+↓
+сделала Vive
+↓
+сразу сделала Alyx
+</code></pre></div>
+<p>Реальность:</p>
+<div class="highlight"><pre><span></span><code>VR research
+↓
+hardware experiments
+↓
+TF2 VR
+↓
+Room
+↓
+Lighthouse
+↓
+Vive
+↓
+The Lab
+↓
+Shooter — отменён
+↓
+Borealis — отменён
+↓
+ещё experiments
+↓
+HLVR prototype
+↓
+вот теперь что-то зацепилось
+</code></pre></div>
+<p>То есть Alyx — не автоматический плод инвестиций в VR.</p>
+<p>Она появляется после нескольких лет, когда Valve уже имеет <strong>всю инфраструктуру</strong>, но всё ещё ищет:</p>
+<blockquote>
+<p>какая большая authored game действительно оправдает эту инфраструктуру?</p>
+</blockquote>
+<p>И Half-Life наконец отвечает.</p>
+<h2 id="p077">77. Как ранние VR-прототипы привели к новой Half-Life<a class="headerlink" href="#p077" title="Permanent link">¶</a></h2>
+<p>После The Lab Valve хотела понять, можно ли сделать не набор аттракционов, а полноценную long-form VR game.</p>
+<p>Portal рассматривалась, но быстро упиралась в locomotion: если убрать fling/портальное движение, это уже не Portal; если оставить — многим людям плохо.</p>
+<p>Half-Life подходит естественнее.</p>
+<p>Примерно в феврале 2016 небольшая группа берёт HL2 assets, Source 2, ранние CS:GO-style gloves и строит короткий playable prototype.</p>
+<p>Изначально это буквально 15 минут.</p>
+<p>Потом 45.</p>
+<p>Появляются большие physical plugs, doors, sewers, headcrabs, drawers, предметы, которые хочется трогать руками.</p>
+<p>Очень быстро становится видно:</p>
+<blockquote>
+<p>VR делает знакомый Half-Life-мир принципиально новым.</p>
+</blockquote>
+<p>Headcrab обычного размера на мониторе — привычный enemy.</p>
+<p>В VR он реально летит тебе в лицо.</p>
+<p>Дверь теперь не просто нажимается <code>E</code> — ты сам хватаешь ручку.</p>
+<p>Но одновременно выясняется: HL2 combat слишком быстрый. Враги давят, игрок физически перезаряжается, целится руками, оборачивается телом. Всё надо перестраивать.</p>
+<p>Locomotion тоже приходится решать практически с нуля. На Valve сильно влияют внешние VR-эксперименты вроде Budget Cuts.</p>
+<p>Самое важное: prototype довольно быстро даёт команде ясный hook.</p>
+<p>Не надо годами объяснять:</p>
+<blockquote>
+<p>зачем существует Half-Life VR.</p>
+</blockquote>
+<p>Человек надевает headset, берёт предмет рукой, встречает Headcrab — и идея понятна.</p>
+<p>Именно это и создаёт внутреннюю гравитацию проекта, которой так долго не хватало HL3.</p>
+<p>Первоначально игру можно было сделать на 4–5 часов и сильнее переиспользовать assets. Но prototype оказался настолько убедительным, что scope вырос до полноценной большой Half-Life.</p>
+<h3 id="portal">Почему Portal быстро отпала<a class="headerlink" href="#portal" title="Permanent link">¶</a></h3>
+<p>Valve закономерно рассматривает две свои самые очевидные single-player вселенные:</p>
+<blockquote>
+<p>Half-Life</p>
+</blockquote>
+<p>и</p>
+<blockquote>
+<p>Portal.</p>
+</blockquote>
+<p>На бумаге Portal даже кажется идеальнее.</p>
+<p>Взял предмет рукой.</p>
+<p>Положил cube.</p>
+<p>Покрутил object.</p>
+<p>Посмотрел через portal.</p>
+<p>Всё очень spatial.</p>
+<p>Проблема находится прямо в core mechanic.</p>
+<p>Portal строится на:</p>
+<ul>
+<li>fling;</li>
+<li>сохранении momentum;</li>
+<li>резком падении;</li>
+<li>полёте через пространство;</li>
+<li>мгновенной смене orientation/position.</li>
+</ul>
+<p>То есть буквально на вещах, которые в раннем VR особенно легко вызывают sensory conflict.</p>
+<p>Если убрать эту часть:</p>
+<blockquote>
+<p>получится VR с portal gun, но уже не Portal как игра.</p>
+</blockquote>
+<p>Если оставить:</p>
+<blockquote>
+<p>значительная часть аудитории физически не сможет комфортно играть.</p>
+</blockquote>
+<p>Half-Life значительно удобнее.</p>
+<p>Её ядро:</p>
+<blockquote>
+<p>ходить по пространству, смотреть, стрелять, взаимодействовать, наблюдать события.</p>
+</blockquote>
+<p>Все эти действия можно <strong>пересобрать под VR</strong>, не уничтожив identity серии.</p>
+<h3 id="2016">Февраль 2016 — маленькая команда проверяет самую простую гипотезу<a class="headerlink" href="#2016" title="Permanent link">¶</a></h3>
+<p>В начале 2016 года небольшая группа Valve берёт:</p>
+<ul>
+<li>Source 2;</li>
+<li>assets Half-Life 2;</li>
+<li>раннюю hand/controller representation;</li>
+<li>куски знакомой Half-Life grammar.</li>
+</ul>
+<p>И собирает короткий prototype.</p>
+<p>Не пытается сразу решить:</p>
+<blockquote>
+<p>какой будет сюжет?</p>
+<p>кто villain?</p>
+<p>что произойдёт после Episode Two?</p>
+</blockquote>
+<p>Вопрос значительно проще:</p>
+<blockquote>
+<p><strong>Half-Life вообще становится интереснее, если физически поместить человека внутрь её мира?</strong></p>
+</blockquote>
+<p>Вот это правильная prototype question.</p>
+<p>Потому что ответ можно получить за несколько недель.</p>
+<p>Не через design bible.</p>
+<p>А:</p>
+<blockquote>
+<p>надевай headset.</p>
+</blockquote>
+<h3 id="15-45">15 минут внезапно превращаются в 45<a class="headerlink" href="#15-45" title="Permanent link">¶</a></h3>
+<p>Один из самых важных результатов всей разработки.</p>
+<p>Команда собирает участок, который при обычной скорости HL2 должен занимать примерно <strong>15 минут</strong>.</p>
+<p>Playtester проводит там:</p>
+<blockquote>
+<p>около 45.</p>
+</blockquote>
+<p>Почему?</p>
+<p>Потому что начинает делать вещи, на которые desktop-player почти не тратит время.</p>
+<p>Заглядывает.</p>
+<p>Наклоняется.</p>
+<p>Берёт мусор.</p>
+<p>Открывает drawers.</p>
+<p>Разглядывает props.</p>
+<p>Проверяет двери.</p>
+<p>Трогает объекты.</p>
+<p>Играет с physics.</p>
+<p>То есть VR резко меняет <strong>цену пространства</strong>.</p>
+<p>В обычной Half-Life:</p>
+<blockquote>
+<p>shelf = background detail.</p>
+</blockquote>
+<p>В VR:</p>
+<blockquote>
+<p>shelf = место, куда хочется сунуть руку.</p>
+</blockquote>
+<p>Это фундаментальное открытие будущей Alyx.</p>
+<h3 id="_1">Одна комната неожиданно получает другой запас игрового времени<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p>Это очень важно производственно.</p>
+<p>Рассказ о «15 минутах против 45» показывает реакцию на конкретный прототип. Это не универсальный коэффициент, которым можно умножить длительность любой карты. Новизна VR, привычки тестера и количество предметов здесь тоже имеют значение. Но для команды наблюдение было важным: прежняя длина маршрута больше не предсказывала, сколько интересного времени человек проведёт внутри него.</p>
+<p>VR повышает <strong>плотность времени внутри комнаты</strong>.</p>
+<p>И вот здесь начинает формироваться одна из центральных формул Alyx:</p>
+<div class="highlight"><pre><span></span><code>меньше метров
++
+больше взаимодействий на метр
+=
+полноценная длительность
+</code></pre></div>
+<p>Это потом позволит игре быть заметно компактнее spatially, но всё равно ощущаться большой.</p>
+<h3 id="headcrab">Headcrab внезапно снова становится страшным<a class="headerlink" href="#headcrab" title="Permanent link">¶</a></h3>
+<p>Для veteran Half-Life headcrab давно почти комический enemy.</p>
+<p>На мониторе:</p>
+<blockquote>
+<p>ага, маленькая тварь прыгает.</p>
+</blockquote>
+<p>В VR:</p>
+<blockquote>
+<p><strong>объект размером с кошку реально летит в твоё лицо.</strong></p>
+</blockquote>
+<p>Это очень мощный внутренний аргумент для команды.</p>
+<p>Valve не обязана придумывать нового icon monster только ради VR.</p>
+<p>Сам medium возвращает физическую силу старому enemy.</p>
+<p>То же с Barnacle.</p>
+<p>На мониторе ты считываешь:</p>
+<blockquote>
+<p>потолочная ловушка.</p>
+</blockquote>
+<p>В VR человек физически поднимает голову.</p>
+<p>Видит mouth/body над собой.</p>
+<p>Spatial horror меняется почти автоматически.</p>
+<h3 id="_2">Дверь тоже внезапно становится механикой<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>Desktop:</p>
+<div class="highlight"><pre><span></span><code>подошёл
+↓
+E
+↓
+door animation
+</code></pre></div>
+<p>VR:</p>
+<div class="highlight"><pre><span></span><code>протянул руку
+↓
+взял handle
+↓
+потянул
+↓
+можно приоткрыть
+↓
+выглянуть
+↓
+использовать дверь как cover
+</code></pre></div>
+<p>Одно banal действие превращается в маленький interaction system.</p>
+<p>И это очень Half-Life.</p>
+<p>Серия всегда любила:</p>
+<blockquote>
+<p>обычный объект выполняет несколько функций.</p>
+</blockquote>
+<p>VR просто даёт ещё один слой.</p>
+<h3 id="hl2-combat">Но HL2 combat сразу ломается<a class="headerlink" href="#hl2-combat" title="Permanent link">¶</a></h3>
+<p>И вот prototype показывает не только хорошее.</p>
+<p>В обычной HL2 Gordon:</p>
+<ul>
+<li>быстро бежит;</li>
+<li>моментально разворачивается мышью;</li>
+<li>мгновенно меняет weapon;</li>
+<li>нажимает <code>R</code>;</li>
+<li>прыгает;</li>
+<li>постоянно получает pressure с разных сторон.</li>
+</ul>
+<p>VR-player:</p>
+<ul>
+<li>реально двигает рукой;</li>
+<li>реально целится;</li>
+<li>физически поворачивает голову/корпус;</li>
+<li>перезаряжает weapon как последовательность действий;</li>
+<li>хуже контролирует threats за спиной.</li>
+</ul>
+<p>То есть старый pacing становится:</p>
+<blockquote>
+<p><strong>слишком быстрым для человеческого тела внутри интерфейса.</strong></p>
+</blockquote>
+<p>И это очень важный момент.</p>
+<p>Alyx не могла быть:</p>
+<blockquote>
+<p>HL2 с headset.</p>
+</blockquote>
+<p>Она обязана стать:</p>
+<blockquote>
+<p>новой интерпретацией Half-Life combat.</p>
+</blockquote>
+<h3 id="locomotion">Locomotion кажется главной нерешаемой проблемой<a class="headerlink" href="#locomotion" title="Permanent link">¶</a></h3>
+<p>Valve изначально очень подозрительно относится к teleportation.</p>
+<p>Со стороны она выглядит ужасно.</p>
+<p>Человек:</p>
+<blockquote>
+<p>исчез;</p>
+<p>появился в пяти метрах.</p>
+</blockquote>
+<p>Никакой spatial continuity.</p>
+<p>Как вообще можно сохранить присутствие?</p>
+<p>И тут огромную роль играет <strong>Budget Cuts</strong>.</p>
+<p>Разработчики Valve сами потом называли её одной из самых влиятельных внешних VR-games для Alyx.</p>
+<p>Она показала две вещи.</p>
+<p>Первая:</p>
+<blockquote>
+<p>teleportation изнутри headset ощущается гораздо менее разрушительно, чем выглядит человеку, который смотрит запись на мониторе.</p>
+</blockquote>
+<p>Вторая:</p>
+<blockquote>
+<p>VR может строить невероятное напряжение не скоростью, а отношением тела к пространству.</p>
+</blockquote>
+<p>Peek.</p>
+<p>Укрытие.</p>
+<p>Ожидание.</p>
+<p>Неуверенность, что находится за дверью.</p>
+<p>Это очень подходит Half-Life.</p>
+<h3 id="valve-locomotion">Поэтому Valve не выбирает одну «правильную» locomotion<a class="headerlink" href="#valve-locomotion" title="Permanent link">¶</a></h3>
+<p>Вместо идеологической войны:</p>
+<blockquote>
+<p>TELEPORT ХОРОШИЙ / SMOOTH ПЛОХОЙ,</p>
+</blockquote>
+<p>Valve постепенно приходит к pragmatic answer:</p>
+<blockquote>
+<p><strong>дай несколько способов и строй игру так, чтобы они все работали.</strong></p>
+</blockquote>
+<p>Финальная Alyx поддерживает:</p>
+<ul>
+<li>blink/teleport;</li>
+<li>shift;</li>
+<li>continuous movement;</li>
+<li>разные повороты;</li>
+<li>room-scale;</li>
+<li>seated/standing play.</li>
+</ul>
+<p>Это выглядит accessibility choice.</p>
+<p>Но production consequence огромный.</p>
+<p>Каждый combat encounter должен пережить человека, который:</p>
+<blockquote>
+<p>плавно идёт.</p>
+</blockquote>
+<p>И человека, который:</p>
+<blockquote>
+<p>мгновенно прыгает между безопасными точками.</p>
+</blockquote>
+<p>Каждое пространство надо проверять с несколькими movement models.</p>
+<h3 id="_3">И это влияет на саму геометрию мира<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>VR хуже переносит:</p>
+<ul>
+<li>огромные бесконечные маршруты;</li>
+<li>сложный platforming;</li>
+<li>резкие forced movement;</li>
+<li>частые прыжки;</li>
+<li>слишком длинные пробежки без взаимодействия.</li>
+</ul>
+<p>Поэтому Alyx постепенно становится игрой:</p>
+<blockquote>
+<p>комнат;</p>
+<p>дворов;</p>
+<p>квартир;</p>
+<p>подвалов;</p>
+<p>переходов;</p>
+<p>маленьких arena.</p>
+</blockquote>
+<p>Это не просто hardware limitation.</p>
+<p>Это <strong>новый rhythm authored Half-Life</strong>.</p>
+<h3 id="prototype">У prototype появляется самый важный признак хорошего внутреннего проекта — люди сами хотят к нему присоединиться<a class="headerlink" href="#prototype" title="Permanent link">¶</a></h3>
+<p>Вот здесь Alyx принципиально отличается от некоторых старых Half-Life attempts.</p>
+<p>Не надо сверху приказать:</p>
+<blockquote>
+<p>теперь все делаем HLVR.</p>
+</blockquote>
+<p>Robin Walker описывал процесс практически органически.</p>
+<p>Небольшая команда показывает prototype.</p>
+<p>Другие сотрудники играют.</p>
+<p>И начинают понимать:</p>
+<blockquote>
+<p><strong>о, я вижу, что здесь можно улучшить. Я хочу это делать.</strong></p>
+</blockquote>
+<p>Люди постепенно присоединяются.</p>
+<p>Проект начинает создавать собственную <strong>внутреннюю гравитацию</strong>.</p>
+<p>Это очень важно для Valve с её культурой mobility между teams.</p>
+<p>Project, который не способен притягивать людей, легко умирает.</p>
+<p>HLVR — способен.</p>
+<h3 id="_4">Первоначальная цель всё ещё сравнительно скромная<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>По материалам <em>The Final Hours of Half-Life: Alyx</em>, Valve какое-то время вполне могла сделать:</p>
+<blockquote>
+<p><strong>4–5-часовую Half-Life VR</strong>, сильно использующую существующие HL2 assets.</p>
+</blockquote>
+<p>То есть даже после удачного prototype никто не обязан был делать пятнадцатичасовое возвращение серии.</p>
+<p>Это очень разумная модель риска.</p>
+<p>Есть новый medium.</p>
+<p>Маленький installed base.</p>
+<p>До этого Valve много проектов вообще не довела.</p>
+<p>Лучше:</p>
+<blockquote>
+<p>законченная средняя VR Half-Life</p>
+</blockquote>
+<p>чем:</p>
+<blockquote>
+<p>очередная вечная мегаломания.</p>
+</blockquote>
+<p>Но проблема хорошего prototype:</p>
+<blockquote>
+<p>он постоянно доказывает, что можно сделать больше.</p>
+</blockquote>
+<h3 id="scope">Почему scope начинает расти<a class="headerlink" href="#scope" title="Permanent link">¶</a></h3>
+<p>Playtests говорят:</p>
+<blockquote>
+<p>людям нравится.</p>
+</blockquote>
+<p>Developers говорят:</p>
+<blockquote>
+<p>здесь можно сделать ещё одну систему.</p>
+</blockquote>
+<p>Artists понимают:</p>
+<blockquote>
+<p>старые HL2 assets уже недостаточны, если player будет рассматривать их в десяти сантиметрах от лица.</p>
+</blockquote>
+<p>Writers начинают спрашивать:</p>
+<blockquote>
+<p>если это реально большая Half-Life, история тоже не может быть disposable.</p>
+</blockquote>
+<p>Engine team получает:</p>
+<blockquote>
+<p>нужен production-grade Source 2 для большой first-person game.</p>
+</blockquote>
+<p>То есть проект постепенно проходит знакомую Valve-эскалацию:</p>
+<div class="highlight"><pre><span></span><code>prototype
+↓
+короткая VR game
+↓
+большая VR game
+↓
+полноценная Half-Life
+</code></pre></div>
+<p>Но в отличие от многих отменённых Valve-projects у него есть важнейший стабилизатор:</p>
+<blockquote>
+<p><strong>каждый новый слой уже опирается на вещь, которая реально работает и нравится playtesters.</strong></p>
+</blockquote>
+<h3 id="hlvr-hl3">Именно поэтому HLVR выживает там, где ранний HL3 не выжил<a class="headerlink" href="#hlvr-hl3" title="Permanent link">¶</a></h3>
+<p>HL3 2013–2014:</p>
+<div class="highlight"><pre><span></span><code>интересная procedural hypothesis
++
+незрелый Source 2
++
+куча фундаментальных engine problems
+</code></pre></div>
+<p>HLVR 2016:</p>
+<div class="highlight"><pre><span></span><code>уже более зрелый Source 2
++
+готовая VR hardware stack
++
+очень конкретный interaction prototype
++
+очевидная реакция playtesters
+</code></pre></div>
+<p>Один project требует сначала поверить в будущее.</p>
+<p>Другой уже можно <strong>надеть на голову</strong>.</p>
+<p>Для Valve это огромная разница.</p>
+<h2 id="p078">78. Разработка Half-Life: Alyx<a class="headerlink" href="#p078" title="Permanent link">¶</a></h2>
+<p>Проект растёт примерно с 2016 года.</p>
+<p>Небольшая группа превращается примерно в 80 человек — крупнейшую на тот момент команду Valve, работавшую над одной single-player game.</p>
+<p>Это очень важное отличие от многих отменённых проектов: Alyx получает настоящий company-wide momentum.</p>
+<p>Source 2 уже достаточно зрелый. VR problems конкретные и playtestable. Игра реально работает руками уже на раннем этапе.</p>
+<p>Но narrative долго остаётся слабым местом.</p>
+<p>Ранние версии сценария проходили через Rob Yescombe и другие варианты. К 2018 году внутри Valve уже существовала довольно большая рабочая игра, которую сотрудники любили именно за gameplay, но story считалась недостаточно сильной.</p>
+<p>Проект должен был стать ключевым software для Valve Index, который выходит летом 2019 года, но саму Alyx в итоге откладывают.</p>
+<p>К сценарию сильнее подключаются Erik Wolpaw, Jay Pinkerton, Sean Vanaman, Jake Rodkin и люди из Campo Santo, которую Valve купила в 2018 году. Работа над In the Valley of Gods приостанавливается.</p>
+<p>Russell превращается в постоянного радио-компаньона Alyx.</p>
+<p>Сценарий разрастается примерно до 280 страниц — для игры с очень ограниченным количеством традиционных cutscenes это огромный объём.</p>
+<p>Главная проблема prequel:</p>
+<blockquote>
+<p>что реально может изменить история, если мы уже знаем будущее Alyx, Eli и Gordon?</p>
+</blockquote>
+<p>И вот появляется идея Jim Murray: дать молодой Alyx возможность увидеть смерть Eli из Episode Two и вмешаться.</p>
+<p>Сначала многие writers считают это слишком опасным retcon.</p>
+<p>Потом понимают:</p>
+<blockquote>
+<p>именно это даёт игре настоящее последствие.</p>
+</blockquote>
+<p>Финал перестраивают. White Forest, Eli, Dog и Gordon возвращаются уже специально ради новой концовки.</p>
+<p>Merle Dandridge первоначально снова записывала Alyx, но Valve решила, что нужен голос моложе, и роль получила Ozioma Akagha. Eli после смерти Robert Guillaume озвучивает James Moses Black. G-Man снова Mike Shapiro.</p>
+<p>Игра объявлена только в ноябре 2019 года, когда уже практически готова.</p>
+<p>Это тоже урок HL3-мифа: больше никакого многолетнего публичного обещания.</p>
+<p>23 марта 2020 года Half-Life: Alyx выходит.</p>
+<h3 id="prototype-production-">Из prototype проект постепенно превращается в настоящую production-машину<a class="headerlink" href="#prototype-production-" title="Permanent link">¶</a></h3>
+<p>HLVR начинается маленькой группой примерно в феврале 2016 года.</p>
+<p>Потом люди присоединяются.</p>
+<p>К моменту публичного AMA Valve говорит:</p>
+<blockquote>
+<p>около <strong>80 человек</strong>.</p>
+</blockquote>
+<p>И прямо называет это <strong>самой большой single-game team в истории компании</strong>.</p>
+<p>Для современной AAA индустрии 80 — вообще не чудовищное число.</p>
+<p>Для Valve — огромное.</p>
+<p>И особенно показательно, что заметная часть команды уже имела опыт предыдущих Half-Life.</p>
+<p>То есть Alyx становится одновременно:</p>
+<div class="highlight"><pre><span></span><code>старые люди серии
++
+новые сотрудники
++
+VR specialists
++
+Source 2 team
++
+Campo Santo
+</code></pre></div>
+<p>И это очень подходящая смесь для возвращения Half-Life.</p>
+<p>Слишком много только старых людей:</p>
+<blockquote>
+<p>риск воспроизводить прошлое.</p>
+</blockquote>
+<p>Слишком много только новых:</p>
+<blockquote>
+<p>можно потерять язык серии.</p>
+</blockquote>
+<h3 id="source-2">Source 2 наконец находится в правильном состоянии<a class="headerlink" href="#source-2" title="Permanent link">¶</a></h3>
+<p>Для Half-Life 3 2013–2014 движок был частью проблемы.</p>
+<p>Нет нормального save/restore.</p>
+<p>Нет готового lighting solution.</p>
+<p>Нет зрелого outdoor pipeline.</p>
+<p>Процедурные идеи приходится одновременно доказывать вместе с engine.</p>
+<p>К HLVR ситуация другая.</p>
+<p>Source 2 уже пережил:</p>
+<ul>
+<li>Dota 2 Reborn;</li>
+<li>годы внутренних итераций;</li>
+<li>развитие tools;</li>
+<li>VR work;</li>
+<li>новый asset pipeline.</li>
+</ul>
+<p>Он ещё далеко не окончательный.</p>
+<p>Но теперь designer может большую часть времени решать:</p>
+<blockquote>
+<p><strong>какая комната интересная?</strong></p>
+</blockquote>
+<p>а не:</p>
+<blockquote>
+<p>существует ли вообще технология, позволяющая её сохранить и загрузить?</p>
+</blockquote>
+<p>Именно это разделяет engine research и реальную production.</p>
+<h3 id="valve-alyx">Valve всё равно проектирует Alyx почти по одной комнате<a class="headerlink" href="#valve-alyx" title="Permanent link">¶</a></h3>
+<p>Robin Walker потом описывает подход почти абсурдно дорого:</p>
+<blockquote>
+<p>построили room → playtest → переделали → только потом следующая.</p>
+</blockquote>
+<p>VR делает эту методику ещё важнее.</p>
+<p>Потому что designer не знает заранее, что player посчитает интерактивным.</p>
+<p>Стул?</p>
+<p>Попробует двигать.</p>
+<p>Шляпа?</p>
+<p>Наденет.</p>
+<p>Ящик?</p>
+<p>Откроет.</p>
+<p>Маска?</p>
+<p>Попробует надеть.</p>
+<p>Маркер?</p>
+<p>Начнёт рисовать.</p>
+<p>Если объект выглядит usable, VR почти создаёт физическое обещание:</p>
+<blockquote>
+<p><strong>я должен иметь возможность сделать с ним то, что сделал бы рукой.</strong></p>
+</blockquote>
+<p>Именно поэтому production cost комнаты резко растёт.</p>
+<h3 id="authored-density">Складывается новый тип authored density<a class="headerlink" href="#authored-density" title="Permanent link">¶</a></h3>
+<p>В HL2 density часто означает:</p>
+<blockquote>
+<p>каждые несколько минут новая ситуация.</p>
+</blockquote>
+<p>В Alyx комната может сама держать человека дольше, потому что внутри есть:</p>
+<ul>
+<li>drawers;</li>
+<li>physics props;</li>
+<li>ammo;</li>
+<li>resin;</li>
+<li>puzzle;</li>
+<li>cover;</li>
+<li>windows;</li>
+<li>bottles;</li>
+<li>readable environmental details.</li>
+</ul>
+<p>То есть единица production становится меньше пространственно и тяжелее по количеству интеракций.</p>
+<p>Вот почему короткий prototype легко разрастается в большой playtime.</p>
+<h3 id="locomotion-production-requirement">Locomotion перестаёт быть одной механикой и становится production requirement<a class="headerlink" href="#locomotion-production-requirement" title="Permanent link">¶</a></h3>
+<p>Valve годами экспериментирует с тем, как человек перемещается.</p>
+<p>Teleport.</p>
+<p>Shift.</p>
+<p>Continuous.</p>
+<p>Snap turning.</p>
+<p>Smooth turning.</p>
+<p>Room-scale.</p>
+<p>Seated.</p>
+<p>Standing.</p>
+<p>И проблема не решается одной design decision.</p>
+<p>Каждый вариант создаёт другие возможные ошибки.</p>
+<p>Например, teleporting player способен мгновенно оказаться:</p>
+<blockquote>
+<p>в неожиданной позиции относительно enemy.</p>
+</blockquote>
+<p>Smooth-player физически проходит весь путь и получает другое время реакции.</p>
+<p>Seated-player имеет другую досягаемость.</p>
+<p>Room-scale человек может реально обойти object сбоку.</p>
+<p>То есть accessibility начинает влиять на:</p>
+<ul>
+<li>arena size;</li>
+<li>enemy speed;</li>
+<li>cover;</li>
+<li>interaction height;</li>
+<li>object placement;</li>
+<li>navigation;</li>
+<li>scripting.</li>
+</ul>
+<p>Для Valve это огромный новый слой playtesting.</p>
+<h3 id="_5">Руки меняют стоимость производства, даже когда механика уже придумана<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>Вопрос «сколько рук сейчас свободно?» подробно разбирается в <a href="11-half-life-alyx-design.html#inventory">дизайне Alyx</a>. Для истории разработки важнее другое: две отслеживаемые руки резко увеличивают число состояний, которые команда обязана поддерживать.</p>
+<p>Представь совершенно обычную дверь. В неё входит player с пистолетом справа. Другой держит оружие слева. Третий несёт бутылку. Четвёртый играет сидя и не может удобно дотянуться до ручки. Пятый открыл дверь, отступил и просунул в щель предмет. Шестой вообще стоит внутри зоны, где должна пройти створка.</p>
+<p>Это уже не одна анимация <code>open_door</code>.</p>
+<p>Это маленькая матрица взаимодействий. Причём к ней добавляются разные controllers, способы перемещения, рост человека и физический размер его комнаты.</p>
+<p>Поэтому «добавим ещё один интерактивный предмет» — не только работа художника. Нужны понятный захват, collision, подходящий звук, допустимое положение руки, восстановление после ошибки и поведение при сохранении/загрузке. Для одного предмета затраты кажутся смешными. Для всей кампании складываются в огромный невидимый production budget.</p>
+<p>Отсюда важность общего словаря. Если похожие ручки работают по-разному, плейтестер замечает это сразу. Значит, новизну главы лучше строить на сочетании надёжных взаимодействий, а не на двадцати уникальных способах открыть шкаф.</p>
+<p>И вот почему взросление Source 2 здесь связано с дизайном буквально: удобный инструмент и устойчивый базовый interaction освобождают время для постановки, вместо очередного исправления руки, застрявшей в двери.</p>
+<h3 id="alyx-alyx-finished-concept">Alyx долго не называлась Alyx как знакомая нам finished concept<a class="headerlink" href="#alyx-alyx-finished-concept" title="Permanent link">¶</a></h3>
+<p>Внутренне проект долго живёт как <strong>HLVR</strong>.</p>
+<p>Это важно психологически.</p>
+<p>Сначала Valve решает:</p>
+<blockquote>
+<p>делаем Half-Life в VR.</p>
+</blockquote>
+<p>Только потом окончательно определяет:</p>
+<ul>
+<li>protagonist;</li>
+<li>точное место во времени;</li>
+<li>story;</li>
+<li>масштаб;</li>
+<li>название.</li>
+</ul>
+<p>То есть title character не была исходной причиной проекта.</p>
+<p>Причина:</p>
+<blockquote>
+<p>VR + Half-Life работает.</p>
+</blockquote>
+<p>Alyx становится лучшим способом построить вокруг этого полноценную историю.</p>
+<h3 id="prequel">Почему prequel казался безопасным<a class="headerlink" href="#prequel" title="Permanent link">¶</a></h3>
+<p>После Episode Two существует огромный narrative debt.</p>
+<p>Если project называется Half-Life 3 и начинается после Eli:</p>
+<blockquote>
+<p>всё. Теперь надо отвечать.</p>
+</blockquote>
+<p>Borealis.</p>
+<p>G-Man.</p>
+<p>Alyx.</p>
+<p>Combine.</p>
+<p>Cliffhanger.</p>
+<p>Ожидания больше десяти лет.</p>
+<p>А VR всё ещё экспериментальный medium.</p>
+<p>Valve сознательно не хочет одновременно решать:</p>
+<div class="highlight"><pre><span></span><code>как вообще работает большой VR FPS?
++
+как закончить величайший cliffhanger компании?
+</code></pre></div>
+<p>Prequel между HL1 и HL2 снимает вторую проблему.</p>
+<p>Плюс сама Valve отдельно признаёт ещё один фактор:</p>
+<blockquote>
+<p>VR audience ограничена.</p>
+</blockquote>
+<p>Продвинуть центральную chronology огромным эксклюзивным VR sequel означало бы, что большая часть фанатов физически не сможет пережить следующий обязательный кусок истории.</p>
+<p>Поэтому prequel выглядит аккуратным компромиссом.</p>
+<p>И именно поэтому финальная концовка потом настолько дерзкая:</p>
+<blockquote>
+<p>игра начинает безопасно, а заканчивает уже <strong>небезопасно</strong>.</p>
+</blockquote>
+<h3 id="alyx-gordon">Почему именно Alyx работает лучше Gordon ещё до сценарной части<a class="headerlink" href="#alyx-gordon" title="Permanent link">¶</a></h3>
+<p>Gordon несёт огромный legacy package.</p>
+<p>Crowbar.</p>
+<p>HEV.</p>
+<p>Молчание.</p>
+<p>Gravity Gun.</p>
+<p>Арсенал.</p>
+<p>Скорость.</p>
+<p>Expectation:</p>
+<blockquote>
+<p>это тот самый Gordon Freeman.</p>
+</blockquote>
+<p>А VR нуждается в свободе сказать:</p>
+<blockquote>
+<p>crowbar не работает;</p>
+<p>большой arsenal неудобен;</p>
+<p>protagonist должен говорить;</p>
+<p>movement будет медленнее;</p>
+<p>руки будут устроены иначе.</p>
+</blockquote>
+<p>Alyx позволяет делать эти изменения без ощущения:</p>
+<blockquote>
+<p>Valve сломала Gordon.</p>
+</blockquote>
+<p>Она уже известный персонаж.</p>
+<p>Уже достаточно важный.</p>
+<p>Но mechanical contract у неё не был установлен предыдущими playable games.</p>
+<p>Это идеальное место между:</p>
+<blockquote>
+<p>совершенно новый герой</p>
+</blockquote>
+<p>и</p>
+<blockquote>
+<p>Gordon с двадцатью годами baggage.</p>
+</blockquote>
+<h3 id="crowbar-legacy-trap">Crowbar действительно становится прекрасным примером legacy trap<a class="headerlink" href="#crowbar-legacy-trap" title="Permanent link">¶</a></h3>
+<p>Valve прототипирует crowbar.</p>
+<p>На бумаге:</p>
+<blockquote>
+<p>конечно.</p>
+</blockquote>
+<p>Half-Life.</p>
+<p>VR.</p>
+<p>Физическая рука.</p>
+<p>Дай человеку лом — что может пойти не так?</p>
+<p>Практически всё.</p>
+<p>Нет реального force feedback.</p>
+<p>Рука игрока проходит дальше, когда виртуальный crowbar упёрся в стену.</p>
+<p>Melee interaction оказывается менее убедительным, чем ожидаешь.</p>
+<p>Объект ещё и настолько сильно кодирует Gordon Freeman, что любой playtester с crowbar мгновенно начинает чувствовать:</p>
+<blockquote>
+<p>я Gordon.</p>
+</blockquote>
+<p>А Valve делает Alyx.</p>
+<p>В итоге один из самых священных symbols серии вырезают.</p>
+<p>И это очень здоровая Valve:</p>
+<blockquote>
+<p><strong>identity не важнее работающей механики.</strong></p>
+</blockquote>
+<h3 id="20172018-gameplay-story">К 2017–2018 gameplay уже значительно опережает story<a class="headerlink" href="#20172018-gameplay-story" title="Permanent link">¶</a></h3>
+<p>Вот здесь начинается самая опасная часть проекта.</p>
+<p>Команда строит большую игру.</p>
+<p>Rooms работают.</p>
+<p>VR interaction работает.</p>
+<p>Combat развивается.</p>
+<p>Production идёт.</p>
+<p>А narrative не даёт того же уровня уверенности.</p>
+<p>Valve привлекает <strong>Rob Yescombe</strong>, известного в том числе по <em>The Invisible Hours</em>.</p>
+<p>Он работает над историей в 2017–2018 годах.</p>
+<p>Версия получается значительно темнее знакомой Alyx.</p>
+<p>Существуют идеи:</p>
+<ul>
+<li>female Combine antagonist Hahn;</li>
+<li>значительно более тяжёлые сцены;</li>
+<li>torture/dread;</li>
+<li>месть;</li>
+<li>разные варианты использования G-Man/time manipulation.</li>
+</ul>
+<p>Важно не относиться к этому как к:</p>
+<blockquote>
+<p>«вот настоящая вырезанная Alyx».</p>
+</blockquote>
+<p>Это именно production draft.</p>
+<p>Как HL2 Beta.</p>
+<p>Большой проект перебирает разные story directions.</p>
+<h3 id="company-wide-playtest-2018">Company-wide playtest 2018 становится моментом истины<a class="headerlink" href="#company-wide-playtest-2018" title="Permanent link">¶</a></h3>
+<p>Valve даёт большой рабочий build собственной компании.</p>
+<p>И получает очень странный результат.</p>
+<p><strong>Gameplay людям очень нравится.</strong></p>
+<p>VR choice подтверждается.</p>
+<p>Комнаты работают.</p>
+<p>Сам Half-Life в VR работает.</p>
+<p>А story получает самые плохие оценки среди компонентов.</p>
+<p>Mike Morasky описывал её как слишком:</p>
+<blockquote>
+<p>dark, serious, laborious.</p>
+</blockquote>
+<p>Сравнивал тон практически с чрезмерно тяжёлым superhero movie.</p>
+<p>И это очень важное подтверждение.</p>
+<p>До этого writers/designers уже могли чувствовать:</p>
+<blockquote>
+<p>с историей что-то не так.</p>
+</blockquote>
+<p>Но company-wide playtest говорит:</p>
+<blockquote>
+<p>да. Проблема реальная.</p>
+</blockquote>
+<p>То есть проект снова проходит классический Valve moment:</p>
+<div class="highlight"><pre><span></span><code>огромный объём работы уже сделан
+↓
+часть игры не работает
+↓
+не защищаем sunk cost
+↓
+переписываем
+</code></pre></div>
+<p>Очень сильная рифма с Half-Life 1997.</p>
+<p>Только теперь Valve не выбрасывает всю игру.</p>
+<p>Gameplay уже хороший.</p>
+<p>Надо спасать narrative.</p>
+<h3 id="valve-alyx-index">Valve хотела Alyx рядом с Index — и сознательно пропустила этот момент<a class="headerlink" href="#valve-alyx-index" title="Permanent link">¶</a></h3>
+<p>Index выходит летом 2019 года.</p>
+<p>Для hardware launch собственная Half-Life была бы идеальным software.</p>
+<p>И первоначально это действительно было желаемым окном.</p>
+<p>Но story rewrite и общий polish оказываются важнее синхронного launch.</p>
+<p>Это очень характерно.</p>
+<p>Компания уже производит собственный VR headset.</p>
+<p>Маркетингово:</p>
+<blockquote>
+<p>выпустить killer app одновременно.</p>
+</blockquote>
+<p>Творчески:</p>
+<blockquote>
+<p>история ещё не готова.</p>
+</blockquote>
+<p>И Valve снова выбирает:</p>
+<blockquote>
+<p><strong>не отправлять Half-Life только потому, что календарь просит.</strong></p>
+</blockquote>
+<p>В результате Index сначала выходит без Alyx.</p>
+<p>А сама игра появляется в марте 2020.</p>
+<h3 id="erik-wolpaw-jay-pinkerton">Возвращение Erik Wolpaw и Jay Pinkerton<a class="headerlink" href="#erik-wolpaw-jay-pinkerton" title="Permanent link">¶</a></h3>
+<p>После story crisis к проекту возвращаются люди, очень хорошо понимающие именно <strong>тон Valve</strong>:</p>
+<ul>
+<li>Erik Wolpaw;</li>
+<li>Jay Pinkerton.</li>
+</ul>
+<p>И это не просто:</p>
+<blockquote>
+<p>наняли сценаристов чинить реплики.</p>
+</blockquote>
+<p>Проблема была структурная.</p>
+<p>Prequel.</p>
+<p>G-Man.</p>
+<p>Известная судьба characters.</p>
+<p>Как сделать так, чтобы story вообще имела вес?</p>
+<h3 id="campo-santo-writer-room">Campo Santo резко усиливает writer room<a class="headerlink" href="#campo-santo-writer-room" title="Permanent link">¶</a></h3>
+<p>В 2018 Valve покупает <strong>Campo Santo</strong>.</p>
+<p>Команда <em>Firewatch</em> приходит внутрь компании.</p>
+<p>Sean Vanaman.</p>
+<p>Jake Rodkin.</p>
+<p>Другие сотрудники.</p>
+<p>И теперь Valve получает людей, чей последний большой проект буквально строился вокруг:</p>
+<ul>
+<li>dialogue;</li>
+<li>relationship;</li>
+<li>voice;</li>
+<li>companion without physical body;</li>
+<li>authored first-person narrative.</li>
+</ul>
+<p>Совпадение почти идеальное для Alyx.</p>
+<p>Работа над <strong>In the Valley of Gods</strong> постепенно уходит в сторону, а часть Campo Santo подключается к Valve projects, включая Alyx.</p>
+<p>В writer room Alyx особенно важны Vanaman и Rodkin.</p>
+<p>В конструкции Russell легко увидеть родство с Firewatch: отношения строятся через голос, пока герой движется по миру. Это сравнение авторских приёмов, а не доказательство того, что один конкретный сотрудник единолично придумал Рассела.</p>
+<h3 id="russell">Russell: почему опыт диалогового приключения здесь оказался уместен<a class="headerlink" href="#russell" title="Permanent link">¶</a></h3>
+<p>Half-Life исторически любит companion.</p>
+<p>Но VR усиливает недостатки physical companion.</p>
+<p>NPC:</p>
+<ul>
+<li>занимает место;</li>
+<li>может блокировать doorway;</li>
+<li>требует navigation;</li>
+<li>должен реагировать на hands;</li>
+<li>player может лезть ему в лицо;</li>
+<li>усложняет каждую комнату.</li>
+</ul>
+<p>А story всё равно нужен постоянный человеческий контакт.</p>
+<p>Решение:</p>
+<blockquote>
+<p><strong>голос в ухе.</strong></p>
+</blockquote>
+<p>Russell может:</p>
+<ul>
+<li>говорить во время gameplay;</li>
+<li>реагировать;</li>
+<li>шутить;</li>
+<li>объяснять;</li>
+<li>строить отношения;</li>
+<li>давать exposition;</li>
+</ul>
+<p>и никогда:</p>
+<ul>
+<li>не застревать;</li>
+<li>не ломать combat;</li>
+<li>не требовать escort logic.</li>
+</ul>
+<p>Это почти идеальное соединение Half-Life и опыта Firewatch.</p>
+<h3 id="_6">Диалоговая модель меняет работу над сценарием<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>Появление разговорчивой Alyx меняет не только впечатление игрока. Меняется единица работы сценариста.</p>
+<p>Для Gordon реплика NPC должна одновременно сообщить информацию и пережить отсутствие ответа. Для Alyx можно написать короткий обмен: вопрос, сомнение, шутку, уточнение. Такой обмен способен сдвинуть отношения, хотя сюжетная задача остаётся прежней.</p>
+<p>Но постоянный радио-диалог создаёт новую производственную зависимость. Изменился маршрут — реплика может начаться слишком рано. Добавили бой — её перекрывает выстрел. Ускорили переход — ответ повисает уже в следующем помещении. Человек задержался у шкафа — разговор закончился, а новая сцена ещё не началась.</p>
+<p>Поэтому качество сценария здесь проверяется вместе с уровнем. Смешная реплика в таблице ещё не гарантирует смешного момента в игре. Нужны время, контекст и свободное внимание.</p>
+<p>Это объясняет, почему переписывание истории нельзя считать последним косметическим проходом. Меняется объём озвучивания, порядок событий, длительность спокойных участков, расстановка сигналов и эмоциональный переход к следующему бою. Рассел как <a href="11-half-life-alyx-design.html#russell-design">система сопровождения</a> и его <a href="14-audio.html#russell-sound">звуковое исполнение</a> рассматриваются отдельно; здесь важно, сколько частей production зависит от одного разговора.</p>
+<h3 id="280">Сценарий разрастается примерно до 280 страниц<a class="headerlink" href="#280" title="Permanent link">¶</a></h3>
+<p>И это особенно смешно для серии, которая гордится отсутствием traditional cutscenes.</p>
+<p>Потому что текст никуда не исчез.</p>
+<p>Он просто должен существовать:</p>
+<ul>
+<li>во время движения;</li>
+<li>по радио;</li>
+<li>внутри постановок;</li>
+<li>в коротких реакциях;</li>
+<li>в combat transitions.</li>
+</ul>
+<p>То есть бесшовное повествование не уменьшает работу writer.</p>
+<p>Оно делает её <strong>сложнее распределённой</strong>.</p>
+<h3 id="writer-room">Три главные проблемы нового writer room<a class="headerlink" href="#writer-room" title="Permanent link">¶</a></h3>
+<p>Новая команда быстро видит три фундаментальные story-problems.</p>
+<h4 id="prequel-problem">Prequel problem<a class="headerlink" href="#prequel-problem" title="Permanent link">¶</a></h4>
+<p>Игрок знает:</p>
+<blockquote>
+<p>Alyx выживет.</p>
+<p>Eli выживет.</p>
+<p>Gordon появится позже.</p>
+</blockquote>
+<p>Значит обычная suspense-модель хуже работает.</p>
+<h4 id="hermetically-sealed-story">Hermetically sealed story<a class="headerlink" href="#hermetically-sealed-story" title="Permanent link">¶</a></h4>
+<p>Можно написать прекрасное приключение между HL1 и HL2.</p>
+<p>Но тогда через финал:</p>
+<div class="highlight"><pre><span></span><code>всё вернулось на место
+↓
+ничего не изменилось
+</code></pre></div>
+<p>После двенадцати лет ожидания это будет особенно болезненно.</p>
+<h4 id="g-man-problem">G-Man problem<a class="headerlink" href="#g-man-problem" title="Permanent link">¶</a></h4>
+<p>Если player весь финал идёт в Vault и освобождает G-Man, нельзя после этого получить:</p>
+<blockquote>
+<p>спасибо, до свидания.</p>
+</blockquote>
+<p>Персонаж слишком фундаментальный.</p>
+<p>Освобождение должно иметь <strong>большую цену или большую награду</strong>.</p>
+<h3 id="writers">Writers перебирают десятки концовок<a class="headerlink" href="#writers" title="Permanent link">¶</a></h3>
+<p>Erik Wolpaw и Jay Pinkerton позже рассказывали, что пробовали десятки вариантов.</p>
+<p>В одной версии существовала новая tragedy, которую G-Man потом позволял исправить.</p>
+<p>Но это не решало проблему.</p>
+<p>Игра сама создаёт трагедию.</p>
+<p>Потом сама её отменяет.</p>
+<p>Результат:</p>
+<blockquote>
+<p>net zero.</p>
+</blockquote>
+<p>А значит prequel всё ещё ничего не изменил.</p>
+<h3 id="jim-murray">И тут Jim Murray предлагает практически запрещённую идею<a class="headerlink" href="#jim-murray" title="Permanent link">¶</a></h3>
+<p>А что если исправить <strong>не событие Alyx</strong>?</p>
+<p>А событие, которое игрок уже носит в голове с 2007 года?</p>
+<blockquote>
+<p>смерть Eli.</p>
+</blockquote>
+<p>Первая реакция writers примерно:</p>
+<blockquote>
+<p>нет, это слишком сильно. Нельзя просто переписать Episode Two.</p>
+</blockquote>
+<p>Потом приходит вторая:</p>
+<blockquote>
+<p><strong>подождите. Именно поэтому это и работает.</strong></p>
+</blockquote>
+<p>Потому что вдруг prequel перестаёт быть prequel в традиционном смысле.</p>
+<p>Player знает будущее.</p>
+<p>G-Man знает будущее.</p>
+<p>Alyx не знает.</p>
+<p>И сама временная асимметрия между игроком и protagonist превращается в центральный dramatic mechanism.</p>
+<p>Это очень Half-Life.</p>
+<p>Не просто twist.</p>
+<p>А идея, которая работает <strong>именно потому, что между релизами прошло тринадцать лет</strong>.</p>
+<h3 id="_7">Финал собирают удивительно поздно<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>Wolpaw, Pinkerton, Vanaman и Rodkin формируют новую концовку уже тогда, когда большая часть игры существует.</p>
+<p>По их рассказам, основной shape финала после правильной идеи появился очень быстро.</p>
+<p>Но production consequence огромный.</p>
+<p>Теперь нужны:</p>
+<ul>
+<li>White Forest;</li>
+<li>Eli;</li>
+<li>Dog;</li>
+<li>Gordon;</li>
+<li>знакомая Episode Two scene;</li>
+<li>новый post-credit sequence.</li>
+</ul>
+<p>То есть ради нескольких минут конца Valve должна снова построить кусок <strong>мира 2007 года</strong> на технологии Alyx.</p>
+<p>Это великолепный пример:</p>
+<blockquote>
+<p>story decision → дорогая production change.</p>
+</blockquote>
+<h3 id="alyx_1">Перезапись Alyx — ещё один поздний риск<a class="headerlink" href="#alyx_1" title="Permanent link">¶</a></h3>
+<p>Merle Dandridge первоначально снова записывает Alyx.</p>
+<p>Логично.</p>
+<p>Это голос персонажа HL2/Episodes.</p>
+<p>Но Valve в итоге решает:</p>
+<blockquote>
+<p>для 19-летней Alyx нужна другая performance.</p>
+</blockquote>
+<p>Роль получает <strong>Ozioma Akagha</strong>.</p>
+<p>Для фанатов решение потенциально очень опасное.</p>
+<p>Изменить голос одного из самых любимых персонажей серии буквально перед возвращением Half-Life.</p>
+<p>Но Valve снова выбирает текущую игру, а не инерцию бренда.</p>
+<p>Eli тоже приходится recast после смерти Robert Guillaume — роль получает <strong>James Moses Black</strong>.</p>
+<p>G-Man остаётся Mike Shapiro.</p>
+<p>Russell — Rhys Darby, и его комедийная энергия становится огромной частью тона игры.</p>
+<h3 id="_8">Объявление только тогда, когда игра уже почти существует<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p>Это, пожалуй, самый явный institutional lesson после Half-Life 2.</p>
+<p>2003:</p>
+<div class="highlight"><pre><span></span><code>E3
+↓
+30 сентября
+↓
+игры нет
+↓
+катастрофа
+</code></pre></div>
+<p>2019:</p>
+<div class="highlight"><pre><span></span><code>игра много лет делается в секрете
+↓
+почти всё уже можно пройти
+↓
+только потом announcement
+</code></pre></div>
+<p>18 ноября Valve пишет:</p>
+<blockquote>
+<p>Half-Life: Alyx.</p>
+</blockquote>
+<p>21 ноября показывает trailer.</p>
+<p>Release window:</p>
+<blockquote>
+<p>March 2020.</p>
+</blockquote>
+<p>И на этот раз компания действительно находится примерно там, где публика думает.</p>
+<p>В январе 2020 разработчики прямо говорят:</p>
+<blockquote>
+<p>за исключением нескольких tweaks в абсолютном финале игра уже закончена; сейчас polishing/bugs.</p>
+</blockquote>
+<p>После десятилетий Valve Time это почти демонстративно взрослая стратегия коммуникации.</p>
+<h3 id="_9">Последний этап разработки получает ещё один сюрреалистичный поворот<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<p>Half-Life: Alyx выходит <strong>23 марта 2020 года</strong>.</p>
+<p>Практически в момент, когда COVID-19 начинает переводить огромную часть мира на remote work.</p>
+<p>Финальные недели разработки Valve тоже приходится завершать удалённо.</p>
+<p>Для проекта, который четыре года строился вокруг:</p>
+<ul>
+<li>headset;</li>
+<li>playtesting room;</li>
+<li>физического оборудования;</li>
+<li>внутренней лабораторной среды,</li>
+</ul>
+<p>это довольно абсурдный финальный production challenge.</p>
+<p>Но к тому моменту игра уже достаточно зрелая.</p>
+<p>Не нужно дистанционно изобретать core.</p>
+<p>Нужно закончить polish и shipped build.</p>
+<h3 id="alyx-half-life-">Главное отличие Alyx от старых отменённых Half-Life-проектов<a class="headerlink" href="#alyx-half-life-" title="Permanent link">¶</a></h3>
+<p>Можно перечислить technology.</p>
+<p>VR.</p>
+<p>Source 2.</p>
+<p>Index.</p>
+<p>Rubikon.</p>
+<p>Но организационно самая важная разница проще.</p>
+<p>У Alyx достаточно рано появляется <strong>работающий центр</strong>.</p>
+<div class="highlight"><pre><span></span><code>Half-Life в VR
+↓
+людям реально интересно
+↓
+playtests это подтверждают
+↓
+люди сами идут в команду
+↓
+scope растёт вокруг доказанной вещи
+</code></pre></div>
+<p>Не:</p>
+<div class="highlight"><pre><span></span><code>мы обязаны сделать Half-Life 3
+↓
+теперь годами ищем, зачем
+</code></pre></div>
+<p>Именно поэтому Alyx наконец выходит.</p>
+<p>Она сначала находит причину существовать.</p>
+<p>И только потом становится большой Half-Life.</p>
+<p>Это почти обратная траектория всей проблемы Half-Life 3.</p>
+<h2 id="alyx-production-gates">Как отделить успех прототипа от готовности большой игры<a class="headerlink" href="#alyx-production-gates" title="Permanent link">¶</a></h2>
+<p>Удобно представить историю Alyx как несколько разных проверок. Это наша схема чтения разработки, а не якобы найденный внутренний документ Valve с пятью обязательными воротами.</p>
+<p><strong>Первый вопрос: интересно ли вообще находиться внутри Half-Life в VR?</strong> На него отвечает небольшой прототип. Для этого ещё не нужен финальный сценарий. Достаточно пространства, рук, предметов и угрозы, с которой хочется взаимодействовать.</p>
+<p><strong>Второй: можно ли повторять это часами?</strong> Здесь уже недостаточно первого «нихуя себе, настоящий headcrab». Нужны разные режимы внимания, паузы, новые ситуации и удобство. Эффект новизны headset способен замаскировать слабую игру на пятнадцать минут. На большую кампанию его не хватит.</p>
+<p><strong>Третий: умеет ли команда производить такой контент регулярно?</strong> Отличный единственный уровень ещё не доказывает, что следующие десять будут сделаны теми же средствами и с приемлемым количеством переделок. Если каждая дверь требует нового инженерного открытия, впереди вечная разработка.</p>
+<p><strong>Четвёртый: складываются ли части в историю?</strong> Именно здесь возможен очень неприятный результат: gameplay уже работает, а произведение целиком ещё нет. Сюжетный кризис Alyx интересен тем, что команда не объявила удачную физику достаточной компенсацией за слабую драматургию.</p>
+<p><strong>Пятый: можно ли выпустить именно эту сборку реальным людям?</strong> Поддерживаемые устройства, сохранения, загрузки, субтитры, производительность, управление, последние блокирующие ошибки. Это другой тип готовности, чем восторг от прототипа.</p>
+<div class="highlight"><pre><span></span><code>интересная возможность
+        ↓
+устойчивое занятие
+        ↓
+воспроизводимое производство
+        ↓
+цельная кампания
+        ↓
+выпускаемая игра
+</code></pre></div>
+<p>Старые отменённые проекты Half-Life застревали на разных ступенях. Поэтому их нельзя просто сравнить количеством месяцев работы. И поэтому история Alyx сильнее звучит без магического объяснения «VR наконец спас Valve»: конкретная игра последовательно пережила проверки, на которых могли умереть даже хорошие отдельные идеи.</p>
+<p>Основные свидетельства этого производственного пути собраны в <em><a href="https://store.steampowered.com/app/1361700/HalfLife_Alyx__Final_Hours/">The Final Hours of Half-Life: Alyx</a></em>. В <a href="https://www.gameinformer.com/interview/2020/03/03/valve-on-why-half-life-alyx-needed-to-be-in-vr">интервью Робина Уокера Game Informer от 3 марта 2020 года</a> хорошо видна разница между желанием вернуться в Half-Life и конкретным решением сделать эту игру в VR.</p>
+<h2 id="p079">79. Почему выбрали Alyx, а не Half-Life 3<a class="headerlink" href="#p079" title="Permanent link">¶</a></h2>
+<p>Это один из ключевых вопросов всей современной истории серии.</p>
+<p>Почему не просто Gordon?</p>
+<p>Потому что Half-Life 3 к 2016 году уже была токсично огромной идеей.</p>
+<p>Любой прямой HL3 автоматически должен был отвечать на всё сразу:</p>
+<ul>
+<li>Episode Two cliffhanger;</li>
+<li>Borealis;</li>
+<li>Gordon;</li>
+<li>Alyx;</li>
+<li>Eli;</li>
+<li>G-Man;</li>
+<li>почти девять лет ожидания после Episode Two к началу HLVR;</li>
+<li>вопрос «чем это революционно?».</li>
+</ul>
+<p>VR prototype, наоборот, задавал маленькие конкретные вопросы:</p>
+<blockquote>
+<p>как брать предмет?</p>
+<p>как открывать дверь?</p>
+<p>как стрелять?</p>
+<p>как двигаться?</p>
+<p>как сделать Headcrab страшным в масштабе тела?</p>
+</blockquote>
+<p>Это намного удобнее для Valve.</p>
+<p>Alyx сама по себе к этому моменту уже один из самых любимых персонажей серии и человек, через которого Episodes постепенно переносили эмоциональный центр.</p>
+<p>Prequel между HL1 и HL2 даёт ещё одно преимущество: Gordon всё ещё в stasis. Не надо сразу продолжать Episode Two и тащить на первый VR experiment всю сюжетную задолженность серии.</p>
+<p>Разговорчивый protagonist также значительно лучше работает в VR. В обычной Half-Life молчащий Gordon может быть камерой игрока. В VR ты физически присутствуешь телом и постоянно слушаешь Russell. Если protagonist вообще не отвечает, социальная странность становится сильнее.</p>
+<p>И Alyx позволяет отказаться от части legacy baggage Gordon.</p>
+<p>Нет необходимости давать:</p>
+<ul>
+<li>crowbar как священный обязательный melee;</li>
+<li>HEV;</li>
+<li>Gravity Gun;</li>
+<li>огромный arsenal.</li>
+</ul>
+<p>Crowbar действительно долго прототипировали, но вырезали: collision/melee без настоящего force feedback работали неидеально, а сам предмет мгновенно превращал любого VR-player в «Gordon» на уровне образа.</p>
+<p>Молодая Alyx также идеально совпадает с человеком, который впервые осваивает VR. Она ещё не легендарный герой Resistance. Она тоже учится пользоваться новым оборудованием и вытаскивать себя из катастрофы.</p>
+<p>И самое главное — финал позволяет сделать хитрый ход.</p>
+<p>Почти вся игра существует до HL2.</p>
+<p>Но последние минуты вдруг возвращают серию после Episode Two и переставляют фигуры:</p>
+<ul>
+<li>Eli жив;</li>
+<li>Alyx исчезает;</li>
+<li>Gordon снова активен;</li>
+<li>G-Man становится личным конфликтом.</li>
+</ul>
+<p>То есть Valve обходит название HL3, но всё-таки двигает самый важный cliffhanger.</p>
+<h2 id="p080">80. Почему Half-Life: Alyx сделали только для VR<a class="headerlink" href="#p080" title="Permanent link">¶</a></h2>
+<p>Важно не переворачивать причинность.</p>
+<p>Valve не сказала:</p>
+<blockquote>
+<p>хотим новую Half-Life, какой gimmick ей прикрутить?</p>
+</blockquote>
+<p>Она сначала хотела сделать большую VR-игру.</p>
+<p>И только потом Half-Life оказалась лучшей IP для этой задачи.</p>
+<p>Поэтому VR не peripheral feature Alyx. Это сама причина существования проекта.</p>
+<p>Двери, drawers, ручная перезарядка, physical cover, inventory, Gravity Gloves, захват предметов, взаимодействие с puzzle interfaces — всё построено вокруг головы и двух рук в 6DoF.</p>
+<p>Сделать flat-screen port можно технически. NoVR mods как раз доказывают, что content можно адаптировать.</p>
+<p>Но тогда получается <strong>другая игра</strong>.</p>
+<p>К примеру, manual reload на мониторе превращается в кнопку <code>R</code>.</p>
+<p>Physical peek — в обычный lean/strafe.</p>
+<p>Gravity Gloves — в почти стандартный telekinesis input.</p>
+<p>Медленный enemy pressure становится странно простым для мыши, потому что player теперь целится и разворачивается в несколько раз быстрее.</p>
+<p>То есть encounter design пришлось бы перестраивать.</p>
+<p>Valve ещё и хотела flagship для PCVR/SteamVR. Alyx бесплатно давали владельцам Index, но игра не была Index-exclusive и поддерживала широкий набор PC headsets.</p>
+<p>Критика при этом справедливая: после двенадцати лет ожидания Half-Life возвращается на дорогую нишевую платформу. Огромное число фанатов физически не могло нормально в неё сыграть.</p>
+<p>Но если бы Valve делала одновременно VR и flat version, почти неизбежно появился бы lowest common denominator design.</p>
+<p>Компания выбрала:</p>
+<blockquote>
+<p>пусть меньше людей получат игру, но сама игра будет полностью построена вокруг medium.</p>
+</blockquote>
+<p>И важно: это не означает, что все будущие Half-Life обязаны быть VR.</p>
+<p>Alyx — VR потому, что <strong>конкретно этот проект родился из VR</strong>.</p>
+<h2 id="materials">Материалы к главе<a class="headerlink" href="#materials" title="Permanent link">¶</a></h2>
+<p><a href="https://store.steampowered.com/app/1361700/HalfLife_Alyx__Final_Hours/">Geoff Keighley: The Final Hours of Half-Life: Alyx</a>.</p>
+<p><a href="https://www.half-life.com/en/alyx/">Valve: официальный сайт Half-Life: Alyx</a>.</p>
+<hr/>
+<p><a href="09-half-life-3-and-cancelled-projects.html">← 09</a> · <a href="index.html">Оглавление</a> · <a href="11-half-life-alyx-design.html">11 →</a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Где Half-Life 3?" class="md-footer__link md-footer__link--prev" href="09-half-life-3-and-cancelled-projects.html">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Где Half-Life 3?
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Half-Life: Alyx — дизайн и сюжет" class="md-footer__link md-footer__link--next" href="11-half-life-alyx-design.html">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Half-Life: Alyx — дизайн и сюжет
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

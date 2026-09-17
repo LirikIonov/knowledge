@@ -1,0 +1,23 @@
+# Фрагмент nav для существующего mkdocs.yml.
+# Статьи предполагаются в docs/half-life/.
+# В markdown_extensions существующего проекта должен быть включён attr_list.
+nav:
+  - Half-Life:
+      - Обзор: half-life/index.md
+      - "01. Рождение Half-Life": half-life/01-origins-and-development.md
+      - "02. Дизайн Half-Life": half-life/02-half-life-design.md
+      - "03. Релиз и наследие Half-Life": half-life/03-half-life-release-and-legacy.md
+      - "04. Gearbox и консоли": half-life/04-gearbox-and-consoles.md
+      - "05. Создание Half-Life 2": half-life/05-half-life-2-development-and-tech.md
+      - "06. Мир и дизайн Half-Life 2": half-life/06-half-life-2-world-and-design.md
+      - "07. Beta, утечка и релиз Half-Life 2": half-life/07-half-life-2-beta-release.md
+      - "08. Episodes": half-life/08-episodes.md
+      - "09. Где Half-Life 3?": half-life/09-half-life-3-and-cancelled-projects.md
+      - "10. Создание Half-Life: Alyx": half-life/10-vr-and-alyx-development.md
+      - "11. Дизайн и сюжет Half-Life: Alyx": half-life/11-half-life-alyx-design.md
+      - "12. Моды и сообщество": half-life/12-modding-and-community.md
+      - "13. Наследие серии": half-life/13-legacy.md
+      - "14. Музыка и звук": half-life/14-audio.md
+      - "15. Как Valve делает Half-Life": half-life/15-how-valve-makes-half-life.md
+      - "16. Movement и speedrunning": half-life/16-movement-and-speedrunning.md
+      - "17. Half-Life и кино": half-life/17-half-life-and-film.md

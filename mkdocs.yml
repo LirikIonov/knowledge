@@ -1,8 +1,9 @@
 #!/Users/lirik/Documents/Codex/knowledge/.venv/bin/python
 
-site_name: База данных
 docs_dir: memory
 site_dir: site
+site_name: База данных
+site_url: https://lirikonov.github.io/knowledge/
 
 markdown_extensions:
   - tables
@@ -44,6 +45,10 @@ markdown_extensions:
 plugins:
   - search:
       lang: ru
+
+  - gen-files:
+      scripts:
+        - scripts/generate-slides-index.py
 
   - exporter:
       buttons:
@@ -108,5 +113,5 @@ theme:
     - content.code.copy
     - content.code.annotate
 
-use_directory_urls: false
+#use_directory_urls: false
 

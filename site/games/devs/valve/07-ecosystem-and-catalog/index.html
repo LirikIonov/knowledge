@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://lirikonov.github.io/knowledge/games/devs/valve/07-ecosystem-and-catalog/" rel="canonical"/>
+<link href="../06-valve-as-institution/" rel="prev"/>
+<link href="../08-appendices/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Valve VII — Внешняя экосистема и границы каталога - База данных</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#valve-vii">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Valve VII — Внешняя экосистема и границы каталога
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Arkane/">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/01-origins-softdisk-keen/">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/02-wolfenstein/">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/03-doom-birth/">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/04-doom-ecosystem/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/05-quake-crisis/">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/06-id-after-romero/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/07-quake2-quake3-middleware/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/08-doom3-aaa/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/09-rage-zenimax-carmack/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/10-doom-rebirth-modern-id/">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/11-legacy-summary/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/12-side-branches/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../id%20software/MANIFEST/">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-origins-steam/">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-games-and-engines/">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-inside-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-hardware-linux-vr/">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-modern-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-valve-as-institution/">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#source-external-ecosystem">
+<span class="md-ellipsis">
+      
+        Внешняя жизнь GoldSrc и Source
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#valve-product-register">
+<span class="md-ellipsis">
+      
+        Реестр продуктов и степень участия Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#valve-as-employer">
+<span class="md-ellipsis">
+      
+        Valve как работодатель: известное, спорное и закрытое
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-appendices/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../09-sources-and-status/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom/">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom30/">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom3_45-103/">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Quake/">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Spider-Man/">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom4-eternal/">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom_eternal_51-80/">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_8" id="__nav_1_2_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/01-origins-and-development/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/02-half-life-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/03-half-life-release-and-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/04-gearbox-and-consoles/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/05-half-life-2-development-and-tech/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/06-half-life-2-world-and-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/07-half-life-2-beta-release/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/08-episodes/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/09-half-life-3-and-cancelled-projects/">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/10-vr-and-alyx-development/">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/11-half-life-alyx-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/12-modding-and-community/">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/13-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/14-audio/">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/15-how-valve-makes-half-life/">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/16-movement-and-speedrunning/">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/17-half-life-and-film/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/CHANGES/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../people/Gabe%20Newell/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../people/John%20Carmack/">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../people/John%20Romero/">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Slides
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../slides/">
+<span class="md-ellipsis">
+    
+  
+    Презентации
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    University
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    University
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Go
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Go
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Lectures
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Lectures
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1_1" id="__nav_3_1_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    1. Prod
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_1_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_1_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Prod
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../university/go/lectures/1.%20Prod/Production%20backend/">
+<span class="md-ellipsis">
+    
+  
+    Лекция 1. Production backend и эволюция Go
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#source-external-ecosystem">
+<span class="md-ellipsis">
+      
+        Внешняя жизнь GoldSrc и Source
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#valve-product-register">
+<span class="md-ellipsis">
+      
+        Реестр продуктов и степень участия Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#valve-as-employer">
+<span class="md-ellipsis">
+      
+        Valve как работодатель: известное, спорное и закрытое
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="valve-vii">Valve VII — Внешняя экосистема и границы каталога<a class="headerlink" href="#valve-vii" title="Permanent link">¶</a></h1>
+<p>Этот том закрывает три вопроса, которые плохо помещаются в линейную историю компании:</p>
+<ul>
+<li>что стало с технологиями Valve за пределами её собственных игр;</li>
+<li>какие продукты следует считать частью истории Valve и в какой роли;</li>
+<li>что можно и чего нельзя уверенно утверждать о Valve как работодателе.</li>
+</ul>
+<p>История Steam как самостоятельного продукта сюда намеренно не включена. В этом разделе Steam появляется только там, где он определяет распространение модов, SDK и игр на технологиях Valve.</p>
+<h2 id="source-external-ecosystem">Внешняя жизнь GoldSrc и Source<a class="headerlink" href="#source-external-ecosystem" title="Permanent link">¶</a></h2>
+<p>GoldSrc и Source часто описывают как последовательность внутренних движков Valve:</p>
+<div class="highlight"><pre><span></span><code>Quake technology
+↓
+GoldSrc
+↓
+Source
+↓
+Source 2
+</code></pre></div>
+<p>Но такая схема неполна. Эти движки были не только производственным фундаментом Half-Life, Counter-Strike, Portal или Left 4 Dead. Они сформировали внешнюю среду, в которой модификация могла пройти несколько разных стадий:</p>
+<div class="highlight"><pre><span></span><code>карта или маленький мод
+↓
+полноценная модификация
+↓
+самостоятельная игра
+↓
+коммерческий продукт
+↓
+новая студия или отдельная технологическая ветка
+</code></pre></div>
+<p>Именно эта среда является одним из главных вкладов Valve в PC-разработку.</p>
+<h3 id="goldsrc-half-life">GoldSrc был не просто движком первой Half-Life<a class="headerlink" href="#goldsrc-half-life" title="Permanent link">¶</a></h3>
+<p>GoldSrc возник как глубоко переработанная технологическая линия Quake, но его историческая ценность определяется не только рендерингом или устройством уровней. Вместе с Half-Life Valve распространяла инструменты и поддерживала культуру, в которой пользовательский проект воспринимался не как несанкционированное вмешательство, а как потенциальное продолжение продукта.</p>
+<p>На этом фундаменте выросли:</p>
+<ul>
+<li>Team Fortress Classic;</li>
+<li>Counter-Strike;</li>
+<li>Day of Defeat;</li>
+<li>многочисленные карты, серверные модификации и самостоятельные total conversions.</li>
+</ul>
+<p>Valve не изобрела моддинг. Но она сделала его частью кадровой и продуктовой стратегии. Лучшие внешние проекты могли привести не только к популярности внутри сообщества, но и к официальному релизу, приобретению IP или найму авторов.</p>
+<p>Официальная хронология в Valve Handbook сама связывает ранние релизы, SDK и привычку компании поддерживать и иногда приобретать лучшие моды. В актуальной базе кода Valve также сохраняет публичные SDK-линии: репозиторий Half-Life SDK содержит код, предназначенный для разработки модификаций GoldSrc. (<a href="https://www.valvesoftware.com/company/Valve_Handbook_LowRes.pdf">Valve Handbook</a>, <a href="https://github.com/ValveSoftware/halflife">ValveSoftware/halflife</a>)</p>
+<h3 id="source">Source превратил тот же принцип в более широкую производственную среду<a class="headerlink" href="#source" title="Permanent link">¶</a></h3>
+<p>Source включал не один редактор уровней, а набор связанных инструментов и систем:</p>
+<ul>
+<li>Hammer;</li>
+<li>Faceposer;</li>
+<li>model viewer;</li>
+<li>material и shader pipeline;</li>
+<li>физику;</li>
+<li>networking;</li>
+<li>demo и replay infrastructure;</li>
+<li>серверные инструменты;</li>
+<li>код игровых сущностей и правил, доступный через SDK.</li>
+</ul>
+<p>Это позволяло внешнему разработчику начинать не с пустого окна. Уже существовали движение, физические объекты, NPC, multiplayer, файловые форматы и понятная связь с установленной игрой.</p>
+<p>При этом важно не называть Source полностью открытым движком. Публичный Source SDK 2013 содержит значительную часть игрового кода и позволяет бесплатно создавать и распространять некоммерческие модификации на условиях лицензии, но это не равнозначно свободной публикации полного engine source под permissive open-source license. Коммерческий самостоятельный продукт требует другой правовой и дистрибуционной модели. (<a href="https://github.com/ValveSoftware/source-sdk-2013">Source SDK 2013</a>, <a href="https://github.com/ValveSoftware/source-sdk-2013/blob/master/LICENSE">лицензия Source 1 SDK</a>)</p>
+<p>Правильное различие:</p>
+<div class="highlight"><pre><span></span><code>SDK и mod code доступны
+≠
+весь движок является свободным open source
+</code></pre></div>
+<h3 id="source_1">Source породил несколько разных внешних ветвей<a class="headerlink" href="#source_1" title="Permanent link">¶</a></h3>
+<h4 id="_1">Коммерческие игры по лицензии<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
+<p>Source использовали студии, не принадлежавшие Valve. Наиболее заметные примеры показывают диапазон движка:</p>
+<ul>
+<li>Vampire: The Masquerade — Bloodlines использовала раннюю ветку Source для RPG;</li>
+<li>Dark Messiah of Might and Magic адаптировала Source под melee-combat и сложную физическую интеракцию;</li>
+<li>Zeno Clash построила на Source сюрреалистический first-person brawler;</li>
+<li>Vindictus использовал технологию в online action RPG;</li>
+<li>Titanfall развивал сильно модифицированную ветвь Source уже внутри Respawn, а её наследие продолжилось в следующих играх студии.</li>
+</ul>
+<p>Это не означает, что Valve разрабатывала перечисленные игры. Связь технологическая: внешняя команда лицензировала или наследовала движковую основу и самостоятельно строила поверх неё продукт.</p>
+<p>Valve Developer Community сохраняет отдельные категории Source games, engine branches и документацию для внешних проектов; её следует использовать как технический индекс, а не как доказательство авторства Valve. (<a href="https://developer.valvesoftware.com/wiki/Category:Source">Valve Developer Community — Source</a>)</p>
+<h4 id="_2">Моды, ставшие самостоятельными играми<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<p>Другая ветвь важнее для культурного влияния Valve:</p>
+<ul>
+<li>Garry’s Mod превратил инструменты и физические системы Source в самостоятельную пользовательскую песочницу;</li>
+<li>Dear Esther прошла путь от Half-Life 2 mod к отдельной коммерческой игре;</li>
+<li>The Stanley Parable выросла из Source mod в самостоятельное произведение;</li>
+<li>Black Mesa стала многолетней внешней реконструкцией Half-Life и в итоге самостоятельным коммерческим релизом с разрешения Valve.</li>
+</ul>
+<p>Здесь Source работает не только как технология. Наличие Half-Life 2, готовых инструментов и огромной пользовательской аудитории снижало стоимость первого прототипа. Разработчик мог сначала доказать идею внутри знакомой экосистемы, а уже потом превращать её в отдельный продукт.</p>
+<h3 id="garrys-mod-valve">Garry’s Mod — самый чистый внешний итог философии Valve<a class="headerlink" href="#garrys-mod-valve" title="Permanent link">¶</a></h3>
+<p>Garry’s Mod особенно важен, потому что почти не является обычной игрой Valve-формата. Его ценность возникла из возможности соединять:</p>
+<ul>
+<li>assets разных Source-игр;</li>
+<li>физические объекты;</li>
+<li>Lua scripting;</li>
+<li>пользовательские режимы;</li>
+<li>серверное сообщество;</li>
+<li>Workshop-контент;</li>
+<li>собственное машинное творчество игроков.</li>
+</ul>
+<p>Valve создала движок и базовые продукты, Facepunch построила песочницу, а пользователи превратили её в тысячи локальных игр и социальных пространств.</p>
+<p>Получилась характерная для Valve цепочка:</p>
+<div class="highlight"><pre><span></span><code>внутренняя технология
+↓
+SDK
+↓
+внешний инструмент
+↓
+community content
+↓
+самостоятельная экономика и культура
+</code></pre></div>
+<p>Garry’s Mod поэтому важен не как ещё один успешный Source-релиз, а как доказательство того, что инструменты Valve способны создавать продукты, устройство которых не было спроектировано самой Valve.</p>
+<h3 id="source-unreal-engine">Почему Source не стал вторым Unreal Engine<a class="headerlink" href="#source-unreal-engine" title="Permanent link">¶</a></h3>
+<p>Несмотря на влияние, Valve не превратила Source в самостоятельный middleware-бизнес масштаба Unreal Engine или Unity.</p>
+<p>Причины лежат не в одном техническом недостатке.</p>
+<h4 id="valve">Valve прежде всего строила движок для собственных задач<a class="headerlink" href="#valve" title="Permanent link">¶</a></h4>
+<p>Source развивался вокруг конкретных игр и команд. Новая возможность обычно появлялась потому, что была нужна Half-Life 2, Team Fortress 2, Left 4 Dead, Portal 2 или Dota, а не потому, что внешний рынок middleware требовал универсальную функцию.</p>
+<h4 id="_3">Поддержка внешних клиентов — отдельный бизнес<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<p>Полноценный коммерческий engine vendor должен обеспечивать:</p>
+<ul>
+<li>стабильную документацию;</li>
+<li>предсказуемый roadmap;</li>
+<li>поддержку множества жанров;</li>
+<li>консольные toolchains;</li>
+<li>обучение;</li>
+<li>техническую поддержку лицензиатов;</li>
+<li>совместимость версий;</li>
+<li>понятную публичную лицензию.</li>
+</ul>
+<p>Valve исторически сильнее в создании работающей системы для себя и последующем открытии полезных частей, чем в продаже технологии как обещания внешнему клиенту.</p>
+<h4 id="steam">Steam оказался более сильным способом влиять на разработчиков<a class="headerlink" href="#steam" title="Permanent link">¶</a></h4>
+<p>Unreal Engine получает влияние, потому что тысячи студий строят игру на его runtime и инструментах.</p>
+<p>Valve получила ещё более широкую точку воздействия:</p>
+<blockquote>
+<p>разработчик может использовать любой движок, но всё равно выпускать игру через Steam и подключать Steamworks.</p>
+</blockquote>
+<p>Поэтому компании не требовалось побеждать Unreal в middleware, чтобы определять стандарты PC-рынка.</p>
+<h3 id="source-2">Source 2 продолжил внутреннюю модель<a class="headerlink" href="#source-2" title="Permanent link">¶</a></h3>
+<p>Source 2 используется крупными продуктами Valve и связан с инструментами Workshop, но не предлагается рынку как универсальный коммерческий движок с моделью, сопоставимой с Unreal Engine.</p>
+<p>Это подтверждает устойчивую стратегию:</p>
+<div class="highlight"><pre><span></span><code>движок Valve
+→ прежде всего производственная система Valve
+
+универсальные платформенные функции
+→ Steamworks, networking, Workshop, Steam Input, SteamVR
+</code></pre></div>
+<p>Valve охотнее превращает в отраслевую инфраструктуру отдельный слой, чем весь собственный production environment.</p>
+<h3 id="_4">Итог<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>GoldSrc и Source важны не только как технологии игр Valve. Они создали один из наиболее плодородных переходов между любительской модификацией и профессиональной разработкой. Но Valve никогда не строила вокруг движка такой же самостоятельный коммерческий бизнес, какой Epic построила вокруг Unreal Engine. Компания выбрала другую точку максимального влияния: инструменты и SDK позволяли идеям появляться, а Steam позволял готовым играм достигать аудитории независимо от выбранного движка.</p>
+<h2 id="valve-product-register">Реестр продуктов и степень участия Valve<a class="headerlink" href="#valve-product-register" title="Permanent link">¶</a></h2>
+<p>Этот реестр нужен не для повторного пересказа ста глав. Его задача — не смешивать четыре разные формулировки:</p>
+<div class="highlight"><pre><span></span><code>разработано Valve
+издано Valve
+создано партнёром внутри IP Valve
+только использует технологию Valve
+</code></pre></div>
+<p>Официальный Valve Complete Pack полезен как список продаваемых классических игр, но сам по себе не является полной исторической фильмографией: он не включает многие бесплатные, сервисные, VR, аппаратные и снятые с отдельной продажи продукты. (<a href="https://store.steampowered.com/bundle/232/Valve_Complete_Pack/">Valve Complete Pack</a>)</p>
+<h3 id="valve-community-">Основные игры Valve и приобретённые community-линии<a class="headerlink" href="#valve-community-" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Продукт</th>
+<th style="text-align: right;">Первый релиз</th>
+<th>Роль Valve</th>
+<th>Где разобран</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Half-Life</td>
+<td style="text-align: right;">1998</td>
+<td>разработчик, владелец IP</td>
+<td><a href="../01-origins-steam/#p003">пункты 3–6</a></td>
+</tr>
+<tr>
+<td>Team Fortress Classic</td>
+<td style="text-align: right;">1999</td>
+<td>официальный GoldSrc-релиз после присоединения авторов Team Fortress</td>
+<td><a href="../01-origins-steam/#p007">пункт 7</a></td>
+</tr>
+<tr>
+<td>Counter-Strike</td>
+<td style="text-align: right;">2000 как самостоятельный retail-релиз</td>
+<td>поддержка mod, приобретение команды/IP, дальнейшая разработка и издание</td>
+<td><a href="../01-origins-steam/#p008">пункт 8</a></td>
+</tr>
+<tr>
+<td>Ricochet</td>
+<td style="text-align: right;">2000</td>
+<td>разработчик и издатель</td>
+<td><a href="../06-valve-as-institution/#p090">пункт 90</a></td>
+</tr>
+<tr>
+<td>Deathmatch Classic</td>
+<td style="text-align: right;">2001</td>
+<td>разработчик и издатель</td>
+<td><a href="../06-valve-as-institution/#p090">пункт 90</a></td>
+</tr>
+<tr>
+<td>Day of Defeat</td>
+<td style="text-align: right;">2003 как самостоятельный retail-релиз</td>
+<td>приобретение mod-команды/IP, дальнейшая разработка и издание</td>
+<td><a href="../01-origins-steam/#p010">пункт 10</a></td>
+</tr>
+<tr>
+<td>Counter-Strike: Condition Zero</td>
+<td style="text-align: right;">2004</td>
+<td>владелец продукта и издатель; сложная разработка прошла через несколько внешних команд и Valve</td>
+<td><a href="../02-games-and-engines/#p019">пункт 19</a></td>
+</tr>
+<tr>
+<td>Counter-Strike: Source</td>
+<td style="text-align: right;">2004</td>
+<td>разработчик и издатель</td>
+<td><a href="../02-games-and-engines/#p019">пункт 19</a></td>
+</tr>
+<tr>
+<td>Half-Life 2</td>
+<td style="text-align: right;">2004</td>
+<td>разработчик и издатель</td>
+<td><a href="../01-origins-steam/#p013">пункт 13</a></td>
+</tr>
+<tr>
+<td>Half-Life 2: Deathmatch</td>
+<td style="text-align: right;">2004</td>
+<td>разработчик и издатель</td>
+<td><a href="../02-games-and-engines/#p018">пункт 18</a></td>
+</tr>
+<tr>
+<td>Half-Life: Source</td>
+<td style="text-align: right;">2004</td>
+<td>разработчик переноса и издатель</td>
+<td><a href="../02-games-and-engines/#p018">пункт 18</a></td>
+</tr>
+<tr>
+<td>Day of Defeat: Source</td>
+<td style="text-align: right;">2005</td>
+<td>разработчик и издатель</td>
+<td><a href="../02-games-and-engines/#p018">пункт 18</a></td>
+</tr>
+<tr>
+<td>Half-Life 2: Episode One</td>
+<td style="text-align: right;">2006</td>
+<td>разработчик и издатель</td>
+<td><a href="../02-games-and-engines/#p020">пункт 20</a></td>
+</tr>
+<tr>
+<td>Half-Life 2: Episode Two</td>
+<td style="text-align: right;">2007</td>
+<td>разработчик и издатель</td>
+<td><a href="../02-games-and-engines/#p020">пункт 20</a></td>
+</tr>
+<tr>
+<td>Portal</td>
+<td style="text-align: right;">2007</td>
+<td>разработчик и издатель; концептуальная линия выросла из Narbacular Drop</td>
+<td><a href="../02-games-and-engines/#p022">пункт 22</a></td>
+</tr>
+<tr>
+<td>Team Fortress 2</td>
+<td style="text-align: right;">2007</td>
+<td>разработчик и издатель</td>
+<td><a href="../02-games-and-engines/#p023">пункт 23</a></td>
+</tr>
+<tr>
+<td>Left 4 Dead</td>
+<td style="text-align: right;">2008</td>
+<td>совместная история Turtle Rock и Valve; Valve приобрела Turtle Rock до релиза</td>
+<td><a href="../02-games-and-engines/#p024">пункт 24</a></td>
+</tr>
+<tr>
+<td>Left 4 Dead 2</td>
+<td style="text-align: right;">2009</td>
+<td>разработчик и издатель</td>
+<td><a href="../02-games-and-engines/#p025">пункт 25</a></td>
+</tr>
+<tr>
+<td>Alien Swarm</td>
+<td style="text-align: right;">2010</td>
+<td>разработан внутренней командой Valve, пришедшей из Black Cat Games; выпущен бесплатно с SDK-кодом</td>
+<td><a href="../06-valve-as-institution/#p090">пункт 90</a></td>
+</tr>
+<tr>
+<td>Portal 2</td>
+<td style="text-align: right;">2011</td>
+<td>разработчик и издатель</td>
+<td><a href="../02-games-and-engines/#p026">пункт 26</a></td>
+</tr>
+<tr>
+<td>Counter-Strike: Global Offensive</td>
+<td style="text-align: right;">2012</td>
+<td>совместная первоначальная разработка Valve и Hidden Path, затем длительная эксплуатация Valve</td>
+<td><a href="../02-games-and-engines/#p018">Source и переход к сервисной модели</a></td>
+</tr>
+<tr>
+<td>Dota 2</td>
+<td style="text-align: right;">2013</td>
+<td>разработчик, издатель и оператор после найма IceFrog</td>
+<td><a href="../02-games-and-engines/#p027">пункт 27</a></td>
+</tr>
+<tr>
+<td>The Lab</td>
+<td style="text-align: right;">2016</td>
+<td>разработчик и издатель; VR-сборник технологических экспериментов</td>
+<td><a href="../06-valve-as-institution/#p090">пункт 90</a></td>
+</tr>
+<tr>
+<td>Artifact</td>
+<td style="text-align: right;">2018</td>
+<td>разработчик, издатель и оператор</td>
+<td><a href="../04-hardware-linux-vr/#p049">пункт 49</a></td>
+</tr>
+<tr>
+<td>Dota Underlords</td>
+<td style="text-align: right;">2019 Early Access; 2020 версия 1.0</td>
+<td>разработчик, издатель и оператор</td>
+<td><a href="../04-hardware-linux-vr/#p050">пункт 50</a></td>
+</tr>
+<tr>
+<td>Half-Life: Alyx</td>
+<td style="text-align: right;">2020</td>
+<td>разработчик и издатель</td>
+<td><a href="../04-hardware-linux-vr/#p051">пункт 51</a></td>
+</tr>
+<tr>
+<td>Aperture Desk Job</td>
+<td style="text-align: right;">2022</td>
+<td>разработчик и издатель; playable introduction к Steam Deck</td>
+<td><a href="../06-valve-as-institution/#p090">пункт 90</a></td>
+</tr>
+<tr>
+<td>Counter-Strike 2</td>
+<td style="text-align: right;">2023</td>
+<td>разработчик, издатель и оператор; замена CS:GO под тем же сервисным контуром</td>
+<td><a href="../05-modern-valve/#p054">пункт 54</a></td>
+</tr>
+<tr>
+<td>Deadlock</td>
+<td style="text-align: right;">публичное тестирование</td>
+<td>разработчик и будущий издатель; статус не приравнивать к завершённому релизу</td>
+<td><a href="../05-modern-valve/#p055">пункт 55</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="half-life-">Half-Life-продукты внешних команд<a class="headerlink" href="#half-life-" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Продукт</th>
+<th style="text-align: right;">Первый релиз</th>
+<th>Разработчик</th>
+<th>Роль Valve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Half-Life: Opposing Force</td>
+<td style="text-align: right;">1999</td>
+<td>Gearbox Software</td>
+<td>владелец IP; официальный expansion, позднее цифровой издатель</td>
+</tr>
+<tr>
+<td>Half-Life: Blue Shift</td>
+<td style="text-align: right;">2001</td>
+<td>Gearbox Software</td>
+<td>владелец IP; официальный expansion, позднее цифровой издатель</td>
+</tr>
+<tr>
+<td>Half-Life: Decay</td>
+<td style="text-align: right;">2001</td>
+<td>Gearbox Software</td>
+<td>владелец IP; официальный кооперативный эпизод для PlayStation 2</td>
+</tr>
+</tbody>
+</table>
+<p>Эти игры являются частью официальной истории Half-Life, но их нельзя описывать как игры, непосредственно разработанные основной командой Valve. Сам Valve Complete Pack отдельно указывает Valve и Gearbox Software в поле разработчиков набора. (<a href="https://store.steampowered.com/bundle/232/Valve_Complete_Pack/">Valve Complete Pack</a>)</p>
+<h3 id="_5">Технологические демки и пограничные игровые продукты<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Продукт</th>
+<th style="text-align: right;">Год</th>
+<th>Степень участия Valve</th>
+<th>Функция</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Half-Life: Day One</td>
+<td style="text-align: right;">1998</td>
+<td>Valve</td>
+<td>OEM-demo и ранняя публичная выборка Half-Life</td>
+</tr>
+<tr>
+<td>Half-Life 2: Lost Coast</td>
+<td style="text-align: right;">2005</td>
+<td>Valve</td>
+<td>технологическая демонстрация HDR и developer commentary</td>
+</tr>
+<tr>
+<td>The Lab</td>
+<td style="text-align: right;">2016</td>
+<td>Valve</td>
+<td>демонстрация room-scale VR и языка взаимодействия Vive</td>
+</tr>
+<tr>
+<td>Destinations</td>
+<td style="text-align: right;">2016</td>
+<td>Valve</td>
+<td>VR-конструктор и просмотр пользовательских пространств</td>
+</tr>
+<tr>
+<td>SteamVR Home</td>
+<td style="text-align: right;">2017</td>
+<td>Valve</td>
+<td>развитие социальной и пространственной оболочки SteamVR</td>
+</tr>
+<tr>
+<td>Moondust</td>
+<td style="text-align: right;">2018</td>
+<td>Valve</td>
+<td>Knuckles/Index Controllers technology demo</td>
+</tr>
+<tr>
+<td>Aperture Hand Lab</td>
+<td style="text-align: right;">2019</td>
+<td>Cloudhead Games, издание Valve</td>
+<td>демонстрация Index Controllers и hand presence</td>
+</tr>
+<tr>
+<td>Aperture Desk Job</td>
+<td style="text-align: right;">2022</td>
+<td>Valve</td>
+<td>playable introduction к Steam Deck controls</td>
+</tr>
+</tbody>
+</table>
+<p>Aperture Hand Lab особенно хорошо показывает, зачем реестру нужна отдельная колонка роли: официальная страница указывает Cloudhead Games разработчиком, а Valve — издателем. (<a href="https://store.steampowered.com/app/868020/Aperture_Hand_Lab/">Aperture Hand Lab</a>) Aperture Desk Job, напротив, прямо указан как разработанный и изданный Valve продукт для знакомства со Steam Deck. (<a href="https://store.steampowered.com/app/1902490/Aperture_Desk_Job/">Aperture Desk Job</a>)</p>
+<h3 id="_6">Лицензированные и региональные ветви<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>Эти продукты связаны с IP Valve, но не должны автоматически попадать в список «игр, разработанных Valve»:</p>
+<ul>
+<li>Counter-Strike Online и его продолжения, созданные Nexon для отдельных рынков;</li>
+<li>Counter-Strike Neo;</li>
+<li>Left 4 Dead: Survivors;</li>
+<li>Bridge Constructor Portal;</li>
+<li>другие официально лицензированные адаптации, arcade или региональные версии.</li>
+</ul>
+<p>Для них в будущих дополнениях следует фиксировать четыре отдельных поля:</p>
+<div class="highlight"><pre><span></span><code>разработчик
+издатель
+владелец IP
+роль Valve
+</code></pre></div>
+<h3 id="_7">Что не включать в официальный реестр без маркировки<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>Не следует ставить в один ряд с выпущенными продуктами:</p>
+<ul>
+<li>неподтверждённые слухи;</li>
+<li>внутренние названия, известные только из datamining;</li>
+<li>реконструкции утечек;</li>
+<li>community projects без официальной лицензии;</li>
+<li>моды, использующие Source, но не принадлежащие Valve;</li>
+<li>проекты, существование которых подтверждено, но содержание и стадия разработки неизвестны.</li>
+</ul>
+<p>Для отменённых проектов нужны отдельные статусы:</p>
+<table>
+<thead>
+<tr>
+<th>Статус</th>
+<th>Что можно утверждать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Официально подтверждён</td>
+<td>Valve или участник проекта прямо подтвердил существование</td>
+</tr>
+<tr>
+<td>Документирован в надёжном интервью</td>
+<td>известен со слов непосредственных разработчиков</td>
+</tr>
+<tr>
+<td>Подтверждён материалами разработки</td>
+<td>существуют проверяемые assets, footage или документы</td>
+</tr>
+<tr>
+<td>Утечка / datamining</td>
+<td>существует технический след, но контекст может быть неизвестен</td>
+</tr>
+<tr>
+<td>Слух</td>
+<td>не использовать как установленный факт</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_8">Итог<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p>Valve имеет не просто список игр. Вокруг неё существует несколько концентрических кругов:</p>
+<div class="highlight"><pre><span></span><code>разработано Valve
+↓
+совместно разработано или доведено Valve
+↓
+издано Valve внутри её IP
+↓
+официально лицензировано
+↓
+использует технологию Valve
+↓
+community project
+</code></pre></div>
+<p>Реестр нужен именно для сохранения этих границ. Он предотвращает две противоположные ошибки: не позволяет забыть маленький официальный продукт и одновременно не приписывает Valve всё, что связано с Half-Life, Portal, Counter-Strike или Source.</p>
+<h2 id="valve-as-employer">Valve как работодатель: известное, спорное и закрытое<a class="headerlink" href="#valve-as-employer" title="Permanent link">¶</a></h2>
+<p>Организационная модель Valve часто пересказывается через несколько ярких образов:</p>
+<ul>
+<li>нет обычных менеджеров;</li>
+<li>столы стоят на колёсах;</li>
+<li>сотрудник сам выбирает проект;</li>
+<li>коллеги оценивают вклад друг друга;</li>
+<li>лучшие идеи привлекают людей без формального назначения сверху.</li>
+</ul>
+<p>Эти элементы основаны прежде всего на Valve Handbook и публичных рассказах сотрудников. Но handbook является одновременно onboarding-документом и выражением желаемой корпоративной идентичности. Он объясняет, как Valve хочет видеть себя, а не предоставляет независимый аудит каждого рабочего процесса. (<a href="https://www.valvesoftware.com/company/Valve_Handbook_LowRes.pdf">Valve Handbook</a>)</p>
+<h3 id="flat-structure">Flat structure не означает отсутствия власти<a class="headerlink" href="#flat-structure" title="Permanent link">¶</a></h3>
+<p>Внутри Valve можно одновременно наблюдать:</p>
+<div class="highlight"><pre><span></span><code>мало формальных менеджеров
++
+высокую автономию сотрудников
++
+сильную неформальную иерархию
++
+юридическую власть собственников
+</code></pre></div>
+<p>Это не противоречие.</p>
+<p>Влияние может возникать через:</p>
+<ul>
+<li>профессиональную репутацию;</li>
+<li>историю успешных релизов;</li>
+<li>доступ к редкой экспертизе;</li>
+<li>способность привлечь людей к проекту;</li>
+<li>доверие основателя и других влиятельных сотрудников;</li>
+<li>контроль над критически важной системой;</li>
+<li>участие в найме и peer review.</li>
+</ul>
+<p>Отсутствие должности manager не делает влияние равномерно распределённым.</p>
+<h3 id="_9">Самостоятельный выбор проекта является одновременно преимуществом и фильтром<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<p>Для опытного специалиста модель Valve может давать исключительную свободу. Человек способен быстро присоединиться к сильной идее, собрать прототип и не ждать длинной цепочки согласований.</p>
+<p>Но та же система требует навыков, которые не совпадают с чистой профессиональной компетентностью:</p>
+<ul>
+<li>понимать внутреннюю карту влияния;</li>
+<li>убедительно продавать идею коллегам;</li>
+<li>находить проект с достаточной поддержкой;</li>
+<li>делать вклад заметным;</li>
+<li>выдерживать неопределённость;</li>
+<li>самостоятельно определять приоритеты.</li>
+</ul>
+<p>Поэтому плоская структура не является нейтральной. Она может особенно хорошо работать для людей с высокой автономностью, широкой внутренней сетью и уже признанной репутацией. Новый, узкий или менее социально влиятельный специалист потенциально находится в более сложном положении.</p>
+<p>Это аналитический вывод из устройства системы, а не утверждение, что каждый новый сотрудник Valve обязательно сталкивается с такой проблемой.</p>
+<h3 id="peer-review">Peer review способен воспроизводить скрытую иерархию<a class="headerlink" href="#peer-review" title="Permanent link">¶</a></h3>
+<p>Оценка коллегами снижает зависимость от одного начальника, но создаёт другие риски:</p>
+<ul>
+<li>популярность может смешиваться с ценностью работы;</li>
+<li>инфраструктурный вклад может быть менее заметен, чем яркая feature;</li>
+<li>неудачный долгий R&amp;D-проект труднее оценить, чем shipped product;</li>
+<li>человек может избегать необходимой, но неблагодарной работы;</li>
+<li>влиятельная группа способна формировать представление о ценности без формального решения.</li>
+</ul>
+<p>То есть peer review не устраняет организационную политику. Он переводит её из вертикальной системы в сетевую.</p>
+<h3 id="_10">Отмена проектов переносит риск на отдельных сотрудников<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p>В традиционной студии проект может быть назначен руководством. В Valve человек добровольно присоединяется к направлению, которое затем годами не выходит.</p>
+<p>Возникает сложный вопрос:</p>
+<blockquote>
+<p>как внутренняя система оценивает полезную работу над прототипом, который не стал продуктом?</p>
+</blockquote>
+<p>Valve исторически получает огромную пользу от экспериментов, но конкретному сотруднику необходимо сделать собственный вклад понятным коллегам. Чем больше отменённых направлений существует одновременно, тем важнее неформальные механизмы признания.</p>
+<h3 id="handbook-valve">Handbook нельзя считать полным описанием современной Valve<a class="headerlink" href="#handbook-valve" title="Permanent link">¶</a></h3>
+<p>Публичный handbook остаётся важнейшим первичным источником, но его следует читать с несколькими ограничениями:</p>
+<ol>
+<li>Он описывает культурную модель, а не полный набор юридических и кадровых процедур.</li>
+<li>Он относится к конкретной исторической эпохе компании.</li>
+<li>Valve стала оператором намного более крупной платформы, производителем массового hardware и организацией с критическими support/security-функциями.</li>
+<li>Некоторые виды работы требуют устойчивого ownership, дежурств, долгосрочной эксплуатации и внешних обязательств независимо от того, насколько свободно выбирается следующий эксперимент.</li>
+</ol>
+<p>Поэтому корректная формулировка:</p>
+<blockquote>
+<p>Handbook является лучшим публичным описанием заявленной культуры Valve, но не доказательством того, что каждый отдел и каждый сотрудник современной компании работает буквально по одной и той же схеме.</p>
+</blockquote>
+<h3 id="_11">Что публично известно плохо<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<p>Valve остаётся частной и крайне закрытой компанией. Публичных данных недостаточно, чтобы уверенно описать:</p>
+<ul>
+<li>современное распределение акций между сотрудниками;</li>
+<li>формулу компенсации и equity для разных ролей;</li>
+<li>точную процедуру peer ranking;</li>
+<li>критерии увольнения;</li>
+<li>различия между командами Steam, hardware, игр, support и security;</li>
+<li>долю постоянных сотрудников и внешних contractors по функциям;</li>
+<li>демографическую структуру компании;</li>
+<li>современную модель удалённой работы;</li>
+<li>фактическую роль совета директоров;</li>
+<li>план передачи контроля после Ньюэлла.</li>
+</ul>
+<p>Отсутствие данных нельзя заполнять предположением, что handbook автоматически отвечает на все эти вопросы.</p>
+<h3 id="_12">Как использовать отзывы бывших сотрудников<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<p>Отзывы и интервью бывших сотрудников полезны, но требуют маркировки.</p>
+<p>Нужно различать:</p>
+<table>
+<thead>
+<tr>
+<th>Тип свидетельства</th>
+<th>Вес</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Официальный документ или судебный материал</td>
+<td>подтверждает конкретный формальный факт в своих границах</td>
+</tr>
+<tr>
+<td>Публичное интервью названного непосредственного участника</td>
+<td>сильный источник личного опыта, но не обязательно всей компании</td>
+</tr>
+<tr>
+<td>Несколько независимых совпадающих свидетельств</td>
+<td>позволяют осторожно говорить о повторяющемся паттерне</td>
+</tr>
+<tr>
+<td>Анонимный отзыв</td>
+<td>сигнал для дальнейшей проверки, не установленный факт</td>
+</tr>
+<tr>
+<td>Форумный пересказ</td>
+<td>не использовать как основание серьёзного вывода</td>
+</tr>
+</tbody>
+</table>
+<p>Нельзя превращать одно положительное интервью в доказательство идеальной культуры. Нельзя и один отрицательный анонимный отзыв превращать в доказательство системной практики.</p>
+<h3 id="_13">Критический итог<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<p>Flat structure Valve является реальной организационной инновацией, а не только рекламным мифом: компания десятилетиями выпускала игры, платформы и hardware без традиционной многоэтажной управленческой структуры. Но её успех не доказывает универсальность модели.</p>
+<p>Она работает внутри очень специфических условий:</p>
+<ul>
+<li>частная компания без квартального давления публичного рынка;</li>
+<li>огромная прибыль на одного сотрудника;</li>
+<li>возможность нанимать крайне избирательно;</li>
+<li>финансовое право годами исследовать направление без релиза;</li>
+<li>сильный основатель и долговременная культурная память;</li>
+<li>Steam как экономический фундамент.</li>
+</ul>
+<p>Поэтому Valve нельзя честно описать ни как утопию без начальников, ни как хаос, где никто ничем не управляет.</p>
+<p>Более точная формула:</p>
+<blockquote>
+<p><strong>Valve заменила значительную часть формальной управленческой иерархии рынком внутренней репутации, добровольного присоединения и способности привлекать ресурсы. Это даёт опытным сотрудникам редкую свободу, но не устраняет власть, политику, неравенство влияния и риск незаметной работы.</strong></p>
+</blockquote>
+<p>И последнее ограничение принципиально важно: публичные материалы позволяют хорошо анализировать модель, но не дают права уверенно реконструировать всю современную повседневную жизнь сотрудников Valve.</p>
+<hr/>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Valve VI — Valve как институция" class="md-footer__link md-footer__link--prev" href="../06-valve-as-institution/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Valve VI — Valve как институция
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Valve — Приложения и архив исследования" class="md-footer__link md-footer__link--next" href="../08-appendices/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Valve — Приложения и архив исследования
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

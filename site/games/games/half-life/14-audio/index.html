@@ -1,0 +1,2512 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://lirikonov.github.io/knowledge/games/games/half-life/14-audio/" rel="canonical"/>
+<link href="../13-legacy/" rel="prev"/>
+<link href="../15-how-valve-makes-half-life/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Музыка и звук Half-Life - База данных</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#half-life">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Музыка и звук Half-Life
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/Arkane/">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/01-origins-softdisk-keen/">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/02-wolfenstein/">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/03-doom-birth/">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/04-doom-ecosystem/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/05-quake-crisis/">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/06-id-after-romero/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/07-quake2-quake3-middleware/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/08-doom3-aaa/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/09-rage-zenimax-carmack/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/10-doom-rebirth-modern-id/">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/11-legacy-summary/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/12-side-branches/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/MANIFEST/">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/01-origins-steam/">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/02-games-and-engines/">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/03-inside-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/04-hardware-linux-vr/">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/05-modern-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/06-valve-as-institution/">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/07-ecosystem-and-catalog/">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/08-appendices/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/09-sources-and-status/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Doom/">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Doom30/">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Doom3_45-103/">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Quake/">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Spider-Man/">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../doom4-eternal/">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../doom_eternal_51-80/">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_2_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2_8" id="__nav_1_2_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_2_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_2_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-origins-and-development/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-half-life-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-half-life-release-and-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-gearbox-and-consoles/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-half-life-2-development-and-tech/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-half-life-2-world-and-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-half-life-2-beta-release/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-episodes/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../09-half-life-3-and-cancelled-projects/">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../10-vr-and-alyx-development/">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../11-half-life-alyx-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../12-modding-and-community/">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../13-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p105">
+<span class="md-ellipsis">
+      
+        105. Музыка и звуковой дизайн Half-Life
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gearbox-music">
+<span class="md-ellipsis">
+      
+        Chris Jensen: музыка дополнений Gearbox
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#black-mesa-music">
+<span class="md-ellipsis">
+      
+        Joel Nielsen: Black Mesa заново озвучивает память об оригинале
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#voices">
+<span class="md-ellipsis">
+      
+        Голоса: от архетипов Black Mesa к актёрскому ансамблю
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#localized-voices">
+<span class="md-ellipsis">
+      
+        Локализованный голос: переводится не только смысл
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#source-audio">
+<span class="md-ellipsis">
+      
+        Source: пространство, сведение и автоматизация звука
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alyx-audio">
+<span class="md-ellipsis">
+      
+        Mike Morasky и Half-Life: Alyx
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#materials">
+<span class="md-ellipsis">
+      
+        Материалы к главе
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../15-how-valve-makes-half-life/">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../16-movement-and-speedrunning/">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../17-half-life-and-film/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CHANGES/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../people/Gabe%20Newell/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../people/John%20Carmack/">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../people/John%20Romero/">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Slides
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../slides/">
+<span class="md-ellipsis">
+    
+  
+    Презентации
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    University
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    University
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Go
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Go
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Lectures
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Lectures
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1_1_1" id="__nav_3_1_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    1. Prod
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_1_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_3_1_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Prod
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../university/go/lectures/1.%20Prod/Production%20backend/">
+<span class="md-ellipsis">
+    
+  
+    Лекция 1. Production backend и эволюция Go
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p105">
+<span class="md-ellipsis">
+      
+        105. Музыка и звуковой дизайн Half-Life
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gearbox-music">
+<span class="md-ellipsis">
+      
+        Chris Jensen: музыка дополнений Gearbox
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#black-mesa-music">
+<span class="md-ellipsis">
+      
+        Joel Nielsen: Black Mesa заново озвучивает память об оригинале
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#voices">
+<span class="md-ellipsis">
+      
+        Голоса: от архетипов Black Mesa к актёрскому ансамблю
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#localized-voices">
+<span class="md-ellipsis">
+      
+        Локализованный голос: переводится не только смысл
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#source-audio">
+<span class="md-ellipsis">
+      
+        Source: пространство, сведение и автоматизация звука
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alyx-audio">
+<span class="md-ellipsis">
+      
+        Mike Morasky и Half-Life: Alyx
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#materials">
+<span class="md-ellipsis">
+      
+        Материалы к главе
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="half-life">Музыка и звук Half-Life<a class="headerlink" href="#half-life" title="Permanent link">¶</a></h1>
+<p>Half-Life легко обсуждать через level design, AI, физику и повествование — и из-за этого звук иногда оказывается в роли фона.</p>
+<p>Хотя на самом деле серию можно узнать <strong>с закрытыми глазами</strong>.</p>
+<p>Не только по музыке.</p>
+<p>По:</p>
+<ul>
+<li>голосу HEV;</li>
+<li>писку health charger;</li>
+<li>HECU radio;</li>
+<li>Overwatch Voice;</li>
+<li>Scanners;</li>
+<li>Striders;</li>
+<li>звуку дверей GoldSrc;</li>
+<li>далёкой стрельбе;</li>
+<li>machinery hum;</li>
+<li>пространству Citadel;</li>
+<li>звуку Jeff, который слышит тебя раньше, чем ты успеваешь его увидеть.</li>
+</ul>
+<p>Главный принцип Half-Life здесь удивительно устойчив от 1998 до Alyx:</p>
+<blockquote>
+<p><strong>звук должен существовать как часть мира, а музыка — появляться тогда, когда игре действительно есть что сказать.</strong></p>
+</blockquote>
+<p>Поэтому score редко лежит сплошным ковром поверх происходящего.</p>
+<p>Большую часть времени пространство звучит само.</p>
+<p>А когда музыка всё-таки входит, она часто фиксирует изменение состояния:</p>
+<div class="highlight"><pre><span></span><code>тишина
+↓
+событие
+↓
+музыкальный cue
+↓
+игрок понимает:
+что-то изменилось
+</code></pre></div>
+<p>Именно из-за такой экономии короткие треки вроде <code>Triage at Dawn</code> запоминаются значительно сильнее, чем если бы саундтрек играл непрерывно.</p>
+<p>От первой Half-Life до Alyx аудио постоянно выполняет сразу несколько функций:</p>
+<div class="highlight"><pre><span></span><code>атмосфера
++
+навигация
++
+читаемость AI
++
+worldbuilding
++
+интерфейс
++
+механика
+</code></pre></div>
+<p>Именно поэтому звук серии стоит разбирать отдельно, а не оставлять как примечание к графике.</p>
+<hr/>
+<h2 id="p105">105. Музыка и звуковой дизайн Half-Life<a class="headerlink" href="#p105" title="Permanent link">¶</a></h2>
+<p>Эту тему мы реально недооценивали, потому что Half-Life можно узнать <strong>с закрытыми глазами</strong>.</p>
+<p>Не только по OST.</p>
+<p>По:</p>
+<ul>
+<li>голосу HEV;</li>
+<li>писку health charger;</li>
+<li>headcrab;</li>
+<li>Barnacle;</li>
+<li>HECU radio;</li>
+<li>Overwatch Voice;</li>
+<li>Scanner;</li>
+<li>Strider;</li>
+<li>Gunship;</li>
+<li>Citadel hum;</li>
+<li>металлической двери GoldSrc.</li>
+</ul>
+<p>Главный принцип музыки Half-Life:</p>
+<blockquote>
+<p>она редко играет постоянно.</p>
+</blockquote>
+<p>Большую часть времени аудиофоном является сам мир.</p>
+<p>Ветер.</p>
+<p>Механизмы.</p>
+<p>Вентиляция.</p>
+<p>Поезд.</p>
+<p>Птицы.</p>
+<p>Distant combat.</p>
+<p>Радио.</p>
+<p>Тишина.</p>
+<p>А когда score появляется, он часто говорит:</p>
+<blockquote>
+<p><strong>состояние игры изменилось.</strong></p>
+</blockquote>
+<p>Mike Morasky при Alyx прямо описывал эту традицию: Half-Life экономно использует музыку и включает её как маркер важного state transition.</p>
+<h3 id="kelly-bailey">Kelly Bailey — не просто композитор<a class="headerlink" href="#kelly-bailey" title="Permanent link">¶</a></h3>
+<p>В HL1 Bailey написал музыку, сделал почти все sound effects, работал над DSP/reverb и частью speech/lip technology.</p>
+<p>То есть граница:</p>
+<blockquote>
+<p>composer / sound designer / programmer / game designer</p>
+</blockquote>
+<p>в старой Valve почти исчезает.</p>
+<p>И это слышно в результате: score не лежит отдельным ковром поверх игры. Он существует в одной системе с environment sound.</p>
+<h3 id="_1">Тишина как часть атмосферы<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p>Black Mesa Inbound с постоянной оркестровой музыкой была бы хуже.</p>
+<p>Вместо:</p>
+<blockquote>
+<p>ВОТ ВЕЛИЧЕСТВЕННАЯ ЛАБОРАТОРИЯ</p>
+</blockquote>
+<p>ты слышишь:</p>
+<ul>
+<li>train;</li>
+<li>announcements;</li>
+<li>machinery;</li>
+<li>рабочую среду.</li>
+</ul>
+<p>Black Mesa сначала становится <strong>местом</strong>, и только потом начинается катастрофа.</p>
+<p>Когда Gordon получает HEV и включается <code>Klaxon Beat</code>, музыка поэтому ощущается событием:</p>
+<blockquote>
+<p>теперь режим изменился.</p>
+</blockquote>
+<p>И вообще OST HL1 очень 1990s:</p>
+<ul>
+<li>industrial;</li>
+<li>electronic loops;</li>
+<li>breakbeat;</li>
+<li>synthetic percussion;</li>
+<li>ambient textures.</li>
+</ul>
+<p>Это не heroic Gordon theme.</p>
+<p>Half-Life практически не мифологизирует Gordon через большой лейтмотив. Музыка чаще говорит о состоянии <strong>пространства</strong>, а не внутренней душе героя.</p>
+<h3 id="hev-suit">HEV Suit как голос интерфейса<a class="headerlink" href="#hev-suit" title="Permanent link">¶</a></h3>
+<p>Gordon молчит, но костюм говорит.</p>
+<p><code>HEV suit activated.</code></p>
+<p><code>Major fracture detected.</code></p>
+<p><code>Morphine administered.</code></p>
+<p><code>Power... fifteen percent.</code></p>
+<p>Это блестящий diegetic UI.</p>
+<p>Вместо сухого:</p>
+<blockquote>
+<p>HP 23%</p>
+</blockquote>
+<p>мир сообщает:</p>
+<blockquote>
+<p>у Gordon сложная научная система, которая диагностирует тело.</p>
+</blockquote>
+<p>Информация + worldbuilding + identity одной системой.</p>
+<p>Когда в HL2 Kleiner снова выдаёт Gordon костюм, возвращение знакомого HEV audio работает почти как встреча со старым персонажем.</p>
+<h3 id="_2">Читаемость старых звуков<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>Ограниченный hardware заставляет HL1 делать очень distinct samples.</p>
+<p>Health charger.</p>
+<p>Headcrab.</p>
+<p>Scientist scream.</p>
+<p>HECU radio.</p>
+<p>Barnacle.</p>
+<p>Каждое событие читается моментально.</p>
+<p>Современная игра может записать 47 очень реалистичных металлических ударов, которые в mix превращаются в одинаковый шум.</p>
+<p>GoldSrc:</p>
+<blockquote>
+<p>ПИЩИТ ЭТА ШТУКА.</p>
+</blockquote>
+<p>И ты спустя двадцать лет знаешь, что это.</p>
+<p>Нереалистично?</p>
+<p>Иногда.</p>
+<p>Функционально?</p>
+<p>Идеально.</p>
+<h2 id="gearbox-music">Chris Jensen: музыка дополнений Gearbox<a class="headerlink" href="#gearbox-music" title="Permanent link">¶</a></h2>
+<p>Музыкальная история Half-Life не состоит только из линии Kelly Bailey → Mike Morasky. У <strong>Opposing Force</strong> есть собственный композитор — <strong>Chris Jensen</strong>. И это важно именно потому, что дополнение меняет положение игрока внутри уже известной катастрофы.</p>
+<p>Гордон входит в неё как сотрудник. Shephard прибывает как часть военной машины. Значит, даже знакомое помещение сначала читается через другой эмоциональный контракт: подготовка, приказ, высадка, потеря организации, попытка выжить после распада миссии.</p>
+<p>Музыка Jensen даёт этой версии Black Mesa отдельный мотор. Её индустриальная, ритмическая сторона хорошо сочетается с военным движением и распадом операции. При этом считать весь score бесконечным маршем было бы слишком грубо: тёмные и более разреженные фрагменты нужны именно там, где от уверенности подразделения ничего не осталось.</p>
+<h3 id="_3">Знакомый комплекс получает другую акустическую перспективу<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>Визуально Gearbox во многом работает готовыми материалами оригинала. Музыка оказывается одним из сравнительно экономных способов сообщить: <strong>сейчас ты находишься внутри другой истории</strong>.</p>
+<p>Это особенно полезно в дополнении, которое не может каждый час переизобретать графическую технологию. Достаточно иначе организовать ожидание перед боем, дать другой ритмический напор и сделать знакомые коридоры менее связанными с образом Гордона.</p>
+<p>Но не стоит буквально назначать композициям смысл «тема армии», «тема страха» и затем выдавать это за авторскую программу Jensen. Здесь мы анализируем их работу в прохождении. Музыка может поддерживать конкретный контекст, не имея официального лейтмотивного паспорта.</p>
+<h3 id="blue-shift">Blue Shift и проблема разных изданий<a class="headerlink" href="#blue-shift" title="Permanent link">¶</a></h3>
+<p>Музыка Opposing Force использовалась и в коробочной Blue Shift. В ранних Steam-версиях дополнений вместо неё звучали треки оригинальной Half-Life; позднее музыкальную комплектацию исправляли при переводе на SteamPipe. Поэтому речь идёт о различии конкретных выпусков, а не о вечном правиле «коробка — Jensen, Steam — Bailey». Поэтому два человека могут помнить у Blue Shift разное музыкальное сопровождение и оба описывать реально сыгранную версию.</p>
+<p>Вот здесь уточнение версии действительно необходимо. Оно меняет предмет разговора. В остальных абзацах можно спокойно обсуждать игру как произведение, но утверждение «вот музыка Blue Shift» без оговорки способно склеить два разных опыта.</p>
+<p>У ранних релизов есть ещё и техническая память CD-аудио: игровой триггер, номер дорожки и позднее цифровое имя файла — не одно и то же. Название, под которым трек разошёлся в интернете, не всегда является названием, придуманным композитором для конкретной сцены.</p>
+<p>Историю авторства и использования треков удобно проверять по <a href="https://combineoverwiki.net/wiki/Half-Life:_Opposing_Force_soundtrack">реестру саундтрека Opposing Force</a>. Это небольшой случай, когда справка избавляет от целой ложной теории о музыкальном замысле.</p>
+<h2 id="black-mesa-music">Joel Nielsen: Black Mesa заново озвучивает память об оригинале<a class="headerlink" href="#black-mesa-music" title="Permanent link">¶</a></h2>
+<p>У Black Mesa другой риск. Она обращается к игре, звуки которой многие знают почти телом. Можно сохранить слишком много — и новая постановка будет жить под звуковым слоем другого масштаба. Можно заменить всё — и исчезнет чувство возвращения.</p>
+<p><strong>Joel Nielsen</strong> пишет собственную музыку для ремейка. Это следует рассматривать вместе с переделкой пространства: новый score не обязан быть тем же самым Bailey, только с более дорогими инструментами.</p>
+<h3 id="terra">Terra: музыка знакомого события меняет его эмоциональный размер<a class="headerlink" href="#terra" title="Permanent link">¶</a></h3>
+<p>На <a href="https://joelnielsen.bandcamp.com/album/black-mesa-terra-soundtrack-definitive-edition-vol-1-2">авторской странице Terra</a> соседствуют, например, <em>Anomalous Materials</em>, <em>Office Complex</em>, <em>We've Got Hostiles</em>, <em>Surface Tension</em> и <em>Lambda Core</em>. Уже привязка названий к участкам кампании удобна для сравнения двух постановок.</p>
+<p>Возьмём встречу с военной силой. Её можно подать как пугающее нарушение надежды на спасение; можно сильнее выдвинуть в центр начало большой боевой фазы. Оба прочтения совместимы с событиями, но музыка меняет расстояние между ними.</p>
+<p>У ремейка более выраженный музыкальный нажим способен сделать перестрелку событием большого боевика. В то же время спокойные участки нуждаются в возможности снова услышать вентиляцию, голоса, шаги и пустое помещение. Если музыка непрерывно объясняет игроку, что чувствовать, исчезает часть старой тревожной недосказанности Black Mesa.</p>
+<p>Поэтому важнее сравнивать не «какой альбом круче», а <strong>когда композиция входит в прохождение</strong>. Один и тот же трек может великолепно поддерживать выход на большую арену и мешать внимательному поиску маршрута через комнату.</p>
+<h3 id="xen">Xen: ремейк получает пространство для собственной музыкальной дуги<a class="headerlink" href="#xen" title="Permanent link">¶</a></h3>
+<p>Переделанный Xen значительно самостоятельнее земных глав. Здесь музыка может меньше оглядываться на секундное совпадение с памятью оригинала и строить новую протяжённую дугу: открытие чужого мира, преследование, промышленная эксплуатация, подъём к финалу.</p>
+<p>В <a href="https://joelnielsen.bandcamp.com/album/black-mesa-xen-soundtrack-definitive-edition">Xen Soundtrack</a> есть <em>Transcendent</em>, <em>The Hunting</em>, <em>Interloper</em>, <em>Ascension</em>, <em>Respite</em> и <em>Nihilist</em>. В credits альбома указаны <strong>Joel и Kala Nielsen</strong> — поэтому этот пласт не стоит сводить к одному имени без оглядки на авторские сведения.</p>
+<p>Содержательно здесь важна разница между чуждостью и возвышенностью. Музыка может предложить посмотреть на Xen с восхищением, а не только с отвращением или недоумением. Тогда игрок получает другой эмоциональный адрес: перед ним мир, у которого есть красота, страдание и масштаб.</p>
+<p>Это сильное прочтение, но одновременно изменение оригинальной интонации. Чем яснее музыка оформляет грандиозность и трагедию, тем меньше остаётся ощущения бесформенной, плохо объяснимой чужой реальности.</p>
+<h3 id="_4">Альбом и игра — два разных способа слушать<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>В альбоме композиция имеет фиксированную длительность и соседей. В прохождении на неё накладываются собственный темп, ошибки, загрузки, бой и паузы игрока.</p>
+<p>Поэтому музыкальную сцену полезно разбирать так:</p>
+<div class="highlight"><pre><span></span><code>что слышно до входа музыки
+        ↓
+какое действие или вид запускает изменение
+        ↓
+какую эмоцию добавляет композиция
+        ↓
+что остаётся слышимым под ней
+        ↓
+как сцена возвращается к звукам мира
+</code></pre></div>
+<p>Это позволяет сравнить Bailey и Nielsen без примитивного соревнования «старый синтезатор против современного score». Один и тот же сюжет может требовать разной музыки, потому что его заново поставили.</p>
+<p>И именно поэтому Black Mesa — важная часть истории звука Half-Life, хотя она не заменяет официальную музыкальную линию Valve. Она показывает, как другое поколение авторов <strong>слышит</strong> знакомую катастрофу.</p>
+<h2 id="voices">Голоса: от архетипов Black Mesa к актёрскому ансамблю<a class="headerlink" href="#voices" title="Permanent link">¶</a></h2>
+<p>Есть ещё одна вещь, которую легко потерять, если говорить о звуке только через музыку, DSP и effects.</p>
+<p><strong>Голоса в Half-Life сами являются частью sound design.</strong></p>
+<p>Не просто:</p>
+<blockquote>
+<p>хорошие актёры читают хороший текст.</p>
+</blockquote>
+<p>А:</p>
+<div class="highlight"><pre><span></span><code>тембр
++
+ритм речи
++
+обработка
++
+повторяемость
++
+позиция в mix
++
+связь с gameplay
+=
+звуковая идентичность мира
+</code></pre></div>
+<p>И эта линия очень хорошо показывает эволюцию всей серии.</p>
+<p>HL1:</p>
+<blockquote>
+<p>несколько голосов должны убедительно населить огромный комплекс.</p>
+</blockquote>
+<p>HL2:</p>
+<blockquote>
+<p>появляется полноценный ансамбль конкретных персонажей и отдельный звуковой язык фракций.</p>
+</blockquote>
+<p>Episodes:</p>
+<blockquote>
+<p>актёрская игра становится эмоциональным центром.</p>
+</blockquote>
+<p>Alyx:</p>
+<blockquote>
+<p>голос уже буквально живёт рядом с человеком в headset и должен выдерживать намного более интимное присутствие.</p>
+</blockquote>
+<hr/>
+<h3 id="half-life_1">В первой Half-Life актёров удивительно мало<a class="headerlink" href="#half-life_1" title="Permanent link">¶</a></h3>
+<p>Если смотреть на credits, масштаб почти смешной.</p>
+<p>Основной voice cast первой Half-Life — буквально несколько человек.</p>
+<p><strong>Kathy Levin.</strong></p>
+<p><strong>Harry S. Robins.</strong></p>
+<p><strong>Mike Shapiro.</strong></p>
+<p>Плюс внутри самой команды отдельные голоса записывали, например, Kelly Bailey и Bill Van Buren.</p>
+<p>То есть огромная Black Mesa населена не десятками профессиональных performers.</p>
+<p>А очень маленьким набором голосов, которые постоянно переиспользуются для разных archetypes.</p>
+<p>И это идеально соответствует самой структуре HL1.</p>
+<p>Персонажи первой игры в большинстве своём существуют как <strong>классы</strong>:</p>
+<div class="highlight"><pre><span></span><code>scientist
+security guard
+HECU soldier
+announcement
+G-Man
+</code></pre></div>
+<p>Не как большой ансамбль индивидуальных драматических персонажей.</p>
+<h3 id="harry-s-robins">Harry S. Robins — буквально «голос учёного»<a class="headerlink" href="#harry-s-robins" title="Permanent link">¶</a></h3>
+<p>Он озвучивает множество scientists и военных реплик.</p>
+<p>Поэтому один человек фактически задаёт целый социальный слой Black Mesa.</p>
+<p>Очень странная вещь, если задуматься.</p>
+<p>Игрок встречает:</p>
+<blockquote>
+<p>другого учёного.</p>
+</blockquote>
+<p>Но мозг слышит:</p>
+<blockquote>
+<p>знакомый тип человека этого места.</p>
+</blockquote>
+<p>И вместо недостатка это начинает работать как <strong>аудиовизуальная типизация</strong>.</p>
+<p>Как одинаковые scientist models.</p>
+<p>Как одинаковые Barney guards.</p>
+<p>Black Mesa — огромная организация, но технически люди собраны из небольшого числа повторяющихся шаблонов.</p>
+<p>И голос помогает этой условности стать понятной.</p>
+<h3 id="mike-shapiro">Mike Shapiro в одной игре существует сразу на двух противоположных полюсах<a class="headerlink" href="#mike-shapiro" title="Permanent link">¶</a></h3>
+<p>Shapiro озвучивает:</p>
+<ul>
+<li>security guards / Barney archetype;</li>
+<li>часть HECU/scientists;</li>
+<li>и <strong>G-Man</strong>.</li>
+</ul>
+<p>Это прекрасная демонстрация того, насколько важна сама performance.</p>
+<p>Barney:</p>
+<blockquote>
+<p>нормальный человек.</p>
+</blockquote>
+<p>Разговорный.</p>
+<p>Земной.</p>
+<p>Почти дружеский.</p>
+<p>G-Man:</p>
+<blockquote>
+<p>человек, который звучит так, будто сам процесс человеческой речи для него слегка неестественен.</p>
+</blockquote>
+<p>Один актёр.</p>
+<p>Совершенно разная <strong>акустическая природа персонажа</strong>.</p>
+<h3 id="g-man">G-Man держится почти целиком на ритме речи<a class="headerlink" href="#g-man" title="Permanent link">¶</a></h3>
+<p>Это особенно интересно, потому что визуально G-Man сам по себе довольно простой.</p>
+<p>Костюм.</p>
+<p>Галстук.</p>
+<p>Портфель.</p>
+<p>Немного странное лицо.</p>
+<p>Но стоит услышать:</p>
+<blockquote>
+<p><code>Mister... Freeman.</code></p>
+</blockquote>
+<p>и персонаж мгновенно становится <strong>неправильным</strong>.</p>
+<p>Mike Shapiro много лет спустя объяснял, что при первой работе у него были примерно:</p>
+<ul>
+<li>рисунок персонажа;</li>
+<li>реплики;</li>
+<li>информация от команды.</li>
+</ul>
+<p>Остальное голос пришлось находить в исполнении.</p>
+<p>И одна из главных характеристик, которую он сформировал, — этот странный <strong>stutter-step rhythm</strong>.</p>
+<p>Фраза идёт.</p>
+<p>Потом будто задерживается.</p>
+<p>Ударение появляется не там, где ожидаешь.</p>
+<p>Слово растягивается.</p>
+<p>Следующая часть внезапно ускоряется.</p>
+<p>Получается речь человека, который формально говорит на английском идеально, но как будто воспроизводит человеческую манеру <strong>по собственным правилам</strong>.</p>
+<h3 id="shapiro-g-man">Shapiro сам описывает G-Man почти музыкально<a class="headerlink" href="#shapiro-g-man" title="Permanent link">¶</a></h3>
+<p>И это особенно уместно именно в этой главе.</p>
+<p>Он говорил, что при работе с G-Man важны:</p>
+<blockquote>
+<p>tempo;</p>
+<p>lyricism;</p>
+<p>underlying music of speech.</p>
+</blockquote>
+<p>То есть G-Man фактически строится не только смыслом текста.</p>
+<p>Он строится <strong>просодией</strong>.</p>
+<p>Ритмом.</p>
+<p>Паузы становятся такими же узнаваемыми, как тембр.</p>
+<p>Поэтому фраза G-Man на бумаге часто выглядит почти нормальной.</p>
+<p>Прочитай её обычным голосом:</p>
+<blockquote>
+<p>ничего особенного.</p>
+</blockquote>
+<p>Прочитай с характерными паузами Shapiro:</p>
+<blockquote>
+<p>всё, Half-Life.</p>
+</blockquote>
+<h3 id="_5">Микрофон тоже становится частью персонажа<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>Shapiro рассказывал ещё одну прекрасную деталь.</p>
+<p>Для G-Man он старается говорить <strong>очень близко к микрофону</strong>.</p>
+<p>Практически «есть» его.</p>
+<p>Зачем?</p>
+<p>Чем ближе голос к diaphragm microphone, тем больше слышно:</p>
+<ul>
+<li>маленькие изменения воздуха;</li>
+<li>текстуру;</li>
+<li>низкие детали;</li>
+<li>очень интимные нюансы.</li>
+</ul>
+<p>И в результате G-Man говорит не как человек, который стоит в десяти метрах.</p>
+<p>Он ощущается:</p>
+<blockquote>
+<p><strong>слишком близко к тебе.</strong></p>
+</blockquote>
+<p>Даже когда визуально находится через пространство.</p>
+<p>Это очень хорошо соответствует персонажу, который знает о Gordon слишком много и постоянно нарушает нормальные границы мира.</p>
+<p>То есть microphone technique становится буквально частью fiction.</p>
+<hr/>
+<h3 id="hev-suit-interface">HEV Suit — один из самых чистых примеров голоса как interface<a class="headerlink" href="#hev-suit-interface" title="Permanent link">¶</a></h3>
+<p>В исходном тексте уже есть главный принцип:</p>
+<blockquote>
+<p>Gordon молчит, зато костюм говорит.</p>
+</blockquote>
+<p>Но здесь есть ещё один хороший исторический штрих.</p>
+<p><strong>HEV Suit озвучивал Kelly Bailey.</strong></p>
+<p>Тот же человек, который:</p>
+<ul>
+<li>писал музыку;</li>
+<li>делал огромную часть sound effects;</li>
+<li>работал над audio technology.</li>
+</ul>
+<p>То есть голос интерфейса не пришёл из отдельной voice department.</p>
+<p>Он вырос буквально внутри <strong>общей аудиосистемы игры</strong>.</p>
+<p>Это очень старо-валвовская структура:</p>
+<div class="highlight"><pre><span></span><code>композитор
++
+sound designer
++
+engineer
++
+voice
+</code></pre></div>
+<p>в одном человеке.</p>
+<h3 id="_6">И здесь стоит убрать старую путаницу<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>Голос HEV довольно долго ошибочно приписывали <strong>Kathy Levin</strong>.</p>
+<p>Она действительно работала над Half-Life и озвучивала:</p>
+<ul>
+<li>Gina Cross;</li>
+<li>Black Mesa Transit System / announcement-related material.</li>
+</ul>
+<p>Но HEV warnings — Bailey.</p>
+<p>Это особенно легко спутать, потому что и Black Mesa announcements, и HEV выполняют похожую функцию:</p>
+<blockquote>
+<p><strong>система говорит человеку, что происходит.</strong></p>
+</blockquote>
+<p>Но они принадлежат разным слоям мира.</p>
+<p>Black Mesa PA:</p>
+<blockquote>
+<p>голос учреждения.</p>
+</blockquote>
+<p>HEV:</p>
+<blockquote>
+<p>голос буквально на теле Gordon.</p>
+</blockquote>
+<h3 id="hev">HEV вообще является почти персонажем без личности<a class="headerlink" href="#hev" title="Permanent link">¶</a></h3>
+<p>У неё нет:</p>
+<ul>
+<li>характера;</li>
+<li>отношений;</li>
+<li>сюжетной дуги.</li>
+</ul>
+<p>Но у игрока появляется почти эмоциональное узнавание.</p>
+<p><code>Power fifteen percent.</code></p>
+<p><code>Major fracture detected.</code></p>
+<p><code>Morphine administered.</code></p>
+<p>Спустя годы HL2 возвращает тот же голос.</p>
+<p>И происходит очень странная вещь.</p>
+<p>Ты слышишь не:</p>
+<blockquote>
+<p>интерфейс снова активирован.</p>
+</blockquote>
+<p>А почти:</p>
+<blockquote>
+<p><strong>старый знакомый вернулся.</strong></p>
+</blockquote>
+<p>Это показывает, насколько сильно повторяемый functional audio способен стать частью идентичности персонажа и серии.</p>
+<hr/>
+<h3 id="voice-bark-half-life-ai">Voice bark в Half-Life — это ещё и интерфейс AI<a class="headerlink" href="#voice-bark-half-life-ai" title="Permanent link">¶</a></h3>
+<p>HECU особенно хорошо показывает, что голос врага может выполнять больше работы, чем интеллект.</p>
+<p>NPC переместился за стену.</p>
+<p>Без реплики:</p>
+<blockquote>
+<p>возможно pathfinding.</p>
+</blockquote>
+<p>NPC кричит:</p>
+<blockquote>
+<p><code>COVER!</code></p>
+</blockquote>
+<p>и мозг игрока мгновенно достраивает:</p>
+<blockquote>
+<p><strong>он понял ситуацию и принял решение.</strong></p>
+</blockquote>
+<p>То есть voice bark переводит невидимую internal state machine в человеческое намерение.</p>
+<p>Это почти HUD для AI.</p>
+<p>Только diegetic.</p>
+<p>Не:</p>
+<div class="highlight"><pre><span></span><code>ENEMY STATE:
+TAKE COVER
+</code></pre></div>
+<p>А:</p>
+<blockquote>
+<p>человек сам сказал, что делает.</p>
+</blockquote>
+<h3 id="hecu">Радиофильтр HECU ещё сильнее продаёт организацию<a class="headerlink" href="#hecu" title="Permanent link">¶</a></h3>
+<p>HECU не просто разговаривают.</p>
+<p>Они звучат как:</p>
+<blockquote>
+<p>военное подразделение.</p>
+</blockquote>
+<p>Radio compression.</p>
+<p>Короткие команды.</p>
+<p>Повторяемая терминология.</p>
+<p>Фразы между бойцами.</p>
+<p>Даже когда AI технически выполняет довольно простой schedule, audio создаёт ощущение:</p>
+<blockquote>
+<p><strong>где-то существует более крупная command structure.</strong></p>
+</blockquote>
+<p>И это ровно тот же принцип, который HL2 потом доведёт до Combine.</p>
+<hr/>
+<h3 id="half-life-2-voice-cast-archetypes">Half-Life 2 превращает voice cast из набора archetypes в настоящий ансамбль<a class="headerlink" href="#half-life-2-voice-cast-archetypes" title="Permanent link">¶</a></h3>
+<p>Между HL1 и HL2 происходит огромный скачок.</p>
+<p>Теперь в credits уже существуют конкретные актёры для конкретных постоянных персонажей:</p>
+<ul>
+<li>Robert Guillaume — Eli Vance;</li>
+<li>Robert Culp — Wallace Breen;</li>
+<li>Michelle Forbes — Judith Mossman;</li>
+<li>Merle Dandridge — Alyx Vance;</li>
+<li>Mike Shapiro — Barney и G-Man;</li>
+<li>Harry S. Robins — Kleiner;</li>
+<li>Jim French — Father Grigori;</li>
+<li>Louis Gossett Jr. — Vortigaunt;</li>
+<li>Ellen McLain — Overwatch.</li>
+</ul>
+<p>И вот здесь voice acting становится необходимым следствием другой фундаментальной ставки Valve:</p>
+<blockquote>
+<p><strong>персонажи должны выдерживать длинные сцены прямо перед игроком.</strong></p>
+</blockquote>
+<p>Facial animation решает лицо.</p>
+<p>Voice performance решает человека.</p>
+<p>Одно без другого быстро превращается в uncanny puppet.</p>
+<h3 id="hl2-npc">HL2 поэтому звучит уже не как «NPC говорит реплику»<a class="headerlink" href="#hl2-npc" title="Permanent link">¶</a></h3>
+<p>Alyx может:</p>
+<ul>
+<li>пошутить;</li>
+<li>смутиться;</li>
+<li>отреагировать;</li>
+<li>испугаться;</li>
+<li>разозлиться на Mossman;</li>
+<li>говорить с отцом;</li>
+<li>говорить с Gordon совсем другим тоном.</li>
+</ul>
+<p>Eli звучит не как:</p>
+<blockquote>
+<p>important scientist.</p>
+</blockquote>
+<p>А как конкретный пожилой человек, у которого есть:</p>
+<ul>
+<li>дочь;</li>
+<li>прошлое;</li>
+<li>ответственность;</li>
+<li>страх.</li>
+</ul>
+<p>Breen не просто:</p>
+<blockquote>
+<p>evil administrator.</p>
+</blockquote>
+<p>У Robert Culp есть раздражение, усталость, самоуверенность, иногда почти покровительственная забота.</p>
+<p>И это начинает создавать <strong>социальную акустику</strong> мира.</p>
+<p>Ты способен понять отношения персонажей ещё до того, как разобрал буквально каждое слово.</p>
+<hr/>
+<h3 id="merle-dandridge-alyx">Merle Dandridge очень хорошо показывает, насколько «Alyx» не равна одному голосу<a class="headerlink" href="#merle-dandridge-alyx" title="Permanent link">¶</a></h3>
+<p>В commentary Episode Two Dandridge сама очень точно говорит:</p>
+<blockquote>
+<p>игрок слышит мой голос и легко решает: «Вот Alyx».</p>
+</blockquote>
+<p>Но реальная Alyx собирается из:</p>
+<ul>
+<li>сценария;</li>
+<li>animation;</li>
+<li>face;</li>
+<li>gaze;</li>
+<li>timing;</li>
+<li>AI;</li>
+<li>voice;</li>
+<li>реакции сцены.</li>
+</ul>
+<p>Она называла собственный голос почти:</p>
+<blockquote>
+<p>icing on the cake.</p>
+</blockquote>
+<p>И это важная поправка к разговору про voice acting.</p>
+<p>Хорошая актёрская работа здесь не существует отдельно.</p>
+<p>Она должна <strong>стыковаться с performance system Source</strong>.</p>
+<p>Если интонация говорит:</p>
+<blockquote>
+<p>Alyx нервничает,</p>
+</blockquote>
+<p>а лицо и body animation остаются спокойными:</p>
+<blockquote>
+<p>персонаж разваливается.</p>
+</blockquote>
+<p>Если лицо меняется слишком поздно относительно реплики:</p>
+<blockquote>
+<p>снова кукла.</p>
+</blockquote>
+<p>Поэтому voice recording в HL2 уже часть большого <strong>performance pipeline</strong>, а не отдельный WAV, который потом положили в map.</p>
+<h3 id="dandridge-alyx">И сама Dandridge описывала Alyx как актёрскую школу<a class="headerlink" href="#dandridge-alyx" title="Permanent link">¶</a></h3>
+<p>Потому что игре требуются очень разные эмоциональные состояния.</p>
+<p>Не только:</p>
+<blockquote>
+<p>combat shout.</p>
+</blockquote>
+<p>Нужны:</p>
+<ul>
+<li>тёплый разговор;</li>
+<li>сарказм;</li>
+<li>страх;</li>
+<li>злость;</li>
+<li>тревога;</li>
+<li>потеря;</li>
+<li>юмор;</li>
+<li>тихая реакция рядом с Gordon.</li>
+</ul>
+<p>Это уже ближе к полноценной dramatic role, чем к типичной FPS voice session конца девяностых.</p>
+<p>И именно поэтому в Episodes, где Alyx проводит с Gordon значительно больше времени, голос становится одним из основных носителей эмоциональной арки.</p>
+<hr/>
+<h3 id="overwatch-voice">Overwatch Voice — возможно, самый чистый «голос системы» во всей серии<a class="headerlink" href="#overwatch-voice" title="Permanent link">¶</a></h3>
+<p>Если HEV — голос системы, которая помогает Gordon,</p>
+<p>то Overwatch — голос системы, которая <strong>управляет оккупированным обществом</strong>.</p>
+<p>И особенно прекрасна история её производства.</p>
+<p>Valve первоначально использовала <strong>text-to-speech</strong>.</p>
+<p>То есть буквально компьютерный синтезированный голос.</p>
+<p>Ближе к концу разработки выяснилось:</p>
+<blockquote>
+<p>использовать его в релизе по правам нельзя.</p>
+</blockquote>
+<p>И команде пришлось найти человека, который сможет:</p>
+<blockquote>
+<p><strong>сымитировать машинную подачу.</strong></p>
+</blockquote>
+<p>Так появляется <strong>Ellen McLain</strong>.</p>
+<p>Очень смешная инверсия.</p>
+<p>Обычно технология пытается звучать как человек.</p>
+<p>Здесь:</p>
+<blockquote>
+<p>человек нанят, чтобы убедительно звучать как технология.</p>
+</blockquote>
+<h3 id="mclain-valve">И McLain потом становится почти идеальным «голосом институции Valve»<a class="headerlink" href="#mclain-valve" title="Permanent link">¶</a></h3>
+<p>Overwatch.</p>
+<p>Позже:</p>
+<blockquote>
+<p>GLaDOS.</p>
+</blockquote>
+<p>TF2 Announcer.</p>
+<p>То есть один человеческий голос в разных играх Valve постоянно оказывается:</p>
+<blockquote>
+<p><strong>безличной системой, которая сообщает тебе правила мира.</strong></p>
+</blockquote>
+<p>Но Overwatch и GLaDOS используют эту базу совершенно по-разному.</p>
+<p>GLaDOS:</p>
+<blockquote>
+<p>личность прячется внутри машинного интерфейса.</p>
+</blockquote>
+<p>Overwatch:</p>
+<blockquote>
+<p>наоборот, личность практически отсутствует.</p>
+</blockquote>
+<p>Это административная машина.</p>
+<h3 id="overwatch">Overwatch говорит не с человеком — она классифицирует человека<a class="headerlink" href="#overwatch" title="Permanent link">¶</a></h3>
+<p>И здесь текст и voice acting работают вместе.</p>
+<p>Не:</p>
+<blockquote>
+<p>Gordon Freeman убил наших солдат.</p>
+</blockquote>
+<p>А:</p>
+<blockquote>
+<p><code>anticitizen</code>.</p>
+</blockquote>
+<p><code>malignant</code>.</p>
+<p><code>sterilize</code>.</p>
+<p><code>prosecute</code>.</p>
+<p>Голос не злится.</p>
+<p>Не мстит.</p>
+<p>Не боится.</p>
+<p>Он обрабатывает событие.</p>
+<p>И именно сухая подача McLain делает Combine ещё страшнее.</p>
+<p>Если бы voice кричал:</p>
+<blockquote>
+<p>УБЕЙТЕ ФРИМЕНА!</p>
+</blockquote>
+<p>это был бы обычный villain.</p>
+<p>Overwatch говорит как:</p>
+<blockquote>
+<p><strong>операционная система государства.</strong></p>
+</blockquote>
+<p>Gordon является не врагом.</p>
+<p>А ошибкой, которую надо закрыть.</p>
+<h3 id="breen-overwatch">Breen и Overwatch дают режиму два разных голоса<a class="headerlink" href="#breen-overwatch" title="Permanent link">¶</a></h3>
+<p>Это очень сильное разделение.</p>
+<p><strong>Breen</strong> говорит:</p>
+<blockquote>
+<p>человеческим языком.</p>
+</blockquote>
+<p>Уговаривает.</p>
+<p>Объясняет.</p>
+<p>Рационализирует.</p>
+<p><strong>Overwatch</strong> говорит:</p>
+<blockquote>
+<p>языком процедуры.</p>
+</blockquote>
+<p>Назначает.</p>
+<p>Классифицирует.</p>
+<p>Отправляет units.</p>
+<p>Вместе получается:</p>
+<div class="highlight"><pre><span></span><code>Breen
+=
+идеология оккупации
+
+Overwatch
+=
+операционная система оккупации
+</code></pre></div>
+<p>И City 17 из-за этого можно понять <strong>с закрытыми глазами</strong>.</p>
+<hr/>
+<h3 id="vortigaunts">Vortigaunts тоже проходят эволюцию через голос<a class="headerlink" href="#vortigaunts" title="Permanent link">¶</a></h3>
+<p>В HL1 Vortigaunt прежде всего воспринимается как:</p>
+<blockquote>
+<p>alien enemy sound.</p>
+</blockquote>
+<p>Во второй части он становится <strong>персонажем</strong>.</p>
+<p>И casting здесь очень показательный.</p>
+<p>В Half-Life 2 и Episode One Vortigaunts озвучивает <strong>Louis Gossett Jr.</strong></p>
+<p>В Episode Two роль переходит к <strong>Tony Todd</strong>.</p>
+<p>Todd затем возвращается в Half-Life: Alyx.</p>
+<p>То есть даже внутри одного вида меняется конкретный performer, но сохраняется базовая звуковая идея:</p>
+<blockquote>
+<p>медленная, необычно формальная, почти церемониальная речь.</p>
+</blockquote>
+<h3 id="vortigaunt">Это важно, потому что Vortigaunt должен звучать не просто «как пришелец»<a class="headerlink" href="#vortigaunt" title="Permanent link">¶</a></h3>
+<p>Он одновременно:</p>
+<ul>
+<li>очень чужой;</li>
+<li>очень разумный;</li>
+<li>мистический;</li>
+<li>часто ироничный;</li>
+<li>коллективный;</li>
+<li>способен говорить о вещах, которых человек не понимает.</li>
+</ul>
+<p>Если сделать голос слишком monster-like:</p>
+<blockquote>
+<p>player будет продолжать слышать enemy HL1.</p>
+</blockquote>
+<p>Если слишком человеческий:</p>
+<blockquote>
+<p>исчезнет ощущение другой формы сознания.</p>
+</blockquote>
+<p>Поэтому их медленная strange cadence работает почти как G-Man, только с противоположной эмоциональной функцией.</p>
+<p>G-Man:</p>
+<blockquote>
+<p>чужая речь → тревога.</p>
+</blockquote>
+<p>Vortigaunt:</p>
+<blockquote>
+<p>чужая речь → постепенно доверие и странная мудрость.</p>
+</blockquote>
+<p>Оба персонажа используют <strong>нарушенную человеческую просодию</strong>, чтобы звучать как существа, которые знают о мире больше обычного человека.</p>
+<p>Но один отталкивает.</p>
+<p>Другие постепенно становятся почти тёплыми.</p>
+<hr/>
+<h3 id="alyx-2020-continuity">Alyx 2020 показывает, что continuity голоса важна — но не священна<a class="headerlink" href="#alyx-2020-continuity" title="Permanent link">¶</a></h3>
+<p>Самое опасное решение новой игры:</p>
+<blockquote>
+<p>заменить Merle Dandridge.</p>
+</blockquote>
+<p>Она уже была Alyx для огромного количества людей.</p>
+<p>Но новая игра происходит, когда Alyx значительно моложе.</p>
+<p>Valve решает, что нужна другая performance.</p>
+<p>Роль получает <strong>Ozioma Akagha</strong>.</p>
+<p>Это очень хороший пример старой философии компании:</p>
+<blockquote>
+<p>узнаваемость сама по себе не является достаточной причиной оставить решение.</p>
+</blockquote>
+<p>Если текущей игре нужен другой голос:</p>
+<blockquote>
+<p>меняем.</p>
+</blockquote>
+<h3 id="eli">Eli приходится менять уже по другой причине<a class="headerlink" href="#eli" title="Permanent link">¶</a></h3>
+<p>Robert Guillaume умер в 2017 году.</p>
+<p>В Alyx Eli озвучивает <strong>James Moses Black</strong>.</p>
+<p>И здесь перед actor/design team стоит противоположная задача.</p>
+<p>Не:</p>
+<blockquote>
+<p>переосмыслить молодую версию персонажа слишком сильно.</p>
+</blockquote>
+<p>А:</p>
+<blockquote>
+<p>сохранить достаточно эмоциональной непрерывности, чтобы player сразу слышал <strong>Eli</strong>, несмотря на другого человека у микрофона.</p>
+</blockquote>
+<p>То есть continuity теперь становится производственной задачей.</p>
+<h3 id="g-man-mike-shapiro">G-Man остаётся Mike Shapiro — и это особенно важно<a class="headerlink" href="#g-man-mike-shapiro" title="Permanent link">¶</a></h3>
+<p>Потому что голос G-Man почти сильнее связан с identity персонажа, чем его модель.</p>
+<p>Можно заменить:</p>
+<ul>
+<li>renderer;</li>
+<li>face tech;</li>
+<li>shaders;</li>
+<li>animation;</li>
+<li>resolution.</li>
+</ul>
+<p>Но если G-Man заговорит обычной smooth villain voice:</p>
+<blockquote>
+<p>персонажа почти нет.</p>
+</blockquote>
+<p>И поэтому момент в Vault работает ещё до полного визуального раскрытия.</p>
+<p>Манера речи сама сообщает:</p>
+<blockquote>
+<p><strong>ты знаешь, кто здесь.</strong></p>
+</blockquote>
+<p>Это звуковой equivalent силуэта.</p>
+<h3 id="overwatch-ellen-mclain">Overwatch тоже сохраняет Ellen McLain<a class="headerlink" href="#overwatch-ellen-mclain" title="Permanent link">¶</a></h3>
+<p>И опять continuity работает уже не как nostalgia.</p>
+<p>City 17 за пять лет до HL2 должна звучать:</p>
+<blockquote>
+<p>как тот же режим.</p>
+</blockquote>
+<p>Player слышит Overwatch и получает мгновенный исторический якорь.</p>
+<p>Не нужно объяснять:</p>
+<blockquote>
+<p>Combine уже контролирует город.</p>
+</blockquote>
+<p>Голос системы уже здесь.</p>
+<hr/>
+<h3 id="russell-sound">Russell: голос, который должен пережить шум игры<a class="headerlink" href="#russell-sound" title="Permanent link">¶</a></h3>
+<p>А вот это уже совершенно новая вещь для серии.</p>
+<p>Russell — почти полностью <strong>аудиальный companion</strong>.</p>
+<p>Он не обязан физически идти рядом.</p>
+<p>Не занимает doorway.</p>
+<p>Не ломает navigation.</p>
+<p>Не нуждается в combat AI.</p>
+<p>Не требует, чтобы player постоянно смотрел ему в лицо.</p>
+<p>Но может:</p>
+<ul>
+<li>шутить;</li>
+<li>давать context;</li>
+<li>комментировать;</li>
+<li>переживать;</li>
+<li>поддерживать dialogue;</li>
+<li>строить отношения с Alyx.</li>
+</ul>
+<p>То есть voice acting получает функцию, которую раньше приходилось совмещать с полноценным companion NPC.</p>
+<h3 id="_7">Близость голоса не должна отменять окружающее пространство<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>Польза радио-компаньона как механики разобрана в <a href="../11-half-life-alyx-design/#russell-design">дизайне Alyx</a>. Здесь интереснее его акустическое положение.</p>
+<p>Голос Russell должен оставаться достаточно близким и разборчивым, чтобы поддерживать ощущение разговора. Но перед игроком одновременно находится комната с собственными расстояниями: шум за дверью, угроза сверху, предмет, который только что упал из руки.</p>
+<p>Если радио забивает эти сигналы, companion начинает мешать самой игре. Если тонет в них, пропадает отношения и смысл реплики. Значит, звуковая задача состоит в распределении внимания: что сейчас обязано быть понятно, что может остаться фоном и когда стоит дать миру говорить одному.</p>
+<p>Особенно важны паузы. Молчание собеседника после опасного момента тоже может работать как часть общения — игрок сначала возвращает контроль над телом, затем снова готов услышать шутку. Это не утверждение о конкретном скрытом алгоритме Valve, а способ анализировать результат сведения.</p>
+<p>Так радио отличается и от музыки, и от стоящего рядом NPC. Оно сопровождает человека, но не должно превращать Quarantine Zone в декорацию к разговорному шоу.</p>
+<h3 id="rhys-darby">Rhys Darby ещё и радикально меняет эмоциональную температуру игры<a class="headerlink" href="#rhys-darby" title="Permanent link">¶</a></h3>
+<p>Alyx могла очень легко стать:</p>
+<blockquote>
+<p>тяжёлым VR-horror внутри оккупированного City 17.</p>
+</blockquote>
+<p>Headcrabs физически летят в лицо.</p>
+<p>Combine страшнее.</p>
+<p>Quarantine Zone мерзкая.</p>
+<p>Jeff существует.</p>
+<p>Russell постоянно сбрасывает напряжение.</p>
+<p>Шутит.</p>
+<p>Удивляется.</p>
+<p>Ведёт себя как нормальный человек.</p>
+<p>И это снова та самая «тёплая Valve».</p>
+<p>Мир ужасный.</p>
+<p><strong>Голос рядом — человеческий.</strong></p>
+<hr/>
+<h3 id="half-life_2">Голоса в Half-Life почти всегда выполняют больше одной функции<a class="headerlink" href="#half-life_2" title="Permanent link">¶</a></h3>
+<p>Если собрать всю серию:</p>
+<h4 id="hev_1">HEV<a class="headerlink" href="#hev_1" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>interface
++
+worldbuilding
++
+nostalgia
+</code></pre></div>
+<h4 id="hecu-barks">HECU barks<a class="headerlink" href="#hecu-barks" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>AI readability
++
+military identity
++
+combat information
+</code></pre></div>
+<h4 id="g-man_1">G-Man<a class="headerlink" href="#g-man_1" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>character
++
+mystery
++
+акустическая тревога
+</code></pre></div>
+<h4 id="alyx">Alyx<a class="headerlink" href="#alyx" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>character
++
+эмоциональная реакция
++
+exposition
++
+relationship with player
+</code></pre></div>
+<h4 id="breen">Breen<a class="headerlink" href="#breen" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>antagonist
++
+political ideology
++
+media presence
+</code></pre></div>
+<h4 id="overwatch_1">Overwatch<a class="headerlink" href="#overwatch_1" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>faction identity
++
+city ambience
++
+state information
++
+bureaucratic horror
+</code></pre></div>
+<h4 id="vortigaunts_1">Vortigaunts<a class="headerlink" href="#vortigaunts_1" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>alien identity
++
+metaphysics
++
+continuity HL1 → HL2
+</code></pre></div>
+<h4 id="russell">Russell<a class="headerlink" href="#russell" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code>companion
++
+pacing
++
+humor
++
+portable exposition
+</code></pre></div>
+<p>Вот почему voice acting в Half-Life нельзя отделять от sound design.</p>
+<p>Персонаж говорит.</p>
+<p>Но одновременно игра через этот голос:</p>
+<blockquote>
+<p><strong>объясняет состояние системы.</strong></p>
+</blockquote>
+<hr/>
+<h3 id="_8">И здесь особенно хорошо видна эволюция всей серии<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p><strong>Half-Life 1</strong>:</p>
+<blockquote>
+<p>маленький voice cast создаёт целый объект через archetypes и функциональные реплики.</p>
+</blockquote>
+<p><strong>Half-Life 2</strong>:</p>
+<blockquote>
+<p>voice становится полноценной актёрской системой вместе с facial animation и choreography.</p>
+</blockquote>
+<p><strong>Episodes</strong>:</p>
+<blockquote>
+<p>character performance начинает нести огромную часть эмоционального веса истории.</p>
+</blockquote>
+<p><strong>Half-Life: Alyx</strong>:</p>
+<blockquote>
+<p>голос входит почти прямо в личное пространство человека и может сопровождать physical gameplay непрерывно.</p>
+</blockquote>
+<p>То есть развитие очень похоже на развитие самой Half-Life.</p>
+<p>Сначала:</p>
+<blockquote>
+<p>голос сообщает.</p>
+</blockquote>
+<p>Потом:</p>
+<blockquote>
+<p>голос характеризует.</p>
+</blockquote>
+<p>Потом:</p>
+<blockquote>
+<p>голос создаёт отношения.</p>
+</blockquote>
+<p>А в VR:</p>
+<blockquote>
+<p><strong>голос буквально находится рядом с тобой.</strong></p>
+</blockquote>
+<p>И в этом смысле Half-Life действительно можно узнать с закрытыми глазами не только потому, что у неё отличный sound library.</p>
+<p>У серии есть <strong>собственный способ заставлять мир говорить</strong>.</p>
+<h2 id="localized-voices">Локализованный голос: переводится не только смысл<a class="headerlink" href="#localized-voices" title="Permanent link">¶</a></h2>
+<p>У русскоязычного игрока эмоциональная память о Half-Life может быть связана совсем не с тем голосом, который первым приходит в голову человеку, игравшему в оригинале. Поэтому «настоящая интонация Alyx» в личном рассказе иногда означает конкретную локализацию.</p>
+<p>Справочник изданий находится <a href="../04-gearbox-and-consoles/#localizations">в главе о версиях</a>. Здесь важно, какую работу должен сохранить перевод.</p>
+<h3 id="g-man_2">G-Man: точная реплика может потерять неправильность<a class="headerlink" href="#g-man_2" title="Permanent link">¶</a></h3>
+<p>Его узнаваемость находится в паузах, воздухе, непривычных ударениях и отношении к собеседнику. Перевести только буквальный смысл и прочитать гладко — значит получить другого персонажа.</p>
+<p>Но буквальное копирование английских пауз тоже не гарантирует результата. В русском другая длина слов и другая естественная фразировка. Исполнитель должен заново найти ощущение речи, которая почти человеческая, но чуть-чуть не совпадает с ожиданием.</p>
+<h3 id="combine">Combine: термин должен работать ещё и во время боя<a class="headerlink" href="#combine" title="Permanent link">¶</a></h3>
+<p>У фракционного языка две задачи: дать почувствовать безличность системы и передать игроку полезный сигнал. Слишком обычная бытовая фраза ослабляет Combine. Слишком тяжёлая канцелярская конструкция может стать неразборчивой под стрельбой.</p>
+<p>Поэтому удачность перевода нельзя проверять только чтением субтитров в тишине. Надо услышать его в сцене: успеваешь ли понять намерение врага; не превращается ли команда в длинный монолог; сохраняется ли разница между Overwatch и обычным солдатом.</p>
+<h3 id="alyx-eli">Alyx и Eli: отношения живут в обращении<a class="headerlink" href="#alyx-eli" title="Permanent link">¶</a></h3>
+<p>Одинаковый текст можно произнести как приказ, тревогу, поддразнивание или дружескую просьбу. Для companion это особенно чувствительно: назойливая подача способна изменить отношение к персонажу, даже если сам перевод точен.</p>
+<p>Русские обращения, степень формальности и привычный ритм семейного разговора должны поддерживать ту же дистанцию между людьми. Здесь качество локализации влияет на восприятие сценария сильнее, чем несколько терминологических расхождений.</p>
+<h3 id="_9">Субтитры тоже являются частью звукового опыта<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<p>Они могут помочь распознать обработанную речь и сохранить информацию при плохой слышимости. Но в VR чтение занимает взгляд, который мог бы следить за руками или угрозой. Поэтому наличие перевода и удобство его восприятия — разные характеристики.</p>
+<p>В Alyx официальная языковая таблица различает полное английское озвучивание и русские текст/субтитры: <a href="https://store.steampowered.com/app/546560/HalfLife_Alyx/">страница игры</a>. Это не повод объявлять опыт без русской озвучки неправильным. Это причина учитывать, <strong>каким способом конкретный игрок получал речь</strong>.</p>
+<p>Такая оговорка нужна один раз в правильном месте. После неё можно обсуждать эмоции и сцены нормально, без постоянного перечисления языковых пакетов.</p>
+<h2 id="source-audio">Source: пространство, сведение и автоматизация звука<a class="headerlink" href="#source-audio" title="Permanent link">¶</a></h2>
+<p>HL2 намного больше HL1, а audio team всё ещё очень маленькая.</p>
+<p>Поэтому Source начинает автоматизировать то, что Bailey раньше делал руками.</p>
+<p>DSP/reverb теперь может анализировать размер/материалы пространства и выбирать/настраивать один из базовых acoustic profiles.</p>
+<p>Идеальный результат:</p>
+<blockquote>
+<p>player не думает «какой хороший DSP».</p>
+</blockquote>
+<p>Он думает:</p>
+<blockquote>
+<p>гараж звучит как гараж.</p>
+</blockquote>
+<p>Soundscapes позволяют описывать окружающий звук как сценарий:</p>
+<ul>
+<li>какие loops;</li>
+<li>случайные distant events;</li>
+<li>откуда;</li>
+<li>с какой частотой;</li>
+<li>какие layers смешиваются.</li>
+</ul>
+<p>City 17 поэтому акустически продолжается за пределами карты.</p>
+<p>Ты слышишь:</p>
+<ul>
+<li>distant scanner;</li>
+<li>trains;</li>
+<li>announcements;</li>
+<li>birds;</li>
+<li>gunfire;</li>
+<li>machinery.</li>
+</ul>
+<p>Мозг строит пространство за camera.</p>
+<h3 id="dynamic-mixing">Dynamic mixing<a class="headerlink" href="#dynamic-mixing" title="Permanent link">¶</a></h3>
+<p>Игра не знает заранее, когда одновременно:</p>
+<ul>
+<li>Alyx скажет фразу;</li>
+<li>Gordon выстрелит;</li>
+<li>barrel взорвётся;</li>
+<li>Gunship пролетит сверху.</li>
+</ul>
+<p>Поэтому Source приходится динамически приоритизировать группы звуков.</p>
+<p>Важная реплика должна пережить chaos.</p>
+<p>Narrative mix — уже часть storytelling system.</p>
+<h3 id="distance">Distance и масштаб<a class="headerlink" href="#distance" title="Permanent link">¶</a></h3>
+<p>Coast требует нового ощущения дальности.</p>
+<p>Один и тот же gunshot вблизи и вдали должен звучать иначе.</p>
+<p>Bailey использует near/far variants и динамический blend.</p>
+<p>Gunship/Helicopter меняют direct/occluded sound в зависимости от line of sight.</p>
+<p>Даже bullet pass искусственно рассчитывается так, чтобы человек услышал свист пролетающей рядом пули.</p>
+<p>Звук помогает мозгу понимать:</p>
+<blockquote>
+<p><strong>где опасность и какого размера пространство.</strong></p>
+</blockquote>
+<h3 id="buggy">Buggy звучит быстрее, чем реально едет<a class="headerlink" href="#buggy" title="Permanent link">¶</a></h3>
+<p>Это прекрасный пример controlled lie.</p>
+<p>Карты HL2 не позволяют машине реально постоянно лететь как суперкар.</p>
+<p>Keyboard input почти бинарный.</p>
+<p>Но player должен чувствовать скорость.</p>
+<p>Bailey использует V8 recordings и практически фальшивую transmission model, создающую ощущение постоянного acceleration/gear tension.</p>
+<p>Audio врёт физике, чтобы <strong>ощущение управления</strong> было правильнее.</p>
+<p>Очень Valve.</p>
+<h3 id="triage-at-dawn">Triage at Dawn<a class="headerlink" href="#triage-at-dawn" title="Permanent link">¶</a></h3>
+<p>Почему короткий трек настолько помнят?</p>
+<p>Потому что перед ним Ravenholm.</p>
+<p>Ночь.</p>
+<p>Zombies.</p>
+<p>Одиночество.</p>
+<p>Потом dawn.</p>
+<p>Resistance.</p>
+<p>Люди.</p>
+<p>Раненый.</p>
+<p>Музыка мягко говорит:</p>
+<blockquote>
+<p>ты вернулся из ада к людям.</p>
+</blockquote>
+<p>Контекст уже сделал всю эмоциональную работу. Score только фиксирует transition.</p>
+<p>И это напрямую связано с пользовательским ощущением «тёплой Valve»: Half-Life 2 — страшный мир, но audio постоянно создаёт человеческие островки.</p>
+<h3 id="combine_1">Combine имеют собственный звуковой материал<a class="headerlink" href="#combine_1" title="Permanent link">¶</a></h3>
+<p>Overwatch Voice.</p>
+<p>Vocoder/radio.</p>
+<p>Scanners.</p>
+<p>Mechanical drones.</p>
+<p>Citadel hum.</p>
+<p>Strider/Gunship hybrid bio-mechanical sound.</p>
+<p>Combine regime слышен даже когда его никто не показывает.</p>
+<p>Город акустически оккупирован.</p>
+<p>Combat barks одновременно:</p>
+<ul>
+<li>делают AI читаемым;</li>
+<li>создают faction identity;</li>
+<li>дают gameplay information.</li>
+</ul>
+<p>Опять одна система делает несколько работ.</p>
+<h3 id="episodes">Episodes<a class="headerlink" href="#episodes" title="Permanent link">¶</a></h3>
+<p>Episode Two немного увереннее использует музыку в action beats.</p>
+<p><code>Vortal Combat</code>, <code>Sector Sweep</code>, <code>Last Legs</code> уже сильнее работают как полноценные crescendos.</p>
+<p>Но score всё равно редкий, поэтому не превращается в wallpaper.</p>
+<h2 id="alyx-audio">Mike Morasky и Half-Life: Alyx<a class="headerlink" href="#alyx-audio" title="Permanent link">¶</a></h2>
+<p>Morasky наследует главное правило Bailey:</p>
+<blockquote>
+<p>Half-Life music должна знать, когда заткнуться.</p>
+</blockquote>
+<p>В Alyx музыка иногда буквально становится invisible objective marker.</p>
+<p>Если playtesters не понимают, что Combine перешли в агрессивное состояние, action cue может гораздо мягче сообщить:</p>
+<blockquote>
+<p>хватит играться с props, ситуация изменилась.</p>
+</blockquote>
+<p>В Northern Star/Vault sound design и music начинают сливаться.</p>
+<p>Recurring pattern Combine substation одновременно:</p>
+<ul>
+<li>связан с Vortigaunt energy;</li>
+<li>напоминает о цели;</li>
+<li>строит lore;</li>
+<li>направляет вверх.</li>
+</ul>
+<p>Vortessence получает recurring motifs.</p>
+<p>Vault использует всё более странный музыкальный язык для сломанной реальности/времени.</p>
+<p>В одной сцене применяется palindrome-like структура и temporal/pitch transformations, чтобы сама музыкальная форма выражала temporal distortion.</p>
+<p>В финале старые motifs собираются вокруг G-Man.</p>
+<h3 id="vr-sound">VR делает sound частью тактильности<a class="headerlink" href="#vr-sound" title="Permanent link">¶</a></h3>
+<p>В monitor game ложка может звучать немного неправильно — переживёшь.</p>
+<p>В VR ты сам поднял ложку рукой.</p>
+<p>Мозг ждёт убедительного ответа.</p>
+<p>Поэтому Alyx получает намного более granular object-specific physics sounds.</p>
+<p>Sound компенсирует отсутствие настоящего веса и contact.</p>
+<p>Jeff вообще невозможен без надёжной sound causality.</p>
+<p>Player должен понимать:</p>
+<blockquote>
+<p>какой звук услышал Jeff и почему он пошёл туда.</p>
+</blockquote>
+<p>Любая неясность ломает механику.</p>
+<p>Barnacle получает subtle breathing/croaking, чтобы player услышал threat <strong>сверху</strong> через HRTF и поднял голову.</p>
+<p>Strider layering должен заставить тело почувствовать массу существа.</p>
+<p>Soundscapes в Alyx могут накладываться и плавно переходить, чтобы улица продолжала акустически существовать за закрывающейся дверью.</p>
+<h3 id="_10">Итог по аудио<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p>HL1:</p>
+<blockquote>
+<p>каждому объекту — чёткий узнаваемый голос.</p>
+</blockquote>
+<p>HL2:</p>
+<blockquote>
+<p>большой мир звучит динамически и пространственно.</p>
+</blockquote>
+<p>Episodes:</p>
+<blockquote>
+<p>музыка плотнее работает на action/emotional peaks.</p>
+</blockquote>
+<p>Alyx:</p>
+<blockquote>
+<p>sound становится физикой, navigation, mechanic и lore одновременно.</p>
+</blockquote>
+<p>Если совсем одной фразой:</p>
+<blockquote>
+<p><strong>Half-Life звучит не как фильм, положенный поверх игры. Она звучит как сам мир, который иногда начинает играть музыку.</strong></p>
+</blockquote>
+<p>И именно поэтому значительная часть атмосферы серии вообще находится не на экране.</p>
+<h2 id="materials">Материалы к главе<a class="headerlink" href="#materials" title="Permanent link">¶</a></h2>
+<p><a href="https://joelnielsen.bandcamp.com/album/black-mesa-terra-soundtrack-definitive-edition-vol-1-2">Black Mesa: Terra — авторский альбом Joel Nielsen</a>.</p>
+<p><a href="https://joelnielsen.bandcamp.com/album/black-mesa-xen-soundtrack-definitive-edition">Black Mesa: Xen — альбом и авторские credits Joel и Kala Nielsen</a>.</p>
+<p><a href="https://combineoverwiki.net/wiki/Developer_commentary/Half-Life:_Alyx">Alyx: комментарии команды о музыке и звуке</a>.</p>
+<hr/>
+<p><a href="../13-legacy/">← 13</a> · <a href="../">Оглавление</a> · <a href="../15-how-valve-makes-half-life/">15 →</a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Наследие Half-Life" class="md-footer__link md-footer__link--prev" href="../13-legacy/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Наследие Half-Life
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Как Valve делает Half-Life" class="md-footer__link md-footer__link--next" href="../15-how-valve-makes-half-life/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Как Valve делает Half-Life
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 #!/Users/lirik/Documents/Codex/knowledge/.venv/bin/python
 
-docs_dir: memory
+docs_dir: data
 site_dir: site
 site_name: База данных
 site_url: https://lirikonov.github.io/knowledge/
@@ -46,9 +46,9 @@ plugins:
   - search:
       lang: ru
 
-  - gen-files:
-      scripts:
-        - scripts/generate-slides-index.py
+#  - gen-files:
+#      scripts:
+#        - scripts/generate-slides-index.py
 
   - exporter:
       buttons:

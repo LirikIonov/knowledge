@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://lirikonov.github.io/knowledge/games/people/gabe-newell-revised-10-chapters/gabe-newell-03-doom-quake-valve/" rel="canonical"/>
+<link href="../gabe-newell-02-microsoft/" rel="prev"/>
+<link href="../gabe-newell-04-half-life-first-test/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve - База данных</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#3-doom-quake-valve">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/Arkane/">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/01-origins-softdisk-keen/">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/02-wolfenstein/">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/03-doom-birth/">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/04-doom-ecosystem/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/05-quake-crisis/">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/06-id-after-romero/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/07-quake2-quake3-middleware/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/08-doom3-aaa/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/09-rage-zenimax-carmack/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/10-doom-rebirth-modern-id/">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/11-legacy-summary/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/12-side-branches/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/MANIFEST/">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/01-origins-steam/">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/02-games-and-engines/">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/03-inside-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/04-hardware-linux-vr/">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/05-modern-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/06-valve-as-institution/">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/07-ecosystem-and-catalog/">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/08-appendices/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/09-sources-and-status/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Engines
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Engines
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../engines/id-tech-branches-01-29/">
+<span class="md-ellipsis">
+    
+  
+    Использование id Tech и все дальнейшие ветки развития у других разработчиков
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom/">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom30/">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom3_45-103/">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Quake/">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Spider-Man/">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom4-eternal/">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom_eternal_51-80/">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3_8" id="__nav_1_3_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_3_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/01-origins-and-development/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/02-half-life-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/03-half-life-release-and-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/04-gearbox-and-consoles/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/05-half-life-2-development-and-tech/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/06-half-life-2-world-and-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/07-half-life-2-beta-release/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/08-episodes/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/09-half-life-3-and-cancelled-projects/">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/10-vr-and-alyx-development/">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/11-half-life-alyx-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/12-modding-and-community/">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/13-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/14-audio/">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/15-how-valve-makes-half-life/">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/16-movement-and-speedrunning/">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/17-half-life-and-film/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/CHANGES/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Carmack/">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Romero/">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_4" id="__nav_1_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe Newell
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe Newell
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-02-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-03-doom-quake-valve/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-05-from-games-to-platform/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-06-failures-crises-evolution/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и изменение самого Ньюэлла
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-07-platform-independence-linux-vr-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Windows, Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Сам Ньюэлл: семья, игры, здоровье, образование и публичный образ
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_5" id="__nav_1_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe newell revised 10 chapters
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe newell revised 10 chapters
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-02-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-doom-windows">
+<span class="md-ellipsis">
+      
+        1. Doom сначала оказалась неудобным вопросом к Windows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        2. Маленькая компания, которую трудно объяснить размером штата
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        3. Исследование установленного программного обеспечения: важное воспоминание, ненадёжная точная статистика
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        4. Три открытия, которые не нужно смешивать
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      
+        5. Между восхищением и уходом прошло несколько лет
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      
+        6. Майкл Абраш: доверие, которое имеет техническое содержание
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-quake">
+<span class="md-ellipsis">
+      
+        7. «Худшая игра на движке Quake» — обещание пространства для чужой работы
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-valve">
+<span class="md-ellipsis">
+      
+        8. Что Кармак дал Ньюэллу, не работая в Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      
+        9. Майк Харрингтон: новая компания начинается с двух людей
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      
+        10. Почему удобная пара «мечтатель и практик» недостаточна
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-id">
+<span class="md-ellipsis">
+      
+        11. Поездка к id: разговор получает материальное продолжение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-24-1996">
+<span class="md-ellipsis">
+      
+        12. 24 августа 1996 года: новая компания и новая семья
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-valve">
+<span class="md-ellipsis">
+      
+        13. Почему Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14">
+<span class="md-ellipsis">
+      
+        14. Собственные деньги не означали полной независимости
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15">
+<span class="md-ellipsis">
+      
+        15. Моника Харрингтон: человек, которого нельзя оставить за пределами основания
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+<span class="md-ellipsis">
+      
+        16. Первоначальный план был скромнее будущей легенды
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17">
+<span class="md-ellipsis">
+      
+        17. «Игра года» как деловая задача
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18">
+<span class="md-ellipsis">
+      
+        18. Основатели должны найти то, чего у них нет
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19">
+<span class="md-ellipsis">
+      
+        19. Реальная работа как повод начать разговор
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20">
+<span class="md-ellipsis">
+      
+        20. Марк Лэйдлоу: история игры возникает в сотрудничестве
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21">
+<span class="md-ellipsis">
+      
+        21. Команда ещё не означает готовую организацию
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-sierra">
+<span class="md-ellipsis">
+      
+        22. Sierra: полезный партнёр с собственными интересами
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-quiver-prospero">
+<span class="md-ellipsis">
+      
+        23. Quiver и Prospero: у компании ещё нет единственной идентичности
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24">
+<span class="md-ellipsis">
+      
+        24. Лицензировать основу — ещё не найти собственное отличие
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25">
+<span class="md-ellipsis">
+      
+        25. Чем рисковали люди, которые могли позволить себе риск
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#26-valve">
+<span class="md-ellipsis">
+      
+        26. К первому кризису у Valve есть почти всё — кроме доказательства
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        Источники и уточнения
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-05-from-games-to-platform/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-06-failures-crises-evolution/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и способность закончить
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-07-platform-independence-linux-vr-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Семья, игры, здоровье и человек за именем GabeN
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5_1" id="__nav_1_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_5_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam2/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2 — очищенный дамп исследования
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-doom-windows">
+<span class="md-ellipsis">
+      
+        1. Doom сначала оказалась неудобным вопросом к Windows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        2. Маленькая компания, которую трудно объяснить размером штата
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        3. Исследование установленного программного обеспечения: важное воспоминание, ненадёжная точная статистика
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        4. Три открытия, которые не нужно смешивать
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      
+        5. Между восхищением и уходом прошло несколько лет
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      
+        6. Майкл Абраш: доверие, которое имеет техническое содержание
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-quake">
+<span class="md-ellipsis">
+      
+        7. «Худшая игра на движке Quake» — обещание пространства для чужой работы
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-valve">
+<span class="md-ellipsis">
+      
+        8. Что Кармак дал Ньюэллу, не работая в Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      
+        9. Майк Харрингтон: новая компания начинается с двух людей
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      
+        10. Почему удобная пара «мечтатель и практик» недостаточна
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-id">
+<span class="md-ellipsis">
+      
+        11. Поездка к id: разговор получает материальное продолжение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-24-1996">
+<span class="md-ellipsis">
+      
+        12. 24 августа 1996 года: новая компания и новая семья
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-valve">
+<span class="md-ellipsis">
+      
+        13. Почему Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14">
+<span class="md-ellipsis">
+      
+        14. Собственные деньги не означали полной независимости
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15">
+<span class="md-ellipsis">
+      
+        15. Моника Харрингтон: человек, которого нельзя оставить за пределами основания
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+<span class="md-ellipsis">
+      
+        16. Первоначальный план был скромнее будущей легенды
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17">
+<span class="md-ellipsis">
+      
+        17. «Игра года» как деловая задача
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18">
+<span class="md-ellipsis">
+      
+        18. Основатели должны найти то, чего у них нет
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19">
+<span class="md-ellipsis">
+      
+        19. Реальная работа как повод начать разговор
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20">
+<span class="md-ellipsis">
+      
+        20. Марк Лэйдлоу: история игры возникает в сотрудничестве
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21">
+<span class="md-ellipsis">
+      
+        21. Команда ещё не означает готовую организацию
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-sierra">
+<span class="md-ellipsis">
+      
+        22. Sierra: полезный партнёр с собственными интересами
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-quiver-prospero">
+<span class="md-ellipsis">
+      
+        23. Quiver и Prospero: у компании ещё нет единственной идентичности
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24">
+<span class="md-ellipsis">
+      
+        24. Лицензировать основу — ещё не найти собственное отличие
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25">
+<span class="md-ellipsis">
+      
+        25. Чем рисковали люди, которые могли позволить себе риск
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#26-valve">
+<span class="md-ellipsis">
+      
+        26. К первому кризису у Valve есть почти всё — кроме доказательства
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        Источники и уточнения
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="3-doom-quake-valve">Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve<a class="headerlink" href="#3-doom-quake-valve" title="Permanent link">¶</a></h1>
+<p><em>1993–1997. Игры становятся профессиональной возможностью. Майкл Абраш помогает получить технологическую опору, Майк Харрингтон — превратить намерение в партнёрство, а Моника Харрингтон меняет представление о том, каким должен быть первый продукт.</em></p>
+<p><a href="../gabe-newell-02-microsoft/">Предыдущая глава</a> · <a href="../gabe-newell-10-who-is-gabe-newell-final/#guide">Все главы и справочник</a> · <a href="../gabe-newell-04-half-life-first-test/">Следующая глава</a></p>
+<p><a id="doom"></a></p>
+<h2 id="1-doom-windows">1. Doom сначала оказалась неудобным вопросом к Windows<a class="headerlink" href="#1-doom-windows" title="Permanent link">¶</a></h2>
+<p>В начале 1990-х серьёзная компьютерная игра могла обходиться без Windows. Для разработчиков, которым были нужны производительность и непосредственный доступ к возможностям машины, дополнительная программная среда не обязательно выглядела преимуществом. Для Microsoft это означало, что значимая часть потребительского опыта живёт за пределами платформы, которую компания стремится сделать универсальной.</p>
+<p>Ньюэлл позднее вспоминал, что его раздражала необходимость игровых разработчиков создавать собственные низкоуровневые решения. Чтобы показать состоятельность Windows, требовался убедительный пример — программа, о требовательности и привлекательности которой спорить было трудно. Таким примером стала Doom.<sup id="fnref:doom-2025"><a class="footnote-ref" href="#fn:doom-2025">1</a></sup></p>
+<p>В этой истории он действует ещё как сотрудник Microsoft. Его задача связана с пригодностью платформы, а не с созданием конкурента id Software. Он связывается с разработчиками, помогает организовать работу и использует игру как проверку того, что Windows может предложить серьёзному игровому программному обеспечению.</p>
+<p>Это достаточно конкретная роль, и она не требует мифа о собственноручном портировании. В позднем рассказе Ньюэлл упоминал инженера Билла Маккормика и работу с WinG. Инициатор, организатор и непосредственный программист здесь не обязаны быть одним человеком. Кроме того, ранние эксперименты с WinG не следует безоговорочно склеивать с последующей историей Doom95 и приписывать Ньюэллу всю разработку любой Windows-версии игры.</p>
+<p>Сначала Doom нужна ему как доказательство в споре о платформе. Затем чужая игра начинает задавать вопрос уже самому Ньюэллу: почему столь небольшая команда способна создавать и распространять настолько значимое программное обеспечение?</p>
+<h2 id="2">2. Маленькая компания, которую трудно объяснить размером штата<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<p>Doom вышла в 1993 году и быстро стала для Ньюэлла примером влияния, несоразмерного привычному корпоративному масштабу. Он видел программный продукт, который одновременно требовал серьёзной инженерии, давал сильный пользовательский опыт и распространялся через каналы, отличавшиеся от обычной розничной цепочки.<sup id="fnref2:doom-2025"><a class="footnote-ref" href="#fn:doom-2025">1</a></sup></p>
+<p>Здесь не стоит противопоставлять id «настоящей» индустрии. Джон Кармак, Джон Ромеро и их коллеги уже были профессионалами, а успех игры не возник из отсутствия организации. Но для человека из Microsoft впечатляющим было соотношение размера группы и заметности результата.</p>
+<p>Сам по себе маленький штат не объясняет успех. Важны конкретные навыки, удачное сочетание технологии и дизайна, подходящая машина, момент появления продукта и способы добраться до аудитории. Ньюэлл не мог получить из Doom универсальную формулу, которая гарантировала бы такой же результат любой небольшой команде.</p>
+<p>Однако он получил работающий контрпример к слишком простому представлению о масштабе. Большое влияние больше не обязательно требовало большой компании, а новое потребительское поведение могло возникать вокруг продукта, созданного далеко от привычного ему центра отрасли.</p>
+<p>Это меняло вопрос о следующей работе. В Microsoft можно было продолжать заниматься важными технологиями. Но теперь существовал пример того, что столь же интересные задачи решаются снаружи — и что новая организация не обязана сначала вырасти до размеров Microsoft, чтобы её результат заметили.</p>
+<h2 id="3">3. Исследование установленного программного обеспечения: важное воспоминание, ненадёжная точная статистика<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<p>Ньюэлл рассказывал о внутреннем исследовании Microsoft, в котором Doom оказалась установлена на удивительно большом количестве компьютеров — по его воспоминанию, её распространённость могла превосходить распространённость Windows. В разных поздних пересказах этой истории фигурируют разные оценки.<sup id="fnref3:doom-2025"><a class="footnote-ref" href="#fn:doom-2025">1</a></sup></p>
+<p>Поэтому здесь важнее разделить два вопроса. Первый — сколько именно машин тогда имели Doom и как проводилось исследование. Полностью восстановленной сопоставимой статистики в используемых материалах нет. Второй — какое впечатление результат произвёл на Ньюэлла. Об этом он говорил прямо: небольшая игровая компания, как ему казалось, лучше использовала возможности нового распространения программ.</p>
+<p>Shareware, копирование, сети и обмен между пользователями усложняли обычный подсчёт через коробочные продажи. Популярность могла расти там, где привычные коммерческие отчёты видели только часть происходящего. Для руководителя, думающего о массовой платформе, это был значимый сигнал даже без идеально точной цифры.</p>
+<p>Но сигнал не равнялся готовому бизнес-плану. Из него не следовало, что вся будущая дистрибуция немедленно станет цифровой, что физическая торговля исчезнет или что именно Ньюэлл должен построить магазин. В 1993 году он увидел расхождение между масштабом организации и эффективностью достижения пользователя.</p>
+<p>Позднее, объясняя уход из Microsoft, Ньюэлл будет возвращаться к этому эпизоду. Здесь его следует читать как часть собственного объяснения выбора, а не как единственную доказанную причину. Между впечатлением от Doom и регистрацией Valve пройдут годы, в течение которых понадобится решить совершенно другие задачи.</p>
+<h2 id="4">4. Три открытия, которые не нужно смешивать<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<p>Doom затронула Ньюэлла по нескольким направлениям. Как сотрудник Microsoft он видел проверку Windows. Как человек, интересующийся распространением программ, — необычную скорость роста аудитории. Как игрок — убедительный опыт, показывающий, что игры способны быть значимой формой развлечения.<sup id="fnref4:doom-2025"><a class="footnote-ref" href="#fn:doom-2025">1</a></sup><sup id="fnref:games-2011"><a class="footnote-ref" href="#fn:games-2011">2</a></sup></p>
+<p>Эти впечатления связаны, но не взаимозаменяемы. Хороший порт способен доказать техническую пригодность среды, ничего не объясняя об экономике распространения. Массовое копирование способно увеличить известность, не гарантируя дохода. Сильное впечатление от игры может вдохновить, но не даёт навыков её производства.</p>
+<p>Именно сочетание делает эпизод биографически важным. Ньюэлл был подготовлен увидеть в одной игре несколько разных проблем. Его Microsoft-опыт позволял оценивать техническую и платформенную стороны; собственный интерес к играм не давал свести всё к абстрактной деловой возможности.</p>
+<p>При этом полная формула будущего успеха Valve здесь ещё отсутствует. Doom не учила автоматически выстраивать драматургию Half-Life, нанимать писателя или договариваться с издателем о переносе. Она делала новую область достаточно серьёзной, чтобы туда захотелось направить внимание.</p>
+<p>Так появляется профессиональная возможность. Её ещё нужно будет проверить доступными средствами. Вопрос «игры — важная область» значительно проще вопроса «сможем ли мы сделать игру, ради которой имеет смысл основать компанию». Следующий шаг связан с Quake, и он даст другой тип ответа — технологический фундамент для начала работы.</p>
+<h2 id="5">5. Между восхищением и уходом прошло несколько лет<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<p>Ньюэлл не покинул Microsoft в день знакомства с Doom. Valve появилась в 1996 году. Между этими точками сохранялась работа внутри первой компании, накопление опыта и постепенное обсуждение следующего шага.<sup id="fnref:aias"><a class="footnote-ref" href="#fn:aias">3</a></sup><sup id="fnref5:doom-2025"><a class="footnote-ref" href="#fn:doom-2025">1</a></sup></p>
+<p>Это важно для масштаба решения. Даже финансово независимому человеку недостаточно увидеть чужой успех, чтобы практически начать собственный проект. Нужны люди, технология, договорённости, понимание расходов и хотя бы первоначальная идея того, чем будущий продукт будет отличаться.</p>
+<p>Doom могла дать уверенность, что игровая индустрия заслуживает внимания. Но новая компания должна была решить проблему старта. Если сначала несколько лет писать собственный движок, основатели потратят силы ещё до того, как научатся делать игру. Если взять чужую технологию, нужно получить к ней доступ и понять, подходит ли она для задуманных отличий.</p>
+<p>И здесь на первый план выходит человек, которого Ньюэлл знал по Microsoft, — Майкл Абраш. Он способен соединить два мира не только репутацией, но и действующей профессиональной связью. Его присутствие внутри id уменьшает расстояние между общим интересом и реальным разговором о сотрудничестве.</p>
+<p>Новая студия возникает из такого сочетания возможностей, а не из одного мгновенного озарения. В дальнейшем Ньюэлл будет рассказывать переход очень коротко. Под этой краткостью находятся несколько независимых условий, любое из которых могло сложиться иначе.</p>
+<p><a id="abrash"></a></p>
+<h2 id="6">6. Майкл Абраш: доверие, которое имеет техническое содержание<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
+<p>Майкл Абраш был известен как специалист по низкоуровневому программированию и автор технических текстов. Его переход из Microsoft в id Software для работы над Quake сделал игровую компанию ещё более убедительным примером для Ньюэлла.<sup id="fnref:wp-customers"><a class="footnote-ref" href="#fn:wp-customers">4</a></sup><sup id="fnref:abrash-interview"><a class="footnote-ref" href="#fn:abrash-interview">5</a></sup></p>
+<p>Абраш был важен не только знаменитым именем. Ньюэлл и Харрингтон знали его профессионально. В рассказе Моники Харрингтон особенно заметна связь Майка с Абрашем: ранее они работали рядом в Microsoft, и доверие, возникшее там, помогло будущим основателям Valve разговаривать с id.<sup id="fnref:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup></p>
+<p>Это сокращало определённую неопределённость. Технологию можно увидеть на демонстрации, но гораздо труднее понять, насколько она пригодна для чужой команды, что в ней уже решено и какие возможности ещё не использованы. Мнение знакомого специалиста, понимающего внутреннюю работу, имеет другую ценность, чем публичная презентация.</p>
+<p>Абраш не гарантировал успех будущей игры. Он помог сделать технический путь достаточно реальным, чтобы его можно было обсуждать всерьёз. Сильный движок уменьшал объём начальной работы, но не заменял художественные решения и организацию производства.</p>
+<p>В этой роли он ещё вернётся в биографию — уже в период исследований виртуальной реальности. Но пока связь конкретна: человек, которому основатели доверяют, находится внутри команды, создавшей подходящий технологический фундамент. Он помогает перевести уважение к чужой работе в возможность использовать её для собственного проекта.</p>
+<h2 id="7-quake">7. «Худшая игра на движке Quake» — обещание пространства для чужой работы<a class="headerlink" href="#7-quake" title="Permanent link">¶</a></h2>
+<p>Ньюэлл позднее пересказывал высказывание Абраша: Quake может оказаться худшей игрой, сделанной на собственном движке. Формулировка известна именно как приблизительное воспоминание Ньюэлла, а не как независимо сохранившаяся стенограмма.<sup id="fnref2:abrash-interview"><a class="footnote-ref" href="#fn:abrash-interview">5</a></sup></p>
+<p>Смысл заключался в потенциале технологии. Первая игра показывает определённое применение, но фундамент способен поддержать другие задачи. Для будущей студии это меняло представление о необходимости технического соревнования с id. Не нужно начинать с доказательства, что ты умеешь писать рендерер лучше Кармака. Можно искать отличие в том, что игрок будет делать внутри созданного мира.</p>
+<p>Такой выбор требует уверенности другого рода. Технически подготовленные основатели могли привязать самооценку к собственному движку. Вместо этого они приняли возможность зависеть от внешней основы и направить работу в другие области. Это не отсутствие технических амбиций, а выбор места, где эти амбиции должны дать результат.</p>
+<p>Однако лицензионная технология не снимает всех обязательств. Её нужно освоить, изменить под новые требования, поддерживать инструменты и разбираться с ограничениями. Чужой код экономит часть пути, но не превращает разработку в сборку готовых деталей без неизвестных.</p>
+<p>Для Ньюэлла важен сам принцип выбора. Он не требует личного происхождения каждого полезного компонента. Но в 1996 году это ещё конкретное решение для первой студии, а не сформулированный универсальный закон всей его дальнейшей карьеры.</p>
+<h2 id="8-valve">8. Что Кармак дал Ньюэллу, не работая в Valve<a class="headerlink" href="#8-valve" title="Permanent link">¶</a></h2>
+<p>Джон Кармак влиял на эту историю прежде всего через результат своей работы и работы id. Doom показала требовательный потребительский продукт; Quake — технологическую основу, которую можно было лицензировать и развивать.<sup id="fnref6:doom-2025"><a class="footnote-ref" href="#fn:doom-2025">1</a></sup><sup id="fnref2:wp-customers"><a class="footnote-ref" href="#fn:wp-customers">4</a></sup></p>
+<p>Для Ньюэлла это было наглядное подтверждение, что отдельный сильный специалист способен заметно изменить возможности всей команды. Но сводить id к одному программисту означало бы повторить ту же ошибку, которую позднее будут совершать с Valve. Игра требовала дизайна, уровней, искусства, звука, производства и распространения.</p>
+<p>Поэтому влияние Кармака лучше описывать конкретно. Он помог создать технологию, благодаря которой новая студия могла быстрее начать работу над собственным отличием. Ньюэлл не должен был повторять его профессию, чтобы воспользоваться результатом. Между ними возникает разделение труда, а не соревнование за звание главного технического гения.</p>
+<p>Джон Ромеро и другие участники id также представляли опыт игровой разработки, которого Microsoft-карьера не могла автоматически дать. Здесь важен сам контакт с существующей игровой командой. Будущие основатели Valve могли увидеть, что игра — самостоятельное ремесло, а не обычное приложение с трёхмерной картинкой.</p>
+<p>Это предохраняет историю от двух крайностей. Ньюэлл не приходит с полной готовностью делать великие игры. Но и не появляется на пустом месте: у него есть технический опыт, деньги, знакомые специалисты и доступ к сильному фундаменту. Следующий шаг зависит от того, сумеет ли он соединить это с недостающими компетенциями.</p>
+<p><a id="harrington"></a></p>
+<h2 id="9">9. Майк Харрингтон: новая компания начинается с двух людей<a class="headerlink" href="#9" title="Permanent link">¶</a></h2>
+<p>Valve основали Гейб Ньюэлл и Майк Харрингтон. Это было партнёрство двух людей с собственными профессиональными биографиями, а не компания одного будущего символа и его технического помощника.<sup id="fnref:handbook"><a class="footnote-ref" href="#fn:handbook">7</a></sup><sup id="fnref2:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup></p>
+<p>Харрингтон также работал в Microsoft. По воспоминанию Моники, у него был опыт в игровой индустрии и до этой работы; поэтому называть обоих основателей людьми, никогда прежде не соприкасавшимися с профессиональными играми, было бы неточно. Но создание собственной большой трёхмерной игры всё равно представляло для нового партнёрства отдельную задачу.<sup id="fnref3:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup></p>
+<p>В середине 1990-х Майк переоценивал следующий шаг после закрытия своего проекта. Идея собственной игровой компании становилась всё серьёзнее. В какой-то момент выяснилось, что Ньюэлл смотрит в ту же сторону. Их разговоры получили продолжение в практических действиях: поиске технологии, помещения, команды и издательского пути.<sup id="fnref:monica-vb"><a class="footnote-ref" href="#fn:monica-vb">8</a></sup></p>
+<p>Общее решение важно поставить раньше будущих различий. Позднее Харрингтон будет выглядеть более ориентированным на завершение продукта, а Ньюэлл — на расширение возможности. Но в начале оба выбирают риск. Оба выходят из успешной профессиональной среды. Оба готовы вложить собственные средства в компанию, чья первая игра ещё не доказала право на существование.</p>
+<p>С этой точки зрения Харрингтон не просто сдерживает чужую амбицию. Он сам является одним из источников движения. Без его намерения, труда, профессиональных связей и готовности участвовать идея могла остаться разговором.</p>
+<h2 id="10">10. Почему удобная пара «мечтатель и практик» недостаточна<a class="headerlink" href="#10" title="Permanent link">¶</a></h2>
+<p>В поздних рассказах о ранней Valve Ньюэлл и Харрингтон нередко описываются как дополняющие друг друга люди. Гейб больше связан с направлением продукта, масштабом ставки и деловыми вопросами; Майк — с непосредственным программированием и производственной практикой.<sup id="fnref:final-hours-hl2"><a class="footnote-ref" href="#fn:final-hours-hl2">9</a></sup></p>
+<p>Такое различие помогает увидеть устройство партнёрства, но становится опасным, если превращается в полные характеристики личности. Практик тоже способен на рискованный выбор. Человек, задающий большую цель, тоже должен разбираться с конкретными ограничениями. Реальная компания не делится на одного автора желаний и другого исполнителя реальности.</p>
+<p>Главное отличие Харрингтона от будущих сильных сотрудников Valve — равный учредительский и имущественный вес. Партнёры начинали с распределения 50/50. Спор между ними происходил не только между руководителем и приглашённым специалистом, но между людьми, каждый из которых участвовал в основании и финансировании компании.<sup id="fnref2:final-hours-hl2"><a class="footnote-ref" href="#fn:final-hours-hl2">9</a></sup></p>
+<p>Это не гарантирует идеального равенства в каждом разговоре. Характер, опыт и уверенность всё равно различаются. Но сама структура создаёт возможность обсуждать направление без той асимметрии, которая возникает между владельцем и сотрудником. Позднее Ньюэлл особенно лично вспомнит именно возможность говорить с Майком о тревогах.</p>
+<p>Пока партнёрство развивается. Будущий уход Харрингтона не должен заранее окрашивать каждую раннюю сцену ощущением утраты. В 1996 году он рядом, работает и помогает превратить намерение в действующую организацию.</p>
+<h2 id="11-id">11. Поездка к id: разговор получает материальное продолжение<a class="headerlink" href="#11-id" title="Permanent link">¶</a></h2>
+<p>Ньюэлл вспоминал поездку к id Software в Техас почти буднично: они знали людей компании, приехали поговорить и получили возможность работать с исходным кодом Quake. После этого создание собственной игровой студии стало гораздо менее абстрактным.<sup id="fnref3:wp-customers"><a class="footnote-ref" href="#fn:wp-customers">4</a></sup></p>
+<p>За коротким рассказом находятся лицензия, доверие и технические обязательства. Нельзя понимать его буквально как неформальное дарение кода без деловых условий. Но психологический поворот очевиден: появляется основа, на которой можно действительно начать строить продукт.</p>
+<p>До такой договорённости основатели могли обсуждать игровую индустрию в общем. После неё возникают ближайшие действия: освоение технологии, поиск людей, определение задач, подготовка рабочего места. Становится возможным не только спрашивать, удастся ли создать компанию, но и начинать конкретную разработку.</p>
+<p>Абраш здесь важен как посредник с содержательной репутацией. Харрингтон — как равный участник, чьи отношения с ним облегчают разговор. Ньюэлл — как человек, готовый принять технологическое и деловое решение. Влияние распределено между несколькими людьми, и именно это делает эпизод сильнее истории одиночного озарения.</p>
+<p>Quake не обещала, что будущая игра будет интересной. Она позволяла быстрее перейти к этой проверке. Различие огромно: технический старт снижает барьер входа, но не обеспечивает продуктового результата. В следующей главе Valve болезненно узнает, сколько ещё работы находится между этими двумя точками.</p>
+<p><a id="foundation"></a></p>
+<h2 id="12-24-1996">12. 24 августа 1996 года: новая компания и новая семья<a class="headerlink" href="#12-24-1996" title="Permanent link">¶</a></h2>
+<p>Документы об основании Valve были подписаны 24 августа 1996 года — в день свадьбы Ньюэлла. Этот факт позднее вошёл в официальный справочник для новых сотрудников компании.<sup id="fnref2:handbook"><a class="footnote-ref" href="#fn:handbook">7</a></sup></p>
+<p>В личной биографии дата соединяет несколько изменений. Закончилась долгая Microsoft-карьера, появилась собственная организация, возникли обязательства владельца, а одновременно началась новая семейная жизнь с Лизой Меннет. Подробный семейный контекст будет раскрыт в <a href="../gabe-newell-08-person-family-games-health-education-public-image/#family">восьмой главе</a>; здесь важно не отделять компанию от остальной жизни человека.</p>
+<p>Само совпадение не нужно превращать в символ его отношения к работе. Нет основания утверждать, что он сознательно выбрал дату, чтобы поставить бизнес выше свадьбы или, наоборот, объединить два главных обещания жизни. Документированный факт достаточно выразителен без психологической надстройки.</p>
+<p>Valve появилась в Киркленде, в том же региональном профессиональном окружении, где находилась Microsoft. Основатели не теряли все прежние связи. Рядом оставались знакомые инженеры, коллеги и люди с опытом программной индустрии. Переход в новый бизнес происходил при сохранении значительной части социального и профессионального капитала.</p>
+<p>Это не уменьшает самостоятельности решения. Оно уточняет, из чего эта самостоятельность складывалась. Своя компания возникала благодаря опыту, деньгам, контактам и внешней технологии. Новизна заключалась в том, как всё это будет собрано и какую игру сможет создать новая команда.</p>
+<h2 id="13-valve">13. Почему Valve<a class="headerlink" href="#13-valve" title="Permanent link">¶</a></h2>
+<p>Среди обсуждавшихся названий будущей компании фигурировали Hollow Box, Fruitfly Ensemble и Rhino Scar. В итоге основатели выбрали Valve — короткое техническое слово, которое не пыталось сразу выглядеть агрессивным названием игровой студии девяностых.<sup id="fnref3:abrash-interview"><a class="footnote-ref" href="#fn:abrash-interview">5</a></sup></p>
+<p>Ньюэлл позднее объяснял выбор нежеланием следовать привычной нарочито крутой стилистике. В этом можно увидеть вкус к имени с собственной, достаточно спокойной идентичностью. Но значение слова не следует превращать в предсказание будущего Steam: в 1996 году никто не обязан был вкладывать в него метафору управления мировыми потоками цифрового содержимого.</p>
+<p>Название обозначало новую организацию, которой ещё предстояло наполнить его смыслом. У неё не было собственной легенды, опубликованного каталога и аудитории, готовой прощать ошибки. Даже репутация основателей принадлежала прежде всего предыдущему месту работы.</p>
+<p>Это важное различие для последующей истории. Позднее слово Valve будет само привлекать внимание. В начале внимание нужно было заслужить продуктом и убедить людей, что за незнакомым именем есть реальная способность работать.</p>
+<p>Название получилось достаточно нейтральным, чтобы не запереть компанию в одном жанре. Но и это преимущество стало очевиднее задним числом. Для первого этапа требовалась одна более приземлённая вещь: чтобы команда с этим именем вообще смогла закончить игру.</p>
+<h2 id="14">14. Собственные деньги не означали полной независимости<a class="headerlink" href="#14" title="Permanent link">¶</a></h2>
+<p>Microsoft дала основателям возможность вложиться в Valve без немедленной продажи контроля внешнему инвестору. Но собственное финансирование разработки не создавало автоматически путь к массовому покупателю. Потребовался издатель.<sup id="fnref:forbes-2024"><a class="footnote-ref" href="#fn:forbes-2024">10</a></sup><sup id="fnref4:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup></p>
+<p>В середине 1990-х издатель обеспечивал функции, которые новая студия не могла просто игнорировать: выход в розницу, отношения с торговыми каналами, производство и распространение коробок, маркетинговую поддержку. Даже хорошая игра рисковала остаться незаметной или недоступной.</p>
+<p>Поэтому сделка с Sierra не была очевидной ошибкой, которую будущий цифровой предприниматель зачем-то совершил до изобретения Steam. Это был практический способ начать работу в существующем рынке. Более того, в воспоминаниях Моники первоначально рассматривалась возможность издательства через Microsoft, но она не превратилась в договорённость.<sup id="fnref5:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup></p>
+<p>Такое обстоятельство делает переход из Microsoft менее мифологическим. Основатели не обязаны были сразу разрывать все деловые связи с прежней компанией. Они искали осуществимый путь выпуска. Когда один вариант не сложился, потребовался другой партнёр.</p>
+<p>Независимость, таким образом, с самого начала была частичной. Valve могла принимать собственные решения о разработке, но существовала внутри договоров и внешних каналов. Позднейшие конфликты покажут цену этих отношений. В 1996 году они прежде всего предоставляли возможность добраться до первого релиза.</p>
+<p><a id="monica"></a></p>
+<h2 id="15">15. Моника Харрингтон: человек, которого нельзя оставить за пределами основания<a class="headerlink" href="#15" title="Permanent link">¶</a></h2>
+<p>В юридических документах основателями Valve были Ньюэлл и Майк Харрингтон. Но реальная история первых лет включает Монику Харрингтон — тогда жену Майка и опытного специалиста по маркетингу Microsoft. Она помогала новой компании, ещё оставаясь на основной работе, а затем присоединилась к Valve полностью.<sup id="fnref6:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup><sup id="fnref2:monica-vb"><a class="footnote-ref" href="#fn:monica-vb">8</a></sup></p>
+<p>Это отдельная профессиональная роль. Моника не сводится к поддерживающей жене основателя. Она разбиралась в позиционировании программных продуктов, отношениях с прессой, выводе на рынок и работе с каналами продаж. Все эти задачи существовали рядом с движком и дизайном, хотя поздняя история Half-Life часто рассказывается преимущественно через разработку.</p>
+<p>Её положение было сложным. Помощь Valve пересекалась с работой внутри другой компании, занимавшейся потребительским программным обеспечением и играми. В собственных воспоминаниях она подробно объясняет попытки удерживать профессиональные границы. Для биографии Ньюэлла существен сам факт: поддержка новой студии не происходила в мире, где интересы и обязанности всех участников автоматически совпадали.</p>
+<p>Моника внесла в ранние обсуждения другой тип проверки. Техническая осуществимость не отвечает на вопрос, сможет ли дебют удержаться в рознице. Хорошая команда не гарантирует, что аудитория вообще узнает о её работе. Учебный первый продукт может быть разумен для развития навыков и одновременно недостаточен для выживания компании с уже растущими расходами.</p>
+<p>Именно этот взгляд изменит исходное представление основателей о том, какую игру следует сделать первой. Поэтому её влияние нужно провести дальше регистрации компании — к изменению цели, кризису 1997 года и работе вокруг выпуска Half-Life.</p>
+<h2 id="16">16. Первоначальный план был скромнее будущей легенды<a class="headerlink" href="#16" title="Permanent link">¶</a></h2>
+<p>По воспоминаниям Моники и Майка, ранняя идея включала выпуск условного B-title: сравнительно умеренной игры, на которой команда научится работать вместе, а затем сделает что-то более значительное.<sup id="fnref7:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup></p>
+<p>С инженерной точки зрения замысел понятен. Новая организация ещё не знает собственных возможностей. Можно ограничить амбицию, освоить производство и использовать первый релиз как ступень. Но Моника оценивала этот план через рынок и расходы. По её анализу, посредственный дебют мог не обеспечить компании времени на второй шанс.</p>
+<p>Её вывод не следует превращать в исторический закон, будто в 1990-х любая игра за пределами первой десятки обязательно разоряла студию. Это была оценка конкретной ставки Valve: объёма работы, уровня расходов, неизвестности нового имени и ограниченного места на полке. Внутри этих условий «достаточно приличный учебный продукт» мог оказаться опасным компромиссом.</p>
+<p>Так высокая планка первой Half-Life получает более сложное происхождение. Она не обязательно существовала у Ньюэлла в законченной форме с момента ухода из Microsoft. Её усиливали разговоры с человеком, лучше понимавшим коммерческую сторону нового рынка, и растущая цена самой разработки.</p>
+<p>Это один из первых случаев, где Ньюэлл меняется под влиянием чужого профессионального суждения. Он не просто нанимает людей для реализации уже идеальной идеи. Исходная цель компании уточняется в разговоре, где технической уверенности недостаточно.</p>
+<h2 id="17">17. «Игра года» как деловая задача<a class="headerlink" href="#17" title="Permanent link">¶</a></h2>
+<p>Моника связывала возможность прорыва с тем, чтобы первая игра заслужила заметное признание. В её рассказе ориентир на награды и уважение профессионального сообщества был частью маркетинговой стратегии, а не только выражением художественного максимализма.<sup id="fnref8:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup><sup id="fnref:monica-pcg"><a class="footnote-ref" href="#fn:monica-pcg">11</a></sup></p>
+<p>Это не означает, что можно заказать награду или заменить качество рекламой. Наоборот, стратегия требовала продукта, о котором разработчикам и критикам было бы что сказать. Технические и игровые отличия должны были стать видимыми и понятными за пределами офиса.</p>
+<p>Для Ньюэлла такой взгляд соединял две ответственности. Первая — помочь команде сделать сильную игру. Вторая — понимать, что даже сильная игра нуждается в правильном представлении аудитории и партнёрам. Эти задачи нельзя отдать друг другу в качестве оправдания: маркетинг не спасает пустой продукт, а хороший продукт не гарантирует собственной доступности.</p>
+<p>Позднее успех Half-Life легко покажется естественным следствием качества. Ранняя работа Моники напоминает, что репутация также создавалась действиями: общением с прессой, объяснением новых подходов, поддержанием интереса к неизвестной студии. Ньюэлл был одним из ключевых участников этой системы, но не единственным её автором.</p>
+<p>В следующей главе высокая планка столкнётся с неприятной проверкой. Демонстрации уже могут впечатлять, а цель — звучать убедительно, но целая игра пока не доставляет нужного опыта. Тогда придётся решать, что важнее: запланированный выход или ещё одна дорогостоящая попытка.</p>
+<p><a id="team"></a></p>
+<h2 id="18">18. Основатели должны найти то, чего у них нет<a class="headerlink" href="#18" title="Permanent link">¶</a></h2>
+<p>Quake давала технический фундамент. Microsoft — опыт программной разработки. Для игры всё равно требовались другие дисциплины: уровни, анимация, звук, визуальная среда, постановка событий, работа с ожиданиями игрока и текстом.</p>
+<p>Ньюэлл и Харрингтон не могли заменить всё это собственным стажем. Их практическая задача состояла в поиске людей, которые уже умели делать нужные вещи или показывали способность быстро научиться. Ранняя Valve поэтому собиралась из разных профессиональных миров.<sup id="fnref9:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup><sup id="fnref:hl25"><a class="footnote-ref" href="#fn:hl25">12</a></sup></p>
+<p>Здесь особенно важно различать уважение к сильным специалистам и готовность реально зависеть от их суждения. Первое легко декларировать. Второе означает признать, что художник, дизайнер или писатель может увидеть проблему, для которой у основателя нет лучшего ответа.</p>
+<p>Полезно представить этот выбор через недостающие способности. Кен Бёрдвелл приносил инженерный и художественный диапазон. Келли Бейли работал со звуком и музыкой. Дизайнеры уровней строили пространства, в которых технические возможности должны были превращаться в последовательность действий. Марк Лэйдлоу позже помогал соединять созданные элементы в ощущение мира.<sup id="fnref2:hl25"><a class="footnote-ref" href="#fn:hl25">12</a></sup><sup id="fnref:laidlaw-interview"><a class="footnote-ref" href="#fn:laidlaw-interview">13</a></sup></p>
+<p>Это не перечень почётных упоминаний. Каждый такой человек менял то, что новая компания вообще могла сделать. Вклад основателей заключался в том, чтобы найти, привлечь и удержать эти способности, а затем не подменить их собственной универсальной компетентностью, которой у них не было.</p>
+<h2 id="19">19. Реальная работа как повод начать разговор<a class="headerlink" href="#19" title="Permanent link">¶</a></h2>
+<p>В раннем найме Valve заметно внимание к тому, что человек уже сделал: модификации, инструменты, уровни, собственные технические эксперименты. Моника описывала подход как поиск авторов интересной работы и попытку убедить их присоединиться.<sup id="fnref10:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup></p>
+<p>Такой способ давал более содержательный сигнал, чем одна должность в резюме. Готовый инструмент показывает способность заметить проблему и довести решение до использования. Уровень демонстрирует пространственное мышление. Модификация — инициативу, техническое освоение чужой системы и контакт с игроками.</p>
+<p>Но успешная самостоятельная работа не гарантирует лёгкой интеграции в команду. Человеку ещё нужно договариваться, принимать чужие ограничения, пользоваться общими инструментами и переживать переработку любимого решения. Поэтому портфолио нельзя считать магическим собеседованием, которое заранее отвечает на все вопросы.</p>
+<p>Для новой Valve такой найм был также способом выйти за пределы круга бывших коллег Microsoft. Основатели могли использовать знакомую профессиональную сеть, но игровой продукт требовал более широкого поиска. Талант находился не только в компаниях с подходящим названием и не только рядом с будущим офисом.</p>
+<p>Эта практика позже станет особенно заметна на Team Fortress, Counter-Strike и Portal. Здесь она появляется как необходимость первой студии: у основателей нет всех нужных навыков, а надёжнее всего искать их по наблюдаемой работе. Самое важное — после приглашения такая работа должна получить условия для продолжения, а не раствориться в легенде о таланте нанявшего её владельца.</p>
+<h2 id="20">20. Марк Лэйдлоу: история игры возникает в сотрудничестве<a class="headerlink" href="#20" title="Permanent link">¶</a></h2>
+<p>Лэйдлоу особенно важен для понимания того, чем Ньюэлл не являлся. Повествовательная цель Half-Life существовала в компании, но конкретное соединение мира, персонажей и событий требовало профессиональной работы писателя и дизайнеров.</p>
+<p>В интервью Arcade Attack 2017 года Лэйдлоу объяснял свою роль через соединение уже возникавших идей. Рассказ о поездке на поезде, например, связывался с технической возможностью, созданной Джеем Стелли; образ лаборатории до аварии — с работой Бретта Джонсона над пространствами. Повествование развивалось в разговоре с существующими уровнями и инструментами.<sup id="fnref2:laidlaw-interview"><a class="footnote-ref" href="#fn:laidlaw-interview">13</a></sup></p>
+<p>Этого краткого примера достаточно, чтобы увидеть коллективное авторство в действии. Ньюэллу не нужно было лично придумать каждую сцену, чтобы его роль оставалась значимой. Он участвовал в создании среды, финансировании и определении планки. Но эмоциональная форма игры складывалась благодаря людям, которые превращали возможности в конкретные решения.</p>
+<p>Важно также, что писатель не просто добавлял текст к законченной игре. Его суждение могло изменить порядок показа мира и смысл уже созданной архитектуры. Это ещё один тип влияния, который невозможно учесть простым подсчётом строк кода или сцен, авторство которых принадлежит основателю.</p>
+<p>Для самого Ньюэлла здесь возникает практическая проверка доверия. Хочешь сильную игру — придётся позволить другим людям изменить первоначальное представление о том, как она должна работать. В дальнейшем он будет хорошо формулировать этот принцип, но первая Valve должна была научиться жить по нему в конкретном производстве.</p>
+<h2 id="21">21. Команда ещё не означает готовую организацию<a class="headerlink" href="#21" title="Permanent link">¶</a></h2>
+<p>Набрать сильных людей недостаточно. Они могут прекрасно работать по отдельности и создавать вещи, которые плохо соединяются. Именно эта проблема станет центральной для ранней Half-Life.<sup id="fnref3:hl25"><a class="footnote-ref" href="#fn:hl25">12</a></sup></p>
+<p>Инженер разрабатывает поведение существа, художник делает убедительную модель, дизайнер строит интересное помещение. Но никто из этих успехов не гарантирует, что существо нужно в этом помещении, что игрок поймёт его поведение и что сцена появится в нужный момент приключения.</p>
+<p>Поэтому раннюю Valve нельзя сразу изображать зрелой плоской организацией из справочника 2012 года. В 1996-м существовала небольшая студия с двумя основателями, издательскими обязательствами и поиском собственного способа работать. Позднейшие правила сформируются через практические затруднения, а не будут целиком принесены в офис в первый день.</p>
+<p>Это важно для Ньюэлла как человека, интересующегося устройством компании. Его предпочтения ещё не равны работающему процессу. Он может не любить лишние уровни начальства, но всё равно должен помочь людям увидеть общую цель. Может доверять специалистам, но обязан заметить, что локальные достижения не складываются в продукт.</p>
+<p>В следующей главе кризис первой игры как раз заставит команду изменить координацию. Cabal станет ответом на конкретную производственную проблему. Он не возникнет просто потому, что основатель заранее решил отменить традиционное управление во всех его формах.</p>
+<p><a id="sierra"></a></p>
+<h2 id="22-sierra">22. Sierra: полезный партнёр с собственными интересами<a class="headerlink" href="#22-sierra" title="Permanent link">¶</a></h2>
+<p>Sierra предоставила ранней Valve издательскую возможность и аванс. Для новой команды это означало доступ к рынку, который нельзя было заменить одной лицензией Quake и энтузиазмом основателей.<sup id="fnref11:monica-memoir"><a class="footnote-ref" href="#fn:monica-memoir">6</a></sup><sup id="fnref2:forbes-2024"><a class="footnote-ref" href="#fn:forbes-2024">10</a></sup></p>
+<p>В дальнейшем отношения окажутся сложными, но первоначальное решение нужно оценивать внутри своего времени. Издательская инфраструктура делала выпуск осуществимым. Самостоятельная цифровая дистрибуция ещё не была готовой альтернативой, которую Valve могла просто включить вместо договора.</p>
+<p>Партнёрство одновременно создавало ограничения. Издатель планирует выпуск, торговые каналы и маркетинг. Разработчик может обнаружить, что игра не готова. Даже при совпадении общего интереса — успешного продукта — стороны по-разному несут затраты задержки и по-разному видят ближайший риск.</p>
+<p>Отдельные поздние источники приводят финансовые условия ранних договоров, но описывают их с разной степенью детализации. Для биографии не требуется сводить все проценты в один якобы полностью раскрытый контракт. Важнее установленное устройство: Valve зависела от внешнего издателя, а последующая борьба за права и распространение не была решена в момент основания.</p>
+<p>Это создаёт первую взрослую проверку независимости Ньюэлла. Он уже не сотрудник Microsoft, но ещё не хозяин всей цепочки между игрой и покупателем. Возможность действовать самостоятельно будет складываться постепенно — и иногда потребует принять финансовую нагрузку, которую партнёр не хочет разделять.</p>
+<h2 id="23-quiver-prospero">23. Quiver и Prospero: у компании ещё нет единственной идентичности<a class="headerlink" href="#23-quiver-prospero" title="Permanent link">¶</a></h2>
+<p>Ранняя Valve работала над несколькими направлениями. Quiver постепенно превратилась в Half-Life; рядом существовала Prospero, более ориентированная на приключение и повествовательное взаимодействие.<sup id="fnref4:hl25"><a class="footnote-ref" href="#fn:hl25">12</a></sup><sup id="fnref3:laidlaw-interview"><a class="footnote-ref" href="#fn:laidlaw-interview">13</a></sup></p>
+<p>Само наличие этих проектов важно для биографии. Компания не была зарегистрирована с окончательно найденной формулой Half-Life. Люди пробовали разные варианты того, чем может стать их технологическая основа и какие качества будут отличать игру от уже существующих шутеров.</p>
+<p>Это можно назвать поиском идентичности, но не следует заранее считать каждый отброшенный вариант полезной ступенью к победе. Незавершённый проект также означает потраченное время и работу, которая не получила собственного выхода. Польза отдельных идей требует конкретного подтверждения, а не автоматического присвоения любому прототипу статуса скрытого успеха.</p>
+<p>Для Ньюэлла и Харрингтона выбор направления был ещё и выбором концентрации. Небольшая команда не может бесконечно развивать все интересные возможности одновременно. В какой-то момент приходится решать, вокруг чего собирается общий продукт и какие альтернативы уступают ему людей и внимание.</p>
+<p>Технология Quake давала начальную свободу. Но уже на первом этапе выяснялось, что свобода включает необходимость отказываться. Движок способен поддержать много разных игр; студия с ограниченными силами должна закончить хотя бы одну.</p>
+<h2 id="24">24. Лицензировать основу — ещё не найти собственное отличие<a class="headerlink" href="#24" title="Permanent link">¶</a></h2>
+<p>Valve начала глубоко менять Quake-технологию под задачи игры. Так возникла основа, позднее известная как GoldSrc. Для биографии Ньюэлла важен сам выбор: использовать существующее достижение и сосредоточить изменения там, где этого требует собственный продукт.<sup id="fnref5:hl25"><a class="footnote-ref" href="#fn:hl25">12</a></sup></p>
+<p>Точный процент переписанного кода мало объясняет качество решения. Большая переработка не делает продукт автоматически оригинальным, а сохранение полезного чужого компонента не делает его вторичным. Гораздо важнее, позволяет ли технология реализовать задуманный опыт и насколько разумно команда расходует силы.</p>
+<p>Такой взгляд отличается от соревнования за чистоту происхождения. Основатели не обязаны владеть авторством каждого инструмента, чтобы принимать ответственность за игру. Но им необходимо понимать, какие ограничения они принимают вместе с лицензией и какие изменения смогут поддерживать самостоятельно.</p>
+<p>Позднее Ньюэлл снова будет работать с внешними технологиями, в том числе в открытой программной экосистеме. Однако в ранней Valve этот принцип проверяется впервые в собственном бизнесе. Возможность начать быстрее должна оправдаться тем, что освободившиеся силы действительно помогут игре, а не просто породят новые несогласованные возможности.</p>
+<p>Именно здесь заканчивается преимущество хорошего старта. Дальше игроку безразлично, насколько разумно была куплена лицензия. Он увидит результат — и решит, интересно ли ему внутри созданного мира.</p>
+<h2 id="25">25. Чем рисковали люди, которые могли позволить себе риск<a class="headerlink" href="#25" title="Permanent link">¶</a></h2>
+<p>Финансовая подушка основателей была огромным преимуществом. Она давала время и возможность пережить отсутствие немедленной выручки. Но работающая компания создаёт обязательства, которых не было у двух людей, просто обсуждающих новую идею.</p>
+<p>Нужно платить сотрудникам, выполнять договорённости, поддерживать рабочую среду и объяснять направление. Приглашённые люди меняют собственную жизнь: уходят с прежней работы, переезжают, включают новый проект в семейные планы. Даже если личное благополучие основателя защищено лучше, чем у большинства предпринимателей, последствия его решений распространяются на других.</p>
+<p>Поэтому вопрос риска полезно разделять. Снижен ли риск остаться без средств к существованию? Для обеспеченного основателя — значительно. Снижен ли риск потерять вложения, время и профессиональную уверенность? Он остаётся. Исчезает ли ответственность перед командой? Напротив, она появляется именно вместе с её созданием.</p>
+<p>Это аналитическое различие позволяет избежать и романтизации, и обесценивания. Ньюэлл не был человеком, который поставил последнюю монету на мечту. Но создание Valve всё равно требовало перейти от мнения о том, как следовало бы работать, к обязательству действительно организовать такую работу.</p>
+<p>Первый релиз проверит эту разницу без уважения к предыдущему стажу. У Microsoft-ветеранов может быть много денег и сильных знакомых. Игра всё равно должна стать интересной для людей, которые не участвовали в её создании.</p>
+<h2 id="26-valve">26. К первому кризису у Valve есть почти всё — кроме доказательства<a class="headerlink" href="#26-valve" title="Permanent link">¶</a></h2>
+<p>К концу начального этапа у компании появились технология, команда, издатель, проекты и более высокая планка первого продукта. Ньюэлл перестал только обсуждать возможности игровой индустрии и стал одним из людей, отвечающих за конкретную студию.</p>
+<p>Но происхождение ресурсов не гарантировало результата. Quake не могла написать драматургию. Деньги не могли самостоятельно соединить уровни. Репутация Microsoft не превращалась в игровое мастерство. Маркетинговая цель не делала прохождение увлекательным. Все эти элементы нужно было свести в одно целое.</p>
+<p>Именно поэтому история основания должна закончиться до триумфа. В августе 1996 года Valve могла оказаться успешной, умеренной или совсем незаметной компанией. Даже после первых впечатляющих демонстраций будущее оставалось открытым. Основатели ещё не знали, какой объём работы потребуется, чтобы их лучшие части стали хорошей игрой.</p>
+<p>В <a href="../gabe-newell-04-half-life-first-test/">следующей главе</a> Ньюэлл столкнётся с первой большой проверкой собственного продуктового суждения. У команды уже есть достижения, у издателя — планы, у разработчиков — потраченный год. Но готовность отдельных частей не равна готовности целого. Тогда придётся принять решение, которое нельзя решить ещё одним разговором о таланте или будущем индустрии: выпускать существующую Half-Life или оплачивать её радикальную переработку.</p>
+<p><a id="sources"></a></p>
+<h2 id="_1">Источники и уточнения<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>Doom, Windows-эксперименты и впечатление от распространения игры переданы по позднему рассказу Ньюэлла. Статистика установленного программного обеспечения не используется как точно восстановленная перепись. Ранние работы с WinG и последующие Windows-порты не слиты в один проект с одним автором.</p>
+<p>Воспоминания Моники Харрингтон добавляют деловую и семейную перспективу. Её оценка рыночных шансов дебюта остаётся её оценкой; юридическое соучредительство относится к Ньюэллу и Майку Харрингтону. При этом юридический статус не исчерпывает фактический вклад в возникновение компании.</p>
+<p>Профессиональные роли основателей описаны как различия акцентов, а не неизменные психологические типы. Лицензирование Quake не представлено доказательством уже готовой философии всех будущих проектов. Первоначальный план умеренной первой игры и последующее повышение планки сохранены как изменение цели, важное для понимания кризиса Half-Life.</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:doom-2025">
+<p>PC Gamer, <a href="https://www.pcgamer.com/gaming-industry/gabe-newell-says-he-founded-valve-after-doom-showed-him-microsoft-was-missing-the-opportunity-offered-by-the-internet-i-was-willing-to-sort-of-put-my-money-where-my-mouth-was/">Gabe Newell says he founded Valve after Doom showed him Microsoft “was missing the opportunity”</a>, 2025. <a class="footnote-backref" href="#fnref:doom-2025" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2:doom-2025" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref3:doom-2025" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref4:doom-2025" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref5:doom-2025" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref6:doom-2025" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:games-2011">
+<p>Computer and Video Games, <a href="https://web.archive.org/web/20150211164700/http://www.computerandvideogames.com/296735/features/gabe-newell-my-3-favourite-games/">Gabe Newell: My 3 favourite games</a>, 4 апреля 2011, архивная копия. <a class="footnote-backref" href="#fnref:games-2011" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:aias">
+<p>Academy of Interactive Arts &amp; Sciences, <a href="https://www.interactive.org/special_awards/details.asp?idSpecialAwards=25">Gabe Newell — Hall of Fame</a>, 2013. Официальная краткая биография Microsoft-периода. <a class="footnote-backref" href="#fnref:aias" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:wp-customers">
+<p>Andrea Peterson, The Washington Post, <a href="https://www.washingtonpost.com/news/the-switch/wp/2014/01/06/gabe-newell-on-valves-intimate-relationship-with-its-customers/">Gabe Newell on Valve’s intimate relationship with its customers</a>, 6 января 2014. <a class="footnote-backref" href="#fnref:wp-customers" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref2:wp-customers" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref3:wp-customers" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:abrash-interview">
+<p>Архив интервью Ньюэлла, <a href="https://gmod.de/threads/24266-Gabe-Newell-Interview">Gabe Newell Interview / GMod.com</a>. Поздний пересказ контактов с id, Quake и реплики Майкла Абраша. <a class="footnote-backref" href="#fnref:abrash-interview" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref2:abrash-interview" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref3:abrash-interview" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:monica-memoir">
+<p>Monica Harrington, <a href="https://medium.com/@monicah428/the-early-days-of-valve-from-a-woman-inside-bf80c6b47961">The Early Days of Valve, From a Woman Inside</a>, 20 августа 2024. Личное ретроспективное свидетельство. <a class="footnote-backref" href="#fnref:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref2:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref3:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref4:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref5:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref6:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref7:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref8:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref9:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref10:monica-memoir" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref11:monica-memoir" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:handbook">
+<p>Valve, <a href="https://media.steampowered.com/apps/valve/Valve_Handbook_LowRes.pdf">Handbook for New Employees</a>, март 2012. Корпоративное самоописание структуры и хронологии. <a class="footnote-backref" href="#fnref:handbook" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref2:handbook" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+<li id="fn:monica-vb">
+<p>Dean Takahashi, VentureBeat, <a href="https://venturebeat.com/business/monica-harrington-was-the-hidden-figure-of-valve-in-its-critical-early-years">Monica Harrington was the hidden figure of Valve in its critical early years</a>, март 2025. <a class="footnote-backref" href="#fnref:monica-vb" title="Jump back to footnote 8 in the text">↩</a><a class="footnote-backref" href="#fnref2:monica-vb" title="Jump back to footnote 8 in the text">↩</a></p>
+</li>
+<li id="fn:final-hours-hl2">
+<p>Geoff Keighley, GameSpot, <a href="https://www.gamespot.com/articles/the-final-hours-of-half-life-2/1100-6112889/">The Final Hours of Half-Life 2</a>, первоначальная публикация 12 ноября 2004. <a class="footnote-backref" href="#fnref:final-hours-hl2" title="Jump back to footnote 9 in the text">↩</a><a class="footnote-backref" href="#fnref2:final-hours-hl2" title="Jump back to footnote 9 in the text">↩</a></p>
+</li>
+<li id="fn:forbes-2024">
+<p>Stephen Pastis, Forbes, <a href="https://www.forbes.com/sites/stephenpastis/2024/10/21/how-valve-founder-gabe-newell-built-one-of-the-worlds-most-profitable-videogame-companies/">How Valve Founder Gabe Newell Built One Of The World’s Most Profitable Videogame Companies</a>, 21 октября 2024; <a href="https://www.forbes.com.au/covers/magazine/how-valve-founder-gabe-newell-turned-half-life-into-a-nearly-10-billion-fortune/">Forbes Australia</a>. Доля 50,1% — оценка Forbes. <a class="footnote-backref" href="#fnref:forbes-2024" title="Jump back to footnote 10 in the text">↩</a><a class="footnote-backref" href="#fnref2:forbes-2024" title="Jump back to footnote 10 in the text">↩</a></p>
+</li>
+<li id="fn:monica-pcg">
+<p>PC Gamer, <a href="https://www.pcgamer.com/games/fps/theres-an-alternate-universe-where-half-life-disappeared-after-release-valves-first-marketing-strategist-monica-harrington-says-she-helped-navigate-its-way-out-of-early-disaster/">“There’s an alternate universe where Half-Life disappeared after release”…</a>, 13 сентября 2024. <a class="footnote-backref" href="#fnref:monica-pcg" title="Jump back to footnote 11 in the text">↩</a></p>
+</li>
+<li id="fn:hl25">
+<p>Valve / Secret Tape, <a href="https://www.half-life.com/en/halflife/25th">Half-Life: 25th Anniversary</a> и <a href="https://www.youtube.com/watch?v=TbZ3HzvFEto">документальный фильм</a>, ноябрь 2023. Ретроспективные свидетельства о разработке первой Half-Life. <a class="footnote-backref" href="#fnref:hl25" title="Jump back to footnote 12 in the text">↩</a><a class="footnote-backref" href="#fnref2:hl25" title="Jump back to footnote 12 in the text">↩</a><a class="footnote-backref" href="#fnref3:hl25" title="Jump back to footnote 12 in the text">↩</a><a class="footnote-backref" href="#fnref4:hl25" title="Jump back to footnote 12 in the text">↩</a><a class="footnote-backref" href="#fnref5:hl25" title="Jump back to footnote 12 in the text">↩</a></p>
+</li>
+<li id="fn:laidlaw-interview">
+<p>Arcade Attack, <a href="https://www.arcadeattack.co.uk/marc-laidlaw-half-life-3/">Marc Laidlaw — interview</a>, 17 июля 2017. <a class="footnote-backref" href="#fnref:laidlaw-interview" title="Jump back to footnote 13 in the text">↩</a><a class="footnote-backref" href="#fnref2:laidlaw-interview" title="Jump back to footnote 13 in the text">↩</a><a class="footnote-backref" href="#fnref3:laidlaw-interview" title="Jump back to footnote 13 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft" class="md-footer__link md-footer__link--prev" href="../gabe-newell-02-microsoft/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка" class="md-footer__link md-footer__link--next" href="../gabe-newell-04-half-life-first-test/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

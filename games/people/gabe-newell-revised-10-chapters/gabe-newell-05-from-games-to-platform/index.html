@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://lirikonov.github.io/knowledge/games/people/gabe-newell-revised-10-chapters/gabe-newell-05-from-games-to-platform/" rel="canonical"/>
+<link href="../gabe-newell-04-half-life-first-test/" rel="prev"/>
+<link href="../gabe-newell-06-failures-crises-evolution/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы - База данных</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#5">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/Arkane/">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/01-origins-softdisk-keen/">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/02-wolfenstein/">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/03-doom-birth/">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/04-doom-ecosystem/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/05-quake-crisis/">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/06-id-after-romero/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/07-quake2-quake3-middleware/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/08-doom3-aaa/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/09-rage-zenimax-carmack/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/10-doom-rebirth-modern-id/">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/11-legacy-summary/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/12-side-branches/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/MANIFEST/">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/01-origins-steam/">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/02-games-and-engines/">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/03-inside-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/04-hardware-linux-vr/">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/05-modern-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/06-valve-as-institution/">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/07-ecosystem-and-catalog/">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/08-appendices/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/09-sources-and-status/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Engines
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Engines
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../engines/id-tech-branches-01-29/">
+<span class="md-ellipsis">
+    
+  
+    Использование id Tech и все дальнейшие ветки развития у других разработчиков
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom/">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom30/">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom3_45-103/">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Quake/">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Spider-Man/">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom4-eternal/">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom_eternal_51-80/">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3_8" id="__nav_1_3_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_3_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/01-origins-and-development/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/02-half-life-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/03-half-life-release-and-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/04-gearbox-and-consoles/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/05-half-life-2-development-and-tech/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/06-half-life-2-world-and-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/07-half-life-2-beta-release/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/08-episodes/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/09-half-life-3-and-cancelled-projects/">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/10-vr-and-alyx-development/">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/11-half-life-alyx-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/12-modding-and-community/">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/13-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/14-audio/">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/15-how-valve-makes-half-life/">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/16-movement-and-speedrunning/">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/17-half-life-and-film/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/CHANGES/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Carmack/">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Romero/">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_4" id="__nav_1_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe Newell
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe Newell
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-02-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-03-doom-quake-valve/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-05-from-games-to-platform/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-06-failures-crises-evolution/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и изменение самого Ньюэлла
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-07-platform-independence-linux-vr-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Windows, Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Сам Ньюэлл: семья, игры, здоровье, образование и публичный образ
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_5" id="__nav_1_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe newell revised 10 chapters
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe newell revised 10 chapters
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-02-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-03-doom-quake-valve/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-1990-">
+<span class="md-ellipsis">
+      
+        1. Параллельная история конца 1990-х
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        2. Робин Уокер и Джон Кук: знакомство начинается с готовой игры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        3. Чем модификация отличается от резюме — и чего она не доказывает
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        4. Минь Ле и Джесс Клифф: компания замечает уже идущий эксперимент
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5_1">
+<span class="md-ellipsis">
+      
+        5. Сообщество не заканчивалось авторами модов
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      
+        6. Собственность оставалась частью этой открытости
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      
+        7. Живая игра превратила обновление в часть самой игры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-steam-gdc-2002">
+<span class="md-ellipsis">
+      
+        8. Steam на GDC 2002: доставка и продажа уже рядом
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      
+        9. Несколько проектов внутри одной компании
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      
+        10. Издательская зависимость получила новое значение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-steam">
+<span class="md-ellipsis">
+      
+        11. Ранний Steam: обещание удобства, встреченное как новое препятствие
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-half-life-2">
+<span class="md-ellipsis">
+      
+        12. Half-Life 2 стала рычагом, которым Ньюэлл обеспечил переход
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13">
+<span class="md-ellipsis">
+      
+        13. Новый тип отношений с покупателем
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-cabal-handbook-valve">
+<span class="md-ellipsis">
+      
+        14. Между Cabal и handbook: как менялась сама Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15">
+<span class="md-ellipsis">
+      
+        15. Свобода выбирать проект требует информации, которой нет в списке задач
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+<span class="md-ellipsis">
+      
+        16. Оценка коллег и оплата: власть не исчезла, изменился её маршрут
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17">
+<span class="md-ellipsis">
+      
+        17. Найм становится коллективным решением о будущем
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18-portal">
+<span class="md-ellipsis">
+      
+        18. Пятиминутная встреча по Portal
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19">
+<span class="md-ellipsis">
+      
+        19. Арбитр может защищать команду — и оставаться властью
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20">
+<span class="md-ellipsis">
+      
+        20. Джош Уэйер: Ньюэлл хотел участвовать на равных, но его слушали иначе
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-steam">
+<span class="md-ellipsis">
+      
+        21. Малая компания после успеха Steam: деньги и производственная вместимость расходятся
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-sony">
+<span class="md-ellipsis">
+      
+        22. Sony: публичный критик выходит на сцену партнёра
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23">
+<span class="md-ellipsis">
+      
+        23. Что именно доказывает этот разворот
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24-dota">
+<span class="md-ellipsis">
+      
+        24. Dota: личная увлечённость встречается с чужой глубокой экспертизой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25-valve">
+<span class="md-ellipsis">
+      
+        25. Для разных людей новая Valve означала разную работу
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#26">
+<span class="md-ellipsis">
+      
+        26. Пиратство как повод посмотреть на собственный сервис
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#27-2011">
+<span class="md-ellipsis">
+      
+        27. Российский пример остаётся примером 2011 года
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#28">
+<span class="md-ellipsis">
+      
+        28. Цена как переменная, которую наконец можно менять быстро
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#29-75">
+<span class="md-ellipsis">
+      
+        29. Скидка 75% и сорокакратная выручка
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#30">
+<span class="md-ellipsis">
+      
+        30. Распродажа меняет не только цену
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-free-to-play">
+<span class="md-ellipsis">
+      
+        31. Бесплатные выходные и постоянный free-to-play оказались разными предложениями
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-steamworks">
+<span class="md-ellipsis">
+      
+        32. Steamworks: внешнему разработчику предлагают уже созданную способность
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33-valve">
+<span class="md-ellipsis">
+      
+        33. Успех чужой игры становится частью успеха Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#34-valve">
+<span class="md-ellipsis">
+      
+        34. Новая свобода Valve создала нового посредника для остальных
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#35">
+<span class="md-ellipsis">
+      
+        35. Финансовая самостоятельность меняет отношение к следующему релизу
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#36-2010-">
+<span class="md-ellipsis">
+      
+        36. К началу 2010-х Ньюэлл получил другой масштаб работы
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        Источники и уточнения
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-06-failures-crises-evolution/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и способность закончить
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-07-platform-independence-linux-vr-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Семья, игры, здоровье и человек за именем GabeN
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5_1" id="__nav_1_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_5_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam2/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2 — очищенный дамп исследования
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-1990-">
+<span class="md-ellipsis">
+      
+        1. Параллельная история конца 1990-х
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        2. Робин Уокер и Джон Кук: знакомство начинается с готовой игры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        3. Чем модификация отличается от резюме — и чего она не доказывает
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        4. Минь Ле и Джесс Клифф: компания замечает уже идущий эксперимент
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5_1">
+<span class="md-ellipsis">
+      
+        5. Сообщество не заканчивалось авторами модов
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      
+        6. Собственность оставалась частью этой открытости
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      
+        7. Живая игра превратила обновление в часть самой игры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-steam-gdc-2002">
+<span class="md-ellipsis">
+      
+        8. Steam на GDC 2002: доставка и продажа уже рядом
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      
+        9. Несколько проектов внутри одной компании
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      
+        10. Издательская зависимость получила новое значение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-steam">
+<span class="md-ellipsis">
+      
+        11. Ранний Steam: обещание удобства, встреченное как новое препятствие
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-half-life-2">
+<span class="md-ellipsis">
+      
+        12. Half-Life 2 стала рычагом, которым Ньюэлл обеспечил переход
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13">
+<span class="md-ellipsis">
+      
+        13. Новый тип отношений с покупателем
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-cabal-handbook-valve">
+<span class="md-ellipsis">
+      
+        14. Между Cabal и handbook: как менялась сама Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15">
+<span class="md-ellipsis">
+      
+        15. Свобода выбирать проект требует информации, которой нет в списке задач
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+<span class="md-ellipsis">
+      
+        16. Оценка коллег и оплата: власть не исчезла, изменился её маршрут
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17">
+<span class="md-ellipsis">
+      
+        17. Найм становится коллективным решением о будущем
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18-portal">
+<span class="md-ellipsis">
+      
+        18. Пятиминутная встреча по Portal
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19">
+<span class="md-ellipsis">
+      
+        19. Арбитр может защищать команду — и оставаться властью
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20">
+<span class="md-ellipsis">
+      
+        20. Джош Уэйер: Ньюэлл хотел участвовать на равных, но его слушали иначе
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-steam">
+<span class="md-ellipsis">
+      
+        21. Малая компания после успеха Steam: деньги и производственная вместимость расходятся
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-sony">
+<span class="md-ellipsis">
+      
+        22. Sony: публичный критик выходит на сцену партнёра
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23">
+<span class="md-ellipsis">
+      
+        23. Что именно доказывает этот разворот
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24-dota">
+<span class="md-ellipsis">
+      
+        24. Dota: личная увлечённость встречается с чужой глубокой экспертизой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25-valve">
+<span class="md-ellipsis">
+      
+        25. Для разных людей новая Valve означала разную работу
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#26">
+<span class="md-ellipsis">
+      
+        26. Пиратство как повод посмотреть на собственный сервис
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#27-2011">
+<span class="md-ellipsis">
+      
+        27. Российский пример остаётся примером 2011 года
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#28">
+<span class="md-ellipsis">
+      
+        28. Цена как переменная, которую наконец можно менять быстро
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#29-75">
+<span class="md-ellipsis">
+      
+        29. Скидка 75% и сорокакратная выручка
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#30">
+<span class="md-ellipsis">
+      
+        30. Распродажа меняет не только цену
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-free-to-play">
+<span class="md-ellipsis">
+      
+        31. Бесплатные выходные и постоянный free-to-play оказались разными предложениями
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-steamworks">
+<span class="md-ellipsis">
+      
+        32. Steamworks: внешнему разработчику предлагают уже созданную способность
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33-valve">
+<span class="md-ellipsis">
+      
+        33. Успех чужой игры становится частью успеха Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#34-valve">
+<span class="md-ellipsis">
+      
+        34. Новая свобода Valve создала нового посредника для остальных
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#35">
+<span class="md-ellipsis">
+      
+        35. Финансовая самостоятельность меняет отношение к следующему релизу
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#36-2010-">
+<span class="md-ellipsis">
+      
+        36. К началу 2010-х Ньюэлл получил другой масштаб работы
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        Источники и уточнения
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="5">Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы<a class="headerlink" href="#5" title="Permanent link">¶</a></h1>
+<blockquote>
+<p><strong>Основной период: 1998–2012; поздние свидетельства — до сентября 2026 года.</strong> Team Fortress и Counter-Strike меняют отношения Valve с внешними авторами. Steam меняет её отношения с покупателем. Между этими событиями формируется организация, в которой Ньюэлл пытается распределить управление — и обнаруживает, что от собственного авторитета избавиться сложнее, чем от должностей.</p>
+</blockquote>
+<p><a href="../gabe-newell-04-half-life-first-test/">Предыдущая глава</a> · <a href="../gabe-newell-10-who-is-gabe-newell-final/#guide">Карта исследования</a> · <a href="../gabe-newell-06-failures-crises-evolution/">Следующая глава</a></p>
+<p><a id="community"></a></p>
+<h2 id="1-1990-">1. Параллельная история конца 1990-х<a class="headerlink" href="#1-1990-" title="Permanent link">¶</a></h2>
+<p>Вернёмся немного назад. Пока Valve переделывала Half-Life, выпускала её и переживала уход Майка Харрингтона, рядом развивалась другая линия. Люди за пределами компании создавали собственные игровые миры поверх доступной технологии. Некоторые из них уже имели аудиторию, хотя ещё не располагали обычной студией и издателем.</p>
+<p>Для Ньюэлла это были одновременно будущие коллеги и доказательство, что привлекательный игровой замысел может появиться в другом месте. Собственный успех не давал Valve исключительного права угадывать, во что захотят играть. Компания могла добиться большего, если научится распознавать чужое достижение и договариваться с его авторами.</p>
+<p>Такой поворот опирался на предыдущий опыт: в Microsoft он видел ценность сторонних приложений, а id предоставила новой Valve технологическую основу. Но здесь менялось положение самого Ньюэлла. Теперь к его компании приходили люди со своей игрой, своими пользователями и уже существующей репутацией. Ему предстояло быть стороной, которая предлагает ресурсы и влияние.</p>
+<p>В этих отношениях важно сохранить двусторонность. Создатели модификаций не были сырьём для правильной кадровой стратегии. Они приносили работу, которой Valve ещё не обладала. Компания получала их результат; авторы — возможность продолжать на другом масштабе. Конкретный баланс свободы, собственности и ответственности определялся договорённостью, а не общим словом «сообщество».</p>
+<h2 id="2">2. Робин Уокер и Джон Кук: знакомство начинается с готовой игры<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<p>Team Fortress выросла из Quake. Робин Уокер, Джон Кук и Иэн Коли участвовали в создании модификации, вокруг которой появились реальные игроки. В 1998 году Valve приобрела TeamFortress Software; Уокер и Кук стали важными участниками компании. В 1999-м Team Fortress Classic перенесла эту линию в окружение Half-Life.<sup id="fnref:handbook"><a class="footnote-ref" href="#fn:handbook">1</a></sup><sup id="fnref:tf-history"><a class="footnote-ref" href="#fn:tf-history">2</a></sup></p>
+<p>Для Ньюэлла сильной стороной такого знакомства была наблюдаемая работа. Обычное собеседование пытается предсказать, способен ли кандидат создать полезный результат. У авторов Team Fortress часть ответа уже существовала: они организовали механику, довели её до игроков и взаимодействовали с реакцией аудитории.</p>
+<p>Но присоединение к Valve меняло саму работу. Любительский проект с собственным ритмом встречался с компанией, которая могла предоставить инженеров, инструменты, деловую поддержку и более длинный горизонт. Вместе с возможностями появлялись новые зависимости: от общей технологии, от доступности коллег, от выбранных студией направлений.</p>
+<p>Уокер особенно важен потому, что не остаётся в биографии человеком, которого однажды удачно наняли. Его дальнейшая работа пройдёт через новые формы Team Fortress и позднее через Half-Life: Alyx. Это проверка кадрового выбора на длительности: в компанию пришёл специалист, способный менять предмет работы, а не только поддерживать приобретённый продукт.</p>
+<p>В такой траектории становится виден смысл высокой планки найма. Важен не только сегодняшний навык, но и способность сохранять самостоятельность при изменении задачи. Однако это результат жизни конкретного человека внутри команды, а не автоматически воспроизводимая формула для любого успешного моддера.</p>
+<h2 id="3">3. Чем модификация отличается от резюме — и чего она не доказывает<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<p>Успешный мод показывает больше, чем перечень использованных языков и технологий. В нём видны инициатива, способность выбрать ограничение, собрать работающие части и пережить реакцию настоящих пользователей. Он также демонстрирует вкус: автор каким-то образом убедил людей потратить на его работу время.</p>
+<p>Для Ньюэлла, который сам выбрал практическую работу вместо завершения университетской траектории, такой сигнал был естественно привлекателен. Но проводить прямую причинную линию от Harvard к каждому будущему найму было бы слишком просто. Важнее наблюдаемая практика Valve: компания обращала внимание на созданные продукты и умения, которые не всегда укладывались в обычный карьерный профиль.<sup id="fnref2:handbook"><a class="footnote-ref" href="#fn:handbook">1</a></sup></p>
+<p>При этом готовая игра не отвечает на все кадровые вопросы. Человек может прекрасно работать один и тяжело переносить коллективный пересмотр; уметь быстро придумать механику и не любить длительное сопровождение; иметь сильную узкую компетенцию и нуждаться в помощи за её пределами. Успешный мод снижает неопределённость, но не устраняет её.</p>
+<p>Поэтому сила подхода состоит в лучшем исходном знании о кандидате, а не в возможности отменить знакомство с ним. Valve приобретала способность и отношения с людьми. Техническая находка была лишь частью ценности такого перехода.</p>
+<p>Это уточнение особенно полезно в истории Ньюэлла: его интерес к таланту становится убедительнее, когда учитывает живые различия между авторами, а не превращает каждого из них в идеально прошедшее гигантское собеседование.</p>
+<h2 id="4">4. Минь Ле и Джесс Клифф: компания замечает уже идущий эксперимент<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<p>Первая публичная бета Counter-Strike появилась в июне 1999 года. Минь Ле и Джесс Клифф создавали модификацию Half-Life, которая постепенно собирала аудиторию через игру, обсуждение и новые версии. Valve не заказывала её по результатам собственного исследования рынка. Сигнал появился до корпоративного решения поддержать проект.<sup id="fnref:cs-history"><a class="footnote-ref" href="#fn:cs-history">3</a></sup><sup id="fnref:cs20"><a class="footnote-ref" href="#fn:cs20">4</a></sup></p>
+<p>Минь Ле и Клифф выполняли различную работу вокруг игры и её сообщества. Поэтому неправильно сводить историю к одиночному программисту, которого заметил Ньюэлл. Уже ранний Counter-Strike зависел от соединения разработки, общения и инфраструктуры распространения. Игроки тоже влияли на то, что авторы видели и исправляли.</p>
+<p>В 2000 году Valve приобрела права и выпустила коммерческую версию. Этот шаг превращал успешную внешнюю инициативу в часть устойчивой компании. Он не отменял первоначального происхождения и не доказывал, что вся дальнейшая работа автоматически останется столь же независимой.<sup id="fnref2:cs-history"><a class="footnote-ref" href="#fn:cs-history">3</a></sup></p>
+<p>Для Ньюэлла Counter-Strike расширял возможный способ выбирать продукты. Вместо того чтобы заранее знать лучший ответ, компания могла наблюдать несколько внешних поисков и поддерживать тот, который уже нашёл отклик. Это практическая стратегия снижения неопределённости.</p>
+<p>Но в ней есть и опасность ретроспективного отбора. Мы помним модификации, которые стали крупными играми, и почти не видим множество других. Успех Counter-Strike не означает, что любой автор способен повторить путь при достаточном усердии. Его значение для Valve конкретнее: компания научилась работать с одним из таких результатов, когда он появился.</p>
+<h2 id="5_1">5. Сообщество не заканчивалось авторами модов<a class="headerlink" href="#5_1" title="Permanent link">¶</a></h2>
+<p>Игровая среда вокруг Valve создавалась также операторами серверов, авторами карт, администраторами сообществ и участниками соревнований. Они поддерживали места, в которых люди встречались, выбирали правила и возвращались к игре. Значительная часть повседневной жизни продукта возникала за пределами студии.<sup id="fnref3:cs-history"><a class="footnote-ref" href="#fn:cs-history">3</a></sup></p>
+<p>Для компании это давало масштаб, который трудно было бы воспроизвести только наймом. Однако внешний труд не был просто бесплатным аналогом внутренних подразделений. У его участников существовали собственные цели: дружеская группа, локальная сцена, определённый стиль игры, технический интерес или желание создать удобное пространство для других.</p>
+<p>Ньюэлл постепенно начинал иметь дело с пользователем, который способен продолжать продукт. Такой человек не всегда ждёт обновления сверху. Он самостоятельно создаёт карту, настраивает сервер, организует турнир или предлагает новую разновидность игры.</p>
+<p>Эта самостоятельность расширяет систему и усложняет управление ею. Изменение клиента может повлиять на чужой сервер; новая политика распространения — на привычный способ доступа; коммерческая интеграция — на ожидания авторов. Успешная платформа получает не только больше созданной снаружи ценности, но и больше людей, чьи интересы приходится учитывать.</p>
+<p>Поздняя риторика об аудитории как производителе будет звучать просто. В конце 1990-х она проявлялась через конкретную необходимость не сломать живые отношения, на которых уже держался продукт.</p>
+<h2 id="6">6. Собственность оставалась частью этой открытости<a class="headerlink" href="#6" title="Permanent link">¶</a></h2>
+<p>Valve поддерживала внешние инициативы и одновременно приобретала интеллектуальную собственность, нанимала авторов и развивала коммерческие продукты. Team Fortress и Counter-Strike не превращали компанию в организацию, отказывающуюся от контроля над результатом.<sup id="fnref3:handbook"><a class="footnote-ref" href="#fn:handbook">1</a></sup><sup id="fnref4:cs-history"><a class="footnote-ref" href="#fn:cs-history">3</a></sup></p>
+<p>Здесь полезно различать доступ к созданию и право определять дальнейшую судьбу созданного. Модифицируемая игра позволяет людям пробовать. Коммерческое соглашение затем устанавливает, кто принимает решения, кто получает доход и какие возможности сохраняются у других участников. Открытый вход в творчество не означает отсутствия собственника на каждом последующем этапе.</p>
+<p>Для Ньюэлла это не обязательно противоречие. В его практической модели самостоятельная работа людей и коммерческая организация могут усиливать друг друга. Но для автора договор имеет значение не меньше общего обещания поддержать сообщество.</p>
+<p>Из этого позже вырастет вопрос оплаты создателей. Если человек приносит полезный контент, почему доход должен ограничиваться зарплатой сотрудника компании? Workshop и торговые системы будут искать другие маршруты. При этом одно признание ценности внешнего труда не решает, как распределить выручку между автором, владельцем исходной игры, платформой и участниками зависимых проектов.</p>
+<p>В <a href="../gabe-newell-06-failures-crises-evolution/#paid-mods">главе 6</a> эта проблема вернётся в болезненной форме платных модификаций Skyrim. Корень спора возник раньше: компания обнаружила, что её граница не совпадает с границей всей работы, необходимой продукту.</p>
+<p><a id="distribution"></a></p>
+<h2 id="7">7. Живая игра превратила обновление в часть самой игры<a class="headerlink" href="#7" title="Permanent link">¶</a></h2>
+<p>Counter-Strike и другие сетевые проекты создавали постоянную эксплуатационную задачу. Клиенты и серверы должны были понимать друг друга. Новые карты, исправления и изменения правил требовалось доставлять большой аудитории, не оставляя её навсегда разделённой между несовместимыми версиями.</p>
+<p>Для коробочной одиночной игры обновление иногда оставалось необязательной процедурой. Для сетевого продукта несовпадение версий могло означать невозможность играть вместе. Трудность распространения становилась частью пользовательского опыта, даже если сама механика работала хорошо.<sup id="fnref:steam2002"><a class="footnote-ref" href="#fn:steam2002">5</a></sup></p>
+<p>Из этого следовал продуктовый вопрос, характерный для Valve: сколько технической ответственности следует перекладывать на обычного игрока? Если каждый пользователь должен самостоятельно искать нужный файл, сверять версию и разбираться в ошибках установки, система требует от аудитории работы, которую можно попытаться выполнить централизованно.</p>
+<p>Такой подход не возникал из абстрактной мечты владеть всем рынком. У компании была собственная практическая потребность. Но решение этой потребности постепенно становилось полезным и за пределами её игр.</p>
+<p>Ньюэлл мог поддержать подобную ставку и объяснять её стратегический смысл. Конкретную инфраструктуру создавали команды. Там, где источники описывают работу Valve в целом, не нужно приписывать лично основателю выбор протокола, устройство сервера или каждое решение клиента. Его значимость состояла в готовности считать такую работу частью главной задачи компании.</p>
+<h2 id="8-steam-gdc-2002">8. Steam на GDC 2002: доставка и продажа уже рядом<a class="headerlink" href="#8-steam-gdc-2002" title="Permanent link">¶</a></h2>
+<p>Публичное представление Steam на GDC 2002 описывало технологию широкополосной доставки программного обеспечения. Среди возможностей фигурировали автоматические обновления, управление версиями, учётные записи, прямая публикация и платежи.<sup id="fnref2:steam2002"><a class="footnote-ref" href="#fn:steam2002">5</a></sup></p>
+<p>Это исправляет сразу две слишком простые истории происхождения. Современный магазин не следует переносить в начало как единственную исходную задачу. Но и говорить, будто продажа появилась случайно много лет спустя после чисто технического обновлятора, неверно: коммерческие функции присутствовали уже в раннем публичном описании.</p>
+<p>Связь между ними была практической. Если система умеет узнать пользователя, определить его доступ и доставить нужный набор файлов, она решает значительную часть задач распространения программ. Однако между обновлением существующей игры и полноценной торговой платформой остаются платежи, договоры, поддержка, масштабирование и доверие. Переход не происходит автоматически только потому, что в обоих случаях передаются данные.</p>
+<p>Ньюэллу был знаком такой тип расширения из Microsoft: полезность базового слоя растёт, когда им могут пользоваться разные продукты. Но собственная реализация требовала отдельной работы и отдельных решений. Steam не была Windows, переименованной для игр; она возникала в другом рынке и с иным отношением к разработчикам и покупателям.</p>
+<p>В начале 2000-х успех этого расширения ещё не был известен. Инфраструктура могла оказаться дорогой внутренней системой, неудобным клиентом или невостребованным предложением внешним студиям. Поддержка Ньюэлла означала принятие именно такой неопределённости.</p>
+<h2 id="9">9. Несколько проектов внутри одной компании<a class="headerlink" href="#9" title="Permanent link">¶</a></h2>
+<p>Разработка Steam шла рядом с Half-Life 2, новой технологией и существующими играми. Это меняло организационную задачу. В первой Half-Life большая часть коллектива искала хороший общий результат. Теперь сильным людям требовалось договариваться, какой из нескольких результатов заслуживает их времени.</p>
+<p>В интервью Washington Post Ньюэлл описывал систему, где отдельные направления способны продолжаться без предварительного согласия большинства компании. Он приводил Steam как пример работы, в которую часть коллег верила сильнее остальных.<sup id="fnref:wp-organization"><a class="footnote-ref" href="#fn:wp-organization">6</a></sup></p>
+<p>Такая возможность защищает новую идею от слишком раннего голосования. Люди, занятые срочной игрой, могут не считать инфраструктуру главным приоритетом; это ещё не доказывает отсутствия долгосрочной пользы. Но возможность продолжать несколько ставок также создаёт ограничение: один и тот же специалист не может одновременно полноценно закрывать каждую из них.</p>
+<p>Поэтому зрелая Valve должна была придумать не только хорошие продукты, но и способ распределять внимание без обычного централизованного портфеля. Вера в самостоятельность сотрудников ставила перед ними задачу, которую в других организациях чаще берёт на себя руководство: определить, какой работе стоит дать следующие месяцы.</p>
+<p>Ньюэлл тем самым делегировал часть выбора. При этом оставались его собственные сильные убеждения, положение в собственности и способность защищать долгую ставку. Организация развивалась внутри этого напряжения, а не за его пределами.</p>
+<h2 id="10">10. Издательская зависимость получила новое значение<a class="headerlink" href="#10" title="Permanent link">¶</a></h2>
+<p>Успех Half-Life не отменил договорных отношений с Sierra и затем Vivendi. Споры касались распространения, прав использования, выплат и других условий. Их нельзя полностью свести к одному сюжету «издатель пытался запретить Steam».<sup id="fnref:final-hours-hl2"><a class="footnote-ref" href="#fn:final-hours-hl2">7</a></sup><sup id="fnref:monica-pcg"><a class="footnote-ref" href="#fn:monica-pcg">8</a></sup></p>
+<p>Для Ньюэлла значение конфликта было шире отдельной претензии. Компания могла создать игру и не иметь полного контроля над тем, как результат достигает аудитории. Разные участники цепочки располагали собственными правами и коммерческими интересами. Steam открывала путь к более прямым отношениям, но не отменяла задним числом существующие обязательства.</p>
+<p>Также важно помнить, зачем издатель появился в этой истории. Sierra помогла новой Valve выйти на рынок, на котором у неё не было собственного канала. В 1996 году этот выбор имел смысл. Позднее масштаб и возможности студии изменились, а первоначальная зависимость стала восприниматься иначе.</p>
+<p>Так независимость оказывается исторической задачей. Отношение, полезное на одном этапе, способно ограничивать следующий. Из этого не следует, что партнёр всегда был лишним или что Ньюэлл с первого дня обязан был строить магазин вместо игры.</p>
+<p>Собственная дистрибуция давала Valve больше контроля, но требовала взять на себя работу, которую раньше выполняли другие: поддерживать доступ, обслуживать платежи, отвечать за клиент и отношения с покупателем. Свобода увеличивалась вместе с ответственностью.</p>
+<p><a id="steam-transition"></a></p>
+<h2 id="11-steam">11. Ранний Steam: обещание удобства, встреченное как новое препятствие<a class="headerlink" href="#11-steam" title="Permanent link">¶</a></h2>
+<p>Пользователь раннего Steam мог вполне рационально видеть в нём ухудшение. Новый клиент добавлял вход в систему, принудительное обновление и зависимость от доступности серверов. Технические проблемы делали переход особенно раздражающим. Для части аудитории Counter-Strike уход от привычной инфраструктуры WON означал потерю уже освоенного способа играть.<sup id="fnref2:final-hours-hl2"><a class="footnote-ref" href="#fn:final-hours-hl2">7</a></sup></p>
+<p>Компания обещала убрать сложность обслуживания. Но переход к такой модели сам создавал сложность. Это знакомая проблема новой инфраструктуры: полезность конечного состояния не обеспечивает хорошего пути к нему.</p>
+<p>В обсуждении раннего Steam нужно различать как минимум три претензии. Первая — клиент плохо работает. Вторая — его заставляют использовать. Третья — приобретённая игра начинает зависеть от чужой системы доступа. Исправление серверных ошибок отвечало на первую. Оно не давало автоматического ответа на остальные.</p>
+<p>Ньюэлл придерживался направления, даже когда реакция была отрицательной. Это показывает предел формулы «он всегда доверял пользователю». Пользовательское поведение было для него источником знания, но не референдумом по архитектуре. Основатель мог признать боль перехода и всё равно считать выбранную систему необходимой.</p>
+<p>Такой выбор способен оказаться успешным и остаться спорным. Поздняя полезность Steam не делает первоначальное недовольство неразумным. Она показывает, что компания со временем решила значительную часть проблем и убедила многих пользователей в пользе модели. Содержание согласия менялось по мере изменения продукта.</p>
+<h2 id="12-half-life-2">12. Half-Life 2 стала рычагом, которым Ньюэлл обеспечил переход<a class="headerlink" href="#12-half-life-2" title="Permanent link">¶</a></h2>
+<p>Розничная версия Half-Life 2 требовала активации через Steam. Покупка коробки не освобождала от нового клиента. Самая ожидаемая игра Valve стала основанием для принятия её новой инфраструктуры.<sup id="fnref3:final-hours-hl2"><a class="footnote-ref" href="#fn:final-hours-hl2">7</a></sup></p>
+<p>Это решение особенно хорошо показывает масштаб личной ставки Ньюэлла. Можно было отделить игру от риска незрелого сервиса и оставить продвижение платформы самостоятельной задачей. Valve связала их. Успех одного продукта должен был помочь другому получить аудиторию, без которой инфраструктура не могла стать достаточно полезной.</p>
+<p>Для игрока такая связка могла ощущаться как навязанный договор: он хотел продолжение Half-Life, а получал ещё и обязательное участие в платформе. У компании существовал долгосрочный замысел; у покупателя — конкретная цель сегодняшнего вечера. Эти интересы не совпадали полностью.</p>
+<p>В истории первой Half-Life Ньюэлл использовал деньги, чтобы отказаться от слабого выпуска. Здесь он использовал привлекательность сильной игры, чтобы провести спорный переход. Это разные формы власти. В первом случае риск в большей степени оставался у компании; во втором часть неудобства переносилась на аудиторию.</p>
+<p>Такое сравнение полезнее общего ярлыка «упрямый». Важно, чем человек располагает, кого затрагивает его решение и каким образом проверяет результат. Твёрдость сама по себе не объясняет, почему один отказ защищает игрока, а другое обязательство вызывает его раздражение.</p>
+<h2 id="13">13. Новый тип отношений с покупателем<a class="headerlink" href="#13" title="Permanent link">¶</a></h2>
+<p>Steam постепенно связывала приобретение игры с учётной записью, библиотекой, обновлениями и общением. Отношение продолжалось после одной продажи. Для Valve это означало постоянный контакт с тем, как используется программное обеспечение; для пользователя — переносимую между компьютерами библиотеку и меньше ручного обслуживания.<sup id="fnref3:steam2002"><a class="footnote-ref" href="#fn:steam2002">5</a></sup><sup id="fnref:steam-about"><a class="footnote-ref" href="#fn:steam-about">9</a></sup></p>
+<p>Ньюэлл получал возможность наблюдать поведение на масштабе, которого не давало тестирование отдельной игры. Но данные не были прозрачным окном в человеческие желания. Они показывали действия внутри конкретной среды: то, что человек увидел, мог купить, сумел запустить и решил продолжить.</p>
+<p>Решение интерфейса влияет на эти действия. Недоступный в регионе товар не может быть куплен; незаметная игра получает меньше внимания; техническая ошибка выглядит как отсутствие интереса, если её не распознать. Поэтому платформенная статистика одновременно описывает спрос и отражает устройство самой платформы.</p>
+<p>Это ограничение важно для биографии Ньюэлла. Массовая обратная связь расширяла его инструменты, но не устраняла необходимость суждения. Компания должна была понимать, какой именно вопрос задаёт эксперимент и что её измерение способно скрыть.</p>
+<p>Вместе с прямым отношением появлялась и асимметрия. Valve видела гораздо больше о поведении покупателей, чем отдельный покупатель знал о её внутренних решениях. Близость к аудитории и прозрачность компании — разные свойства. Steam усиливала первое, не гарантируя второго.</p>
+<p><a id="organization"></a></p>
+<h2 id="14-cabal-handbook-valve">14. Между Cabal и handbook: как менялась сама Valve<a class="headerlink" href="#14-cabal-handbook-valve" title="Permanent link">¶</a></h2>
+<p>У истории организации есть несколько опорных состояний, которые не следует сливать в одно. В 1996 году существовали два основателя и небольшая команда. В 1997–1998-м кризис игры привёл к более тесному междисциплинарному проектированию. После ухода Харрингтона в 2000 году изменился особый вес Ньюэлла. Развитие нескольких игр и Steam поставило вопрос распределения людей между направлениями. К 2012 году компания описывала себя в handbook как плоскую организацию без обычной цепочки подчинения.<sup id="fnref:hl25"><a class="footnote-ref" href="#fn:hl25">10</a></sup><sup id="fnref4:handbook"><a class="footnote-ref" href="#fn:handbook">1</a></sup><sup id="fnref4:final-hours-hl2"><a class="footnote-ref" href="#fn:final-hours-hl2">7</a></sup></p>
+<p>Публичные материалы не дают полной помесячной истории перехода. Неизвестно, в какой момент каждый конкретный механизм стал нормой и насколько одинаково он работал для разных команд. Поэтому handbook следует читать как документ определённого этапа, а не как стенограмму устройства Valve с первого дня.</p>
+<p>Но движение различимо. Знание о конкретной проблеме получало больший вес, чем закреплённый титул. Управленческие функции распределялись между участниками работы. При этом компания сохраняла необходимость выбирать проекты, принимать новых людей, оценивать вклад и заканчивать продукты.</p>
+<p>Самый существенный переход состоит именно в этом: управление продолжало существовать, но его всё меньше связывали с постоянным отдельным классом руководителей. Ньюэлл пытался уменьшить расстояние между знанием и решением. Цена такого выбора — больше требований к способности каждого сотрудника ориентироваться в компании.</p>
+<h2 id="15">15. Свобода выбирать проект требует информации, которой нет в списке задач<a class="headerlink" href="#15" title="Permanent link">¶</a></h2>
+<p>В модели, описанной Valve, сотруднику недостаточно хорошо выполнять назначенную работу. Он должен понимать, где его участие принесёт больше пользы, узнавать о существующих направлениях и убеждать коллег присоединиться к своему. Это добавляет к специальности внутреннее предпринимательство.<sup id="fnref5:handbook"><a class="footnote-ref" href="#fn:handbook">1</a></sup></p>
+<p>Для одного человека такая среда чрезвычайно привлекательна. Можно перейти к проблеме, которую видишь сам, и не ждать продвижения по формальной лестнице. Для другого она создаёт постоянную неопределённость: какая работа действительно важна, кто принимает решение о её ценности и как отличить временный интерес коллег от устойчивой поддержки?</p>
+<p>Столы на колёсах, ставшие знаменитым символом Valve, хорошо передают возможность перемещения. Но движение мебели не решает информационной задачи. Чтобы выбрать команду, нужно знать, что она делает, какие обязательства уже взяла и где твоя помощь нужна больше всего.</p>
+<p>Отсюда значение разговоров, репутации и неформальных связей. Они помогают координировать работу без длинной цепочки разрешений. Одновременно они способны затруднить вход человеку, ещё не знакомому с внутренней картой влияния.</p>
+<p>Для Ньюэлла это был сознательный риск в пользу самостоятельного профессионального суждения. Однако риск не исчезает от того, что называется свободой. Он требует поддержки новичков, понятной обратной связи и способов не потерять важную работу между привлекательными инициативами.</p>
+<h2 id="16">16. Оценка коллег и оплата: власть не исчезла, изменился её маршрут<a class="headerlink" href="#16" title="Permanent link">¶</a></h2>
+<p>Handbook 2012 года разделяет два механизма. Обратная связь коллег должна помогать профессиональному развитию. Отдельное сравнительное оценивание используется прежде всего для определения вознаграждения. В нём названы техническая способность, законченная полезная работа, вклад в группу и вклад в продукт.<sup id="fnref6:handbook"><a class="footnote-ref" href="#fn:handbook">1</a></sup></p>
+<p>Эта конкретика существенно меняет образ компании. Отсутствие непосредственного начальника не означает, что результат никто не оценивает или что материальные последствия отсутствуют. Мнение коллег получает прямое значение для положения человека.</p>
+<p>У подхода есть понятная сильная сторона: участники совместной работы могут знать реальный вклад лучше далёкого руководителя. Но они тоже располагают неполной информацией. Незаметная поддержка, предотвращённая проблема и помощь за пределами собственной команды могут быть сложнее для оценки, чем яркий законченный результат.</p>
+<p>Поэтому оценка остаётся человеческой процедурой, а не объективным измерителем ценности. Чем больше от неё зависит оплата, тем важнее объяснить критерии и возможность возражения. Иначе стремление убрать власть начальника способно создать зависимость от менее видимого круга влиятельных коллег.</p>
+<p>Это не доказательство, что система Valve обязательно несправедлива. Это следствие её устройства: распределение оценки меняет возможные ошибки, но не отменяет их. Для Ньюэлла задача управления теперь включала качество среды, в которой коллеги судят друг о друге.</p>
+<h2 id="17">17. Найм становится коллективным решением о будущем<a class="headerlink" href="#17" title="Permanent link">¶</a></h2>
+<p>Высокая планка найма в Valve связана с требовательностью самой модели. Компании нужны люди, способные глубоко работать в своей области и достаточно широко понимать соседние дисциплины. Handbook использует для этого образ T-shaped: сочетание специализации и широты.<sup id="fnref7:handbook"><a class="footnote-ref" href="#fn:handbook">1</a></sup></p>
+<p>В таком устройстве новый сотрудник влияет на компанию не только выполненными задачами. Он участвует в выборе будущих коллег, в оценке работы и в распределении внимания. Ошибка найма затрагивает дальнейшие решения, поэтому осторожность получает дополнительное объяснение.</p>
+<p>Но высокая планка способна защищать и привычный состав. Критерий «сумеет ли работать с нами» может незаметно превратиться в «достаточно ли похож на нас». При выходе в новую область особенно важно не отвергнуть нужную компетенцию только потому, что она приносит другой профессиональный язык.</p>
+<p>История Джери Эллсворт в аппаратном подразделении покажет эту проблему с позиции сотрудницы, недовольной тем, как коллективные механизмы работали на практике. Она разобрана в <a href="../gabe-newell-07-platform-independence-linux-vr-hardware/#ellsworth">главе 7</a>. Здесь важно поставить вопрос до появления конфликта: коллективное решение тоже нуждается в проверке собственных предубеждений.</p>
+<p>Таким образом, кадровая философия Ньюэлла не исчерпывается любовью к выдающимся людям. Она предполагает трудную совместимость: достаточно самостоятельности, чтобы приносить новое, и достаточно способности к сотрудничеству, чтобы это новое становилось общим результатом.</p>
+<p><a id="portal-power"></a></p>
+<h2 id="18-portal">18. Пятиминутная встреча по Portal<a class="headerlink" href="#18-portal" title="Permanent link">¶</a></h2>
+<p>В сентябре 2026 года Чет Фализек рассказал эпизод из разработки первого Portal. Один влиятельный участник команды хотел добавить в игру заметно больше жестоких изображений и мёртвых тел. По воспоминаниям Фализека, большинство коллег идею не поддерживало, но спор продолжался. Эрик Уолпоу попросил его прийти на встречу с Ньюэллом и прямо высказаться против.<sup id="fnref:portal-gore"><a class="footnote-ref" href="#fn:portal-gore">11</a></sup></p>
+<p>Встреча, как её вспоминает Фализек, получилась короткой. Он обозначил возражение, Ньюэлл резко поддержал отказ от идеи, и обсуждение закончилось приблизительно за пять минут. Имя инициатора предложения в рассказе не раскрывается.<sup id="fnref2:portal-gore"><a class="footnote-ref" href="#fn:portal-gore">11</a></sup></p>
+<p>Это свидетельство участника, опубликованное почти через два десятилетия после событий. Оно не позволяет восстановить всю стенограмму или все предшествующие разговоры. Но именно в доступном виде сцена очень хорошо показывает особый вес основателя.</p>
+<p>Формальный начальник может отсутствовать, а его функциональный аналог всё равно появляется в момент конфликта. Коллеги не смогли или не захотели завершить спор внутри группы. Ньюэлл своим авторитетом завершил его быстро.</p>
+<p>С точки зрения продукта он поддержал сохранение определённого тона. При этом конкретное сравнение стерильной Aperture с эстетикой Black Mesa — уже интерпретация художественного эффекта; его не следует выдавать за дословное объяснение Фализека. И речь не шла об универсальном запрете любого следа крови: предметом спора был существенный сдвиг визуальной жестокости и наполнения мира.</p>
+<h2 id="19">19. Арбитр может защищать команду — и оставаться властью<a class="headerlink" href="#19" title="Permanent link">¶</a></h2>
+<p>В сцене по Portal Ньюэлл помогает людям, которые не хотят менять игру вслед за настойчивым коллегой. Это важная сторона его влияния: основатель способен остановить внутреннее давление и подтвердить право команды держаться выбранного направления.</p>
+<p>Но хороший результат отдельного вмешательства не делает структуру плоской. Наоборот, сила сцены именно в неравенстве окончательного веса. Короткое мнение Ньюэлла завершает то, что другие не могли завершить своими мнениями.</p>
+<p>Отсюда возникает более точный вопрос, чем «был ли Гейб начальником». Когда его авторитет помогает работе, когда мешает, и может ли команда обходиться без него при похожем конфликте? Должность не отвечает на эти вопросы полностью.</p>
+<p>Также сцена показывает, что неформальная иерархия существовала не только вокруг основателя. Сам инициатор спорной идеи обладал достаточным внутренним влиянием, чтобы продолжать обсуждение вопреки сопротивлению. Удаление менеджерской лестницы не уничтожает различия в репутации, уверенности и готовности спорить.</p>
+<p>В этой части зрелая Valve встречается с проблемой, которую Ньюэлл раньше видел в больших компаниях: решение зависит не только от качества информации. Важно, кто её произносит и кто способен сделать несогласие безопасным.</p>
+<p><a id="weier"></a></p>
+<h2 id="20">20. Джош Уэйер: Ньюэлл хотел участвовать на равных, но его слушали иначе<a class="headerlink" href="#20" title="Permanent link">¶</a></h2>
+<p>В интервью Kiwi Talkz, о котором GamesRadar+ сообщил 1 апреля 2026 года, руководитель проекта Portal 2 Джош Уэйер описал другую сторону того же авторитета. По его воспоминаниям, Ньюэлл хотел быть участником творческой команды и предлагать идеи, но коллеги слишком легко воспринимали его предложения как то, с чем нужно согласиться. Уэйер связывает с этим период, когда Ньюэлл отступил от такого непосредственного участия.<sup id="fnref:weier"><a class="footnote-ref" href="#fn:weier">12</a></sup></p>
+<p>Это поздний рассказ коллеги. Он не устанавливает точную дату «ухода из разработки» и не означает прекращения всей работы Ньюэлла над играми. Особенно важно не превращать журналистский заголовок в официальное кадровое событие.</p>
+<p>Однако сам конфликт чрезвычайно содержателен. В сцене Фализека команда нуждается в окончательном весе Ньюэлла. В рассказе Уэйера тот же вес мешает получить обычное обсуждение. Основатель может искренне хотеть равенства и не иметь возможности создать его одной просьбой.</p>
+<p>Такое положение объясняет, почему делегирование иногда требует физического или разговорного отступления. Если каждое предложение слишком сильно меняет решение группы, более полезным участием может оказаться отсутствие на определённом этапе. Но тогда возникает другая опасность: команда лишается полезного вкуса и быстрой возможности разрешить конфликт.</p>
+<p>Перед нами реальная задача зрелого Ньюэлла. Нужно научиться выбирать форму присутствия. Быть всегда в комнате и быть хорошим руководителем среды — не одно и то же.</p>
+<h2 id="21-steam">21. Малая компания после успеха Steam: деньги и производственная вместимость расходятся<a class="headerlink" href="#21-steam" title="Permanent link">¶</a></h2>
+<p>Развитие Steam давало Valve больше финансовых возможностей, но не превращало любую желаемую работу в выполнимую. Время конкретных специалистов, способность согласовывать решения и готовность людей собраться вокруг проекта оставались ограниченными.<sup id="fnref8:handbook"><a class="footnote-ref" href="#fn:handbook">1</a></sup><sup id="fnref2:wp-organization"><a class="footnote-ref" href="#fn:wp-organization">6</a></sup></p>
+<p>Компания могла позволить себе финансировать длительную разработку и всё равно не иметь подходящей группы, желающей постоянно ею заниматься. Для системы, где люди выбирают направление, это особенно существенное различие. Деньги снимают часть ограничений, но не создают автоматически общий приоритет.</p>
+<p>Высокая планка найма усиливает эффект. Быстро увеличить численность проще, чем сохранить привычный способ совместной работы. Ньюэлл предпочитал не считать рост штата универсальным решением. Это защищало организацию от некоторых издержек масштаба и одновременно ограничивало число больших производств, которые она могла вести.</p>
+<p>Здесь проявляется цена выбранного устройства. Пользователь может видеть богатую компанию и ожидать множество продолжений. Компания может видеть небольшой круг людей с несколькими конкурирующими задачами. Обе стороны описывают разные реальные ресурсы.</p>
+<p>В следующих кризисах эта разница станет важнее. Отсутствие финансовой необходимости срочно выпускать игру даёт свободу искать хороший ответ. Оно же позволяет слишком долго оставлять без ответа вопрос, кто именно обязуется довести выбранную работу до завершения.</p>
+<p><a id="sony"></a></p>
+<h2 id="22-sony">22. Sony: публичный критик выходит на сцену партнёра<a class="headerlink" href="#22-sony" title="Permanent link">¶</a></h2>
+<p>В 2007 году Ньюэлл резко отзывался об архитектуре PlayStation 3. Его претензии касались сложности разработки и того, насколько полезны вложения в специфическую платформу для дальнейшей работы. На этом фоне появление главы Valve на конференции Sony в рамках E3 2010 выглядело заметным публичным разворотом.<sup id="fnref:sony-2011"><a class="footnote-ref" href="#fn:sony-2011">13</a></sup></p>
+<p>Он объявлял Portal 2 для PS3 и обещал сильную консольную версию со Steam-функциями. К январю 2011 года Valve подробно описала кооперативную игру между PS3, PC и Mac, межплатформенное общение и облачное хранение сохранений PS3. Покупатель версии для PS3 мог получить PC/Mac-копию после привязки учётных записей.<sup id="fnref2:sony-2011"><a class="footnote-ref" href="#fn:sony-2011">13</a></sup></p>
+<p>Технически важно не расширять обещанное: облачные сохранения PS3 не означали объявленного свободного переноса одного прохождения между PS3 и PC. Но даже в точных границах предложение показывало, что консоль может допустить часть сервисной модели Valve.</p>
+<p>Для Ньюэлла это был случай, когда взаимодействие с владельцем платформы давало полезный результат без отказа от самой платформы. Его прежняя оценка аппаратной сложности не обязана была исчезнуть полностью. Изменились возможности сотрудничества и конкретный набор функций для игрока.</p>
+<p>Так биография получает нужный контрпример простой линии «не нравится ограничение — строит всё своё». Иногда он договаривался с теми, кого раньше критиковал. Практическая полезность соглашения могла оказаться важнее сохранения образа человека, который никогда не меняет публичную позицию.</p>
+<h2 id="23">23. Что именно доказывает этот разворот<a class="headerlink" href="#23" title="Permanent link">¶</a></h2>
+<p>Историю легко превратить в мораль о признанной неправоте. Но источники позволяют сказать точнее: Ньюэлл перешёл от резкой критики платформы к публичной поддержке конкретного совместного продукта. Они не раскрывают все внутренние переговоры и не дают основания объявлять его прежние технические претензии целиком отозванными.</p>
+<p>Различие важно. Устройство процессора, политика сетевых служб и договорённость о Steam-функциях — разные вопросы. Можно считать одну часть платформы неудобной и одновременно получить достаточно свободы в другой, чтобы выпуск имел смысл.</p>
+<p>Здесь также видно расхождение делового и игрового вкуса. Любовь Ньюэлла к Super Mario 64 не требует любви ко всем правилам консолей. Его собственные предпочтения будут подробно рассмотрены в <a href="../gabe-newell-08-person-family-games-health-education-public-image/#games">главе 8</a>. Публичный спор с платформодержателем не описывает целиком человека как игрока.</p>
+<p>Участие Джоша Уэйера в представлении функций Portal 2 напоминает ещё об одном распределении ролей. Ньюэлл мог объявить направление и поддержать отношения; конкретный опыт для пользователей объясняли и создавали руководители проекта и команда.<sup id="fnref3:sony-2011"><a class="footnote-ref" href="#fn:sony-2011">13</a></sup></p>
+<p>Такие эпизоды нужны между громкими стратегическими заявлениями. Они показывают зрелого основателя в ситуации переговоров, уточнения возможностей и зависимости от людей, которые превращают объявленное сотрудничество в работающий продукт.</p>
+<p><a id="dota"></a></p>
+<h2 id="24-dota">24. Dota: личная увлечённость встречается с чужой глубокой экспертизой<a class="headerlink" href="#24-dota" title="Permanent link">¶</a></h2>
+<p>5 октября 2009 года IceFrog сообщил сообществу, что возглавляет команду в Valve. Впоследствии её работа стала Dota 2. Публичное сообщение автора позволяет зафиксировать переход без догадок о его частной личности и без превращения всей истории в инициативу одного Ньюэлла.<sup id="fnref:icefrog2009"><a class="footnote-ref" href="#fn:icefrog2009">14</a></sup></p>
+<p>Это ещё одна встреча компании с уже сложившимся игровым знанием. Dota требовала понимания множества взаимодействий, привычек сообщества и долгой эволюции правил. Деньги и инфраструктура Valve могли поддержать такую работу; они не заменяли компетенцию её ключевых разработчиков.</p>
+<p>Ньюэлл при этом сам глубоко увлёкся игрой. В 2011 году он говорил примерно о восьмистах часах в Dota 2 и продолжал описывать себя как неопытного игрока.<sup id="fnref:dota2011"><a class="footnote-ref" href="#fn:dota2011">15</a></sup> Для главы компании это необычное положение: продукт принадлежит организации, которой он руководит, но мастерство внутри него не подчиняется его должности.</p>
+<p>Здесь важно не перепутать любовь игрока и полномочия дизайнера. Увлечённость даёт непосредственное знакомство с опытом, но не делает каждое личное предпочтение правильным для всей аудитории. Публичные сведения не позволяют расписать, какие именно решения баланса Ньюэлл определял лично. Поэтому содержательное разделение остаётся таким: он играл, поддерживал направление и работал в компании с людьми, обладавшими самостоятельной экспертизой.</p>
+<p>Это развитие той же привычки, которая проявлялась в ранних наймах. Однако теперь сильный внешний специалист приходил в гораздо более влиятельную организацию, а её основатель одновременно оказывался одним из наиболее увлечённых пользователей.</p>
+<h2 id="25-valve">25. Для разных людей новая Valve означала разную работу<a class="headerlink" href="#25-valve" title="Permanent link">¶</a></h2>
+<p>Поворот к живым системам нельзя объяснять только вкусом Ньюэлла. Он менял профессиональную жизнь всей команды. Писатель большой сюжетной игры, например, мог оказаться в мире коротких биографий персонажей, реплик и постоянно расширяемой вселенной.</p>
+<p>Марк Лэйдлоу в интервью 2017 года вспоминал работу над героями Dota вместе с Тедом Косматкой и Кристофером Кацем. Он описывал удовольствие от такого сочинения, но различал его с созданием повествования, которое продолжало интересовать его лично.<sup id="fnref:laidlaw-interview"><a class="footnote-ref" href="#fn:laidlaw-interview">16</a></sup></p>
+<p>Этот небольшой контраст не доказывает конфликта с Ньюэллом и не объясняет единолично уход Лэйдлоу. Зато он возвращает в историю разные профессиональные интересы. Компания может найти очень успешную форму продукта, которая одним сотрудникам подходит особенно хорошо, а другим даёт меньше пространства для любимой работы.</p>
+<p>Поэтому «самостоятельный выбор проектов» нужно рассматривать вместе с тем, какие проекты вообще доступны и способны собрать группу. Формально свободный человек всё равно действует внутри структуры возможностей, созданной компанией и рынком.</p>
+<p>Для Ньюэлла новая Valve означала всё больше долгоживущих систем с непрерывной обратной связью. Для части его коллег вопрос мог состоять в том, сохраняется ли внутри такой организации место для завершённой истории. Это напряжение поможет понять дальнейшую судьбу Half-Life без объяснения всех изменений ленью или потерей интереса к игрокам.</p>
+<p><a id="piracy"></a></p>
+<h2 id="26">26. Пиратство как повод посмотреть на собственный сервис<a class="headerlink" href="#26" title="Permanent link">¶</a></h2>
+<p>В интервью 2011 года Ньюэлл формулировал один из самых известных своих тезисов: пиратство часто следует рассматривать как проблему сервиса. Легальный продукт может проигрывать по времени появления, локализации, удобству доступа и ограничениям, даже если компания объясняет поведение аудитории только нежеланием платить.<sup id="fnref:piracy2011"><a class="footnote-ref" href="#fn:piracy2011">17</a></sup></p>
+<p>Это характерный для него способ поставить задачу. Вместо одного вопроса о запрете нежелательного поведения появляется другой: что именно предлагает конкурирующий путь, чего не получает покупатель? Такой вопрос даёт компании предмет для действий — улучшить доступность, убрать задержку, сделать приобретение и запуск проще.</p>
+<p>Однако тезис имеет границы. Цена остаётся важной; доходы пользователей различаются; технически удобная продажа не устраняет все причины нелегального распространения. Один рыночный пример не становится универсальным законом поведения.</p>
+<p>Сам Ньюэлл не отказывался от учётных записей, проверки доступа или коммерческих прав. Steam строила именно такую инфраструктуру. Поэтому его позиция не равна принципиальному отрицанию любой защиты. Он оценивал её по тому, что получает добросовестный пользователь и не делает ли защита легальную версию хуже альтернативы.</p>
+<p>Для биографии важнее всего этот перенос внимания. Компания не освобождается от улучшения собственного продукта только потому, что конкурирующий способ доступа нарушает её интересы. Сильная моральная уверенность правообладателя не заменяет анализа пользовательского опыта.</p>
+<h2 id="27-2011">27. Российский пример остаётся примером 2011 года<a class="headerlink" href="#27-2011" title="Permanent link">¶</a></h2>
+<p>Ньюэлл рассказывал, что Valve предупреждали о слабых перспективах легальных продаж в России. В его объяснении важную роль играли задержки локализации и выпуска: нелегальная версия могла появиться раньше и оказаться доступнее. Изменение сервиса, по его словам, помогло увидеть значительный платящий рынок.<sup id="fnref2:piracy2011"><a class="footnote-ref" href="#fn:piracy2011">17</a></sup></p>
+<p>Здесь особенно важно удержать дату. Его оценка относилась к конкретному периоду развития Steam и собственным наблюдениям компании. Она не является текущей характеристикой российского рынка, точной статистикой всех игроков или доказательством, что любой сервис в любой стране получит тот же результат.</p>
+<p>Также нельзя превращать его слова о масштабе рынка в независимо проверенную таблицу продаж. Valve не публиковала в этом интервью полный набор данных, который позволил бы воспроизвести вывод. У нас есть свидетельство руководителя о том, как изменилось понимание аудитории внутри компании.</p>
+<p>Именно это свидетельство полезно для портрета. Ньюэлл предпочитал искать объяснение, которое делает пользователя понятным участником системы, вместо того чтобы заранее исключить целую аудиторию из коммерческого рассмотрения. Но такой подход остаётся гипотезой, требующей измерения, а не доброжелательным убеждением, которое всегда оказывается верным.</p>
+<p>В следующем сюжете измерение даст ему ещё более сильный сюрприз: поведение покупателей не уложится даже в первоначально удобную экономическую модель самой Valve.</p>
+<p><a id="pricing"></a></p>
+<h2 id="28">28. Цена как переменная, которую наконец можно менять быстро<a class="headerlink" href="#28" title="Permanent link">¶</a></h2>
+<p>Цифровая продажа позволяла Valve проверять цену и наблюдать реакцию намного оперативнее, чем в коробочной цепочке. Для Ньюэлла это превращало экономику продукта в область последовательных экспериментов. Компания могла изменить предложение, увидеть результат и пересмотреть объяснение.<sup id="fnref:pricing2011"><a class="footnote-ref" href="#fn:pricing2011">18</a></sup></p>
+<p>В выступлении 2011 года он рассказывал о тихом изменении цены, без большого рекламного события. Число покупок реагировало так, что общая выручка оставалась примерно сопоставимой. Первоначально результат казался достаточно понятным: снижение цены компенсировалось ростом количества проданных копий.</p>
+<p>Его разговорное описание эластичности не нужно превращать в точное доказательство универсальной функции спроса. Эксперимент относился к определённому продукту, аудитории и способу изменения цены. Но он давал компании рабочую модель, на основании которой можно было ожидать следующего результата.</p>
+<p>Интересный момент наступает, когда та же численная переменная оказывается частью другого события. Скидка без большого объявления и заметная распродажа не являются одним и тем же воздействием. Во втором случае меняется также внимание аудитории.</p>
+<p>Ньюэллу предстояло увидеть разницу, которую удобно упустить, если рассматривать цену отдельно от среды, где человек её встречает.</p>
+<h2 id="29-75">29. Скидка 75% и сорокакратная выручка<a class="headerlink" href="#29-75" title="Permanent link">¶</a></h2>
+<p>В рассказе Ньюэлла заметная акция со снижением цены примерно на 75% дала около сорокакратной выручки относительно исходного уровня. Речь шла именно о выручке, а не о сорока процентах роста и не просто о количестве копий.<sup id="fnref2:pricing2011"><a class="footnote-ref" href="#fn:pricing2011">18</a></sup></p>
+<p>Этот результат не подходил к первоначальной модели. Если изменение цены лишь перемещает продажи по уже понятной кривой, настолько большой скачок требует дополнительного объяснения.</p>
+<p>Важнее самой эффектной цифры — последовательность проверки. Ньюэлл обсуждал, не были ли покупки просто перенесены из будущего в период распродажи и не произошло ли перераспределение между каналами. Он также говорил о повторении наблюдения на стороннем продукте. Тем самым сюрприз становился началом нового исследования, а не доказательством безошибочности компании.<sup id="fnref3:pricing2011"><a class="footnote-ref" href="#fn:pricing2011">18</a></sup></p>
+<p>В этой истории не нужен вычисленный задним числом показатель проданных копий. Он создавал бы впечатление ещё одной опубликованной метрики, хотя исходный рассказ её отдельно не давал. Достаточно сохранить проверенный смысл: акция изменила поведение значительно сильнее, чем ожидали по прежнему опыту.</p>
+<p>Особенно характерно, что Ньюэлл признавал непонимание. Успех не обязательно подтверждает модель; иногда он так же хорошо показывает её недостаточность, как провал. Для человека с большим авторитетом такая способность отделить хороший результат от хорошего объяснения имеет самостоятельную ценность.</p>
+<h2 id="30">30. Распродажа меняет не только цену<a class="headerlink" href="#30" title="Permanent link">¶</a></h2>
+<p>Из предыдущего наблюдения следует осторожная аналитическая гипотеза. Заметная распродажа может одновременно менять доступность, внимание, чувство срочности и обсуждение между людьми. Покупатель видит уже другое предложение в другом социальном контексте.</p>
+<p>Но какие именно механизмы дали наблюдаемый эффект и в какой доле, один рассказ Ньюэлла не устанавливает. Нельзя подменять его признание неопределённости нашим уверенным списком причин. Важнее сохранить открытый вопрос и способ его проверки.</p>
+<p>Для платформы такая ситуация особенно интересна: она не просто измеряет чужой спрос, но и организует место, в котором спрос проявляется. Расположение игры, уведомление, акция и условия доступа способны изменить то, что затем будет названо предпочтением пользователей.</p>
+<p>Поэтому экономический эксперимент требует внимания к собственному вмешательству. Рост продаж может говорить о привлекательности цены, об удачном показе товара, о накопившемся ожидании или о сочетании факторов. Для разработчика, которому предлагают повторить успех, различие принципиально.</p>
+<p>Ньюэлл получил мощный инструмент, но не простой автомат правильных решений. Его наиболее убедительная позиция в этом эпизоде — готовность продолжать проверку вместо объявления законченного закона Steam-экономики.</p>
+<h2 id="31-free-to-play">31. Бесплатные выходные и постоянный free-to-play оказались разными предложениями<a class="headerlink" href="#31-free-to-play" title="Permanent link">¶</a></h2>
+<p>Ньюэлл сопоставлял ограниченные бесплатные периоды с постоянным переходом Team Fortress 2 к free-to-play. В обоих случаях цена входа в конкретный момент могла быть нулевой, однако реакция аудитории существенно различалась. Он сообщал примерно о пятикратном увеличении аудитории после постоянного изменения модели.<sup id="fnref4:pricing2011"><a class="footnote-ref" href="#fn:pricing2011">18</a></sup><sup id="fnref:tf2f2p"><a class="footnote-ref" href="#fn:tf2f2p">19</a></sup></p>
+<p>Его собственное рассуждение обращалось к будущей ценности опыта. Постоянная доступность сообщает человеку больше, чем возможность поиграть до конца выходных. Она может изменить готовность учиться, приглашать друзей и вкладывать время.</p>
+<p>Это правдоподобное объяснение, но в материалах выступления оно остаётся частью поиска. Параллельно могли влиять видимость, содержание обновления, структура аудитории и другие обстоятельства. Нельзя выдавать найденную формулировку за изолированно доказанный причинный механизм.</p>
+<p>Для Ньюэлла важен разрыв между формально одинаковой цифрой и разным человеческим смыслом. «Ноль» в цене не описывает весь продукт. Игрок оценивает условия будущего участия, а не только сегодняшнюю операцию покупки.</p>
+<p>Именно поэтому интерес к экономике у него не сводится к поиску самой высокой цены. Его занимают правила, которые меняют поведение участников. Однако успех конкретного free-to-play-перехода ещё не отвечает, подходит ли такая модель другой игре или другой аудитории.</p>
+<p><a id="platform"></a></p>
+<h2 id="32-steamworks">32. Steamworks: внешнему разработчику предлагают уже созданную способность<a class="headerlink" href="#32-steamworks" title="Permanent link">¶</a></h2>
+<p>В 2008 году Valve представила Steamworks. Смысл набора сервисов состоял в том, чтобы дать другим разработчикам доступ к инфраструктуре, которую трудно и часто бессмысленно создавать заново для каждой игры: доставке обновлений, учётным записям, статистике, достижениям и другим сетевым возможностям. Состав развивался со временем; нынешнюю документацию нельзя целиком переносить в первый анонс.<sup id="fnref:steamworks-launch"><a class="footnote-ref" href="#fn:steamworks-launch">20</a></sup></p>
+<p>Здесь платформенная роль становится особенно ясной. Valve предлагает не только место продажи, но и часть производственной способности. Команда может потратить меньше усилий на повторяющиеся задачи и больше — на отличие собственной игры.</p>
+<p>Для Ньюэлла это знакомая экономическая структура с новой ответственностью. В Microsoft он участвовал в платформе, поверх которой работали другие. Теперь его собственная компания определяла условия такого взаимодействия.</p>
+<p>При этом удобство создаёт зависимость. Чем больше сервисов встроено в игру, тем дороже может стать переход на другой набор решений. Разработчик получает полезный готовый слой и должен учитывать его долгую судьбу. Следовательно, снижение сегодняшних трудозатрат не исчерпывает оценку предложения.</p>
+<p>Так зрелый Ньюэлл оказывается по другую сторону вопроса, который сам часто задаёт партнёрам: насколько безопасно строить важную работу поверх чужой системы? Для внешней студии этой чужой системой теперь может быть Valve.</p>
+<h2 id="33-valve">33. Успех чужой игры становится частью успеха Valve<a class="headerlink" href="#33-valve" title="Permanent link">¶</a></h2>
+<p>Платформа получает пользу от хороших игр, которые созданы без её прямого участия. Это отличает её интерес от узкого соревнования отдельных релизов. Сильный сторонний продукт способен привлекать аудиторию и увеличивать полезность библиотеки, даже если одновременно отнимает игровое время у собственной игры Valve.</p>
+<p>Такой эффект делает сотрудничество экономически привлекательным, но не превращает все отношения в бесконфликтные. Покупатель, разработчик и платформа получают разные выгоды и несут разные расходы. Комиссия, цена, видимость, возвраты и правила доступа могут оцениваться ими неодинаково.</p>
+<p>Слово «ценность», которым часто пользуется Ньюэлл, поэтому нуждается в уточнении. Для игрока это может быть удобство и качество опыта. Для разработчика — доход и предсказуемый доступ к аудитории. Для Valve — долгосрочная полезность платформы и устойчивость бизнеса. Эти интересы иногда совпадают, иногда требуют компромисса.</p>
+<p>Такая трёхсторонняя картина сильнее объясняет Steam, чем идея доброго владельца дешёвого магазина. Ньюэлл строил коммерческую инфраструктуру. Её полезность могла быть огромной именно потому, что она соединяла разные интересы, но качество соединения требовалось постоянно проверять.</p>
+<p>Общие рассуждения о совместном росте не отменяют вопроса о том, кто определяет условия и кто имеет возможность отказаться от них без неприемлемой потери аудитории.</p>
+<p><a id="gatekeeper"></a></p>
+<h2 id="34-valve">34. Новая свобода Valve создала нового посредника для остальных<a class="headerlink" href="#34-valve" title="Permanent link">¶</a></h2>
+<p>Steam уменьшила зависимость собственной компании от физической дистрибуции и части издательских функций. Одновременно она стала посредником между множеством других разработчиков и покупателей. Эта перемена заложена в самой структуре платформы, независимо от оценки её конкретной политики.<sup id="fnref2:steam-about"><a class="footnote-ref" href="#fn:steam-about">9</a></sup></p>
+<p>У посредника есть право определять витрину, правила публикации, устройство учётной записи и порядок платежей. Даже когда он действует удобно для большинства участников, власть остаётся реальной. Хороший сервис не перестаёт быть зависимостью только потому, что пользователи довольны им сегодня.</p>
+<p>Для Ньюэлла такое положение создаёт особое противоречие. Он хорошо понимает опасность чужого критического слоя. Но собственный успех делает компанию таким слоем для других. Поэтому его заявления об открытости следует сопоставлять с разными уровнями свободы: правом запустить программу на компьютере, правом продаваться в конкретном магазине и возможностью использовать определённый сетевой сервис.</p>
+<p>Эти права не совпадают. Поддержка открытого PC не означает открытого исходного кода Steam или отсутствия правил внутри её магазина. В <a href="../gabe-newell-07-platform-independence-linux-vr-hardware/#openness">главе 7</a> различие станет особенно заметным на примере Steam Deck.</p>
+<p>Здесь важно зафиксировать смену положения героя. Он больше не только разработчик, добивающийся прямого доступа к людям. Он владелец компании, через которую такого доступа добиваются другие.</p>
+<h2 id="35">35. Финансовая самостоятельность меняет отношение к следующему релизу<a class="headerlink" href="#35" title="Permanent link">¶</a></h2>
+<p>У обычной студии доход часто тесно связан с завершением очередной игры. Платформа получает выручку и от работы внешних разработчиков. По мере роста Steam собственный календарь Valve переставал быть единственным источником её финансовой устойчивости.<sup id="fnref:forbes-2024"><a class="footnote-ref" href="#fn:forbes-2024">21</a></sup></p>
+<p>Для творческой независимости это сильное преимущество. Можно продолжать исследования, переживать неудачи и не выпускать слабую игру только потому, что заканчивается финансирование. Но у исчезнувшего давления была и полезная функция: оно заставляло выбирать и завершать.</p>
+<p>Когда эта функция ослабевает, её нужно воспроизводить иначе. Самостоятельная команда должна договориться, какой результат достаточно важен, чтобы пройти скучную и трудную последнюю часть производства. Интерес к следующей идее не должен автоматически разрушать обязательство закончить текущую.</p>
+<p>Здесь не следует утверждать, что деньги Steam сами по себе прекратили выпуск сюжетных игр. Это слишком сильное объяснение коллективной истории. Они изменили одно из условий выбора. Рядом действовали новые технологии, интересы сотрудников, состояние проектов и высокая планка самого Ньюэлла.</p>
+<p>Но именно изменение условий делает следующую главу необходимой. Успешная система создаёт возможность дольше искать. Как понять, когда поиск продуктивен, а когда компания просто перестала принимать окончательное решение?</p>
+<h2 id="36-2010-">36. К началу 2010-х Ньюэлл получил другой масштаб работы<a class="headerlink" href="#36-2010-" title="Permanent link">¶</a></h2>
+<p>В конце 1990-х он строил студию, способную выпустить сильную игру. Через несколько лет ему приходилось думать о доступе к библиотеке, постоянном обслуживании пользователей, внешних авторах и правилах среды, в которой другие компании ведут свой бизнес.</p>
+<p>Параллельно менялось личное участие. Сильный голос помогал завершить спор по Portal и мог мешать обычному обсуждению, как позднее вспоминал Уэйер. Убеждённый критик PS3 договаривался с Sony о полезных функциях. Игрок в Dota оказывался рядом с людьми, чьей экспертизы не заменяла должность основателя. Экономический эксперимент заставлял его признать, что удачный результат пока не имеет хорошего объяснения.</p>
+<p>Это уже более сложный человек, чем основатель, однажды спасший Half-Life переносом. Он обладает большим влиянием и встречает больше ситуаций, где это влияние нельзя применить одинаково. Иногда нужно настоять, иногда договориться, иногда дать коллегам говорить без него, иногда признать недостаточность собственной модели.</p>
+<p>Steam расширила его свободу и одновременно ответственность. Компания стала полезнее гораздо большему числу людей, но её решения теперь затрагивали чужие продукты, доходы и доступ. Внутренняя автономия тоже требовала новых способов координации.</p>
+<p>Следующая глава вернётся к кризису Half-Life 2 и затем проследит несколько разных видов неудачи. Там станет видно, почему высокая планка, внимание к данным и финансовая самостоятельность не складываются в автоматическую защиту от ошибок — и почему завершение Alyx заслуживает рассмотрения рядом с исчезнувшей Episode Three.</p>
+<p><a id="sources"></a></p>
+<h2 id="_1">Источники и уточнения<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>История организации построена по опорным состояниям, а не по вымышленной непрерывной последовательности реформ. Handbook 2012 года — самоописание компании этого периода. Он раскрывает заявленные механизмы, но не доказывает их одинаковую работу во всех командах и во все годы.</p>
+<p>Рассказ Фализека о Portal и воспоминание Уэйера опубликованы в 2026 году и относятся к более ранней Valve. У первого не назван инициатор спорной идеи; у второго не установлена точная дата изменения участия Ньюэлла. Художественная оценка тона Portal отделена от дословной речи участников.</p>
+<p>Пиратство, российский рынок, распродажи и free-to-play рассмотрены в рамках высказываний 2011 года. Экономические цифры не превращены в универсальные законы. Авторы модификаций, руководители проектов и инженеры сохранены как самостоятельные участники, а не как иллюстрации исключительного авторства основателя.</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:handbook">
+<p>Valve, <a href="https://media.steampowered.com/apps/valve/Valve_Handbook_LowRes.pdf">Handbook for New Employees</a>, март 2012. Корпоративное самоописание структуры и хронологии. <a class="footnote-backref" href="#fnref:handbook" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2:handbook" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref3:handbook" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref4:handbook" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref5:handbook" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref6:handbook" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref7:handbook" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref8:handbook" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:tf-history">
+<p>Valve, <a href="https://media.steampowered.com/apps/valve/Valve_Handbook_LowRes.pdf">Handbook for New Employees</a>, хронология: приобретение TeamFortress Software в 1998. <a class="footnote-backref" href="#fnref:tf-history" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:cs-history">
+<p>GameSpot, <a href="https://www.gamespot.com/articles/dust-to-dust-the-history-of-counter-strike/1100-6419676/">Dust to Dust: The History of Counter-Strike</a>, 2014. <a class="footnote-backref" href="#fnref:cs-history" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref2:cs-history" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref3:cs-history" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref4:cs-history" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:cs20">
+<p>PC Gamer, <a href="https://www.pcgamer.com/counter-strike-10-was-released-20-years-ago-today/">Counter-Strike 1.0 is 20 years old</a>, ноябрь 2020. <a class="footnote-backref" href="#fnref:cs20" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:steam2002">
+<p>GameSpot, <a href="https://www.gamespot.com/articles/gdc-2002-valve-unveils-steam/1100-2857298/">GDC 2002: Valve unveils Steam</a>, март 2002. <a class="footnote-backref" href="#fnref:steam2002" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref2:steam2002" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref3:steam2002" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:wp-organization">
+<p>Andrea Peterson, The Washington Post, <a href="https://www.washingtonpost.com/news/the-switch/wp/2014/01/03/gabe-newell-on-what-makes-valve-tick/">Gabe Newell on what makes Valve tick</a>, 3 января 2014. <a class="footnote-backref" href="#fnref:wp-organization" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref2:wp-organization" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:final-hours-hl2">
+<p>Geoff Keighley, GameSpot, <a href="https://www.gamespot.com/articles/the-final-hours-of-half-life-2/1100-6112889/">The Final Hours of Half-Life 2</a>, первоначальная публикация 12 ноября 2004. <a class="footnote-backref" href="#fnref:final-hours-hl2" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref2:final-hours-hl2" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref3:final-hours-hl2" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref4:final-hours-hl2" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+<li id="fn:monica-pcg">
+<p>PC Gamer, <a href="https://www.pcgamer.com/games/fps/theres-an-alternate-universe-where-half-life-disappeared-after-release-valves-first-marketing-strategist-monica-harrington-says-she-helped-navigate-its-way-out-of-early-disaster/">“There’s an alternate universe where Half-Life disappeared after release”…</a>, 13 сентября 2024. <a class="footnote-backref" href="#fnref:monica-pcg" title="Jump back to footnote 8 in the text">↩</a></p>
+</li>
+<li id="fn:steam-about">
+<p>Valve, <a href="https://www.valvesoftware.com/en/about">About Us</a>. Официальное актуальное описание направлений компании. <a class="footnote-backref" href="#fnref:steam-about" title="Jump back to footnote 9 in the text">↩</a><a class="footnote-backref" href="#fnref2:steam-about" title="Jump back to footnote 9 in the text">↩</a></p>
+</li>
+<li id="fn:hl25">
+<p>Valve / Secret Tape, <a href="https://www.half-life.com/en/halflife/25th">Half-Life: 25th Anniversary</a> и <a href="https://www.youtube.com/watch?v=TbZ3HzvFEto">документальный фильм</a>, ноябрь 2023. Ретроспективные свидетельства о разработке первой Half-Life. <a class="footnote-backref" href="#fnref:hl25" title="Jump back to footnote 10 in the text">↩</a></p>
+</li>
+<li id="fn:portal-gore">
+<p>GamesRadar+, <a href="https://www.gamesradar.com/games/puzzle/portal-couldve-had-a-bunch-of-gore-and-dead-bodies-if-one-dev-had-his-way-says-valve-veteran-but-gabe-newell-considered-it-the-stupidest-question-ever/">Portal could’ve had “a bunch of gore and dead bodies”…</a>, 18 сентября 2026, по позднему рассказу Chet Faliszek. <a class="footnote-backref" href="#fnref:portal-gore" title="Jump back to footnote 11 in the text">↩</a><a class="footnote-backref" href="#fnref2:portal-gore" title="Jump back to footnote 11 in the text">↩</a></p>
+</li>
+<li id="fn:weier">
+<p>GamesRadar+, <a href="https://www.gamesradar.com/games/gabe-newell-stepped-back-from-making-games-at-valve-after-portal-2-because-everyone-kept-agreeing-with-him-when-he-wanted-to-be-part-of-the-team-and-come-up-with-ideas/">Gabe Newell “stepped back” from making games at Valve after Portal 2…</a>, 1 апреля 2026, по воспоминаниям Josh Weier. <a class="footnote-backref" href="#fnref:weier" title="Jump back to footnote 12 in the text">↩</a></p>
+</li>
+<li id="fn:sony-2011">
+<p>Game Developer, <a href="https://www.gamedeveloper.com/game-platforms/-i-portal-2-i-ps3-has-cross-platform-multiplayer-free-pc-version">Portal 2 PS3 Has Cross-Platform Multiplayer, Free PC Version</a>, 18 января 2011. <a class="footnote-backref" href="#fnref:sony-2011" title="Jump back to footnote 13 in the text">↩</a><a class="footnote-backref" href="#fnref2:sony-2011" title="Jump back to footnote 13 in the text">↩</a><a class="footnote-backref" href="#fnref3:sony-2011" title="Jump back to footnote 13 in the text">↩</a></p>
+</li>
+<li id="fn:icefrog2009">
+<p>IceFrog, <a href="https://web.archive.org/web/20120723161030/http://www.playdota.com/forums/blog.php?b=264">сообщение о работе с Valve</a>, 5 октября 2009, архив. <a class="footnote-backref" href="#fnref:icefrog2009" title="Jump back to footnote 14 in the text">↩</a></p>
+</li>
+<li id="fn:dota2011">
+<p>PC Gamer, <a href="https://www.pcgamer.com/gabe-newell-on-his-dota-2-obsession-half-life-protests-and-eas-origin/2/">Gabe Newell on his Dota 2 obsession…</a>, интервью 2011. <a class="footnote-backref" href="#fnref:dota2011" title="Jump back to footnote 15 in the text">↩</a></p>
+</li>
+<li id="fn:laidlaw-interview">
+<p>Arcade Attack, <a href="https://www.arcadeattack.co.uk/marc-laidlaw-half-life-3/">Marc Laidlaw — interview</a>, 17 июля 2017. <a class="footnote-backref" href="#fnref:laidlaw-interview" title="Jump back to footnote 16 in the text">↩</a></p>
+</li>
+<li id="fn:piracy2011">
+<p>The Escapist, <a href="https://www.escapistmagazine.com/Valves-Gabe-Newell-Says-Piracy-Is-a-Service-Problem/">Valve’s Gabe Newell Says Piracy Is a Service Problem</a>, 2011, по интервью The Cambridge Student. <a class="footnote-backref" href="#fnref:piracy2011" title="Jump back to footnote 17 in the text">↩</a><a class="footnote-backref" href="#fnref2:piracy2011" title="Jump back to footnote 17 in the text">↩</a></p>
+</li>
+<li id="fn:pricing2011">
+<p>Todd Bishop, GeekWire, <a href="https://www.geekwire.com/2011/experiments-video-game-economics-valves-gabe-newell/">How Valve experiments with the economics of video games</a>, 23 октября 2011. <a class="footnote-backref" href="#fnref:pricing2011" title="Jump back to footnote 18 in the text">↩</a><a class="footnote-backref" href="#fnref2:pricing2011" title="Jump back to footnote 18 in the text">↩</a><a class="footnote-backref" href="#fnref3:pricing2011" title="Jump back to footnote 18 in the text">↩</a><a class="footnote-backref" href="#fnref4:pricing2011" title="Jump back to footnote 18 in the text">↩</a></p>
+</li>
+<li id="fn:tf2f2p">
+<p>PC Gamer, <a href="https://www.pcgamer.com/team-fortress-2-free-to-play-shift-increased-player-base-by-a-factor-of-five-says-newell/">Team Fortress 2 free-to-play shift increased player base “by a factor of five”</a>, 2011. <a class="footnote-backref" href="#fnref:tf2f2p" title="Jump back to footnote 19 in the text">↩</a></p>
+</li>
+<li id="fn:steamworks-launch">
+<p>Valve, <a href="https://partner.steamgames.com/doc/home">Steamworks Documentation</a> и хронология в <a href="https://media.steampowered.com/apps/valve/Valve_Handbook_LowRes.pdf">Valve Handbook</a>. Steamworks представлен в 2008. <a class="footnote-backref" href="#fnref:steamworks-launch" title="Jump back to footnote 20 in the text">↩</a></p>
+</li>
+<li id="fn:forbes-2024">
+<p>Stephen Pastis, Forbes, <a href="https://www.forbes.com/sites/stephenpastis/2024/10/21/how-valve-founder-gabe-newell-built-one-of-the-worlds-most-profitable-videogame-companies/">How Valve Founder Gabe Newell Built One Of The World’s Most Profitable Videogame Companies</a>, 21 октября 2024; <a href="https://www.forbes.com.au/covers/magazine/how-valve-founder-gabe-newell-turned-half-life-into-a-nearly-10-billion-fortune/">Forbes Australia</a>. Доля 50,1% — оценка Forbes. <a class="footnote-backref" href="#fnref:forbes-2024" title="Jump back to footnote 21 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка" class="md-footer__link md-footer__link--prev" href="../gabe-newell-04-half-life-first-test/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Гейб Ньюэлл — Глава 6. Ошибки, кризисы и способность закончить" class="md-footer__link md-footer__link--next" href="../gabe-newell-06-failures-crises-evolution/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 6. Ошибки, кризисы и способность закончить
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,3500 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://lirikonov.github.io/knowledge/games/people/Gabe%20Newell/gabe-newell-06-failures-crises-evolution/" rel="canonical"/>
+<link href="../gabe-newell-05-from-games-to-platform/" rel="prev"/>
+<link href="../gabe-newell-07-platform-independence-linux-vr-hardware/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Гейб Ньюэлл — Глава 6. Ошибки, кризисы и изменение самого Ньюэлла - База данных</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#6">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Гейб Ньюэлл — Глава 6. Ошибки, кризисы и изменение самого Ньюэлла
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/Arkane/">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/01-origins-softdisk-keen/">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/02-wolfenstein/">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/03-doom-birth/">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/04-doom-ecosystem/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/05-quake-crisis/">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/06-id-after-romero/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/07-quake2-quake3-middleware/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/08-doom3-aaa/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/09-rage-zenimax-carmack/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/10-doom-rebirth-modern-id/">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/11-legacy-summary/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/12-side-branches/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/MANIFEST/">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/01-origins-steam/">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/02-games-and-engines/">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/03-inside-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/04-hardware-linux-vr/">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/05-modern-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/06-valve-as-institution/">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/07-ecosystem-and-catalog/">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/08-appendices/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/09-sources-and-status/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Engines
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Engines
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../engines/id-tech-branches-01-29/">
+<span class="md-ellipsis">
+    
+  
+    Использование id Tech и все дальнейшие ветки развития у других разработчиков
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom/">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom30/">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom3_45-103/">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Quake/">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Spider-Man/">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom4-eternal/">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom_eternal_51-80/">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3_8" id="__nav_1_3_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_3_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/01-origins-and-development/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/02-half-life-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/03-half-life-release-and-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/04-gearbox-and-consoles/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/05-half-life-2-development-and-tech/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/06-half-life-2-world-and-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/07-half-life-2-beta-release/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/08-episodes/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/09-half-life-3-and-cancelled-projects/">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/10-vr-and-alyx-development/">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/11-half-life-alyx-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/12-modding-and-community/">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/13-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/14-audio/">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/15-how-valve-makes-half-life/">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/16-movement-and-speedrunning/">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/17-half-life-and-film/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/CHANGES/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Carmack/">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Romero/">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_4" id="__nav_1_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe Newell
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe Newell
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-02-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-03-doom-quake-valve/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-05-from-games-to-platform/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и изменение самого Ньюэлла
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и изменение самого Ньюэлла
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-half-life">
+<span class="md-ellipsis">
+      
+        1. После первого Half-Life Ньюэлл получил опасно сильное подтверждение собственной модели
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-half-life-2">
+<span class="md-ellipsis">
+      
+        2. Half-Life 2 — ставка сразу на несколько неизвестных
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-physics-gameplay-benchmark">
+<span class="md-ellipsis">
+      
+        3. Physics должна была стать gameplay, а не benchmark
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-2003-valve">
+<span class="md-ellipsis">
+      
+        4. Весна 2003 года — Ньюэлл делает то, чего поздняя Valve будет почти панически избегать
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      
+        5. Почему он вообще назвал дату
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-polished-demo-game">
+<span class="md-ellipsis">
+      
+        6. Polished demo ≠ готовая game
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-founder">
+<span class="md-ellipsis">
+      
+        7. Комната уже знала то, чего не хотел знать founder
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8">
+<span class="md-ellipsis">
+      
+        8. Можно было вырезать половину — Ньюэлл отказался
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-2003-delay">
+<span class="md-ellipsis">
+      
+        9. Главная ошибка 2003 года — не delay
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-i-was-just-dumb">
+<span class="md-ellipsis">
+      
+        10. «I was just dumb»
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-alcatraz">
+<span class="md-ellipsis">
+      
+        11. Alcatraz — почти идеальный символ ошибки
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-valve">
+<span class="md-ellipsis">
+      
+        12. Поздняя секретность Valve имеет рациональное происхождение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-valve">
+<span class="md-ellipsis">
+      
+        13. А затем становится ещё хуже: Valve взламывают
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14">
+<span class="md-ellipsis">
+      
+        14. Взлом начался до публичной утечки
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-ever-have-one-of-those-weeks">
+<span class="md-ellipsis">
+      
+        15. «Ever have one of those weeks?»
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16-community">
+<span class="md-ellipsis">
+      
+        16. Community действительно помогла расследованию
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17-leak-delay">
+<span class="md-ellipsis">
+      
+        17. Leak не был причиной исходного delay
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18-build-linear-development">
+<span class="md-ellipsis">
+      
+        18. Утёкший build разрушил ещё одну иллюзию — linear development
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19-axel-gembe-job-interview-valve">
+<span class="md-ellipsis">
+      
+        19. Axel Gembe и самое абсурдное job interview в истории Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20-security-survival">
+<span class="md-ellipsis">
+      
+        20. Security становится частью survival
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-half-life-2-">
+<span class="md-ellipsis">
+      
+        21. Half-Life 2 всё-таки выходит — и снова награждает опасное поведение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-half-life-2-self-criticism">
+<span class="md-ellipsis">
+      
+        22. Half-Life 2 дала Ньюэллу новый тип self-criticism
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-steam-users">
+<span class="md-ellipsis">
+      
+        23. Ранний Steam — правильная гипотеза, ужасная реализация для многих users
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24-denial">
+<span class="md-ellipsis">
+      
+        24. Где провести границу между упорством и denial
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25-windows-8">
+<span class="md-ellipsis">
+      
+        25. Windows 8 — структурный страх оказался сильнее точности прогноза
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#26-windows-8">
+<span class="md-ellipsis">
+      
+        26. Windows 8 показывает характерную ошибку Ньюэлла
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#27-catastrophe-hedge">
+<span class="md-ellipsis">
+      
+        27. Он не обязан быть прав насчёт catastrophe, чтобы hedge был рациональным
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#28-steam-machines-consumer-answer">
+<span class="md-ellipsis">
+      
+        28. Steam Machines — правильная проблема, слабый consumer answer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#29-steam-machines">
+<span class="md-ellipsis">
+      
+        29. Что именно сломалось в Steam Machines
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#30-steam-controller-miniature">
+<span class="md-ellipsis">
+      
+        30. Steam Controller показывает ту же ошибку в miniature
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-steam-machines-openness">
+<span class="md-ellipsis">
+      
+        31. Главный урок Steam Machines: openness — не готовое преимущество для пользователя
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-newell-response-failure">
+<span class="md-ellipsis">
+      
+        32. Типичный Newell response на failure: сохранить работающие слои
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33">
+<span class="md-ellipsis">
+      
+        33. Но такая философия имеет опасную обратную сторону
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#34-paid-skyrim-mods">
+<span class="md-ellipsis">
+      
+        34. Paid Skyrim mods — экономическая логика сталкивается с социальной системой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#35-community">
+<span class="md-ellipsis">
+      
+        35. Реакция community была мгновенной
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#36-thesis-exit-condition">
+<span class="md-ellipsis">
+      
+        36. Ньюэлл защищает thesis, но оставляет exit condition
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#37-underlying-idea">
+<span class="md-ellipsis">
+      
+        37. Но underlying idea остаётся
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#38">
+<span class="md-ellipsis">
+      
+        38. Это может быть достоинством — и формой упрямства
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#39-episode-three-problem-polish">
+<span class="md-ellipsis">
+      
+        39. Episode Three — максимализм встречается с problem, которую нельзя решить ещё одним годом polish
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#40-episode-three-half-life-3-project">
+<span class="md-ellipsis">
+      
+        40. Episode Three и Half-Life 3 — не один двадцатилетний project
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-gravity-gun-moment">
+<span class="md-ellipsis">
+      
+        41. «Gravity Gun moment»
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-activation-barrier">
+<span class="md-ellipsis">
+      
+        42. Максимализм превращается в activation barrier
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-counterargument">
+<span class="md-ellipsis">
+      
+        43. Важный counterargument к Ньюэллу
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#44-2024-failure">
+<span class="md-ellipsis">
+      
+        44. В 2024 году Ньюэлл формулирует это как собственный failure
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#45-failure">
+<span class="md-ellipsis">
+      
+        45. Даже признавая failure, он не отказывается от принципа
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#46-self-model">
+<span class="md-ellipsis">
+      
+        46. Эволюция self-model Ньюэлла
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#47">
+<span class="md-ellipsis">
+      
+        47. Он не стал менее рискованным
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#48-failure-information-system">
+<span class="md-ellipsis">
+      
+        48. Failure становится частью information system
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#49-private-valve">
+<span class="md-ellipsis">
+      
+        49. Почему private Valve делает этот стиль вообще возможным
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#50">
+<span class="md-ellipsis">
+      
+        50. Право дорого ошибаться становится сознательной частью модели
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51">
+<span class="md-ellipsis">
+      
+        51. Но система плохо отличает смелость от отсутствия дисциплины
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52">
+<span class="md-ellipsis">
+      
+        52. Главный личный урок — быть правым «в целом» недостаточно
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-07-platform-independence-linux-vr-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Windows, Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Сам Ньюэлл: семья, игры, здоровье, образование и публичный образ
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_5" id="__nav_1_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe newell revised 10 chapters
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe newell revised 10 chapters
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-02-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-03-doom-quake-valve/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-05-from-games-to-platform/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-06-failures-crises-evolution/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и способность закончить
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-07-platform-independence-linux-vr-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Семья, игры, здоровье и человек за именем GabeN
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gabe-newell-revised-10-chapters/gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5_1" id="__nav_1_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_5_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam2/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2 — очищенный дамп исследования
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-half-life">
+<span class="md-ellipsis">
+      
+        1. После первого Half-Life Ньюэлл получил опасно сильное подтверждение собственной модели
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-half-life-2">
+<span class="md-ellipsis">
+      
+        2. Half-Life 2 — ставка сразу на несколько неизвестных
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-physics-gameplay-benchmark">
+<span class="md-ellipsis">
+      
+        3. Physics должна была стать gameplay, а не benchmark
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-2003-valve">
+<span class="md-ellipsis">
+      
+        4. Весна 2003 года — Ньюэлл делает то, чего поздняя Valve будет почти панически избегать
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      
+        5. Почему он вообще назвал дату
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-polished-demo-game">
+<span class="md-ellipsis">
+      
+        6. Polished demo ≠ готовая game
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-founder">
+<span class="md-ellipsis">
+      
+        7. Комната уже знала то, чего не хотел знать founder
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8">
+<span class="md-ellipsis">
+      
+        8. Можно было вырезать половину — Ньюэлл отказался
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-2003-delay">
+<span class="md-ellipsis">
+      
+        9. Главная ошибка 2003 года — не delay
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-i-was-just-dumb">
+<span class="md-ellipsis">
+      
+        10. «I was just dumb»
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-alcatraz">
+<span class="md-ellipsis">
+      
+        11. Alcatraz — почти идеальный символ ошибки
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-valve">
+<span class="md-ellipsis">
+      
+        12. Поздняя секретность Valve имеет рациональное происхождение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-valve">
+<span class="md-ellipsis">
+      
+        13. А затем становится ещё хуже: Valve взламывают
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14">
+<span class="md-ellipsis">
+      
+        14. Взлом начался до публичной утечки
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-ever-have-one-of-those-weeks">
+<span class="md-ellipsis">
+      
+        15. «Ever have one of those weeks?»
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16-community">
+<span class="md-ellipsis">
+      
+        16. Community действительно помогла расследованию
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17-leak-delay">
+<span class="md-ellipsis">
+      
+        17. Leak не был причиной исходного delay
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18-build-linear-development">
+<span class="md-ellipsis">
+      
+        18. Утёкший build разрушил ещё одну иллюзию — linear development
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19-axel-gembe-job-interview-valve">
+<span class="md-ellipsis">
+      
+        19. Axel Gembe и самое абсурдное job interview в истории Valve
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20-security-survival">
+<span class="md-ellipsis">
+      
+        20. Security становится частью survival
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-half-life-2-">
+<span class="md-ellipsis">
+      
+        21. Half-Life 2 всё-таки выходит — и снова награждает опасное поведение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-half-life-2-self-criticism">
+<span class="md-ellipsis">
+      
+        22. Half-Life 2 дала Ньюэллу новый тип self-criticism
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-steam-users">
+<span class="md-ellipsis">
+      
+        23. Ранний Steam — правильная гипотеза, ужасная реализация для многих users
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24-denial">
+<span class="md-ellipsis">
+      
+        24. Где провести границу между упорством и denial
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25-windows-8">
+<span class="md-ellipsis">
+      
+        25. Windows 8 — структурный страх оказался сильнее точности прогноза
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#26-windows-8">
+<span class="md-ellipsis">
+      
+        26. Windows 8 показывает характерную ошибку Ньюэлла
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#27-catastrophe-hedge">
+<span class="md-ellipsis">
+      
+        27. Он не обязан быть прав насчёт catastrophe, чтобы hedge был рациональным
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#28-steam-machines-consumer-answer">
+<span class="md-ellipsis">
+      
+        28. Steam Machines — правильная проблема, слабый consumer answer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#29-steam-machines">
+<span class="md-ellipsis">
+      
+        29. Что именно сломалось в Steam Machines
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#30-steam-controller-miniature">
+<span class="md-ellipsis">
+      
+        30. Steam Controller показывает ту же ошибку в miniature
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31-steam-machines-openness">
+<span class="md-ellipsis">
+      
+        31. Главный урок Steam Machines: openness — не готовое преимущество для пользователя
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-newell-response-failure">
+<span class="md-ellipsis">
+      
+        32. Типичный Newell response на failure: сохранить работающие слои
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33">
+<span class="md-ellipsis">
+      
+        33. Но такая философия имеет опасную обратную сторону
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#34-paid-skyrim-mods">
+<span class="md-ellipsis">
+      
+        34. Paid Skyrim mods — экономическая логика сталкивается с социальной системой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#35-community">
+<span class="md-ellipsis">
+      
+        35. Реакция community была мгновенной
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#36-thesis-exit-condition">
+<span class="md-ellipsis">
+      
+        36. Ньюэлл защищает thesis, но оставляет exit condition
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#37-underlying-idea">
+<span class="md-ellipsis">
+      
+        37. Но underlying idea остаётся
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#38">
+<span class="md-ellipsis">
+      
+        38. Это может быть достоинством — и формой упрямства
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#39-episode-three-problem-polish">
+<span class="md-ellipsis">
+      
+        39. Episode Three — максимализм встречается с problem, которую нельзя решить ещё одним годом polish
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#40-episode-three-half-life-3-project">
+<span class="md-ellipsis">
+      
+        40. Episode Three и Half-Life 3 — не один двадцатилетний project
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#41-gravity-gun-moment">
+<span class="md-ellipsis">
+      
+        41. «Gravity Gun moment»
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#42-activation-barrier">
+<span class="md-ellipsis">
+      
+        42. Максимализм превращается в activation barrier
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#43-counterargument">
+<span class="md-ellipsis">
+      
+        43. Важный counterargument к Ньюэллу
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#44-2024-failure">
+<span class="md-ellipsis">
+      
+        44. В 2024 году Ньюэлл формулирует это как собственный failure
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#45-failure">
+<span class="md-ellipsis">
+      
+        45. Даже признавая failure, он не отказывается от принципа
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#46-self-model">
+<span class="md-ellipsis">
+      
+        46. Эволюция self-model Ньюэлла
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#47">
+<span class="md-ellipsis">
+      
+        47. Он не стал менее рискованным
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#48-failure-information-system">
+<span class="md-ellipsis">
+      
+        48. Failure становится частью information system
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#49-private-valve">
+<span class="md-ellipsis">
+      
+        49. Почему private Valve делает этот стиль вообще возможным
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#50">
+<span class="md-ellipsis">
+      
+        50. Право дорого ошибаться становится сознательной частью модели
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#51">
+<span class="md-ellipsis">
+      
+        51. Но система плохо отличает смелость от отсутствия дисциплины
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#52">
+<span class="md-ellipsis">
+      
+        52. Главный личный урок — быть правым «в целом» недостаточно
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="6">Гейб Ньюэлл — Глава 6. Ошибки, кризисы и изменение самого Ньюэлла<a class="headerlink" href="#6" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>2000-е–2010-е: период, когда максимализм Ньюэлла перестал приносить только красивые победы. Half-Life 2 показала цену плохого production judgment, взлом Valve — цену технологической самоуверенности, ранний Steam — разницу между правильной гипотезой и плохой реализацией, Windows 8 — склонность Ньюэлла верно видеть структурный риск, но переоценивать ближайший масштаб угрозы, Steam Machines — недостаточность одной только openness, paid mods — конфликт между экономической логикой и социальной реальностью, а Episode Three — предел его собственного требования «каждая Half-Life должна двигать medium вперёд».</p>
+</blockquote>
+<hr/>
+<h2 id="1-half-life">1. После первого Half-Life Ньюэлл получил опасно сильное подтверждение собственной модели<a class="headerlink" href="#1-half-life" title="Permanent link">¶</a></h2>
+<p>К 2000 году у Гейба Ньюэлла уже был набор событий, который мог сделать почти любого founder-а чрезвычайно уверенным в собственном judgment.</p>
+<div class="highlight"><pre><span></span><code>ушёл из Microsoft
+↓
+оказался прав
+
+пошёл в games
+↓
+оказался прав
+
+лицензировал чужой engine
+↓
+оказался прав
+
+не выпустил Half-Life в 1997
+↓
+оказался прав
+
+заплатил за delay сам
+↓
+оказался прав
+
+доверил design сильной team
+↓
+оказался прав
+</code></pre></div>
+<p>Half-Life стала огромным успехом.</p>
+<p>Одновременно Mike Harrington — единственный человек с равным founder/ownership status — ушёл из Valve.</p>
+<p>То есть новая фаза начинается при очень специфических условиях:</p>
+<div class="highlight"><pre><span></span><code>у Ньюэлла
+намного больше уверенности
+
+И
+
+намного меньше
+равного institutional counterweight
+</code></pre></div>
+<p>Важно не превращать это в простую причинность: Harrington ушёл — и поэтому Newell начал ошибаться. Доказательств такого вывода нет. Но структурно всё действительно изменилось.</p>
+<p>Следующая крупная ставка Valve будет намного сложнее первой. И впервые максимализм Ньюэлла столкнётся не с проблемой качества продукта, а с ограничениями <strong>масштаба, schedule и собственной способности оценить состояние проекта</strong>.</p>
+<hr/>
+<h2 id="2-half-life-2">2. Half-Life 2 — ставка сразу на несколько неизвестных<a class="headerlink" href="#2-half-life-2" title="Permanent link">¶</a></h2>
+<p>После Half-Life можно было сделать относительно безопасный sequel:</p>
+<div class="highlight"><pre><span></span><code>тот же foundation
++
+новые levels
++
+лучше graphics
++
+новая story
+</code></pre></div>
+<p>Ньюэлла такой путь не устраивал.</p>
+<p>Half-Life 2 должна была оправдать своё существование не только как sequel. Она должна была снова открыть новое пространство взаимодействия: physics, более сложная animation, characters, vehicles, новый renderer, новый toolchain, более реактивный world и новый engine generation.</p>
+<p>И всё это строилось одновременно.</p>
+<div class="highlight"><pre><span></span><code>GAME
+строится
+
+ОДНОВРЕМЕННО
+
+с ENGINE,
+который ещё меняется
+</code></pre></div>
+<p>Это чрезвычайно опасная production architecture. Если engine team меняет physics, level design может потребовать переделки. Если game design требует новой mechanic, engine получает новую requirement. Если tools нестабильны, content production замедляется.</p>
+<p>Для отдельной истории Half-Life это огромная тема. Для биографии Ньюэлла важнее другое: <strong>он снова выбрал максимальный technological scope — но на этот раз переоценил способность организации предсказать, когда весь комплекс будет готов.</strong></p>
+<hr/>
+<h2 id="3-physics-gameplay-benchmark">3. Physics должна была стать gameplay, а не benchmark<a class="headerlink" href="#3-physics-gameplay-benchmark" title="Permanent link">¶</a></h2>
+<p>При всей сложности проекта у Ньюэлла сохранялся очень последовательный product criterion. Его не интересовала technology ради презентации.</p>
+<div class="highlight"><pre><span></span><code>смотрите,
+наш engine умеет physics
+</code></pre></div>
+<p>Technology должна была изменить действие игрока.</p>
+<p>Самый чистый пример — будущая <strong>Gravity Gun</strong>:</p>
+<div class="highlight"><pre><span></span><code>PHYSICS
+↓
+OBJECTS
+↓
+PLAYER TOOL
+↓
+combat
+puzzles
+improvisation
+</code></pre></div>
+<p>Это типичный Newell pattern: новый technological layer должен закончиться новой пользовательской возможностью.</p>
+<p>Поэтому проблема Half-Life 2 была не в том, что Newell бесцельно раздувал technology. Каждая крупная ставка имела product rationale. Проблема в другом: <strong>слишком много разумных, амбициозных и взаимозависимых ставок одновременно</strong>.</p>
+<p>Сильная product logic не отменяет production reality.</p>
+<hr/>
+<h2 id="4-2003-valve">4. Весна 2003 года — Ньюэлл делает то, чего поздняя Valve будет почти панически избегать<a class="headerlink" href="#4-2003-valve" title="Permanent link">¶</a></h2>
+<p>На E3 2003 Half-Life 2 производит огромное впечатление. City 17, Alyx, facial animation, physics, vehicles, Source.</p>
+<p>Для публики message выглядит почти идеально:</p>
+<div class="highlight"><pre><span></span><code>вот next-generation game
+
+И
+
+она выйдет
+30 сентября 2003
+</code></pre></div>
+<p>Главная проблема — Ньюэлл назвал <strong>конкретную дату</strong>.</p>
+<p>Не <code>fall 2003</code>. Не <code>when it's ready</code>.</p>
+<p>А <strong>30 сентября 2003 года</strong>.</p>
+<p>Позднее это станет одним из наиболее болезненных решений его карьеры.</p>
+<hr/>
+<h2 id="5">5. Почему он вообще назвал дату<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<p>Самая удобная ретроспективная версия — <code>marketing заставил обмануть игроков</code> — слишком проста.</p>
+<p>Поздние рассказы о разработке показывают другую и более интересную проблему: <strong>Ньюэлл сам поверил в schedule</strong>.</p>
+<p>Ошибка не была прежде всего моральной:</p>
+<div class="highlight"><pre><span></span><code>знал правду
+↓
+сознательно соврал
+</code></pre></div>
+<p>Ошибка была epistemic:</p>
+<div class="highlight"><pre><span></span><code>неправильно понял
+реальное состояние
+собственного проекта
+</code></pre></div>
+<p>И это особенно иронично для человека, который так много думал об information flow.</p>
+<hr/>
+<h2 id="6-polished-demo-game">6. Polished demo ≠ готовая game<a class="headerlink" href="#6-polished-demo-game" title="Permanent link">¶</a></h2>
+<p>E3 build выглядел чрезвычайно убедительно. Но readiness нескольких carefully prepared sequences не равна readiness всей production.</p>
+<div class="highlight"><pre><span></span><code>DEMO
+может быть
+очень polished
+
+НО
+
+FULL GAME
+может оставаться
+нестабильной системой
+</code></pre></div>
+<p>После E3 всё очевиднее становилось, что task lists неполны, dialogue и localisation требуют работы, tools нестабильны, разные systems ещё не интегрированы, content production не успевает, а September date становится фантастикой.</p>
+<p>Здесь появляется один из важнейших антиуроков всей карьеры Ньюэлла: <strong>локально убедительный сигнал способен создать ложную уверенность в состоянии всей системы</strong>.</p>
+<p>Первая Half-Life уже научила:</p>
+<div class="highlight"><pre><span></span><code>GOOD PARTS
+≠
+GOOD WHOLE
+</code></pre></div>
+<p>Half-Life 2 добавила:</p>
+<div class="highlight"><pre><span></span><code>GOOD DEMO
+≠
+READY PRODUCT
+</code></pre></div>
+<hr/>
+<h2 id="7-founder">7. Комната уже знала то, чего не хотел знать founder<a class="headerlink" href="#7-founder" title="Permanent link">¶</a></h2>
+<p>В поздних ретроспективах встречается очень характерный эпизод. На внутренней встрече Ньюэлл продолжает говорить о 30 сентября, а люди вокруг избегают взгляда или смотрят куда-то вверх.</p>
+<p>Сам по себе эпизод почти комичен. Но для его биографии он очень важен.</p>
+<p>Newell годами формулировал проблему hierarchy так:</p>
+<div class="highlight"><pre><span></span><code>человек наверху
+получает
+хуже information
+чем люди рядом
+с реальной problem
+</code></pre></div>
+<p>И теперь эта проблема случается <strong>с ним самим</strong>.</p>
+<div class="highlight"><pre><span></span><code>DEVELOPERS
+↓
+понимают:
+schedule не работает
+
+FOUNDER
+↓
+ещё цепляется
+за публичную дату
+</code></pre></div>
+<p>Даже в компании, которая старается уменьшать formal hierarchy, ownership и founder authority всё равно способны искажать information flow.</p>
+<p>Flatness не отменяет человеческую психологию.</p>
+<hr/>
+<h2 id="8">8. Можно было вырезать половину — Ньюэлл отказался<a class="headerlink" href="#8" title="Permanent link">¶</a></h2>
+<p>Когда schedule начинает рушиться, возникает очевидный production lever: <strong>cut scope</strong>.</p>
+<p>Можно убрать vehicles, сложные sequences, часть систем и некоторые технологические цели. Это могло приблизить игру к обещанной дате.</p>
+<p>Но тогда Ньюэлл сталкивается с конфликтом собственных принципов.</p>
+<div class="highlight"><pre><span></span><code>ПРИНЦИП 1:
+обещанная дата
+должна что-то значить
+
+ПРИНЦИП 2:
+Half-Life 2
+должна иметь reason to exist
+</code></pre></div>
+<p>Когда оба одновременно выполнить невозможно, Newell снова выбирает <strong>product over date</strong>.</p>
+<p>В этом смысле он остаётся последовательным. Проблема в том, что дата уже была публично обещана.</p>
+<p>То есть quality decision снова может быть правильным — но management/communication decision уже провален.</p>
+<hr/>
+<h2 id="9-2003-delay">9. Главная ошибка 2003 года — не delay<a class="headerlink" href="#9-2003-delay" title="Permanent link">¶</a></h2>
+<p>Сам факт задержки Half-Life 2 для Ньюэлла позднее не был главным позором.</p>
+<p>Главная проблема: <strong>он слишком долго не признавал публично то, что внутри компании уже становилось очевидно</strong>.</p>
+<p>К середине 2003 года September release выглядел практически нереальным. Но официальное признание delay пришло чрезвычайно поздно.</p>
+<p>Ньюэлл позднее описывал собственное состояние словом, близким к <code>paralysis</code>.</p>
+<div class="highlight"><pre><span></span><code>старая дата уже не работает
++
+новой честной даты нет
+↓
+зависание
+</code></pre></div>
+<p>Вместо простого:</p>
+<div class="highlight"><pre><span></span><code>мы ошиблись
+и пока не знаем,
+когда закончим
+</code></pre></div>
+<p>organization слишком долго сохраняет ambiguity.</p>
+<p>Это один из редких случаев, когда поздний Newell говорит о собственной ошибке без попытки спрятать её за красивой philosophy.</p>
+<hr/>
+<h2 id="10-i-was-just-dumb">10. «I was just dumb»<a class="headerlink" href="#10-i-was-just-dumb" title="Permanent link">¶</a></h2>
+<p>В поздних воспоминаниях Newell очень жёстко оценивал именно собственное поведение вокруг даты.</p>
+<p>Не <code>market был сложный</code>, не <code>publisher виноват</code>, не <code>team дала плохие estimates</code>.</p>
+<p>По смыслу: <strong>я просто поступил глупо</strong>.</p>
+<p>Для биографии это важный шаг.</p>
+<p>В 1997 lesson был:</p>
+<div class="highlight"><pre><span></span><code>я не доверился deadline
+↓
+и оказался прав
+</code></pre></div>
+<p>В 2003 lesson становится сложнее:</p>
+<div class="highlight"><pre><span></span><code>quality &gt; deadline
+по-прежнему может быть верно
+
+НО
+
+это не оправдывает
+плохую оценку schedule
+и плохую коммуникацию
+</code></pre></div>
+<p>Хороший product instinct не делает человека автоматически хорошим production forecaster.</p>
+<hr/>
+<h2 id="11-alcatraz">11. Alcatraz — почти идеальный символ ошибки<a class="headerlink" href="#11-alcatraz" title="Permanent link">¶</a></h2>
+<p>Особенно болезненной история стала потому, что вокруг обещанной даты уже существовала внешняя machinery.</p>
+<p>ATI готовила большое событие на <strong>Alcatraz</strong>.</p>
+<p>30 сентября — день, когда game должна была выйти.</p>
+<p>Game не вышла.</p>
+<p>А Newell всё равно оказался перед прессой и партнёрами.</p>
+<div class="highlight"><pre><span></span><code>RELEASE EVENT
+↓
+RELEASE НЕТ
+</code></pre></div>
+<p>Для человека, который ненавидит meaningless corporate rituals, это особенно жёсткая ситуация: он сам создал ритуал вокруг даты, которой продукт не соответствовал.</p>
+<p>Неудивительно, что поздняя Valve станет чрезвычайно осторожной с announcements.</p>
+<hr/>
+<h2 id="12-valve">12. Поздняя секретность Valve имеет рациональное происхождение<a class="headerlink" href="#12-valve" title="Permanent link">¶</a></h2>
+<p>Много лет users будут раздражаться:</p>
+<div class="highlight"><pre><span></span><code>почему Valve
+ничего не говорит?
+
+где game?
+
+почему нет dates?
+</code></pre></div>
+<p>История 2003 года объясняет хотя бы часть поведения.</p>
+<p>Public date создаёт downstream commitments: press, retailers, partners, GPU vendors, marketing, users.</p>
+<p>После announcement дата уже не принадлежит только developer-у. Ошибка становится мультипликативной.</p>
+<p>Поэтому поздняя Valve постепенно предпочитает:</p>
+<div class="highlight"><pre><span></span><code>лучше объявить
+поздно
+
+чем
+
+объявить рано
+и потом годами
+объяснять delay
+</code></pre></div>
+<p>Half-Life: Alyx много лет спустя будет почти противоположным launch pattern: reveal в ноябре 2019, release в марте 2020.</p>
+<p>Нельзя свести всю позднюю secrecy Valve к одной ошибке 2003 года. Но этот опыт явно делает её понятнее.</p>
+<hr/>
+<h2 id="13-valve">13. А затем становится ещё хуже: Valve взламывают<a class="headerlink" href="#13-valve" title="Permanent link">¶</a></h2>
+<p>Если сорванная дата была production/communication crisis, почти сразу поверх неё приходит security crisis.</p>
+<div class="highlight"><pre><span></span><code>конец сентября 2003
+↓
+обещанный release
+уже сорван
+
+2 октября
+↓
+в сеть попадает
+source code Half-Life 2
+
+через несколько дней
+↓
+появляется development build
+</code></pre></div>
+<p>Для company, которая строит одновременно game, engine, новую distribution infrastructure и online accounts, это чрезвычайно серьёзный удар.</p>
+<hr/>
+<h2 id="14">14. Взлом начался до публичной утечки<a class="headerlink" href="#14" title="Permanent link">¶</a></h2>
+<p>Valve позднее восстанавливала признаки компрометации задним числом.</p>
+<p>Newell замечал подозрительный доступ к email, странное поведение собственного PC, crashes и признаки того, что кто-то имеет internal access.</p>
+<p>По его публичному breakdown, compromised systems включали keylogging и remote-access mechanisms.</p>
+<p>Самое неприятное: <strong>технически грамотный founder понимал, что что-то не так, но attacker уже находился достаточно глубоко внутри</strong>.</p>
+<p>Microsoft veteran. Software executive. Company строит собственную online platform. И всё равно organization оказывается глубоко скомпрометирована.</p>
+<hr/>
+<h2 id="15-ever-have-one-of-those-weeks">15. «Ever have one of those weeks?»<a class="headerlink" href="#15-ever-have-one-of-those-weeks" title="Permanent link">¶</a></h2>
+<p>Реакция Newell на breach стала одним из наиболее характерных публичных эпизодов его карьеры.</p>
+<p>Вместо стерильного corporate statement он выходит напрямую к community.</p>
+<p>Пост начинается:</p>
+<blockquote>
+<p><strong>Ever have one of those weeks?</strong></p>
+</blockquote>
+<p>После технического описания ситуации — знаменитое:</p>
+<blockquote>
+<p><strong>Well, this sucks.</strong></p>
+</blockquote>
+<p>Он подтверждает подлинность source leak, описывает известные Valve evidence, просит пользователей присылать информацию и открывает прямой канал для leads.</p>
+<p>Практически:</p>
+<div class="highlight"><pre><span></span><code>COMMUNITY
+↓
+crowdsourced incident response
+</code></pre></div>
+<p>Это extreme version идеи, которая уже формировалась через mods: <strong>users — не обязательно пассивная audience</strong>.</p>
+<hr/>
+<h2 id="16-community">16. Community действительно помогла расследованию<a class="headerlink" href="#16-community" title="Permanent link">¶</a></h2>
+<p>Valve получила огромное количество сообщений и leads.</p>
+<p>Newell позднее говорил, что игроки быстро соединяли IRC identities, usernames, relationships, публичные высказывания и технические clues.</p>
+<p>Конечно:</p>
+<div class="highlight"><pre><span></span><code>community investigation
+≠
+официальное доказательство
+</code></pre></div>
+<p>Но как intelligence layer она оказалась полезной.</p>
+<p>Для Newell это ещё одно подтверждение: <strong>distributed user network может обладать knowledge, которого нет у central organization</strong> — даже когда речь уже не о modding, а о security incident.</p>
+<hr/>
+<h2 id="17-leak-delay">17. Leak не был причиной исходного delay<a class="headerlink" href="#17-leak-delay" title="Permanent link">¶</a></h2>
+<p>Это важно фиксировать отдельно.</p>
+<p>Исторически очень удобно объединить события:</p>
+<div class="highlight"><pre><span></span><code>Half-Life 2 задержали
+потому что украли source
+</code></pre></div>
+<p>Нет.</p>
+<p>Valve уже знала, что <strong>30 сентября 2003 года</strong> не работает до публичной утечки.</p>
+<p>Hack отвлёк engineers, потребовал security response, скомпрометировал proprietary technology, ухудшил morale, создал PR disaster и украл дополнительное время. Но исходная production problem существовала независимо.</p>
+<p>Для биографии Ньюэлла это важно, потому что иначе breach превращается в удобное внешнее оправдание его scheduling error.</p>
+<p>Им он не был.</p>
+<hr/>
+<h2 id="18-build-linear-development">18. Утёкший build разрушил ещё одну иллюзию — linear development<a class="headerlink" href="#18-build-linear-development" title="Permanent link">¶</a></h2>
+<p>Когда users увидели development build, часть community решила:</p>
+<div class="highlight"><pre><span></span><code>E3 была fake
+</code></pre></div>
+<p>Public видел polished sequences. Leak показывал placeholders, недоделанные levels, broken systems, cut content и experimental material.</p>
+<p>Но large game development почти никогда не выглядит так:</p>
+<div class="highlight"><pre><span></span><code>январь: 40%
+февраль: 50%
+март: 60%
+</code></pre></div>
+<p>Можно одновременно иметь один sequence на 95%, другой на 20%, нестабильный toolchain и engine feature, работающую только в controlled case.</p>
+<p>Утечка публично показала dirty reality production.</p>
+<p>Newell получил ещё один lesson: <strong>ранний material почти невозможно показать без того, чтобы audience не превратила его в promise</strong>.</p>
+<hr/>
+<h2 id="19-axel-gembe-job-interview-valve">19. Axel Gembe и самое абсурдное job interview в истории Valve<a class="headerlink" href="#19-axel-gembe-job-interview-valve" title="Permanent link">¶</a></h2>
+<p>Ключевым именем расследования стал молодой немецкий hacker <strong>Axel Gembe</strong>.</p>
+<p>Поздние материалы WIRED и FBI описывают почти неправдоподобный эпизод. Человек, связанный с проникновением в Valve, в 2004 году выходит на компанию и фактически хочет работу.</p>
+<p>Valve вместе с law enforcement решает не сразу отталкивать контакт. С Gembe проводят реальное telephone interview. Во время разговора он рассказывает technical details intrusion.</p>
+<div class="highlight"><pre><span></span><code>JOB INTERVIEW
++
+TECHNICAL CONFESSION
+</code></pre></div>
+<p>Планировалась даже возможность пригласить его в США, где law enforcement мог бы его встретить. Этого cinematic arrest не произошло, но сама история прекрасно показывает странность early-Internet era Valve.</p>
+<hr/>
+<h2 id="20-security-survival">20. Security становится частью survival<a class="headerlink" href="#20-security-survival" title="Permanent link">¶</a></h2>
+<p>До Steam security problem может восприниматься как <code>защитить source code</code>.</p>
+<p>После Steam scope намного больше.</p>
+<p>Valve постепенно начинает хранить и обслуживать accounts, purchase records, authentication, inventories, payments, libraries и community identity.</p>
+<p>То есть security становится <strong>частью самого product trust</strong>.</p>
+<p>2003 год был очень ранним и болезненным уроком того, что network company живёт в совершенно другой threat model.</p>
+<p>Интернет даёт Newell:</p>
+<div class="highlight"><pre><span></span><code>distribution
+community
+direct customer relationship
+</code></pre></div>
+<p>И одновременно:</p>
+<div class="highlight"><pre><span></span><code>attack surface
+leaks
+fraud
+account compromise
+</code></pre></div>
+<p>Открытая network environment имеет обе стороны.</p>
+<hr/>
+<h2 id="21-half-life-2-">21. Half-Life 2 всё-таки выходит — и снова награждает опасное поведение<a class="headerlink" href="#21-half-life-2-" title="Permanent link">¶</a></h2>
+<p><strong>16 ноября 2004 года</strong> Half-Life 2 выходит.</p>
+<p>Результат снова выдающийся.</p>
+<div class="highlight"><pre><span></span><code>6 лет development
+↓
+сорванная дата
+↓
+security disaster
+↓
+huge scope
+↓
+всё равно landmark game
+</code></pre></div>
+<p>Организация может вынести очень опасный вывод:</p>
+<div class="highlight"><pre><span></span><code>мы способны
+пережить почти любой
+production chaos,
+если product в конце
+достаточно хорош
+</code></pre></div>
+<p>В каком-то смысле это правда. Но такая правда плохо масштабируется. Не каждый project станет Half-Life 2.</p>
+<hr/>
+<h2 id="22-half-life-2-self-criticism">22. Half-Life 2 дала Ньюэллу новый тип self-criticism<a class="headerlink" href="#22-half-life-2-self-criticism" title="Permanent link">¶</a></h2>
+<p>Первая Half-Life:</p>
+<div class="highlight"><pre><span></span><code>поздно
+↓
+правильно
+</code></pre></div>
+<p>Half-Life 2:</p>
+<div class="highlight"><pre><span></span><code>поздно
+↓
+product decision
+может быть правильным
+
+НО
+
+schedule judgment
+и communication
+могут быть плохими
+</code></pre></div>
+<p>Это гораздо более зрелая модель ошибки.</p>
+<p>Одна вещь может одновременно быть хорошей на product axis и плохой на management axis.</p>
+<hr/>
+<h2 id="23-steam-users">23. Ранний Steam — правильная гипотеза, ужасная реализация для многих users<a class="headerlink" href="#23-steam-users" title="Permanent link">¶</a></h2>
+<p>Параллельно с Half-Life 2 Valve строит Steam.</p>
+<p>Базовая hypothesis Newell:</p>
+<div class="highlight"><pre><span></span><code>software должен
+обновляться автоматически
+
+versions должны
+синхронизироваться
+
+network distribution
+должна стать нормой
+</code></pre></div>
+<p>оказалась чрезвычайно сильной.</p>
+<p>Но early user experience был часто плохим: slow client, server overload, login problems, forced updates, authentication friction и раздражение Counter-Strike community.</p>
+<p>Получается:</p>
+<div class="highlight"><pre><span></span><code>CORRECT DIRECTION
+≠
+GOOD FIRST IMPLEMENTATION
+</code></pre></div>
+<p>Плохой launch не всегда означает, что идея неправильная. Иногда означает, что implementation пока плохая.</p>
+<hr/>
+<h2 id="24-denial">24. Где провести границу между упорством и denial<a class="headerlink" href="#24-denial" title="Permanent link">¶</a></h2>
+<p>В 1997 Newell видит плохой product и меняет direction.</p>
+<p>С ранней Steam users ненавидят часть experience, но он не отказывается от direction.</p>
+<p>Почему?</p>
+<div class="highlight"><pre><span></span><code>Half-Life 1997:
+fundamental experience
+не работает
+
+Steam 2003–2004:
+fundamental model
+кажется правильной
+НО implementation
+пока болезненная
+</code></pre></div>
+<p>Это distinction невозможно сделать алгоритмически.</p>
+<p>Founder может слишком быстро бросить хорошую idea или слишком долго защищать плохую idea.</p>
+<p>Значительная часть карьеры Newell — постоянная попытка определить, какой случай перед ним.</p>
+<hr/>
+<h2 id="25-windows-8">25. Windows 8 — структурный страх оказался сильнее точности прогноза<a class="headerlink" href="#25-windows-8" title="Permanent link">¶</a></h2>
+<p>В <strong>2012 году</strong> Newell называет Windows 8:</p>
+<blockquote>
+<p><strong>a catastrophe for everyone in the PC space.</strong></p>
+</blockquote>
+<p>Полезно разделить два уровня.</p>
+<h3 id="_1">Структурная тревога<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>Microsoft
+контролирует OS
++
+развивает собственный Store
+↓
+Valve как platform
+работает поверх
+чужой platform
+</code></pre></div>
+<p>Если нижний layer становится более закрытым, Steam потенциально зависит от правил competitor-а.</p>
+<h3 id="_2">Конкретный прогноз<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>Newell говорил о возможном уходе top-tier OEMs, уничтожении margins и серьёзном повреждении PC ecosystem.</p>
+<p>В такой форме ближайший апокалипсис <strong>не произошёл</strong>. Windows 8 была спорной и коммерчески проблемной для Microsoft, но не уничтожила open desktop PC.</p>
+<hr/>
+<h2 id="26-windows-8">26. Windows 8 показывает характерную ошибку Ньюэлла<a class="headerlink" href="#26-windows-8" title="Permanent link">¶</a></h2>
+<p>Он часто очень хорошо видит:</p>
+<div class="highlight"><pre><span></span><code>STRUCTURAL INCENTIVE
+</code></pre></div>
+<p>Но может переоценить:</p>
+<div class="highlight"><pre><span></span><code>SPEED
+и
+IMMEDIATE SCALE
+последствий
+</code></pre></div>
+<p><code>OS owner может стать gatekeeper</code> — сильный стратегический insight.</p>
+<p><code>Windows 8 станет катастрофой для всего PC space</code> — слишком сильная near-term формулировка.</p>
+<p>Newell часто мыслит длинными trajectories. Иногда правильно видит direction, но говорит о нём так, будто endpoint почти наступил.</p>
+<hr/>
+<h2 id="27-catastrophe-hedge">27. Он не обязан быть прав насчёт catastrophe, чтобы hedge был рациональным<a class="headerlink" href="#27-catastrophe-hedge" title="Permanent link">¶</a></h2>
+<p>Newell называл Linux strategy <strong>hedging strategy</strong>.</p>
+<p>Insurance не требует:</p>
+<div class="highlight"><pre><span></span><code>катастрофа точно случится
+</code></pre></div>
+<p>Достаточно:</p>
+<div class="highlight"><pre><span></span><code>probability &gt; 0
+И
+impact потенциально
+экзистенциальный
+</code></pre></div>
+<p>Тогда investment в alternative platform может быть рациональным даже если catastrophe не происходит.</p>
+<div class="highlight"><pre><span></span><code>FORECAST:
+частично чрезмерный
+
+STRATEGIC RESPONSE:
+всё равно может быть разумным
+</code></pre></div>
+<p>Это намного сложнее модели <code>Gabe был прав / Gabe был неправ</code>.</p>
+<hr/>
+<h2 id="28-steam-machines-consumer-answer">28. Steam Machines — правильная проблема, слабый consumer answer<a class="headerlink" href="#28-steam-machines-consumer-answer" title="Permanent link">¶</a></h2>
+<p>Следующая крупная неудача особенно важна потому, что Newell <strong>не отказывается от underlying thesis</strong> после провала.</p>
+<p>Проблема:</p>
+<div class="highlight"><pre><span></span><code>Steam слишком зависит
+от Windows
++
+living-room PC experience
+слишком fragmented
+</code></pre></div>
+<p>Valve отвечает:</p>
+<div class="highlight"><pre><span></span><code>SteamOS
++
+Steam Machines
++
+Steam Controller
+</code></pre></div>
+<p>На бумаге logic сильная.</p>
+<p>Но consumer product оказывается слабым.</p>
+<hr/>
+<h2 id="29-steam-machines">29. Что именно сломалось в Steam Machines<a class="headerlink" href="#29-steam-machines" title="Permanent link">¶</a></h2>
+<p>Steam Machines пытались одновременно быть <code>console-like</code> и <code>open PC ecosystem</code>.</p>
+<p>Но openness была реализована через множество OEM configurations.</p>
+<p>Для user это означало:</p>
+<div class="highlight"><pre><span></span><code>какой manufacturer?
+какой CPU?
+какой GPU?
+какая цена?
+какая performance?
+какие games работают?
+</code></pre></div>
+<p>Product обещает console simplicity, а возвращает PC purchasing complexity.</p>
+<p>Плюс в 2015 году ещё нет mature Proton strategy. Windows-only games остаются реальной проблемой.</p>
+<div class="highlight"><pre><span></span><code>купи новую Steam box
+↓
+часть твоей Steam library
+может не работать
+</code></pre></div>
+<hr/>
+<h2 id="30-steam-controller-miniature">30. Steam Controller показывает ту же ошибку в miniature<a class="headerlink" href="#30-steam-controller-miniature" title="Permanent link">¶</a></h2>
+<p>Steam Controller был технологически интересным: trackpads, gyro, haptics, flexible mappings, software abstraction.</p>
+<p>Но:</p>
+<div class="highlight"><pre><span></span><code>FLEXIBILITY ↑
+↓
+CONFIGURATION FRICTION ↑
+</code></pre></div>
+<p>Для enthusiast это прекрасный tool. Для mass consumer — дополнительная работа перед игрой.</p>
+<p>Newell снова сталкивается с важным lesson: <strong>capability сама по себе не является user value</strong>.</p>
+<hr/>
+<h2 id="31-steam-machines-openness">31. Главный урок Steam Machines: openness — не готовое преимущество для пользователя<a class="headerlink" href="#31-steam-machines-openness" title="Permanent link">¶</a></h2>
+<p>Ранняя reasoning Newell:</p>
+<div class="highlight"><pre><span></span><code>больше manufacturers
+↓
+competition
+↓
+choice
+↓
+innovation
+</code></pre></div>
+<p>Это логично на уровне ecosystem.</p>
+<p>Но consumer может хотеть одну понятную вещь.</p>
+<div class="highlight"><pre><span></span><code>OPENNESS
+без
+COHERENT DEFAULT
+</code></pre></div>
+<p>способна ощущаться не как freedom, а как confusion.</p>
+<p>Это один из важнейших lessons перед Steam Deck. Deck позже сохранит PC openness, но default станет единым и понятным.</p>
+<hr/>
+<h2 id="32-newell-response-failure">32. Типичный Newell response на failure: сохранить работающие слои<a class="headerlink" href="#32-newell-response-failure" title="Permanent link">¶</a></h2>
+<p>Можно было сделать вывод:</p>
+<div class="highlight"><pre><span></span><code>Steam Machines провалились
+↓
+hardware/Linux strategy
+ошибка
+↓
+закрываем
+</code></pre></div>
+<p>Valve делает другое:</p>
+<div class="highlight"><pre><span></span><code>какие reusable parts
+из провала
+остались хорошими?
+</code></pre></div>
+<p>Остаются SteamOS, Steam Input, controller research, streaming, Linux work, driver relationships и hardware experience.</p>
+<p>Newell любит превращать failed product в <strong>R&amp;D investment</strong>, если underlying components продолжают иметь option value.</p>
+<hr/>
+<h2 id="33">33. Но такая философия имеет опасную обратную сторону<a class="headerlink" href="#33" title="Permanent link">¶</a></h2>
+<p>Если каждый failed product можно объяснить <code>зато мы многому научились</code>, возникает почти unfalsifiable system.</p>
+<div class="highlight"><pre><span></span><code>ship failed
+↓
+lesson acquired
+↓
+значит, всё было полезно
+</code></pre></div>
+<p>Поэтому question остаётся: <strong>когда learning действительно оправдывает огромную стоимость, а когда это post-hoc rationalization?</strong></p>
+<p>Private Valve редко обязана публично отвечать на него.</p>
+<hr/>
+<h2 id="34-paid-skyrim-mods">34. Paid Skyrim mods — экономическая логика сталкивается с социальной системой<a class="headerlink" href="#34-paid-skyrim-mods" title="Permanent link">¶</a></h2>
+<p>В <strong>апреле 2015 года</strong> Valve вместе с Bethesda запустила возможность продавать Skyrim mods через Steam Workshop.</p>
+<p>Underlying idea Newell была очень последовательной.</p>
+<div class="highlight"><pre><span></span><code>MODDER
+создаёт value
+↓
+MODDER
+должен иметь возможность
+получать money
+</code></pre></div>
+<p>Для него ситуация, где community создаёт огромный valuable content, а создатель не может зарабатывать, выглядела как economic bug.</p>
+<p>Проблема: конкретная реализация вошла в существующую mod culture как bulldozer.</p>
+<hr/>
+<h2 id="35-community">35. Реакция community была мгновенной<a class="headerlink" href="#35-community" title="Permanent link">¶</a></h2>
+<p>После launch Newell прилетел из поездки и увидел тысячи новых сообщений.</p>
+<p>Его реакция:</p>
+<blockquote>
+<p><strong>Looks like we did something to piss off the Internet.</strong></p>
+</blockquote>
+<p>Users спорили о creator cut, ownership, stolen assets, dependencies между mods, compatibility, традиции free modding, роли Bethesda и Valve, возможности publisher-а закрывать alternative distribution.</p>
+<p>Valve попыталась добавить money в сложную social ecosystem, где value, authorship и dependencies уже распределялись не так, как в обычном storefront.</p>
+<p>Экономическая model была слишком простой для реальной culture.</p>
+<hr/>
+<h2 id="36-thesis-exit-condition">36. Ньюэлл защищает thesis, но оставляет exit condition<a class="headerlink" href="#36-thesis-exit-condition" title="Permanent link">¶</a></h2>
+<p>Во время Reddit discussion Newell формулирует цель: сделать modding лучше для authors и gamers.</p>
+<p>И добавляет по смыслу:</p>
+<blockquote>
+<p>если система этому не помогает, её надо выбросить.</p>
+</blockquote>
+<p>Это важнее конкретной paid-mod policy.</p>
+<div class="highlight"><pre><span></span><code>authors лучше?
+gamers лучше?
+</code></pre></div>
+<p>Если нет:</p>
+<div class="highlight"><pre><span></span><code>dump it
+</code></pre></div>
+<p>Через несколько дней Valve действительно откатывает Skyrim paid mods.</p>
+<hr/>
+<h2 id="37-underlying-idea">37. Но underlying idea остаётся<a class="headerlink" href="#37-underlying-idea" title="Permanent link">¶</a></h2>
+<p>После backlash можно было сказать:</p>
+<div class="highlight"><pre><span></span><code>paid mods = ошибка
+</code></pre></div>
+<p>Newell делает более точный вывод:</p>
+<div class="highlight"><pre><span></span><code>Skyrim rollout
+был плохим
+
+НО
+
+creator compensation
+всё ещё кажется
+правильной идеей
+</code></pre></div>
+<p>В 2017 году он снова говорил, что modders <strong>create a lot of value</strong>, а отсутствие адекватной компенсации — <strong>bug in the system</strong>.</p>
+<div class="highlight"><pre><span></span><code>IMPLEMENTATION
+↓
+rejected
+
+THESIS
+↓
+retained
+</code></pre></div>
+<p>Это тот же тип мышления, который позволил Valve после Steam Machines продолжить SteamOS/Linux/hardware strategy.</p>
+<hr/>
+<h2 id="38">38. Это может быть достоинством — и формой упрямства<a class="headerlink" href="#38" title="Permanent link">¶</a></h2>
+<p>Различие между <code>idea failed</code> и <code>implementation failed</code> — один из самых мощных tools founder-а.</p>
+<p>Если любой плохой launch означает отказаться от thesis, Steam мог умереть в 2003 году.</p>
+<p>Но тот же инструмент опасен. Founder всегда может сказать:</p>
+<div class="highlight"><pre><span></span><code>идея прекрасная
+
+просто мир
+ещё не понял
+
+или
+
+implementation плохая
+</code></pre></div>
+<p>Поэтому нужен внешний feedback. Newell пытается использовать user behavior, community reaction, data и economic results. Но final interpretation всё равно остаётся человеческим judgment.</p>
+<hr/>
+<h2 id="39-episode-three-problem-polish">39. Episode Three — максимализм встречается с problem, которую нельзя решить ещё одним годом polish<a class="headerlink" href="#39-episode-three-problem-polish" title="Permanent link">¶</a></h2>
+<p>После Episode Two Valve должна была продолжить историю.</p>
+<p>Но здесь появляется новый тип тупика.</p>
+<p>Проблема не в том, что game плохая и надо ещё polish. Не в том, что technology не готова. Не в том, что market отсутствует.</p>
+<p>Проблема: <strong>Ньюэлл не видит достаточно сильного ответа на вопрос «зачем эта Half-Life должна существовать как новая игра?»</strong></p>
+<p>Для него franchise постепенно приобретает почти обязательство:</p>
+<div class="highlight"><pre><span></span><code>Half-Life
+должна
+не просто продолжать сюжет
+↓
+она должна
+открывать новый
+interactive possibility space
+</code></pre></div>
+<hr/>
+<h2 id="40-episode-three-half-life-3-project">40. Episode Three и Half-Life 3 — не один двадцатилетний project<a class="headerlink" href="#40-episode-three-half-life-3-project" title="Permanent link">¶</a></h2>
+<p>Важно не поддерживать популярный миф:</p>
+<div class="highlight"><pre><span></span><code>Valve делает
+Half-Life 3
+с 2007 года
+</code></pre></div>
+<p>Нет.</p>
+<p>Были разные Episode Three concepts, prototypes, experiments, отдельные проекты, позднейшие HL3 iterations и VR experiments.</p>
+<p>Непрерывной единой production line не существовало.</p>
+<p>Для биографии Newell это ещё интереснее. Проблема была не <code>один проект никак не могут закончить</code>, а <strong>organization снова и снова не достигает достаточно сильного internal reason to commit</strong>.</p>
+<hr/>
+<h2 id="41-gravity-gun-moment">41. «Gravity Gun moment»<a class="headerlink" href="#41-gravity-gun-moment" title="Permanent link">¶</a></h2>
+<p>Разработчики экспериментировали с новыми ideas. В поздних ретроспективах упоминаются ice gun, создание поверхностей, unusual movement, blob-like enemies и procedural ideas в более поздних prototypes.</p>
+<p>То есть <code>идей не было</code> — неправда.</p>
+<p>Проблема в другом: не появилось решения, которое ощущалось бы как:</p>
+<div class="highlight"><pre><span></span><code>new technology
++
+new mechanic
++
+new player language
++
+obvious reason
+для нового Half-Life
+</code></pre></div>
+<p>Threshold стал чрезвычайно высоким.</p>
+<hr/>
+<h2 id="42-activation-barrier">42. Максимализм превращается в activation barrier<a class="headerlink" href="#42-activation-barrier" title="Permanent link">¶</a></h2>
+<p>В 1997:</p>
+<div class="highlight"><pre><span></span><code>"недостаточно хорошо"
+↓
+ещё год
+↓
+Half-Life
+</code></pre></div>
+<p>С Episode Three:</p>
+<div class="highlight"><pre><span></span><code>"недостаточно нового"
+↓
+нет достаточной idea
+↓
+project теряет momentum
+↓
+люди уходят
+в другие teams
+↓
+technology меняется
+↓
+вернуться ещё сложнее
+</code></pre></div>
+<p>Возникает self-reinforcing loop:</p>
+<div class="highlight"><pre><span></span><code>не ship
+↓
+expectations выше
+↓
+bar выше
+↓
+ship сложнее
+↓
+не ship
+</code></pre></div>
+<p>Принцип, который когда-то спас franchise, начинает мешать самой franchise существовать.</p>
+<hr/>
+<h2 id="43-counterargument">43. Важный counterargument к Ньюэллу<a class="headerlink" href="#43-counterargument" title="Permanent link">¶</a></h2>
+<p>Newell склонен мыслить:</p>
+<div class="highlight"><pre><span></span><code>если мы просим
+деньги и время player-а
+↓
+product должен
+дать что-то новое
+</code></pre></div>
+<p>Это сильная этика продукта.</p>
+<p>Но innovation — не единственный тип value.</p>
+<p>Продолжение может быть ценным через writing, pacing, emotional closure, level design, refinement, character development и execution.</p>
+<p>Не каждый великий продукт обязан изобрести новый technological layer.</p>
+<p>Иногда execution <strong>и есть reason to exist</strong>.</p>
+<hr/>
+<h2 id="44-2024-failure">44. В 2024 году Ньюэлл формулирует это как собственный failure<a class="headerlink" href="#44-2024-failure" title="Permanent link">¶</a></h2>
+<p>В документальном материале к 20-летию Half-Life 2 Newell говорит одну из самых важных фраз всей своей биографии:</p>
+<blockquote>
+<p><strong>My personal failure was being stumped.</strong></p>
+</blockquote>
+<p>То есть:</p>
+<div class="highlight"><pre><span></span><code>я не смог
+понять,
+как Episode Three
+должна двигать
+что-то вперёд
+</code></pre></div>
+<p>Он не говорит, что market изменился, fans слишком многого хотели или team подвела.</p>
+<p>Он использует формулировку <strong>my personal failure</strong>.</p>
+<p>Это уже другой Newell, чем founder 1997 года, который получил почти идеальное подтверждение собственной интуиции.</p>
+<hr/>
+<h2 id="45-failure">45. Даже признавая failure, он не отказывается от принципа<a class="headerlink" href="#45-failure" title="Permanent link">¶</a></h2>
+<p>Самое интересное: Newell одновременно говорит <code>я застрял</code> и считает, что просто закончить story ради story было бы <code>copping out</code>.</p>
+<p>Self-criticism не уничтожает underlying belief.</p>
+<div class="highlight"><pre><span></span><code>я не нашёл answer
+</code></pre></div>
+<p>не превращается в:</p>
+<div class="highlight"><pre><span></span><code>значит,
+правильным answer
+было бы просто
+сделать обычный sequel
+</code></pre></div>
+<p>Это зрелая версия его упрямства.</p>
+<hr/>
+<h2 id="46-self-model">46. Эволюция self-model Ньюэлла<a class="headerlink" href="#46-self-model" title="Permanent link">¶</a></h2>
+<p>Можно построить почти двадцатилетнюю линию.</p>
+<h3 id="half-life-1997">Half-Life, 1997<a class="headerlink" href="#half-life-1997" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>product плох
+↓
+переделываем
+↓
+я уверен
+</code></pre></div>
+<h3 id="half-life-2-2003">Half-Life 2, 2003<a class="headerlink" href="#half-life-2-2003" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>product сложнее,
+чем я оценил
+↓
+мой schedule judgment
+был плохим
+</code></pre></div>
+<h3 id="steam">Steam<a class="headerlink" href="#steam" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>implementation плохая
+↓
+thesis сохраняем
+</code></pre></div>
+<h3 id="windows-8">Windows 8<a class="headerlink" href="#windows-8" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>structural risk
+увидел правильно
+↓
+near-term forecast
+сформулировал
+слишком резко
+</code></pre></div>
+<h3 id="steam-machines">Steam Machines<a class="headerlink" href="#steam-machines" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>consumer product
+провалился
+↓
+components и thesis
+частично сохраняем
+</code></pre></div>
+<h3 id="paid-mods">Paid mods<a class="headerlink" href="#paid-mods" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>social rollout
+провалился
+↓
+creator-compensation thesis
+сохраняем
+</code></pre></div>
+<h3 id="episode-three">Episode Three<a class="headerlink" href="#episode-three" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>не implementation
+не market
+не technology
+↓
+я сам
+не нашёл answer
+</code></pre></div>
+<hr/>
+<h2 id="47">47. Он не стал менее рискованным<a class="headerlink" href="#47" title="Permanent link">¶</a></h2>
+<p>Важно не сделать неправильный вывод:</p>
+<div class="highlight"><pre><span></span><code>Newell ошибался
+↓
+с возрастом стал
+осторожным manager
+</code></pre></div>
+<p>Нет.</p>
+<p>Он продолжил делать Linux, VR, SteamOS, hardware, BCI и ocean infrastructure.</p>
+<p>Изменилось другое. Он всё чаще относится к large bet как к <strong>hypothesis</strong>, а не как к destiny.</p>
+<p>Особенно хорошо это видно по VR: Newell мог публично допускать, что VR вообще провалится, и всё равно считать experiment достаточно ценным, чтобы инвестировать.</p>
+<hr/>
+<h2 id="48-failure-information-system">48. Failure становится частью information system<a class="headerlink" href="#48-failure-information-system" title="Permanent link">¶</a></h2>
+<p>В mature philosophy Newell:</p>
+<div class="highlight"><pre><span></span><code>EXPERIMENT
+↓
+DATA
+↓
+если hypothesis плохая
+или implementation плохая
+↓
+обновить model
+</code></pre></div>
+<p>Это не означает, что Valve всегда идеально учится. Иногда organization может годами рационализировать failure.</p>
+<p>Но Newell всё больше рассматривает pricing, hardware, organization, markets и interaction как experiments над сложными systems.</p>
+<hr/>
+<h2 id="49-private-valve">49. Почему private Valve делает этот стиль вообще возможным<a class="headerlink" href="#49-private-valve" title="Permanent link">¶</a></h2>
+<p>Большая часть этих ошибок была дорогой.</p>
+<p>Half-Life 2 — многолетний development и сорванная public date.</p>
+<p>Steam — годы infrastructure investment и ненависти части users.</p>
+<p>Steam Machines — hardware partnerships, OS development и devices, которые не создали ожидаемой category.</p>
+<p>VR — годы R&amp;D.</p>
+<p>Обычная public company может после нескольких таких bets получить:</p>
+<div class="highlight"><pre><span></span><code>board:
+хватит экспериментов
+</code></pre></div>
+<p>Newell-controlled private Valve имеет другую tolerance.</p>
+<p>Это создаёт огромное преимущество — можно пережить неудачную промежуточную фазу — и огромный риск — можно очень долго не получать внешнего correction.</p>
+<hr/>
+<h2 id="50">50. Право дорого ошибаться становится сознательной частью модели<a class="headerlink" href="#50" title="Permanent link">¶</a></h2>
+<p>В первой Half-Life это было почти случайным следствием wealth:</p>
+<div class="highlight"><pre><span></span><code>есть деньги
+↓
+можем delay
+</code></pre></div>
+<p>В mature Valve это становится системным.</p>
+<div class="highlight"><pre><span></span><code>prototype может умереть
+↓
+люди и knowledge
+остаются
+
+hardware может провалиться
+↓
+software layer
+остаётся
+
+market experiment
+можно откатить
+↓
+thesis
+пересмотреть отдельно
+</code></pre></div>
+<p>Newell не пытается построить систему без ошибок. Он пытается построить систему, где ошибка <strong>не равна смерти компании</strong> и где failure можно превратить в reusable knowledge.</p>
+<hr/>
+<h2 id="51">51. Но система плохо отличает смелость от отсутствия дисциплины<a class="headerlink" href="#51" title="Permanent link">¶</a></h2>
+<p>Если у company много денег, private ownership, нет external release pressure, сильная prototype culture и founder уважает sunk-cost destruction, можно получить смелые experiments.</p>
+<p>Но можно получить и <strong>неумение заканчивать</strong>.</p>
+<p>Внешне эти состояния иногда похожи:</p>
+<div class="highlight"><pre><span></span><code>"мы ещё ищем
+правильное решение"
+</code></pre></div>
+<p>может означать настоящий R&amp;D или project без mechanism commit'нуться к production.</p>
+<p>Episode Three — самый болезненный пример этой границы.</p>
+<hr/>
+<h2 id="52">52. Главный личный урок — быть правым «в целом» недостаточно<a class="headerlink" href="#52" title="Permanent link">¶</a></h2>
+<h3 id="half-life-2">Half-Life 2<a class="headerlink" href="#half-life-2" title="Permanent link">¶</a></h3>
+<p>Newell был прав, что product не надо убивать ради 30 сентября. Он был неправ, обещав 30 сентября.</p>
+<h3 id="steam_1">Steam<a class="headerlink" href="#steam_1" title="Permanent link">¶</a></h3>
+<p>Он был прав насчёт network software distribution. Early implementation давала многим users плохой experience.</p>
+<h3 id="windows-8_1">Windows 8<a class="headerlink" href="#windows-8_1" title="Permanent link">¶</a></h3>
+<p>Он разумно увидел platform dependency. <code>Catastrophe</code> оказалось чрезмерным near-term forecast.</p>
+<h3 id="steam-machines_1">Steam Machines<a class="headerlink" href="#steam-machines_1" title="Permanent link">¶</a></h3>
+<p>Он разумно хотел независимость и living-room PC. Конкретная product architecture была слабой.</p>
+<h3 id="paid-mods_1">Paid mods<a class="headerlink" href="#paid-mods_1" title="Permanent link">¶</a></h3>
+<p>Он разумно видел economic value creators. Concrete social/economic implementation была плохо подготовлена.</p>
+<h3 id="episode-three_1">Episode Three<a class="headerlink" href="#episode-three_1" title="Permanent link">¶</a></h3>
+<p>Он разумно хотел meaningful reason to exist. Требование нового breakthrough стало barrier, который не удалось преодолеть.</p>
+<p>Зрелая формула:</p>
+<h1 id="structural-idea-product">правильная structural idea не освобождает от необходимости сделать правильный product.<a class="headerlink" href="#structural-idea-product" title="Permanent link">¶</a></h1>
+<hr/>
+<h2 id="53">53. Самокритика Ньюэлла остаётся выборочной<a class="headerlink" href="#53" title="Permanent link">¶</a></h2>
+<p>Не стоит превращать позднего Newell в идеально рефлексирующего philosopher-founder.</p>
+<p>Он способен очень жёстко критиковать себя. Но Valve остаётся крайне непрозрачной, failed projects часто видны public только спустя годы, internal decision-making сложно проверять, ownership практически не создаёт внешнего accountability, а сам Newell всё равно обладает огромным authority.</p>
+<div class="highlight"><pre><span></span><code>SELF-CRITICISM
+есть
+
+НО
+
+EXTERNAL CORRECTION
+ограничен
+</code></pre></div>
+<p>Это важная часть честного портрета.</p>
+<hr/>
+<h2 id="54-instinct">54. Ошибки не изменили его главный instinct<a class="headerlink" href="#54-instinct" title="Permanent link">¶</a></h2>
+<p>Несмотря на всё перечисленное, central behavior Newell почти не меняется.</p>
+<p>Когда он видит bottleneck, он редко смиряется с layer.</p>
+<div class="highlight"><pre><span></span><code>Publisher?
+→ Steam
+
+Windows dependency?
+→ Linux
+
+Controller limitations?
+→ Steam Input
+
+External hardware?
+→ собственные devices
+
+VR interface?
+→ BCI
+</code></pre></div>
+<p>Crises не сделали его conservative. Они сделали его точнее в различении:</p>
+<div class="highlight"><pre><span></span><code>problem
+vs
+solution
+
+thesis
+vs
+implementation
+
+long-term trajectory
+vs
+near-term prediction
+</code></pre></div>
+<hr/>
+<h1 id="_3">Итог главы<a class="headerlink" href="#_3" title="Permanent link">¶</a></h1>
+<p>Если первая Half-Life научила Ньюэлла:</p>
+<div class="highlight"><pre><span></span><code>не бойся
+дорого переделывать,
+если product плох
+</code></pre></div>
+<p>то следующие два десятилетия добавили намного более сложный набор lessons.</p>
+<div class="highlight"><pre><span></span><code>GOOD PRODUCT INSTINCT
+≠
+GOOD SCHEDULE ESTIMATE
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>GOOD THESIS
+≠
+GOOD IMPLEMENTATION
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>STRUCTURAL RISK
+≠
+IMMEDIATE CATASTROPHE
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>OPENNESS
+≠
+GOOD CONSUMER EXPERIENCE
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ECONOMIC LOGIC
+≠
+SOCIAL ACCEPTANCE
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>HIGH QUALITY BAR
+≠
+ABILITY TO FINISH
+</code></pre></div>
+<p>И самое важное:</p>
+<div class="highlight"><pre><span></span><code>FOUNDER
+может сам
+быть bottleneck
+</code></pre></div>
+<p>К 2024 году человек, который когда-то получил почти идеальное подтверждение собственной интуиции на первой Half-Life, способен сказать об Episode Three:</p>
+<blockquote>
+<p><strong>My personal failure was being stumped.</strong></p>
+</blockquote>
+<p>Он не стал менее амбициозным. Он не перестал верить в большие bets. Он не отказался от максимализма.</p>
+<p>Но его модель стала сложнее.</p>
+<p>Failure больше не обязательно означает <code>мы выбрали неправильное направление</code>.</p>
+<p>Иногда направление верное, реализация плохая. Иногда risk реальный, прогноз преувеличен. Иногда идея хорошая, user contract сломан. А иногда founder сам не смог найти достаточно хороший ответ.</p>
+<p>После Windows 8 и Steam Machines Newell не отказывается от идеи platform independence. Он идёт глубже.</p>
+<p>Следующая глава — <strong>Независимость: Windows, Linux, VR и собственное железо</strong>:</p>
+<div class="highlight"><pre><span></span><code>Windows dependency
+↓
+Linux
+↓
+SteamOS
+↓
+Proton
+↓
+VR / hardware competence
+↓
+Steam Deck
+</code></pre></div>
+<p>— одна из самых длинных и в конечном счёте самых удачных ставок всей его карьеры.</p>
+<hr/>
+<h1 id="_4">Опорные источники<a class="headerlink" href="#_4" title="Permanent link">¶</a></h1>
+<h2 id="_5">Исходное исследование<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<ul>
+<li><code>Gabe Newell.md</code> — исходная пользовательская база, прежде всего материалы о Half-Life 2, взломе 2003 года, Windows 8, Steam Machines, paid mods, Episode Three и поздней самооценке Ньюэлла.</li>
+</ul>
+<h2 id="half-life-2-2003_1">Half-Life 2 и 2003 год<a class="headerlink" href="#half-life-2-2003_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Geoff Keighley / GameSpot — <strong>The Final Hours of Half-Life 2</strong><br/>
+  https://www.gamespot.com/articles/the-final-hours-of-half-life-2/1100-6112889/</p>
+</li>
+<li>
+<p>Valve — <strong>Half-Life 2: 20th Anniversary</strong><br/>
+  https://www.half-life.com/en/halflife2/20th</p>
+</li>
+</ul>
+<h2 id="valve">Взлом Valve<a class="headerlink" href="#valve" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>WIRED — <strong>Valve Tried to Trick Half-Life 2 Hacker Into Fake Job Interview</strong><br/>
+  https://www.wired.com/2008/11/valve-tricked-h/</p>
+</li>
+<li>
+<p>Архив публичного обращения Gabe Newell — <strong>I need the assistance of the community</strong><br/>
+  https://www.valvetime.co.uk/threads/i-need-the-assistance-of-the-community.10692/</p>
+</li>
+</ul>
+<h2 id="windows-8-linux-hedge">Windows 8 / Linux hedge<a class="headerlink" href="#windows-8-linux-hedge" title="Permanent link">¶</a></h2>
+<ul>
+<li>Ars Technica — <strong>Valve’s Newell: Windows 8 “catastrophe” driving Valve to embrace Linux</strong><br/>
+  https://arstechnica.com/gaming/2012/07/steams-newell-windows-8-catastrophe-driving-valve-to-embrace-linux/</li>
+</ul>
+<h2 id="paid-mods_2">Paid mods<a class="headerlink" href="#paid-mods_2" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Ars Technica — <strong>Gabe Newell addresses controversy over paid Steam mods</strong><br/>
+  https://arstechnica.com/gaming/2015/04/gabe-newell-addresses-controversy-over-paid-steam-mods/</p>
+</li>
+<li>
+<p>GameSpot — <strong>Gabe Newell Says Valve Will Dump Paid Mods If They're Bad for Gamers</strong><br/>
+  https://www.gamespot.com/articles/gabe-newell-says-valve-will-dump-paid-mods-if-they/1100-6426893/</p>
+</li>
+<li>
+<p>GameSpot — <strong>Despite The Skyrim “Mess,” Valve Still Supports Paid Game Mods</strong><br/>
+  https://www.gamespot.com/articles/despite-the-skyrim-mess-valve-still-supports-paid-/1100-6447765/</p>
+</li>
+</ul>
+<h2 id="episode-three_2">Episode Three<a class="headerlink" href="#episode-three_2" title="Permanent link">¶</a></h2>
+<ul>
+<li>Valve / Half-Life 2 20th Anniversary documentary materials, 2024. Современная ретроспектива Episode Three и формулировка Newell: <strong>“My personal failure was being stumped.”</strong></li>
+</ul>
+<hr/>
+<h1 id="_6">Фактологические оговорки<a class="headerlink" href="#_6" title="Permanent link">¶</a></h1>
+<h3 id="half-life-2-30">Half-Life 2 и дата 30 сентября<a class="headerlink" href="#half-life-2-30" title="Permanent link">¶</a></h3>
+<p>Delay нельзя приписывать взлому. Production schedule уже не работал до публичной утечки source code. Breach ухудшил ситуацию, но не создал исходную проблему.</p>
+<h3 id="e3-2003">E3 2003<a class="headerlink" href="#e3-2003" title="Permanent link">¶</a></h3>
+<p>Формулировка <code>E3 demo была fake</code> некорректна. Показанные technology и content существовали, но carefully prepared sequences не отражали готовность всей игры.</p>
+<h3 id="axel-gembe">Axel Gembe<a class="headerlink" href="#axel-gembe" title="Permanent link">¶</a></h3>
+<p>Gembe был ключевой фигурой intrusion investigation, но публичную цепочку последующего распространения всех украденных материалов нельзя корректно сводить к формуле <code>один человек единолично залил всё</code>.</p>
+<h3 id="windows-8_2">Windows 8<a class="headerlink" href="#windows-8_2" title="Permanent link">¶</a></h3>
+<p>Ньюэлл критиковал направление platform control и возможные последствия для PC ecosystem. Windows 8 не запретила обычные Win32 desktop applications и не заблокировала Steam. Его near-term прогноз оказался значительно драматичнее реального исхода.</p>
+<h3 id="steam-machines_2">Steam Machines<a class="headerlink" href="#steam-machines_2" title="Permanent link">¶</a></h3>
+<p>Провал конкретной consumer category не равен провалу всех составляющих стратегии. SteamOS, Steam Input, Linux work и hardware competence продолжили развиваться и позже стали частью Steam Deck.</p>
+<h3 id="paid-mods_3">Paid mods<a class="headerlink" href="#paid-mods_3" title="Permanent link">¶</a></h3>
+<p>Valve быстро убрала Skyrim paid mods после backlash, но Ньюэлл не отказался от общего тезиса, что external creators должны иметь возможность получать экономическую компенсацию за создаваемую ими value.</p>
+<h3 id="episode-three-half-life-3">Episode Three / Half-Life 3<a class="headerlink" href="#episode-three-half-life-3" title="Permanent link">¶</a></h3>
+<p>Episode Three, последующие Half-Life prototypes и отдельные проекты под условным названием Half-Life 3 — разные этапы. Нельзя описывать их как одну непрерывную двадцатилетнюю разработку.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы" class="md-footer__link md-footer__link--prev" href="../gabe-newell-05-from-games-to-platform/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Гейб Ньюэлл — Глава 7. Независимость: Windows, Linux, VR и собственное железо" class="md-footer__link md-footer__link--next" href="../gabe-newell-07-platform-independence-linux-vr-hardware/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 7. Независимость: Windows, Linux, VR и собственное железо
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

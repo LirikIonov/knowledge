@@ -1,0 +1,2414 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://lirikonov.github.io/knowledge/games/people/gabe-newell-revised-10-chapters/gabe-newell-07-platform-independence-linux-vr-hardware/" rel="canonical"/>
+<link href="../gabe-newell-06-failures-crises-evolution/" rel="prev"/>
+<link href="../gabe-newell-08-person-family-games-health-education-public-image/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Гейб Ньюэлл — Глава 7. Независимость: Linux, VR и собственное железо - База данных</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#7-linux-vr">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Гейб Ньюэлл — Глава 7. Независимость: Linux, VR и собственное железо
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/Arkane/">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/01-origins-softdisk-keen/">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/02-wolfenstein/">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/03-doom-birth/">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/04-doom-ecosystem/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/05-quake-crisis/">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/06-id-after-romero/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/07-quake2-quake3-middleware/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/08-doom3-aaa/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/09-rage-zenimax-carmack/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/10-doom-rebirth-modern-id/">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/11-legacy-summary/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/12-side-branches/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/MANIFEST/">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/01-origins-steam/">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/02-games-and-engines/">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/03-inside-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/04-hardware-linux-vr/">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/05-modern-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/06-valve-as-institution/">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/07-ecosystem-and-catalog/">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/08-appendices/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/09-sources-and-status/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Engines
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Engines
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../engines/id-tech-branches-01-29/">
+<span class="md-ellipsis">
+    
+  
+    Использование id Tech и все дальнейшие ветки развития у других разработчиков
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom/">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom30/">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom3_45-103/">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Quake/">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Spider-Man/">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom4-eternal/">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom_eternal_51-80/">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3_8" id="__nav_1_3_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_3_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/01-origins-and-development/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/02-half-life-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/03-half-life-release-and-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/04-gearbox-and-consoles/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/05-half-life-2-development-and-tech/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/06-half-life-2-world-and-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/07-half-life-2-beta-release/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/08-episodes/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/09-half-life-3-and-cancelled-projects/">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/10-vr-and-alyx-development/">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/11-half-life-alyx-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/12-modding-and-community/">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/13-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/14-audio/">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/15-how-valve-makes-half-life/">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/16-movement-and-speedrunning/">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/17-half-life-and-film/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/CHANGES/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Carmack/">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Romero/">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_4" id="__nav_1_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe Newell
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe Newell
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-02-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-03-doom-quake-valve/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-05-from-games-to-platform/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-06-failures-crises-evolution/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и изменение самого Ньюэлла
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-07-platform-independence-linux-vr-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Windows, Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Сам Ньюэлл: семья, игры, здоровье, образование и публичный образ
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_5" id="__nav_1_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe newell revised 10 chapters
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe newell revised 10 chapters
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-02-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-03-doom-quake-valve/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-05-from-games-to-platform/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-06-failures-crises-evolution/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и способность закончить
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Linux, VR и собственное железо
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-microsoft">
+<span class="md-ellipsis">
+      
+        1. Бывший сотрудник Microsoft смотрит на неё с другой стороны
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-windows-8">
+<span class="md-ellipsis">
+      
+        2. Windows 8: резкая формулировка и более узкая проблема
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        3. Страховка не обязана становиться основным бизнесом
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        4. Сначала требовалось проверить саму возможность
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      
+        5. Собственных игр недостаточно для собственной платформы
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-steamos-steam-machines">
+<span class="md-ellipsis">
+      
+        6. SteamOS и первая программа Steam Machines
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      
+        7. Кто отвечает за целое
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8">
+<span class="md-ellipsis">
+      
+        8. Библиотека стала аргументом против перехода
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      
+        9. Джери Эллсворт: новая область обнаруживает старую неформальную власть
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      
+        10. Перенести культуру сложнее, чем разрешить эксперимент
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-steam-controller">
+<span class="md-ellipsis">
+      
+        11. Steam Controller: необычный инструмент с ценой освоения
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12">
+<span class="md-ellipsis">
+      
+        12. Хорошая настройка по умолчанию тоже является технологией
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-steam-link">
+<span class="md-ellipsis">
+      
+        13. Steam Link: иногда достаточно меньшего изменения
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-wine">
+<span class="md-ellipsis">
+      
+        14. Wine позволяет поставить другой вопрос
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-proton">
+<span class="md-ellipsis">
+      
+        15. Proton: работа общего слоя вместо тысяч обязательных портов
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+<span class="md-ellipsis">
+      
+        16. Инженерное решение не устраняет всех чужих решений
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17-vulkan">
+<span class="md-ellipsis">
+      
+        17. Vulkan и цена невидимой инфраструктуры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18-vr-windows-8">
+<span class="md-ellipsis">
+      
+        18. VR — параллельная линия, а не следствие Windows 8
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19">
+<span class="md-ellipsis">
+      
+        19. Присутствие требует больше, чем убедительной картинки
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20-oculus">
+<span class="md-ellipsis">
+      
+        20. Ранний Oculus: сотрудничество с неопределённым будущим
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21">
+<span class="md-ellipsis">
+      
+        21. Уход специалистов не получает удобного психологического объяснения
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-vive">
+<span class="md-ellipsis">
+      
+        22. Vive: партнёрство с разделением компетенций
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-lighthouse">
+<span class="md-ellipsis">
+      
+        23. Lighthouse как инструмент для нескольких устройств
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24-vr">
+<span class="md-ellipsis">
+      
+        24. Ньюэлл допускает, что VR может не стать массовой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25-index">
+<span class="md-ellipsis">
+      
+        25. Index: больше ответственности за готовую вещь
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#26-alyx">
+<span class="md-ellipsis">
+      
+        26. Alyx связывает интерфейс с содержанием — и оставляет цену входа
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#27-steam-deck">
+<span class="md-ellipsis">
+      
+        27. Steam Deck: другой продукт из частично знакомой работы
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#28-steam-machine">
+<span class="md-ellipsis">
+      
+        28. Главное отличие от первой Steam Machine — ясное исходное предложение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#29">
+<span class="md-ellipsis">
+      
+        29. Цена как часть ставки
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#30">
+<span class="md-ellipsis">
+      
+        30. Управлять исходным опытом и оставлять право изменить его
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31">
+<span class="md-ellipsis">
+      
+        31. Четыре разных значения слова «открытый»
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-steam">
+<span class="md-ellipsis">
+      
+        32. Steam сохраняет собственную власть
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33-windows">
+<span class="md-ellipsis">
+      
+        33. Реальная альтернатива без обещания победить Windows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#34-valve-2022">
+<span class="md-ellipsis">
+      
+        34. Почему глава не заканчивает аппаратную историю Valve 2022 годом
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#35">
+<span class="md-ellipsis">
+      
+        35. Что действительно изменилось в способе решения задачи
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#36">
+<span class="md-ellipsis">
+      
+        36. За устройствами снова нужен человек
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        Источники и границы знания
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Семья, игры, здоровье и человек за именем GabeN
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5_1" id="__nav_1_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_5_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam2/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2 — очищенный дамп исследования
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-microsoft">
+<span class="md-ellipsis">
+      
+        1. Бывший сотрудник Microsoft смотрит на неё с другой стороны
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-windows-8">
+<span class="md-ellipsis">
+      
+        2. Windows 8: резкая формулировка и более узкая проблема
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        3. Страховка не обязана становиться основным бизнесом
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
+      
+        4. Сначала требовалось проверить саму возможность
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
+      
+        5. Собственных игр недостаточно для собственной платформы
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-steamos-steam-machines">
+<span class="md-ellipsis">
+      
+        6. SteamOS и первая программа Steam Machines
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      
+        7. Кто отвечает за целое
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8">
+<span class="md-ellipsis">
+      
+        8. Библиотека стала аргументом против перехода
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      
+        9. Джери Эллсворт: новая область обнаруживает старую неформальную власть
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      
+        10. Перенести культуру сложнее, чем разрешить эксперимент
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-steam-controller">
+<span class="md-ellipsis">
+      
+        11. Steam Controller: необычный инструмент с ценой освоения
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12">
+<span class="md-ellipsis">
+      
+        12. Хорошая настройка по умолчанию тоже является технологией
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-steam-link">
+<span class="md-ellipsis">
+      
+        13. Steam Link: иногда достаточно меньшего изменения
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-wine">
+<span class="md-ellipsis">
+      
+        14. Wine позволяет поставить другой вопрос
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-proton">
+<span class="md-ellipsis">
+      
+        15. Proton: работа общего слоя вместо тысяч обязательных портов
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+<span class="md-ellipsis">
+      
+        16. Инженерное решение не устраняет всех чужих решений
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17-vulkan">
+<span class="md-ellipsis">
+      
+        17. Vulkan и цена невидимой инфраструктуры
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18-vr-windows-8">
+<span class="md-ellipsis">
+      
+        18. VR — параллельная линия, а не следствие Windows 8
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19">
+<span class="md-ellipsis">
+      
+        19. Присутствие требует больше, чем убедительной картинки
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20-oculus">
+<span class="md-ellipsis">
+      
+        20. Ранний Oculus: сотрудничество с неопределённым будущим
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21">
+<span class="md-ellipsis">
+      
+        21. Уход специалистов не получает удобного психологического объяснения
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-vive">
+<span class="md-ellipsis">
+      
+        22. Vive: партнёрство с разделением компетенций
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-lighthouse">
+<span class="md-ellipsis">
+      
+        23. Lighthouse как инструмент для нескольких устройств
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24-vr">
+<span class="md-ellipsis">
+      
+        24. Ньюэлл допускает, что VR может не стать массовой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25-index">
+<span class="md-ellipsis">
+      
+        25. Index: больше ответственности за готовую вещь
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#26-alyx">
+<span class="md-ellipsis">
+      
+        26. Alyx связывает интерфейс с содержанием — и оставляет цену входа
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#27-steam-deck">
+<span class="md-ellipsis">
+      
+        27. Steam Deck: другой продукт из частично знакомой работы
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#28-steam-machine">
+<span class="md-ellipsis">
+      
+        28. Главное отличие от первой Steam Machine — ясное исходное предложение
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#29">
+<span class="md-ellipsis">
+      
+        29. Цена как часть ставки
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#30">
+<span class="md-ellipsis">
+      
+        30. Управлять исходным опытом и оставлять право изменить его
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#31">
+<span class="md-ellipsis">
+      
+        31. Четыре разных значения слова «открытый»
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32-steam">
+<span class="md-ellipsis">
+      
+        32. Steam сохраняет собственную власть
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33-windows">
+<span class="md-ellipsis">
+      
+        33. Реальная альтернатива без обещания победить Windows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#34-valve-2022">
+<span class="md-ellipsis">
+      
+        34. Почему глава не заканчивает аппаратную историю Valve 2022 годом
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#35">
+<span class="md-ellipsis">
+      
+        35. Что действительно изменилось в способе решения задачи
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#36">
+<span class="md-ellipsis">
+      
+        36. За устройствами снова нужен человек
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        Источники и границы знания
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="7-linux-vr">Гейб Ньюэлл — Глава 7. Независимость: Linux, VR и собственное железо<a class="headerlink" href="#7-linux-vr" title="Permanent link">¶</a></h1>
+<blockquote>
+<p>Главная историческая линия: 2012–2022 годы, от публичного спора о Windows 8 до первого Steam Deck. Параллельная VR-линия начинается раньше и имеет собственную цель. Здесь прослеживается, как Ньюэлл и команды Valve учились совмещать технологическую самостоятельность, понятный продукт и право пользователя выходить за его пределы. Позднейшие устройства отмечены отдельно: первая программа Steam Machines и устройства следующих поколений не смешиваются.</p>
+</blockquote>
+<p><a href="../gabe-newell-06-failures-crises-evolution/">← Глава 6</a> · <a href="../gabe-newell-10-who-is-gabe-newell-final/#guide">Оглавление исследования</a> · <a href="../gabe-newell-08-person-family-games-health-education-public-image/">Глава 8 →</a></p>
+<p><a id="windows-risk"></a></p>
+<h2 id="1-microsoft">1. Бывший сотрудник Microsoft смотрит на неё с другой стороны<a class="headerlink" href="#1-microsoft" title="Permanent link">¶</a></h2>
+<p>В Microsoft Ньюэлл участвовал в работе над платформой, от которой зависели сторонние разработчики. После становления Steam он оказывается одним из таких зависимых участников. Его компания управляет магазином, обновлениями, аккаунтами и услугами для других студий, но основная пользовательская среда принадлежит другому владельцу.</p>
+<p>Это меняет смысл прежнего опыта. Успех Windows полезен Steam: он даёт множество совместимых компьютеров и игр. Однако тот же масштаб делает любое изменение правил потенциально значимым для Valve. Партнёрская и конкурентная стороны отношений существуют одновременно. Microsoft не обязана прямо атаковать Steam, чтобы решения об устройстве Windows влияли на её будущее.</p>
+<p>Ньюэлл особенно чувствителен к такому положению после издательских конфликтов. Но аналогия имеет предел. Издательская договорённость регулирует конкретные права и распространение продукта; операционная система определяет условия исполнения огромного числа программ. Заменить договор и создать пригодную альтернативную среду — задачи несопоставимого масштаба.</p>
+<p>Поэтому ставка на Linux требует объяснения через риск, а не через личную обиду бывшего сотрудника. Публичных оснований сводить её к желанию наказать Microsoft нет. Содержательная проблема состоит в том, что важнейший бизнес Valve зависит от слоя, направление которого компания не определяет.<sup id="fnref:windows8"><a class="footnote-ref" href="#fn:windows8">1</a></sup></p>
+<h2 id="2-windows-8">2. Windows 8: резкая формулировка и более узкая проблема<a class="headerlink" href="#2-windows-8" title="Permanent link">¶</a></h2>
+<p>В 2012 году Ньюэлл называет Windows 8 катастрофой для PC-сферы. Он говорит о возможных последствиях для производителей компьютеров и об опасности закрытия привычной среды. Высказывание получает большую известность именно благодаря масштабу формулировки.<sup id="fnref2:windows8"><a class="footnote-ref" href="#fn:windows8">1</a></sup></p>
+<p>Здесь необходимо разделить обычный настольный Windows 8, новые магазинные механизмы и более ограниченную Windows RT. Обычные настольные программы не были запрещены, Steam не оказалась заблокирована, а PC не превратился одним выпуском системы в полностью закрытую консоль. Приписывать Ньюэллу точное предсказание такого состоявшегося события было бы фактической ошибкой.</p>
+<p>Его более общее опасение другое: владелец платформы может постепенно сделать собственный способ установки и оплаты программ предпочтительным, а конкурирующий — зависимым от дополнительных условий. Для компании, живущей внутри этой среды, даже возможность такого изменения заслуживает внимания. Но возможность не равна неизбежности, а направление риска не задаёт точной даты его реализации.</p>
+<p>Ньюэлловская речь объединяла эти уровни слишком резко. В ней стратегическая тревога звучала как близкий исход для всей отрасли. Биография должна сохранить и обоснованность вопроса о зависимости, и ограниченность конкретной формулировки. Одно не требует объявлять другое безошибочным.</p>
+<p><a id="linux"></a></p>
+<h2 id="3">3. Страховка не обязана становиться основным бизнесом<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<p>Ньюэлл сам описывал Linux-направление как <strong>hedging strategy</strong> — создание альтернативы на случай неблагоприятного развития основной зависимости. Это важнее распространённой версии, будто Valve собиралась немедленно переселить всех игроков с Windows.<sup id="fnref3:windows8"><a class="footnote-ref" href="#fn:windows8">1</a></sup></p>
+<p>Страхующая возможность может быть полезна при небольшой доле использования. Если существует технически пригодный второй путь, меняется положение компании в переговорах и выборе будущих устройств. Ей не нужно начинать с нуля именно тогда, когда зависимость уже стала болезненной. Однако до практической пригодности этой альтернативы ещё необходимо дойти.</p>
+<p>Здесь полезно отличать стратегический расчёт от установленной причинности. Мы не можем доказать, что Microsoft сохранила определённую открытость именно благодаря Linux-ставке Valve. Для такого утверждения потребовалась бы информация о чужих решениях. Более узкий наблюдаемый результат состоит в создании у Valve собственных возможностей.</p>
+<p>Также страховка не автоматически оправдывает любой объём затрат. У риска есть вероятность, у ответа — стоимость, у команды — альтернативная работа. Публичные материалы не раскрывают полного внутреннего расчёта. Можно объяснить рациональную структуру решения, не объявляя каждый последующий аппаратный проект математически оптимальным расходованием средств.</p>
+<h2 id="4">4. Сначала требовалось проверить саму возможность<a class="headerlink" href="#4" title="Permanent link">¶</a></h2>
+<p>Valve начинает переносить Steam и собственные игры на Linux. Один из известных инженерных опытов связан с Left 4 Dead 2. Работа затрагивает игру, движок, графический API, драйвер и операционную систему. В опубликованном Valve сравнении оптимизированная Linux-конфигурация показывала высокую производительность относительно выбранной Windows-конфигурации.<sup id="fnref:faster-zombies"><a class="footnote-ref" href="#fn:faster-zombies">2</a></sup></p>
+<p>Такое измерение нельзя превращать в универсальное «Linux быстрее Windows». Оно относится к конкретной игре, оборудованию и состоянию оптимизации. Для биографической линии достаточно более узкого вывода: компания получила практическое свидетельство, что альтернативная среда может быть пригодна для требовательной игры и заслуживает дальнейшей работы.</p>
+<p>Ньюэлл не выполнял эту оптимизацию лично. Его вклад следует искать в выборе направления, возможности финансировать его и готовности строить отношения с другими участниками технической цепочки. Конкретные улучшения принадлежат инженерам Valve и взаимодействующим с ними специалистам. Приписывать основателю каждую найденную причину задержки означало бы стереть саму модель коллективной компетентности, которую исследование пытается описать.</p>
+<p>Именно на этом этапе становится заметен масштаб работы, скрытый за словом «перенести». Хороший результат приложения зависит от состояния нескольких чужих компонентов. Самостоятельность Valve не означает отсутствия сотрудничества. Напротив, она требует новых отношений с производителями графики и открытыми проектами вместо полной зависимости от единого закрытого владельца среды.</p>
+<h2 id="5">5. Собственных игр недостаточно для собственной платформы<a class="headerlink" href="#5" title="Permanent link">¶</a></h2>
+<p>Даже безупречный порт Left 4 Dead 2 не решает основную пользовательскую задачу Steam. Ценность сервиса связана с библиотекой, большая часть которой создана другими разработчиками. Если на новой системе работает лишь малая часть уже купленного, покупателю предлагают обменять знакомые возможности на стратегическую независимость чужой компании.</p>
+<p>У разработчиков возникает другой расчёт. Поддержка дополнительной платформы требует работы и последующего сопровождения. При небольшой аудитории экономическое основание может быть слабым. Valve не может приказать тысячам независимых студий принять её долгосрочный риск за собственный приоритет.</p>
+<p>Получается взаимное ожидание: игроки хотят больше совместимого содержимого, разработчики — больше игроков. Простая привлекательность идеи открытого PC не разрывает эту связь. Нужен либо огромный объём отдельных портов, либо другой способ использовать существующую библиотеку.</p>
+<p>Этот момент уточняет предел обычного влияния Ньюэлла. Он может профинансировать свою команду, убедить партнёра и создать полезную технологию. Но владение Steam не даёт ему прямого управления всеми студиями, чьи продукты делают платформу ценной. Именно поэтому техническое решение совместимости окажется столь привлекательным: оно уменьшает количество независимых решений, необходимых для практического результата.</p>
+<p><a id="steam-machines"></a></p>
+<h2 id="6-steamos-steam-machines">6. SteamOS и первая программа Steam Machines<a class="headerlink" href="#6-steamos-steam-machines" title="Permanent link">¶</a></h2>
+<p>В 2013 году Valve объявляет SteamOS и направление Steam Machines. Речь идёт о Linux-среде для игр и устройствах разных производителей, предназначенных в том числе для гостиной. Это первая OEM-программа, дошедшая до коммерческих устройств в 2015 году; её следует отличать от позднейших продуктов, использующих сходное название.<sup id="fnref:steam-universe"><a class="footnote-ref" href="#fn:steam-universe">3</a></sup></p>
+<p>Для Ньюэлла модель нескольких изготовителей выглядит знакомо по PC. Общая программная основа может сочетаться с разными ценами, конфигурациями и инженерными решениями. Компания не обязана самостоятельно выпускать каждый компьютер, чтобы её платформа распространялась. Такая структура потенциально снижает зависимость от одного поставщика оборудования.</p>
+<p>Но у покупателя другая задача. Он хочет понять, что именно приобрести, какие игры запустятся и что потребуется настроить. Изобилие вариантов полезно, когда понятны различия и сохраняется ожидаемый результат. Если обещана консольная простота, а выбирать приходится как обычный сложный PC, само предложение начинает терять ясность.</p>
+<p>Инициатива тем самым проверяет два разных предположения: пригодность открытой системы и способность множества участников вместе создать понятный товар. Первое не обеспечивает второе. Между привлекательной архитектурой рынка и хорошим опытом конкретного человека остаётся работа, за которую кто-то должен явно отвечать.</p>
+<h2 id="7">7. Кто отвечает за целое<a class="headerlink" href="#7" title="Permanent link">¶</a></h2>
+<p>Производитель компьютера определяет корпус, охлаждение, компоненты, цену и доступность. Valve отвечает за значительную часть программного опыта. Драйверы и игры приходят от других организаций. У каждого есть своё поле контроля, но пользователь получает один объект и ожидает от него одного связного результата.</p>
+<p>Если игра плохо работает, формальное объяснение причин может оказаться совершенно точным и практически бесполезным покупателю. Его не устраивает путешествие между изготовителем устройства, автором игры и оператором системы. Чем сильнее продукт обещает готовность к использованию, тем больше требуется заранее согласовать эти границы ответственности.</p>
+<p>Для ранней Valve это повторная встреча с проблемой хороших частей и недостаточно хорошего целого. Только теперь части создаются не в соседних комнатах одной студии. Исправлять их взаимодействие сложнее: у внешних компаний есть собственные бюджеты, сроки, обязательства и представления о нужном покупателе.</p>
+<p>Отсюда не следует, что партнёрская модель неизбежно плоха. Она может успешно работать при ясных требованиях и достаточной зрелости общей среды. Но свобода выбора производителя не заменяет решения вопроса, кто гарантирует целостность. Этот вопрос окажется центральным для дальнейшего перехода Valve к собственным устройствам.</p>
+<h2 id="8">8. Библиотека стала аргументом против перехода<a class="headerlink" href="#8" title="Permanent link">¶</a></h2>
+<p>В 2015 году ещё нет зрелого Proton в том виде, который позднее будет встроен в Steam Play. Windows-игра не превращается автоматически в подходящий для SteamOS продукт. Часть библиотеки требует нативных портов или иных способов обхода ограничения. Для человека, уже вложившего деньги и время в Steam, это существенная цена.<sup id="fnref:proton"><a class="footnote-ref" href="#fn:proton">4</a></sup></p>
+<p>Возникает парадокс: сильнейший актив платформы становится препятствием новому устройству той же платформы. Чем больше привычных игр у пользователя, тем заметнее потери от неполной совместимости. Обещать ему будущее расширение недостаточно, если сегодня он может просто продолжать играть на имеющемся Windows-PC.</p>
+<p>Эта проблема глубже маркетинговой неясности. Даже идеально объяснённый товар должен отвечать на вопрос, зачем приобретать второй компьютер с ограничениями. Убеждённость Ньюэлла в необходимости альтернативы объясняет решение компании продолжать работу; она не создаёт автоматически причину покупки для остальных.</p>
+<p>В итоге первая программа Steam Machines не закрепилась в том масштабе, который сделал бы её очевидным новым способом играть на PC. Это результат конкретной инициативы. Не следует растягивать его на все будущие Linux-устройства, но и поздние успехи не отменяют того, что первоначальному потребительскому предложению не хватило убедительности.</p>
+<p><a id="ellsworth"></a></p>
+<h2 id="9">9. Джери Эллсворт: новая область обнаруживает старую неформальную власть<a class="headerlink" href="#9" title="Permanent link">¶</a></h2>
+<p>В 2013 году бывшая участница аппаратной команды Джери Эллсворт описала Valve как <strong>pseudo-flat</strong>. В её рассказе небольшая группа могла работать на равных, но влиятельные старожилы обладали скрытым весом; подбор нужных аппаратных специалистов затруднялся возражениями о соответствии культуре. Она одновременно положительно отзывалась о коллегах своей команды.<sup id="fnref:ellsworth"><a class="footnote-ref" href="#fn:ellsworth">5</a></sup></p>
+<p>Это свидетельство участницы после трудного расставания с компанией, связанное с определённым направлением и периодом. Его нельзя считать полным независимым обследованием всей Valve. Но сложные обстоятельства рассказа не делают его автоматически недействительным. Он ставит предметный вопрос: как новая профессиональная область получает признание внутри организации, чьи нормы сформировались в другой области?</p>
+<p>Высокий порог найма может защищать команду от случайных людей. Он же способен затруднить приход компетенции, которая не выглядит привычно. Если право возражения распределено неформально, будущий сотрудник и заинтересованная команда не всегда понимают, какой именно критерий не выполнен и как его можно проверить.</p>
+<p>Для биографии Ньюэлла это проверка намерения создать среду сильных специалистов. Сама система должна уметь признавать силу, которую пока плохо умеет оценивать. Противоречие не исчезает от общего призыва нанимать лучших: остаётся вопрос, кто устанавливает мерку и что происходит, когда новой области нужна другая мерка.</p>
+<h2 id="10">10. Перенести культуру сложнее, чем разрешить эксперимент<a class="headerlink" href="#10" title="Permanent link">¶</a></h2>
+<p>Аппаратное направление требует навыков, которые не сводятся к написанию программ. Значимы промышленное проектирование, поставки, работа с компонентами, испытания и поддержка физических устройств. Конкретный состав этих задач меняется от проекта к проекту, но общий принцип очевиден: расширение технологической области расширяет круг необходимого знания.</p>
+<p>У Ньюэлла уже был опыт входа в незнакомую отрасль при создании Valve. Тогда помогли Харрингтон, Абраш, издатель, художники, писатели и разработчики уровней. Аппаратные проекты требуют вновь признать ограниченность существующей организации. Наличие денег и сильных программистов не отменяет этой необходимости.</p>
+<p>Рассказ Эллсворт не позволяет установить, какие конкретно решения принимал лично Ньюэлл в каждом споре. Приписывать ему все отказы было бы столь же неверно, как полностью отделять его от устройства созданной среды. Его биографическая ответственность здесь находится прежде всего на уровне условий, в которых новые специалисты пытаются встроиться в компанию.</p>
+<p>Поэтому успешный аппаратный продукт важен ещё и как свидетельство накопленного сотрудничества. Его нельзя получить одним распоряжением «теперь делаем железо». Между распоряжением и работающим устройством находятся люди, чьи представления о качестве, сроках и рисках могут отличаться от привычек игрового прототипирования.</p>
+<p><a id="input"></a></p>
+<h2 id="11-steam-controller">11. Steam Controller: необычный инструмент с ценой освоения<a class="headerlink" href="#11-steam-controller" title="Permanent link">¶</a></h2>
+<p>Первый Steam Controller, вышедший в 2015 году, пытается решить реальную задачу: огромная PC-библиотека не рассчитана на один традиционный геймпад. Управление курсором, клавиатурные команды и привычные схемы движения нужно перенести в условия, где человек сидит перед телевизором и держит небольшое устройство.<sup id="fnref:steam-input"><a class="footnote-ref" href="#fn:steam-input">6</a></sup></p>
+<p>Трекпады, гироскоп, тактильная обратная связь и гибкое переназначение создают много возможностей. Пользователь и сообщество могут находить подходящие схемы для игр, авторы которых такого устройства не предусматривали. Это сильная сторона подхода Valve: поддержка старого содержимого через новый общий инструмент.</p>
+<p>Но возможности требуют освоения. Человеку приходится понять, какую схему выбрать, как соединить привычные движения с новыми, когда трекпад должен вести себя как мышь и чего ожидать от гироскопа. Для энтузиаста это может быть удовольствием; для желающего немедленно начать игру — дополнительной обязанностью.</p>
+<p>Поэтому здесь недостаточно назвать контроллер «неудачным» без критерия. Сложность массового освоения, коммерческий масштаб, прекращение выпуска конкретной модели и полезность её программных идей — разные вопросы. Полные коммерческие ожидания и результаты публично не раскрыты. Достовернее говорить о спорном потребительском устройстве, которое ясно обнаружило цену гибкости и оставило продолжившее развитие направление ввода.</p>
+<h2 id="12">12. Хорошая настройка по умолчанию тоже является технологией<a class="headerlink" href="#12" title="Permanent link">¶</a></h2>
+<p>Возможность переназначить любую кнопку часто выглядит как окончательная победа свободы. Но пользователь должен ещё знать, какое решение ему подходит. Если система предлагает слишком большой объём выбора до первого хорошего опыта, она переносит часть дизайнерской работы на покупателя.</p>
+<p>Это важное ограничение для Ньюэлловского интереса к самостоятельности. Участник получает пользу от свободы, когда у него есть понятный исходный путь и возможность изменять его по мере необходимости. Право настроить всё не должно означать обязанность спроектировать базовый опыт самому.</p>
+<p>Поздний Deck сохраняет обычные стики, крестовину, кнопки и триггеры, добавляя трекпады, гироскоп и задние органы управления. Сравнение не доказывает, что конкретный элемент выбран по единственному уроку первого Controller. Оно показывает наблюдаемую разницу продуктового решения: знакомая основа и дополнительные возможности сосуществуют в одном устройстве.<sup id="fnref:steamdeck"><a class="footnote-ref" href="#fn:steamdeck">7</a></sup></p>
+<p>Для биографии это более точная форма развития, чем «Ньюэлл понял, что пользователи не любят новое». Новизна остаётся. Меняется обязанность человека сразу принять её как единственный способ взаимодействия. Организация учится не только изобретать возможности, но и определять, когда они должны становиться заметны пользователю.</p>
+<h2 id="13-steam-link">13. Steam Link: иногда достаточно меньшего изменения<a class="headerlink" href="#13-steam-link" title="Permanent link">¶</a></h2>
+<p>Рядом со Steam Machines в 2015 году появился Steam Link. Его исходная задача значительно проще: использовать уже имеющийся игровой PC и передать изображение и управление к телевизору в другой комнате. Пользователю не требуется приобретать второй полноценный игровой компьютер, чтобы решить именно эту бытовую проблему.<sup id="fnref:steamlink"><a class="footnote-ref" href="#fn:steamlink">8</a></sup></p>
+<p>Этот пример полезен как ограничение слишком стройной формулы о Ньюэлле, который всегда строит всё более глубокий слой. Иногда подходящее решение сохраняет существующую машину и добавляет сравнительно небольшой связующий элемент. Не каждую зависимость нужно уничтожать; иногда выгоднее удобнее ею воспользоваться.</p>
+<p>Физический Steam Link и программная технология потоковой передачи также имеют разные жизненные циклы. Прекращение выпуска отдельной коробки не означает исчезновения самой возможности. Но здесь не требуется объявлять любой завершившийся товар исследовательским успехом. Можно отдельно оценивать, какую задачу он решал и какая часть работы продолжила использоваться.</p>
+<p>В аппаратной линии Valve поэтому есть несколько способов учиться: менять устройство целиком, сохранять программную часть после смены формы, улучшать настройки или обходить необходимость нового компьютера. Они значительно разнообразнее единственной истории о последовательном спуске к полному вертикальному контролю.</p>
+<p><a id="proton"></a></p>
+<h2 id="14-wine">14. Wine позволяет поставить другой вопрос<a class="headerlink" href="#14-wine" title="Permanent link">¶</a></h2>
+<p>Для масштабирования Linux-библиотеки у Valve остаётся неприятная зависимость от отдельных решений тысяч студий. Wine предлагает иной подход: реализовать ожидаемые Windows-приложением интерфейсы в другой среде. Это существовавший задолго до Proton проект, а не изобретение Valve.<sup id="fnref2:proton"><a class="footnote-ref" href="#fn:proton">4</a></sup></p>
+<p>Такой подход не переносит весь Windows внутрь Linux и не является простой виртуальной машиной с установленной копией системы. Он создаёт совместимость с вызовами, на которые рассчитывает программа. В игровой практике этого недостаточно без дополнительных компонентов, переводящих графические обращения и обрабатывающих множество особенностей конкретных приложений.</p>
+<p>Для Ньюэлла здесь привлекательна организация задачи. Вместо необходимости убедить каждого автора отдельно компания может вкладываться в общий слой, улучшения которого помогают сразу нескольким играм. Однако ответственность не исчезает: совместимость требует проверки, исправлений и сотрудничества с другими участниками.</p>
+<p>В этой части его подход действительно напоминает выбор Quake в 1996 году. Уже существует большая внешняя работа. Valve может использовать её как основу и усиливать там, где собственной задаче не хватает готового решения. При этом сходство управленческого выбора не делает лицензию Quake и открытый проект Wine одним юридическим или экономическим случаем.</p>
+<h2 id="15-proton">15. Proton: работа общего слоя вместо тысяч обязательных портов<a class="headerlink" href="#15-proton" title="Permanent link">¶</a></h2>
+<p>В 2018 году Valve представляет Proton в составе Steam Play. Он объединяет Wine и дополнительные компоненты для запуска Windows-игр в Linux-среде. Значительную роль играют сотрудничество с CodeWeavers, открытые проекты графической совместимости и дальнейшая работа множества участников.<sup id="fnref3:proton"><a class="footnote-ref" href="#fn:proton">4</a></sup></p>
+<p>Состав и возможности менялись со временем. Поэтому современный перечень компонентов нельзя целиком переносить в первый выпуск 2018 года. DXVK и vkd3d-proton принадлежат общей развивающейся технической линии, но история их интеграции не сводится к одному моменту появления готового универсального решения.</p>
+<p>Для биографии важен результат выбранной архитектуры: отсутствие отдельного Linux-порта перестаёт автоматически закрывать путь к игре. Команда совместимости получает возможность решать часть проблем на своей стороне, не ожидая нового релиза от каждого владельца исходного кода. Это увеличивает самостоятельность Valve, одновременно усиливая её зависимость от качества коллективной открытой инфраструктуры.</p>
+<p>Следует сохранить авторство на этом уровне. Ньюэлл не написал Proton, Wine или графические переводчики. Его стратегическое решение и финансовый горизонт помогают объяснить, почему Valve могла долго вкладываться в направление. Конкретная способность запуска создана разработчиками, чья работа не становится менее самостоятельной из-за того, что она отвечает большой цели основателя.</p>
+<h2 id="16">16. Инженерное решение не устраняет всех чужих решений<a class="headerlink" href="#16" title="Permanent link">¶</a></h2>
+<p>Фраза «организационная проблема стала инженерной» описывает важный сдвиг, но слишком сильна как окончательный вывод. У игр остаются сторонние лаунчеры, сетевые службы, системы защиты и условия поддержки. Часть из них требует действий или согласия разработчика. Обновление чужого компонента может нарушить то, что раньше работало.<sup id="fnref4:proton"><a class="footnote-ref" href="#fn:proton">4</a></sup><sup id="fnref:steamdeck-compat"><a class="footnote-ref" href="#fn:steamdeck-compat">9</a></sup></p>
+<p>Особенно показателен античит: техническая возможность поддержать определённую среду и фактическое разрешение использовать её в конкретной игре не тождественны. Поэтому библиотека не превращается в полностью независимый от других участников архив исполняемых файлов. Открытая операционная система не отменяет закрытые серверы и внешние правила.</p>
+<p>Для оценки Ньюэлла это важная мера результата. Valve уменьшает число необходимых зависимостей и делает альтернативу практически полезнее. Она не выходит из всех отношений с другими компаниями и не гарантирует вечную совместимость каждого приобретённого продукта. Абсолютная независимость здесь вообще плохо описывает задачу.</p>
+<p>Такой предел не обесценивает работу. Практическая свобода часто растёт поэтапно: вчера требовался отдельный порт, сегодня многие игры работают через общий слой, завтра нужно решить конкретную оставшуюся проблему. Но биография становится точнее, когда говорит о достигнутом уменьшении ограничений, а не об окончательном освобождении пользователя от любой внешней власти.</p>
+<h2 id="17-vulkan">17. Vulkan и цена невидимой инфраструктуры<a class="headerlink" href="#17-vulkan" title="Permanent link">¶</a></h2>
+<p>Графическая часть совместимости требует переводить ожидаемые игрой возможности в доступные другой системе механизмы. Vulkan становится важным общим основанием для таких решений. В технической истории можно подробно разбирать отдельные API, драйверы и способы трансляции; здесь достаточно понять, почему это работа на уровне всей библиотеки.<sup id="fnref5:proton"><a class="footnote-ref" href="#fn:proton">4</a></sup></p>
+<p>Для пользователя успех выглядит почти тривиально: он нажимает кнопку, игра запускается. Чем качественнее инфраструктура, тем меньше он обязан знать о её устройстве. Это создаёт парадокс признания: многолетняя сложная работа становится наиболее ценной именно тогда, когда перестаёт требовать внимания.</p>
+<p>Ньюэлл неоднократно выбирает подобные задачи, но это не делает их менее зависимыми от ремесла отдельных инженеров. Определить стратегическую нужность Linux — одно действие. Находить причины несовместимости сотен приложений — множество других действий, требующих другого уровня знания и терпения.</p>
+<p>В долгой ставке особенно важно последнее. Направление нельзя закончить эффектной демонстрацией одной игры. Его ценность определяется устойчивостью повседневного использования, скоростью реакции на изменения и количеством ситуаций, в которых человек всё-таки вынужден разбираться с технической границей. Именно здесь интерес к большим возможностям должен поддерживаться работой над повторяющимися частностями.</p>
+<p><a id="vr"></a></p>
+<h2 id="18-vr-windows-8">18. VR — параллельная линия, а не следствие Windows 8<a class="headerlink" href="#18-vr-windows-8" title="Permanent link">¶</a></h2>
+<p>Интерес Valve к VR нельзя полностью вывести из страха перед Microsoft. Майкл Абраш пришёл в Valve в 2011 году, прежде чем публичная критика Windows 8 стала символом Linux-стратегии. Пространственное взаимодействие решает другую задачу: как человек присутствует в цифровом мире и какими действиями на него влияет.<sup id="fnref:abrash-vr"><a class="footnote-ref" href="#fn:abrash-vr">10</a></sup></p>
+<p>Ньюэлла здесь привлекает возможность изменить сам интерфейс. Клавиатура, мышь, геймпад и экран эффективны, но не являются единственной мыслимой формой игры. Отслеживание головы и рук позволяет строить опыт вокруг движения тела. Для качественного результата нужно согласовать задержку, изображение, положение и ожидание пользователя.</p>
+<p>Это тематически связано с прежним вниманием к реакции мира на действие, но связь не является прямой линией технической неизбежности. Из интереса к Half-Life не следует обязательность VR, а из VR — обязательность имплантов. Каждый переход требует нового выбора, новых людей и отдельных оснований для вложений.</p>
+<p>Возвращение Абраша позволяет показать преемственность через человека, а не только через схему. Раньше он помог открыть Ньюэллу возможности технологии Quake. Теперь его исследования и публичные объяснения относятся к иной области. Доверие к специалисту облегчает движение в незнакомое пространство, но не превращает его прогнозы в гарантированный исход рынка.</p>
+<h2 id="19">19. Присутствие требует больше, чем убедительной картинки<a class="headerlink" href="#19" title="Permanent link">¶</a></h2>
+<p>В обычной игре человек давно научился принимать условности управления. Нажатие кнопки может означать сложное движение, а камера — положение воображаемого тела. В VR часть условностей меняется: если пользователь повернул голову или протянул руку, система должна достаточно согласованно ответить на это действие.</p>
+<p>Valve исследует задержку, отслеживание, оптику, устойчивость изображения и пространственное взаимодействие. Это отдельные инженерные проблемы, которые сходятся в субъективном чувстве присутствия. Слабость одного компонента может разрушить достоинства остальных.<sup id="fnref2:abrash-vr"><a class="footnote-ref" href="#fn:abrash-vr">10</a></sup><sup id="fnref:steamvr"><a class="footnote-ref" href="#fn:steamvr">11</a></sup></p>
+<p>Для Ньюэлла здесь важен переход от демонстрации возможностей к качеству переживания. Высокое разрешение само по себе не гарантирует удобства, как сложная физика сама по себе не гарантировала хорошую Half-Life 2. Но конкретные исследования выполняет команда; общая продуктовая логика не заменяет технической экспертизы.</p>
+<p>Также важно не объявлять VR более «настоящей» формой любой игры. Она открывает определённые возможности и вводит собственные ограничения: физические требования, устройство пространства, длительность комфортного использования и способы перемещения. Пользовательская ценность возникает из соответствия конкретному опыту, а не из самого факта близости интерфейса к телу.</p>
+<h2 id="20-oculus">20. Ранний Oculus: сотрудничество с неопределённым будущим<a class="headerlink" href="#20-oculus" title="Permanent link">¶</a></h2>
+<p>В начале современной VR-волны Valve и Oculus взаимодействовали в небольшой исследовательской среде. Ньюэлл публично поддерживал ранний Oculus; команды обменивались знаниями и демонстрациями. Свою роль играли Палмер Лаки, Джон Кармак, Абраш и другие специалисты, но их действия и переходы нельзя сводить к одному общему плану.<sup id="fnref:oculus-kickstarter"><a class="footnote-ref" href="#fn:oculus-kickstarter">12</a></sup><sup id="fnref3:abrash-vr"><a class="footnote-ref" href="#fn:abrash-vr">10</a></sup></p>
+<p>Для биографии важно, что Valve первоначально не требовала самостоятельно владеть каждым элементом нового направления. Партнёрство могло ускорить развитие области. Но из самого обмена исследованиями не следует чистый альтруизм или готовность безразлично отдавать любую ценность конкурентам. У участников могли существовать ожидания сотрудничества, коммерческие интересы и меняющиеся оценки будущего.</p>
+<p>Поздние отношения компаний не нужно переносить назад. Когда рынок ещё не сложился, совместное выяснение возможностей может быть полезно всем. После появления крупных владельцев, платформенных стратегий и собственных устройств баланс меняется. Один и тот же человек может поддерживать общие исследования и одновременно желать сохранить контроль над важными для своей компании решениями.</p>
+<p>Ньюэлл оказывается перед знакомым вопросом о границе организации. Сильные люди и технологии не обязаны находиться внутри Valve. Но внешнее сотрудничество требует принять возможность, что они выберут другой путь. Это отличается от владения результатом работы штатной команды и не может быть полностью защищено личным уважением между инженерами.</p>
+<h2 id="21">21. Уход специалистов не получает удобного психологического объяснения<a class="headerlink" href="#21" title="Permanent link">¶</a></h2>
+<p>В 2014 году Атман Бинсток и Майкл Абраш переходят из Valve в Oculus. Эти переходы происходили не в один день и не должны описываться как единый организованный исход после сделки Facebook. Для точной биографии важнее сам факт потери значимых участников и продолжение работы Valve в другом партнёрстве.<sup id="fnref:oculus-people"><a class="footnote-ref" href="#fn:oculus-people">13</a></sup></p>
+<p>Нет достаточных публичных оснований утверждать, что Ньюэлл воспринимал уход исключительно как благо для всей индустрии или, наоборот, как предательство. Такие реакции были бы драматически удобны, но требуют прямого свидетельства. Наблюдаемое действие компании — продолжение SteamVR и дальнейшая работа с HTC.</p>
+<p>Эта сдержанность оставляет более интересный вопрос: какую часть независимости действительно создаёт финансирование исследования, если носители знания свободны перейти в другую организацию? Ответ не может состоять в удержании всех навсегда. Нужно строить способность продолжать работу, воспроизводить компетенцию и находить подходящие отношения заново.</p>
+<p>То же ограничение относится к личному влиянию Ньюэлла. Репутация и деньги помогают привлечь сильного специалиста, но не отменяют его собственных интересов. Сохранение этой самостоятельности важно для рассказа о человеке, который хотел окружать себя людьми с независимым суждением.</p>
+<h2 id="22-vive">22. Vive: партнёрство с разделением компетенций<a class="headerlink" href="#22-vive" title="Permanent link">¶</a></h2>
+<p>HTC Vive объявили в 2015 году; потребительский выпуск состоялся в 2016-м. HTC и Valve соединяли разные возможности: опыт физического устройства и его производства, SteamVR, отслеживание, ввод и программную экосистему. Нельзя приписывать Ньюэллу личное создание всех этих компонентов.<sup id="fnref:vive"><a class="footnote-ref" href="#fn:vive">14</a></sup></p>
+<p>Партнёрство позволяет выйти к покупателю быстрее, чем полное освоение каждого слоя в одиночку. Одновременно оно оставляет разделение ответственности. Устройство и программная платформа тесно связаны, но принадлежат разным организациям с собственными решениями о следующем поколении.</p>
+<p>Это не обязательно недостаток, который с самого начала планировали устранить. История не требует изображать Vive лишь временной ступенькой к заранее задуманному Index. В конкретный момент сотрудничество решало задачу и давало опыт. Последующий выбор другого объёма ответственности не доказывает, что первый вариант был ненастоящей целью.</p>
+<p>Для Ньюэлла здесь повторяется более ограниченный принцип: пользоваться сильной внешней компетенцией, когда она помогает решить задачу, и сохранять возможность изменить границу собственной работы, когда требования меняются. Между этим принципом и обязательным стремлением владеть всей цепочкой существует существенная разница.</p>
+<h2 id="23-lighthouse">23. Lighthouse как инструмент для нескольких устройств<a class="headerlink" href="#23-lighthouse" title="Permanent link">¶</a></h2>
+<p>SteamVR Tracking, известный через систему Lighthouse, позволяет рассматривать отслеживание как отдельную инфраструктуру для устройств. Оно важно не только внутри одного готового шлема. Другие изготовители могут строить совместимое оборудование, пользуясь общим техническим основанием.<sup id="fnref2:steamvr"><a class="footnote-ref" href="#fn:steamvr">11</a></sup></p>
+<p>Такой подход действительно напоминает платформенную работу Ньюэлла: полезная возможность становится доступной нескольким независимым участникам. Но конкретный режим доступа, лицензирования и поддержки нужно отличать от общего слова «открытость». Возможность создать совместимое устройство не означает отсутствия условий или полного раскрытия любой технологии.</p>
+<p>Для пользователя ценность зависит от того, насколько эта совместимость реальна и удобна. Для изготовителя — от устойчивости правил и наличия аудитории. Для Valve — от развития среды, в которой её программная платформа остаётся полезной. Здесь вновь встречаются три разных интереса, которые могут совпадать, но не обязаны совпадать во всех деталях.</p>
+<p>Этот пример помогает удержать Ньюэлла в роли участника организации рынка, не превращая его в автора каждого инженерного решения. Он выбирает поддерживать направление, где часть пользы получают другие изготовители. Команды определяют, каким образом общая возможность становится работающей технологией.</p>
+<h2 id="24-vr">24. Ньюэлл допускает, что VR может не стать массовой<a class="headerlink" href="#24-vr" title="Permanent link">¶</a></h2>
+<p>В публичных разговорах 2017 года Ньюэлл допускал неудачу VR как большого потребительского направления. Такая формулировка важна после ранних резких прогнозов: инвестиция не обязательно сопровождается утверждением неизбежности результата.<sup id="fnref:vr2017"><a class="footnote-ref" href="#fn:vr2017">15</a></sup></p>
+<p>При этом он не считал снижение цены достаточным решением. Сначала должно существовать переживание, ради которого человек вообще хочет использовать устройство. Более дешёвый вход облегчает покупку, но не создаёт содержательную причину возвращаться. Этот вопрос ближе к его прежнему продуктовому критерию, чем к соревнованию характеристик оборудования.</p>
+<p>Однако признание неопределённости не делает решение автоматически рациональным в любом масштабе. Требуется оценивать цену исследования, другие возможные направления и то, какие знания действительно остаются полезными при ограниченном спросе. Публичные высказывания показывают готовность Ньюэлла принять риск; они не раскрывают всей внутренней системы его оценки.</p>
+<p>Поэтому зрелость позиции лучше видеть в точности языка. Он может сказать, что область достаточно интересна для проверки, не обещая, что она непременно заменит привычный способ игры. Это оставляет место результату, который ещё не известен ни основателю, ни его слушателям.</p>
+<h2 id="25-index">25. Index: больше ответственности за готовую вещь<a class="headerlink" href="#25-index" title="Permanent link">¶</a></h2>
+<p>В 2019 году Valve выпускает Index. По сравнению с партнёрской моделью Vive компания берёт на себя больший объём ответственности за устройство и его взаимодействие с программной средой. Оптика, звук, контроллеры, эргономика и согласование элементов становятся частью более интегрированного предложения.<sup id="fnref:index"><a class="footnote-ref" href="#fn:index">16</a></sup></p>
+<p>Такая интеграция может облегчить поиск причины пользовательской проблемы. Но она же увеличивает количество обязательств Valve: производство, поставки, качество физических компонентов и обслуживание. Контроль не является бесплатным приобретением. Он означает, что от большего числа недостатков уже нельзя отделиться ссылкой на чужую область работы.</p>
+<p>Index Controllers продолжают исследование более непосредственного управления руками. Однако возможность отслеживать пальцы не делает каждое действие автоматически естественным. Игра должна решить, как использовать сигнал, когда помогать человеку и какие движения поддерживать. Интерфейс всегда включает интерпретацию, даже если выглядит менее условным, чем кнопка.<sup id="fnref2:index"><a class="footnote-ref" href="#fn:index">16</a></sup></p>
+<p>Для биографии Index важен как очередной рост практической компетенции организации. Он не даёт основания объявить Ньюэлла универсальным конструктором устройств. Напротив, показывает, сколько разных специалистов требуется, чтобы привычное ему требование хорошего опыта заработало за пределами чисто программного продукта.</p>
+<h2 id="26-alyx">26. Alyx связывает интерфейс с содержанием — и оставляет цену входа<a class="headerlink" href="#26-alyx" title="Permanent link">¶</a></h2>
+<p>Half-Life: Alyx даёт аппаратной линии большой игровой результат. История её коллективного завершения уже разобрана в <a href="../gabe-newell-06-failures-crises-evolution/#alyx">шестой главе</a>. Здесь важен продуктовый выбор: возможности VR становятся основанием для конкретной кампании, а не только для набора демонстраций.<sup id="fnref:alyx"><a class="footnote-ref" href="#fn:alyx">17</a></sup></p>
+<p>При этом поддержка разных шлемов не отменяет аппаратного порога. Для одного человека новый интерфейс открывает сильный опыт, для другого закрывает привычный доступ к любимой серии. Этот конфликт нельзя устранить уверением, что устройство представляет будущее: пользователь имеет право оценивать сегодняшние условия собственного участия.</p>
+<p>Именно поэтому Ньюэлловское требование нового пространства взаимодействия следует сопоставлять с доступностью. Инновация может нуждаться в специфическом оборудовании, но последствия этого выбора остаются частью её оценки. Успех у доступной аудитории и охват всей прежней аудитории — разные результаты.</p>
+<p>В то же время Alyx нельзя считать рекламой исключительно Index. Команда прямо объясняла, что необходимые взаимодействия рассчитаны на разные поддерживаемые VR-системы. Более развитое отслеживание могло добавлять выразительность, но не становилось обязательным условием для ключевых действий.<sup id="fnref:alyx-ama"><a class="footnote-ref" href="#fn:alyx-ama">18</a></sup></p>
+<p><a id="deck"></a></p>
+<h2 id="27-steam-deck">27. Steam Deck: другой продукт из частично знакомой работы<a class="headerlink" href="#27-steam-deck" title="Permanent link">¶</a></h2>
+<p>Steam Deck объявили в 2021 году, а первые устройства начали поступать покупателям в 2022-м. К этому времени Valve накопила опыт Linux, SteamOS, совместимости, ввода, потоковой передачи и физического оборудования. Но наличие этих направлений само по себе ещё не определяло появление именно портативного PC.<sup id="fnref2:steamdeck"><a class="footnote-ref" href="#fn:steamdeck">7</a></sup></p>
+<p>Для такого устройства требуются подходящие компоненты, баланс производительности и энергопотребления, охлаждение, экран, батарея и ясный сценарий использования. Это условия конкретного исторического момента. Десятилетием раньше та же организационная философия не гарантировала бы равноценного результата.</p>
+<p>Поэтому Deck стоит рассматривать как соединение накопленной работы с новым продуктовым решением. Некоторые компоненты и навыки действительно продолжаются. Другие задачи возникают заново. Преемственность не означает неизбежности и не позволяет превратить всю раннюю историю Valve в подготовку к заранее выбранной портативной машине.</p>
+<p>Ньюэлл участвует в публичном объяснении и ценовой ставке, а команды превращают сложный набор возможностей в устройство. Содержательная биография должна удерживать обе стороны: без долгой поддержки направления путь был бы труднее; без конкретной инженерной и дизайнерской работы одного убеждения владельца не хватило бы.</p>
+<h2 id="28-steam-machine">28. Главное отличие от первой Steam Machine — ясное исходное предложение<a class="headerlink" href="#28-steam-machine" title="Permanent link">¶</a></h2>
+<p>Сравнение двух инициатив полезно, когда оно не смешивает их цели и эпохи.</p>
+<table>
+<thead>
+<tr>
+<th>Вопрос</th>
+<th>Первая программа Steam Machines, 2013–2015</th>
+<th>Первый Steam Deck, 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Что покупает человек</td>
+<td>Устройство одного из нескольких OEM с разными конфигурациями</td>
+<td>Определённое Valve портативное устройство с понятной базовой архитектурой</td>
+</tr>
+<tr>
+<td>Основной сценарий</td>
+<td>Перенос PC-игр в гостиную</td>
+<td>Собственная Steam-библиотека в портативной форме</td>
+</tr>
+<tr>
+<td>Совместимость</td>
+<td>Сильная зависимость от нативной Linux-библиотеки</td>
+<td>Общий слой Proton расширяет доступ к Windows-играм, с сохраняющимися исключениями</td>
+</tr>
+<tr>
+<td>Привычность ввода</td>
+<td>Экспериментальный контроллер как важная часть предложения</td>
+<td>Обычные органы управления сосуществуют с дополнительными способами ввода</td>
+</tr>
+<tr>
+<td>Кто сводит опыт</td>
+<td>Ответственность распределена между несколькими организациями</td>
+<td>Valve определяет больше параметров устройства и системы вместе</td>
+</tr>
+</tbody>
+</table>
+<p>Таблица описывает различие потребительских конструкций, а не объявляет первый подход неизбежно обречённым. Он возникал в другой технической среде и решал другую форму задачи. Deck мог использовать часть накопленного опыта именно потому, что не повторял прежний товар буквально.<sup id="fnref2:steam-universe"><a class="footnote-ref" href="#fn:steam-universe">3</a></sup><sup id="fnref3:steamdeck"><a class="footnote-ref" href="#fn:steamdeck">7</a></sup></p>
+<p>Для Ньюэлла это важный вид изменения: сохранить интерес к самостоятельной игровой среде, но отказаться от надежды, что разнообразие внешних производителей само обеспечит её целостность. Однако такую связь следует называть аналитическим прочтением наблюдаемых решений, если нет конкретного свидетельства о его личном внутреннем выводе.</p>
+<h2 id="29">29. Цена как часть ставки<a class="headerlink" href="#29" title="Permanent link">¶</a></h2>
+<p>При представлении Deck Ньюэлл называл стартовую цену <strong>399 долларов</strong> болезненной, но необходимой для выбранного замысла. Это историческая цена базовой модели на запуске, а не актуальный прайс и не доказательство определённой отрицательной маржи.<sup id="fnref:deck-pricing"><a class="footnote-ref" href="#fn:deck-pricing">19</a></sup></p>
+<p>Смысл высказывания в том, что устройство оценивается шире прибыли с отдельной коробки. Чем понятнее вход в новую форму PC-игр, тем больше оснований у разработчиков учитывать её, у пользователей — пробовать, у Valve — улучшать совместимость. При этом точная экономика конкретной модели остаётся закрытой; по одному прилагательному Ньюэлла её восстановить невозможно.</p>
+<p>Такое решение использует преимущества платформенного бизнеса, но не делает стоимость производства несущественной. Физический товар требует реальных компонентов и обслуживания. Устойчивость предложения проверяется способностью поставлять и поддерживать его, а не только привлекательностью стартового объявления.</p>
+<p>Для личного портрета здесь важна готовность воспринимать часть аппаратной экономики через долгий горизонт. Но это всё ещё выбор с риском. Большая экосистема может поддержать цену устройства; она также способна скрыть от внешнего наблюдателя, насколько дорого обходится конкретный аппаратный эксперимент.</p>
+<p><a id="openness"></a></p>
+<h2 id="30">30. Управлять исходным опытом и оставлять право изменить его<a class="headerlink" href="#30" title="Permanent link">¶</a></h2>
+<p>Steam Deck предлагает заметно более определённую среду, чем множество ранних Steam Machines: известное устройство, SteamOS, игровой интерфейс и совместно разработанные способы управления. Одновременно пользователь может перейти в рабочий стол, устанавливать другое программное обеспечение и менять систему в пределах реальных технических возможностей.<sup id="fnref4:steamdeck"><a class="footnote-ref" href="#fn:steamdeck">7</a></sup></p>
+<p>Это сочетание позволяет точнее определить практическую открытость. Человек получает работоспособный маршрут по умолчанию и возможность отклониться от него. Ему не обязательно сначала становиться специалистом по Linux, чтобы получить пользу от устройства, но такая специализация не запрещена тем, кто хочет пойти дальше.</p>
+<p>Однако разрешение установить сторонний магазин не гарантирует равного удобства, официальной поддержки каждого лаунчера или вечной совместимости. Здесь проходит граница между свободой действия и обещанием результата. Открытая возможность может требовать труда пользователя и зависеть от изменений сторонней программы.</p>
+<p>Для оценки Ньюэлла это более точный критерий, чем общий образ защитника свободы. Какие действия действительно доступны без разрешения Valve? Где остаётся зависимость от её серверов и правил? Какие компоненты открыты по лицензии, какие лишь допускают совместимость? Разные ответы на эти вопросы могут сосуществовать в одном устройстве.</p>
+<h2 id="31">31. Четыре разных значения слова «открытый»<a class="headerlink" href="#31" title="Permanent link">¶</a></h2>
+<p>Первое значение относится к <strong>пользователю</strong>: может ли он запускать выбранное программное обеспечение и изменять привычный способ использования. Второе — к <strong>разработчику</strong>: может ли он создавать программу без индивидуального одобрения владельца устройства. Третье — к <strong>исходному коду и лицензии</strong>: доступны ли изучение, изменение и распространение компонентов. Четвёртое — к <strong>управлению платформой</strong>: кто устанавливает правила магазина, аккаунтов и обнаружения содержимого.</p>
+<p>Эти значения нельзя заменять друг другом. Linux-компонент может быть открытым, а работающий поверх него магазин — централизованным. Устройство может позволять другую операционную систему, а приобретённая в аккаунте игра — зависеть от отдельного сервиса. Разработчик может свободно создать приложение, но для размещения в конкретном магазине ему всё равно понадобятся условия этого магазина.</p>
+<p>Ньюэлл особенно последовательно защищает возможность конкурирующего программного обеспечения существовать на компьютере. Это не означает обязательства открыть любой внутренний механизм Steam или отказаться от собственности на инфраструктуру. Его практическая позиция избирательна, и именно такой её следует описывать.<sup id="fnref5:steamdeck"><a class="footnote-ref" href="#fn:steamdeck">7</a></sup><sup id="fnref:steam-about"><a class="footnote-ref" href="#fn:steam-about">20</a></sup></p>
+<p>Эта точность позволяет критиковать Valve без подмены предмета. Можно признать полезность открытого выхода из стандартного интерфейса и одновременно обсуждать власть магазина. Можно оценить вклад в Wine и не приписывать компании универсального следования идеологии свободного программного обеспечения. Биография человека не требует сделать все его решения проявлением одной безупречной ценности.</p>
+<h2 id="32-steam">32. Steam сохраняет собственную власть<a class="headerlink" href="#32-steam" title="Permanent link">¶</a></h2>
+<p>Создание альтернативы Windows уменьшает одну зависимость Valve. Для сторонней студии сама Steam при этом остаётся значимым посредником: правила размещения, видимость, платежи и связь с аккаунтом находятся в системе, которой студия не управляет. Уменьшение зависимости владельца платформы не автоматически уменьшает зависимость всех её участников.</p>
+<p>Это главный предел романтической истории освобождения. Пользователь может получить удобство и выбор, разработчик — доступ к аудитории, а Valve — больший контроль над своей средой. Одновременно часть власти концентрируется вокруг сервиса. Эти последствия возникают из одной архитектуры и не отменяют друг друга.<sup id="fnref2:steam-about"><a class="footnote-ref" href="#fn:steam-about">20</a></sup></p>
+<p>Положение Ньюэлла особенно интересно потому, что он хорошо понимает риск оказаться сверху чужого слоя. Его компания даёт другим ровно такую возможность — полезную, но сопровождаемую зависимостью. Поэтому оценка практической открытости должна включать поведение платформы по отношению к тем, кто не обладает её собственностью.</p>
+<p>Нельзя заранее гарантировать, что нынешние или прежние благоприятные условия сохранятся навсегда. Такой вывод потребовал бы знания будущего устройства управления. Более точный вопрос о собственности и преемственности отложен до <a href="../gabe-newell-10-who-is-gabe-newell-final/#succession">финальной главы</a>. Здесь достаточно видеть, чью именно самостоятельность усиливает каждое техническое решение.</p>
+<h2 id="33-windows">33. Реальная альтернатива без обещания победить Windows<a class="headerlink" href="#33-windows" title="Permanent link">¶</a></h2>
+<p>Первый Deck показывает, что Valve способна предложить полезное игровое устройство с Linux-средой и доступом к значительной части привычной библиотеки. Этот результат существенно сильнее абстрактной возможности когда-нибудь создать такую систему. При этом он не доказывает совместимости всех игр и не требует утверждения, что Windows перестала быть основной средой Steam.<sup id="fnref6:steamdeck"><a class="footnote-ref" href="#fn:steamdeck">7</a></sup></p>
+<p>Стратегический итог лучше формулировать через выбор. У компании существует ещё один практически работающий путь, собственные аппаратные компетенции и многолетний опыт сотрудничества вокруг совместимости. Ей не нужно заново объяснять самой себе, может ли игра на Linux быть нормальным потребительским продуктом.</p>
+<p>Но зависимость не исчезла полностью. Остаются поставщики компонентов, изготовители, открытые проекты, внешние игровые службы и авторы содержимого. Независимость в данном случае означает изменение структуры и силы связей, а не существование без других участников.</p>
+<p>Именно такое понимание делает историю более зрелой. Ньюэлл не покидает сеть отношений ради полного суверенитета. Он помогает своей организации получить возможность выбирать и менять часть важных связей. За эту возможность приходится платить временем, деньгами и постоянной технической работой.</p>
+<p><a id="later-hardware"></a></p>
+<h2 id="34-valve-2022">34. Почему глава не заканчивает аппаратную историю Valve 2022 годом<a class="headerlink" href="#34-valve-2022" title="Permanent link">¶</a></h2>
+<p>Основная линия доведена до первого Steam Deck, поскольку здесь особенно ясно видна проверка решений, начатых в предыдущем десятилетии. Это граница биографического разбора, а не утверждение, что после Deck компания перестала разрабатывать устройства.</p>
+<p>К моменту редакции в сентябре 2026 года официальные страницы Valve уже представляют <strong>Steam Machine</strong> и <strong>Steam Frame</strong> как отдельные новые продукты. Поэтому названия ранних инициатив в этой главе всегда сопровождаются периодом или указанием поколения. Первую OEM-программу нельзя описывать как окончательный приговор любому будущему устройству с похожим названием.<sup id="fnref:hardware-later"><a class="footnote-ref" href="#fn:hardware-later">21</a></sup></p>
+<p>Для биографии Ньюэлла новые продукты требуют отдельного вопроса о его реальном участии. Сам факт их появления у Valve не позволяет автоматически приписать ему каждое конструктивное решение или актуальное ежедневное руководство. Корпоративная преемственность и личное авторство — разные виды связи.</p>
+<p>Эта оговорка сохраняет исследование открытым для продолжения без преждевременного переписывания всей истории. Новое устройство может использовать накопленные технологии, но его успех, цена, поставки и внутренняя организация должны рассматриваться по собственным источникам и датам. Здесь не делаются выводы о долгосрочном результате продуктов, чья новая фаза только началась.</p>
+<h2 id="35">35. Что действительно изменилось в способе решения задачи<a class="headerlink" href="#35" title="Permanent link">¶</a></h2>
+<p>Самая содержательная эволюция этого периода проходит между архитектурой, привлекательной для владельца платформы, и опытом, убедительным для пользователя. Linux полезен как альтернативный путь; покупатель всё равно хочет свои игры. Несколько изготовителей дают выбор; человеку нужна ясность. Гибкий ввод расширяет возможности; сначала он должен позволить удобно начать.</p>
+<p>Эти различия не означают отказа Ньюэлла от ранних ценностей. Они показывают, сколько дополнительной работы требуется, чтобы ценность стала практической. Нельзя просто предъявить пользователю независимость Valve, технологическую изобретательность или свободу настройки и считать задачу завершённой.</p>
+<p>В этой работе коллективная роль особенно велика. Valve должна приобрести новые компетенции, научиться взаимодействовать с внешними проектами и принять ответственность за физические устройства. История состоит из конкретных профессиональных связей — с Абрашем, аппаратными специалистами, разработчиками совместимости и партнёрами — гораздо больше, чем из одного уверенного прогноза Ньюэлла.</p>
+<p>Поэтому Deck полезен как результат, но опасен как готовое оправдание всей предыстории. Мы можем увидеть, что часть предыдущей работы оказалась пригодна. Мы не можем объявить, что каждая неудача была необходима, вся стоимость оптимальна, а путь заранее известен основателю. Сохранение этой неопределённости возвращает настоящую цену долгой ставки.</p>
+<h2 id="36">36. За устройствами снова нужен человек<a class="headerlink" href="#36" title="Permanent link">¶</a></h2>
+<p>VR приводит Ньюэлла к вопросам восприятия и измерения состояния человека. Его дальнейшие высказывания о нейроинтерфейсах будут намного радикальнее осторожной гипотезы о новом игровом устройстве. Эту линию необходимо рассматривать отдельно: биологическое измерение, исследовательский компонент и медицинская технология требуют разных доказательств.</p>
+<p>Но перед переходом к Starfish и морским проектам рассказу нужен другой масштаб. Те же десятилетия включали семейную жизнь, детей, собственную игру в Dota, болезни глаз, занятия образованием и отношения с необычно близкой интернет-аудиторией. Эти события не являются техническими приложениями к Linux-стратегии.</p>
+<p>Следующая глава сознательно возвращается к личным эпизодам разных лет. Она не выводит из каждого увлечения управленческий принцип. Человек может любить движение Mario, возвращаться в неудобный матч Dota, смущаться чужим объятиям и радоваться восстановленному зрению без обязанности всякий раз доказывать свою платформенную философию.</p>
+<p>Именно такой Ньюэлл войдёт в позднюю часть жизни: с огромным профессиональным опытом, большей свободой выбирать занятия и интересами, которые не всегда укладываются в историю одной компании.</p>
+<p><a id="sources"></a></p>
+<h2 id="_1">Источники и границы знания<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>Технические объяснения Proton, ввода и совместимости опираются на документацию соответствующих проектов; современное устройство не переносится целиком в дату первого выпуска. Программа Steam Machines 2013–2015 годов отделена от позднейших одноимённых продуктов. Steam Controller рассматривается по конкретным критериям, без выдуманной коммерческой отчётности. Свидетельство Эллсворт ограничено её командой и периодом; его организационные последствия обсуждаются как вопросы, не как окончательный диагноз всей компании. Мотивы сотрудничества с Oculus и личные переживания Ньюэлла при уходе специалистов не достраиваются. История до Deck не выдаётся за полный актуальный каталог устройств Valve.</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:windows8">
+<p>Ars Technica, <a href="https://arstechnica.com/gaming/2012/07/steams-newell-windows-8-catastrophe-driving-valve-to-embrace-linux/">Valve’s Newell: Windows 8 “catastrophe” driving Valve to embrace Linux</a>, июль 2012. <a class="footnote-backref" href="#fnref:windows8" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2:windows8" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref3:windows8" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:faster-zombies">
+<p>Valve Linux Team, <a href="http://blogs.valvesoftware.com/linux/faster-zombies/">Faster Zombies!</a>, 1 августа 2012. Исторический инженерный benchmark конкретной конфигурации. <a class="footnote-backref" href="#fnref:faster-zombies" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:steam-universe">
+<p>Valve, материалы Steam Universe 2013 и <a href="https://cdn.steamstatic.com/steamdeck/images/press/book/steamDeck_booklet_EN.pdf">Steam Deck Booklet</a>, 2022. <a class="footnote-backref" href="#fnref:steam-universe" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref2:steam-universe" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:proton">
+<p>Valve, <a href="https://github.com/ValveSoftware/Proton">Proton</a>; <a href="https://www.winehq.org/">Wine</a>; <a href="https://www.codeweavers.com/">CodeWeavers</a>; <a href="https://github.com/doitsujin/dxvk">DXVK</a>; <a href="https://github.com/HansKristian-Work/vkd3d-proton">vkd3d-proton</a>. Proton представлен в 2018. <a class="footnote-backref" href="#fnref:proton" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref2:proton" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref3:proton" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref4:proton" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref5:proton" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:ellsworth">
+<p>WIRED UK, <a href="https://www.wired.com/2013/07/wireduk-valve-jeri-ellsworth/">Valve: How I got fired from the world’s best company</a>, 9 июля 2013, по рассказу Jeri Ellsworth. <a class="footnote-backref" href="#fnref:ellsworth" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:steam-input">
+<p>Valve, <a href="https://partner.steamgames.com/doc/features/steam_controller">Steam Input documentation</a>. <a class="footnote-backref" href="#fnref:steam-input" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:steamdeck">
+<p>Valve, <a href="https://www.steamdeck.com/">Steam Deck</a>, <a href="https://www.steamdeck.com/en/tech">Tech</a> и <a href="https://cdn.steamstatic.com/steamdeck/images/press/book/steamDeck_booklet_EN.pdf">Steam Deck Booklet</a>. <a class="footnote-backref" href="#fnref:steamdeck" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref2:steamdeck" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref3:steamdeck" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref4:steamdeck" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref5:steamdeck" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref6:steamdeck" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+<li id="fn:steamlink">
+<p>Valve, <a href="https://store.steampowered.com/app/353380/Steam_Link/">Steam Link</a>. Аппарат 2015 года и дальнейшая потоковая функция рассматриваются отдельно. <a class="footnote-backref" href="#fnref:steamlink" title="Jump back to footnote 8 in the text">↩</a></p>
+</li>
+<li id="fn:steamdeck-compat">
+<p>Valve, <a href="https://www.steamdeck.com/en/verified">Deck Verified</a> и документация Proton. <a class="footnote-backref" href="#fnref:steamdeck-compat" title="Jump back to footnote 9 in the text">↩</a></p>
+</li>
+<li id="fn:abrash-vr">
+<p>Michael Abrash, <a href="https://web.archive.org/web/20200423104346/http://blogs.valvesoftware.com/abrash/">Ramblings in Valve Time</a>, архив; Road to VR, <a href="https://roadtovr.com/gdc-2013-michael-abrash-virtual-reality-oculus-rift-presentation-slides/">Why Virtual Reality is Hard</a>, GDC 2013; <a href="https://www.youtube.com/watch?v=l461vIVtDZM">Valve Pipeline interview</a>, август 2013. <a class="footnote-backref" href="#fnref:abrash-vr" title="Jump back to footnote 10 in the text">↩</a><a class="footnote-backref" href="#fnref2:abrash-vr" title="Jump back to footnote 10 in the text">↩</a><a class="footnote-backref" href="#fnref3:abrash-vr" title="Jump back to footnote 10 in the text">↩</a></p>
+</li>
+<li id="fn:steamvr">
+<p>Valve, <a href="https://partner.steamgames.com/vrlicensing">SteamVR Tracking licensing</a> и <a href="https://github.com/ValveSoftware/openvr">OpenVR</a>. <a class="footnote-backref" href="#fnref:steamvr" title="Jump back to footnote 11 in the text">↩</a><a class="footnote-backref" href="#fnref2:steamvr" title="Jump back to footnote 11 in the text">↩</a></p>
+</li>
+<li id="fn:oculus-kickstarter">
+<p>Oculus, <a href="https://www.kickstarter.com/projects/1523379957/oculus-rift-step-into-the-game">Oculus Rift: Step Into the Game</a>, Kickstarter 2012; публичная поддержка Ньюэлла. <a class="footnote-backref" href="#fnref:oculus-kickstarter" title="Jump back to footnote 12 in the text">↩</a></p>
+</li>
+<li id="fn:oculus-people">
+<p>Meta, <a href="https://about.fb.com/news/2014/03/facebook-to-acquire-oculus/">Facebook to Acquire Oculus</a>, 25 марта 2014; архив блога Абраша и объявления Oculus о переходах специалистов в 2014. <a class="footnote-backref" href="#fnref:oculus-people" title="Jump back to footnote 13 in the text">↩</a></p>
+</li>
+<li id="fn:vive">
+<p>HTC, <a href="https://www.vive.com/">VIVE</a> и Valve, <a href="https://partner.steamgames.com/vrlicensing">SteamVR</a>. Анонс Vive — март 2015, коммерческий выпуск — апрель 2016. <a class="footnote-backref" href="#fnref:vive" title="Jump back to footnote 14 in the text">↩</a></p>
+</li>
+<li id="fn:vr2017">
+<p>Публичные беседы Gabe Newell с прессой Valve в феврале 2017 года о риске неудачи VR и ценности опыта; контекст того же цикла интервью: <a href="https://www.gamespot.com/articles/despite-the-skyrim-mess-valve-still-supports-paid-/1100-6447765/">GameSpot</a>. <a class="footnote-backref" href="#fnref:vr2017" title="Jump back to footnote 15 in the text">↩</a></p>
+</li>
+<li id="fn:index">
+<p>Valve, <a href="https://www.valvesoftware.com/en/index">Valve Index</a>, официальные материалы устройства 2019 года. <a class="footnote-backref" href="#fnref:index" title="Jump back to footnote 16 in the text">↩</a><a class="footnote-backref" href="#fnref2:index" title="Jump back to footnote 16 in the text">↩</a></p>
+</li>
+<li id="fn:alyx">
+<p>Valve, <a href="https://www.half-life.com/en/alyx/">Half-Life: Alyx</a>. Релиз 23 марта 2020. <a class="footnote-backref" href="#fnref:alyx" title="Jump back to footnote 17 in the text">↩</a></p>
+</li>
+<li id="fn:alyx-ama">
+<p>Valve developers, <a href="https://www.reddit.com/r/HalfLife/comments/esen9b/were_developers_from_the_halflife_alyx_team_ask/">Half-Life: Alyx AMA</a>, 22 января 2020. <a class="footnote-backref" href="#fnref:alyx-ama" title="Jump back to footnote 18 in the text">↩</a></p>
+</li>
+<li id="fn:deck-pricing">
+<p>IGN, <a href="https://www.ign.com/articles/steam-deck-price-valve-gabe-newell-400-dollars-painful-but-critical">Gabe Newell: Hitting Steam Deck Price Was “Painful” but “Critical”</a>, 15 июля 2021; <a href="https://www.ign.com/videos/gabe-newell-talks-steam-decks-origin-goals-and-future">интервью о происхождении Deck</a>, 28 июля 2021. <a class="footnote-backref" href="#fnref:deck-pricing" title="Jump back to footnote 19 in the text">↩</a></p>
+</li>
+<li id="fn:steam-about">
+<p>Valve, <a href="https://www.valvesoftware.com/en/about">About Us</a>. Официальное актуальное описание направлений компании. <a class="footnote-backref" href="#fnref:steam-about" title="Jump back to footnote 20 in the text">↩</a><a class="footnote-backref" href="#fnref2:steam-about" title="Jump back to footnote 20 in the text">↩</a></p>
+</li>
+<li id="fn:hardware-later">
+<p>Valve, официальные страницы <a href="https://store.steampowered.com/hardware/steammachine">Steam Machine</a> и <a href="https://store.steampowered.com/hardware/steamframe">Steam Frame</a>, проверены на временной границе редакции — 21 сентября 2026. <a class="footnote-backref" href="#fnref:hardware-later" title="Jump back to footnote 21 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Гейб Ньюэлл — Глава 6. Ошибки, кризисы и способность закончить" class="md-footer__link md-footer__link--prev" href="../gabe-newell-06-failures-crises-evolution/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 6. Ошибки, кризисы и способность закончить
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Гейб Ньюэлл — Глава 8. Семья, игры, здоровье и человек за именем GabeN" class="md-footer__link md-footer__link--next" href="../gabe-newell-08-person-family-games-health-education-public-image/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 8. Семья, игры, здоровье и человек за именем GabeN
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

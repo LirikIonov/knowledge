@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://lirikonov.github.io/knowledge/games/people/gabe-newell-revised-10-chapters/gabe-newell-02-microsoft/" rel="canonical"/>
+<link href="../gabe-newell-01-before-microsoft/" rel="prev"/>
+<link href="../gabe-newell-03-doom-quake-valve/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft - База данных</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#2-microsoft">
+          Перейти к содержанию
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Верхний колонтитул" class="md-header__inner md-grid">
+<a aria-label="База данных" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            База данных
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Тёмная тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Тёмная тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Светлая тема" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Светлая тема">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Поиск" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Поиск" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Поиск" class="md-search__options">
+<button aria-label="Очистить" class="md-search__icon md-icon" tabindex="-1" title="Очистить" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Навигация" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="База данных" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="База данных">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    База данных
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Devs
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Devs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/Arkane/">
+<span class="md-ellipsis">
+    
+  
+    Arkane
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_2" id="__nav_1_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Id software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Id software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/">
+<span class="md-ellipsis">
+    
+  
+    id Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/01-origins-softdisk-keen/">
+<span class="md-ellipsis">
+    
+  
+    id Software — I. Рождение: Softdisk, Keen и первые 3D-эксперименты
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/02-wolfenstein/">
+<span class="md-ellipsis">
+    
+  
+    id Software — II. Wolfenstein 3D и финансовая независимость
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/03-doom-birth/">
+<span class="md-ellipsis">
+    
+  
+    id Software — III. DOOM: рождение, команда и новая культура FPS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/04-doom-ecosystem/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IV. После DOOM: DOOM II, консоли, Raven и engine licensing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/05-quake-crisis/">
+<span class="md-ellipsis">
+    
+  
+    id Software — V. Quake и распад первоначальной id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/06-id-after-romero/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VI. id после Romero: новая структура, QuakeWorld и аппаратное 3D
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/07-quake2-quake3-middleware/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VII. Quake II, Quake III и война движков
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/08-doom3-aaa/">
+<span class="md-ellipsis">
+    
+  
+    id Software — VIII. Возвращение Doom и превращение id в AAA-студию
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/09-rage-zenimax-carmack/">
+<span class="md-ellipsis">
+    
+  
+    id Software — IX. RAGE, ZeniMax и конец Carmack-era
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/10-doom-rebirth-modern-id/">
+<span class="md-ellipsis">
+    
+  
+    id Software — X. Перерождение Doom и современная id
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/11-legacy-summary/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XI. Наследие id: open source, modding и исторические выводы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/12-side-branches/">
+<span class="md-ellipsis">
+    
+  
+    id Software — XII. Боковые ветви: id Mobile, QuakeCon, Frankfurt, RAGE 2 и Raven
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/id%20software/MANIFEST/">
+<span class="md-ellipsis">
+    
+  
+    Разбиение id Software для MkDocs
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_1_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Valve
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/01-origins-steam/">
+<span class="md-ellipsis">
+    
+  
+    Valve I — Рождение Valve и Steam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/02-games-and-engines/">
+<span class="md-ellipsis">
+    
+  
+    Valve II — Игры, движки и сервисная модель
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/03-inside-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve III — Valve изнутри
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/04-hardware-linux-vr/">
+<span class="md-ellipsis">
+    
+  
+    Valve IV — Hardware, Linux и VR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/05-modern-valve/">
+<span class="md-ellipsis">
+    
+  
+    Valve V — Современная Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/06-valve-as-institution/">
+<span class="md-ellipsis">
+    
+  
+    Valve VI — Valve как институция
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/07-ecosystem-and-catalog/">
+<span class="md-ellipsis">
+    
+  
+    Valve VII — Внешняя экосистема и границы каталога
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/08-appendices/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Приложения и архив исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../devs/valve/09-sources-and-status/">
+<span class="md-ellipsis">
+    
+  
+    Valve — Источники и статус утверждений
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Engines
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Engines
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../engines/id-tech-branches-01-29/">
+<span class="md-ellipsis">
+    
+  
+    Использование id Tech и все дальнейшие ветки развития у других разработчиков
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Games
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Games
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom/">
+<span class="md-ellipsis">
+    
+  
+    Doom
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom30/">
+<span class="md-ellipsis">
+    
+  
+    Doom30
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Doom3_45-103/">
+<span class="md-ellipsis">
+    
+  
+    DOOM 3 → дорога к DOOM (2016): темы 45–103
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Quake/">
+<span class="md-ellipsis">
+    
+  
+    Quake
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/Spider-Man/">
+<span class="md-ellipsis">
+    
+  
+    Spider-Man
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom4-eternal/">
+<span class="md-ellipsis">
+    
+  
+    Современный DOOM: от перезапуска 2016 до вершины Eternal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/doom_eternal_51-80/">
+<span class="md-ellipsis">
+    
+  
+    DOOM Eternal → The Ancient Gods → Mighty DOOM
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_3_8" id="__nav_1_3_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Half life
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_3_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Half life
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — карта исследования
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/01-origins-and-development/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — рождение и создание первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/02-half-life-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — дизайн первой игры
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/03-half-life-release-and-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — финал, релиз и рождение наследия
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/04-gearbox-and-consoles/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — Gearbox, параллельные кампании и консоли
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/05-half-life-2-development-and-tech/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — создание и технологии
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/06-half-life-2-world-and-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — мир и дизайн
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/07-half-life-2-beta-release/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2 — Beta, утечка и релиз
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/08-episodes/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life 2: Episodes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/09-half-life-3-and-cancelled-projects/">
+<span class="md-ellipsis">
+    
+  
+    Где Half-Life 3?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/10-vr-and-alyx-development/">
+<span class="md-ellipsis">
+    
+  
+    Создание Half-Life: Alyx
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/11-half-life-alyx-design/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life: Alyx — дизайн и сюжет
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/12-modding-and-community/">
+<span class="md-ellipsis">
+    
+  
+    Моды и сообщество Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/13-legacy/">
+<span class="md-ellipsis">
+    
+  
+    Наследие Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/14-audio/">
+<span class="md-ellipsis">
+    
+  
+    Музыка и звук Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/15-how-valve-makes-half-life/">
+<span class="md-ellipsis">
+    
+  
+    Как Valve делает Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/16-movement-and-speedrunning/">
+<span class="md-ellipsis">
+    
+  
+    Movement и speedrunning Half-Life
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/17-half-life-and-film/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life и кино
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../games/half-life/CHANGES/">
+<span class="md-ellipsis">
+    
+  
+    Half-Life — изменения редакции от 17 сентября 2026 года
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    People
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    People
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Carmack/">
+<span class="md-ellipsis">
+    
+  
+    John Carmack
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../John%20Romero/">
+<span class="md-ellipsis">
+    
+  
+    John Romero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_4" id="__nav_1_4_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe Newell
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_4_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe Newell
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-02-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-03-doom-quake-valve/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-05-from-games-to-platform/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-06-failures-crises-evolution/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и изменение самого Ньюэлла
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-07-platform-independence-linux-vr-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Windows, Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Сам Ньюэлл: семья, игры, здоровье, образование и публичный образ
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Gabe%20Newell/gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_4_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_4_5" id="__nav_1_4_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Gabe newell revised 10 chapters
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_4_5_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_4_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Gabe newell revised 10 chapters
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-01-before-microsoft/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      
+        1. Молодой сотрудник, которому ещё предстоит стать руководителем
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        2. В какую компанию он пришёл
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        3. Карьерная ось: что можно восстановить надёжно
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-windows">
+<span class="md-ellipsis">
+      
+        4. Первые Windows: имя среди участников, а не подпись единственного автора
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-program-management">
+<span class="md-ellipsis">
+      
+        5. Что скрывается за program management
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-windows">
+<span class="md-ellipsis">
+      
+        6. Windows знакомит его с особым типом продукта
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      
+        7. Совместимость — обязательство перед работой других людей
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-systems-applications-advanced-technology">
+<span class="md-ellipsis">
+      
+        8. Systems, Applications, Advanced Technology: несколько расстояний до пользователя
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      
+        9. Мультимедиа: персональный компьютер получает новые занятия
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      
+        10. Когда технология должна стать впечатлением
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-information-highway-pc">
+<span class="md-ellipsis">
+      
+        11. Information Highway PC: будущее, которое ещё нужно было придумать
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12">
+<span class="md-ellipsis">
+      
+        12. Билл Гейтс: близкий пример, но не выдуманный наставник
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13">
+<span class="md-ellipsis">
+      
+        13. Стив Балмер: человек из истории найма и реальный руководитель
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14">
+<span class="md-ellipsis">
+      
+        14. Ремесло, которое передаётся между людьми
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15">
+<span class="md-ellipsis">
+      
+        15. Почему численность команды перестаёт казаться ему достаточной мерой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+<span class="md-ellipsis">
+      
+        16. Организация может усиливать человека — и может расходовать его время
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17-microsoft">
+<span class="md-ellipsis">
+      
+        17. Две Microsoft в памяти одного сотрудника
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18">
+<span class="md-ellipsis">
+      
+        18. Человек, критикующий менеджеров, сам выполнял управленческую работу
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19">
+<span class="md-ellipsis">
+      
+        19. Акции меняют масштаб личного выбора
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20">
+<span class="md-ellipsis">
+      
+        20. Два способа поставить деньги на новую компанию
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21">
+<span class="md-ellipsis">
+      
+        21. Свобода выбора работы не равна отсутствию обязательств
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22">
+<span class="md-ellipsis">
+      
+        22. Почему он продолжил работать
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23">
+<span class="md-ellipsis">
+      
+        23. Игры становятся серьёзной профессиональной возможностью
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24">
+<span class="md-ellipsis">
+      
+        24. Уход без обязательного разрыва
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25">
+<span class="md-ellipsis">
+      
+        25. Что он уносит — и что оставляет незавершённым
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        Источники и уточнения
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-03-doom-quake-valve/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-04-half-life-first-test/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 4. Half-Life как первая большая проверка
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-05-from-games-to-platform/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 5. От разработчика игр к владельцу платформы
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-06-failures-crises-evolution/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 6. Ошибки, кризисы и способность закончить
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-07-platform-independence-linux-vr-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 7. Независимость: Linux, VR и собственное железо
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-08-person-family-games-health-education-public-image/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 8. Семья, игры, здоровье и человек за именем GabeN
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-09-late-life-starfish-inkfish-oceanco/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 9. После Valve как центра жизни: поздний Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gabe-newell-10-who-is-gabe-newell-final/">
+<span class="md-ellipsis">
+    
+  
+    Гейб Ньюэлл — Глава 10. Кто такой Гейб Ньюэлл
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Stores
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Stores
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_5_1" id="__nav_1_5_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Steam
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_5_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_1_5_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Steam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../stores/steam/Steam2/">
+<span class="md-ellipsis">
+    
+  
+    Steam 2 — очищенный дамп исследования
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Содержание" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
+      
+        1. Молодой сотрудник, которому ещё предстоит стать руководителем
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
+      
+        2. В какую компанию он пришёл
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
+      
+        3. Карьерная ось: что можно восстановить надёжно
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-windows">
+<span class="md-ellipsis">
+      
+        4. Первые Windows: имя среди участников, а не подпись единственного автора
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-program-management">
+<span class="md-ellipsis">
+      
+        5. Что скрывается за program management
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-windows">
+<span class="md-ellipsis">
+      
+        6. Windows знакомит его с особым типом продукта
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7">
+<span class="md-ellipsis">
+      
+        7. Совместимость — обязательство перед работой других людей
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-systems-applications-advanced-technology">
+<span class="md-ellipsis">
+      
+        8. Systems, Applications, Advanced Technology: несколько расстояний до пользователя
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9">
+<span class="md-ellipsis">
+      
+        9. Мультимедиа: персональный компьютер получает новые занятия
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10">
+<span class="md-ellipsis">
+      
+        10. Когда технология должна стать впечатлением
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-information-highway-pc">
+<span class="md-ellipsis">
+      
+        11. Information Highway PC: будущее, которое ещё нужно было придумать
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12">
+<span class="md-ellipsis">
+      
+        12. Билл Гейтс: близкий пример, но не выдуманный наставник
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13">
+<span class="md-ellipsis">
+      
+        13. Стив Балмер: человек из истории найма и реальный руководитель
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14">
+<span class="md-ellipsis">
+      
+        14. Ремесло, которое передаётся между людьми
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15">
+<span class="md-ellipsis">
+      
+        15. Почему численность команды перестаёт казаться ему достаточной мерой
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16">
+<span class="md-ellipsis">
+      
+        16. Организация может усиливать человека — и может расходовать его время
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17-microsoft">
+<span class="md-ellipsis">
+      
+        17. Две Microsoft в памяти одного сотрудника
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18">
+<span class="md-ellipsis">
+      
+        18. Человек, критикующий менеджеров, сам выполнял управленческую работу
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#19">
+<span class="md-ellipsis">
+      
+        19. Акции меняют масштаб личного выбора
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#20">
+<span class="md-ellipsis">
+      
+        20. Два способа поставить деньги на новую компанию
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21">
+<span class="md-ellipsis">
+      
+        21. Свобода выбора работы не равна отсутствию обязательств
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22">
+<span class="md-ellipsis">
+      
+        22. Почему он продолжил работать
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23">
+<span class="md-ellipsis">
+      
+        23. Игры становятся серьёзной профессиональной возможностью
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24">
+<span class="md-ellipsis">
+      
+        24. Уход без обязательного разрыва
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25">
+<span class="md-ellipsis">
+      
+        25. Что он уносит — и что оставляет незавершённым
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
+      
+        Источники и уточнения
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="2-microsoft">Гейб Ньюэлл — Глава 2. Тринадцать лет Microsoft<a class="headerlink" href="#2-microsoft" title="Permanent link">¶</a></h1>
+<p><em>1983–1996. Первая профессиональная карьера: ранние Windows, организация разработки, мультимедиа, новые вычислительные направления, рост компании и финансовая независимость.</em></p>
+<p><a href="../gabe-newell-01-before-microsoft/">Предыдущая глава</a> · <a href="../gabe-newell-10-who-is-gabe-newell-final/#guide">Все главы и справочник</a> · <a href="../gabe-newell-03-doom-quake-valve/">Следующая глава</a></p>
+<p><a id="career"></a></p>
+<h2 id="1">1. Молодой сотрудник, которому ещё предстоит стать руководителем<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<p>Примерно в 1983 году Гейб Ньюэлл начал работать в Microsoft. История о брате Дэне и временном перерыве в Harvard закончилась там, где началась повседневная профессия. Теперь нужно было не просто интересоваться вычислениями, а участвовать в создании программ, согласовывать работу с другими и принимать ответственность за результат.</p>
+<p>Официальная биография, подготовленная к включению Ньюэлла в Зал славы Academy of Interactive Arts &amp; Sciences, описывает этот период в нескольких строках: тринадцать лет в Microsoft, работа в подразделениях Systems, Applications и Advanced Technology, управление программой первых двух выпусков Windows, запуск направления мультимедиа и участие в Information Highway PC.<sup id="fnref:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup></p>
+<p>Эта краткая запись скрывает большую трансформацию. На входе — студент чуть старше двадцати лет, который нашёл среду с высокой для себя скоростью обучения. На выходе — человек с опытом сложной разработки, координации продуктов и новых технологических инициатив. Между этими точками появляется и капитал, позволивший ему перестать выбирать следующего работодателя.</p>
+<p>Однако Microsoft-период нельзя описать как заранее подготовленный курс основателя Valve. В 1983 году такой компании не существовало даже как проект. Текущая работа имела собственные цели. Windows должна была стать пригодным продуктом; мультимедиа — расширить возможности персонального компьютера; новые направления — найти применения технологиям, коммерческая форма которых ещё была неочевидной.</p>
+<p>Ньюэлл учился внутри чужой организации. Позднее он будет оценивать её устройство и пытаться воспроизвести одни свойства, отказавшись от других. Но первоначально он находился по другую сторону этого вопроса: был человеком, для которого хорошие условия работы уже создал кто-то ещё.</p>
+<h2 id="2">2. В какую компанию он пришёл<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<p>Microsoft начала 1980-х ещё не была привычной поздней корпорацией. Windows только готовилась стать коммерческим продуктом; её первый выпуск появился в 1985 году. Ньюэлл застал период, когда компания уже имела серьёзный вес в программном обеспечении, но ещё не воспринималась как неизменная основа всей повседневной компьютерной жизни.<sup id="fnref2:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup><sup id="fnref:windows-credit"><a class="footnote-ref" href="#fn:windows-credit">2</a></sup></p>
+<p>Для его личного опыта важен масштаб человеческой дистанции. В ранних воспоминаниях руководители, инженеры и продуктовые задачи находятся близко друг к другу. Можно увидеть, кто принимает решение, зачем оно нужно и что происходит с программой после реализации. Позднее Ньюэлл будет особенно ценить именно такую близость к содержанию работы.<sup id="fnref:wp-customers"><a class="footnote-ref" href="#fn:wp-customers">3</a></sup></p>
+<p>Это не означает, что в компании отсутствовали роли, начальники или конфликты. Ранняя Microsoft не была плоской Valve, случайно носившей другое имя. У неё существовали собственники, руководители и коммерческие интересы. Поэтому будущий организационный эксперимент Ньюэлла нельзя представить простым копированием всей ранней компании.</p>
+<p>Он выберет из этого опыта определённые качества: сильных специалистов рядом, уважение к ремеслу, возможность быстро обсуждать конкретную проблему, заметное влияние отдельного человека. Часть необходимых функций большой организации — координация, распределение ответственности, выпуск продукта — также станет ему хорошо знакома. Именно поэтому его поздняя критика управления будет исходить не от человека, никогда им не занимавшегося.</p>
+<p>В биографии важно сохранить обе стороны. Microsoft дала ему ощущение, что небольшая группа может сделать очень многое. Одновременно она познакомила его с тем, сколько работы требуется, чтобы множество отдельных технических решений вообще превратилось в один продукт.</p>
+<h2 id="3">3. Карьерная ось: что можно восстановить надёжно<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<p>Подробной общедоступной послужной таблицы Ньюэлла по каждому году нет. Официальные биографии позволяют восстановить направления и несколько опорных этапов, но не дают права назначать точные даты каждому внутреннему переводу. Поэтому последовательность ниже намеренно различает твёрдые точки и более широкие периоды.<sup id="fnref3:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup></p>
+<table>
+<thead>
+<tr>
+<th>Период</th>
+<th>Что известно</th>
+<th>Что это добавляет к биографии</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Около 1983 года</td>
+<td>Начало работы после обучения в Harvard</td>
+<td>Программирование становится профессией; молодой Ньюэлл учится внутри действующей компании</td>
+</tr>
+<tr>
+<td>Ранние выпуски Windows</td>
+<td>Program management первых двух релизов</td>
+<td>Работа уже включает продукт, зависимости и координацию, а не только индивидуальное написание кода</td>
+</tr>
+<tr>
+<td>В течение Microsoft-карьеры</td>
+<td>Systems, Applications и Advanced Technology</td>
+<td>Знакомство с разными уровнями программной системы и разными типами задач</td>
+</tr>
+<tr>
+<td>Поздние 1980-е — первая половина 1990-х, без точной внутренней датировки</td>
+<td>Создание направления мультимедиа, указанное в официальной биографии</td>
+<td>Расширение представления о компьютере за пределы деловых приложений</td>
+</tr>
+<tr>
+<td>Поздняя часть карьеры</td>
+<td>Information Highway PC</td>
+<td>Работа рядом с вопросами сетевого компьютера, медиа и новых способов доставки содержимого</td>
+</tr>
+<tr>
+<td>1996 год</td>
+<td>Уход из Microsoft</td>
+<td>Переход от работы внутри чужой компании к собственному риску и собственной организации</td>
+</tr>
+</tbody>
+</table>
+<p>Эта таблица не изображает непрерывную лестницу повышений, которой мы не видим в документах. Она показывает изменение диапазона ответственности. Ньюэлл оказывается в нескольких частях большой системы и приобретает возможность сравнивать их требования.</p>
+<p>Для будущего основателя это важнее красивого титула. Человек может понимать программирование и при этом не знать, как согласуются продуктовые решения. Может уметь управлять выпуском и не видеть, почему сторонние разработчики вообще выбирают платформу. В его первой карьере эти вопросы постепенно начинают соседствовать.</p>
+<h2 id="4-windows">4. Первые Windows: имя среди участников, а не подпись единственного автора<a class="headerlink" href="#4-windows" title="Permanent link">¶</a></h2>
+<p>В популярных биографиях встречаются формулы «Ньюэлл написал Windows» или «сделал первые три версии Windows». Они слишком сильно упрощают роль человека и состав команды. Более надёжная официальная формулировка — program management первых двух выпусков.<sup id="fnref4:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup></p>
+<p>Ньюэлл действительно был связан с самой ранней Windows. Его имя обнаружили в скрытом списке участников Windows 1.0, сохранившемся внутри системы. Эта находка хорошо подтверждает участие, но не превращает командный программный продукт в произведение одного автора.<sup id="fnref2:windows-credit"><a class="footnote-ref" href="#fn:windows-credit">2</a></sup></p>
+<p>Различие принципиально. Список участников отвечает на вопрос, был ли человек частью работы. Должностная формулировка уточняет характер ответственности. Ни то ни другое само по себе не сообщает, сколько строк он написал, какие конкретные технические решения предложил и какую часть архитектуры лично спроектировал.</p>
+<p>Для биографии Ньюэлла здесь особенно полезно именно отсутствие простой легенды. Он не проходит путь «одинокий программист — внезапно руководитель». Уже ранняя работа требовала соединять техническое содержание с координацией. Позднейшая способность обсуждать продукт целиком имеет профессиональную предысторию.</p>
+<p>При этом program management не является гарантией точных сроков на всю жизнь. Успешное участие в выпуске операционной среды не означает автоматического владения производством большой сюжетной игры. Разные области имеют разные неизвестные. Этот предел переноса опыта станет болезненно виден в истории Half-Life 2, но пока Ньюэлл только приобретает инструменты, которые затем попробует использовать в другом производственном мире.</p>
+<h2 id="5-program-management">5. Что скрывается за program management<a class="headerlink" href="#5-program-management" title="Permanent link">¶</a></h2>
+<p>Управление программой разработки — работа на стыке нескольких вопросов. Что должен получить пользователь? Какие возможности действительно нужны в текущем выпуске? Какие команды зависят друг от друга? Какие изменения можно отложить? Как понять, что отдельные части достаточно совместимы для общего релиза?</p>
+<p>Это описание функции, а не восстановленная должностная инструкция Ньюэлла. Официальный источник называет его роль, но не публикует ежедневный список обязанностей. Тем не менее сама роль помогает избежать представления, что он годами занимался только изолированными техническими задачами.<sup id="fnref5:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup></p>
+<p>В сложном программном продукте правильная реализация отдельной возможности может оказаться недостаточной. Она должна появиться вовремя, не разрушить соседние части и решать ту проблему, ради которой её вообще включили в выпуск. Инженерная красота и продуктовая необходимость иногда совпадают, иногда конфликтуют. Координатор постоянно находится рядом с этим конфликтом.</p>
+<p>Здесь возникает важное для будущего Ньюэлла различие между качеством компонента и качеством целого. Позднее первая Half-Life окажется набором впечатляющих вещей, которые плохо соединяются в интересную игру. Microsoft не могла заранее решить эту игровую задачу. Но она дала ему опыт того, что итоговый продукт существует поверх множества локальных решений и требует отдельного внимания.</p>
+<p>Есть и менее героическая сторона. Координация неизбежно включает разговоры, уточнения, возвращение к обещаниям и неприятный выбор между хорошими идеями. Ньюэлл будет критиковать бюрократию, однако он не мог не знать, что часть работы, внешне похожей на управление, действительно необходима. Его поздний вопрос будет касаться того, кому и каким образом её поручать.</p>
+<p><a id="platform"></a></p>
+<h2 id="6-windows">6. Windows знакомит его с особым типом продукта<a class="headerlink" href="#6-windows" title="Permanent link">¶</a></h2>
+<p>Обычное приложение можно оценивать прежде всего по тому, насколько хорошо оно выполняет свою функцию. Операционная среда дополнительно существует для программ, которые напишут другие. Её полезность зависит от того, насколько привлекательной она окажется для сторонних разработчиков, производителей оборудования и пользователей.</p>
+<p>Ньюэлл работал рядом с этой логикой задолго до появления Steam. Это не доказывает, что цифровой магазин был придуман им в годы ранней Windows. Но объясняет, почему позднее он мог увидеть в чужой игре или внешнем сообществе не просто конкурента, а участника общей системы.<sup id="fnref6:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup><sup id="fnref2:wp-customers"><a class="footnote-ref" href="#fn:wp-customers">3</a></sup></p>
+<p>Для платформы важны сразу несколько отношений. Разработчик хочет доступ к аудитории и достаточно устойчивые инструменты. Пользователь хочет программы, ради которых имеет смысл пользоваться системой. Производителю оборудования нужна совместимость с востребованным программным обеспечением. Каждая сторона оценивает платформу через собственную задачу, а её владелец должен учитывать все эти оценки одновременно.</p>
+<p>Это требует иного масштаба мышления. Нельзя самостоятельно написать всё полезное программное обеспечение. Приходится создавать условия, при которых другим людям выгодно работать поверх твоей основы. Вместе с масштабом появляется зависимость от их решений: сторонний разработчик может выбрать другой инструмент, пользователь — другой компьютер, партнёр — другую стратегию.</p>
+<p>В дальнейшем Ньюэлл не просто повторит эту модель. В Steam он окажется владельцем значимой части правил, тогда как в Microsoft участвовал в работе внутри чужой платформенной компании. Разница между пониманием устройства и ответственностью за собственные правила станет одной из центральных тем <a href="../gabe-newell-05-from-games-to-platform/#platform">пятой главы</a>.</p>
+<h2 id="7">7. Совместимость — обязательство перед работой других людей<a class="headerlink" href="#7" title="Permanent link">¶</a></h2>
+<p>Платформенная логика имеет менее эффектную сторону, чем рост аудитории: чужие приложения начинают зависеть от твоих решений. Успешное изменение должно учитывать уже существующую работу. Само по себе желание сделать архитектуру чище ещё не означает, что полезно разрушить совместимость.</p>
+<p>Для биографии Ньюэлла это важный профессиональный контекст. В дальнейшем его часто будут представлять человеком, который предпочитает заново построить неудобный нижний слой. Но такой выбор никогда не бывает бесплатным. Если поверх старого слоя уже живут пользователи и разработчики, новую систему нужно каким-то образом связать с их прошлым опытом.</p>
+<p>Именно здесь проходит различие между демонстрацией новой технологии и устойчивой платформой. Демонстрация может работать в специально подготовленных условиях. Платформа сталкивается с разнообразными машинами, привычками и программами. Её успех требует терпения к вещам, которые создал кто-то другой и которые не всегда подчиняются твоему первоначальному замыслу.</p>
+<p>Нельзя приписать Ньюэллу конкретный поздний вывод из каждого такого столкновения: подробных воспоминаний о его решениях по совместимости ранних Windows недостаточно. Но сама среда работы делала эти вопросы профессионально видимыми. Когда много лет спустя Valve займётся совместимостью Windows-игр с Linux, перед ней будет знакомый по типу конфликт между желаемой архитектурой и уже существующей библиотекой.</p>
+<p>В этой главе достаточно установить происхождение опыта. Считать Proton неизбежным следствием ранней Windows было бы ошибкой. Между ними ещё предстоят собственная студия, цифровая дистрибуция, неудачные устройства и многолетняя работа других специалистов.</p>
+<h2 id="8-systems-applications-advanced-technology">8. Systems, Applications, Advanced Technology: несколько расстояний до пользователя<a class="headerlink" href="#8-systems-applications-advanced-technology" title="Permanent link">¶</a></h2>
+<p>Официальный перечень подразделений показывает, что Microsoft-карьера Ньюэлла не сводилась к тринадцати годам одной и той же задачи. Systems, Applications и Advanced Technology обозначают разные положения относительно продукта: базовая среда, прикладное использование и поиск новых направлений.<sup id="fnref7:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup></p>
+<p>На системном уровне разработчик думает об ограничениях, которые затронут множество программ. На прикладном — о том, получится ли у конкретного человека выполнить нужное действие. В исследовательской работе приходится иметь дело с возможностями, для которых ещё нет устойчивого рынка или привычного пользовательского сценария.</p>
+<p>Это общее различие уровней, а не три точно восстановленные должности Ньюэлла. Публичные биографии не дают достаточно подробностей, чтобы назначить ему конкретное приложение или исследовательский прототип в каждом подразделении. Тем не менее широта перемещений важна: он видел, что одна и та же технологическая возможность выглядит по-разному в зависимости от того, где стоит человек, принимающий решение.</p>
+<p>Для инженера новая функция может быть достижением. Для пользователя — незаметной частью удобства. Для продуктовой команды — источником дополнительных обязательств. Для исследовательской группы — только промежуточным результатом. Руководителю, который хочет понимать целое, нужно переводить между этими языками.</p>
+<p>Поздний Ньюэлл часто будет объяснять проблему через устройство системы. Microsoft помогает понять происхождение этой привычки. Но её ценность проявится только там, где он сумеет не потерять за системой конкретного человека. Техническая широта сама по себе ещё не означает хорошего вкуса, точной оценки времени или понимания чужих мотивов.</p>
+<p><a id="multimedia"></a></p>
+<h2 id="9">9. Мультимедиа: персональный компьютер получает новые занятия<a class="headerlink" href="#9" title="Permanent link">¶</a></h2>
+<p>Официальная биография приписывает Ньюэллу создание мультимедийного направления Microsoft. Это существенная часть первой карьеры, хотя в кратких пересказах она часто исчезает за более известным словом Windows.<sup id="fnref8:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup></p>
+<p>Мультимедиа тогда обозначали расширение возможностей компьютера: звук, изображение, видео, интерактивные материалы. То, что позднее станет повседневной нормой, требовало отдельных инструментов, оборудования, согласования форматов и новых представлений о пользовательском опыте. Персональный компьютер всё заметнее выходил за пределы текста, таблиц и деловых приложений.</p>
+<p>Для Ньюэлла этот этап создаёт более естественный переход к играм, чем история внезапного ухода из совершенно чужой отрасли. Он уже работал рядом с превращением компьютера в машину для восприятия и взаимодействия. Игры соединяли многие из этих возможностей особенно требовательно: изображение и звук должны были реагировать на человека без большой задержки, а техническая функция — становиться частью переживания.</p>
+<p>Однако запуск направления не означает личного изобретения всех соответствующих технологий. За ним стоят команды и специалисты. В официальной биографии Ньюэлла зафиксирована организационная инициатива; детальная история каждого компонента требует других источников. Это тот тип вклада, который позднее будет постоянно встречаться в его карьере: человек помогает создать направление, не являясь автором всей работы внутри него.</p>
+<p>И ещё одно ограничение: мультимедиа не равнялись играм. Направление могло вести к образовательным продуктам, связи, видео или новым деловым приложениям. Будущий выбор игровой индустрии оставался одним из возможных продолжений, а не заранее заданным финалом работы.</p>
+<h2 id="10">10. Когда технология должна стать впечатлением<a class="headerlink" href="#10" title="Permanent link">¶</a></h2>
+<p>Мультимедийный продукт плохо оценивается только перечнем функций. Возможность воспроизводить звук ещё не сообщает, удобно ли им пользоваться. Поддержка изображения не гарантирует, что человек понимает интерфейс. Интерактивность может существовать технически и при этом не давать интересного опыта.</p>
+<p>Это общий продуктовый конфликт, который помогает понять профессиональную подготовку Ньюэлла. Впоследствии он будет обсуждать игры через то, что делает и чувствует пользователь. Но такую чувствительность нельзя автоматически вывести из инженерного стажа. Её приходится отдельно развивать, сталкиваясь с тем, как реальное использование отличается от демонстрации возможностей.</p>
+<p>В Microsoft он находился рядом с переходом от вычислительной функции к более сложному потребительскому опыту. Из этого можно предположить, почему его привлекали игры как особенно строгая проверка продукта. Игра способна мгновенно показать разрыв: всё работает, картинка движется, эффекты впечатляют, а продолжать не хочется.</p>
+<p>Пока это аналитическая связь между областями его работы. Ньюэлл не оставил подробной автобиографической записи, в которой каждое позднее игровое убеждение привязано к конкретному мультимедийному проекту Microsoft. Поэтому здесь важнее не завершать объяснение, а обозначить приобретённый диапазон вопросов.</p>
+<p>К середине 1990-х он уже мог смотреть на компьютер одновременно как на техническую систему, среду для чужих программ и устройство для потребительского опыта. Это сочетание сделает встречу с Doom особенно продуктивной: игра окажется для него сразу развлечением, инженерным достижением и доказательством необычного способа распространения программ.</p>
+<h2 id="11-information-highway-pc">11. Information Highway PC: будущее, которое ещё нужно было придумать<a class="headerlink" href="#11-information-highway-pc" title="Permanent link">¶</a></h2>
+<p>В поздней части Microsoft-карьеры Ньюэлл участвовал в Information Highway PC. Именно так направление названо в официальной биографии. Подробная история внутренних проектов, бюджетов и ответственности в этом кратком источнике не раскрывается.<sup id="fnref9:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup></p>
+<p>Выражение information highway принадлежит языку начала 1990-х: сетевой доступ, цифровые медиа, связь, новые способы получать содержимое через компьютер. Для биографии существенно, что Ньюэлл занимался вопросами будущего персонального компьютера ещё до основания собственной игровой компании.</p>
+<p>Но слова эпохи не следует переводить сразу в названия поздних сервисов. Information Highway PC не был ранним Steam, а размышления о сетевом содержимом не равнялись готовому плану магазина. Между общей технологической возможностью и жизнеспособным продуктом лежат привычки пользователей, стоимость связи, права на содержимое, платежи, поддержка и множество менее заметных задач.</p>
+<p>Этот период показывает способность Ньюэлла работать с ещё не установившейся формой продукта. Он видел, что компьютерный рынок способен менять границы: программа может стать услугой, устройство — терминалом к сети, локальное содержимое — постоянно обновляемым ресурсом. Какие именно выводы он сделал тогда, а какие сформулировал уже после успеха Valve, источники позволяют установить лишь частично.</p>
+<p>Поэтому поздние рассказы об уходе из Microsoft особенно важны. В них Ньюэлл связывает своё решение с тем, что увидел у id Software. Снаружи появился конкретный работающий пример, который оказался убедительнее общей дискуссии о сетевом будущем. До этого момента будущее было направлением исследования. После встречи с Doom у него появится продукт, заставляющий пересмотреть привычные масштабы влияния.</p>
+<p><a id="people"></a></p>
+<h2 id="12">12. Билл Гейтс: близкий пример, но не выдуманный наставник<a class="headerlink" href="#12" title="Permanent link">¶</a></h2>
+<p>Билл Гейтс неизбежно присутствует в любой истории ранней Microsoft. Однако вход Ньюэлла в компанию связан прежде всего с Дэном и, по воспоминанию самого Гейба, со Стивом Балмером. История о том, как Гейтс лично обнаружил талант студента и пригласил его на работу, источниками не подтверждается.<sup id="fnref:early-2025"><a class="footnote-ref" href="#fn:early-2025">4</a></sup></p>
+<p>Значение Гейтса здесь другое. Ньюэлл работал внутри компании, где технический основатель одновременно участвовал в вопросах продукта, конкуренции и бизнеса. Сама возможность соединять эти роли находилась рядом. Это профессиональный контекст, который мог расширять представление молодого сотрудника о том, чем способен заниматься технически подготовленный руководитель.</p>
+<p>Однако наблюдать модель и быть её непосредственным учеником — разные отношения. В использованном корпусе недостаточно конкретных сцен, чтобы описать Гейтса как личного наставника Ньюэлла или перечислить уроки, которые тот якобы получил на частных встречах. Мы можем говорить о среде и доступном примере, оставляя степень прямого влияния открытой.</p>
+<p>Поздняя Valve будет заметно отличаться от Microsoft устройством работы. Это также мешает простой схеме копирования. Ньюэлл мог одновременно уважать техническую глубину основателя и сомневаться в необходимости некоторых организационных механизмов выросшей компании. Такие сочетания нормальны: влияние не требует полного согласия.</p>
+<p>Для биографии это полезный способ удерживать самостоятельность обоих людей. Гейтс не нужен как почётная фигура, автоматически объясняющая будущий успех Гейба. Он важен там, где его компания предоставила молодому сотруднику реальную работу и наглядный пример масштаба, которого способны достигать программные продукты.</p>
+<h2 id="13">13. Стив Балмер: человек из истории найма и реальный руководитель<a class="headerlink" href="#13" title="Permanent link">¶</a></h2>
+<p>Балмер в раннем рассказе Ньюэлла появляется деятельнее: он замечает присутствующего в офисе студента и предлагает заняться чем-то полезным. Это конкретный, пусть и поздно пересказанный эпизод, который объясняет переход от визита к работе.<sup id="fnref2:early-2025"><a class="footnote-ref" href="#fn:early-2025">4</a></sup></p>
+<p>Дальше легко скатиться к готовому распределению архетипов: Гейтс научил технологиям, Балмер — бизнесу. Оно слишком аккуратно для имеющихся сведений. Публичная известность двух руководителей не доказывает, что они именно так разделили влияние на Ньюэлла. Чтобы утверждать это, потребовались бы его собственные рассказы о конкретных взаимодействиях.</p>
+<p>Надёжнее сохранить различие масштаба доступа. В ранней компании молодой сотрудник мог оказаться достаточно близко к людям, определявшим её работу. Это позволяло видеть, что решение о продукте связано с наймом, продажами, организацией и ограничениями ресурсов. Даже техническая задача существовала внутри более широкого дела.</p>
+<p>Такой опыт помогает понять будущую манеру Ньюэлла обсуждать бизнес техническим языком. Но не даёт права объявить Балмера единственным источником этой манеры. Тринадцать лет включали множество коллег, проектов и собственных ошибок, большая часть которых не превратилась в публичные анекдоты.</p>
+<p>Именно поэтому история найма остаётся сильнее отвлечённого панегирика. Балмер не обязан был передать Гейбу целую философию. Он помог создать момент, в котором интерес можно было превратить в работу. Дальнейшее развитие происходило уже внутри длинной профессиональной жизни.</p>
+<h2 id="14">14. Ремесло, которое передаётся между людьми<a class="headerlink" href="#14" title="Permanent link">¶</a></h2>
+<p>Спустя годы Ньюэлл говорил о ранней Microsoft как о чрезвычайно сильном месте для создания программ. В интервью Washington Post он связывал опыт своего поколения, включая Майка Харрингтона, с представлением о software как о ремесле — craft.<sup id="fnref3:wp-customers"><a class="footnote-ref" href="#fn:wp-customers">3</a></sup></p>
+<p>Слово существенно. Ремесло включает знания, которые трудно полностью передать через должностную инструкцию. Как распознать плохое допущение? Когда прототип достаточно убедителен? Как заметить, что команда обсуждает разные проблемы под одним названием? Где техническая сложность действительно необходима, а где возникла по привычке? На такие вопросы часто учатся отвечать рядом с более опытными людьми.</p>
+<p>Это объясняет, почему рассказ об обучении в Microsoft для Ньюэлла настолько важен. Он ценил не только доступ к сложным задачам, но и присутствие людей, которые умели с ними работать. Университет давал один тип среды; компания — другой. В его личной истории второй оказался особенно продуктивным.</p>
+<p>Поздняя политика найма Valve будет опираться на сходное убеждение: качество окружающих людей меняет возможности каждого участника. Но здесь убеждение ещё связано с положением ученика. Ньюэлл сам получает пользу от среды и не контролирует её устройство целиком.</p>
+<p>В этом есть важный будущий переход. Любить организацию, которая помогает тебе расти, проще, чем построить её для других. Во втором случае нужно решать, кого приглашать, что считать хорошей работой, как распределять признание и что делать с конфликтами. Microsoft даст Ньюэллу сильное предпочтение. Valve заставит его превратить предпочтение в практические правила.</p>
+<p><a id="talent"></a></p>
+<h2 id="15">15. Почему численность команды перестаёт казаться ему достаточной мерой<a class="headerlink" href="#15" title="Permanent link">¶</a></h2>
+<p>Одно из устойчивых убеждений Ньюэлла — специалисты с одинаковыми должностями способны создавать очень разный результат. Для некоторых задач различие определяется не количеством отработанных часов, а качеством выбора: один человек находит простой путь, другой месяцами развивает неудачную конструкцию.<sup id="fnref:wp-organization"><a class="footnote-ref" href="#fn:wp-organization">5</a></sup></p>
+<p>В таком представлении высокая концентрация сильных людей важнее механического увеличения штата. Позднее для этого часто используют выражение talent density. В биографии Ньюэлла его стоит понимать как управленческое убеждение, выросшее из опыта, а не как доказанный числовой закон производительности.</p>
+<p>Риторические коэффициенты вроде «в десять раз сильнее» не являются универсальной мерой человеческой ценности. Они обозначают нелинейность результата в определённых видах работы. Команда всё равно нуждается в сочетании навыков, надёжности, передаче знаний и выполнении обычных задач. Один яркий специалист не заменяет автоматически всех остальных.</p>
+<p>Именно здесь возникает будущая сила и будущая уязвимость Valve. Высокий порог найма может защищать автономию: людям легче доверять, если они способны самостоятельно разобраться в проблеме. Но тот же порог ограничивает скорость расширения и делает организацию зависимой от редкого сочетания качеств. Деньги ещё не означают, что подходящие люди появятся по требованию.</p>
+<p>В Microsoft эта идея для Ньюэлла была прежде всего наблюдением о возможностях маленькой сильной группы. В Valve она станет правилом отбора. Её производственная цена будет обсуждаться там, где появится реальный конфликт между количеством желательных проектов и количеством людей, способных и готовых их завершать.</p>
+<h2 id="16">16. Организация может усиливать человека — и может расходовать его время<a class="headerlink" href="#16" title="Permanent link">¶</a></h2>
+<p>Из убеждения о различиях между специалистами следует следующий вопрос: что происходит с сильным человеком после найма? Сам по себе удачный выбор кандидата ничего не гарантирует. Его время можно направить на содержательную работу, а можно заполнить согласованиями, защитой территории и пересказом одной и той же информации.</p>
+<p>Ньюэлл позднее будет описывать управленческие слои как источник задержки и искажения. Человек, непосредственно видящий проблему, может знать о ней больше руководителя, которому она дошла в кратком отчёте. Чем больше промежуточных переводов, тем выше риск, что решение будет принято на основании слишком упрощённой картины.<sup id="fnref2:wp-organization"><a class="footnote-ref" href="#fn:wp-organization">5</a></sup></p>
+<p>Это сильное наблюдение, но оно не доказывает бесполезности всех управленческих ролей. Координатор может, наоборот, соединить информацию, которой нет у отдельного инженера: интересы нескольких команд, ограничения поставки, обязательства перед партнёрами. Потеря деталей на пути наверх — реальная возможность; потеря общей картины при полной локальной автономии — тоже.</p>
+<p>В этом и состоит содержательный организационный вопрос. Как сохранить точность местного знания и одновременно принимать решения о целом? Будущая Valve даст один необычный ответ. Но Microsoft-период не следует заканчивать утверждением, что Ньюэлл уже нашёл окончательное решение.</p>
+<p>Он уходит с предпочтением короткой дистанции между проблемой и действием. Предпочтение объяснимо его опытом. Доказать, что оно работает при росте компании и множестве конкурирующих проектов, ему ещё предстоит. Причём доказывать придётся уже людям, чьё рабочее время и профессиональные планы будут зависеть от созданной им среды.</p>
+<p><a id="two-microsofts"></a></p>
+<h2 id="17-microsoft">17. Две Microsoft в памяти одного сотрудника<a class="headerlink" href="#17-microsoft" title="Permanent link">¶</a></h2>
+<p>В позднем мировоззрении Ньюэлла существует контраст между ранней Microsoft, которую он любил, и выросшей компанией, в которой видел больше организационной тяжести. Этот контраст полезен, если сохранять его статус: перед нами взгляд участника определённого поколения и определённых подразделений.<sup id="fnref4:wp-customers"><a class="footnote-ref" href="#fn:wp-customers">3</a></sup><sup id="fnref3:wp-organization"><a class="footnote-ref" href="#fn:wp-organization">5</a></sup></p>
+<p>Ранний опыт связан с близостью сильных специалистов и ощущением большого влияния. Поздний — с масштабом, процессами и возрастающей дистанцией. Из этого не следует, что компания объективно становилась хуже во всех отношениях. Рост способен одновременно затруднять одни формы работы и делать возможными другие: поддержку огромной аудитории, совместимость, международное распространение, долгие проекты.</p>
+<p>Для человека, особенно ценящего ремесленную плотность и скорость обсуждения, приобретённые преимущества могут ощущаться слабее потерянной свободы. Это помогает понять Ньюэлла, не превращая его личную оценку в универсальный закон деградации корпораций.</p>
+<p>Он также сам изменился. Молодой сотрудник и опытный руководитель смотрят на одну организацию с разных позиций. В начале карьеры новая среда даёт возможность учиться почти всему; спустя тринадцать лет часть задач становится знакомой, а интерес может сместиться наружу. Источники не позволяют точно отделить изменение компании от изменения самого Ньюэлла.</p>
+<p>Поэтому формула «Microsoft испортилась — Гейб ушёл» слишком бедна. В его рассказе сохраняются уважение к первой профессиональной школе, критика отдельных механизмов роста и желание проверить собственные идеи в другом месте. Эти чувства могли сосуществовать без драматического разрыва.</p>
+<h2 id="18">18. Человек, критикующий менеджеров, сам выполнял управленческую работу<a class="headerlink" href="#18" title="Permanent link">¶</a></h2>
+<p>Ньюэлл не был программистом, которого управление всегда касалось только как внешнее препятствие. Program management Windows, мультимедийное направление и новые инициативы означают опыт организационной ответственности. Это важная поправка к позднему образу технического бунтаря против начальников.<sup id="fnref10:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup></p>
+<p>Его дальнейшая позиция точнее описывается так: управленческая работа необходима, но не обязательно должна навсегда принадлежать отдельной ступени иерархии. Люди могут координировать проект, принимать решения и распределять задачи, не превращая временную функцию в постоянный статус над коллегами.</p>
+<p>Такое различие станет основой публичного описания Valve. Однако между принципом и рабочим устройством лежит большой путь. Нужно понять, кто разрешает спор, кто помогает новичку, кто замечает брошенную обязанность и каким образом оценивается вклад. Отсутствие должности не отвечает на эти вопросы автоматически.</p>
+<p>Microsoft важна ещё и потому, что даёт Ньюэллу язык, на котором он сможет поставить этот эксперимент. Он знает, что такое выпуск, зависимость, координация и ограничение ресурсов. Поэтому поздняя попытка распределить управление не возникает из незнания того, что оно делает. Она является попыткой переразложить знакомую работу.</p>
+<p>При этом биография не должна принимать эксперимент за уже доказанное улучшение. Свойства зрелой Valve будут разбираться по конкретным свидетельствам и ситуациям в <a href="../gabe-newell-05-from-games-to-platform/#organization">пятой главе</a>, а её слабости — по кризисам и завершённым либо незавершённым проектам. Здесь находится происхождение вопроса, а не окончательный ответ.</p>
+<p><a id="capital"></a></p>
+<h2 id="19">19. Акции меняют масштаб личного выбора<a class="headerlink" href="#19" title="Permanent link">¶</a></h2>
+<p>Рост Microsoft сделал многих ранних сотрудников финансово независимыми. Ньюэлл оказался среди тех, чьи акции позволили задумываться о следующем занятии без необходимости немедленно искать новую зарплату. Майк Харрингтон, его будущий партнёр по Valve, получил похожую возможность.<sup id="fnref:forbes-2024"><a class="footnote-ref" href="#fn:forbes-2024">6</a></sup></p>
+<p>Этот факт нельзя оставлять декоративным фоном. Он меняет устройство решения. Разработчик, которому нужно каждый месяц оплачивать обычную жизнь, не обладает той же свободой несколько лет финансировать студию. Возможность отказаться от внешнего инвестора или пережить задержку продукта имеет вполне материальное основание.</p>
+<p>Но капитал не отменяет риска. Он меняет то, чем человек рискует и насколько тяжёлым будет поражение. У Ньюэлла сохранялись профессиональная репутация, время, вложенные средства и обязательства перед людьми, которых он пригласит. Появлялась также ответственность собственника: ошибка больше не растворялась внутри бюджета работодателя.</p>
+<p>Для будущей Valve важно, что деньги были заработаны в первой карьере, а использованы для второй. Уход из Microsoft не означал отказа от всех её результатов. Напротив, накопленные знания, связи и акции сделали возможной независимость от неё.</p>
+<p>В этой точке взрослая биография Ньюэлла получает новое измерение. Раньше он выбирал среду, в которой можно учиться и работать. Теперь он способен создать среду сам. Это повышает свободу, но одновременно лишает возможности полностью отделить собственные убеждения от их последствий для других участников.</p>
+<h2 id="20">20. Два способа поставить деньги на новую компанию<a class="headerlink" href="#20" title="Permanent link">¶</a></h2>
+<p>Профиль Forbes 2024 года содержит показательную деталь финансирования ранней Valve. По данным издания, Харрингтон продал акции Microsoft, чтобы внести свою часть средств. Ньюэлл не хотел расставаться с бумагами и занял деньги под их залог.<sup id="fnref2:forbes-2024"><a class="footnote-ref" href="#fn:forbes-2024">6</a></sup></p>
+<p>Различие важно именно своей конкретностью. Два обеспеченных человека выбирают одну предпринимательскую задачу, но по-разному организуют личное участие. Для одного ставка связана с продажей накопленного актива, для другого — с использованием его как обеспечения. Это не позволяет без финансовых документов вычислить полный риск каждого, однако мешает представлять создание Valve безболезненным расходованием случайно оказавшейся наличности.</p>
+<p>Отсюда не следует психологический диагноз: Харрингтон якобы осторожен во всём, Ньюэлл азартен во всём. Один финансовый выбор не описывает человека целиком. Тем более оба решили уйти из успешной среды и вложиться в компанию без выпущенной игры.</p>
+<p>Содержательный вывод проще: финансовая независимость оставляла пространство для разных решений. Деньги не продиктовали ни создание Valve, ни конкретную модель участия. Они позволили проверить гипотезу, которую основатели сочли достойной времени и средств.</p>
+<p>Позднее различие станет ещё заметнее. После успеха Half-Life Харрингтон захочет изменить образ жизни, а Ньюэлл продолжит расширять деятельность. Но на этапе выхода из Microsoft их объединяет готовность сделать собственную ставку. Историю этого партнёрства нужно начинать с общего решения, а не с будущего расхождения.</p>
+<h2 id="21">21. Свобода выбора работы не равна отсутствию обязательств<a class="headerlink" href="#21" title="Permanent link">¶</a></h2>
+<p>Деньги часто объясняют позднего Ньюэлла через слово optionality — наличие вариантов. В его биографии это действительно полезное понятие: можно отказаться от привычного пути, пережить неудачу, не продавать контроль при первой потребности в финансировании.</p>
+<p>Однако свобода собственника отличается от свободы остальных людей. Основатель способен выбрать дорогую переработку продукта; сотрудник при этом получает ещё один год работы и неопределённости. Возможность не подчиняться внешней дате может повысить качество и одновременно усилить внутреннее давление. Эти последствия впервые станут особенно видны при создании Half-Life.</p>
+<p>Поэтому финансовую независимость лучше понимать как ресурс решения, а не как доказательство нравственного качества решения. Она позволяет сделать и прекрасную вещь, и дорогую ошибку. Внешнее давление иногда разрушает продукт, иногда заставляет определить границы. Отсутствие такого давления само по себе не гарантирует хорошего результата.</p>
+<p>Ньюэлл ещё не знает всех этих последствий в момент ухода из Microsoft. Важно не приписывать ему будущую рефлексию заранее. Но уже меняется положение: он получает право выбирать задачу по собственной оценке и возможность удерживать её дольше, чем позволил бы короткий запас денег.</p>
+<p>Именно здесь будет находиться материальная основа будущего решения 1997 года не выпускать слабую версию Half-Life. Тогда общая свобода впервые примет конкретную форму: разговор с издателем, отказ от прежнего плана и оплата продолжения работы. В этой главе деньги только открывают такую возможность.</p>
+<p><a id="leaving"></a></p>
+<h2 id="22">22. Почему он продолжил работать<a class="headerlink" href="#22" title="Permanent link">¶</a></h2>
+<p>Финансовая независимость не завершила карьеру Ньюэлла. Он не ушёл из программного обеспечения после того, как исчезла необходимость работать ради зарплаты. Его следующий выбор — новая компания в другой, для него ещё не освоенной области.<sup id="fnref5:wp-customers"><a class="footnote-ref" href="#fn:wp-customers">3</a></sup><sup id="fnref:doom-2025"><a class="footnote-ref" href="#fn:doom-2025">7</a></sup></p>
+<p>Можно предположить, что его привлекала сама деятельность: сложные задачи, сильные люди, возможность увидеть результат. Этому соответствует позднее самоописание, но превращать его в исчерпывающую мотивационную формулу не следует. У человека могли одновременно действовать интерес, уверенность в собственных навыках, желание самостоятельности и привлекательность конкретного партнёрства.</p>
+<p>Существенно, что доступные альтернативы были реальными. Он мог остаться в Microsoft, выбрать другое направление внутри индустрии или резко сократить работу. Решение создавать игры поэтому нельзя объяснить одной потребностью заработать. На этом этапе деньги скорее освобождают место для вопроса о содержании следующей жизни.</p>
+<p>И здесь уместно остановиться до появления новой легенды. Ньюэлл не обязан был уже в 1996 году иметь зрелое определение пенсии как отсутствия нежеланной работы. Такая формулировка появится значительно позднее, в рассказе о жизни между несколькими проектами и морем. Ранний поступок может рифмоваться с поздними словами, но не является их дословным воплощением задним числом.</p>
+<p>Пока перед ним простой и трудный вопрос: куда направить опыт и капитал, когда продолжение успешной карьеры больше не выглядит единственным разумным выбором?</p>
+<h2 id="23">23. Игры становятся серьёзной профессиональной возможностью<a class="headerlink" href="#23" title="Permanent link">¶</a></h2>
+<p>К первой половине 1990-х игры соединяли многие направления, с которыми Ньюэлл уже сталкивался: графику, звук, взаимодействие, инструменты, сети и высокие требования к производительности. При этом техническая состоятельность немедленно проверялась пользовательским опытом. Человек либо хотел продолжать играть, либо нет.</p>
+<p>Для него игры были также личным увлечением. Поэтому не стоит полностью заменять интерес игрока интересом стратега. Он мог одновременно получать удовольствие от Doom и видеть в ней доказательство того, что небольшая команда способна делать программное обеспечение огромного влияния.<sup id="fnref2:doom-2025"><a class="footnote-ref" href="#fn:doom-2025">7</a></sup></p>
+<p>Но профессиональная подготовка Microsoft имела предел. Создание операционной среды не учило автоматически постановке игровых сцен, работе с анимацией, ритму приключения или тому, как сделать вымышленный мир убедительным. Ньюэллу и Харрингтону предстояло зависеть от людей с другим опытом.</p>
+<p>Это важное отличие от образа готового великого геймдизайнера, который лишь ждал освобождения от корпоративных обязанностей. Они уходили в новую область как опытные специалисты по программному обеспечению и начинающие создатели игр. Их сильной стороной могла стать способность учиться и собирать команду; наличие готового мастерства источники не подтверждают.</p>
+<p>Внешний пример id Software сделал такую ставку мыслимой. Но между восхищением чужой работой и основанием студии ещё потребуются технология, доверенные отношения, партнёрство и конкретный путь к первому продукту. Именно эти недостающие условия составят следующую главу.</p>
+<h2 id="24">24. Уход без обязательного разрыва<a class="headerlink" href="#24" title="Permanent link">¶</a></h2>
+<p>Ньюэлл покинул Microsoft в 1996 году после тринадцати лет работы. Публичные источники не поддерживают сюжет о скандальном конфликте с Гейтсом или Балмером. В последующих интервью он продолжал с уважением говорить о первой профессиональной школе.<sup id="fnref11:aias"><a class="footnote-ref" href="#fn:aias">1</a></sup><sup id="fnref6:wp-customers"><a class="footnote-ref" href="#fn:wp-customers">3</a></sup></p>
+<p>Это делает переход интереснее простого освобождения от плохого работодателя. Он мог считать часть организационных механизмов неудобными и одновременно ценить полученный опыт. Мог видеть новые возможности за пределами компании, не объявляя бесполезным всё, что происходило внутри.</p>
+<p>В его позднем объяснении ухода важное место займёт готовность поставить собственные деньги на идеи, в которые он верил. Такая формулировка соединяет независимость и ответственность. Раньше можно было убеждать организацию, что она упускает возможность. Теперь появилась возможность проверить это самостоятельно — и столкнуться с тем, что критика чужого решения ещё не равна способности построить своё.<sup id="fnref3:doom-2025"><a class="footnote-ref" href="#fn:doom-2025">7</a></sup></p>
+<p>К этому моменту Ньюэлл получил широкий набор инструментов, но не готовый ответ на следующую задачу. Он знал сложную разработку, видел разные уровни программной системы, понимал значение сильных коллег и располагал капиталом. Ему ещё предстояло выяснить, как всё это соединяется в небольшой игровой студии.</p>
+<h2 id="25">25. Что он уносит — и что оставляет незавершённым<a class="headerlink" href="#25" title="Permanent link">¶</a></h2>
+<p>Microsoft дала Ньюэллу профессию, опыт участия в платформах и возможность наблюдать рост организации изнутри. Она также изменила его личный масштаб: от молодого сотрудника, который учится рядом с другими, до человека, способного финансировать собственную компанию.</p>
+<p>Однако зрелая философия Valve пока не существует в виде законченной системы. Вера в сильных специалистов ещё должна превратиться в найм конкретных людей. Неприязнь к лишним согласованиям — в рабочую координацию. Уважение к пользователю — в способность сделать интересную игру. Деньги — в решения, последствия которых нельзя переложить на работодателя.</p>
+<p>Это и есть содержательный итог первой карьеры. Ньюэлл выходит из Microsoft с уверенностью, но не с доказательством универсальности своего опыта. Впереди будет область, где прекрасно работающая программа способна оказаться скучной, где художник или писатель знает больше основателя и где правильный технический фундамент ещё ничего не гарантирует.</p>
+<p><a href="../gabe-newell-03-doom-quake-valve/">Следующая глава</a> начинается с конкретного внешнего примера. Doom станет для Ньюэлла сразу проверкой Windows и неожиданным свидетельством силы маленькой компании. Quake, Майкл Абраш и Майк Харрингтон затем превратят интерес в практический проект. На этот раз Ньюэлл будет уже не сотрудником среды, которая ему нравится, а одним из людей, отвечающих за её создание.</p>
+<p><a id="sources"></a></p>
+<h2 id="_1">Источники и уточнения<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>Официальные биографии надёжно подтверждают основные направления Microsoft-карьеры, но не дают подробной внутренней хронологии. Поэтому периоды, должности и личное участие не достроены по аналогии. «Program management первых двух выпусков Windows» — используемая здесь формулировка; популярные «написал Windows» и «сделал первые три версии» её не заменяют.</p>
+<p>Различие ранней и выросшей Microsoft передаёт прежде всего позднюю оценку Ньюэлла. Рассуждения о координации, совместимости и ограничениях управления являются объяснением профессионального контекста, а не набором приписанных ему дословных уроков. Деталь о финансировании через продажу акций и заём под их залог атрибутирована Forbes; полные личные финансовые условия не раскрыты.</p>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:aias">
+<p>Academy of Interactive Arts &amp; Sciences, <a href="https://www.interactive.org/special_awards/details.asp?idSpecialAwards=25">Gabe Newell — Hall of Fame</a>, 2013. Официальная краткая биография Microsoft-периода. <a class="footnote-backref" href="#fnref:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref3:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref4:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref5:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref6:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref7:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref8:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref9:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref10:aias" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref11:aias" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:windows-credit">
+<p>PCWorld, <a href="https://www.pcworld.com/article/626461/gabe-newell-has-been-hiding-in-a-windows-1-0-easter-egg-for-over-30-years.html">Gabe Newell has been hiding in a Windows 1.0 Easter egg for over 30 years</a>, 2022. Имя в списке участников Windows 1.0. <a class="footnote-backref" href="#fnref:windows-credit" title="Jump back to footnote 2 in the text">↩</a><a class="footnote-backref" href="#fnref2:windows-credit" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:wp-customers">
+<p>Andrea Peterson, The Washington Post, <a href="https://www.washingtonpost.com/news/the-switch/wp/2014/01/06/gabe-newell-on-valves-intimate-relationship-with-its-customers/">Gabe Newell on Valve’s intimate relationship with its customers</a>, 6 января 2014. <a class="footnote-backref" href="#fnref:wp-customers" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref2:wp-customers" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref3:wp-customers" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref4:wp-customers" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref5:wp-customers" title="Jump back to footnote 3 in the text">↩</a><a class="footnote-backref" href="#fnref6:wp-customers" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:early-2025">
+<p>PC Gamer, <a href="https://www.pcgamer.com/gaming-industry/the-young-gabe-newell-thought-i-was-going-to-be-a-doctor-until-he-ended-up-visiting-his-brother-at-microsoft-where-steve-ballmer-got-mad-and-said-if-youre-going-to-be-hanging-out-here-why-dont-you-do-something-useful/">The young Gabe Newell thought “I was going to be a doctor”</a>, июль 2025, по интервью Залкару Салиеву. <a class="footnote-backref" href="#fnref:early-2025" title="Jump back to footnote 4 in the text">↩</a><a class="footnote-backref" href="#fnref2:early-2025" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:wp-organization">
+<p>Andrea Peterson, The Washington Post, <a href="https://www.washingtonpost.com/news/the-switch/wp/2014/01/03/gabe-newell-on-what-makes-valve-tick/">Gabe Newell on what makes Valve tick</a>, 3 января 2014. <a class="footnote-backref" href="#fnref:wp-organization" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref2:wp-organization" title="Jump back to footnote 5 in the text">↩</a><a class="footnote-backref" href="#fnref3:wp-organization" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:forbes-2024">
+<p>Stephen Pastis, Forbes, <a href="https://www.forbes.com/sites/stephenpastis/2024/10/21/how-valve-founder-gabe-newell-built-one-of-the-worlds-most-profitable-videogame-companies/">How Valve Founder Gabe Newell Built One Of The World’s Most Profitable Videogame Companies</a>, 21 октября 2024; <a href="https://www.forbes.com.au/covers/magazine/how-valve-founder-gabe-newell-turned-half-life-into-a-nearly-10-billion-fortune/">Forbes Australia</a>. Доля 50,1% — оценка Forbes. <a class="footnote-backref" href="#fnref:forbes-2024" title="Jump back to footnote 6 in the text">↩</a><a class="footnote-backref" href="#fnref2:forbes-2024" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:doom-2025">
+<p>PC Gamer, <a href="https://www.pcgamer.com/gaming-industry/gabe-newell-says-he-founded-valve-after-doom-showed-him-microsoft-was-missing-the-opportunity-offered-by-the-internet-i-was-willing-to-sort-of-put-my-money-where-my-mouth-was/">Gabe Newell says he founded Valve after Doom showed him Microsoft “was missing the opportunity”</a>, 2025. <a class="footnote-backref" href="#fnref:doom-2025" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref2:doom-2025" title="Jump back to footnote 7 in the text">↩</a><a class="footnote-backref" href="#fnref3:doom-2025" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  К началу
+</button>
+</main>
+<footer class="md-footer">
+<nav aria-label="Нижний колонтитул" class="md-footer__inner md-grid">
+<a aria-label="Назад: Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard" class="md-footer__link md-footer__link--prev" href="../gabe-newell-01-before-microsoft/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Назад
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 1. До Microsoft: от Аспена до Harvard
+              </div>
+</div>
+</a>
+<a aria-label="Вперед: Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve" class="md-footer__link md-footer__link--next" href="../gabe-newell-03-doom-quake-valve/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Вперед
+              </span>
+<div class="md-ellipsis">
+                Гейб Ньюэлл — Глава 3. Doom, Quake и создание Valve
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

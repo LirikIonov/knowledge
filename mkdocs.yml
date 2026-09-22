@@ -97,6 +97,7 @@ theme:
 
   features:
     # Навигация
+    - navigation.indexes
     - navigation.instant
     - navigation.tracking
     - navigation.top
@@ -115,3 +116,5 @@ theme:
 
 #use_directory_urls: false
 
+extra_javascript:
+  - scripts/navigation.js
